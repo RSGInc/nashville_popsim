@@ -1,0 +1,16 @@
+#libevent pkg-config source file
+
+prefix=D:/bld/libevent_1685726010509/_h_env/Library
+exec_prefix=D:/bld/libevent_1685726010509/_h_env/Library
+libdir=D:/bld/libevent_1685726010509/_h_env/Library/lib
+includedir=D:/bld/libevent_1685726010509/_h_env/Library/include
+
+Name: libevent_openssl
+Description: libevent_openssl adds openssl-based TLS support to libevent
+Version: 2.1.12
+Requires: libevent
+Conflicts:
+Libs: -L${libdir} -levent_openssl
+Libs.private:  -Lws2_32 -Lshell32 -Ladvapi32  -Loptimized -LD:/bld/libevent_1685726010509/_h_env/Library/lib/libssl.lib -Ldebug -LC:/Program Files/OpenSSL/lib/VC/libssl64MDd.lib -Loptimized -LD:/bld/libevent_1685726010509/_h_env/Library/lib/libcrypto.lib -Ldebug -LC:/Program Files/OpenSSL/lib/VC/libcrypto64MDd.lib
+Cflags: -I${includedir} 
+

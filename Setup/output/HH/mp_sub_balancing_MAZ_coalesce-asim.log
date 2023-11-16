@@ -1,0 +1,156 @@
+24/10/2023 13:20:21 - INFO - activitysim - Read logging configuration from: configs\HH\logging.yaml
+24/10/2023 13:20:21 - DEBUG - activitysim.core.mp_tasks - coalesce_pipelines to: pipeline.h5
+24/10/2023 13:20:21 - DEBUG - activitysim.core.mp_tasks - loading table households households/mp_sub_balancing_MAZ
+24/10/2023 13:20:21 - DEBUG - activitysim.core.mp_tasks - loading table persons persons/mp_sub_balancing_MAZ
+24/10/2023 13:20:22 - DEBUG - activitysim.core.mp_tasks - loading table geo_cross_walk geo_cross_walk/mp_sub_balancing_MAZ
+24/10/2023 13:20:22 - DEBUG - activitysim.core.mp_tasks - loading table MAZ_control_data MAZ_control_data/mp_sub_balancing_MAZ
+24/10/2023 13:20:22 - DEBUG - activitysim.core.mp_tasks - loading table TAZ_control_data TAZ_control_data/mp_sub_balancing_MAZ
+24/10/2023 13:20:22 - DEBUG - activitysim.core.mp_tasks - loading table REGION_control_data REGION_control_data/mp_sub_balancing_MAZ
+24/10/2023 13:20:22 - DEBUG - activitysim.core.mp_tasks - loading table crosswalk crosswalk/mp_sub_balancing_MAZ
+24/10/2023 13:20:22 - DEBUG - activitysim.core.mp_tasks - loading table slice_crosswalk slice_crosswalk/mp_sub_balancing_MAZ
+24/10/2023 13:20:22 - DEBUG - activitysim.core.mp_tasks - loading table control_spec control_spec/mp_sub_balancing_MAZ
+24/10/2023 13:20:22 - DEBUG - activitysim.core.mp_tasks - loading table REGION_controls REGION_controls/mp_sub_balancing_MAZ
+24/10/2023 13:20:22 - DEBUG - activitysim.core.mp_tasks - loading table PUMA_controls PUMA_controls/mp_sub_balancing_MAZ
+24/10/2023 13:20:22 - DEBUG - activitysim.core.mp_tasks - loading table TAZ_controls TAZ_controls/mp_sub_balancing_MAZ
+24/10/2023 13:20:22 - DEBUG - activitysim.core.mp_tasks - loading table MAZ_controls MAZ_controls/mp_sub_balancing_MAZ
+24/10/2023 13:20:22 - DEBUG - activitysim.core.mp_tasks - loading table household_groups household_groups/mp_sub_balancing_MAZ
+24/10/2023 13:20:22 - DEBUG - activitysim.core.mp_tasks - loading table incidence_table incidence_table/mp_sub_balancing_MAZ
+24/10/2023 13:20:22 - DEBUG - activitysim.core.mp_tasks - loading table PUMA_weights PUMA_weights/mp_sub_balancing_MAZ
+24/10/2023 13:20:22 - DEBUG - activitysim.core.mp_tasks - loading table TAZ_weights TAZ_weights/mp_sub_balancing_MAZ
+24/10/2023 13:20:22 - DEBUG - activitysim.core.mp_tasks - loading table TAZ_weights_sparse TAZ_weights_sparse/mp_sub_balancing_MAZ
+24/10/2023 13:20:23 - DEBUG - activitysim.core.mp_tasks - loading table trace_TAZ_weights trace_TAZ_weights/mp_sub_balancing_MAZ
+24/10/2023 13:20:23 - DEBUG - activitysim.core.mp_tasks - loading table MAZ_weights MAZ_weights/sub_balancing.geography=MAZ
+24/10/2023 13:20:23 - DEBUG - activitysim.core.mp_tasks - loading table MAZ_weights_sparse MAZ_weights_sparse/sub_balancing.geography=MAZ
+24/10/2023 13:20:23 - DEBUG - activitysim.core.mp_tasks - loading table trace_MAZ_weights trace_MAZ_weights/sub_balancing.geography=MAZ
+24/10/2023 13:20:23 - DEBUG - activitysim.core.mp_tasks - slice.except wildcard (True): excluding all tables not explicitly listed in slice.tables
+24/10/2023 13:20:23 - DEBUG - activitysim.core.mp_tasks - ### table_name: slice_crosswalk slice_rules: {'slice_by': 'primary'}
+24/10/2023 13:20:23 - DEBUG - activitysim.core.mp_tasks - ### table_name: crosswalk slice_rules: {'slice_by': 'column', 'column': 'PUMA', 'source': 'slice_crosswalk'}
+24/10/2023 13:20:23 - DEBUG - activitysim.core.mp_tasks - ### slicer_ref_cols: OrderedDict([('slice_crosswalk', 'PUMA'), ('crosswalk', None)])
+24/10/2023 13:20:23 - DEBUG - activitysim.core.mp_tasks - coalesce_pipelines to: pipeline.h5
+24/10/2023 13:20:23 - DEBUG - activitysim.core.mp_tasks - mirrored_table_names: ['households', 'persons', 'geo_cross_walk', 'MAZ_control_data', 'TAZ_control_data', 'REGION_control_data', 'control_spec', 'REGION_controls', 'PUMA_controls', 'TAZ_controls', 'MAZ_controls', 'household_groups', 'incidence_table', 'PUMA_weights', 'TAZ_weights', 'TAZ_weights_sparse', 'trace_TAZ_weights']
+24/10/2023 13:20:23 - DEBUG - activitysim.core.mp_tasks - omnibus_keys: {'crosswalk': 'crosswalk/mp_sub_balancing_MAZ', 'slice_crosswalk': 'slice_crosswalk/mp_sub_balancing_MAZ', 'MAZ_weights': 'MAZ_weights/sub_balancing.geography=MAZ', 'MAZ_weights_sparse': 'MAZ_weights_sparse/sub_balancing.geography=MAZ', 'trace_MAZ_weights': 'trace_MAZ_weights/sub_balancing.geography=MAZ'}
+24/10/2023 13:20:23 - INFO - activitysim.core.mp_tasks - coalesce pipeline output\HH\mp_sub_balancing_MAZ_0-pipeline.h5
+24/10/2023 13:20:23 - INFO - activitysim.core.mp_tasks - coalesce pipeline output\HH\mp_sub_balancing_MAZ_1-pipeline.h5
+24/10/2023 13:20:23 - INFO - activitysim.core.mp_tasks - coalesce pipeline output\HH\mp_sub_balancing_MAZ_2-pipeline.h5
+24/10/2023 13:20:23 - INFO - activitysim.core.mp_tasks - coalesce pipeline output\HH\mp_sub_balancing_MAZ_3-pipeline.h5
+24/10/2023 13:20:23 - INFO - activitysim.core.mp_tasks - coalesce pipeline output\HH\mp_sub_balancing_MAZ_4-pipeline.h5
+24/10/2023 13:20:24 - INFO - activitysim.core.mp_tasks - coalesce pipeline output\HH\mp_sub_balancing_MAZ_5-pipeline.h5
+24/10/2023 13:20:24 - INFO - activitysim.core.mp_tasks - coalesce pipeline output\HH\mp_sub_balancing_MAZ_6-pipeline.h5
+24/10/2023 13:20:24 - INFO - activitysim.core.mp_tasks - coalesce pipeline output\HH\mp_sub_balancing_MAZ_7-pipeline.h5
+24/10/2023 13:20:24 - INFO - activitysim.core.mp_tasks - coalesce pipeline output\HH\mp_sub_balancing_MAZ_8-pipeline.h5
+24/10/2023 13:20:24 - INFO - activitysim.core.mp_tasks - coalesce pipeline output\HH\mp_sub_balancing_MAZ_9-pipeline.h5
+24/10/2023 13:20:24 - INFO - activitysim.core.mp_tasks - coalesce pipeline output\HH\mp_sub_balancing_MAZ_10-pipeline.h5
+24/10/2023 13:20:25 - INFO - activitysim.core.mp_tasks - coalesce pipeline output\HH\mp_sub_balancing_MAZ_11-pipeline.h5
+24/10/2023 13:20:25 - DEBUG - activitysim.core.random - Set random seed base to 0
+24/10/2023 13:20:25 - DEBUG - activitysim.core.pipeline - open_pipeline - open existing pipeline
+24/10/2023 13:20:25 - DEBUG - activitysim.core.pipeline - opened pipeline_store output\HH\pipeline.h5
+24/10/2023 13:20:25 - INFO - activitysim.core.pipeline - load_checkpoint _
+24/10/2023 13:20:25 - INFO - activitysim.core.pipeline - loading checkpoint 'mp_sub_balancing_TAZ'
+24/10/2023 13:20:25 - INFO - activitysim.core.pipeline - load_checkpoint mp_sub_balancing_TAZ timestamp 2023-10-24 13:18:52.816237
+24/10/2023 13:20:25 - INFO - activitysim.core.pipeline - load_checkpoint table households (34034, 238)
+24/10/2023 13:20:25 - DEBUG - activitysim.core.pipeline - rewrap table households inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.pipeline - load_checkpoint table persons (83294, 289)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table persons inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.pipeline - load_checkpoint table geo_cross_walk (33117, 7)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table geo_cross_walk inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.pipeline - load_checkpoint table MAZ_control_data (33117, 4)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table MAZ_control_data inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.pipeline - load_checkpoint table TAZ_control_data (2929, 45)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table TAZ_control_data inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.pipeline - load_checkpoint table REGION_control_data (1, 2)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table REGION_control_data inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.pipeline - load_checkpoint table crosswalk (33117, 4)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table crosswalk inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.pipeline - load_checkpoint table slice_crosswalk (12, 2)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table slice_crosswalk inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.pipeline - load_checkpoint table control_spec (24, 6)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table control_spec inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.pipeline - load_checkpoint table REGION_controls (1, 24)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table REGION_controls inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.pipeline - load_checkpoint table PUMA_controls (12, 24)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table PUMA_controls inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.pipeline - load_checkpoint table TAZ_controls (2702, 23)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table TAZ_controls inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.pipeline - load_checkpoint table MAZ_controls (20797, 1)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table MAZ_controls inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.pipeline - load_checkpoint table household_groups (34034, 3)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table household_groups inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.pipeline - load_checkpoint table incidence_table (8894, 29)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table incidence_table inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.pipeline - load_checkpoint table PUMA_weights (8894, 6)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table PUMA_weights inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.pipeline - load_checkpoint table TAZ_weights (1992296, 6)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table TAZ_weights inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.pipeline - load_checkpoint table TAZ_weights_sparse (341740, 6)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table TAZ_weights_sparse inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.pipeline - load_checkpoint table trace_TAZ_weights (701, 6)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table trace_TAZ_weights inplace=False
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - open_pipeline complete
+24/10/2023 13:20:26 - INFO - activitysim.core.mp_tasks - adding mirrored table households (34034, 238)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table households inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.mp_tasks - adding mirrored table persons (83294, 289)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table persons inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.mp_tasks - adding mirrored table geo_cross_walk (33117, 7)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table geo_cross_walk inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.mp_tasks - adding mirrored table MAZ_control_data (33117, 4)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table MAZ_control_data inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.mp_tasks - adding mirrored table TAZ_control_data (2929, 45)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table TAZ_control_data inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.mp_tasks - adding mirrored table REGION_control_data (1, 2)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table REGION_control_data inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.mp_tasks - adding mirrored table control_spec (24, 6)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table control_spec inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.mp_tasks - adding mirrored table REGION_controls (1, 24)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table REGION_controls inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.mp_tasks - adding mirrored table PUMA_controls (12, 24)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table PUMA_controls inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.mp_tasks - adding mirrored table TAZ_controls (2702, 23)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table TAZ_controls inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.mp_tasks - adding mirrored table MAZ_controls (20797, 1)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table MAZ_controls inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.mp_tasks - adding mirrored table household_groups (34034, 3)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table household_groups inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.mp_tasks - adding mirrored table incidence_table (8894, 29)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table incidence_table inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.mp_tasks - adding mirrored table PUMA_weights (8894, 6)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table PUMA_weights inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.mp_tasks - adding mirrored table TAZ_weights (1992296, 6)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table TAZ_weights inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.mp_tasks - adding mirrored table TAZ_weights_sparse (341740, 6)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table TAZ_weights_sparse inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.mp_tasks - adding mirrored table trace_TAZ_weights (701, 6)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table trace_TAZ_weights inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.mp_tasks - adding omnibus table crosswalk (33117, 4)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table crosswalk inplace=False
+24/10/2023 13:20:26 - INFO - activitysim.core.mp_tasks - adding omnibus table slice_crosswalk (12, 2)
+24/10/2023 13:20:26 - DEBUG - activitysim.core.pipeline - rewrap table slice_crosswalk inplace=False
+24/10/2023 13:20:27 - INFO - activitysim.core.mp_tasks - adding omnibus table MAZ_weights (15483347, 7)
+24/10/2023 13:20:27 - DEBUG - activitysim.core.pipeline - rewrap table MAZ_weights inplace=False
+24/10/2023 13:20:27 - INFO - activitysim.core.mp_tasks - adding omnibus table MAZ_weights_sparse (497245, 7)
+24/10/2023 13:20:27 - DEBUG - activitysim.core.pipeline - rewrap table MAZ_weights_sparse inplace=False
+24/10/2023 13:20:27 - INFO - activitysim.core.mp_tasks - adding omnibus table trace_MAZ_weights (867, 7)
+24/10/2023 13:20:27 - DEBUG - activitysim.core.pipeline - rewrap table trace_MAZ_weights inplace=False
+24/10/2023 13:20:27 - DEBUG - activitysim.core.pipeline - add_checkpoint mp_sub_balancing_MAZ timestamp 2023-10-24 13:20:27.589468
+24/10/2023 13:20:27 - DEBUG - activitysim.core.pipeline - add_checkpoint 'mp_sub_balancing_MAZ' table 'households' (34034, 238) 65.1 MB
+24/10/2023 13:20:27 - DEBUG - activitysim.core.pipeline - add_checkpoint 'mp_sub_balancing_MAZ' table 'persons' (83294, 289) 193.2 MB
+24/10/2023 13:20:28 - DEBUG - activitysim.core.pipeline - add_checkpoint 'mp_sub_balancing_MAZ' table 'geo_cross_walk' (33117, 7) 2.1 MB
+24/10/2023 13:20:28 - DEBUG - activitysim.core.pipeline - add_checkpoint 'mp_sub_balancing_MAZ' table 'MAZ_control_data' (33117, 4) 1.3 MB
+24/10/2023 13:20:28 - DEBUG - activitysim.core.pipeline - add_checkpoint 'mp_sub_balancing_MAZ' table 'TAZ_control_data' (2929, 45) 1.1 MB
+24/10/2023 13:20:28 - DEBUG - activitysim.core.pipeline - add_checkpoint 'mp_sub_balancing_MAZ' table 'REGION_control_data' (1, 2) 24 B
+24/10/2023 13:20:28 - DEBUG - activitysim.core.pipeline - add_checkpoint 'mp_sub_balancing_MAZ' table 'control_spec' (24, 6) 1.3 KB
+24/10/2023 13:20:28 - DEBUG - activitysim.core.pipeline - add_checkpoint 'mp_sub_balancing_MAZ' table 'REGION_controls' (1, 24) 200 B
+24/10/2023 13:20:28 - DEBUG - activitysim.core.pipeline - add_checkpoint 'mp_sub_balancing_MAZ' table 'PUMA_controls' (12, 24) 2.4 KB
+24/10/2023 13:20:28 - DEBUG - activitysim.core.pipeline - add_checkpoint 'mp_sub_balancing_MAZ' table 'TAZ_controls' (2702, 23) 518.8 KB
+24/10/2023 13:20:28 - DEBUG - activitysim.core.pipeline - add_checkpoint 'mp_sub_balancing_MAZ' table 'MAZ_controls' (20797, 1) 332.8 KB
+24/10/2023 13:20:28 - DEBUG - activitysim.core.pipeline - add_checkpoint 'mp_sub_balancing_MAZ' table 'household_groups' (34034, 3) 816.8 KB
+24/10/2023 13:20:28 - DEBUG - activitysim.core.pipeline - add_checkpoint 'mp_sub_balancing_MAZ' table 'incidence_table' (8894, 29) 1.3 MB
+24/10/2023 13:20:28 - DEBUG - activitysim.core.pipeline - add_checkpoint 'mp_sub_balancing_MAZ' table 'PUMA_weights' (8894, 6) 498.1 KB
+24/10/2023 13:20:28 - DEBUG - activitysim.core.pipeline - add_checkpoint 'mp_sub_balancing_MAZ' table 'TAZ_weights' (1992296, 6) 103.6 MB
+24/10/2023 13:20:29 - DEBUG - activitysim.core.pipeline - add_checkpoint 'mp_sub_balancing_MAZ' table 'TAZ_weights_sparse' (341740, 6) 17.8 MB
+24/10/2023 13:20:29 - DEBUG - activitysim.core.pipeline - add_checkpoint 'mp_sub_balancing_MAZ' table 'trace_TAZ_weights' (701, 6) 36.5 KB
+24/10/2023 13:20:29 - DEBUG - activitysim.core.pipeline - add_checkpoint 'mp_sub_balancing_MAZ' table 'crosswalk' (33117, 4) 1.3 MB
+24/10/2023 13:20:29 - DEBUG - activitysim.core.pipeline - add_checkpoint 'mp_sub_balancing_MAZ' table 'slice_crosswalk' (12, 2) 288 B
+24/10/2023 13:20:30 - DEBUG - activitysim.core.pipeline - add_checkpoint 'mp_sub_balancing_MAZ' table 'MAZ_weights' (15483347, 7) 929.0 MB
+24/10/2023 13:20:32 - DEBUG - activitysim.core.pipeline - add_checkpoint 'mp_sub_balancing_MAZ' table 'MAZ_weights_sparse' (497245, 7) 29.8 MB
+24/10/2023 13:20:32 - DEBUG - activitysim.core.pipeline - add_checkpoint 'mp_sub_balancing_MAZ' table 'trace_MAZ_weights' (867, 7) 52.0 KB
+24/10/2023 13:20:32 - DEBUG - activitysim.core.pipeline - close_pipeline

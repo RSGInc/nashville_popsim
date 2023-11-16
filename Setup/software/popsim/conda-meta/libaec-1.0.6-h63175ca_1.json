@@ -1,0 +1,110 @@
+{
+ "build": "h63175ca_1",
+ "build_number": 1,
+ "channel": "https://conda.anaconda.org/conda-forge/win-64",
+ "constrains": [],
+ "depends": [
+  "ucrt >=10.0.20348.0",
+  "vc >=14.2,<15",
+  "vs2015_runtime >=14.29.30139"
+ ],
+ "extracted_package_dir": "",
+ "features": "",
+ "files": [
+  "Library/bin/aec.dll",
+  "Library/bin/aec.exe",
+  "Library/bin/szip.dll",
+  "Library/cmake/libaec-config-version.cmake",
+  "Library/cmake/libaec-config.cmake",
+  "Library/include/libaec.h",
+  "Library/include/szlib.h",
+  "Library/lib/aec.lib",
+  "Library/lib/szip.lib",
+  ".nonadmin"
+ ],
+ "fn": "libaec-1.0.6-h63175ca_1.conda",
+ "license": "BSD-2-Clause",
+ "link": {
+  "source": "",
+  "type": 1
+ },
+ "md5": "f98474a8245f55f4a273889dbe7bf193",
+ "name": "libaec",
+ "package_tarball_full_path": "",
+ "paths_data": {
+  "paths": [
+   {
+    "_path": "Library/bin/aec.dll",
+    "path_type": "hardlink",
+    "sha256": "50853fed1ff2ae57386e6de5d39ba1f83c6c26d9bdf8bc07b1cb47bf34577c7e",
+    "sha256_in_prefix": "50853fed1ff2ae57386e6de5d39ba1f83c6c26d9bdf8bc07b1cb47bf34577c7e",
+    "size_in_bytes": 28160
+   },
+   {
+    "_path": "Library/bin/aec.exe",
+    "path_type": "hardlink",
+    "sha256": "22a01ef3db597b05f3fd1df59ba06b120c9de8d4395beb43bd7c9cda58e6b81a",
+    "sha256_in_prefix": "22a01ef3db597b05f3fd1df59ba06b120c9de8d4395beb43bd7c9cda58e6b81a",
+    "size_in_bytes": 30208
+   },
+   {
+    "_path": "Library/bin/szip.dll",
+    "path_type": "hardlink",
+    "sha256": "7514c59ec739ee8d7c7dc439e2102868bec7bb883da9f16c9e3c210d9cb9c104",
+    "sha256_in_prefix": "7514c59ec739ee8d7c7dc439e2102868bec7bb883da9f16c9e3c210d9cb9c104",
+    "size_in_bytes": 31232
+   },
+   {
+    "_path": "Library/cmake/libaec-config-version.cmake",
+    "path_type": "hardlink",
+    "sha256": "ff266eeaf4c1feec6f605b8dd0d7ed89b035d4636599981dd966114c82641232",
+    "sha256_in_prefix": "ff266eeaf4c1feec6f605b8dd0d7ed89b035d4636599981dd966114c82641232",
+    "size_in_bytes": 509
+   },
+   {
+    "_path": "Library/cmake/libaec-config.cmake",
+    "path_type": "hardlink",
+    "sha256": "50721b9546a47549ef4761edef30b47481a259f46f0bd92ddb0bc14654594073",
+    "sha256_in_prefix": "50721b9546a47549ef4761edef30b47481a259f46f0bd92ddb0bc14654594073",
+    "size_in_bytes": 2942
+   },
+   {
+    "_path": "Library/include/libaec.h",
+    "path_type": "hardlink",
+    "sha256": "aaddebc7eefbb70b09a3f2d8f8eb75e00f88500102b6c18d7c756329e0f9f7d9",
+    "sha256_in_prefix": "aaddebc7eefbb70b09a3f2d8f8eb75e00f88500102b6c18d7c756329e0f9f7d9",
+    "size_in_bytes": 5198
+   },
+   {
+    "_path": "Library/include/szlib.h",
+    "path_type": "hardlink",
+    "sha256": "551d90301211881d9b64164957309ebf7faa3fa693396d18db6ecc53b121d53e",
+    "sha256_in_prefix": "551d90301211881d9b64164957309ebf7faa3fa693396d18db6ecc53b121d53e",
+    "size_in_bytes": 2670
+   },
+   {
+    "_path": "Library/lib/aec.lib",
+    "path_type": "hardlink",
+    "sha256": "49f38c539a7f66018670ec4d5edf6d378fc52f1191c6950e66a5809b33775115",
+    "sha256_in_prefix": "49f38c539a7f66018670ec4d5edf6d378fc52f1191c6950e66a5809b33775115",
+    "size_in_bytes": 5800
+   },
+   {
+    "_path": "Library/lib/szip.lib",
+    "path_type": "hardlink",
+    "sha256": "d3957372e534ba10f6b82201c85204a9a7b46c0df1846d3f1ea859b63fc6b7f1",
+    "sha256_in_prefix": "d3957372e534ba10f6b82201c85204a9a7b46c0df1846d3f1ea859b63fc6b7f1",
+    "size_in_bytes": 6680
+   }
+  ],
+  "paths_version": 1
+ },
+ "requested_spec": "libaec==1.0.6=h63175ca_1",
+ "sha256": "441f580f90279bd62bd27fb82d0bbbb2c2d9f850fcc4c8781f199c5287cd1499",
+ "size": 34719,
+ "subdir": "win-64",
+ "timestamp": 1673799892000,
+ "track_features": "",
+ "url": "https://conda.anaconda.org/conda-forge/win-64/libaec-1.0.6-h63175ca_1.conda",
+ "version": "1.0.6"
+}

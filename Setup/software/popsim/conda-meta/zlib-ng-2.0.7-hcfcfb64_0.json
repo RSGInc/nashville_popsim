@@ -1,0 +1,80 @@
+{
+ "build": "hcfcfb64_0",
+ "build_number": 0,
+ "channel": "https://conda.anaconda.org/conda-forge/win-64",
+ "constrains": [],
+ "depends": [
+  "ucrt >=10.0.20348.0",
+  "vc >=14.2,<15",
+  "vs2015_runtime >=14.29.30139"
+ ],
+ "extracted_package_dir": "",
+ "features": "",
+ "files": [
+  "Library/bin/zlib-ng2.dll",
+  "Library/include/zconf-ng.h",
+  "Library/include/zlib-ng.h",
+  "Library/lib/pkgconfig/zlib-ng.pc",
+  "Library/lib/zlib-ng.lib",
+  ".nonadmin"
+ ],
+ "fn": "zlib-ng-2.0.7-hcfcfb64_0.conda",
+ "license": "Zlib",
+ "link": {
+  "source": "",
+  "type": 1
+ },
+ "md5": "c72bb979d406650d3a78743ff888c451",
+ "name": "zlib-ng",
+ "package_tarball_full_path": "",
+ "paths_data": {
+  "paths": [
+   {
+    "_path": "Library/bin/zlib-ng2.dll",
+    "path_type": "hardlink",
+    "sha256": "c5eeb322203a08ac0a7cec8a1787e2eb133f8c017c3f48768e563ea54dbcb4d7",
+    "sha256_in_prefix": "c5eeb322203a08ac0a7cec8a1787e2eb133f8c017c3f48768e563ea54dbcb4d7",
+    "size_in_bytes": 101376
+   },
+   {
+    "_path": "Library/include/zconf-ng.h",
+    "path_type": "hardlink",
+    "sha256": "d11e70eb853930181a8e3b68047ce96826d780868352523989f3e42dd8cacb80",
+    "sha256_in_prefix": "d11e70eb853930181a8e3b68047ce96826d780868352523989f3e42dd8cacb80",
+    "size_in_bytes": 5161
+   },
+   {
+    "_path": "Library/include/zlib-ng.h",
+    "path_type": "hardlink",
+    "sha256": "d51896e8411868ed195d5cf41fda4f1c5a9c891832dfd16b559a5ed6beedd890",
+    "sha256_in_prefix": "d51896e8411868ed195d5cf41fda4f1c5a9c891832dfd16b559a5ed6beedd890",
+    "size_in_bytes": 94727
+   },
+   {
+    "_path": "Library/lib/pkgconfig/zlib-ng.pc",
+    "file_mode": "text",
+    "path_type": "hardlink",
+    "prefix_placeholder": "D:/bld/zlib-ng_1679094908688/_h_env",
+    "sha256": "ae340faf0612cbad926a9cf97c0307c66897e79fcdc834c470ba11ebef06be1d",
+    "sha256_in_prefix": "bb5664c0df8b7e28a6af329d833f6e9e899b642c31c1906d756c78b2a45b8829",
+    "size_in_bytes": 313
+   },
+   {
+    "_path": "Library/lib/zlib-ng.lib",
+    "path_type": "hardlink",
+    "sha256": "524a9ebd0f5e729a5177d9af54138e7b0df174f139bcc461c26275da69ae12d3",
+    "sha256_in_prefix": "524a9ebd0f5e729a5177d9af54138e7b0df174f139bcc461c26275da69ae12d3",
+    "size_in_bytes": 18438
+   }
+  ],
+  "paths_version": 1
+ },
+ "requested_spec": "zlib-ng==2.0.7=hcfcfb64_0",
+ "sha256": "61a4e4c209f04d3f426213a187686262ebc2dccac9a97a0743c2ebbf6e3e3dd8",
+ "size": 90788,
+ "subdir": "win-64",
+ "timestamp": 1679095380000,
+ "track_features": "",
+ "url": "https://conda.anaconda.org/conda-forge/win-64/zlib-ng-2.0.7-hcfcfb64_0.conda",
+ "version": "2.0.7"
+}

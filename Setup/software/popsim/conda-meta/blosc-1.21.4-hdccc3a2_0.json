@@ -1,0 +1,84 @@
+{
+ "build": "hdccc3a2_0",
+ "build_number": 0,
+ "channel": "https://conda.anaconda.org/conda-forge/win-64",
+ "constrains": [],
+ "depends": [
+  "libzlib >=1.2.13,<1.3.0a0",
+  "lz4-c >=1.9.3,<1.10.0a0",
+  "snappy >=1.1.10,<2.0a0",
+  "ucrt >=10.0.20348.0",
+  "vc >=14.2,<15",
+  "vc14_runtime >=14.29.30139",
+  "zstd >=1.5.2,<1.6.0a0"
+ ],
+ "extracted_package_dir": "",
+ "features": "",
+ "files": [
+  "Library/bin/blosc.dll",
+  "Library/include/blosc-export.h",
+  "Library/include/blosc.h",
+  "Library/lib/blosc.lib",
+  "Library/lib/pkgconfig/blosc.pc",
+  ".nonadmin"
+ ],
+ "fn": "blosc-1.21.4-hdccc3a2_0.conda",
+ "license": "BSD-3-Clause",
+ "link": {
+  "source": "",
+  "type": 1
+ },
+ "md5": "6d88663e0ddd031e0d41f2913bbe10cc",
+ "name": "blosc",
+ "package_tarball_full_path": "",
+ "paths_data": {
+  "paths": [
+   {
+    "_path": "Library/bin/blosc.dll",
+    "path_type": "hardlink",
+    "sha256": "550cdbd2fe30eb1f4cbea846cd9868edac9e9a84275c863d896f955e81e92936",
+    "sha256_in_prefix": "550cdbd2fe30eb1f4cbea846cd9868edac9e9a84275c863d896f955e81e92936",
+    "size_in_bytes": 69632
+   },
+   {
+    "_path": "Library/include/blosc-export.h",
+    "path_type": "hardlink",
+    "sha256": "ca20d39d276209d485b900675fabbb14c78642f0ddef93a0141c8a5802eadc68",
+    "sha256_in_prefix": "ca20d39d276209d485b900675fabbb14c78642f0ddef93a0141c8a5802eadc68",
+    "size_in_bytes": 1632
+   },
+   {
+    "_path": "Library/include/blosc.h",
+    "path_type": "hardlink",
+    "sha256": "8c8ddfe846e6dd33aab468b21e37ea9e8aa18d4d5e54357a0094e9f495b0bb78",
+    "sha256_in_prefix": "8c8ddfe846e6dd33aab468b21e37ea9e8aa18d4d5e54357a0094e9f495b0bb78",
+    "size_in_bytes": 19480
+   },
+   {
+    "_path": "Library/lib/blosc.lib",
+    "path_type": "hardlink",
+    "sha256": "b16663e9c77839428e2755d3b9cc5c01bdf1a0753edb1fb84023dc2553d84146",
+    "sha256_in_prefix": "b16663e9c77839428e2755d3b9cc5c01bdf1a0753edb1fb84023dc2553d84146",
+    "size_in_bytes": 7022
+   },
+   {
+    "_path": "Library/lib/pkgconfig/blosc.pc",
+    "file_mode": "text",
+    "path_type": "hardlink",
+    "prefix_placeholder": "D:/bld/blosc_1684234976732/_h_env",
+    "sha256": "7017912bdfccc7575e52e869c45bb13bcc8717505dd5d22e847870c44d555688",
+    "sha256_in_prefix": "3bdc7d26983e6ccdab80694abad3dd9cf30960cc61a072f34fa3e2aeb587c08c",
+    "size_in_bytes": 363
+   }
+  ],
+  "paths_version": 1
+ },
+ "requested_spec": "blosc==1.21.4=hdccc3a2_0",
+ "sha256": "e60b07712214092d8c3d31b582d27a149558cbe1ac92de11f8c2a5fe060d023c",
+ "size": 49692,
+ "subdir": "win-64",
+ "timestamp": 1684235633000,
+ "track_features": "",
+ "url": "https://conda.anaconda.org/conda-forge/win-64/blosc-1.21.4-hdccc3a2_0.conda",
+ "version": "1.21.4"
+}

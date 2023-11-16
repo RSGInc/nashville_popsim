@@ -1,0 +1,11 @@
+prefix=D:/bld/abseil-split_1676584848046/_h_env/Library
+exec_prefix=${prefix}
+libdir=D:/bld/abseil-split_1676584848046/_h_env/Library/lib
+includedir=D:/bld/abseil-split_1676584848046/_h_env/Library/include
+
+Name: abseil_dll
+Description: Abseil DLL library
+URL: https://abseil.io/
+Version: 20230125
+Libs: -L${libdir}  -labseil_dll
+Cflags: -I${includedir}

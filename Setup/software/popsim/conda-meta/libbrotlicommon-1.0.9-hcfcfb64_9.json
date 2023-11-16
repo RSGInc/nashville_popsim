@@ -1,0 +1,64 @@
+{
+ "build": "hcfcfb64_9",
+ "build_number": 9,
+ "channel": "https://conda.anaconda.org/conda-forge/win-64",
+ "constrains": [],
+ "depends": [
+  "ucrt >=10.0.20348.0",
+  "vc >=14.2,<15",
+  "vc14_runtime >=14.29.30139"
+ ],
+ "extracted_package_dir": "",
+ "features": "",
+ "files": [
+  "Library/bin/brotlicommon.dll",
+  "Library/lib/brotlicommon.lib",
+  "Library/lib/pkgconfig/libbrotlicommon.pc",
+  ".nonadmin"
+ ],
+ "fn": "libbrotlicommon-1.0.9-hcfcfb64_9.conda",
+ "license": "MIT",
+ "link": {
+  "source": "",
+  "type": 1
+ },
+ "md5": "5e0f7bd6f1d0747abd5da59cffb6f533",
+ "name": "libbrotlicommon",
+ "package_tarball_full_path": "",
+ "paths_data": {
+  "paths": [
+   {
+    "_path": "Library/bin/brotlicommon.dll",
+    "path_type": "hardlink",
+    "sha256": "922a0ebcdaf8fafc2bd2a242778866b0770d6979c1935b81d30b7c71bedb2a0e",
+    "sha256_in_prefix": "922a0ebcdaf8fafc2bd2a242778866b0770d6979c1935b81d30b7c71bedb2a0e",
+    "size_in_bytes": 137216
+   },
+   {
+    "_path": "Library/lib/brotlicommon.lib",
+    "path_type": "hardlink",
+    "sha256": "86a3a0891dee1cc74470de503fc8b712d015ea671fc7a3047ec3cb4a11058ebc",
+    "sha256_in_prefix": "86a3a0891dee1cc74470de503fc8b712d015ea671fc7a3047ec3cb4a11058ebc",
+    "size_in_bytes": 3514
+   },
+   {
+    "_path": "Library/lib/pkgconfig/libbrotlicommon.pc",
+    "file_mode": "text",
+    "path_type": "hardlink",
+    "prefix_placeholder": "D:/bld/brotli-split_1687884251065/_h_env",
+    "sha256": "685450630043bd5698ef1728d8271dd2a987eadf261cd5388110570c4321a2df",
+    "sha256_in_prefix": "423ec859a5b022b45258bcba1d35254e6c774ebdc9045efd444bf49b2f02dc33",
+    "size_in_bytes": 357
+   }
+  ],
+  "paths_version": 1
+ },
+ "requested_spec": "libbrotlicommon==1.0.9=hcfcfb64_9",
+ "sha256": "adef98f4013859c111da28ff1f66c2c65e90213fe8bac78b7fc83a15e26bc955",
+ "size": 72530,
+ "subdir": "win-64",
+ "timestamp": 1687886570000,
+ "track_features": "",
+ "url": "https://conda.anaconda.org/conda-forge/win-64/libbrotlicommon-1.0.9-hcfcfb64_9.conda",
+ "version": "1.0.9"
+}

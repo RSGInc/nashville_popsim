@@ -1,0 +1,10 @@
+prefix=D:/bld/libutf8proc_1667316083937/_h_env/Library
+exec_prefix=D:/bld/libutf8proc_1667316083937/_h_env/Library/bin
+libdir=D:/bld/libutf8proc_1667316083937/_h_env/Library/lib
+includedir=D:/bld/libutf8proc_1667316083937/_h_env/Library/include
+
+Name: libutf8proc
+Description: UTF8 processing
+Version: 2.8.0
+Libs: -L${libdir} -lutf8proc
+Cflags: -I${includedir} -DUTF8PROC_EXPORTS

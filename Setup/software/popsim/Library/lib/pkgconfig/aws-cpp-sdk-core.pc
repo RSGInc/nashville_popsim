@@ -1,0 +1,10 @@
+includedir=D:/bld/aws-sdk-cpp_1688891920201/_h_env/Library/include
+libdir=D:/bld/aws-sdk-cpp_1688891920201/_h_env/Library/lib
+
+Name: aws-cpp-sdk-core
+Description: 
+Version: 1.10.57
+Cflags: -I${includedir} 
+Libs: -L${libdir} -laws-cpp-sdk-core 
+Libs.private: -laws-crt-cpp -laws-c-auth -laws-c-cal -laws-c-common -laws-c-compression -laws-c-event-stream -laws-c-http -laws-c-io -laws-c-mqtt -laws-c-s3 -laws-checksums -laws-c-sdkutils -lUserenv -lversion -lws2_32 -lWininet -lwinhttp -lBcrypt
+Requires: 

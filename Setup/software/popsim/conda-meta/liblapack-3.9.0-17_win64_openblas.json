@@ -1,0 +1,48 @@
+{
+ "build": "17_win64_openblas",
+ "build_number": 17,
+ "channel": "https://conda.anaconda.org/conda-forge/win-64",
+ "constrains": [
+  "liblapacke 3.9.0 17_win64_openblas",
+  "blas * openblas",
+  "libcblas 3.9.0 17_win64_openblas"
+ ],
+ "depends": [
+  "libblas 3.9.0 17_win64_openblas"
+ ],
+ "extracted_package_dir": "",
+ "features": "",
+ "files": [
+  "Library/bin/liblapack.dll",
+  ".nonadmin"
+ ],
+ "fn": "liblapack-3.9.0-17_win64_openblas.conda",
+ "license": "BSD-3-Clause",
+ "link": {
+  "source": "",
+  "type": 1
+ },
+ "md5": "4073c29a64a9dd59ac31719c9851900d",
+ "name": "liblapack",
+ "package_tarball_full_path": "",
+ "paths_data": {
+  "paths": [
+   {
+    "_path": "Library/bin/liblapack.dll",
+    "path_type": "hardlink",
+    "sha256": "635cf1b9be45974cfde05acee42f9ceec73e0cd91ad8f73d99fa4a73dd1bb8c1",
+    "sha256_in_prefix": "635cf1b9be45974cfde05acee42f9ceec73e0cd91ad8f73d99fa4a73dd1bb8c1",
+    "size_in_bytes": 28463104
+   }
+  ],
+  "paths_version": 1
+ },
+ "requested_spec": "liblapack==3.9.0=17_win64_openblas",
+ "sha256": "6a2dbc8858d78cefb736fa4c5d69aa8e95e85d9e05d308fe52b80254ef355758",
+ "size": 3896736,
+ "subdir": "win-64",
+ "timestamp": 1685931217000,
+ "track_features": "blas_openblas",
+ "url": "https://conda.anaconda.org/conda-forge/win-64/liblapack-3.9.0-17_win64_openblas.conda",
+ "version": "3.9.0"
+}

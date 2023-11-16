@@ -1,0 +1,49 @@
+{
+ "build": "pthreads_hc140b1d_0",
+ "build_number": 0,
+ "channel": "https://conda.anaconda.org/conda-forge/win-64",
+ "constrains": [
+  "openblas >=0.3.23,<0.3.24.0a0"
+ ],
+ "depends": [
+  "libflang >=5.0.0,<6.0.0.a0",
+  "ucrt >=10.0.20348.0",
+  "vc >=14.2,<15",
+  "vs2015_runtime >=14.29.30139"
+ ],
+ "extracted_package_dir": "",
+ "features": "",
+ "files": [
+  "Library/bin/openblas.dll",
+  ".nonadmin"
+ ],
+ "fn": "libopenblas-0.3.23-pthreads_hc140b1d_0.conda",
+ "license": "BSD-3-Clause",
+ "link": {
+  "source": "",
+  "type": 1
+ },
+ "md5": "dd6ee99b05a7db5b202b8b81cda2812f",
+ "name": "libopenblas",
+ "package_tarball_full_path": "",
+ "paths_data": {
+  "paths": [
+   {
+    "_path": "Library/bin/openblas.dll",
+    "path_type": "hardlink",
+    "sha256": "635cf1b9be45974cfde05acee42f9ceec73e0cd91ad8f73d99fa4a73dd1bb8c1",
+    "sha256_in_prefix": "635cf1b9be45974cfde05acee42f9ceec73e0cd91ad8f73d99fa4a73dd1bb8c1",
+    "size_in_bytes": 28463104
+   }
+  ],
+  "paths_version": 1
+ },
+ "requested_spec": "libopenblas==0.3.23=pthreads_hc140b1d_0",
+ "sha256": "ddd431cd7674047d2c9981f765b45c7325f185de1d8faf673d58363ec352f795",
+ "size": 3893223,
+ "subdir": "win-64",
+ "timestamp": 1681401030000,
+ "track_features": "",
+ "url": "https://conda.anaconda.org/conda-forge/win-64/libopenblas-0.3.23-pthreads_hc140b1d_0.conda",
+ "version": "0.3.23"
+}

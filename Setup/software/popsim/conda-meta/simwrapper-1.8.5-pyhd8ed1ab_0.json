@@ -1,0 +1,866 @@
+{
+ "build": "pyhd8ed1ab_0",
+ "build_number": 0,
+ "channel": "https://conda.anaconda.org/conda-forge/noarch",
+ "constrains": [],
+ "depends": [
+  "click",
+  "python >=3.6"
+ ],
+ "extracted_package_dir": "",
+ "features": "",
+ "files": [
+  "Lib/site-packages/simwrapper-1.8.5.dist-info/INSTALLER",
+  "Lib/site-packages/simwrapper-1.8.5.dist-info/LICENSE.txt",
+  "Lib/site-packages/simwrapper-1.8.5.dist-info/METADATA",
+  "Lib/site-packages/simwrapper-1.8.5.dist-info/RECORD",
+  "Lib/site-packages/simwrapper-1.8.5.dist-info/REQUESTED",
+  "Lib/site-packages/simwrapper-1.8.5.dist-info/WHEEL",
+  "Lib/site-packages/simwrapper-1.8.5.dist-info/direct_url.json",
+  "Lib/site-packages/simwrapper-1.8.5.dist-info/entry_points.txt",
+  "Lib/site-packages/simwrapper-1.8.5.dist-info/top_level.txt",
+  "Lib/site-packages/simwrapper/MiniFileServer.py",
+  "Lib/site-packages/simwrapper/__init__.py",
+  "Lib/site-packages/simwrapper/cli.py",
+  "Lib/site-packages/simwrapper/sites.py",
+  "Lib/site-packages/simwrapper/static/404.dashboard.html",
+  "Lib/site-packages/simwrapper/static/404.html",
+  "Lib/site-packages/simwrapper/static/404.simwrapper.html",
+  "Lib/site-packages/simwrapper/static/404.staging.html",
+  "Lib/site-packages/simwrapper/static/README.md",
+  "Lib/site-packages/simwrapper/static/assets/CsvGzipParser.worker.5391040c.js",
+  "Lib/site-packages/simwrapper/static/assets/DashBoard.7599acdf.js",
+  "Lib/site-packages/simwrapper/static/assets/DashBoard.7599acdf.js.map",
+  "Lib/site-packages/simwrapper/static/assets/DashBoard.c573eae1.css",
+  "Lib/site-packages/simwrapper/static/assets/DataFetcher.worker.9fb08904.js",
+  "Lib/site-packages/simwrapper/static/assets/GistView.504c7d74.css",
+  "Lib/site-packages/simwrapper/static/assets/GistView.52f967a7.js",
+  "Lib/site-packages/simwrapper/static/assets/GistView.52f967a7.js.map",
+  "Lib/site-packages/simwrapper/static/assets/GzipFetcher.worker.99560241.js",
+  "Lib/site-packages/simwrapper/static/assets/NewXmlFetcher.worker.6f0ecbe6.js",
+  "Lib/site-packages/simwrapper/static/assets/RoadNetworkLoader.worker.4879ac1c.js",
+  "Lib/site-packages/simwrapper/static/assets/SEMCOG.93a8947e.jpg",
+  "Lib/site-packages/simwrapper/static/assets/SW_logo_icon_anim.e147e6db.gif",
+  "Lib/site-packages/simwrapper/static/assets/SW_logo_yellow.abf06ffb.png",
+  "Lib/site-packages/simwrapper/static/assets/ScreenSplitter.763ab97f.css",
+  "Lib/site-packages/simwrapper/static/assets/ScreenSplitter.79aba302.js",
+  "Lib/site-packages/simwrapper/static/assets/ScreenSplitter.79aba302.js.map",
+  "Lib/site-packages/simwrapper/static/assets/TopSheetWorker.worker.b5236d9d.js",
+  "Lib/site-packages/simwrapper/static/assets/TransitSupplyHelper.worker.1b1b1c5f.js",
+  "Lib/site-packages/simwrapper/static/assets/btn-circles.66696d2b.jpg",
+  "Lib/site-packages/simwrapper/static/assets/btn-polygons.65941c55.jpg",
+  "Lib/site-packages/simwrapper/static/assets/draw-icon-dm.04d4af86.png",
+  "Lib/site-packages/simwrapper/static/assets/icon-stop-triangle.fb9e1214.png",
+  "Lib/site-packages/simwrapper/static/assets/index.19c4fbdd.js",
+  "Lib/site-packages/simwrapper/static/assets/index.19c4fbdd.js.map",
+  "Lib/site-packages/simwrapper/static/assets/index.d654d3ea.css",
+  "Lib/site-packages/simwrapper/static/assets/metcouncil.a308973f.png",
+  "Lib/site-packages/simwrapper/static/assets/mtc.25884a00.png",
+  "Lib/site-packages/simwrapper/static/assets/mwcog.db8d79bc.png",
+  "Lib/site-packages/simwrapper/static/assets/ohiodot.9a684c31.png",
+  "Lib/site-packages/simwrapper/static/assets/oregondot.0f6f6491.png",
+  "Lib/site-packages/simwrapper/static/assets/psrc.392a146d.png",
+  "Lib/site-packages/simwrapper/static/assets/sfcta.f219c07e.png",
+  "Lib/site-packages/simwrapper/static/assets/sw_minus.5b756579.jpg",
+  "Lib/site-packages/simwrapper/static/assets/sw_minus_dm.92f86065.jpg",
+  "Lib/site-packages/simwrapper/static/assets/sw_north_arrow.5b7b9814.png",
+  "Lib/site-packages/simwrapper/static/assets/sw_north_arrow_dm.aa6d011c.png",
+  "Lib/site-packages/simwrapper/static/assets/sw_plus.c32d0b8a.jpg",
+  "Lib/site-packages/simwrapper/static/assets/sw_plus_dm.addc2ce2.jpg",
+  "Lib/site-packages/simwrapper/static/assets/thumbnail.1d5a2168.jpg",
+  "Lib/site-packages/simwrapper/static/assets/thumbnail.43c7b1a1.jpg",
+  "Lib/site-packages/simwrapper/static/assets/thumbnail.703908a0.jpg",
+  "Lib/site-packages/simwrapper/static/assets/thumbnail.c2fdcbb3.jpg",
+  "Lib/site-packages/simwrapper/static/assets/thumbnail.c6cccbb5.jpg",
+  "Lib/site-packages/simwrapper/static/assets/tu-logo.37a4ec79.png",
+  "Lib/site-packages/simwrapper/static/assets/vendor.3417ea18.js",
+  "Lib/site-packages/simwrapper/static/assets/vendor.3417ea18.js.map",
+  "Lib/site-packages/simwrapper/static/assets/vsp-logo-300dpi.1f4c4121.png",
+  "Lib/site-packages/simwrapper/static/assets/vsp-logo-left.88042ade.png",
+  "Lib/site-packages/simwrapper/static/colors/scale-bluered.png",
+  "Lib/site-packages/simwrapper/static/colors/scale-inferno.png",
+  "Lib/site-packages/simwrapper/static/colors/scale-picnic.png",
+  "Lib/site-packages/simwrapper/static/colors/scale-salinity.png",
+  "Lib/site-packages/simwrapper/static/colors/scale-viridis.png",
+  "Lib/site-packages/simwrapper/static/css/font-awesome-5.7.1.css",
+  "Lib/site-packages/simwrapper/static/favicon-32x32.png",
+  "Lib/site-packages/simwrapper/static/images/SW_favicon.png",
+  "Lib/site-packages/simwrapper/static/images/SW_logo_icon_white.png",
+  "Lib/site-packages/simwrapper/static/images/SW_logo_icon_yellow.png",
+  "Lib/site-packages/simwrapper/static/images/draw-icon.svg",
+  "Lib/site-packages/simwrapper/static/images/icon-atlas-2.svg",
+  "Lib/site-packages/simwrapper/static/images/icon-atlas-3.png",
+  "Lib/site-packages/simwrapper/static/images/icon-atlas-3.xcf",
+  "Lib/site-packages/simwrapper/static/images/icon-atlas.png",
+  "Lib/site-packages/simwrapper/static/images/icon-atlas.svg",
+  "Lib/site-packages/simwrapper/static/index.html",
+  "Lib/site-packages/simwrapper/static/sqlite.worker.js",
+  "Lib/site-packages/simwrapper/static/tu-logo-circle.jpg",
+  "Lib/site-packages/simwrapper/static/tu-logo-circle.png",
+  "Lib/site-packages/simwrapper/static/tu-logo.png",
+  "Lib/site-packages/simwrapper/static/webfonts/fa-regular-400.eot",
+  "Lib/site-packages/simwrapper/static/webfonts/fa-regular-400.svg",
+  "Lib/site-packages/simwrapper/static/webfonts/fa-regular-400.ttf",
+  "Lib/site-packages/simwrapper/static/webfonts/fa-regular-400.woff",
+  "Lib/site-packages/simwrapper/static/webfonts/fa-regular-400.woff2",
+  "Lib/site-packages/simwrapper/static/webfonts/fa-solid-900.eot",
+  "Lib/site-packages/simwrapper/static/webfonts/fa-solid-900.svg",
+  "Lib/site-packages/simwrapper/static/webfonts/fa-solid-900.ttf",
+  "Lib/site-packages/simwrapper/static/webfonts/fa-solid-900.woff",
+  "Lib/site-packages/simwrapper/static/webfonts/fa-solid-900.woff2",
+  "Lib/site-packages/tests/__init__.py",
+  ".nonadmin",
+  "Lib/site-packages/simwrapper/__pycache__/MiniFileServer.cpython-38.pyc",
+  "Lib/site-packages/simwrapper/__pycache__/__init__.cpython-38.pyc",
+  "Lib/site-packages/simwrapper/__pycache__/cli.cpython-38.pyc",
+  "Lib/site-packages/simwrapper/__pycache__/sites.cpython-38.pyc",
+  "Lib/site-packages/tests/__pycache__/__init__.cpython-38.pyc",
+  "Scripts/simwrapper-script.py",
+  "Scripts/simwrapper.exe"
+ ],
+ "fn": "simwrapper-1.8.5-pyhd8ed1ab_0.tar.bz2",
+ "license": "GPL-2.0-or-later",
+ "link": {
+  "source": "",
+  "type": 1
+ },
+ "md5": "2abb5156b884faea4d244ab3ba56da2b",
+ "name": "simwrapper",
+ "noarch": "python",
+ "package_tarball_full_path": "",
+ "package_type": "noarch_python",
+ "paths_data": {
+  "paths": [
+   {
+    "_path": "site-packages/simwrapper-1.8.5.dist-info/INSTALLER",
+    "path_type": "hardlink",
+    "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+    "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+    "size_in_bytes": 5
+   },
+   {
+    "_path": "site-packages/simwrapper-1.8.5.dist-info/LICENSE.txt",
+    "path_type": "hardlink",
+    "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "sha256_in_prefix": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "size_in_bytes": 35149
+   },
+   {
+    "_path": "site-packages/simwrapper-1.8.5.dist-info/METADATA",
+    "path_type": "hardlink",
+    "sha256": "8ae4e37f7efe04269998d54c7a8433f820f3a81cc608d0678c78356f82197252",
+    "sha256_in_prefix": "8ae4e37f7efe04269998d54c7a8433f820f3a81cc608d0678c78356f82197252",
+    "size_in_bytes": 8651
+   },
+   {
+    "_path": "site-packages/simwrapper-1.8.5.dist-info/RECORD",
+    "path_type": "hardlink",
+    "sha256": "65ae04b127126a35685d3507f49eb7ba908cc2710ca70c4f76be4f5ae9a7a726",
+    "sha256_in_prefix": "65ae04b127126a35685d3507f49eb7ba908cc2710ca70c4f76be4f5ae9a7a726",
+    "size_in_bytes": 10353
+   },
+   {
+    "_path": "site-packages/simwrapper-1.8.5.dist-info/REQUESTED",
+    "path_type": "hardlink",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size_in_bytes": 0
+   },
+   {
+    "_path": "site-packages/simwrapper-1.8.5.dist-info/WHEEL",
+    "path_type": "hardlink",
+    "sha256": "1b5e87e00dc87a84269cead8578b9e6462928e18a95f1f3373c9eef451a5bcc0",
+    "sha256_in_prefix": "1b5e87e00dc87a84269cead8578b9e6462928e18a95f1f3373c9eef451a5bcc0",
+    "size_in_bytes": 92
+   },
+   {
+    "_path": "site-packages/simwrapper-1.8.5.dist-info/direct_url.json",
+    "path_type": "hardlink",
+    "sha256": "7a0683c135302ba719276c3bf992dd7ff43f27cbf2d23214fefeeb02a5d93506",
+    "sha256_in_prefix": "7a0683c135302ba719276c3bf992dd7ff43f27cbf2d23214fefeeb02a5d93506",
+    "size_in_bytes": 106
+   },
+   {
+    "_path": "site-packages/simwrapper-1.8.5.dist-info/entry_points.txt",
+    "path_type": "hardlink",
+    "sha256": "06224925bdeebd60025f8728bfb505db47257e617da5b8fc4ff2bb541f8d71e7",
+    "sha256_in_prefix": "06224925bdeebd60025f8728bfb505db47257e617da5b8fc4ff2bb541f8d71e7",
+    "size_in_bytes": 50
+   },
+   {
+    "_path": "site-packages/simwrapper-1.8.5.dist-info/top_level.txt",
+    "path_type": "hardlink",
+    "sha256": "e479e6ee1f4345e40e205197d364db035ed66dc6f2d171a8ed7d7f64905c26de",
+    "sha256_in_prefix": "e479e6ee1f4345e40e205197d364db035ed66dc6f2d171a8ed7d7f64905c26de",
+    "size_in_bytes": 17
+   },
+   {
+    "_path": "site-packages/simwrapper/MiniFileServer.py",
+    "path_type": "hardlink",
+    "sha256": "4330a4d1ba17e28293fccd0e6ea1ebdecc31a2ec18cc963aedaf3263f994f9b5",
+    "sha256_in_prefix": "4330a4d1ba17e28293fccd0e6ea1ebdecc31a2ec18cc963aedaf3263f994f9b5",
+    "size_in_bytes": 7906
+   },
+   {
+    "_path": "site-packages/simwrapper/__init__.py",
+    "path_type": "hardlink",
+    "sha256": "045d2d07c2db3b9e6cef022457ee89434045a508c2dadccf9abe182ad633c273",
+    "sha256_in_prefix": "045d2d07c2db3b9e6cef022457ee89434045a508c2dadccf9abe182ad633c273",
+    "size_in_bytes": 5
+   },
+   {
+    "_path": "site-packages/simwrapper/cli.py",
+    "path_type": "hardlink",
+    "sha256": "224f7e4b8b3472029c02790dc49cc983aa011800f237858ed7b63932ed11026f",
+    "sha256_in_prefix": "224f7e4b8b3472029c02790dc49cc983aa011800f237858ed7b63932ed11026f",
+    "size_in_bytes": 2399
+   },
+   {
+    "_path": "site-packages/simwrapper/sites.py",
+    "path_type": "hardlink",
+    "sha256": "6c79e77abd421a8f0cde0b68e6dd65133398e071fb6269103a4bbdbf0265d5da",
+    "sha256_in_prefix": "6c79e77abd421a8f0cde0b68e6dd65133398e071fb6269103a4bbdbf0265d5da",
+    "size_in_bytes": 191
+   },
+   {
+    "_path": "site-packages/simwrapper/static/404.dashboard.html",
+    "path_type": "hardlink",
+    "sha256": "5f23c3990b6e1c68acdad1064f4b477936b1f7039230d2841b1e024eb3df9a31",
+    "sha256_in_prefix": "5f23c3990b6e1c68acdad1064f4b477936b1f7039230d2841b1e024eb3df9a31",
+    "size_in_bytes": 197
+   },
+   {
+    "_path": "site-packages/simwrapper/static/404.html",
+    "path_type": "hardlink",
+    "sha256": "734565edf5a69deedf3bfca413f80be34b0c24762d70f805d61db98e82094db4",
+    "sha256_in_prefix": "734565edf5a69deedf3bfca413f80be34b0c24762d70f805d61db98e82094db4",
+    "size_in_bytes": 187
+   },
+   {
+    "_path": "site-packages/simwrapper/static/404.simwrapper.html",
+    "path_type": "hardlink",
+    "sha256": "0b1851df8237426f8c3809acc5533181dae3fb67428133441808b3defbcc8d06",
+    "sha256_in_prefix": "0b1851df8237426f8c3809acc5533181dae3fb67428133441808b3defbcc8d06",
+    "size_in_bytes": 198
+   },
+   {
+    "_path": "site-packages/simwrapper/static/404.staging.html",
+    "path_type": "hardlink",
+    "sha256": "8900e81d7034119608a505f1669c76ecb18e3ca53034cd2f227586e495261f44",
+    "sha256_in_prefix": "8900e81d7034119608a505f1669c76ecb18e3ca53034cd2f227586e495261f44",
+    "size_in_bytes": 195
+   },
+   {
+    "_path": "site-packages/simwrapper/static/README.md",
+    "path_type": "hardlink",
+    "sha256": "f77a34adcd2bd9a8189906e92bab968a1f785cf1f099fe6ff4b0adb2cc16cf88",
+    "sha256_in_prefix": "f77a34adcd2bd9a8189906e92bab968a1f785cf1f099fe6ff4b0adb2cc16cf88",
+    "size_in_bytes": 323
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/CsvGzipParser.worker.5391040c.js",
+    "path_type": "hardlink",
+    "sha256": "5391040cbeb523de05cbd4e8cab01391abe4ff4064c8a9a54ef0feeaa7caf097",
+    "sha256_in_prefix": "5391040cbeb523de05cbd4e8cab01391abe4ff4064c8a9a54ef0feeaa7caf097",
+    "size_in_bytes": 192834
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/DashBoard.7599acdf.js",
+    "path_type": "hardlink",
+    "sha256": "a28ee4cfd2de3aa1ea409890ba34c64c90a5b2adb9d9a55dc5252d766758b763",
+    "sha256_in_prefix": "a28ee4cfd2de3aa1ea409890ba34c64c90a5b2adb9d9a55dc5252d766758b763",
+    "size_in_bytes": 5250051
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/DashBoard.7599acdf.js.map",
+    "path_type": "hardlink",
+    "sha256": "1eac8aaa57629dfd7bfaa7ab4ae3680efa9e881cc7d2aa329bf9ed7b304d1e6f",
+    "sha256_in_prefix": "1eac8aaa57629dfd7bfaa7ab4ae3680efa9e881cc7d2aa329bf9ed7b304d1e6f",
+    "size_in_bytes": 19682499
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/DashBoard.c573eae1.css",
+    "path_type": "hardlink",
+    "sha256": "aaaaa8edcdc97142a722a32ab00885ed0fedee57f74d58628b3e8664121b0ffd",
+    "sha256_in_prefix": "aaaaa8edcdc97142a722a32ab00885ed0fedee57f74d58628b3e8664121b0ffd",
+    "size_in_bytes": 125605
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/DataFetcher.worker.9fb08904.js",
+    "path_type": "hardlink",
+    "sha256": "9fb08904d08845145c96b5c2d4ddc6fb5871be441513d6c129617b89e62820fb",
+    "sha256_in_prefix": "9fb08904d08845145c96b5c2d4ddc6fb5871be441513d6c129617b89e62820fb",
+    "size_in_bytes": 109986
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/GistView.504c7d74.css",
+    "path_type": "hardlink",
+    "sha256": "bed5174de1c8607bf50c80fff269e7dbbbdaf805c20538c1f45082dc5686aa17",
+    "sha256_in_prefix": "bed5174de1c8607bf50c80fff269e7dbbbdaf805c20538c1f45082dc5686aa17",
+    "size_in_bytes": 1794
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/GistView.52f967a7.js",
+    "path_type": "hardlink",
+    "sha256": "257fe7301cdbe32ed3e01ec3bd0c870978f014ff676e86915299c1ffb054d460",
+    "sha256_in_prefix": "257fe7301cdbe32ed3e01ec3bd0c870978f014ff676e86915299c1ffb054d460",
+    "size_in_bytes": 1460
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/GistView.52f967a7.js.map",
+    "path_type": "hardlink",
+    "sha256": "5b579f9de6b229f0753a31bf747006312a8be778af2c87e108c14995adde645a",
+    "sha256_in_prefix": "5b579f9de6b229f0753a31bf747006312a8be778af2c87e108c14995adde645a",
+    "size_in_bytes": 2661
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/GzipFetcher.worker.99560241.js",
+    "path_type": "hardlink",
+    "sha256": "99560241f36cbd6de886061b8b389717fd437600d90418959c997ea62335ae39",
+    "sha256_in_prefix": "99560241f36cbd6de886061b8b389717fd437600d90418959c997ea62335ae39",
+    "size_in_bytes": 85636
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/NewXmlFetcher.worker.6f0ecbe6.js",
+    "path_type": "hardlink",
+    "sha256": "6f0ecbe67ba316d62c311091790581141804b375b919f89be23e34a6e21c4750",
+    "sha256_in_prefix": "6f0ecbe67ba316d62c311091790581141804b375b919f89be23e34a6e21c4750",
+    "size_in_bytes": 108587
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/RoadNetworkLoader.worker.4879ac1c.js",
+    "path_type": "hardlink",
+    "sha256": "4879ac1c3fafdcf6078d0cd587c2de9b44dc6641815fd1531491ff4aea174f54",
+    "sha256_in_prefix": "4879ac1c3fafdcf6078d0cd587c2de9b44dc6641815fd1531491ff4aea174f54",
+    "size_in_bytes": 664379
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/SEMCOG.93a8947e.jpg",
+    "path_type": "hardlink",
+    "sha256": "93a8947e4b96f921112f0b280259f0c89dbbf6e70bcac6f0088703feb3725c4c",
+    "sha256_in_prefix": "93a8947e4b96f921112f0b280259f0c89dbbf6e70bcac6f0088703feb3725c4c",
+    "size_in_bytes": 28332
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/SW_logo_icon_anim.e147e6db.gif",
+    "path_type": "hardlink",
+    "sha256": "e147e6dbd7edcd28f9e7dc1aba54210e6ece55985b0d803229a2e2e061e5291c",
+    "sha256_in_prefix": "e147e6dbd7edcd28f9e7dc1aba54210e6ece55985b0d803229a2e2e061e5291c",
+    "size_in_bytes": 103914
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/SW_logo_yellow.abf06ffb.png",
+    "path_type": "hardlink",
+    "sha256": "abf06ffbe275abd351a76a1a1232616746e71639e3f548cea093fdd44d51cb9d",
+    "sha256_in_prefix": "abf06ffbe275abd351a76a1a1232616746e71639e3f548cea093fdd44d51cb9d",
+    "size_in_bytes": 14318
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/ScreenSplitter.763ab97f.css",
+    "path_type": "hardlink",
+    "sha256": "7541ff695cfab2f764260375a32d58b9159d90fbd0950b904c453b3d635efff2",
+    "sha256_in_prefix": "7541ff695cfab2f764260375a32d58b9159d90fbd0950b904c453b3d635efff2",
+    "size_in_bytes": 80879
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/ScreenSplitter.79aba302.js",
+    "path_type": "hardlink",
+    "sha256": "93acfeb9cea7c873df4bddfece36f74011939feb49fffb097ad7746ab49241c5",
+    "sha256_in_prefix": "93acfeb9cea7c873df4bddfece36f74011939feb49fffb097ad7746ab49241c5",
+    "size_in_bytes": 835754
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/ScreenSplitter.79aba302.js.map",
+    "path_type": "hardlink",
+    "sha256": "caabfb329276de0557ee0b3ee71e0b2766873242b92b1751eb27960efa3cd391",
+    "sha256_in_prefix": "caabfb329276de0557ee0b3ee71e0b2766873242b92b1751eb27960efa3cd391",
+    "size_in_bytes": 1290532
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/TopSheetWorker.worker.b5236d9d.js",
+    "path_type": "hardlink",
+    "sha256": "b5236d9d72978493954aa257ded6698057aa214e20ea00393d74dd627d4f7d4d",
+    "sha256_in_prefix": "b5236d9d72978493954aa257ded6698057aa214e20ea00393d74dd627d4f7d4d",
+    "size_in_bytes": 547383
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/TransitSupplyHelper.worker.1b1b1c5f.js",
+    "path_type": "hardlink",
+    "sha256": "1b1b1c5f80ad06fbc089414860c180f970f532c83d5269e647d101be41827285",
+    "sha256_in_prefix": "1b1b1c5f80ad06fbc089414860c180f970f532c83d5269e647d101be41827285",
+    "size_in_bytes": 596128
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/btn-circles.66696d2b.jpg",
+    "path_type": "hardlink",
+    "sha256": "66696d2bb4ecc66fac8b6f7e444603f2d31df5570d001a969f4d0546ef030131",
+    "sha256_in_prefix": "66696d2bb4ecc66fac8b6f7e444603f2d31df5570d001a969f4d0546ef030131",
+    "size_in_bytes": 16052
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/btn-polygons.65941c55.jpg",
+    "path_type": "hardlink",
+    "sha256": "65941c55c9f1404089b4c80387673ab88bee0bc6066170b2f83c1f4d1d11346b",
+    "sha256_in_prefix": "65941c55c9f1404089b4c80387673ab88bee0bc6066170b2f83c1f4d1d11346b",
+    "size_in_bytes": 33628
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/draw-icon-dm.04d4af86.png",
+    "path_type": "hardlink",
+    "sha256": "04d4af86c521eca7a9abdd7cd506232f8386e037052f5b3cd73f0177d8475184",
+    "sha256_in_prefix": "04d4af86c521eca7a9abdd7cd506232f8386e037052f5b3cd73f0177d8475184",
+    "size_in_bytes": 6208
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/icon-stop-triangle.fb9e1214.png",
+    "path_type": "hardlink",
+    "sha256": "fb9e12148cecbcf5856c9df03d6212a310d05109e7b64cbaa457f33fd494d9b9",
+    "sha256_in_prefix": "fb9e12148cecbcf5856c9df03d6212a310d05109e7b64cbaa457f33fd494d9b9",
+    "size_in_bytes": 4879
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/index.19c4fbdd.js",
+    "path_type": "hardlink",
+    "sha256": "e11e195b94684b968d4ea597ca20c5c758854273a1d4aa8d68a1132d3682e84f",
+    "sha256_in_prefix": "e11e195b94684b968d4ea597ca20c5c758854273a1d4aa8d68a1132d3682e84f",
+    "size_in_bytes": 11985
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/index.19c4fbdd.js.map",
+    "path_type": "hardlink",
+    "sha256": "e575ea7f22a55d015faccb1ae1b3e14ca8073a22bf5f311190d5d6beb3fe4bdd",
+    "sha256_in_prefix": "e575ea7f22a55d015faccb1ae1b3e14ca8073a22bf5f311190d5d6beb3fe4bdd",
+    "size_in_bytes": 44831
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/index.d654d3ea.css",
+    "path_type": "hardlink",
+    "sha256": "714c82b0dc04462180db75e0d0b337acadc63a4412b86f505bd17b114bf40e88",
+    "sha256_in_prefix": "714c82b0dc04462180db75e0d0b337acadc63a4412b86f505bd17b114bf40e88",
+    "size_in_bytes": 416675
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/metcouncil.a308973f.png",
+    "path_type": "hardlink",
+    "sha256": "a308973f58c9fdda55722347a303b369a51a385a5744a7f998cb8cf50a52889c",
+    "sha256_in_prefix": "a308973f58c9fdda55722347a303b369a51a385a5744a7f998cb8cf50a52889c",
+    "size_in_bytes": 5033
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/mtc.25884a00.png",
+    "path_type": "hardlink",
+    "sha256": "25884a003db4d630f4fc456f9b294195ad0ef46f7df9d5ec019084d4fbea90f9",
+    "sha256_in_prefix": "25884a003db4d630f4fc456f9b294195ad0ef46f7df9d5ec019084d4fbea90f9",
+    "size_in_bytes": 6982
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/mwcog.db8d79bc.png",
+    "path_type": "hardlink",
+    "sha256": "db8d79bc0ccc26e00c050af27bce6bce21a283675b8668d4ecaa4407069c7a8f",
+    "sha256_in_prefix": "db8d79bc0ccc26e00c050af27bce6bce21a283675b8668d4ecaa4407069c7a8f",
+    "size_in_bytes": 11669
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/ohiodot.9a684c31.png",
+    "path_type": "hardlink",
+    "sha256": "9a684c31f984716d04b19c4f22fcff1ec9ba09d6ec06f19e69e347f073d9bf2b",
+    "sha256_in_prefix": "9a684c31f984716d04b19c4f22fcff1ec9ba09d6ec06f19e69e347f073d9bf2b",
+    "size_in_bytes": 7827
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/oregondot.0f6f6491.png",
+    "path_type": "hardlink",
+    "sha256": "0f6f6491d25f05b233b4bd74606e50763d00ee7d16de8b4a3da29dc600639487",
+    "sha256_in_prefix": "0f6f6491d25f05b233b4bd74606e50763d00ee7d16de8b4a3da29dc600639487",
+    "size_in_bytes": 6948
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/psrc.392a146d.png",
+    "path_type": "hardlink",
+    "sha256": "392a146dbddbbbd05b1812b552199152659dfdc14127d6f8abde22fd544ce890",
+    "sha256_in_prefix": "392a146dbddbbbd05b1812b552199152659dfdc14127d6f8abde22fd544ce890",
+    "size_in_bytes": 7943
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/sfcta.f219c07e.png",
+    "path_type": "hardlink",
+    "sha256": "f219c07e5bbe025bff9fddeea89fb13e2c29355ef4f2da7398fefa48b6ad9c80",
+    "sha256_in_prefix": "f219c07e5bbe025bff9fddeea89fb13e2c29355ef4f2da7398fefa48b6ad9c80",
+    "size_in_bytes": 16448
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/sw_minus.5b756579.jpg",
+    "path_type": "hardlink",
+    "sha256": "5b7565799c581ebe95b425f8dc8e9e3706b88b0934a16817395bfc9582df85af",
+    "sha256_in_prefix": "5b7565799c581ebe95b425f8dc8e9e3706b88b0934a16817395bfc9582df85af",
+    "size_in_bytes": 7881
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/sw_minus_dm.92f86065.jpg",
+    "path_type": "hardlink",
+    "sha256": "92f8606582089721c764627a4e805593a4e40920451684d15c28a7f1d59612f3",
+    "sha256_in_prefix": "92f8606582089721c764627a4e805593a4e40920451684d15c28a7f1d59612f3",
+    "size_in_bytes": 8066
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/sw_north_arrow.5b7b9814.png",
+    "path_type": "hardlink",
+    "sha256": "5b7b9814877293ede78a2cb01bf16151b7740dd9262a7936b68eb4ef56aae641",
+    "sha256_in_prefix": "5b7b9814877293ede78a2cb01bf16151b7740dd9262a7936b68eb4ef56aae641",
+    "size_in_bytes": 6205
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/sw_north_arrow_dm.aa6d011c.png",
+    "path_type": "hardlink",
+    "sha256": "aa6d011c8b44d61c28c8ddfd4222d86c4c718808b10184d1012c055747e2ecb1",
+    "sha256_in_prefix": "aa6d011c8b44d61c28c8ddfd4222d86c4c718808b10184d1012c055747e2ecb1",
+    "size_in_bytes": 4997
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/sw_plus.c32d0b8a.jpg",
+    "path_type": "hardlink",
+    "sha256": "c32d0b8a9966892ceaa8eded61ae924c9ce70d4a3390a47563b3fb4cede346f3",
+    "sha256_in_prefix": "c32d0b8a9966892ceaa8eded61ae924c9ce70d4a3390a47563b3fb4cede346f3",
+    "size_in_bytes": 8173
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/sw_plus_dm.addc2ce2.jpg",
+    "path_type": "hardlink",
+    "sha256": "addc2ce234f4a206661deed82abed6a8ccb7cf46b9bb4526446f3874755e3502",
+    "sha256_in_prefix": "addc2ce234f4a206661deed82abed6a8ccb7cf46b9bb4526446f3874755e3502",
+    "size_in_bytes": 8660
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/thumbnail.1d5a2168.jpg",
+    "path_type": "hardlink",
+    "sha256": "1d5a2168ac78a1480cfab138c2a4c53d6716e943714e4a5ff21c3ef36d49a454",
+    "sha256_in_prefix": "1d5a2168ac78a1480cfab138c2a4c53d6716e943714e4a5ff21c3ef36d49a454",
+    "size_in_bytes": 833923
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/thumbnail.43c7b1a1.jpg",
+    "path_type": "hardlink",
+    "sha256": "43c7b1a196fc5c4de20c82fb4c81ca62c5933b3c43a4f684ac94e81ee9aa543a",
+    "sha256_in_prefix": "43c7b1a196fc5c4de20c82fb4c81ca62c5933b3c43a4f684ac94e81ee9aa543a",
+    "size_in_bytes": 43154
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/thumbnail.703908a0.jpg",
+    "path_type": "hardlink",
+    "sha256": "703908a09faa3d05bf7c821ffec898c1ad34aa734abd7902ac693c5cd0fd77e7",
+    "sha256_in_prefix": "703908a09faa3d05bf7c821ffec898c1ad34aa734abd7902ac693c5cd0fd77e7",
+    "size_in_bytes": 53390
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/thumbnail.c2fdcbb3.jpg",
+    "path_type": "hardlink",
+    "sha256": "c2fdcbb322b5436fa3603a3d683f2e2c0c9fda19226811e8878718247e2918eb",
+    "sha256_in_prefix": "c2fdcbb322b5436fa3603a3d683f2e2c0c9fda19226811e8878718247e2918eb",
+    "size_in_bytes": 71010
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/thumbnail.c6cccbb5.jpg",
+    "path_type": "hardlink",
+    "sha256": "c6cccbb57c71a794891bc921f91c43b1c83025e9426566dc455d733cccdf90a2",
+    "sha256_in_prefix": "c6cccbb57c71a794891bc921f91c43b1c83025e9426566dc455d733cccdf90a2",
+    "size_in_bytes": 83641
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/tu-logo.37a4ec79.png",
+    "path_type": "hardlink",
+    "sha256": "37a4ec799f9d8b77109ad21b7485d41aad90dec6114efbfc4d92abb653cad23d",
+    "sha256_in_prefix": "37a4ec799f9d8b77109ad21b7485d41aad90dec6114efbfc4d92abb653cad23d",
+    "size_in_bytes": 177415
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/vendor.3417ea18.js",
+    "path_type": "hardlink",
+    "sha256": "e5c449399399980867fae848130f8022d679e442a4832079bebb6f63abe44cec",
+    "sha256_in_prefix": "e5c449399399980867fae848130f8022d679e442a4832079bebb6f63abe44cec",
+    "size_in_bytes": 1276434
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/vendor.3417ea18.js.map",
+    "path_type": "hardlink",
+    "sha256": "84483ec9198f94a62fe4c6cb9efa230a762410d4753752779b3b15a5d432adb0",
+    "sha256_in_prefix": "84483ec9198f94a62fe4c6cb9efa230a762410d4753752779b3b15a5d432adb0",
+    "size_in_bytes": 3333239
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/vsp-logo-300dpi.1f4c4121.png",
+    "path_type": "hardlink",
+    "sha256": "1f4c41210e289b87452634216f076f2ed60b38a53a04601148b53c01ad67ce21",
+    "sha256_in_prefix": "1f4c41210e289b87452634216f076f2ed60b38a53a04601148b53c01ad67ce21",
+    "size_in_bytes": 10831
+   },
+   {
+    "_path": "site-packages/simwrapper/static/assets/vsp-logo-left.88042ade.png",
+    "path_type": "hardlink",
+    "sha256": "88042ade5d722fa81bae4739296e05f77e10b041a2dcdbcd9dc6e956e96dcd66",
+    "sha256_in_prefix": "88042ade5d722fa81bae4739296e05f77e10b041a2dcdbcd9dc6e956e96dcd66",
+    "size_in_bytes": 41875
+   },
+   {
+    "_path": "site-packages/simwrapper/static/colors/scale-bluered.png",
+    "path_type": "hardlink",
+    "sha256": "59b070c4283e9b9814b65c02f837861f97add0e2ccc904e2f5a78bdbb1495463",
+    "sha256_in_prefix": "59b070c4283e9b9814b65c02f837861f97add0e2ccc904e2f5a78bdbb1495463",
+    "size_in_bytes": 5020
+   },
+   {
+    "_path": "site-packages/simwrapper/static/colors/scale-inferno.png",
+    "path_type": "hardlink",
+    "sha256": "e4781e23438aa1d2864906ef4e75d1279e47b9200f55bb06d8fa901f983ca566",
+    "sha256_in_prefix": "e4781e23438aa1d2864906ef4e75d1279e47b9200f55bb06d8fa901f983ca566",
+    "size_in_bytes": 5249
+   },
+   {
+    "_path": "site-packages/simwrapper/static/colors/scale-picnic.png",
+    "path_type": "hardlink",
+    "sha256": "9536540059a78c409f5fb98b0ade65177ddb1f2aa9c974ae3042e0ee02443e8e",
+    "sha256_in_prefix": "9536540059a78c409f5fb98b0ade65177ddb1f2aa9c974ae3042e0ee02443e8e",
+    "size_in_bytes": 7196
+   },
+   {
+    "_path": "site-packages/simwrapper/static/colors/scale-salinity.png",
+    "path_type": "hardlink",
+    "sha256": "4476a74089e91105718b05382287b10a7b58d3e0788373eeb2d9374a4ef3240c",
+    "sha256_in_prefix": "4476a74089e91105718b05382287b10a7b58d3e0788373eeb2d9374a4ef3240c",
+    "size_in_bytes": 5235
+   },
+   {
+    "_path": "site-packages/simwrapper/static/colors/scale-viridis.png",
+    "path_type": "hardlink",
+    "sha256": "82e53d581701ad40cecfa5edec367b908d0f9c478df6c9569b52044a7e3a2600",
+    "sha256_in_prefix": "82e53d581701ad40cecfa5edec367b908d0f9c478df6c9569b52044a7e3a2600",
+    "size_in_bytes": 5087
+   },
+   {
+    "_path": "site-packages/simwrapper/static/css/font-awesome-5.7.1.css",
+    "path_type": "hardlink",
+    "sha256": "d87ddf917b7a1449ab45e2b8e3c98354629bdd65b6659c37e6023bbea1ce1386",
+    "sha256_in_prefix": "d87ddf917b7a1449ab45e2b8e3c98354629bdd65b6659c37e6023bbea1ce1386",
+    "size_in_bytes": 59344
+   },
+   {
+    "_path": "site-packages/simwrapper/static/favicon-32x32.png",
+    "path_type": "hardlink",
+    "sha256": "61ce697fa396f97ebf9535253013285ce839daee96148b8c46b624ccc74b77a7",
+    "sha256_in_prefix": "61ce697fa396f97ebf9535253013285ce839daee96148b8c46b624ccc74b77a7",
+    "size_in_bytes": 1628
+   },
+   {
+    "_path": "site-packages/simwrapper/static/images/SW_favicon.png",
+    "path_type": "hardlink",
+    "sha256": "9103c957e419c7411544a7688ce9f7bc97a0f2fa72f0651cf6d04e1578b203ce",
+    "sha256_in_prefix": "9103c957e419c7411544a7688ce9f7bc97a0f2fa72f0651cf6d04e1578b203ce",
+    "size_in_bytes": 3117
+   },
+   {
+    "_path": "site-packages/simwrapper/static/images/SW_logo_icon_white.png",
+    "path_type": "hardlink",
+    "sha256": "ba19d5c01207d987868c723aee18a8f77f545c3abdf36950d18f14a23910c1da",
+    "sha256_in_prefix": "ba19d5c01207d987868c723aee18a8f77f545c3abdf36950d18f14a23910c1da",
+    "size_in_bytes": 3067
+   },
+   {
+    "_path": "site-packages/simwrapper/static/images/SW_logo_icon_yellow.png",
+    "path_type": "hardlink",
+    "sha256": "b175034f8ecee66cd29c1ab946be858ff7154e75fbba05169a0866bbd30682bf",
+    "sha256_in_prefix": "b175034f8ecee66cd29c1ab946be858ff7154e75fbba05169a0866bbd30682bf",
+    "size_in_bytes": 3294
+   },
+   {
+    "_path": "site-packages/simwrapper/static/images/draw-icon.svg",
+    "path_type": "hardlink",
+    "sha256": "2ef35028680c936a15cf174ad288286e01d721ddce6e7d4427798e1463d641bc",
+    "sha256_in_prefix": "2ef35028680c936a15cf174ad288286e01d721ddce6e7d4427798e1463d641bc",
+    "size_in_bytes": 2827
+   },
+   {
+    "_path": "site-packages/simwrapper/static/images/icon-atlas-2.svg",
+    "path_type": "hardlink",
+    "sha256": "a3050ced416ec9adb3b3f7400a5f6235ccf360b34914ca465799b9e308e3ab5c",
+    "sha256_in_prefix": "a3050ced416ec9adb3b3f7400a5f6235ccf360b34914ca465799b9e308e3ab5c",
+    "size_in_bytes": 11623
+   },
+   {
+    "_path": "site-packages/simwrapper/static/images/icon-atlas-3.png",
+    "path_type": "hardlink",
+    "sha256": "8fe1ed9228ead29799c65b79f7f167dde521ab9808c83ac29f3c5a1c2154cc28",
+    "sha256_in_prefix": "8fe1ed9228ead29799c65b79f7f167dde521ab9808c83ac29f3c5a1c2154cc28",
+    "size_in_bytes": 9591
+   },
+   {
+    "_path": "site-packages/simwrapper/static/images/icon-atlas-3.xcf",
+    "path_type": "hardlink",
+    "sha256": "6add449b63925aed4f7cccd74894148dc4d01a69231d6b8c4297f5f68fc2c42a",
+    "sha256_in_prefix": "6add449b63925aed4f7cccd74894148dc4d01a69231d6b8c4297f5f68fc2c42a",
+    "size_in_bytes": 10860
+   },
+   {
+    "_path": "site-packages/simwrapper/static/images/icon-atlas.png",
+    "path_type": "hardlink",
+    "sha256": "21a7672d4b9e10c0f11b5d756f68e33af456283a446c533eb1985de20d035ef1",
+    "sha256_in_prefix": "21a7672d4b9e10c0f11b5d756f68e33af456283a446c533eb1985de20d035ef1",
+    "size_in_bytes": 6044
+   },
+   {
+    "_path": "site-packages/simwrapper/static/images/icon-atlas.svg",
+    "path_type": "hardlink",
+    "sha256": "b56c7578b7fdbe91b89abfb8e3020dbde59941c0ac1446f718c62461830ac3dd",
+    "sha256_in_prefix": "b56c7578b7fdbe91b89abfb8e3020dbde59941c0ac1446f718c62461830ac3dd",
+    "size_in_bytes": 13009
+   },
+   {
+    "_path": "site-packages/simwrapper/static/index.html",
+    "path_type": "hardlink",
+    "sha256": "5a60d5a932b9cdb946dad335486e18561c5692fd582ad73ecab562942b73b1d0",
+    "sha256_in_prefix": "5a60d5a932b9cdb946dad335486e18561c5692fd582ad73ecab562942b73b1d0",
+    "size_in_bytes": 2151
+   },
+   {
+    "_path": "site-packages/simwrapper/static/sqlite.worker.js",
+    "path_type": "hardlink",
+    "sha256": "c5a5f07a6b1bcd0cbb9481b0f5e252017925f00ca162982ce514693d8517968d",
+    "sha256_in_prefix": "c5a5f07a6b1bcd0cbb9481b0f5e252017925f00ca162982ce514693d8517968d",
+    "size_in_bytes": 87560
+   },
+   {
+    "_path": "site-packages/simwrapper/static/tu-logo-circle.jpg",
+    "path_type": "hardlink",
+    "sha256": "17a668c0455876bd304bcb8f7f43595f347982cb372e197e23aa125777327cda",
+    "sha256_in_prefix": "17a668c0455876bd304bcb8f7f43595f347982cb372e197e23aa125777327cda",
+    "size_in_bytes": 48433
+   },
+   {
+    "_path": "site-packages/simwrapper/static/tu-logo-circle.png",
+    "path_type": "hardlink",
+    "sha256": "6466c6c63d68b635bef50e4909725984160d34bae4536fb06fa70dcbb7ee37e7",
+    "sha256_in_prefix": "6466c6c63d68b635bef50e4909725984160d34bae4536fb06fa70dcbb7ee37e7",
+    "size_in_bytes": 103165
+   },
+   {
+    "_path": "site-packages/simwrapper/static/tu-logo.png",
+    "path_type": "hardlink",
+    "sha256": "1cd5f8a4d09122ca95c980ddfb85d963f46dc538328cb065bb71a4180912ebb0",
+    "sha256_in_prefix": "1cd5f8a4d09122ca95c980ddfb85d963f46dc538328cb065bb71a4180912ebb0",
+    "size_in_bytes": 93157
+   },
+   {
+    "_path": "site-packages/simwrapper/static/webfonts/fa-regular-400.eot",
+    "path_type": "hardlink",
+    "sha256": "cf83ffb8cf0023bd439dfdd5d02f1954b6ee027e85897d6cfc5f90bbca9ec1d2",
+    "sha256_in_prefix": "cf83ffb8cf0023bd439dfdd5d02f1954b6ee027e85897d6cfc5f90bbca9ec1d2",
+    "size_in_bytes": 34034
+   },
+   {
+    "_path": "site-packages/simwrapper/static/webfonts/fa-regular-400.svg",
+    "path_type": "hardlink",
+    "sha256": "2326849b6c3dfa217a0e9ecaec9553c910a4e2987c87315c85073d2b95a484f3",
+    "sha256_in_prefix": "2326849b6c3dfa217a0e9ecaec9553c910a4e2987c87315c85073d2b95a484f3",
+    "size_in_bytes": 144714
+   },
+   {
+    "_path": "site-packages/simwrapper/static/webfonts/fa-regular-400.ttf",
+    "path_type": "hardlink",
+    "sha256": "c651b8a67d3193206f622c3c3b0fbca4a2f2727108c4212b52c1e2a2e84c9b31",
+    "sha256_in_prefix": "c651b8a67d3193206f622c3c3b0fbca4a2f2727108c4212b52c1e2a2e84c9b31",
+    "size_in_bytes": 33736
+   },
+   {
+    "_path": "site-packages/simwrapper/static/webfonts/fa-regular-400.woff",
+    "path_type": "hardlink",
+    "sha256": "14c9db4ff87fde08f67b0a69dd594bab6d87174812a0dbd34c59833bfed8cc0e",
+    "sha256_in_prefix": "14c9db4ff87fde08f67b0a69dd594bab6d87174812a0dbd34c59833bfed8cc0e",
+    "size_in_bytes": 16276
+   },
+   {
+    "_path": "site-packages/simwrapper/static/webfonts/fa-regular-400.woff2",
+    "path_type": "hardlink",
+    "sha256": "8afc6e5e842baab16010c2ce6fcf48ec4ded8e1579a37c1f1bc027e120d04951",
+    "sha256_in_prefix": "8afc6e5e842baab16010c2ce6fcf48ec4ded8e1579a37c1f1bc027e120d04951",
+    "size_in_bytes": 13276
+   },
+   {
+    "_path": "site-packages/simwrapper/static/webfonts/fa-solid-900.eot",
+    "path_type": "hardlink",
+    "sha256": "75a761159ae266c5332a4f266e07a5543712ffb76ee0260b07782195c04dc364",
+    "sha256_in_prefix": "75a761159ae266c5332a4f266e07a5543712ffb76ee0260b07782195c04dc364",
+    "size_in_bytes": 203030
+   },
+   {
+    "_path": "site-packages/simwrapper/static/webfonts/fa-solid-900.svg",
+    "path_type": "hardlink",
+    "sha256": "fa498fb2596a5235c5c86d7b68a7fbe76e9855c01af4b0e5ab41c41047c648e0",
+    "sha256_in_prefix": "fa498fb2596a5235c5c86d7b68a7fbe76e9855c01af4b0e5ab41c41047c648e0",
+    "size_in_bytes": 918991
+   },
+   {
+    "_path": "site-packages/simwrapper/static/webfonts/fa-solid-900.ttf",
+    "path_type": "hardlink",
+    "sha256": "3d06af1f31cd83ace7a265a014b8fb5dee15770ecac8f7a55555190e627e03c2",
+    "sha256_in_prefix": "3d06af1f31cd83ace7a265a014b8fb5dee15770ecac8f7a55555190e627e03c2",
+    "size_in_bytes": 202744
+   },
+   {
+    "_path": "site-packages/simwrapper/static/webfonts/fa-solid-900.woff",
+    "path_type": "hardlink",
+    "sha256": "74edc18b67c487e32f181719fdb347e2e77020744651f446e9acd7bd6821e2e7",
+    "sha256_in_prefix": "74edc18b67c487e32f181719fdb347e2e77020744651f446e9acd7bd6821e2e7",
+    "size_in_bytes": 101652
+   },
+   {
+    "_path": "site-packages/simwrapper/static/webfonts/fa-solid-900.woff2",
+    "path_type": "hardlink",
+    "sha256": "d0b4256abed72481585662971262eabee345c19f837af00d7ce24239d3b40eef",
+    "sha256_in_prefix": "d0b4256abed72481585662971262eabee345c19f837af00d7ce24239d3b40eef",
+    "size_in_bytes": 78196
+   },
+   {
+    "_path": "site-packages/tests/__init__.py",
+    "path_type": "hardlink",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size_in_bytes": 0
+   },
+   {
+    "_path": "Lib/site-packages/simwrapper/__pycache__/MiniFileServer.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "Lib/site-packages/simwrapper/__pycache__/__init__.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "Lib/site-packages/simwrapper/__pycache__/cli.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "Lib/site-packages/simwrapper/__pycache__/sites.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "Lib/site-packages/tests/__pycache__/__init__.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "Scripts/simwrapper-script.py",
+    "path_type": "windows_python_entry_point_script"
+   },
+   {
+    "_path": "Scripts/simwrapper.exe",
+    "path_type": "windows_python_entry_point_exe"
+   }
+  ],
+  "paths_version": 1
+ },
+ "requested_spec": "simwrapper==1.8.5=pyhd8ed1ab_0",
+ "sha256": "107173d970723a19d7d6fcb6d2ffc24cfd2b854581379548b1e7d021299b0f11",
+ "size": 10480394,
+ "subdir": "noarch",
+ "timestamp": 1666702625000,
+ "track_features": "",
+ "url": "https://conda.anaconda.org/conda-forge/noarch/simwrapper-1.8.5-pyhd8ed1ab_0.tar.bz2",
+ "version": "1.8.5"
+}

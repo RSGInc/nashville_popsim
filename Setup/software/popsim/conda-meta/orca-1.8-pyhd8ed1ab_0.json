@@ -1,0 +1,183 @@
+{
+ "build": "pyhd8ed1ab_0",
+ "build_number": 0,
+ "channel": "https://conda.anaconda.org/conda-forge/noarch",
+ "constrains": [],
+ "depends": [
+  "pandas >=0.15.0",
+  "pytables >=3.1.0",
+  "python >=3.6",
+  "toolz >=0.8.1"
+ ],
+ "extracted_package_dir": "",
+ "features": "",
+ "files": [
+  "Lib/site-packages/orca-1.8.dist-info/INSTALLER",
+  "Lib/site-packages/orca-1.8.dist-info/LICENSE.txt",
+  "Lib/site-packages/orca-1.8.dist-info/METADATA",
+  "Lib/site-packages/orca-1.8.dist-info/RECORD",
+  "Lib/site-packages/orca-1.8.dist-info/REQUESTED",
+  "Lib/site-packages/orca-1.8.dist-info/WHEEL",
+  "Lib/site-packages/orca-1.8.dist-info/direct_url.json",
+  "Lib/site-packages/orca-1.8.dist-info/top_level.txt",
+  "Lib/site-packages/orca/__init__.py",
+  "Lib/site-packages/orca/orca.py",
+  "Lib/site-packages/orca/utils/__init__.py",
+  "Lib/site-packages/orca/utils/logutil.py",
+  "Lib/site-packages/orca/utils/testing.py",
+  "Lib/site-packages/orca/utils/utils.py",
+  ".nonadmin",
+  "Lib/site-packages/orca/__pycache__/__init__.cpython-38.pyc",
+  "Lib/site-packages/orca/__pycache__/orca.cpython-38.pyc",
+  "Lib/site-packages/orca/utils/__pycache__/__init__.cpython-38.pyc",
+  "Lib/site-packages/orca/utils/__pycache__/logutil.cpython-38.pyc",
+  "Lib/site-packages/orca/utils/__pycache__/testing.cpython-38.pyc",
+  "Lib/site-packages/orca/utils/__pycache__/utils.cpython-38.pyc"
+ ],
+ "fn": "orca-1.8-pyhd8ed1ab_0.tar.bz2",
+ "license": "BSD-3-Clause",
+ "link": {
+  "source": "",
+  "type": 1
+ },
+ "md5": "e0c47f71ede4fc985baf2ad94b8cd099",
+ "name": "orca",
+ "noarch": "python",
+ "package_tarball_full_path": "",
+ "package_type": "noarch_python",
+ "paths_data": {
+  "paths": [
+   {
+    "_path": "site-packages/orca-1.8.dist-info/INSTALLER",
+    "path_type": "hardlink",
+    "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+    "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+    "size_in_bytes": 5
+   },
+   {
+    "_path": "site-packages/orca-1.8.dist-info/LICENSE.txt",
+    "path_type": "hardlink",
+    "sha256": "02d80e130f708b19f17c5830f14096d1f6e0593a3ffebb1ca1d1773c17ece011",
+    "sha256_in_prefix": "02d80e130f708b19f17c5830f14096d1f6e0593a3ffebb1ca1d1773c17ece011",
+    "size_in_bytes": 1484
+   },
+   {
+    "_path": "site-packages/orca-1.8.dist-info/METADATA",
+    "path_type": "hardlink",
+    "sha256": "bfcf2ded785ff946cb2861a58f6399ce90d4831d5d41a5b11598365bcb9c25a3",
+    "sha256_in_prefix": "bfcf2ded785ff946cb2861a58f6399ce90d4831d5d41a5b11598365bcb9c25a3",
+    "size_in_bytes": 1730
+   },
+   {
+    "_path": "site-packages/orca-1.8.dist-info/RECORD",
+    "path_type": "hardlink",
+    "sha256": "0fcd33282801d8c65be828f65078d7d61370df861f4ff0596e4d57bf4414b8c5",
+    "sha256_in_prefix": "0fcd33282801d8c65be828f65078d7d61370df861f4ff0596e4d57bf4414b8c5",
+    "size_in_bytes": 1366
+   },
+   {
+    "_path": "site-packages/orca-1.8.dist-info/REQUESTED",
+    "path_type": "hardlink",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size_in_bytes": 0
+   },
+   {
+    "_path": "site-packages/orca-1.8.dist-info/WHEEL",
+    "path_type": "hardlink",
+    "sha256": "1b5e87e00dc87a84269cead8578b9e6462928e18a95f1f3373c9eef451a5bcc0",
+    "sha256_in_prefix": "1b5e87e00dc87a84269cead8578b9e6462928e18a95f1f3373c9eef451a5bcc0",
+    "size_in_bytes": 92
+   },
+   {
+    "_path": "site-packages/orca-1.8.dist-info/direct_url.json",
+    "path_type": "hardlink",
+    "sha256": "554b8c19f50e06da45dcf7ab30d01f45f7f156e11ef0dfe10c17510c8fd7babf",
+    "sha256_in_prefix": "554b8c19f50e06da45dcf7ab30d01f45f7f156e11ef0dfe10c17510c8fd7babf",
+    "size_in_bytes": 100
+   },
+   {
+    "_path": "site-packages/orca-1.8.dist-info/top_level.txt",
+    "path_type": "hardlink",
+    "sha256": "22698e75ce7451f19236ac1b4f63723a7907aef37be112f282d78f08658e804b",
+    "sha256_in_prefix": "22698e75ce7451f19236ac1b4f63723a7907aef37be112f282d78f08658e804b",
+    "size_in_bytes": 5
+   },
+   {
+    "_path": "site-packages/orca/__init__.py",
+    "path_type": "hardlink",
+    "sha256": "8c910d75bf9dab962d3cb5d681765131086e56315f3113b1102fabcdbaec3e7a",
+    "sha256_in_prefix": "8c910d75bf9dab962d3cb5d681765131086e56315f3113b1102fabcdbaec3e7a",
+    "size_in_bytes": 51
+   },
+   {
+    "_path": "site-packages/orca/orca.py",
+    "path_type": "hardlink",
+    "sha256": "54d363028e62dbd4aabe1e3a26102b889fc166e4da560cebaba76f2f554702e4",
+    "sha256_in_prefix": "54d363028e62dbd4aabe1e3a26102b889fc166e4da560cebaba76f2f554702e4",
+    "size_in_bytes": 65909
+   },
+   {
+    "_path": "site-packages/orca/utils/__init__.py",
+    "path_type": "hardlink",
+    "sha256": "3b688481d78363dd431ac9814899ed633a617d784c0201e2fb2e7dac082656d6",
+    "sha256_in_prefix": "3b688481d78363dd431ac9814899ed633a617d784c0201e2fb2e7dac082656d6",
+    "size_in_bytes": 95
+   },
+   {
+    "_path": "site-packages/orca/utils/logutil.py",
+    "path_type": "hardlink",
+    "sha256": "3057ffafae06481f212f25a49dbd997c502ee056c194f17cb232a8911b696ef5",
+    "sha256_in_prefix": "3057ffafae06481f212f25a49dbd997c502ee056c194f17cb232a8911b696ef5",
+    "size_in_bytes": 3349
+   },
+   {
+    "_path": "site-packages/orca/utils/testing.py",
+    "path_type": "hardlink",
+    "sha256": "70180cfc988f0bb103708cd55c097bc2ea780a50ab9ec4ad4f10d558ca49e40f",
+    "sha256_in_prefix": "70180cfc988f0bb103708cd55c097bc2ea780a50ab9ec4ad4f10d558ca49e40f",
+    "size_in_bytes": 2026
+   },
+   {
+    "_path": "site-packages/orca/utils/utils.py",
+    "path_type": "hardlink",
+    "sha256": "cb33843f9de762655a5c7f1291a3e8b203a499baf9697aab05939751ed65571b",
+    "sha256_in_prefix": "cb33843f9de762655a5c7f1291a3e8b203a499baf9697aab05939751ed65571b",
+    "size_in_bytes": 602
+   },
+   {
+    "_path": "Lib/site-packages/orca/__pycache__/__init__.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "Lib/site-packages/orca/__pycache__/orca.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "Lib/site-packages/orca/utils/__pycache__/__init__.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "Lib/site-packages/orca/utils/__pycache__/logutil.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "Lib/site-packages/orca/utils/__pycache__/testing.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "Lib/site-packages/orca/utils/__pycache__/utils.cpython-38.pyc",
+    "path_type": "pyc_file"
+   }
+  ],
+  "paths_version": 1
+ },
+ "requested_spec": "orca==1.8=pyhd8ed1ab_0",
+ "sha256": "004ec1a26599b0c38ba588ca48836ffae105d6b2f3a49ecd7850ca200b5103db",
+ "size": 21869,
+ "subdir": "noarch",
+ "timestamp": 1665615055000,
+ "track_features": "",
+ "url": "https://conda.anaconda.org/conda-forge/noarch/orca-1.8-pyhd8ed1ab_0.tar.bz2",
+ "version": "1.8"
+}

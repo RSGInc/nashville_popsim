@@ -1,0 +1,89 @@
+24/10/2023 13:20:34 - INFO - activitysim - Read logging configuration from: configs\HH\logging.yaml
+24/10/2023 13:20:34 - DEBUG - activitysim.core.mp_tasks - mp_run_simulation mp_summarize locutor=True 
+24/10/2023 13:20:34 - INFO - activitysim.core.mp_tasks - resume_after _
+24/10/2023 13:20:34 - DEBUG - activitysim.core.random - Set random seed base to 0
+24/10/2023 13:20:34 - DEBUG - activitysim.core.pipeline - open_pipeline - open existing pipeline
+24/10/2023 13:20:34 - DEBUG - activitysim.core.pipeline - opened pipeline_store output\HH\pipeline.h5
+24/10/2023 13:20:34 - INFO - activitysim.core.pipeline - load_checkpoint _
+24/10/2023 13:20:34 - INFO - activitysim.core.pipeline - loading checkpoint 'mp_sub_balancing_MAZ'
+24/10/2023 13:20:34 - INFO - activitysim.core.pipeline - load_checkpoint mp_sub_balancing_MAZ timestamp 2023-10-24 13:20:27.589468
+24/10/2023 13:20:35 - INFO - activitysim.core.pipeline - load_checkpoint table households (34034, 238)
+24/10/2023 13:20:35 - DEBUG - activitysim.core.pipeline - rewrap table households inplace=False
+24/10/2023 13:20:36 - INFO - activitysim.core.pipeline - load_checkpoint table persons (83294, 289)
+24/10/2023 13:20:36 - DEBUG - activitysim.core.pipeline - rewrap table persons inplace=False
+24/10/2023 13:20:36 - INFO - activitysim.core.pipeline - load_checkpoint table geo_cross_walk (33117, 7)
+24/10/2023 13:20:36 - DEBUG - activitysim.core.pipeline - rewrap table geo_cross_walk inplace=False
+24/10/2023 13:20:36 - INFO - activitysim.core.pipeline - load_checkpoint table MAZ_control_data (33117, 4)
+24/10/2023 13:20:36 - DEBUG - activitysim.core.pipeline - rewrap table MAZ_control_data inplace=False
+24/10/2023 13:20:36 - INFO - activitysim.core.pipeline - load_checkpoint table TAZ_control_data (2929, 45)
+24/10/2023 13:20:36 - DEBUG - activitysim.core.pipeline - rewrap table TAZ_control_data inplace=False
+24/10/2023 13:20:36 - INFO - activitysim.core.pipeline - load_checkpoint table REGION_control_data (1, 2)
+24/10/2023 13:20:36 - DEBUG - activitysim.core.pipeline - rewrap table REGION_control_data inplace=False
+24/10/2023 13:20:36 - INFO - activitysim.core.pipeline - load_checkpoint table crosswalk (33117, 4)
+24/10/2023 13:20:36 - DEBUG - activitysim.core.pipeline - rewrap table crosswalk inplace=False
+24/10/2023 13:20:36 - INFO - activitysim.core.pipeline - load_checkpoint table slice_crosswalk (12, 2)
+24/10/2023 13:20:36 - DEBUG - activitysim.core.pipeline - rewrap table slice_crosswalk inplace=False
+24/10/2023 13:20:36 - INFO - activitysim.core.pipeline - load_checkpoint table control_spec (24, 6)
+24/10/2023 13:20:36 - DEBUG - activitysim.core.pipeline - rewrap table control_spec inplace=False
+24/10/2023 13:20:36 - INFO - activitysim.core.pipeline - load_checkpoint table REGION_controls (1, 24)
+24/10/2023 13:20:36 - DEBUG - activitysim.core.pipeline - rewrap table REGION_controls inplace=False
+24/10/2023 13:20:36 - INFO - activitysim.core.pipeline - load_checkpoint table PUMA_controls (12, 24)
+24/10/2023 13:20:36 - DEBUG - activitysim.core.pipeline - rewrap table PUMA_controls inplace=False
+24/10/2023 13:20:36 - INFO - activitysim.core.pipeline - load_checkpoint table TAZ_controls (2702, 23)
+24/10/2023 13:20:36 - DEBUG - activitysim.core.pipeline - rewrap table TAZ_controls inplace=False
+24/10/2023 13:20:36 - INFO - activitysim.core.pipeline - load_checkpoint table MAZ_controls (20797, 1)
+24/10/2023 13:20:36 - DEBUG - activitysim.core.pipeline - rewrap table MAZ_controls inplace=False
+24/10/2023 13:20:36 - INFO - activitysim.core.pipeline - load_checkpoint table household_groups (34034, 3)
+24/10/2023 13:20:36 - DEBUG - activitysim.core.pipeline - rewrap table household_groups inplace=False
+24/10/2023 13:20:36 - INFO - activitysim.core.pipeline - load_checkpoint table incidence_table (8894, 29)
+24/10/2023 13:20:36 - DEBUG - activitysim.core.pipeline - rewrap table incidence_table inplace=False
+24/10/2023 13:20:36 - INFO - activitysim.core.pipeline - load_checkpoint table PUMA_weights (8894, 6)
+24/10/2023 13:20:36 - DEBUG - activitysim.core.pipeline - rewrap table PUMA_weights inplace=False
+24/10/2023 13:20:36 - INFO - activitysim.core.pipeline - load_checkpoint table TAZ_weights (1992296, 6)
+24/10/2023 13:20:36 - DEBUG - activitysim.core.pipeline - rewrap table TAZ_weights inplace=False
+24/10/2023 13:20:36 - INFO - activitysim.core.pipeline - load_checkpoint table TAZ_weights_sparse (341740, 6)
+24/10/2023 13:20:36 - DEBUG - activitysim.core.pipeline - rewrap table TAZ_weights_sparse inplace=False
+24/10/2023 13:20:36 - INFO - activitysim.core.pipeline - load_checkpoint table trace_TAZ_weights (701, 6)
+24/10/2023 13:20:36 - DEBUG - activitysim.core.pipeline - rewrap table trace_TAZ_weights inplace=False
+24/10/2023 13:20:38 - INFO - activitysim.core.pipeline - load_checkpoint table MAZ_weights (15483347, 7)
+24/10/2023 13:20:38 - DEBUG - activitysim.core.pipeline - rewrap table MAZ_weights inplace=False
+24/10/2023 13:20:38 - INFO - activitysim.core.pipeline - load_checkpoint table MAZ_weights_sparse (497245, 7)
+24/10/2023 13:20:38 - DEBUG - activitysim.core.pipeline - rewrap table MAZ_weights_sparse inplace=False
+24/10/2023 13:20:38 - INFO - activitysim.core.pipeline - load_checkpoint table trace_MAZ_weights (867, 7)
+24/10/2023 13:20:38 - DEBUG - activitysim.core.pipeline - rewrap table trace_MAZ_weights inplace=False
+24/10/2023 13:20:38 - DEBUG - activitysim.core.pipeline - open_pipeline complete
+24/10/2023 13:20:38 - INFO - activitysim.core.pipeline - #run_model running step expand_households
+24/10/2023 13:21:04 - DEBUG - activitysim.core.tracing - Time to execute #run_model completed step 'expand_households' : 26.623 seconds (0.4 minutes)
+24/10/2023 13:21:04 - DEBUG - activitysim.core.pipeline - add_checkpoint expand_households timestamp 2023-10-24 13:21:04.981502
+24/10/2023 13:21:05 - DEBUG - activitysim.core.pipeline - add_checkpoint 'expand_households' table 'expanded_household_ids' (623497, 4) 22.4 MB
+24/10/2023 13:21:05 - INFO - activitysim.core.pipeline - #run_model running step summarize
+24/10/2023 13:21:07 - INFO - populationsim.steps.summarize - saving summary table summary_REGION_3
+24/10/2023 13:21:07 - INFO - populationsim.steps.summarize - saving summary table summary_TAZ_aggregate
+24/10/2023 13:21:12 - INFO - populationsim.steps.summarize - saving summary table summary_TAZ_PUMA
+24/10/2023 13:21:38 - INFO - populationsim.steps.summarize - saving summary table summary_TAZ
+24/10/2023 13:21:41 - INFO - populationsim.steps.summarize - saving summary table summary_MAZ_aggregate
+24/10/2023 13:22:19 - INFO - populationsim.steps.summarize - saving summary table summary_MAZ_PUMA
+24/10/2023 13:27:05 - INFO - populationsim.steps.summarize - saving summary table summary_MAZ
+24/10/2023 13:27:05 - INFO - populationsim.steps.summarize - saving summary table summary_hh_weights
+24/10/2023 13:27:05 - DEBUG - activitysim.core.tracing - Time to execute #run_model completed step 'summarize' : 360.423 seconds (6.0 minutes)
+24/10/2023 13:27:05 - DEBUG - activitysim.core.pipeline - add_checkpoint summarize timestamp 2023-10-24 13:27:05.650268
+24/10/2023 13:27:05 - DEBUG - activitysim.core.pipeline - add_checkpoint 'summarize' table 'summary_REGION_3' (24, 8) 1.7 KB
+24/10/2023 13:27:05 - DEBUG - activitysim.core.pipeline - add_checkpoint 'summarize' table 'summary_TAZ_aggregate' (8894, 7) 533.6 KB
+24/10/2023 13:27:05 - DEBUG - activitysim.core.pipeline - add_checkpoint 'summarize' table 'summary_TAZ_PUMA' (12, 74) 7.2 KB
+24/10/2023 13:27:05 - DEBUG - activitysim.core.pipeline - add_checkpoint 'summarize' table 'summary_TAZ' (2702, 71) 1.6 MB
+24/10/2023 13:27:05 - DEBUG - activitysim.core.pipeline - add_checkpoint 'summarize' table 'summary_MAZ_aggregate' (8894, 7) 533.6 KB
+24/10/2023 13:27:05 - DEBUG - activitysim.core.pipeline - add_checkpoint 'summarize' table 'summary_MAZ_PUMA' (12, 74) 7.2 KB
+24/10/2023 13:27:05 - DEBUG - activitysim.core.pipeline - add_checkpoint 'summarize' table 'summary_MAZ' (20797, 5) 915.1 KB
+24/10/2023 13:27:05 - DEBUG - activitysim.core.pipeline - add_checkpoint 'summarize' table 'summary_hh_weights' (8894, 6) 691.1 KB
+24/10/2023 13:27:05 - INFO - activitysim.core.pipeline - #run_model running step write_tables
+24/10/2023 13:27:07 - WARNING - activitysim.core.steps.output - Skipping 'summary_REGION': Table not found.
+24/10/2023 13:27:07 - DEBUG - activitysim.core.tracing - Time to execute #run_model completed step 'write_tables' : 1.596 seconds (0.0 minutes)
+24/10/2023 13:27:07 - DEBUG - activitysim.core.pipeline - add_checkpoint write_tables timestamp 2023-10-24 13:27:07.551781
+24/10/2023 13:27:07 - INFO - activitysim.core.pipeline - #run_model running step write_synthetic_population
+24/10/2023 13:27:15 - DEBUG - activitysim.core.tracing - Time to execute #run_model completed step 'write_synthetic_population' : 7.424 seconds (0.1 minutes)
+24/10/2023 13:27:15 - DEBUG - activitysim.core.pipeline - add_checkpoint write_synthetic_population timestamp 2023-10-24 13:27:15.113829
+24/10/2023 13:27:15 - INFO - activitysim.core.tracing - Time to execute run (4 models) : 396.916 seconds (6.6 minutes)
+24/10/2023 13:27:15 - DEBUG - activitysim.core.pipeline - add_checkpoint mp_summarize timestamp 2023-10-24 13:27:15.145081
+24/10/2023 13:27:15 - DEBUG - activitysim.core.pipeline - close_pipeline
+24/10/2023 13:27:15 - INFO - activitysim.core.mem - mp_summarize high water mark rss: 1_513_877_504 (1.5 GB) timestamp: 24/10/2023 13:27:15 label:pipeline.run_model write_synthetic_population finished
+24/10/2023 13:27:15 - INFO - activitysim.core.mem - mp_summarize high water mark uss: 1_487_728_640 (1.5 GB) timestamp: 24/10/2023 13:27:05 label:pipeline.run_model summarize finished

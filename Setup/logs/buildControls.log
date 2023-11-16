@@ -1,0 +1,4 @@
+  File "E:\Projects\Clients\NashvilleMPO\ModelUpdate2023\Tasks\Task4_Enhancements\Update_PopulationSim_Software\New_MultiProcessor\scripts\buildControls.py", line 60
+    print "GWTOT:", gqtot_acs_CT.gq_total.sum()
+          ^
+SyntaxError: invalid syntax

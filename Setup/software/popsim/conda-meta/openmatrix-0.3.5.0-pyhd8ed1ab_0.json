@@ -1,0 +1,174 @@
+{
+ "build": "pyhd8ed1ab_0",
+ "build_number": 0,
+ "channel": "https://conda.anaconda.org/conda-forge/noarch",
+ "constrains": [],
+ "depends": [
+  "numpy >=1.5.0",
+  "pytables >=3.1.0",
+  "python >=3.6"
+ ],
+ "extracted_package_dir": "",
+ "features": "",
+ "files": [
+  "Lib/site-packages/OpenMatrix-0.3.5.0.dist-info/INSTALLER",
+  "Lib/site-packages/OpenMatrix-0.3.5.0.dist-info/LICENSE.TXT",
+  "Lib/site-packages/OpenMatrix-0.3.5.0.dist-info/METADATA",
+  "Lib/site-packages/OpenMatrix-0.3.5.0.dist-info/RECORD",
+  "Lib/site-packages/OpenMatrix-0.3.5.0.dist-info/REQUESTED",
+  "Lib/site-packages/OpenMatrix-0.3.5.0.dist-info/WHEEL",
+  "Lib/site-packages/OpenMatrix-0.3.5.0.dist-info/direct_url.json",
+  "Lib/site-packages/OpenMatrix-0.3.5.0.dist-info/entry_points.txt",
+  "Lib/site-packages/OpenMatrix-0.3.5.0.dist-info/top_level.txt",
+  "Lib/site-packages/openmatrix/Exceptions.py",
+  "Lib/site-packages/openmatrix/File.py",
+  "Lib/site-packages/openmatrix/__init__.py",
+  "Lib/site-packages/openmatrix/validator.py",
+  ".nonadmin",
+  "Lib/site-packages/openmatrix/__pycache__/Exceptions.cpython-38.pyc",
+  "Lib/site-packages/openmatrix/__pycache__/File.cpython-38.pyc",
+  "Lib/site-packages/openmatrix/__pycache__/__init__.cpython-38.pyc",
+  "Lib/site-packages/openmatrix/__pycache__/validator.cpython-38.pyc",
+  "Scripts/omx-validate-script.py",
+  "Scripts/omx-validate.exe"
+ ],
+ "fn": "openmatrix-0.3.5.0-pyhd8ed1ab_0.tar.bz2",
+ "license": "Apache-2.0",
+ "link": {
+  "source": "",
+  "type": 1
+ },
+ "md5": "68f78178921d48013237d40f49545ac6",
+ "name": "openmatrix",
+ "noarch": "python",
+ "package_tarball_full_path": "",
+ "package_type": "noarch_python",
+ "paths_data": {
+  "paths": [
+   {
+    "_path": "site-packages/OpenMatrix-0.3.5.0.dist-info/INSTALLER",
+    "path_type": "hardlink",
+    "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+    "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+    "size_in_bytes": 5
+   },
+   {
+    "_path": "site-packages/OpenMatrix-0.3.5.0.dist-info/LICENSE.TXT",
+    "path_type": "hardlink",
+    "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+    "sha256_in_prefix": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+    "size_in_bytes": 11560
+   },
+   {
+    "_path": "site-packages/OpenMatrix-0.3.5.0.dist-info/METADATA",
+    "path_type": "hardlink",
+    "sha256": "3affd568aa58b170ab43bda78b4ee85889a3693602d896237c4b8778d957fe8a",
+    "sha256_in_prefix": "3affd568aa58b170ab43bda78b4ee85889a3693602d896237c4b8778d957fe8a",
+    "size_in_bytes": 635
+   },
+   {
+    "_path": "site-packages/OpenMatrix-0.3.5.0.dist-info/RECORD",
+    "path_type": "hardlink",
+    "sha256": "e87b1dc1726bd8ca01322b62c58b6d167c04b9811f849d2c18ad06eb323f6914",
+    "sha256_in_prefix": "e87b1dc1726bd8ca01322b62c58b6d167c04b9811f849d2c18ad06eb323f6914",
+    "size_in_bytes": 1407
+   },
+   {
+    "_path": "site-packages/OpenMatrix-0.3.5.0.dist-info/REQUESTED",
+    "path_type": "hardlink",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size_in_bytes": 0
+   },
+   {
+    "_path": "site-packages/OpenMatrix-0.3.5.0.dist-info/WHEEL",
+    "path_type": "hardlink",
+    "sha256": "3aa464174798e461ecb0ca2b16395b4c8ab4ef6be91e917ad1f21003a952f710",
+    "sha256_in_prefix": "3aa464174798e461ecb0ca2b16395b4c8ab4ef6be91e917ad1f21003a952f710",
+    "size_in_bytes": 92
+   },
+   {
+    "_path": "site-packages/OpenMatrix-0.3.5.0.dist-info/direct_url.json",
+    "path_type": "hardlink",
+    "sha256": "2cdf5b7f3f9237cdd0a8cfce82c4a3f12100a7b9d9f65ae8d78a6f54a202e132",
+    "sha256_in_prefix": "2cdf5b7f3f9237cdd0a8cfce82c4a3f12100a7b9d9f65ae8d78a6f54a202e132",
+    "size_in_bytes": 106
+   },
+   {
+    "_path": "site-packages/OpenMatrix-0.3.5.0.dist-info/entry_points.txt",
+    "path_type": "hardlink",
+    "sha256": "97cdf1c8b48bdfd072cbd919a752b8607c215a8015543d79133b5143a0006c86",
+    "sha256_in_prefix": "97cdf1c8b48bdfd072cbd919a752b8607c215a8015543d79133b5143a0006c86",
+    "size_in_bytes": 68
+   },
+   {
+    "_path": "site-packages/OpenMatrix-0.3.5.0.dist-info/top_level.txt",
+    "path_type": "hardlink",
+    "sha256": "408fd07857ad3d0b5178a29cd5bc61228a340aa6c0d0a17af1b0795e47a72c78",
+    "sha256_in_prefix": "408fd07857ad3d0b5178a29cd5bc61228a340aa6c0d0a17af1b0795e47a72c78",
+    "size_in_bytes": 11
+   },
+   {
+    "_path": "site-packages/openmatrix/Exceptions.py",
+    "path_type": "hardlink",
+    "sha256": "cacd5c84fcbbe780a566dbcc185ddb874dca45c9d77d43859a54714795ff46d4",
+    "sha256_in_prefix": "cacd5c84fcbbe780a566dbcc185ddb874dca45c9d77d43859a54714795ff46d4",
+    "size_in_bytes": 42
+   },
+   {
+    "_path": "site-packages/openmatrix/File.py",
+    "path_type": "hardlink",
+    "sha256": "e57969671237b11293964efa2a78624176e77a690bcdce2d24cd9da7edcaa3f6",
+    "sha256_in_prefix": "e57969671237b11293964efa2a78624176e77a690bcdce2d24cd9da7edcaa3f6",
+    "size_in_bytes": 12345
+   },
+   {
+    "_path": "site-packages/openmatrix/__init__.py",
+    "path_type": "hardlink",
+    "sha256": "44d6e319a2b30269f3817627a68e44f18f8f803740c04c9d056d297194fbc08a",
+    "sha256_in_prefix": "44d6e319a2b30269f3817627a68e44f18f8f803740c04c9d056d297194fbc08a",
+    "size_in_bytes": 2870
+   },
+   {
+    "_path": "site-packages/openmatrix/validator.py",
+    "path_type": "hardlink",
+    "sha256": "518ca26b4d685ab7108356c4bf89239e48941dd78c8f9bf322074c9d6c220690",
+    "sha256_in_prefix": "518ca26b4d685ab7108356c4bf89239e48941dd78c8f9bf322074c9d6c220690",
+    "size_in_bytes": 9292
+   },
+   {
+    "_path": "Lib/site-packages/openmatrix/__pycache__/Exceptions.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "Lib/site-packages/openmatrix/__pycache__/File.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "Lib/site-packages/openmatrix/__pycache__/__init__.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "Lib/site-packages/openmatrix/__pycache__/validator.cpython-38.pyc",
+    "path_type": "pyc_file"
+   },
+   {
+    "_path": "Scripts/omx-validate-script.py",
+    "path_type": "windows_python_entry_point_script"
+   },
+   {
+    "_path": "Scripts/omx-validate.exe",
+    "path_type": "windows_python_entry_point_exe"
+   }
+  ],
+  "paths_version": 1
+ },
+ "requested_spec": "openmatrix==0.3.5.0=pyhd8ed1ab_0",
+ "sha256": "c152e1bed7278c315b8ad354c919864ed08e7e63cd07e70552af83bb299c2f8e",
+ "size": 16324,
+ "subdir": "noarch",
+ "timestamp": 1624305807000,
+ "track_features": "",
+ "url": "https://conda.anaconda.org/conda-forge/noarch/openmatrix-0.3.5.0-pyhd8ed1ab_0.tar.bz2",
+ "version": "0.3.5.0"
+}

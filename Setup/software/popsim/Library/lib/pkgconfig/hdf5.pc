@@ -1,0 +1,14 @@
+prefix=D:/bld/hdf5_1678273087160/_h_env/Library
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: hdf5
+Description: HDF5 (Hierarchical Data Format 5) Software Library
+Version: 1.14.0
+
+Cflags: -I${includedir}
+Libs: -L${libdir}  -lhdf5
+Requires: 
+Libs.private:  -lshlwapi -lD:/bld/hdf5_1678273087160/_h_env/Library/lib/libcurl.lib -lD:/bld/hdf5_1678273087160/_h_env/Library/lib/libssl.lib -lD:/bld/hdf5_1678273087160/_h_env/Library/lib/libcrypto.lib -lD:/bld/hdf5_1678273087160/_h_env/Library/lib/z.lib -lD:/bld/hdf5_1678273087160/_h_env/Library/lib/szip.lib 
+Requires.private: 

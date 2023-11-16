@@ -1,0 +1,61 @@
+{
+ "build": "h6538335_20180525",
+ "build_number": 20180525,
+ "channel": "https://conda.anaconda.org/conda-forge/win-64",
+ "constrains": [],
+ "depends": [
+  "openmp 5.0.0",
+  "vc >=14,<15.0a0"
+ ],
+ "extracted_package_dir": "",
+ "features": "",
+ "files": [
+  "Library/bin/flang.dll",
+  "Library/bin/flangrti.dll",
+  "Library/bin/ompstub.dll",
+  ".nonadmin"
+ ],
+ "fn": "libflang-5.0.0-h6538335_20180525.tar.bz2",
+ "license": "Apache 2.0",
+ "link": {
+  "source": "",
+  "type": 1
+ },
+ "md5": "9f473a344e18668e99a93f7e21a54b69",
+ "name": "libflang",
+ "package_tarball_full_path": "",
+ "paths_data": {
+  "paths": [
+   {
+    "_path": "Library/bin/flang.dll",
+    "path_type": "hardlink",
+    "sha256": "6eb4555b6a5a30f68c242ed302be298bc54d56c608a0fa9bf132fa18f47ed078",
+    "sha256_in_prefix": "6eb4555b6a5a30f68c242ed302be298bc54d56c608a0fa9bf132fa18f47ed078",
+    "size_in_bytes": 1679360
+   },
+   {
+    "_path": "Library/bin/flangrti.dll",
+    "path_type": "hardlink",
+    "sha256": "928596d9cbd274cc0ca9d378992f02e27dc9014e16c83c5c3b022ea9154850ac",
+    "sha256_in_prefix": "928596d9cbd274cc0ca9d378992f02e27dc9014e16c83c5c3b022ea9154850ac",
+    "size_in_bytes": 50688
+   },
+   {
+    "_path": "Library/bin/ompstub.dll",
+    "path_type": "hardlink",
+    "sha256": "4800792faf74e9b1d806c4d9e94c3154ddbc083b391a7dd340e174132fbcaf08",
+    "sha256_in_prefix": "4800792faf74e9b1d806c4d9e94c3154ddbc083b391a7dd340e174132fbcaf08",
+    "size_in_bytes": 13824
+   }
+  ],
+  "paths_version": 1
+ },
+ "requested_spec": "libflang==5.0.0=h6538335_20180525",
+ "sha256": "0b893b511190332320f4a3e3d6424fbd350271ffbca34eb25b5cd8bc451f1a05",
+ "size": 531143,
+ "subdir": "win-64",
+ "timestamp": 1527899216000,
+ "track_features": "flang",
+ "url": "https://conda.anaconda.org/conda-forge/win-64/libflang-5.0.0-h6538335_20180525.tar.bz2",
+ "version": "5.0.0"
+}

@@ -1,0 +1,3 @@
+[console_scripts]
+omx-validate = openmatrix.validator:command_line
+

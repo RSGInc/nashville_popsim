@@ -1,0 +1,131 @@
+{
+ "build": "h183a6f4_0",
+ "build_number": 0,
+ "channel": "https://conda.anaconda.org/conda-forge/win-64",
+ "constrains": [],
+ "depends": [
+  "lz4-c >=1.9.3,<1.10.0a0",
+  "ucrt >=10.0.20348.0",
+  "vc >=14.2,<15",
+  "vc14_runtime >=14.29.30139",
+  "zlib-ng >=2.0.7,<2.1.0a0",
+  "zstd >=1.5.2,<1.6.0a0"
+ ],
+ "extracted_package_dir": "",
+ "features": "",
+ "files": [
+  "Library/bin/libblosc2.dll",
+  "Library/include/b2nd.h",
+  "Library/include/blosc2.h",
+  "Library/include/blosc2/blosc2-common.h",
+  "Library/include/blosc2/blosc2-export.h",
+  "Library/include/blosc2/blosc2-stdio.h",
+  "Library/include/blosc2/codecs-registry.h",
+  "Library/include/blosc2/filters-registry.h",
+  "Library/include/blosc2/tuners-registry.h",
+  "Library/lib/blosc2.lib",
+  "Library/lib/pkgconfig/blosc2.pc",
+  ".nonadmin"
+ ],
+ "fn": "c-blosc2-2.10.0-h183a6f4_0.conda",
+ "license": "BSD-3-Clause",
+ "link": {
+  "source": "",
+  "type": 1
+ },
+ "md5": "0bc5d4e8f20a0437838fc473c048ddba",
+ "name": "c-blosc2",
+ "package_tarball_full_path": "",
+ "paths_data": {
+  "paths": [
+   {
+    "_path": "Library/bin/libblosc2.dll",
+    "path_type": "hardlink",
+    "sha256": "56642872d01af721fbb02d412e043c3947dc4cc85f48e25aa8e9c7a6526e9478",
+    "sha256_in_prefix": "56642872d01af721fbb02d412e043c3947dc4cc85f48e25aa8e9c7a6526e9478",
+    "size_in_bytes": 423424
+   },
+   {
+    "_path": "Library/include/b2nd.h",
+    "path_type": "hardlink",
+    "sha256": "227841b424cef5d0898452f2fd777959f29e6e5d6dacc9a9030de1671b473dc8",
+    "sha256_in_prefix": "227841b424cef5d0898452f2fd777959f29e6e5d6dacc9a9030de1671b473dc8",
+    "size_in_bytes": 19739
+   },
+   {
+    "_path": "Library/include/blosc2.h",
+    "path_type": "hardlink",
+    "sha256": "9edae332e829d39514ef6b49e0b8e45f595efd1ac056d7afee0c7a817863443b",
+    "sha256_in_prefix": "9edae332e829d39514ef6b49e0b8e45f595efd1ac056d7afee0c7a817863443b",
+    "size_in_bytes": 93839
+   },
+   {
+    "_path": "Library/include/blosc2/blosc2-common.h",
+    "path_type": "hardlink",
+    "sha256": "f11c1dbde436abe183fc2b485ae424b3eeb35a299059f5e8d704f3cfc9b2b8cb",
+    "sha256_in_prefix": "f11c1dbde436abe183fc2b485ae424b3eeb35a299059f5e8d704f3cfc9b2b8cb",
+    "size_in_bytes": 2583
+   },
+   {
+    "_path": "Library/include/blosc2/blosc2-export.h",
+    "path_type": "hardlink",
+    "sha256": "f1b8acbec67b6499b5db42e74a03151b27194c43afa357782ad74c466d7e3044",
+    "sha256_in_prefix": "f1b8acbec67b6499b5db42e74a03151b27194c43afa357782ad74c466d7e3044",
+    "size_in_bytes": 1757
+   },
+   {
+    "_path": "Library/include/blosc2/blosc2-stdio.h",
+    "path_type": "hardlink",
+    "sha256": "26c94f65e18b4e086f022545b0ff5097756b116918d17a907f1af9223e64d44a",
+    "sha256_in_prefix": "26c94f65e18b4e086f022545b0ff5097756b116918d17a907f1af9223e64d44a",
+    "size_in_bytes": 1328
+   },
+   {
+    "_path": "Library/include/blosc2/codecs-registry.h",
+    "path_type": "hardlink",
+    "sha256": "ba1234ed897a131ac92b484b050e351f44cb1f4886ede653ae84ece628f301c4",
+    "sha256_in_prefix": "ba1234ed897a131ac92b484b050e351f44cb1f4886ede653ae84ece628f301c4",
+    "size_in_bytes": 1009
+   },
+   {
+    "_path": "Library/include/blosc2/filters-registry.h",
+    "path_type": "hardlink",
+    "sha256": "feffbd58985018bc15d2e3fe18e204418e0b4ea1cbbd9696e30d5725501e7ed7",
+    "sha256_in_prefix": "feffbd58985018bc15d2e3fe18e204418e0b4ea1cbbd9696e30d5725501e7ed7",
+    "size_in_bytes": 911
+   },
+   {
+    "_path": "Library/include/blosc2/tuners-registry.h",
+    "path_type": "hardlink",
+    "sha256": "cf132011a7758381daacd227974a22124b2fdd1cae146e11a3cf3f293615ad9a",
+    "sha256_in_prefix": "cf132011a7758381daacd227974a22124b2fdd1cae146e11a3cf3f293615ad9a",
+    "size_in_bytes": 796
+   },
+   {
+    "_path": "Library/lib/blosc2.lib",
+    "path_type": "hardlink",
+    "sha256": "f9b6ca5e56c1776c582725a5fb0097e4714e4d86b31d3ef40e5fdb17ba6239ab",
+    "sha256_in_prefix": "f9b6ca5e56c1776c582725a5fb0097e4714e4d86b31d3ef40e5fdb17ba6239ab",
+    "size_in_bytes": 29886
+   },
+   {
+    "_path": "Library/lib/pkgconfig/blosc2.pc",
+    "file_mode": "text",
+    "path_type": "hardlink",
+    "prefix_placeholder": "D:/bld/c-blosc2_1688470100418/_h_env",
+    "sha256": "71968f1cb5ddac1d6748436efb84f31a2b55cc7a5d36eedd6c6b0db14234815c",
+    "sha256_in_prefix": "0b3b9f675ab19968221d378d2b8d9cfd064383beeaed6ce76d235ccbfb6dcd23",
+    "size_in_bytes": 368
+   }
+  ],
+  "paths_version": 1
+ },
+ "requested_spec": "c-blosc2==2.10.0=h183a6f4_0",
+ "sha256": "ea468ce331c73e19400c6a67ff8688e10319c69a3fa3b2a2a19c23052a2e8d14",
+ "size": 198852,
+ "subdir": "win-64",
+ "timestamp": 1688470736000,
+ "track_features": "",
+ "url": "https://conda.anaconda.org/conda-forge/win-64/c-blosc2-2.10.0-h183a6f4_0.conda",
+ "version": "2.10.0"
+}

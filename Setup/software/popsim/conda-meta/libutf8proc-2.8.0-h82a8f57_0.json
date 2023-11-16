@@ -1,0 +1,72 @@
+{
+ "build": "h82a8f57_0",
+ "build_number": 0,
+ "channel": "https://conda.anaconda.org/conda-forge/win-64",
+ "constrains": [],
+ "depends": [
+  "ucrt >=10.0.20348.0",
+  "vc >=14.2,<15",
+  "vs2015_runtime >=14.29.30139"
+ ],
+ "extracted_package_dir": "",
+ "features": "",
+ "files": [
+  "Library/bin/utf8proc.dll",
+  "Library/include/utf8proc.h",
+  "Library/lib/pkgconfig/libutf8proc.pc",
+  "Library/lib/utf8proc.lib",
+  ".nonadmin"
+ ],
+ "fn": "libutf8proc-2.8.0-h82a8f57_0.tar.bz2",
+ "license": "MIT",
+ "link": {
+  "source": "",
+  "type": 1
+ },
+ "md5": "076894846fe9f068f91c57d158c90cba",
+ "name": "libutf8proc",
+ "package_tarball_full_path": "",
+ "paths_data": {
+  "paths": [
+   {
+    "_path": "Library/bin/utf8proc.dll",
+    "path_type": "hardlink",
+    "sha256": "9666154854a48b2f263abaadda51fc55884b8c767a4b79595f1f36a1cbc1cc15",
+    "sha256_in_prefix": "9666154854a48b2f263abaadda51fc55884b8c767a4b79595f1f36a1cbc1cc15",
+    "size_in_bytes": 350208
+   },
+   {
+    "_path": "Library/include/utf8proc.h",
+    "path_type": "hardlink",
+    "sha256": "3ac6bcc03716a8af82ad91d8287186a846209b3aadab04f001004d33bdb7314e",
+    "sha256_in_prefix": "3ac6bcc03716a8af82ad91d8287186a846209b3aadab04f001004d33bdb7314e",
+    "size_in_bytes": 31001
+   },
+   {
+    "_path": "Library/lib/pkgconfig/libutf8proc.pc",
+    "file_mode": "text",
+    "path_type": "hardlink",
+    "prefix_placeholder": "D:/bld/libutf8proc_1667316083937/_h_env",
+    "sha256": "14d29fe398b0aa6b52bd96b1ff1b41183d2dfe8f37c20bcefcb2e2a7a0b6f81b",
+    "sha256_in_prefix": "6749fe9d6f949c780496d169967bbf2980d3283dabc5d02b71d1cb08930cc1d9",
+    "size_in_bytes": 390
+   },
+   {
+    "_path": "Library/lib/utf8proc.lib",
+    "path_type": "hardlink",
+    "sha256": "07a4cc9238246e97687d0fa734b7bef2fcf43f773289f0845c512db7fd09b02e",
+    "sha256_in_prefix": "07a4cc9238246e97687d0fa734b7bef2fcf43f773289f0845c512db7fd09b02e",
+    "size_in_bytes": 8086
+   }
+  ],
+  "paths_version": 1
+ },
+ "requested_spec": "libutf8proc==2.8.0=h82a8f57_0",
+ "sha256": "6efa83e3f2fb9acaf096a18d21d0f679d110934798348c5defc780d4b759a76c",
+ "size": 104389,
+ "subdir": "win-64",
+ "timestamp": 1667316359000,
+ "track_features": "",
+ "url": "https://conda.anaconda.org/conda-forge/win-64/libutf8proc-2.8.0-h82a8f57_0.tar.bz2",
+ "version": "2.8.0"
+}

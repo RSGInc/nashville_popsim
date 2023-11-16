@@ -1,0 +1,1447 @@
+24/10/2023 13:19:12 - INFO - activitysim - Read logging configuration from: configs\HH\logging.yaml
+24/10/2023 13:19:12 - DEBUG - activitysim.core.mp_tasks - mp_run_simulation mp_sub_balancing_MAZ locutor=True 
+24/10/2023 13:19:12 - DEBUG - activitysim.core.mp_tasks - injecting pipeline_file_prefix 'mp_sub_balancing_MAZ_0'
+24/10/2023 13:19:12 - INFO - activitysim.core.mp_tasks - resume_after _
+24/10/2023 13:19:12 - DEBUG - activitysim.core.random - Set random seed base to 0
+24/10/2023 13:19:12 - DEBUG - activitysim.core.pipeline - open_pipeline - open existing pipeline
+24/10/2023 13:19:12 - DEBUG - activitysim.core.pipeline - opened pipeline_store output\HH\mp_sub_balancing_MAZ_0-pipeline.h5
+24/10/2023 13:19:12 - INFO - activitysim.core.pipeline - load_checkpoint _
+24/10/2023 13:19:12 - INFO - activitysim.core.pipeline - loading checkpoint 'mp_sub_balancing_TAZ'
+24/10/2023 13:19:12 - INFO - activitysim.core.pipeline - load_checkpoint mp_sub_balancing_TAZ timestamp 2023-10-24 13:18:52.816237
+24/10/2023 13:19:13 - INFO - activitysim.core.pipeline - load_checkpoint table households (34034, 238)
+24/10/2023 13:19:13 - DEBUG - activitysim.core.pipeline - rewrap table households inplace=False
+24/10/2023 13:19:13 - INFO - activitysim.core.pipeline - load_checkpoint table persons (83294, 289)
+24/10/2023 13:19:13 - DEBUG - activitysim.core.pipeline - rewrap table persons inplace=False
+24/10/2023 13:19:13 - INFO - activitysim.core.pipeline - load_checkpoint table geo_cross_walk (33117, 7)
+24/10/2023 13:19:13 - DEBUG - activitysim.core.pipeline - rewrap table geo_cross_walk inplace=False
+24/10/2023 13:19:13 - INFO - activitysim.core.pipeline - load_checkpoint table MAZ_control_data (33117, 4)
+24/10/2023 13:19:13 - DEBUG - activitysim.core.pipeline - rewrap table MAZ_control_data inplace=False
+24/10/2023 13:19:13 - INFO - activitysim.core.pipeline - load_checkpoint table TAZ_control_data (2929, 45)
+24/10/2023 13:19:13 - DEBUG - activitysim.core.pipeline - rewrap table TAZ_control_data inplace=False
+24/10/2023 13:19:13 - INFO - activitysim.core.pipeline - load_checkpoint table REGION_control_data (1, 2)
+24/10/2023 13:19:13 - DEBUG - activitysim.core.pipeline - rewrap table REGION_control_data inplace=False
+24/10/2023 13:19:13 - INFO - activitysim.core.pipeline - load_checkpoint table crosswalk (1998, 4)
+24/10/2023 13:19:13 - DEBUG - activitysim.core.pipeline - rewrap table crosswalk inplace=False
+24/10/2023 13:19:13 - INFO - activitysim.core.pipeline - load_checkpoint table slice_crosswalk (1, 2)
+24/10/2023 13:19:13 - DEBUG - activitysim.core.pipeline - rewrap table slice_crosswalk inplace=False
+24/10/2023 13:19:13 - INFO - activitysim.core.pipeline - load_checkpoint table control_spec (24, 6)
+24/10/2023 13:19:13 - DEBUG - activitysim.core.pipeline - rewrap table control_spec inplace=False
+24/10/2023 13:19:13 - INFO - activitysim.core.pipeline - load_checkpoint table REGION_controls (1, 24)
+24/10/2023 13:19:13 - DEBUG - activitysim.core.pipeline - rewrap table REGION_controls inplace=False
+24/10/2023 13:19:13 - INFO - activitysim.core.pipeline - load_checkpoint table PUMA_controls (12, 24)
+24/10/2023 13:19:13 - DEBUG - activitysim.core.pipeline - rewrap table PUMA_controls inplace=False
+24/10/2023 13:19:13 - INFO - activitysim.core.pipeline - load_checkpoint table TAZ_controls (2702, 23)
+24/10/2023 13:19:13 - DEBUG - activitysim.core.pipeline - rewrap table TAZ_controls inplace=False
+24/10/2023 13:19:13 - INFO - activitysim.core.pipeline - load_checkpoint table MAZ_controls (20797, 1)
+24/10/2023 13:19:13 - DEBUG - activitysim.core.pipeline - rewrap table MAZ_controls inplace=False
+24/10/2023 13:19:13 - INFO - activitysim.core.pipeline - load_checkpoint table household_groups (34034, 3)
+24/10/2023 13:19:13 - DEBUG - activitysim.core.pipeline - rewrap table household_groups inplace=False
+24/10/2023 13:19:13 - INFO - activitysim.core.pipeline - load_checkpoint table incidence_table (8894, 29)
+24/10/2023 13:19:13 - DEBUG - activitysim.core.pipeline - rewrap table incidence_table inplace=False
+24/10/2023 13:19:13 - INFO - activitysim.core.pipeline - load_checkpoint table PUMA_weights (8894, 6)
+24/10/2023 13:19:13 - DEBUG - activitysim.core.pipeline - rewrap table PUMA_weights inplace=False
+24/10/2023 13:19:14 - INFO - activitysim.core.pipeline - load_checkpoint table TAZ_weights (1992296, 6)
+24/10/2023 13:19:14 - DEBUG - activitysim.core.pipeline - rewrap table TAZ_weights inplace=False
+24/10/2023 13:19:14 - INFO - activitysim.core.pipeline - load_checkpoint table TAZ_weights_sparse (341740, 6)
+24/10/2023 13:19:14 - DEBUG - activitysim.core.pipeline - rewrap table TAZ_weights_sparse inplace=False
+24/10/2023 13:19:14 - INFO - activitysim.core.pipeline - load_checkpoint table trace_TAZ_weights (701, 6)
+24/10/2023 13:19:14 - DEBUG - activitysim.core.pipeline - rewrap table trace_TAZ_weights inplace=False
+24/10/2023 13:19:14 - DEBUG - activitysim.core.pipeline - open_pipeline complete
+24/10/2023 13:19:14 - INFO - activitysim.core.pipeline - #run_model running step sub_balancing
+24/10/2023 13:19:14 - INFO - populationsim.steps.sub_balancing - balancing 1/154 seed 4700400, TAZ 1466
+24/10/2023 13:19:14 - DEBUG - populationsim.simul_balancer - 86 positive weight rows out of 969
+24/10/2023 13:19:14 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 86 control_count 1 zone_count 10
+24/10/2023 13:19:14 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.5007375187520284e-16 max_gamma_dif 4.440892098500626e-16
+24/10/2023 13:19:14 - DEBUG - populationsim.steps.sub_balancing - TAZ 1466 converged True iter 0
+24/10/2023 13:19:14 - INFO - populationsim.multi_integerizer - omitting 883 zero weight rows out of 969
+24/10/2023 13:19:14 - INFO - populationsim.multi_integerizer - restoring 883 zero weight rows
+24/10/2023 13:19:14 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:14 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1466 status OPTIMAL. 
+24/10/2023 13:19:14 - INFO - populationsim.steps.sub_balancing - balancing 2/154 seed 4700400, TAZ 1467
+24/10/2023 13:19:14 - DEBUG - populationsim.simul_balancer - 183 positive weight rows out of 969
+24/10/2023 13:19:14 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 183 control_count 1 zone_count 22
+24/10/2023 13:19:14 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.3263525068780047e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:14 - DEBUG - populationsim.steps.sub_balancing - TAZ 1467 converged True iter 0
+24/10/2023 13:19:14 - INFO - populationsim.multi_integerizer - omitting 786 zero weight rows out of 969
+24/10/2023 13:19:14 - INFO - populationsim.multi_integerizer - restoring 786 zero weight rows
+24/10/2023 13:19:14 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:14 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1467 status OPTIMAL. 
+24/10/2023 13:19:14 - INFO - populationsim.steps.sub_balancing - balancing 3/154 seed 4700400, TAZ 1468
+24/10/2023 13:19:14 - DEBUG - populationsim.simul_balancer - 114 positive weight rows out of 969
+24/10/2023 13:19:14 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 114 control_count 1 zone_count 10
+24/10/2023 13:19:14 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.8178076003525383e-16 max_gamma_dif 4.440892098500626e-16
+24/10/2023 13:19:14 - DEBUG - populationsim.steps.sub_balancing - TAZ 1468 converged True iter 0
+24/10/2023 13:19:14 - INFO - populationsim.multi_integerizer - omitting 855 zero weight rows out of 969
+24/10/2023 13:19:15 - INFO - populationsim.multi_integerizer - restoring 855 zero weight rows
+24/10/2023 13:19:15 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:15 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1468 status OPTIMAL. 
+24/10/2023 13:19:15 - INFO - populationsim.steps.sub_balancing - balancing 4/154 seed 4700400, TAZ 1469
+24/10/2023 13:19:15 - DEBUG - populationsim.simul_balancer - 90 positive weight rows out of 969
+24/10/2023 13:19:15 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 90 control_count 1 zone_count 13
+24/10/2023 13:19:15 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.3600232051658169e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:15 - DEBUG - populationsim.steps.sub_balancing - TAZ 1469 converged True iter 0
+24/10/2023 13:19:15 - INFO - populationsim.multi_integerizer - omitting 879 zero weight rows out of 969
+24/10/2023 13:19:15 - INFO - populationsim.multi_integerizer - restoring 879 zero weight rows
+24/10/2023 13:19:15 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:15 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1469 status OPTIMAL. 
+24/10/2023 13:19:15 - INFO - populationsim.steps.sub_balancing - balancing 5/154 seed 4700400, TAZ 1470
+24/10/2023 13:19:15 - DEBUG - populationsim.simul_balancer - 144 positive weight rows out of 969
+24/10/2023 13:19:15 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 144 control_count 1 zone_count 13
+24/10/2023 13:19:15 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.6525006149857866e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:15 - DEBUG - populationsim.steps.sub_balancing - TAZ 1470 converged True iter 0
+24/10/2023 13:19:15 - INFO - populationsim.multi_integerizer - omitting 825 zero weight rows out of 969
+24/10/2023 13:19:15 - INFO - populationsim.multi_integerizer - restoring 825 zero weight rows
+24/10/2023 13:19:15 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:15 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1470 status OPTIMAL. 
+24/10/2023 13:19:15 - INFO - populationsim.steps.sub_balancing - balancing 6/154 seed 4700400, TAZ 1471
+24/10/2023 13:19:15 - DEBUG - populationsim.simul_balancer - 73 positive weight rows out of 969
+24/10/2023 13:19:15 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 73 control_count 1 zone_count 12
+24/10/2023 13:19:15 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 5.627157796045314e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:15 - DEBUG - populationsim.steps.sub_balancing - TAZ 1471 converged True iter 0
+24/10/2023 13:19:15 - INFO - populationsim.multi_integerizer - omitting 896 zero weight rows out of 969
+24/10/2023 13:19:15 - INFO - populationsim.multi_integerizer - restoring 896 zero weight rows
+24/10/2023 13:19:15 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:15 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1471 status OPTIMAL. 
+24/10/2023 13:19:15 - INFO - populationsim.steps.sub_balancing - balancing 7/154 seed 4700400, TAZ 1472
+24/10/2023 13:19:15 - DEBUG - populationsim.simul_balancer - 154 positive weight rows out of 969
+24/10/2023 13:19:15 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 154 control_count 1 zone_count 24
+24/10/2023 13:19:15 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.822980846198361e-16 max_gamma_dif 4.440892098500626e-16
+24/10/2023 13:19:15 - DEBUG - populationsim.steps.sub_balancing - TAZ 1472 converged True iter 0
+24/10/2023 13:19:15 - INFO - populationsim.multi_integerizer - omitting 815 zero weight rows out of 969
+24/10/2023 13:19:16 - INFO - populationsim.multi_integerizer - restoring 815 zero weight rows
+24/10/2023 13:19:16 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:16 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1472 status OPTIMAL. 
+24/10/2023 13:19:16 - INFO - populationsim.steps.sub_balancing - balancing 8/154 seed 4700400, TAZ 1473
+24/10/2023 13:19:16 - DEBUG - populationsim.simul_balancer - 123 positive weight rows out of 969
+24/10/2023 13:19:16 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 123 control_count 1 zone_count 16
+24/10/2023 13:19:16 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.8018558641528202e-16 max_gamma_dif 4.440892098500626e-16
+24/10/2023 13:19:16 - DEBUG - populationsim.steps.sub_balancing - TAZ 1473 converged True iter 0
+24/10/2023 13:19:16 - INFO - populationsim.multi_integerizer - omitting 846 zero weight rows out of 969
+24/10/2023 13:19:16 - INFO - populationsim.multi_integerizer - restoring 846 zero weight rows
+24/10/2023 13:19:16 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:16 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1473 status OPTIMAL. 
+24/10/2023 13:19:16 - INFO - populationsim.steps.sub_balancing - balancing 9/154 seed 4700400, TAZ 1474
+24/10/2023 13:19:16 - DEBUG - populationsim.simul_balancer - 21 positive weight rows out of 969
+24/10/2023 13:19:16 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 21 control_count 1 zone_count 7
+24/10/2023 13:19:16 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.220446049250313e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:16 - DEBUG - populationsim.steps.sub_balancing - TAZ 1474 converged True iter 0
+24/10/2023 13:19:16 - INFO - populationsim.multi_integerizer - omitting 948 zero weight rows out of 969
+24/10/2023 13:19:16 - INFO - populationsim.multi_integerizer - restoring 948 zero weight rows
+24/10/2023 13:19:16 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:16 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1474 status OPTIMAL. 
+24/10/2023 13:19:16 - INFO - populationsim.steps.sub_balancing - balancing 10/154 seed 4700400, TAZ 1475
+24/10/2023 13:19:16 - DEBUG - populationsim.simul_balancer - 156 positive weight rows out of 969
+24/10/2023 13:19:16 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 156 control_count 1 zone_count 20
+24/10/2023 13:19:16 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 5.800203622240402e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:16 - DEBUG - populationsim.steps.sub_balancing - TAZ 1475 converged True iter 0
+24/10/2023 13:19:16 - INFO - populationsim.multi_integerizer - omitting 813 zero weight rows out of 969
+24/10/2023 13:19:16 - INFO - populationsim.multi_integerizer - restoring 813 zero weight rows
+24/10/2023 13:19:16 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:16 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1475 status OPTIMAL. 
+24/10/2023 13:19:16 - INFO - populationsim.steps.sub_balancing - balancing 11/154 seed 4700400, TAZ 1476
+24/10/2023 13:19:16 - DEBUG - populationsim.simul_balancer - 105 positive weight rows out of 969
+24/10/2023 13:19:16 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 105 control_count 1 zone_count 16
+24/10/2023 13:19:16 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 3.2640887347498836e-16 max_gamma_dif 3.3306690738754696e-16
+24/10/2023 13:19:16 - DEBUG - populationsim.steps.sub_balancing - TAZ 1476 converged True iter 0
+24/10/2023 13:19:16 - INFO - populationsim.multi_integerizer - omitting 864 zero weight rows out of 969
+24/10/2023 13:19:17 - INFO - populationsim.multi_integerizer - restoring 864 zero weight rows
+24/10/2023 13:19:17 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:17 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1476 status OPTIMAL. 
+24/10/2023 13:19:17 - INFO - populationsim.steps.sub_balancing - balancing 12/154 seed 4700400, TAZ 1477
+24/10/2023 13:19:17 - DEBUG - populationsim.simul_balancer - 55 positive weight rows out of 969
+24/10/2023 13:19:17 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 55 control_count 1 zone_count 5
+24/10/2023 13:19:17 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.4382434637189527e-16 max_gamma_dif 4.440892098500626e-16
+24/10/2023 13:19:17 - DEBUG - populationsim.steps.sub_balancing - TAZ 1477 converged True iter 0
+24/10/2023 13:19:17 - INFO - populationsim.multi_integerizer - omitting 914 zero weight rows out of 969
+24/10/2023 13:19:17 - INFO - populationsim.multi_integerizer - restoring 914 zero weight rows
+24/10/2023 13:19:17 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:17 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1477 status OPTIMAL. 
+24/10/2023 13:19:17 - INFO - populationsim.steps.sub_balancing - balancing 13/154 seed 4700400, TAZ 1478
+24/10/2023 13:19:17 - DEBUG - populationsim.simul_balancer - 248 positive weight rows out of 969
+24/10/2023 13:19:17 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 248 control_count 1 zone_count 11
+24/10/2023 13:19:17 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.1728444436521016e-16 max_gamma_dif 4.440892098500626e-16
+24/10/2023 13:19:17 - DEBUG - populationsim.steps.sub_balancing - TAZ 1478 converged True iter 0
+24/10/2023 13:19:17 - INFO - populationsim.multi_integerizer - omitting 721 zero weight rows out of 969
+24/10/2023 13:19:17 - INFO - populationsim.multi_integerizer - restoring 721 zero weight rows
+24/10/2023 13:19:17 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:17 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1478 status OPTIMAL. 
+24/10/2023 13:19:17 - INFO - populationsim.steps.sub_balancing - balancing 14/154 seed 4700400, TAZ 1479
+24/10/2023 13:19:17 - DEBUG - populationsim.simul_balancer - 195 positive weight rows out of 969
+24/10/2023 13:19:17 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 195 control_count 1 zone_count 6
+24/10/2023 13:19:17 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.233256314919065e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:17 - DEBUG - populationsim.steps.sub_balancing - TAZ 1479 converged True iter 0
+24/10/2023 13:19:17 - INFO - populationsim.multi_integerizer - omitting 774 zero weight rows out of 969
+24/10/2023 13:19:17 - INFO - populationsim.multi_integerizer - restoring 774 zero weight rows
+24/10/2023 13:19:17 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:17 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1479 status OPTIMAL. 
+24/10/2023 13:19:17 - INFO - populationsim.steps.sub_balancing - balancing 15/154 seed 4700400, TAZ 1480
+24/10/2023 13:19:17 - DEBUG - populationsim.simul_balancer - 77 positive weight rows out of 969
+24/10/2023 13:19:17 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 77 control_count 1 zone_count 9
+24/10/2023 13:19:17 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.570094209603041e-16 max_gamma_dif 0.0
+24/10/2023 13:19:17 - DEBUG - populationsim.steps.sub_balancing - TAZ 1480 converged True iter 0
+24/10/2023 13:19:17 - INFO - populationsim.multi_integerizer - omitting 892 zero weight rows out of 969
+24/10/2023 13:19:17 - INFO - populationsim.multi_integerizer - restoring 892 zero weight rows
+24/10/2023 13:19:17 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:17 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1480 status OPTIMAL. 
+24/10/2023 13:19:17 - INFO - populationsim.steps.sub_balancing - balancing 16/154 seed 4700400, TAZ 1481
+24/10/2023 13:19:17 - DEBUG - populationsim.simul_balancer - 57 positive weight rows out of 969
+24/10/2023 13:19:17 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 57 control_count 1 zone_count 3
+24/10/2023 13:19:17 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 0.0
+24/10/2023 13:19:17 - DEBUG - populationsim.steps.sub_balancing - TAZ 1481 converged True iter 0
+24/10/2023 13:19:17 - INFO - populationsim.multi_integerizer - omitting 912 zero weight rows out of 969
+24/10/2023 13:19:17 - INFO - populationsim.multi_integerizer - restoring 912 zero weight rows
+24/10/2023 13:19:17 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:17 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1481 status OPTIMAL. 
+24/10/2023 13:19:17 - INFO - populationsim.steps.sub_balancing - balancing 17/154 seed 4700400, TAZ 1482
+24/10/2023 13:19:17 - DEBUG - populationsim.simul_balancer - 183 positive weight rows out of 969
+24/10/2023 13:19:17 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 183 control_count 1 zone_count 19
+24/10/2023 13:19:17 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.3567592928817147e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:17 - DEBUG - populationsim.steps.sub_balancing - TAZ 1482 converged True iter 0
+24/10/2023 13:19:17 - INFO - populationsim.multi_integerizer - omitting 786 zero weight rows out of 969
+24/10/2023 13:19:18 - INFO - populationsim.multi_integerizer - restoring 786 zero weight rows
+24/10/2023 13:19:18 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:18 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1482 status OPTIMAL. 
+24/10/2023 13:19:18 - INFO - populationsim.steps.sub_balancing - balancing 18/154 seed 4700400, TAZ 1483
+24/10/2023 13:19:18 - DEBUG - populationsim.simul_balancer - 81 positive weight rows out of 969
+24/10/2023 13:19:18 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 81 control_count 1 zone_count 4
+24/10/2023 13:19:18 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 3.5979449872111554e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:18 - DEBUG - populationsim.steps.sub_balancing - TAZ 1483 converged True iter 0
+24/10/2023 13:19:18 - INFO - populationsim.multi_integerizer - omitting 888 zero weight rows out of 969
+24/10/2023 13:19:18 - INFO - populationsim.multi_integerizer - restoring 888 zero weight rows
+24/10/2023 13:19:18 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:18 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1483 status OPTIMAL. 
+24/10/2023 13:19:18 - INFO - populationsim.steps.sub_balancing - balancing 19/154 seed 4700400, TAZ 1484
+24/10/2023 13:19:18 - DEBUG - populationsim.simul_balancer - 6 positive weight rows out of 969
+24/10/2023 13:19:18 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 6 control_count 1 zone_count 1
+24/10/2023 13:19:18 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 0.0
+24/10/2023 13:19:18 - DEBUG - populationsim.steps.sub_balancing - TAZ 1484 converged True iter 0
+24/10/2023 13:19:18 - INFO - populationsim.multi_integerizer - omitting 963 zero weight rows out of 969
+24/10/2023 13:19:18 - INFO - populationsim.multi_integerizer - restoring 963 zero weight rows
+24/10/2023 13:19:18 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:18 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1484 status OPTIMAL. 
+24/10/2023 13:19:18 - INFO - populationsim.steps.sub_balancing - balancing 20/154 seed 4700400, TAZ 1485
+24/10/2023 13:19:18 - DEBUG - populationsim.simul_balancer - 115 positive weight rows out of 969
+24/10/2023 13:19:18 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 115 control_count 1 zone_count 4
+24/10/2023 13:19:18 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 3.0154019378066414e-16 max_gamma_dif 3.3306690738754696e-16
+24/10/2023 13:19:18 - DEBUG - populationsim.steps.sub_balancing - TAZ 1485 converged True iter 0
+24/10/2023 13:19:18 - INFO - populationsim.multi_integerizer - omitting 854 zero weight rows out of 969
+24/10/2023 13:19:18 - INFO - populationsim.multi_integerizer - restoring 854 zero weight rows
+24/10/2023 13:19:18 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:18 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1485 status OPTIMAL. 
+24/10/2023 13:19:18 - INFO - populationsim.steps.sub_balancing - balancing 21/154 seed 4700400, TAZ 1486
+24/10/2023 13:19:18 - DEBUG - populationsim.simul_balancer - 178 positive weight rows out of 969
+24/10/2023 13:19:18 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 178 control_count 1 zone_count 5
+24/10/2023 13:19:18 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 6.268394043529676e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:18 - DEBUG - populationsim.steps.sub_balancing - TAZ 1486 converged True iter 0
+24/10/2023 13:19:18 - INFO - populationsim.multi_integerizer - omitting 791 zero weight rows out of 969
+24/10/2023 13:19:18 - INFO - populationsim.multi_integerizer - restoring 791 zero weight rows
+24/10/2023 13:19:18 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:18 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1486 status OPTIMAL. 
+24/10/2023 13:19:18 - INFO - populationsim.steps.sub_balancing - balancing 22/154 seed 4700400, TAZ 1487
+24/10/2023 13:19:18 - DEBUG - populationsim.simul_balancer - 207 positive weight rows out of 969
+24/10/2023 13:19:18 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 207 control_count 1 zone_count 8
+24/10/2023 13:19:18 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 3.2780407481308594e-16 max_gamma_dif 3.3306690738754696e-16
+24/10/2023 13:19:18 - DEBUG - populationsim.steps.sub_balancing - TAZ 1487 converged True iter 0
+24/10/2023 13:19:18 - INFO - populationsim.multi_integerizer - omitting 762 zero weight rows out of 969
+24/10/2023 13:19:18 - INFO - populationsim.multi_integerizer - restoring 762 zero weight rows
+24/10/2023 13:19:18 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:18 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1487 status OPTIMAL. 
+24/10/2023 13:19:18 - INFO - populationsim.steps.sub_balancing - balancing 23/154 seed 4700400, TAZ 1488
+24/10/2023 13:19:18 - DEBUG - populationsim.simul_balancer - 90 positive weight rows out of 969
+24/10/2023 13:19:18 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 90 control_count 1 zone_count 7
+24/10/2023 13:19:18 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 0.0
+24/10/2023 13:19:18 - DEBUG - populationsim.steps.sub_balancing - TAZ 1488 converged True iter 0
+24/10/2023 13:19:18 - INFO - populationsim.multi_integerizer - omitting 879 zero weight rows out of 969
+24/10/2023 13:19:18 - INFO - populationsim.multi_integerizer - restoring 879 zero weight rows
+24/10/2023 13:19:18 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:18 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1488 status OPTIMAL. 
+24/10/2023 13:19:18 - INFO - populationsim.steps.sub_balancing - balancing 24/154 seed 4700400, TAZ 1489
+24/10/2023 13:19:18 - DEBUG - populationsim.simul_balancer - 115 positive weight rows out of 969
+24/10/2023 13:19:18 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 115 control_count 1 zone_count 8
+24/10/2023 13:19:18 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 3.80130709518396e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:18 - DEBUG - populationsim.steps.sub_balancing - TAZ 1489 converged True iter 0
+24/10/2023 13:19:18 - INFO - populationsim.multi_integerizer - omitting 854 zero weight rows out of 969
+24/10/2023 13:19:19 - INFO - populationsim.multi_integerizer - restoring 854 zero weight rows
+24/10/2023 13:19:19 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:19 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1489 status OPTIMAL. 
+24/10/2023 13:19:19 - INFO - populationsim.steps.sub_balancing - balancing 25/154 seed 4700400, TAZ 1490
+24/10/2023 13:19:19 - DEBUG - populationsim.simul_balancer - 147 positive weight rows out of 969
+24/10/2023 13:19:19 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 147 control_count 1 zone_count 3
+24/10/2023 13:19:19 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 7.439249518746797e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:19 - DEBUG - populationsim.steps.sub_balancing - TAZ 1490 converged True iter 0
+24/10/2023 13:19:19 - INFO - populationsim.multi_integerizer - omitting 822 zero weight rows out of 969
+24/10/2023 13:19:19 - INFO - populationsim.multi_integerizer - restoring 822 zero weight rows
+24/10/2023 13:19:19 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:19 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1490 status OPTIMAL. 
+24/10/2023 13:19:19 - INFO - populationsim.steps.sub_balancing - balancing 26/154 seed 4700400, TAZ 1491
+24/10/2023 13:19:19 - DEBUG - populationsim.simul_balancer - 136 positive weight rows out of 969
+24/10/2023 13:19:19 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 136 control_count 1 zone_count 15
+24/10/2023 13:19:19 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.214323495805689e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:19 - DEBUG - populationsim.steps.sub_balancing - TAZ 1491 converged True iter 0
+24/10/2023 13:19:19 - INFO - populationsim.multi_integerizer - omitting 833 zero weight rows out of 969
+24/10/2023 13:19:19 - INFO - populationsim.multi_integerizer - restoring 833 zero weight rows
+24/10/2023 13:19:19 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:19 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1491 status OPTIMAL. 
+24/10/2023 13:19:19 - INFO - populationsim.steps.sub_balancing - balancing 27/154 seed 4700400, TAZ 1492
+24/10/2023 13:19:19 - DEBUG - populationsim.simul_balancer - 132 positive weight rows out of 969
+24/10/2023 13:19:19 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 132 control_count 1 zone_count 7
+24/10/2023 13:19:19 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.6443075857137734e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:19 - DEBUG - populationsim.steps.sub_balancing - TAZ 1492 converged True iter 0
+24/10/2023 13:19:19 - INFO - populationsim.multi_integerizer - omitting 837 zero weight rows out of 969
+24/10/2023 13:19:19 - INFO - populationsim.multi_integerizer - restoring 837 zero weight rows
+24/10/2023 13:19:19 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:19 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1492 status OPTIMAL. 
+24/10/2023 13:19:19 - INFO - populationsim.steps.sub_balancing - balancing 28/154 seed 4700400, TAZ 1493
+24/10/2023 13:19:19 - DEBUG - populationsim.simul_balancer - 18 positive weight rows out of 969
+24/10/2023 13:19:19 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 18 control_count 1 zone_count 1
+24/10/2023 13:19:19 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 0.0
+24/10/2023 13:19:19 - DEBUG - populationsim.steps.sub_balancing - TAZ 1493 converged True iter 0
+24/10/2023 13:19:19 - INFO - populationsim.multi_integerizer - omitting 951 zero weight rows out of 969
+24/10/2023 13:19:19 - INFO - populationsim.multi_integerizer - restoring 951 zero weight rows
+24/10/2023 13:19:19 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:19 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1493 status OPTIMAL. 
+24/10/2023 13:19:19 - INFO - populationsim.steps.sub_balancing - balancing 29/154 seed 4700400, TAZ 1494
+24/10/2023 13:19:19 - DEBUG - populationsim.simul_balancer - 167 positive weight rows out of 969
+24/10/2023 13:19:19 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 167 control_count 1 zone_count 21
+24/10/2023 13:19:19 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.21078561312661e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:19 - DEBUG - populationsim.steps.sub_balancing - TAZ 1494 converged True iter 0
+24/10/2023 13:19:19 - INFO - populationsim.multi_integerizer - omitting 802 zero weight rows out of 969
+24/10/2023 13:19:19 - INFO - populationsim.multi_integerizer - restoring 802 zero weight rows
+24/10/2023 13:19:20 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:20 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1494 status OPTIMAL. 
+24/10/2023 13:19:20 - INFO - populationsim.steps.sub_balancing - balancing 30/154 seed 4700400, TAZ 1495
+24/10/2023 13:19:20 - DEBUG - populationsim.simul_balancer - 7 positive weight rows out of 969
+24/10/2023 13:19:20 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 7 control_count 1 zone_count 5
+24/10/2023 13:19:20 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 0.0
+24/10/2023 13:19:20 - DEBUG - populationsim.steps.sub_balancing - TAZ 1495 converged True iter 0
+24/10/2023 13:19:20 - INFO - populationsim.multi_integerizer - omitting 962 zero weight rows out of 969
+24/10/2023 13:19:20 - INFO - populationsim.multi_integerizer - restoring 962 zero weight rows
+24/10/2023 13:19:20 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:20 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1495 status OPTIMAL. 
+24/10/2023 13:19:20 - INFO - populationsim.steps.sub_balancing - balancing 31/154 seed 4700400, TAZ 1496
+24/10/2023 13:19:20 - DEBUG - populationsim.simul_balancer - 22 positive weight rows out of 969
+24/10/2023 13:19:20 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 22 control_count 1 zone_count 2
+24/10/2023 13:19:20 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.7755575615628914e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:20 - DEBUG - populationsim.steps.sub_balancing - TAZ 1496 converged True iter 0
+24/10/2023 13:19:20 - INFO - populationsim.multi_integerizer - omitting 947 zero weight rows out of 969
+24/10/2023 13:19:20 - INFO - populationsim.multi_integerizer - restoring 947 zero weight rows
+24/10/2023 13:19:20 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:20 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1496 status OPTIMAL. 
+24/10/2023 13:19:20 - INFO - populationsim.steps.sub_balancing - balancing 32/154 seed 4700400, TAZ 1497
+24/10/2023 13:19:20 - DEBUG - populationsim.simul_balancer - 21 positive weight rows out of 969
+24/10/2023 13:19:20 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 21 control_count 1 zone_count 2
+24/10/2023 13:19:20 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:20 - DEBUG - populationsim.steps.sub_balancing - TAZ 1497 converged True iter 0
+24/10/2023 13:19:20 - INFO - populationsim.multi_integerizer - omitting 948 zero weight rows out of 969
+24/10/2023 13:19:20 - INFO - populationsim.multi_integerizer - restoring 948 zero weight rows
+24/10/2023 13:19:20 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:20 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1497 status OPTIMAL. 
+24/10/2023 13:19:20 - INFO - populationsim.steps.sub_balancing - balancing 33/154 seed 4700400, TAZ 1498
+24/10/2023 13:19:20 - DEBUG - populationsim.simul_balancer - 174 positive weight rows out of 969
+24/10/2023 13:19:20 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 174 control_count 1 zone_count 5
+24/10/2023 13:19:20 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.7706143065142584e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:20 - DEBUG - populationsim.steps.sub_balancing - TAZ 1498 converged True iter 0
+24/10/2023 13:19:20 - INFO - populationsim.multi_integerizer - omitting 795 zero weight rows out of 969
+24/10/2023 13:19:20 - INFO - populationsim.multi_integerizer - restoring 795 zero weight rows
+24/10/2023 13:19:20 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:20 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1498 status OPTIMAL. 
+24/10/2023 13:19:20 - INFO - populationsim.steps.sub_balancing - balancing 34/154 seed 4700400, TAZ 1500
+24/10/2023 13:19:20 - DEBUG - populationsim.simul_balancer - 79 positive weight rows out of 969
+24/10/2023 13:19:20 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 79 control_count 1 zone_count 8
+24/10/2023 13:19:20 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.893703197066327e-16 max_gamma_dif 3.3306690738754696e-16
+24/10/2023 13:19:20 - DEBUG - populationsim.steps.sub_balancing - TAZ 1500 converged True iter 0
+24/10/2023 13:19:20 - INFO - populationsim.multi_integerizer - omitting 890 zero weight rows out of 969
+24/10/2023 13:19:20 - INFO - populationsim.multi_integerizer - restoring 890 zero weight rows
+24/10/2023 13:19:20 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:20 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1500 status OPTIMAL. 
+24/10/2023 13:19:20 - INFO - populationsim.steps.sub_balancing - balancing 35/154 seed 4700400, TAZ 1501
+24/10/2023 13:19:20 - DEBUG - populationsim.simul_balancer - 150 positive weight rows out of 969
+24/10/2023 13:19:20 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 150 control_count 1 zone_count 8
+24/10/2023 13:19:20 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.411670400418823e-16 max_gamma_dif 3.3306690738754696e-16
+24/10/2023 13:19:20 - DEBUG - populationsim.steps.sub_balancing - TAZ 1501 converged True iter 0
+24/10/2023 13:19:20 - INFO - populationsim.multi_integerizer - omitting 819 zero weight rows out of 969
+24/10/2023 13:19:20 - INFO - populationsim.multi_integerizer - restoring 819 zero weight rows
+24/10/2023 13:19:20 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:20 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1501 status OPTIMAL. 
+24/10/2023 13:19:20 - INFO - populationsim.steps.sub_balancing - balancing 36/154 seed 4700400, TAZ 1502
+24/10/2023 13:19:20 - DEBUG - populationsim.simul_balancer - 168 positive weight rows out of 969
+24/10/2023 13:19:20 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 168 control_count 1 zone_count 11
+24/10/2023 13:19:20 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.0024697839058464e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:20 - DEBUG - populationsim.steps.sub_balancing - TAZ 1502 converged True iter 0
+24/10/2023 13:19:20 - INFO - populationsim.multi_integerizer - omitting 801 zero weight rows out of 969
+24/10/2023 13:19:20 - INFO - populationsim.multi_integerizer - restoring 801 zero weight rows
+24/10/2023 13:19:20 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:20 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1502 status OPTIMAL. 
+24/10/2023 13:19:20 - INFO - populationsim.steps.sub_balancing - balancing 37/154 seed 4700400, TAZ 1503
+24/10/2023 13:19:20 - DEBUG - populationsim.simul_balancer - 252 positive weight rows out of 969
+24/10/2023 13:19:20 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 252 control_count 1 zone_count 13
+24/10/2023 13:19:20 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.936557175642045e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:20 - DEBUG - populationsim.steps.sub_balancing - TAZ 1503 converged True iter 0
+24/10/2023 13:19:20 - INFO - populationsim.multi_integerizer - omitting 717 zero weight rows out of 969
+24/10/2023 13:19:21 - INFO - populationsim.multi_integerizer - restoring 717 zero weight rows
+24/10/2023 13:19:21 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:21 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1503 status OPTIMAL. 
+24/10/2023 13:19:21 - INFO - populationsim.steps.sub_balancing - balancing 38/154 seed 4700400, TAZ 1504
+24/10/2023 13:19:21 - DEBUG - populationsim.simul_balancer - 9 positive weight rows out of 969
+24/10/2023 13:19:21 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 9 control_count 1 zone_count 3
+24/10/2023 13:19:21 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.942890293094024e-16 max_gamma_dif 0.0
+24/10/2023 13:19:21 - DEBUG - populationsim.steps.sub_balancing - TAZ 1504 converged True iter 0
+24/10/2023 13:19:21 - INFO - populationsim.multi_integerizer - omitting 960 zero weight rows out of 969
+24/10/2023 13:19:21 - INFO - populationsim.multi_integerizer - restoring 960 zero weight rows
+24/10/2023 13:19:21 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:21 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1504 status OPTIMAL. 
+24/10/2023 13:19:21 - INFO - populationsim.steps.sub_balancing - balancing 39/154 seed 4700400, TAZ 1505
+24/10/2023 13:19:21 - DEBUG - populationsim.simul_balancer - 42 positive weight rows out of 969
+24/10/2023 13:19:21 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 42 control_count 1 zone_count 3
+24/10/2023 13:19:21 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 0.0
+24/10/2023 13:19:21 - DEBUG - populationsim.steps.sub_balancing - TAZ 1505 converged True iter 0
+24/10/2023 13:19:21 - INFO - populationsim.multi_integerizer - omitting 927 zero weight rows out of 969
+24/10/2023 13:19:21 - INFO - populationsim.multi_integerizer - restoring 927 zero weight rows
+24/10/2023 13:19:21 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:21 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1505 status OPTIMAL. 
+24/10/2023 13:19:21 - INFO - populationsim.steps.sub_balancing - balancing 40/154 seed 4700400, TAZ 1506
+24/10/2023 13:19:21 - DEBUG - populationsim.simul_balancer - 176 positive weight rows out of 969
+24/10/2023 13:19:21 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 176 control_count 1 zone_count 37
+24/10/2023 13:19:21 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 3.529373762941904e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:21 - DEBUG - populationsim.steps.sub_balancing - TAZ 1506 converged True iter 0
+24/10/2023 13:19:21 - INFO - populationsim.multi_integerizer - omitting 793 zero weight rows out of 969
+24/10/2023 13:19:22 - INFO - populationsim.multi_integerizer - restoring 793 zero weight rows
+24/10/2023 13:19:22 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:22 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1506 status OPTIMAL. 
+24/10/2023 13:19:22 - INFO - populationsim.steps.sub_balancing - balancing 41/154 seed 4700400, TAZ 1507
+24/10/2023 13:19:22 - DEBUG - populationsim.simul_balancer - 157 positive weight rows out of 969
+24/10/2023 13:19:22 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 157 control_count 1 zone_count 25
+24/10/2023 13:19:22 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 4.2605692505519545e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:22 - DEBUG - populationsim.steps.sub_balancing - TAZ 1507 converged True iter 0
+24/10/2023 13:19:22 - INFO - populationsim.multi_integerizer - omitting 812 zero weight rows out of 969
+24/10/2023 13:19:22 - INFO - populationsim.multi_integerizer - restoring 812 zero weight rows
+24/10/2023 13:19:22 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:22 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1507 status OPTIMAL. 
+24/10/2023 13:19:22 - INFO - populationsim.steps.sub_balancing - balancing 42/154 seed 4700400, TAZ 1508
+24/10/2023 13:19:22 - DEBUG - populationsim.simul_balancer - 53 positive weight rows out of 969
+24/10/2023 13:19:22 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 53 control_count 1 zone_count 7
+24/10/2023 13:19:22 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.9795486005108923e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:22 - DEBUG - populationsim.steps.sub_balancing - TAZ 1508 converged True iter 0
+24/10/2023 13:19:22 - INFO - populationsim.multi_integerizer - omitting 916 zero weight rows out of 969
+24/10/2023 13:19:22 - INFO - populationsim.multi_integerizer - restoring 916 zero weight rows
+24/10/2023 13:19:22 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:22 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1508 status OPTIMAL. 
+24/10/2023 13:19:22 - INFO - populationsim.steps.sub_balancing - balancing 43/154 seed 4700400, TAZ 1509
+24/10/2023 13:19:22 - DEBUG - populationsim.simul_balancer - 100 positive weight rows out of 969
+24/10/2023 13:19:22 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 100 control_count 1 zone_count 7
+24/10/2023 13:19:22 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 6.272760089132134e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:22 - DEBUG - populationsim.steps.sub_balancing - TAZ 1509 converged True iter 0
+24/10/2023 13:19:22 - INFO - populationsim.multi_integerizer - omitting 869 zero weight rows out of 969
+24/10/2023 13:19:22 - INFO - populationsim.multi_integerizer - restoring 869 zero weight rows
+24/10/2023 13:19:22 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:22 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1509 status OPTIMAL. 
+24/10/2023 13:19:22 - INFO - populationsim.steps.sub_balancing - balancing 44/154 seed 4700400, TAZ 1510
+24/10/2023 13:19:22 - DEBUG - populationsim.simul_balancer - 105 positive weight rows out of 969
+24/10/2023 13:19:22 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 105 control_count 1 zone_count 13
+24/10/2023 13:19:22 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 4.8770511438890804e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:22 - DEBUG - populationsim.steps.sub_balancing - TAZ 1510 converged True iter 0
+24/10/2023 13:19:22 - INFO - populationsim.multi_integerizer - omitting 864 zero weight rows out of 969
+24/10/2023 13:19:22 - INFO - populationsim.multi_integerizer - restoring 864 zero weight rows
+24/10/2023 13:19:22 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:22 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1510 status OPTIMAL. 
+24/10/2023 13:19:22 - INFO - populationsim.steps.sub_balancing - balancing 45/154 seed 4700400, TAZ 1511
+24/10/2023 13:19:22 - DEBUG - populationsim.simul_balancer - 63 positive weight rows out of 969
+24/10/2023 13:19:22 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 63 control_count 1 zone_count 6
+24/10/2023 13:19:22 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.32618157540509e-16 max_gamma_dif 3.3306690738754696e-16
+24/10/2023 13:19:23 - DEBUG - populationsim.steps.sub_balancing - TAZ 1511 converged True iter 0
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - omitting 906 zero weight rows out of 969
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - restoring 906 zero weight rows
+24/10/2023 13:19:23 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1511 status OPTIMAL. 
+24/10/2023 13:19:23 - INFO - populationsim.steps.sub_balancing - balancing 46/154 seed 4700400, TAZ 1512
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - 68 positive weight rows out of 969
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 68 control_count 1 zone_count 6
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.667375388085943e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:23 - DEBUG - populationsim.steps.sub_balancing - TAZ 1512 converged True iter 0
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - omitting 901 zero weight rows out of 969
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - restoring 901 zero weight rows
+24/10/2023 13:19:23 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1512 status OPTIMAL. 
+24/10/2023 13:19:23 - INFO - populationsim.steps.sub_balancing - balancing 47/154 seed 4700400, TAZ 1513
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - 104 positive weight rows out of 969
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 104 control_count 1 zone_count 14
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 3.310653033768045e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:23 - DEBUG - populationsim.steps.sub_balancing - TAZ 1513 converged True iter 0
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - omitting 865 zero weight rows out of 969
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - restoring 865 zero weight rows
+24/10/2023 13:19:23 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1513 status OPTIMAL. 
+24/10/2023 13:19:23 - INFO - populationsim.steps.sub_balancing - balancing 48/154 seed 4700400, TAZ 1514
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - 49 positive weight rows out of 969
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 49 control_count 1 zone_count 11
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.8888456253001523e-17 max_gamma_dif 1.1102230246251565e-16
+24/10/2023 13:19:23 - DEBUG - populationsim.steps.sub_balancing - TAZ 1514 converged True iter 0
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - omitting 920 zero weight rows out of 969
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - restoring 920 zero weight rows
+24/10/2023 13:19:23 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1514 status OPTIMAL. 
+24/10/2023 13:19:23 - INFO - populationsim.steps.sub_balancing - balancing 49/154 seed 4700400, TAZ 1515
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - 29 positive weight rows out of 969
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 29 control_count 1 zone_count 5
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.5791965436478519e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:23 - DEBUG - populationsim.steps.sub_balancing - TAZ 1515 converged True iter 0
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - omitting 940 zero weight rows out of 969
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - restoring 940 zero weight rows
+24/10/2023 13:19:23 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1515 status OPTIMAL. 
+24/10/2023 13:19:23 - INFO - populationsim.steps.sub_balancing - balancing 50/154 seed 4700400, TAZ 1516
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - 15 positive weight rows out of 969
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 15 control_count 1 zone_count 3
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 4.163336342344337e-17 max_gamma_dif 3.3306690738754696e-16
+24/10/2023 13:19:23 - DEBUG - populationsim.steps.sub_balancing - TAZ 1516 converged True iter 0
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - omitting 954 zero weight rows out of 969
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - restoring 954 zero weight rows
+24/10/2023 13:19:23 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1516 status OPTIMAL. 
+24/10/2023 13:19:23 - INFO - populationsim.steps.sub_balancing - balancing 51/154 seed 4700400, TAZ 1517
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - 174 positive weight rows out of 969
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 174 control_count 1 zone_count 5
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 3.86025821780586e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:23 - DEBUG - populationsim.steps.sub_balancing - TAZ 1517 converged True iter 0
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - omitting 795 zero weight rows out of 969
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - restoring 795 zero weight rows
+24/10/2023 13:19:23 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1517 status OPTIMAL. 
+24/10/2023 13:19:23 - INFO - populationsim.steps.sub_balancing - balancing 52/154 seed 4700400, TAZ 1518
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - 23 positive weight rows out of 969
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 23 control_count 1 zone_count 4
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.942890293094024e-16 max_gamma_dif 3.3306690738754696e-16
+24/10/2023 13:19:23 - DEBUG - populationsim.steps.sub_balancing - TAZ 1518 converged True iter 0
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - omitting 946 zero weight rows out of 969
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - restoring 946 zero weight rows
+24/10/2023 13:19:23 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1518 status OPTIMAL. 
+24/10/2023 13:19:23 - INFO - populationsim.steps.sub_balancing - balancing 53/154 seed 4700400, TAZ 1519
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - 62 positive weight rows out of 969
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 62 control_count 1 zone_count 4
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 0.0
+24/10/2023 13:19:23 - DEBUG - populationsim.steps.sub_balancing - TAZ 1519 converged True iter 0
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - omitting 907 zero weight rows out of 969
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - restoring 907 zero weight rows
+24/10/2023 13:19:23 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1519 status OPTIMAL. 
+24/10/2023 13:19:23 - INFO - populationsim.steps.sub_balancing - balancing 54/154 seed 4700400, TAZ 1520
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - 16 positive weight rows out of 969
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 16 control_count 1 zone_count 4
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 0.0
+24/10/2023 13:19:23 - DEBUG - populationsim.steps.sub_balancing - TAZ 1520 converged True iter 0
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - omitting 953 zero weight rows out of 969
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - restoring 953 zero weight rows
+24/10/2023 13:19:23 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1520 status OPTIMAL. 
+24/10/2023 13:19:23 - INFO - populationsim.steps.sub_balancing - balancing 55/154 seed 4700400, TAZ 1521
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - 26 positive weight rows out of 969
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 26 control_count 1 zone_count 4
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 0.0
+24/10/2023 13:19:23 - DEBUG - populationsim.steps.sub_balancing - TAZ 1521 converged True iter 0
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - omitting 943 zero weight rows out of 969
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - restoring 943 zero weight rows
+24/10/2023 13:19:23 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1521 status OPTIMAL. 
+24/10/2023 13:19:23 - INFO - populationsim.steps.sub_balancing - balancing 56/154 seed 4700400, TAZ 1522
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - 120 positive weight rows out of 969
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 120 control_count 1 zone_count 7
+24/10/2023 13:19:23 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.5500435096859063e-17 max_gamma_dif 3.3306690738754696e-16
+24/10/2023 13:19:23 - DEBUG - populationsim.steps.sub_balancing - TAZ 1522 converged True iter 0
+24/10/2023 13:19:23 - INFO - populationsim.multi_integerizer - omitting 849 zero weight rows out of 969
+24/10/2023 13:19:24 - INFO - populationsim.multi_integerizer - restoring 849 zero weight rows
+24/10/2023 13:19:24 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:24 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1522 status OPTIMAL. 
+24/10/2023 13:19:24 - INFO - populationsim.steps.sub_balancing - balancing 57/154 seed 4700400, TAZ 1523
+24/10/2023 13:19:24 - DEBUG - populationsim.simul_balancer - 143 positive weight rows out of 969
+24/10/2023 13:19:24 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 143 control_count 1 zone_count 23
+24/10/2023 13:19:24 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 0.0
+24/10/2023 13:19:24 - DEBUG - populationsim.steps.sub_balancing - TAZ 1523 converged True iter 0
+24/10/2023 13:19:24 - INFO - populationsim.multi_integerizer - omitting 826 zero weight rows out of 969
+24/10/2023 13:19:24 - INFO - populationsim.multi_integerizer - restoring 826 zero weight rows
+24/10/2023 13:19:24 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:24 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1523 status OPTIMAL. 
+24/10/2023 13:19:24 - INFO - populationsim.steps.sub_balancing - balancing 58/154 seed 4700400, TAZ 1524
+24/10/2023 13:19:24 - DEBUG - populationsim.simul_balancer - 70 positive weight rows out of 969
+24/10/2023 13:19:24 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 70 control_count 1 zone_count 6
+24/10/2023 13:19:24 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 9.43689570931383e-17 max_gamma_dif 4.440892098500626e-16
+24/10/2023 13:19:24 - DEBUG - populationsim.steps.sub_balancing - TAZ 1524 converged True iter 0
+24/10/2023 13:19:24 - INFO - populationsim.multi_integerizer - omitting 899 zero weight rows out of 969
+24/10/2023 13:19:24 - INFO - populationsim.multi_integerizer - restoring 899 zero weight rows
+24/10/2023 13:19:24 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:24 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1524 status OPTIMAL. 
+24/10/2023 13:19:24 - INFO - populationsim.steps.sub_balancing - balancing 59/154 seed 4700400, TAZ 1525
+24/10/2023 13:19:24 - DEBUG - populationsim.simul_balancer - 102 positive weight rows out of 969
+24/10/2023 13:19:24 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 102 control_count 1 zone_count 4
+24/10/2023 13:19:24 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 7.673600317262111e-17 max_gamma_dif 4.440892098500626e-16
+24/10/2023 13:19:24 - DEBUG - populationsim.steps.sub_balancing - TAZ 1525 converged True iter 0
+24/10/2023 13:19:24 - INFO - populationsim.multi_integerizer - omitting 867 zero weight rows out of 969
+24/10/2023 13:19:24 - INFO - populationsim.multi_integerizer - restoring 867 zero weight rows
+24/10/2023 13:19:24 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:24 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1525 status OPTIMAL. 
+24/10/2023 13:19:24 - INFO - populationsim.steps.sub_balancing - balancing 60/154 seed 4700400, TAZ 1526
+24/10/2023 13:19:24 - DEBUG - populationsim.simul_balancer - 171 positive weight rows out of 969
+24/10/2023 13:19:24 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 171 control_count 1 zone_count 14
+24/10/2023 13:19:24 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.0383993859706783e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:24 - DEBUG - populationsim.steps.sub_balancing - TAZ 1526 converged True iter 0
+24/10/2023 13:19:24 - INFO - populationsim.multi_integerizer - omitting 798 zero weight rows out of 969
+24/10/2023 13:19:24 - INFO - populationsim.multi_integerizer - restoring 798 zero weight rows
+24/10/2023 13:19:24 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:24 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1526 status OPTIMAL. 
+24/10/2023 13:19:24 - INFO - populationsim.steps.sub_balancing - balancing 61/154 seed 4700400, TAZ 1527
+24/10/2023 13:19:24 - DEBUG - populationsim.simul_balancer - 307 positive weight rows out of 969
+24/10/2023 13:19:24 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 307 control_count 1 zone_count 17
+24/10/2023 13:19:24 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 3.4939421515248176e-16 max_gamma_dif 3.3306690738754696e-16
+24/10/2023 13:19:24 - DEBUG - populationsim.steps.sub_balancing - TAZ 1527 converged True iter 0
+24/10/2023 13:19:24 - INFO - populationsim.multi_integerizer - omitting 662 zero weight rows out of 969
+24/10/2023 13:19:25 - INFO - populationsim.multi_integerizer - restoring 662 zero weight rows
+24/10/2023 13:19:25 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:25 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1527 status OPTIMAL. 
+24/10/2023 13:19:25 - INFO - populationsim.steps.sub_balancing - balancing 62/154 seed 4700400, TAZ 1528
+24/10/2023 13:19:25 - DEBUG - populationsim.simul_balancer - 222 positive weight rows out of 969
+24/10/2023 13:19:25 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 222 control_count 1 zone_count 20
+24/10/2023 13:19:25 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 3.2775333998365405e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:25 - DEBUG - populationsim.steps.sub_balancing - TAZ 1528 converged True iter 0
+24/10/2023 13:19:25 - INFO - populationsim.multi_integerizer - omitting 747 zero weight rows out of 969
+24/10/2023 13:19:25 - INFO - populationsim.multi_integerizer - restoring 747 zero weight rows
+24/10/2023 13:19:25 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:25 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1528 status OPTIMAL. 
+24/10/2023 13:19:25 - INFO - populationsim.steps.sub_balancing - balancing 63/154 seed 4700400, TAZ 1529
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - 72 positive weight rows out of 969
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 72 control_count 1 zone_count 4
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.4841523072246016e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:26 - DEBUG - populationsim.steps.sub_balancing - TAZ 1529 converged True iter 0
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - omitting 897 zero weight rows out of 969
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - restoring 897 zero weight rows
+24/10/2023 13:19:26 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1529 status OPTIMAL. 
+24/10/2023 13:19:26 - INFO - populationsim.steps.sub_balancing - balancing 64/154 seed 4700400, TAZ 1530
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - 74 positive weight rows out of 969
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 74 control_count 1 zone_count 5
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.0614632296247273e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:26 - DEBUG - populationsim.steps.sub_balancing - TAZ 1530 converged True iter 0
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - omitting 895 zero weight rows out of 969
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - restoring 895 zero weight rows
+24/10/2023 13:19:26 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1530 status OPTIMAL. 
+24/10/2023 13:19:26 - INFO - populationsim.steps.sub_balancing - balancing 65/154 seed 4700400, TAZ 1531
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - 3 positive weight rows out of 969
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 3 control_count 1 zone_count 1
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 0.0
+24/10/2023 13:19:26 - DEBUG - populationsim.steps.sub_balancing - TAZ 1531 converged True iter 0
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - omitting 966 zero weight rows out of 969
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - restoring 966 zero weight rows
+24/10/2023 13:19:26 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1531 status OPTIMAL. 
+24/10/2023 13:19:26 - INFO - populationsim.steps.sub_balancing - balancing 66/154 seed 4700400, TAZ 1532
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - 151 positive weight rows out of 969
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 151 control_count 1 zone_count 21
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.3426808690145066e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:26 - DEBUG - populationsim.steps.sub_balancing - TAZ 1532 converged True iter 0
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - omitting 818 zero weight rows out of 969
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - restoring 818 zero weight rows
+24/10/2023 13:19:26 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1532 status OPTIMAL. 
+24/10/2023 13:19:26 - INFO - populationsim.steps.sub_balancing - balancing 67/154 seed 4700400, TAZ 1533
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - 23 positive weight rows out of 969
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 23 control_count 1 zone_count 1
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 0.0
+24/10/2023 13:19:26 - DEBUG - populationsim.steps.sub_balancing - TAZ 1533 converged True iter 0
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - omitting 946 zero weight rows out of 969
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - restoring 946 zero weight rows
+24/10/2023 13:19:26 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1533 status OPTIMAL. 
+24/10/2023 13:19:26 - INFO - populationsim.steps.sub_balancing - balancing 68/154 seed 4700400, TAZ 1534
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - 78 positive weight rows out of 969
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 78 control_count 1 zone_count 5
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.145807095927245e-16 max_gamma_dif 4.440892098500626e-16
+24/10/2023 13:19:26 - DEBUG - populationsim.steps.sub_balancing - TAZ 1534 converged True iter 0
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - omitting 891 zero weight rows out of 969
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - restoring 891 zero weight rows
+24/10/2023 13:19:26 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1534 status OPTIMAL. 
+24/10/2023 13:19:26 - INFO - populationsim.steps.sub_balancing - balancing 69/154 seed 4700400, TAZ 1535
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - 132 positive weight rows out of 969
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 132 control_count 1 zone_count 10
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 6.770678294115538e-17 max_gamma_dif 3.3306690738754696e-16
+24/10/2023 13:19:26 - DEBUG - populationsim.steps.sub_balancing - TAZ 1535 converged True iter 0
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - omitting 837 zero weight rows out of 969
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - restoring 837 zero weight rows
+24/10/2023 13:19:26 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1535 status OPTIMAL. 
+24/10/2023 13:19:26 - INFO - populationsim.steps.sub_balancing - balancing 70/154 seed 4700400, TAZ 1536
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - 11 positive weight rows out of 969
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 11 control_count 1 zone_count 3
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:26 - DEBUG - populationsim.steps.sub_balancing - TAZ 1536 converged True iter 0
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - omitting 958 zero weight rows out of 969
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - restoring 958 zero weight rows
+24/10/2023 13:19:26 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1536 status OPTIMAL. 
+24/10/2023 13:19:26 - INFO - populationsim.steps.sub_balancing - balancing 71/154 seed 4700400, TAZ 1537
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - 14 positive weight rows out of 969
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 14 control_count 1 zone_count 1
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 0.0
+24/10/2023 13:19:26 - DEBUG - populationsim.steps.sub_balancing - TAZ 1537 converged True iter 0
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - omitting 955 zero weight rows out of 969
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - restoring 955 zero weight rows
+24/10/2023 13:19:26 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1537 status OPTIMAL. 
+24/10/2023 13:19:26 - INFO - populationsim.steps.sub_balancing - balancing 72/154 seed 4700400, TAZ 1538
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - 132 positive weight rows out of 969
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 132 control_count 1 zone_count 12
+24/10/2023 13:19:26 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.3006113007916656e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:26 - DEBUG - populationsim.steps.sub_balancing - TAZ 1538 converged True iter 0
+24/10/2023 13:19:26 - INFO - populationsim.multi_integerizer - omitting 837 zero weight rows out of 969
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - restoring 837 zero weight rows
+24/10/2023 13:19:27 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1538 status OPTIMAL. 
+24/10/2023 13:19:27 - INFO - populationsim.steps.sub_balancing - balancing 73/154 seed 4700400, TAZ 1539
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - 51 positive weight rows out of 969
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 51 control_count 1 zone_count 2
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 3.374207231703907e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:27 - DEBUG - populationsim.steps.sub_balancing - TAZ 1539 converged True iter 0
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - omitting 918 zero weight rows out of 969
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - restoring 918 zero weight rows
+24/10/2023 13:19:27 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1539 status OPTIMAL. 
+24/10/2023 13:19:27 - INFO - populationsim.steps.sub_balancing - balancing 74/154 seed 4700400, TAZ 1540
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - 132 positive weight rows out of 969
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 132 control_count 1 zone_count 15
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.1033892654773692e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:27 - DEBUG - populationsim.steps.sub_balancing - TAZ 1540 converged True iter 0
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - omitting 837 zero weight rows out of 969
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - restoring 837 zero weight rows
+24/10/2023 13:19:27 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1540 status OPTIMAL. 
+24/10/2023 13:19:27 - INFO - populationsim.steps.sub_balancing - balancing 75/154 seed 4700400, TAZ 1541
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - 92 positive weight rows out of 969
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 92 control_count 1 zone_count 3
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 0.0
+24/10/2023 13:19:27 - DEBUG - populationsim.steps.sub_balancing - TAZ 1541 converged True iter 0
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - omitting 877 zero weight rows out of 969
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - restoring 877 zero weight rows
+24/10/2023 13:19:27 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1541 status OPTIMAL. 
+24/10/2023 13:19:27 - INFO - populationsim.steps.sub_balancing - balancing 76/154 seed 4700400, TAZ 1542
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - 66 positive weight rows out of 969
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 66 control_count 1 zone_count 11
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 3.322258293385885e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:27 - DEBUG - populationsim.steps.sub_balancing - TAZ 1542 converged True iter 0
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - omitting 903 zero weight rows out of 969
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - restoring 903 zero weight rows
+24/10/2023 13:19:27 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1542 status OPTIMAL. 
+24/10/2023 13:19:27 - INFO - populationsim.steps.sub_balancing - balancing 77/154 seed 4700400, TAZ 1543
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - 31 positive weight rows out of 969
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 31 control_count 1 zone_count 5
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.2534776084477575e-16 max_gamma_dif 1.1102230246251565e-16
+24/10/2023 13:19:27 - DEBUG - populationsim.steps.sub_balancing - TAZ 1543 converged True iter 0
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - omitting 938 zero weight rows out of 969
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - restoring 938 zero weight rows
+24/10/2023 13:19:27 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1543 status OPTIMAL. 
+24/10/2023 13:19:27 - INFO - populationsim.steps.sub_balancing - balancing 78/154 seed 4700400, TAZ 1544
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - 39 positive weight rows out of 969
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 39 control_count 1 zone_count 5
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 7.828495686459438e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:27 - DEBUG - populationsim.steps.sub_balancing - TAZ 1544 converged True iter 0
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - omitting 930 zero weight rows out of 969
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - restoring 930 zero weight rows
+24/10/2023 13:19:27 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1544 status OPTIMAL. 
+24/10/2023 13:19:27 - INFO - populationsim.steps.sub_balancing - balancing 79/154 seed 4700400, TAZ 1545
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - 7 positive weight rows out of 969
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 7 control_count 1 zone_count 3
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:27 - DEBUG - populationsim.steps.sub_balancing - TAZ 1545 converged True iter 0
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - omitting 962 zero weight rows out of 969
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - restoring 962 zero weight rows
+24/10/2023 13:19:27 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1545 status OPTIMAL. 
+24/10/2023 13:19:27 - INFO - populationsim.steps.sub_balancing - balancing 80/154 seed 4700400, TAZ 1546
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - 140 positive weight rows out of 969
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 140 control_count 1 zone_count 1
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 0.0
+24/10/2023 13:19:27 - DEBUG - populationsim.steps.sub_balancing - TAZ 1546 converged True iter 0
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - omitting 829 zero weight rows out of 969
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - restoring 829 zero weight rows
+24/10/2023 13:19:27 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1546 status OPTIMAL. 
+24/10/2023 13:19:27 - INFO - populationsim.steps.sub_balancing - balancing 81/154 seed 4700400, TAZ 1547
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - 68 positive weight rows out of 969
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 68 control_count 1 zone_count 5
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.5214545309890702e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:27 - DEBUG - populationsim.steps.sub_balancing - TAZ 1547 converged True iter 0
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - omitting 901 zero weight rows out of 969
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - restoring 901 zero weight rows
+24/10/2023 13:19:27 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1547 status OPTIMAL. 
+24/10/2023 13:19:27 - INFO - populationsim.steps.sub_balancing - balancing 82/154 seed 4700400, TAZ 1548
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - 223 positive weight rows out of 969
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 223 control_count 1 zone_count 21
+24/10/2023 13:19:27 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 3.2767409550539036e-16 max_gamma_dif 3.3306690738754696e-16
+24/10/2023 13:19:27 - DEBUG - populationsim.steps.sub_balancing - TAZ 1548 converged True iter 0
+24/10/2023 13:19:27 - INFO - populationsim.multi_integerizer - omitting 746 zero weight rows out of 969
+24/10/2023 13:19:28 - INFO - populationsim.multi_integerizer - restoring 746 zero weight rows
+24/10/2023 13:19:28 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:28 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1548 status OPTIMAL. 
+24/10/2023 13:19:28 - INFO - populationsim.steps.sub_balancing - balancing 83/154 seed 4700400, TAZ 1549
+24/10/2023 13:19:28 - DEBUG - populationsim.simul_balancer - 34 positive weight rows out of 969
+24/10/2023 13:19:28 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 34 control_count 1 zone_count 4
+24/10/2023 13:19:28 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 5.551115123125783e-17 max_gamma_dif 1.1102230246251565e-16
+24/10/2023 13:19:28 - DEBUG - populationsim.steps.sub_balancing - TAZ 1549 converged True iter 0
+24/10/2023 13:19:28 - INFO - populationsim.multi_integerizer - omitting 935 zero weight rows out of 969
+24/10/2023 13:19:28 - INFO - populationsim.multi_integerizer - restoring 935 zero weight rows
+24/10/2023 13:19:28 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:28 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1549 status OPTIMAL. 
+24/10/2023 13:19:28 - INFO - populationsim.steps.sub_balancing - balancing 84/154 seed 4700400, TAZ 1550
+24/10/2023 13:19:28 - DEBUG - populationsim.simul_balancer - 208 positive weight rows out of 969
+24/10/2023 13:19:28 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 208 control_count 1 zone_count 19
+24/10/2023 13:19:28 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.595778797564434e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:28 - DEBUG - populationsim.steps.sub_balancing - TAZ 1550 converged True iter 0
+24/10/2023 13:19:28 - INFO - populationsim.multi_integerizer - omitting 761 zero weight rows out of 969
+24/10/2023 13:19:28 - INFO - populationsim.multi_integerizer - restoring 761 zero weight rows
+24/10/2023 13:19:28 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:28 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1550 status OPTIMAL. 
+24/10/2023 13:19:28 - INFO - populationsim.steps.sub_balancing - balancing 85/154 seed 4700400, TAZ 1551
+24/10/2023 13:19:28 - DEBUG - populationsim.simul_balancer - 49 positive weight rows out of 969
+24/10/2023 13:19:28 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 49 control_count 1 zone_count 3
+24/10/2023 13:19:28 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 4.2483023901472825e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:28 - DEBUG - populationsim.steps.sub_balancing - TAZ 1551 converged True iter 0
+24/10/2023 13:19:28 - INFO - populationsim.multi_integerizer - omitting 920 zero weight rows out of 969
+24/10/2023 13:19:28 - INFO - populationsim.multi_integerizer - restoring 920 zero weight rows
+24/10/2023 13:19:28 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:28 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1551 status OPTIMAL. 
+24/10/2023 13:19:28 - INFO - populationsim.steps.sub_balancing - balancing 86/154 seed 4700400, TAZ 1554
+24/10/2023 13:19:28 - DEBUG - populationsim.simul_balancer - 188 positive weight rows out of 969
+24/10/2023 13:19:28 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 188 control_count 1 zone_count 5
+24/10/2023 13:19:28 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.0627523034819958e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:28 - DEBUG - populationsim.steps.sub_balancing - TAZ 1554 converged True iter 0
+24/10/2023 13:19:28 - INFO - populationsim.multi_integerizer - omitting 781 zero weight rows out of 969
+24/10/2023 13:19:29 - INFO - populationsim.multi_integerizer - restoring 781 zero weight rows
+24/10/2023 13:19:29 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:29 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1554 status OPTIMAL. 
+24/10/2023 13:19:29 - INFO - populationsim.steps.sub_balancing - balancing 87/154 seed 4700400, TAZ 1556
+24/10/2023 13:19:29 - DEBUG - populationsim.simul_balancer - 186 positive weight rows out of 969
+24/10/2023 13:19:29 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 186 control_count 1 zone_count 9
+24/10/2023 13:19:29 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.6216866559292861e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:29 - DEBUG - populationsim.steps.sub_balancing - TAZ 1556 converged True iter 0
+24/10/2023 13:19:29 - INFO - populationsim.multi_integerizer - omitting 783 zero weight rows out of 969
+24/10/2023 13:19:29 - INFO - populationsim.multi_integerizer - restoring 783 zero weight rows
+24/10/2023 13:19:29 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:29 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1556 status OPTIMAL. 
+24/10/2023 13:19:29 - INFO - populationsim.steps.sub_balancing - balancing 88/154 seed 4700400, TAZ 1557
+24/10/2023 13:19:29 - DEBUG - populationsim.simul_balancer - 44 positive weight rows out of 969
+24/10/2023 13:19:29 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 44 control_count 1 zone_count 2
+24/10/2023 13:19:29 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 0.0
+24/10/2023 13:19:29 - DEBUG - populationsim.steps.sub_balancing - TAZ 1557 converged True iter 0
+24/10/2023 13:19:29 - INFO - populationsim.multi_integerizer - omitting 925 zero weight rows out of 969
+24/10/2023 13:19:29 - INFO - populationsim.multi_integerizer - restoring 925 zero weight rows
+24/10/2023 13:19:29 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:29 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1557 status OPTIMAL. 
+24/10/2023 13:19:29 - INFO - populationsim.steps.sub_balancing - balancing 89/154 seed 4700400, TAZ 1558
+24/10/2023 13:19:29 - DEBUG - populationsim.simul_balancer - 217 positive weight rows out of 969
+24/10/2023 13:19:29 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 217 control_count 1 zone_count 13
+24/10/2023 13:19:29 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.826320207058065e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:29 - DEBUG - populationsim.steps.sub_balancing - TAZ 1558 converged True iter 0
+24/10/2023 13:19:29 - INFO - populationsim.multi_integerizer - omitting 752 zero weight rows out of 969
+24/10/2023 13:19:29 - INFO - populationsim.multi_integerizer - restoring 752 zero weight rows
+24/10/2023 13:19:29 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:29 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1558 status OPTIMAL. 
+24/10/2023 13:19:29 - INFO - populationsim.steps.sub_balancing - balancing 90/154 seed 4700400, TAZ 1559
+24/10/2023 13:19:29 - DEBUG - populationsim.simul_balancer - 184 positive weight rows out of 969
+24/10/2023 13:19:29 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 184 control_count 1 zone_count 14
+24/10/2023 13:19:29 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.273241981127868e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:29 - DEBUG - populationsim.steps.sub_balancing - TAZ 1559 converged True iter 0
+24/10/2023 13:19:29 - INFO - populationsim.multi_integerizer - omitting 785 zero weight rows out of 969
+24/10/2023 13:19:29 - INFO - populationsim.multi_integerizer - restoring 785 zero weight rows
+24/10/2023 13:19:29 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:29 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1559 status OPTIMAL. 
+24/10/2023 13:19:29 - INFO - populationsim.steps.sub_balancing - balancing 91/154 seed 4700400, TAZ 1560
+24/10/2023 13:19:29 - DEBUG - populationsim.simul_balancer - 103 positive weight rows out of 969
+24/10/2023 13:19:29 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 103 control_count 1 zone_count 7
+24/10/2023 13:19:29 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.9671427378067095e-16 max_gamma_dif 3.3306690738754696e-16
+24/10/2023 13:19:29 - DEBUG - populationsim.steps.sub_balancing - TAZ 1560 converged True iter 0
+24/10/2023 13:19:29 - INFO - populationsim.multi_integerizer - omitting 866 zero weight rows out of 969
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - restoring 866 zero weight rows
+24/10/2023 13:19:30 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1560 status OPTIMAL. 
+24/10/2023 13:19:30 - INFO - populationsim.steps.sub_balancing - balancing 92/154 seed 4700400, TAZ 1561
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - 64 positive weight rows out of 969
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 64 control_count 1 zone_count 1
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 0.0
+24/10/2023 13:19:30 - DEBUG - populationsim.steps.sub_balancing - TAZ 1561 converged True iter 0
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - omitting 905 zero weight rows out of 969
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - restoring 905 zero weight rows
+24/10/2023 13:19:30 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1561 status OPTIMAL. 
+24/10/2023 13:19:30 - INFO - populationsim.steps.sub_balancing - balancing 93/154 seed 4700400, TAZ 1562
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - 124 positive weight rows out of 969
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 124 control_count 1 zone_count 7
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 9.445849120802743e-17 max_gamma_dif 4.440892098500626e-16
+24/10/2023 13:19:30 - DEBUG - populationsim.steps.sub_balancing - TAZ 1562 converged True iter 0
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - omitting 845 zero weight rows out of 969
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - restoring 845 zero weight rows
+24/10/2023 13:19:30 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1562 status OPTIMAL. 
+24/10/2023 13:19:30 - INFO - populationsim.steps.sub_balancing - balancing 94/154 seed 4700400, TAZ 1563
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - 47 positive weight rows out of 969
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 47 control_count 1 zone_count 4
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.834611977766357e-17 max_gamma_dif 4.440892098500626e-16
+24/10/2023 13:19:30 - DEBUG - populationsim.steps.sub_balancing - TAZ 1563 converged True iter 0
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - omitting 922 zero weight rows out of 969
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - restoring 922 zero weight rows
+24/10/2023 13:19:30 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1563 status OPTIMAL. 
+24/10/2023 13:19:30 - INFO - populationsim.steps.sub_balancing - balancing 95/154 seed 4700400, TAZ 1564
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - 194 positive weight rows out of 969
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 194 control_count 1 zone_count 12
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.484410157553588e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:30 - DEBUG - populationsim.steps.sub_balancing - TAZ 1564 converged True iter 0
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - omitting 775 zero weight rows out of 969
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - restoring 775 zero weight rows
+24/10/2023 13:19:30 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1564 status OPTIMAL. 
+24/10/2023 13:19:30 - INFO - populationsim.steps.sub_balancing - balancing 96/154 seed 4700400, TAZ 1565
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - 6 positive weight rows out of 969
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 6 control_count 1 zone_count 1
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 0.0
+24/10/2023 13:19:30 - DEBUG - populationsim.steps.sub_balancing - TAZ 1565 converged True iter 0
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - omitting 963 zero weight rows out of 969
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - restoring 963 zero weight rows
+24/10/2023 13:19:30 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1565 status OPTIMAL. 
+24/10/2023 13:19:30 - INFO - populationsim.steps.sub_balancing - balancing 97/154 seed 4700400, TAZ 1566
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - 74 positive weight rows out of 969
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 74 control_count 1 zone_count 9
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.6944028762649138e-16 max_gamma_dif 4.440892098500626e-16
+24/10/2023 13:19:30 - DEBUG - populationsim.steps.sub_balancing - TAZ 1566 converged True iter 0
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - omitting 895 zero weight rows out of 969
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - restoring 895 zero weight rows
+24/10/2023 13:19:30 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1566 status OPTIMAL. 
+24/10/2023 13:19:30 - INFO - populationsim.steps.sub_balancing - balancing 98/154 seed 4700400, TAZ 1567
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - 95 positive weight rows out of 969
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 95 control_count 1 zone_count 3
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 3.126154306181362e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:30 - DEBUG - populationsim.steps.sub_balancing - TAZ 1567 converged True iter 0
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - omitting 874 zero weight rows out of 969
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - restoring 874 zero weight rows
+24/10/2023 13:19:30 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1567 status OPTIMAL. 
+24/10/2023 13:19:30 - INFO - populationsim.steps.sub_balancing - balancing 99/154 seed 4700400, TAZ 1568
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - 2 positive weight rows out of 969
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 2 control_count 1 zone_count 1
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 0.0
+24/10/2023 13:19:30 - DEBUG - populationsim.steps.sub_balancing - TAZ 1568 converged True iter 0
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - omitting 967 zero weight rows out of 969
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - restoring 967 zero weight rows
+24/10/2023 13:19:30 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1568 status OPTIMAL. 
+24/10/2023 13:19:30 - INFO - populationsim.steps.sub_balancing - balancing 100/154 seed 4700400, TAZ 1569
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - 53 positive weight rows out of 969
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 53 control_count 1 zone_count 4
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.304236466203155e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:30 - DEBUG - populationsim.steps.sub_balancing - TAZ 1569 converged True iter 0
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - omitting 916 zero weight rows out of 969
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - restoring 916 zero weight rows
+24/10/2023 13:19:30 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1569 status OPTIMAL. 
+24/10/2023 13:19:30 - INFO - populationsim.steps.sub_balancing - balancing 101/154 seed 4700400, TAZ 1570
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - 116 positive weight rows out of 969
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 116 control_count 1 zone_count 10
+24/10/2023 13:19:30 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 6.02666862774701e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:30 - DEBUG - populationsim.steps.sub_balancing - TAZ 1570 converged True iter 0
+24/10/2023 13:19:30 - INFO - populationsim.multi_integerizer - omitting 853 zero weight rows out of 969
+24/10/2023 13:19:31 - INFO - populationsim.multi_integerizer - restoring 853 zero weight rows
+24/10/2023 13:19:31 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:31 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1570 status OPTIMAL. 
+24/10/2023 13:19:31 - INFO - populationsim.steps.sub_balancing - balancing 102/154 seed 4700400, TAZ 1571
+24/10/2023 13:19:31 - DEBUG - populationsim.simul_balancer - 179 positive weight rows out of 969
+24/10/2023 13:19:31 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 179 control_count 1 zone_count 17
+24/10/2023 13:19:31 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.157647121181432e-16 max_gamma_dif 4.440892098500626e-16
+24/10/2023 13:19:31 - DEBUG - populationsim.steps.sub_balancing - TAZ 1571 converged True iter 0
+24/10/2023 13:19:31 - INFO - populationsim.multi_integerizer - omitting 790 zero weight rows out of 969
+24/10/2023 13:19:31 - INFO - populationsim.multi_integerizer - restoring 790 zero weight rows
+24/10/2023 13:19:31 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:31 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1571 status OPTIMAL. 
+24/10/2023 13:19:31 - INFO - populationsim.steps.sub_balancing - balancing 103/154 seed 4700400, TAZ 1572
+24/10/2023 13:19:31 - DEBUG - populationsim.simul_balancer - 32 positive weight rows out of 969
+24/10/2023 13:19:31 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 32 control_count 1 zone_count 5
+24/10/2023 13:19:31 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 0.0
+24/10/2023 13:19:31 - DEBUG - populationsim.steps.sub_balancing - TAZ 1572 converged True iter 0
+24/10/2023 13:19:31 - INFO - populationsim.multi_integerizer - omitting 937 zero weight rows out of 969
+24/10/2023 13:19:31 - INFO - populationsim.multi_integerizer - restoring 937 zero weight rows
+24/10/2023 13:19:31 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:31 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1572 status OPTIMAL. 
+24/10/2023 13:19:31 - INFO - populationsim.steps.sub_balancing - balancing 104/154 seed 4700400, TAZ 1573
+24/10/2023 13:19:31 - DEBUG - populationsim.simul_balancer - 24 positive weight rows out of 969
+24/10/2023 13:19:31 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 24 control_count 1 zone_count 6
+24/10/2023 13:19:31 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 0.0
+24/10/2023 13:19:31 - DEBUG - populationsim.steps.sub_balancing - TAZ 1573 converged True iter 0
+24/10/2023 13:19:31 - INFO - populationsim.multi_integerizer - omitting 945 zero weight rows out of 969
+24/10/2023 13:19:31 - INFO - populationsim.multi_integerizer - restoring 945 zero weight rows
+24/10/2023 13:19:31 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:31 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1573 status OPTIMAL. 
+24/10/2023 13:19:31 - INFO - populationsim.steps.sub_balancing - balancing 105/154 seed 4700400, TAZ 1575
+24/10/2023 13:19:31 - DEBUG - populationsim.simul_balancer - 112 positive weight rows out of 969
+24/10/2023 13:19:31 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 112 control_count 1 zone_count 8
+24/10/2023 13:19:31 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.2985644305883528e-16 max_gamma_dif 4.440892098500626e-16
+24/10/2023 13:19:31 - DEBUG - populationsim.steps.sub_balancing - TAZ 1575 converged True iter 0
+24/10/2023 13:19:31 - INFO - populationsim.multi_integerizer - omitting 857 zero weight rows out of 969
+24/10/2023 13:19:31 - INFO - populationsim.multi_integerizer - restoring 857 zero weight rows
+24/10/2023 13:19:31 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:31 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1575 status OPTIMAL. 
+24/10/2023 13:19:31 - INFO - populationsim.steps.sub_balancing - balancing 106/154 seed 4700400, TAZ 1576
+24/10/2023 13:19:31 - DEBUG - populationsim.simul_balancer - 226 positive weight rows out of 969
+24/10/2023 13:19:31 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 226 control_count 1 zone_count 15
+24/10/2023 13:19:31 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 8.409379080501285e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:31 - DEBUG - populationsim.steps.sub_balancing - TAZ 1576 converged True iter 0
+24/10/2023 13:19:31 - INFO - populationsim.multi_integerizer - omitting 743 zero weight rows out of 969
+24/10/2023 13:19:32 - INFO - populationsim.multi_integerizer - restoring 743 zero weight rows
+24/10/2023 13:19:32 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:32 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1576 status OPTIMAL. 
+24/10/2023 13:19:32 - INFO - populationsim.steps.sub_balancing - balancing 107/154 seed 4700400, TAZ 1577
+24/10/2023 13:19:32 - DEBUG - populationsim.simul_balancer - 31 positive weight rows out of 969
+24/10/2023 13:19:32 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 31 control_count 1 zone_count 2
+24/10/2023 13:19:32 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.220446049250313e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:32 - DEBUG - populationsim.steps.sub_balancing - TAZ 1577 converged True iter 0
+24/10/2023 13:19:32 - INFO - populationsim.multi_integerizer - omitting 938 zero weight rows out of 969
+24/10/2023 13:19:32 - INFO - populationsim.multi_integerizer - restoring 938 zero weight rows
+24/10/2023 13:19:32 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:32 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1577 status OPTIMAL. 
+24/10/2023 13:19:32 - INFO - populationsim.steps.sub_balancing - balancing 108/154 seed 4700400, TAZ 1578
+24/10/2023 13:19:32 - DEBUG - populationsim.simul_balancer - 172 positive weight rows out of 969
+24/10/2023 13:19:32 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 172 control_count 1 zone_count 5
+24/10/2023 13:19:32 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.9046532621007005e-16 max_gamma_dif 4.440892098500626e-16
+24/10/2023 13:19:32 - DEBUG - populationsim.steps.sub_balancing - TAZ 1578 converged True iter 0
+24/10/2023 13:19:32 - INFO - populationsim.multi_integerizer - omitting 797 zero weight rows out of 969
+24/10/2023 13:19:32 - INFO - populationsim.multi_integerizer - restoring 797 zero weight rows
+24/10/2023 13:19:32 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:32 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1578 status OPTIMAL. 
+24/10/2023 13:19:32 - INFO - populationsim.steps.sub_balancing - balancing 109/154 seed 4700400, TAZ 1579
+24/10/2023 13:19:32 - DEBUG - populationsim.simul_balancer - 124 positive weight rows out of 969
+24/10/2023 13:19:32 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 124 control_count 1 zone_count 9
+24/10/2023 13:19:32 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 6.80459273157354e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:32 - DEBUG - populationsim.steps.sub_balancing - TAZ 1579 converged True iter 0
+24/10/2023 13:19:32 - INFO - populationsim.multi_integerizer - omitting 845 zero weight rows out of 969
+24/10/2023 13:19:32 - INFO - populationsim.multi_integerizer - restoring 845 zero weight rows
+24/10/2023 13:19:32 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:32 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1579 status OPTIMAL. 
+24/10/2023 13:19:32 - INFO - populationsim.steps.sub_balancing - balancing 110/154 seed 4700400, TAZ 1580
+24/10/2023 13:19:32 - DEBUG - populationsim.simul_balancer - 226 positive weight rows out of 969
+24/10/2023 13:19:32 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 226 control_count 1 zone_count 23
+24/10/2023 13:19:32 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.3817149243831198e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:32 - DEBUG - populationsim.steps.sub_balancing - TAZ 1580 converged True iter 0
+24/10/2023 13:19:32 - INFO - populationsim.multi_integerizer - omitting 743 zero weight rows out of 969
+24/10/2023 13:19:32 - INFO - populationsim.multi_integerizer - restoring 743 zero weight rows
+24/10/2023 13:19:32 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:32 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1580 status OPTIMAL. 
+24/10/2023 13:19:32 - INFO - populationsim.steps.sub_balancing - balancing 111/154 seed 4700400, TAZ 1581
+24/10/2023 13:19:33 - DEBUG - populationsim.simul_balancer - 218 positive weight rows out of 969
+24/10/2023 13:19:33 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 218 control_count 1 zone_count 3
+24/10/2023 13:19:33 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.321028181068418e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:33 - DEBUG - populationsim.steps.sub_balancing - TAZ 1581 converged True iter 0
+24/10/2023 13:19:33 - INFO - populationsim.multi_integerizer - omitting 751 zero weight rows out of 969
+24/10/2023 13:19:33 - INFO - populationsim.multi_integerizer - restoring 751 zero weight rows
+24/10/2023 13:19:33 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:33 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1581 status OPTIMAL. 
+24/10/2023 13:19:33 - INFO - populationsim.steps.sub_balancing - balancing 112/154 seed 4700400, TAZ 1583
+24/10/2023 13:19:33 - DEBUG - populationsim.simul_balancer - 221 positive weight rows out of 969
+24/10/2023 13:19:33 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 221 control_count 1 zone_count 14
+24/10/2023 13:19:33 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.7129020675459676e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:33 - DEBUG - populationsim.steps.sub_balancing - TAZ 1583 converged True iter 0
+24/10/2023 13:19:33 - INFO - populationsim.multi_integerizer - omitting 748 zero weight rows out of 969
+24/10/2023 13:19:33 - INFO - populationsim.multi_integerizer - restoring 748 zero weight rows
+24/10/2023 13:19:33 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:33 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1583 status OPTIMAL. 
+24/10/2023 13:19:33 - INFO - populationsim.steps.sub_balancing - balancing 113/154 seed 4700400, TAZ 1584
+24/10/2023 13:19:33 - DEBUG - populationsim.simul_balancer - 28 positive weight rows out of 969
+24/10/2023 13:19:33 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 28 control_count 1 zone_count 2
+24/10/2023 13:19:33 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 5.551115123125783e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:33 - DEBUG - populationsim.steps.sub_balancing - TAZ 1584 converged True iter 0
+24/10/2023 13:19:33 - INFO - populationsim.multi_integerizer - omitting 941 zero weight rows out of 969
+24/10/2023 13:19:33 - INFO - populationsim.multi_integerizer - restoring 941 zero weight rows
+24/10/2023 13:19:33 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:33 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1584 status OPTIMAL. 
+24/10/2023 13:19:33 - INFO - populationsim.steps.sub_balancing - balancing 114/154 seed 4700400, TAZ 1585
+24/10/2023 13:19:33 - DEBUG - populationsim.simul_balancer - 117 positive weight rows out of 969
+24/10/2023 13:19:33 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 117 control_count 1 zone_count 9
+24/10/2023 13:19:33 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.693505260051888e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:33 - DEBUG - populationsim.steps.sub_balancing - TAZ 1585 converged True iter 0
+24/10/2023 13:19:33 - INFO - populationsim.multi_integerizer - omitting 852 zero weight rows out of 969
+24/10/2023 13:19:33 - INFO - populationsim.multi_integerizer - restoring 852 zero weight rows
+24/10/2023 13:19:33 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:33 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1585 status OPTIMAL. 
+24/10/2023 13:19:33 - INFO - populationsim.steps.sub_balancing - balancing 115/154 seed 4700400, TAZ 1586
+24/10/2023 13:19:33 - DEBUG - populationsim.simul_balancer - 189 positive weight rows out of 969
+24/10/2023 13:19:33 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 189 control_count 1 zone_count 5
+24/10/2023 13:19:33 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 4.053195169266444e-17 max_gamma_dif 0.0
+24/10/2023 13:19:33 - DEBUG - populationsim.steps.sub_balancing - TAZ 1586 converged True iter 0
+24/10/2023 13:19:33 - INFO - populationsim.multi_integerizer - omitting 780 zero weight rows out of 969
+24/10/2023 13:19:33 - INFO - populationsim.multi_integerizer - restoring 780 zero weight rows
+24/10/2023 13:19:33 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:33 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1586 status OPTIMAL. 
+24/10/2023 13:19:33 - INFO - populationsim.steps.sub_balancing - balancing 116/154 seed 4700400, TAZ 1587
+24/10/2023 13:19:33 - DEBUG - populationsim.simul_balancer - 179 positive weight rows out of 969
+24/10/2023 13:19:33 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 179 control_count 1 zone_count 8
+24/10/2023 13:19:33 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.9341054725516096e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:33 - DEBUG - populationsim.steps.sub_balancing - TAZ 1587 converged True iter 0
+24/10/2023 13:19:33 - INFO - populationsim.multi_integerizer - omitting 790 zero weight rows out of 969
+24/10/2023 13:19:33 - INFO - populationsim.multi_integerizer - restoring 790 zero weight rows
+24/10/2023 13:19:33 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:33 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1587 status OPTIMAL. 
+24/10/2023 13:19:33 - INFO - populationsim.steps.sub_balancing - balancing 117/154 seed 4700400, TAZ 1588
+24/10/2023 13:19:33 - DEBUG - populationsim.simul_balancer - 222 positive weight rows out of 969
+24/10/2023 13:19:33 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 222 control_count 1 zone_count 15
+24/10/2023 13:19:33 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.3467549147955076e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:33 - DEBUG - populationsim.steps.sub_balancing - TAZ 1588 converged True iter 0
+24/10/2023 13:19:33 - INFO - populationsim.multi_integerizer - omitting 747 zero weight rows out of 969
+24/10/2023 13:19:34 - INFO - populationsim.multi_integerizer - restoring 747 zero weight rows
+24/10/2023 13:19:34 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:34 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1588 status OPTIMAL. 
+24/10/2023 13:19:34 - INFO - populationsim.steps.sub_balancing - balancing 118/154 seed 4700400, TAZ 1589
+24/10/2023 13:19:34 - DEBUG - populationsim.simul_balancer - 293 positive weight rows out of 969
+24/10/2023 13:19:34 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 293 control_count 1 zone_count 16
+24/10/2023 13:19:34 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.4453266039435432e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:34 - DEBUG - populationsim.steps.sub_balancing - TAZ 1589 converged True iter 0
+24/10/2023 13:19:34 - INFO - populationsim.multi_integerizer - omitting 676 zero weight rows out of 969
+24/10/2023 13:19:34 - INFO - populationsim.multi_integerizer - restoring 676 zero weight rows
+24/10/2023 13:19:34 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:34 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1589 status OPTIMAL. 
+24/10/2023 13:19:34 - INFO - populationsim.steps.sub_balancing - balancing 119/154 seed 4700400, TAZ 1590
+24/10/2023 13:19:34 - DEBUG - populationsim.simul_balancer - 192 positive weight rows out of 969
+24/10/2023 13:19:34 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 192 control_count 1 zone_count 4
+24/10/2023 13:19:34 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 0.0
+24/10/2023 13:19:34 - DEBUG - populationsim.steps.sub_balancing - TAZ 1590 converged True iter 0
+24/10/2023 13:19:34 - INFO - populationsim.multi_integerizer - omitting 777 zero weight rows out of 969
+24/10/2023 13:19:34 - INFO - populationsim.multi_integerizer - restoring 777 zero weight rows
+24/10/2023 13:19:34 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:34 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1590 status OPTIMAL. 
+24/10/2023 13:19:34 - INFO - populationsim.steps.sub_balancing - balancing 120/154 seed 4700400, TAZ 1591
+24/10/2023 13:19:34 - DEBUG - populationsim.simul_balancer - 161 positive weight rows out of 969
+24/10/2023 13:19:34 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 161 control_count 1 zone_count 6
+24/10/2023 13:19:34 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.7454981559518183e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:34 - DEBUG - populationsim.steps.sub_balancing - TAZ 1591 converged True iter 0
+24/10/2023 13:19:34 - INFO - populationsim.multi_integerizer - omitting 808 zero weight rows out of 969
+24/10/2023 13:19:35 - INFO - populationsim.multi_integerizer - restoring 808 zero weight rows
+24/10/2023 13:19:35 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:35 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1591 status OPTIMAL. 
+24/10/2023 13:19:35 - INFO - populationsim.steps.sub_balancing - balancing 121/154 seed 4700400, TAZ 1592
+24/10/2023 13:19:35 - DEBUG - populationsim.simul_balancer - 213 positive weight rows out of 969
+24/10/2023 13:19:35 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 213 control_count 1 zone_count 14
+24/10/2023 13:19:35 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 3.341745242548373e-16 max_gamma_dif 3.3306690738754696e-16
+24/10/2023 13:19:35 - DEBUG - populationsim.steps.sub_balancing - TAZ 1592 converged True iter 0
+24/10/2023 13:19:35 - INFO - populationsim.multi_integerizer - omitting 756 zero weight rows out of 969
+24/10/2023 13:19:35 - INFO - populationsim.multi_integerizer - restoring 756 zero weight rows
+24/10/2023 13:19:35 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:35 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1592 status OPTIMAL. 
+24/10/2023 13:19:35 - INFO - populationsim.steps.sub_balancing - balancing 122/154 seed 4700400, TAZ 1593
+24/10/2023 13:19:35 - DEBUG - populationsim.simul_balancer - 262 positive weight rows out of 969
+24/10/2023 13:19:35 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 262 control_count 1 zone_count 14
+24/10/2023 13:19:35 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 5.053209759028623e-17 max_gamma_dif 0.0
+24/10/2023 13:19:35 - DEBUG - populationsim.steps.sub_balancing - TAZ 1593 converged True iter 0
+24/10/2023 13:19:35 - INFO - populationsim.multi_integerizer - omitting 707 zero weight rows out of 969
+24/10/2023 13:19:35 - INFO - populationsim.multi_integerizer - restoring 707 zero weight rows
+24/10/2023 13:19:35 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:35 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1593 status OPTIMAL. 
+24/10/2023 13:19:35 - INFO - populationsim.steps.sub_balancing - balancing 123/154 seed 4700400, TAZ 1594
+24/10/2023 13:19:35 - DEBUG - populationsim.simul_balancer - 181 positive weight rows out of 969
+24/10/2023 13:19:35 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 181 control_count 1 zone_count 9
+24/10/2023 13:19:35 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.4715496684248564e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:35 - DEBUG - populationsim.steps.sub_balancing - TAZ 1594 converged True iter 0
+24/10/2023 13:19:35 - INFO - populationsim.multi_integerizer - omitting 788 zero weight rows out of 969
+24/10/2023 13:19:36 - INFO - populationsim.multi_integerizer - restoring 788 zero weight rows
+24/10/2023 13:19:36 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:36 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1594 status OPTIMAL. 
+24/10/2023 13:19:36 - INFO - populationsim.steps.sub_balancing - balancing 124/154 seed 4700400, TAZ 1595
+24/10/2023 13:19:36 - DEBUG - populationsim.simul_balancer - 177 positive weight rows out of 969
+24/10/2023 13:19:36 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 177 control_count 1 zone_count 12
+24/10/2023 13:19:36 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 3.0452727596356696e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:36 - DEBUG - populationsim.steps.sub_balancing - TAZ 1595 converged True iter 0
+24/10/2023 13:19:36 - INFO - populationsim.multi_integerizer - omitting 792 zero weight rows out of 969
+24/10/2023 13:19:36 - INFO - populationsim.multi_integerizer - restoring 792 zero weight rows
+24/10/2023 13:19:36 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:36 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1595 status OPTIMAL. 
+24/10/2023 13:19:36 - INFO - populationsim.steps.sub_balancing - balancing 125/154 seed 4700400, TAZ 1596
+24/10/2023 13:19:36 - DEBUG - populationsim.simul_balancer - 239 positive weight rows out of 969
+24/10/2023 13:19:36 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 239 control_count 1 zone_count 12
+24/10/2023 13:19:36 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 4.2568226953593214e-16 max_gamma_dif 4.440892098500626e-16
+24/10/2023 13:19:36 - DEBUG - populationsim.steps.sub_balancing - TAZ 1596 converged True iter 0
+24/10/2023 13:19:36 - INFO - populationsim.multi_integerizer - omitting 730 zero weight rows out of 969
+24/10/2023 13:19:36 - INFO - populationsim.multi_integerizer - restoring 730 zero weight rows
+24/10/2023 13:19:36 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:36 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1596 status OPTIMAL. 
+24/10/2023 13:19:36 - INFO - populationsim.steps.sub_balancing - balancing 126/154 seed 4700400, TAZ 1597
+24/10/2023 13:19:36 - DEBUG - populationsim.simul_balancer - 63 positive weight rows out of 969
+24/10/2023 13:19:36 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 63 control_count 1 zone_count 3
+24/10/2023 13:19:36 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 7.599740942374584e-17 max_gamma_dif 4.440892098500626e-16
+24/10/2023 13:19:36 - DEBUG - populationsim.steps.sub_balancing - TAZ 1597 converged True iter 0
+24/10/2023 13:19:36 - INFO - populationsim.multi_integerizer - omitting 906 zero weight rows out of 969
+24/10/2023 13:19:36 - INFO - populationsim.multi_integerizer - restoring 906 zero weight rows
+24/10/2023 13:19:36 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:36 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1597 status OPTIMAL. 
+24/10/2023 13:19:36 - INFO - populationsim.steps.sub_balancing - balancing 127/154 seed 4700400, TAZ 1598
+24/10/2023 13:19:36 - DEBUG - populationsim.simul_balancer - 202 positive weight rows out of 969
+24/10/2023 13:19:36 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 202 control_count 1 zone_count 16
+24/10/2023 13:19:36 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.3684986865069475e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:36 - DEBUG - populationsim.steps.sub_balancing - TAZ 1598 converged True iter 0
+24/10/2023 13:19:36 - INFO - populationsim.multi_integerizer - omitting 767 zero weight rows out of 969
+24/10/2023 13:19:37 - INFO - populationsim.multi_integerizer - restoring 767 zero weight rows
+24/10/2023 13:19:37 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:37 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1598 status OPTIMAL. 
+24/10/2023 13:19:37 - INFO - populationsim.steps.sub_balancing - balancing 128/154 seed 4700400, TAZ 1599
+24/10/2023 13:19:37 - DEBUG - populationsim.simul_balancer - 145 positive weight rows out of 969
+24/10/2023 13:19:37 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 145 control_count 1 zone_count 13
+24/10/2023 13:19:37 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.3879365917584187e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:37 - DEBUG - populationsim.steps.sub_balancing - TAZ 1599 converged True iter 0
+24/10/2023 13:19:37 - INFO - populationsim.multi_integerizer - omitting 824 zero weight rows out of 969
+24/10/2023 13:19:37 - INFO - populationsim.multi_integerizer - restoring 824 zero weight rows
+24/10/2023 13:19:37 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:37 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1599 status OPTIMAL. 
+24/10/2023 13:19:37 - INFO - populationsim.steps.sub_balancing - balancing 129/154 seed 4700400, TAZ 1600
+24/10/2023 13:19:37 - DEBUG - populationsim.simul_balancer - 126 positive weight rows out of 969
+24/10/2023 13:19:37 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 126 control_count 1 zone_count 6
+24/10/2023 13:19:37 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.8867182948242987e-16 max_gamma_dif 3.3306690738754696e-16
+24/10/2023 13:19:37 - DEBUG - populationsim.steps.sub_balancing - TAZ 1600 converged True iter 0
+24/10/2023 13:19:37 - INFO - populationsim.multi_integerizer - omitting 843 zero weight rows out of 969
+24/10/2023 13:19:37 - INFO - populationsim.multi_integerizer - restoring 843 zero weight rows
+24/10/2023 13:19:37 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:37 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1600 status OPTIMAL. 
+24/10/2023 13:19:37 - INFO - populationsim.steps.sub_balancing - balancing 130/154 seed 4700400, TAZ 1601
+24/10/2023 13:19:37 - DEBUG - populationsim.simul_balancer - 112 positive weight rows out of 969
+24/10/2023 13:19:37 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 112 control_count 1 zone_count 8
+24/10/2023 13:19:37 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.3462135012586316e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:37 - DEBUG - populationsim.steps.sub_balancing - TAZ 1601 converged True iter 0
+24/10/2023 13:19:37 - INFO - populationsim.multi_integerizer - omitting 857 zero weight rows out of 969
+24/10/2023 13:19:37 - INFO - populationsim.multi_integerizer - restoring 857 zero weight rows
+24/10/2023 13:19:37 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:37 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1601 status OPTIMAL. 
+24/10/2023 13:19:37 - INFO - populationsim.steps.sub_balancing - balancing 131/154 seed 4700400, TAZ 1602
+24/10/2023 13:19:37 - DEBUG - populationsim.simul_balancer - 87 positive weight rows out of 969
+24/10/2023 13:19:37 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 87 control_count 1 zone_count 13
+24/10/2023 13:19:37 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.8648858509005474e-16 max_gamma_dif 6.661338147750939e-16
+24/10/2023 13:19:37 - DEBUG - populationsim.steps.sub_balancing - TAZ 1602 converged True iter 0
+24/10/2023 13:19:37 - INFO - populationsim.multi_integerizer - omitting 882 zero weight rows out of 969
+24/10/2023 13:19:37 - INFO - populationsim.multi_integerizer - restoring 882 zero weight rows
+24/10/2023 13:19:37 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:37 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1602 status OPTIMAL. 
+24/10/2023 13:19:37 - INFO - populationsim.steps.sub_balancing - balancing 132/154 seed 4700400, TAZ 1603
+24/10/2023 13:19:37 - DEBUG - populationsim.simul_balancer - 38 positive weight rows out of 969
+24/10/2023 13:19:37 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 38 control_count 1 zone_count 3
+24/10/2023 13:19:37 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 4.272897825037609e-16 max_gamma_dif 6.661338147750939e-16
+24/10/2023 13:19:37 - DEBUG - populationsim.steps.sub_balancing - TAZ 1603 converged True iter 0
+24/10/2023 13:19:37 - INFO - populationsim.multi_integerizer - omitting 931 zero weight rows out of 969
+24/10/2023 13:19:37 - INFO - populationsim.multi_integerizer - restoring 931 zero weight rows
+24/10/2023 13:19:37 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:37 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1603 status OPTIMAL. 
+24/10/2023 13:19:37 - INFO - populationsim.steps.sub_balancing - balancing 133/154 seed 4700400, TAZ 1604
+24/10/2023 13:19:37 - DEBUG - populationsim.simul_balancer - 139 positive weight rows out of 969
+24/10/2023 13:19:37 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 139 control_count 1 zone_count 3
+24/10/2023 13:19:37 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.6329488720444988e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:37 - DEBUG - populationsim.steps.sub_balancing - TAZ 1604 converged True iter 0
+24/10/2023 13:19:37 - INFO - populationsim.multi_integerizer - omitting 830 zero weight rows out of 969
+24/10/2023 13:19:37 - INFO - populationsim.multi_integerizer - restoring 830 zero weight rows
+24/10/2023 13:19:37 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:37 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1604 status OPTIMAL. 
+24/10/2023 13:19:37 - INFO - populationsim.steps.sub_balancing - balancing 134/154 seed 4700400, TAZ 1605
+24/10/2023 13:19:37 - DEBUG - populationsim.simul_balancer - 49 positive weight rows out of 969
+24/10/2023 13:19:37 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 49 control_count 1 zone_count 7
+24/10/2023 13:19:37 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 0.0
+24/10/2023 13:19:37 - DEBUG - populationsim.steps.sub_balancing - TAZ 1605 converged True iter 0
+24/10/2023 13:19:37 - INFO - populationsim.multi_integerizer - omitting 920 zero weight rows out of 969
+24/10/2023 13:19:37 - INFO - populationsim.multi_integerizer - restoring 920 zero weight rows
+24/10/2023 13:19:37 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:37 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1605 status OPTIMAL. 
+24/10/2023 13:19:37 - INFO - populationsim.steps.sub_balancing - balancing 135/154 seed 4700400, TAZ 1606
+24/10/2023 13:19:37 - DEBUG - populationsim.simul_balancer - 162 positive weight rows out of 969
+24/10/2023 13:19:37 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 162 control_count 1 zone_count 11
+24/10/2023 13:19:37 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.7030272939466135e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:37 - DEBUG - populationsim.steps.sub_balancing - TAZ 1606 converged True iter 0
+24/10/2023 13:19:37 - INFO - populationsim.multi_integerizer - omitting 807 zero weight rows out of 969
+24/10/2023 13:19:38 - INFO - populationsim.multi_integerizer - restoring 807 zero weight rows
+24/10/2023 13:19:38 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:38 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1606 status OPTIMAL. 
+24/10/2023 13:19:38 - INFO - populationsim.steps.sub_balancing - balancing 136/154 seed 4700400, TAZ 1607
+24/10/2023 13:19:38 - DEBUG - populationsim.simul_balancer - 210 positive weight rows out of 969
+24/10/2023 13:19:38 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 210 control_count 1 zone_count 24
+24/10/2023 13:19:38 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.892665918170505e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:38 - DEBUG - populationsim.steps.sub_balancing - TAZ 1607 converged True iter 0
+24/10/2023 13:19:38 - INFO - populationsim.multi_integerizer - omitting 759 zero weight rows out of 969
+24/10/2023 13:19:38 - INFO - populationsim.multi_integerizer - restoring 759 zero weight rows
+24/10/2023 13:19:38 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:38 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1607 status OPTIMAL. 
+24/10/2023 13:19:38 - INFO - populationsim.steps.sub_balancing - balancing 137/154 seed 4700400, TAZ 1608
+24/10/2023 13:19:38 - DEBUG - populationsim.simul_balancer - 172 positive weight rows out of 969
+24/10/2023 13:19:38 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 172 control_count 1 zone_count 10
+24/10/2023 13:19:38 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.6310434914823792e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:38 - DEBUG - populationsim.steps.sub_balancing - TAZ 1608 converged True iter 0
+24/10/2023 13:19:38 - INFO - populationsim.multi_integerizer - omitting 797 zero weight rows out of 969
+24/10/2023 13:19:38 - INFO - populationsim.multi_integerizer - restoring 797 zero weight rows
+24/10/2023 13:19:39 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1608 status OPTIMAL. 
+24/10/2023 13:19:39 - INFO - populationsim.steps.sub_balancing - balancing 138/154 seed 4700400, TAZ 1609
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - 168 positive weight rows out of 969
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 168 control_count 1 zone_count 12
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.424430943702229e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:39 - DEBUG - populationsim.steps.sub_balancing - TAZ 1609 converged True iter 0
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - omitting 801 zero weight rows out of 969
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - restoring 801 zero weight rows
+24/10/2023 13:19:39 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1609 status OPTIMAL. 
+24/10/2023 13:19:39 - INFO - populationsim.steps.sub_balancing - balancing 139/154 seed 4700400, TAZ 1610
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - 75 positive weight rows out of 969
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 75 control_count 1 zone_count 7
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 3.7377508495713604e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:39 - DEBUG - populationsim.steps.sub_balancing - TAZ 1610 converged True iter 0
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - omitting 894 zero weight rows out of 969
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - restoring 894 zero weight rows
+24/10/2023 13:19:39 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1610 status OPTIMAL. 
+24/10/2023 13:19:39 - INFO - populationsim.steps.sub_balancing - balancing 140/154 seed 4700400, TAZ 1611
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - 106 positive weight rows out of 969
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 106 control_count 1 zone_count 6
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.4800791619560606e-16 max_gamma_dif 4.440892098500626e-16
+24/10/2023 13:19:39 - DEBUG - populationsim.steps.sub_balancing - TAZ 1611 converged True iter 0
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - omitting 863 zero weight rows out of 969
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - restoring 863 zero weight rows
+24/10/2023 13:19:39 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1611 status OPTIMAL. 
+24/10/2023 13:19:39 - INFO - populationsim.steps.sub_balancing - balancing 141/154 seed 4700400, TAZ 1612
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - 42 positive weight rows out of 969
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 42 control_count 1 zone_count 5
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.32618157540509e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:39 - DEBUG - populationsim.steps.sub_balancing - TAZ 1612 converged True iter 0
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - omitting 927 zero weight rows out of 969
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - restoring 927 zero weight rows
+24/10/2023 13:19:39 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_1612 status OPTIMAL. 
+24/10/2023 13:19:39 - INFO - populationsim.steps.sub_balancing - balancing 142/154 seed 4700400, TAZ 2835
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - 142 positive weight rows out of 969
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 142 control_count 1 zone_count 7
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 0.0 max_gamma_dif 0.0
+24/10/2023 13:19:39 - DEBUG - populationsim.steps.sub_balancing - TAZ 2835 converged True iter 0
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - omitting 827 zero weight rows out of 969
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - restoring 827 zero weight rows
+24/10/2023 13:19:39 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_2835 status OPTIMAL. 
+24/10/2023 13:19:39 - INFO - populationsim.steps.sub_balancing - balancing 143/154 seed 4700400, TAZ 2836
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - 140 positive weight rows out of 969
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 140 control_count 1 zone_count 3
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 8.227545628918571e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:39 - DEBUG - populationsim.steps.sub_balancing - TAZ 2836 converged True iter 0
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - omitting 829 zero weight rows out of 969
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - restoring 829 zero weight rows
+24/10/2023 13:19:39 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_2836 status OPTIMAL. 
+24/10/2023 13:19:39 - INFO - populationsim.steps.sub_balancing - balancing 144/154 seed 4700400, TAZ 2837
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - 192 positive weight rows out of 969
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 192 control_count 1 zone_count 4
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 6.526897078362737e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:39 - DEBUG - populationsim.steps.sub_balancing - TAZ 2837 converged True iter 0
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - omitting 777 zero weight rows out of 969
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - restoring 777 zero weight rows
+24/10/2023 13:19:39 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_2837 status OPTIMAL. 
+24/10/2023 13:19:39 - INFO - populationsim.steps.sub_balancing - balancing 145/154 seed 4700400, TAZ 2838
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - 93 positive weight rows out of 969
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 93 control_count 1 zone_count 2
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.9844704963041845e-19 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:39 - DEBUG - populationsim.steps.sub_balancing - TAZ 2838 converged True iter 0
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - omitting 876 zero weight rows out of 969
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - restoring 876 zero weight rows
+24/10/2023 13:19:39 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_2838 status OPTIMAL. 
+24/10/2023 13:19:39 - INFO - populationsim.steps.sub_balancing - balancing 146/154 seed 4700400, TAZ 2839
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - 39 positive weight rows out of 969
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 39 control_count 1 zone_count 5
+24/10/2023 13:19:39 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 3.122502256758253e-16 max_gamma_dif 4.440892098500626e-16
+24/10/2023 13:19:39 - DEBUG - populationsim.steps.sub_balancing - TAZ 2839 converged True iter 0
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - omitting 930 zero weight rows out of 969
+24/10/2023 13:19:39 - INFO - populationsim.multi_integerizer - restoring 930 zero weight rows
+24/10/2023 13:19:40 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:40 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_2839 status OPTIMAL. 
+24/10/2023 13:19:40 - INFO - populationsim.steps.sub_balancing - balancing 147/154 seed 4700400, TAZ 2840
+24/10/2023 13:19:40 - DEBUG - populationsim.simul_balancer - 77 positive weight rows out of 969
+24/10/2023 13:19:40 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 77 control_count 1 zone_count 2
+24/10/2023 13:19:40 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 6.776685994465241e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:40 - DEBUG - populationsim.steps.sub_balancing - TAZ 2840 converged True iter 0
+24/10/2023 13:19:40 - INFO - populationsim.multi_integerizer - omitting 892 zero weight rows out of 969
+24/10/2023 13:19:40 - INFO - populationsim.multi_integerizer - restoring 892 zero weight rows
+24/10/2023 13:19:40 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:40 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_2840 status OPTIMAL. 
+24/10/2023 13:19:40 - INFO - populationsim.steps.sub_balancing - balancing 148/154 seed 4700400, TAZ 2841
+24/10/2023 13:19:40 - DEBUG - populationsim.simul_balancer - 43 positive weight rows out of 969
+24/10/2023 13:19:40 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 43 control_count 1 zone_count 5
+24/10/2023 13:19:40 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 2.259174759411656e-16 max_gamma_dif 0.0
+24/10/2023 13:19:40 - DEBUG - populationsim.steps.sub_balancing - TAZ 2841 converged True iter 0
+24/10/2023 13:19:40 - INFO - populationsim.multi_integerizer - omitting 926 zero weight rows out of 969
+24/10/2023 13:19:40 - INFO - populationsim.multi_integerizer - restoring 926 zero weight rows
+24/10/2023 13:19:40 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:40 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_2841 status OPTIMAL. 
+24/10/2023 13:19:40 - INFO - populationsim.steps.sub_balancing - balancing 149/154 seed 4700400, TAZ 2842
+24/10/2023 13:19:40 - DEBUG - populationsim.simul_balancer - 33 positive weight rows out of 969
+24/10/2023 13:19:40 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 33 control_count 1 zone_count 3
+24/10/2023 13:19:40 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 6.223977562292544e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:40 - DEBUG - populationsim.steps.sub_balancing - TAZ 2842 converged True iter 0
+24/10/2023 13:19:40 - INFO - populationsim.multi_integerizer - omitting 936 zero weight rows out of 969
+24/10/2023 13:19:40 - INFO - populationsim.multi_integerizer - restoring 936 zero weight rows
+24/10/2023 13:19:40 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:40 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_2842 status OPTIMAL. 
+24/10/2023 13:19:40 - INFO - populationsim.steps.sub_balancing - balancing 150/154 seed 4700400, TAZ 2843
+24/10/2023 13:19:40 - DEBUG - populationsim.simul_balancer - 202 positive weight rows out of 969
+24/10/2023 13:19:40 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 202 control_count 1 zone_count 8
+24/10/2023 13:19:40 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.7934636174405763e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:40 - DEBUG - populationsim.steps.sub_balancing - TAZ 2843 converged True iter 0
+24/10/2023 13:19:40 - INFO - populationsim.multi_integerizer - omitting 767 zero weight rows out of 969
+24/10/2023 13:19:40 - INFO - populationsim.multi_integerizer - restoring 767 zero weight rows
+24/10/2023 13:19:40 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:40 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_2843 status OPTIMAL. 
+24/10/2023 13:19:40 - INFO - populationsim.steps.sub_balancing - balancing 151/154 seed 4700400, TAZ 2844
+24/10/2023 13:19:40 - DEBUG - populationsim.simul_balancer - 156 positive weight rows out of 969
+24/10/2023 13:19:40 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 156 control_count 1 zone_count 8
+24/10/2023 13:19:40 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.4384860823869215e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:40 - DEBUG - populationsim.steps.sub_balancing - TAZ 2844 converged True iter 0
+24/10/2023 13:19:40 - INFO - populationsim.multi_integerizer - omitting 813 zero weight rows out of 969
+24/10/2023 13:19:40 - INFO - populationsim.multi_integerizer - restoring 813 zero weight rows
+24/10/2023 13:19:40 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:40 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_2844 status OPTIMAL. 
+24/10/2023 13:19:40 - INFO - populationsim.steps.sub_balancing - balancing 152/154 seed 4700400, TAZ 2845
+24/10/2023 13:19:40 - DEBUG - populationsim.simul_balancer - 41 positive weight rows out of 969
+24/10/2023 13:19:40 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 41 control_count 1 zone_count 3
+24/10/2023 13:19:40 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 5.686508174909338e-17 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:40 - DEBUG - populationsim.steps.sub_balancing - TAZ 2845 converged True iter 0
+24/10/2023 13:19:40 - INFO - populationsim.multi_integerizer - omitting 928 zero weight rows out of 969
+24/10/2023 13:19:40 - INFO - populationsim.multi_integerizer - restoring 928 zero weight rows
+24/10/2023 13:19:40 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:40 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_2845 status OPTIMAL. 
+24/10/2023 13:19:40 - INFO - populationsim.steps.sub_balancing - balancing 153/154 seed 4700400, TAZ 2846
+24/10/2023 13:19:40 - DEBUG - populationsim.simul_balancer - 180 positive weight rows out of 969
+24/10/2023 13:19:40 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 180 control_count 1 zone_count 8
+24/10/2023 13:19:40 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 6.071532165918825e-18 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:40 - DEBUG - populationsim.steps.sub_balancing - TAZ 2846 converged True iter 0
+24/10/2023 13:19:40 - INFO - populationsim.multi_integerizer - omitting 789 zero weight rows out of 969
+24/10/2023 13:19:40 - INFO - populationsim.multi_integerizer - restoring 789 zero weight rows
+24/10/2023 13:19:40 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:40 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_2846 status OPTIMAL. 
+24/10/2023 13:19:40 - INFO - populationsim.steps.sub_balancing - balancing 154/154 seed 4700400, TAZ 2847
+24/10/2023 13:19:40 - DEBUG - populationsim.simul_balancer - 97 positive weight rows out of 969
+24/10/2023 13:19:40 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 97 control_count 1 zone_count 3
+24/10/2023 13:19:40 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 1.9571972908340388e-16 max_gamma_dif 2.220446049250313e-16
+24/10/2023 13:19:40 - DEBUG - populationsim.steps.sub_balancing - TAZ 2847 converged True iter 0
+24/10/2023 13:19:40 - INFO - populationsim.multi_integerizer - omitting 872 zero weight rows out of 969
+24/10/2023 13:19:40 - INFO - populationsim.multi_integerizer - restoring 872 zero weight rows
+24/10/2023 13:19:40 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+24/10/2023 13:19:40 - INFO - populationsim.multi_integerizer - do_simul_integerizing succeeded for TAZ_2847 status OPTIMAL. 
+24/10/2023 13:19:40 - INFO - populationsim.steps.sub_balancing - adding table MAZ_weights
+24/10/2023 13:19:40 - DEBUG - activitysim.core.tracing - Time to execute #run_model completed step 'sub_balancing.geography=MAZ' : 26.662 seconds (0.4 minutes)
+24/10/2023 13:19:40 - DEBUG - activitysim.core.pipeline - add_checkpoint sub_balancing.geography=MAZ timestamp 2023-10-24 13:19:40.970699
+24/10/2023 13:19:41 - DEBUG - activitysim.core.pipeline - add_checkpoint 'sub_balancing.geography=MAZ' table 'MAZ_weights' (1268421, 7) 76.1 MB
+24/10/2023 13:19:41 - DEBUG - activitysim.core.pipeline - add_checkpoint 'sub_balancing.geography=MAZ' table 'MAZ_weights_sparse' (23512, 7) 1.4 MB
+24/10/2023 13:19:41 - DEBUG - activitysim.core.pipeline - add_checkpoint 'sub_balancing.geography=MAZ' table 'trace_MAZ_weights' (0, 7) 0 B
+24/10/2023 13:19:41 - INFO - activitysim.core.tracing - Time to execute run (1 models) : 27.179 seconds (0.5 minutes)
+24/10/2023 13:19:41 - DEBUG - activitysim.core.pipeline - add_checkpoint mp_sub_balancing_MAZ timestamp 2023-10-24 13:19:41.382561
+24/10/2023 13:19:41 - DEBUG - activitysim.core.pipeline - close_pipeline
+24/10/2023 13:19:41 - INFO - activitysim.core.mem - mp_sub_balancing_MAZ_0 high water mark rss: 601_473_024 (601.5 MB) timestamp: 24/10/2023 13:19:40 label:pipeline.run_model sub_balancing.geography=MAZ finished
+24/10/2023 13:19:41 - INFO - activitysim.core.mem - mp_sub_balancing_MAZ_0 high water mark uss: 569_368_576 (569.4 MB) timestamp: 24/10/2023 13:19:40 label:pipeline.run_model sub_balancing.geography=MAZ finished

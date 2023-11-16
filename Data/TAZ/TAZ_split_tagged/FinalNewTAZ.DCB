@@ -1,0 +1,15 @@
+
+95
+"DB_ID",I,1,4,0,4,0,,"","",,"Blank",
+"NewTAZ_01234",C,5,15,0,15,0,,"","",,"Blank",
+"NewBldCount",I,20,4,0,8,0,,"","",,"Blank",
+"BlockCount",I,24,4,0,9,0,,"","",,"Blank",
+"Shape_Leng",R,28,8,0,19,11,,"","",,"Blank",
+"Shape_Area",R,36,8,0,19,11,,"","",,"Blank",
+"OldTAZ",I,44,4,0,8,0,,"","",,"Blank",
+"NewTAZ_01234N",C,48,16,0,16,0,,"","",,"Blank",
+"ID_NEW_old",I,64,4,0,8,0,,"","",,"Blank",
+"OldTAZ_NotSplit",C,68,16,0,16,0,,"","",,"Blank",
+"Split_Flag",I,84,4,0,8,0,,"","",,"Blank",
+"ID_NEW_new",I,88,4,0,8,0,,"","",,"Blank",
+"Check",I,92,4,0,8,0,,"","",,"Blank",

@@ -1,0 +1,10 @@
+includedir=D:/bld/aws-sdk-cpp_1688891920201/_h_env/Library/include
+libdir=D:/bld/aws-sdk-cpp_1688891920201/_h_env/Library/lib
+
+Name: aws-cpp-sdk-iam
+Description: 
+Version: 1.10.57
+Cflags: -I${includedir} 
+Libs: -L${libdir} -laws-cpp-sdk-iam 
+Libs.private: 
+Requires:  aws-cpp-sdk-core
