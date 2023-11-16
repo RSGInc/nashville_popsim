@@ -1,1 +1,2 @@
-"# nashville_popsim" 
+"# nashville_popsim"
+need to update instructions 
