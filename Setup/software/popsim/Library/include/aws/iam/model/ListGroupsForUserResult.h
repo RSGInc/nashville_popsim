@@ -33,12 +33,12 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/iam-2010-05-08/ListGroupsForUserResponse">AWS
    * API Reference</a></p>
    */
-  class ListGroupsForUserResult
+  class AWS_IAM_API ListGroupsForUserResult
   {
   public:
-    AWS_IAM_API ListGroupsForUserResult();
-    AWS_IAM_API ListGroupsForUserResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_IAM_API ListGroupsForUserResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    ListGroupsForUserResult();
+    ListGroupsForUserResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    ListGroupsForUserResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     /**

@@ -24,14 +24,14 @@ namespace S3
 namespace Model
 {
 
-  class NotificationConfigurationDeprecated
+  class AWS_S3_API NotificationConfigurationDeprecated
   {
   public:
-    AWS_S3_API NotificationConfigurationDeprecated();
-    AWS_S3_API NotificationConfigurationDeprecated(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API NotificationConfigurationDeprecated& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    NotificationConfigurationDeprecated();
+    NotificationConfigurationDeprecated(const Aws::Utils::Xml::XmlNode& xmlNode);
+    NotificationConfigurationDeprecated& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

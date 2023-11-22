@@ -39,10 +39,10 @@
 /* #undef PACKAGE_URL */
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "0.18.1"
+#define PACKAGE_VERSION "0.16.0"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING " 0.18.1"
+#define PACKAGE_STRING " 0.16.0"
 
 /************************** DEFINES *************************/
 

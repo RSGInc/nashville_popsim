@@ -7,7 +7,6 @@
 #include <aws/crt/Exports.h>
 #include <aws/crt/auth/Sigv4Signing.h>
 #include <aws/crt/mqtt/MqttClient.h>
-#include <aws/iot/MqttCommon.h>
 
 #if !BYO_CRYPTO
 
@@ -100,6 +99,88 @@ namespace Aws
             friend class MqttClientConnectionConfigBuilder;
         };
 
+        using CreateSigningConfig = std::function<std::shared_ptr<Crt::Auth::ISigningConfig>(void)>;
+
+        /**
+         * Class encapsulating configuration for establishing an Aws IoT mqtt connection via websockets
+         */
+        struct AWS_CRT_CPP_API WebsocketConfig
+        {
+            /**
+             * Create a websocket configuration for use with the default credentials provider chain. Signing region
+             * will be used for Sigv4 signature calculations.
+             *
+             * @param signingRegion Aws region that is being connected to.  Required in order to properly sign the
+             * handshake upgrade request
+             * @param bootstrap client bootstrap to establish any connections needed by the default credentials
+             * provider chain which will get built for the user
+             * @param allocator memory allocator to use
+             */
+            WebsocketConfig(
+                const Crt::String &signingRegion,
+                Crt::Io::ClientBootstrap *bootstrap,
+                Crt::Allocator *allocator = Crt::ApiAllocator()) noexcept;
+
+            /**
+             * Create a websocket configuration for use with the default credentials provider chain and default
+             * ClientBootstrap. Signing region will be used for Sigv4 signature calculations.
+             *
+             * For more information on the default ClientBootstrap see
+             * Aws::Crt::ApiHandle::GetOrCreateDefaultClientBootstrap
+             *
+             * @param signingRegion Aws region that is being connected to.  Required in order to properly sign the
+             * handshake upgrade request
+             * @param allocator memory allocator to use
+             */
+            WebsocketConfig(const Crt::String &signingRegion, Crt::Allocator *allocator = Crt::ApiAllocator()) noexcept;
+
+            /**
+             * Create a websocket configuration for use with a custom credentials provider. Signing region will be used
+             * for Sigv4 signature calculations.
+             *
+             * @param signingRegion Aws region that is being connected to.  Required in order to properly sign the
+             * handshake upgrade request
+             * @param credentialsProvider credentials provider to source AWS credentials from
+             * @param allocator memory allocator to use
+             */
+            WebsocketConfig(
+                const Crt::String &signingRegion,
+                const std::shared_ptr<Crt::Auth::ICredentialsProvider> &credentialsProvider,
+                Crt::Allocator *allocator = Crt::ApiAllocator()) noexcept;
+
+            /**
+             * Create a websocket configuration for use with a custom credentials provider, and a custom signer.
+             *
+             * You'll need to provide a function for use with creating a signing Config and pass it to
+             * createSigningConfig.
+             *
+             * This is useful for cases use with:
+             * https://docs.aws.amazon.com/iot/latest/developerguide/custom-auth.html
+             *
+             * @param credentialsProvider credentials provider
+             * @param signer HTTP request signer
+             * @param createSigningConfig function that creates a signing config
+             */
+            WebsocketConfig(
+                const std::shared_ptr<Crt::Auth::ICredentialsProvider> &credentialsProvider,
+                const std::shared_ptr<Crt::Auth::IHttpRequestSigner> &signer,
+                CreateSigningConfig createSigningConfig) noexcept;
+
+            std::shared_ptr<Crt::Auth::ICredentialsProvider> CredentialsProvider;
+            std::shared_ptr<Crt::Auth::IHttpRequestSigner> Signer;
+            CreateSigningConfig CreateSigningConfigCb;
+
+            /**
+             * @deprecated Specify ProxyOptions to use a proxy with your websocket connection.
+             *
+             * If MqttClientConnectionConfigBuilder::m_proxyOptions is valid, then that will be used over
+             * this value.
+             */
+            Crt::Optional<Crt::Http::HttpClientConnectionProxyOptions> ProxyOptions;
+            Crt::String SigningRegion;
+            Crt::String ServiceName;
+        };
+
         /**
          * Represents configuration parameters for building a MqttClientConnectionConfig object. You can use a single
          * instance of this class PER MqttClientConnectionConfig you want to generate. If you want to generate a config
@@ -146,19 +227,6 @@ namespace Aws
              */
             MqttClientConnectionConfigBuilder(
                 const Crt::Io::TlsContextPkcs11Options &pkcs11Options,
-                Crt::Allocator *allocator = Crt::ApiAllocator()) noexcept;
-
-            /**
-             * Sets the builder up for MTLS using a PKCS12 file and password. These are files on disk and must be in the
-             * PEM format.
-             *
-             * NOTE: This only works on MacOS devices.
-             *
-             * @param options The PKCS12 options to use. Has to contain a PKCS12 filepath and password.
-             * @param allocator memory allocator to use
-             */
-            MqttClientConnectionConfigBuilder(
-                const struct Pkcs12Options &options,
                 Crt::Allocator *allocator = Crt::ApiAllocator()) noexcept;
 
             /**
@@ -343,14 +411,10 @@ namespace Aws
              *                 username is set then no username will be passed with the MQTT connection.
              * @param authorizerName The name of the custom authorizer. If an empty string is passed, then
              *                       'x-amz-customauthorizer-name' will not be added with the MQTT connection.
-             * @param authorizerSignature The signature of the custom authorizer.
-             *                            NOTE: This will NOT work without the token key name and token value, which
-             * requires using the non-depreciated API.
+             * @param authorizerSignature The signature of the custom authorizer. If an empty string is passed, then
+             *                            'x-amz-customauthorizer-signature' will not be added with the MQTT connection.
              * @param password The password to use with the custom authorizer. If null is passed, then no password will
              *                 be set.
-             *
-             * @deprecated Please use the full WithCustomAuthorizer function that includes `tokenKeyName` and
-             *             `tokenValue`. This version is left for backwards compatibility purposes.
              *
              * @return this builder object
              */
@@ -359,37 +423,6 @@ namespace Aws
                 const Crt::String &authorizerName,
                 const Crt::String &authorizerSignature,
                 const Crt::String &password) noexcept;
-
-            /**
-             * Sets the custom authorizer settings. This function will modify the username, port, and TLS options.
-             *
-             * @param username The username to use with the custom authorizer. If an empty string is passed, it will
-             *                 check to see if a username has already been set (via WithUsername function). If no
-             *                 username is set then no username will be passed with the MQTT connection.
-             * @param authorizerName The name of the custom authorizer. If an empty string is passed, then
-             *                       'x-amz-customauthorizer-name' will not be added with the MQTT connection.
-             * @param authorizerSignature The signature of the custom authorizer. If an empty string is passed, then
-             *                            'x-amz-customauthorizer-signature' will not be added with the MQTT connection.
-             *                            The signature must be based on the private key associated with the custom
-             *                            authorizer. The signature must be base64 encoded. It is strongly suggested
-             *                            to URL-encode this value; the SDK will not do so for you.
-             * @param password The password to use with the custom authorizer. If null is passed, then no password will
-             *                 be set.
-             * @param tokenKeyName Used to extract the custom authorizer token from MQTT username query-string
-             *                     properties. Required if the custom authorizer has signing enabled. It is strongly
-             *                     suggested to URL encode this value; the SDK will not do so for you.
-             * @param tokenValue An opaque token value. Required if the custom authorizer has signing enabled. This
-             *                   value must be signed by the private key associated with the custom authorizer and
-             *                   the result placed in the authorizerSignature argument.
-             * @return this builder object
-             */
-            MqttClientConnectionConfigBuilder &WithCustomAuthorizer(
-                const Crt::String &username,
-                const Crt::String &authorizerName,
-                const Crt::String &authorizerSignature,
-                const Crt::String &password,
-                const Crt::String &tokenKeyName,
-                const Crt::String &tokenValue) noexcept;
 
             /**
              * Sets username for the connection

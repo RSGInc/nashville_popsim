@@ -6,8 +6,8 @@
   "zlib 1.2.13 *_5"
  ],
  "depends": [
-  "ucrt >=10.0.20348.0",
   "vc >=14.2,<15",
+  "ucrt >=10.0.20348.0",
   "vc14_runtime >=14.29.30139"
  ],
  "extracted_package_dir": "",

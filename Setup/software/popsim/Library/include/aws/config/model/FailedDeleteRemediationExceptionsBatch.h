@@ -31,13 +31,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/FailedDeleteRemediationExceptionsBatch">AWS
    * API Reference</a></p>
    */
-  class FailedDeleteRemediationExceptionsBatch
+  class AWS_CONFIGSERVICE_API FailedDeleteRemediationExceptionsBatch
   {
   public:
-    AWS_CONFIGSERVICE_API FailedDeleteRemediationExceptionsBatch();
-    AWS_CONFIGSERVICE_API FailedDeleteRemediationExceptionsBatch(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API FailedDeleteRemediationExceptionsBatch& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API Aws::Utils::Json::JsonValue Jsonize() const;
+    FailedDeleteRemediationExceptionsBatch();
+    FailedDeleteRemediationExceptionsBatch(Aws::Utils::Json::JsonView jsonValue);
+    FailedDeleteRemediationExceptionsBatch& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**

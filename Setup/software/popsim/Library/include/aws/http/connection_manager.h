@@ -10,8 +10,6 @@
 
 #include <aws/common/byte_buf.h>
 
-AWS_PUSH_SANE_WARNING_LEVEL
-
 struct aws_client_bootstrap;
 struct aws_http_connection;
 struct aws_http_connection_manager;
@@ -86,7 +84,7 @@ struct aws_http_connection_manager_options {
      * Optional.
      * HTTP/2 specific configuration. Check `struct aws_http2_connection_options` for details of each config
      */
-    const struct aws_http2_setting *initial_settings_array;
+    struct aws_http2_setting *initial_settings_array;
     size_t num_initial_settings;
     size_t max_closed_streams;
     bool http2_conn_manual_window_management;
@@ -192,6 +190,5 @@ void aws_http_connection_manager_fetch_metrics(
     struct aws_http_manager_metrics *out_metrics);
 
 AWS_EXTERN_C_END
-AWS_POP_SANE_WARNING_LEVEL
 
 #endif /* AWS_HTTP_CONNECTION_MANAGER_H */

@@ -19,7 +19,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_cmake_targets_defined "")
 set(_cmake_targets_not_defined "")
 set(_cmake_expected_targets "")
-foreach(_cmake_expected_target IN ITEMS gRPC::address_sorting gRPC::gpr gRPC::grpc gRPC::grpc_unsecure gRPC::grpc++ gRPC::grpc++_alts gRPC::grpc++_error_details gRPC::grpc++_reflection gRPC::grpc++_unsecure gRPC::grpc_authorization_provider gRPC::grpc_plugin_support gRPC::grpcpp_channelz gRPC::upb)
+foreach(_cmake_expected_target IN ITEMS gRPC::address_sorting gRPC::gpr gRPC::grpc gRPC::grpc_unsecure gRPC::grpc++ gRPC::grpc++_alts gRPC::grpc++_error_details gRPC::grpc++_reflection gRPC::grpc++_unsecure gRPC::grpc_plugin_support gRPC::grpcpp_channelz gRPC::upb gRPC::grpc_cpp_plugin gRPC::grpc_csharp_plugin gRPC::grpc_node_plugin gRPC::grpc_objective_c_plugin gRPC::grpc_php_plugin gRPC::grpc_python_plugin gRPC::grpc_ruby_plugin)
   list(APPEND _cmake_expected_targets "${_cmake_expected_target}")
   if(TARGET "${_cmake_expected_target}")
     list(APPEND _cmake_targets_defined "${_cmake_expected_target}")
@@ -60,7 +60,7 @@ add_library(gRPC::address_sorting STATIC IMPORTED)
 
 set_target_properties(gRPC::address_sorting PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "ws2_32;crypt32;ZLIB::ZLIB"
+  INTERFACE_LINK_LIBRARIES "ws2_32;crypt32"
 )
 
 # Create imported target gRPC::gpr
@@ -68,7 +68,7 @@ add_library(gRPC::gpr STATIC IMPORTED)
 
 set_target_properties(gRPC::gpr PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "ws2_32;crypt32;ZLIB::ZLIB;absl::base;absl::core_headers;absl::memory;absl::random_random;absl::status;absl::cord;absl::str_format;absl::strings;absl::synchronization;absl::time;absl::optional;absl::variant"
+  INTERFACE_LINK_LIBRARIES "absl::base;absl::core_headers;absl::memory;absl::random_random;absl::status;absl::cord;absl::str_format;absl::strings;absl::synchronization;absl::time;absl::optional;absl::variant"
 )
 
 # Create imported target gRPC::grpc
@@ -92,7 +92,7 @@ add_library(gRPC::grpc++ STATIC IMPORTED)
 
 set_target_properties(gRPC::grpc++ PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "ws2_32;crypt32;protobuf::libprotobuf;ZLIB::ZLIB;gRPC::grpc"
+  INTERFACE_LINK_LIBRARIES "ws2_32;crypt32;protobuf::libprotobuf;gRPC::grpc"
 )
 
 # Create imported target gRPC::grpc++_alts
@@ -100,7 +100,7 @@ add_library(gRPC::grpc++_alts STATIC IMPORTED)
 
 set_target_properties(gRPC::grpc++_alts PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "ws2_32;crypt32;protobuf::libprotobuf;ZLIB::ZLIB;gRPC::grpc++"
+  INTERFACE_LINK_LIBRARIES "ws2_32;crypt32;protobuf::libprotobuf;gRPC::grpc++"
 )
 
 # Create imported target gRPC::grpc++_error_details
@@ -108,7 +108,7 @@ add_library(gRPC::grpc++_error_details STATIC IMPORTED)
 
 set_target_properties(gRPC::grpc++_error_details PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "ws2_32;crypt32;protobuf::libprotobuf;ZLIB::ZLIB;gRPC::grpc++"
+  INTERFACE_LINK_LIBRARIES "protobuf::libprotobuf;gRPC::grpc++"
 )
 
 # Create imported target gRPC::grpc++_reflection
@@ -116,7 +116,7 @@ add_library(gRPC::grpc++_reflection STATIC IMPORTED)
 
 set_target_properties(gRPC::grpc++_reflection PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "ws2_32;crypt32;protobuf::libprotobuf;ZLIB::ZLIB;gRPC::grpc++"
+  INTERFACE_LINK_LIBRARIES "protobuf::libprotobuf;gRPC::grpc++"
 )
 
 # Create imported target gRPC::grpc++_unsecure
@@ -124,15 +124,7 @@ add_library(gRPC::grpc++_unsecure STATIC IMPORTED)
 
 set_target_properties(gRPC::grpc++_unsecure PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "ws2_32;crypt32;protobuf::libprotobuf;ZLIB::ZLIB;gRPC::grpc_unsecure"
-)
-
-# Create imported target gRPC::grpc_authorization_provider
-add_library(gRPC::grpc_authorization_provider STATIC IMPORTED)
-
-set_target_properties(gRPC::grpc_authorization_provider PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "ws2_32;crypt32;protobuf::libprotobuf;ZLIB::ZLIB;re2::re2;absl::cleanup;absl::flat_hash_map;absl::flat_hash_set;absl::inlined_vector;absl::any_invocable;absl::function_ref;absl::hash;absl::type_traits;absl::statusor;absl::span;absl::utility;gRPC::gpr;gRPC::upb"
+  INTERFACE_LINK_LIBRARIES "ws2_32;crypt32;protobuf::libprotobuf;gRPC::grpc_unsecure"
 )
 
 # Create imported target gRPC::grpc_plugin_support
@@ -140,7 +132,7 @@ add_library(gRPC::grpc_plugin_support STATIC IMPORTED)
 
 set_target_properties(gRPC::grpc_plugin_support PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "ws2_32;crypt32;protobuf::libprotoc;protobuf::libprotobuf;ZLIB::ZLIB"
+  INTERFACE_LINK_LIBRARIES "protobuf::libprotoc;protobuf::libprotobuf"
 )
 
 # Create imported target gRPC::grpcpp_channelz
@@ -148,7 +140,7 @@ add_library(gRPC::grpcpp_channelz STATIC IMPORTED)
 
 set_target_properties(gRPC::grpcpp_channelz PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "ws2_32;crypt32;protobuf::libprotobuf;ZLIB::ZLIB;gRPC::grpc++"
+  INTERFACE_LINK_LIBRARIES "protobuf::libprotobuf;gRPC::grpc++"
 )
 
 # Create imported target gRPC::upb
@@ -156,8 +148,28 @@ add_library(gRPC::upb STATIC IMPORTED)
 
 set_target_properties(gRPC::upb PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "ws2_32;crypt32;ZLIB::ZLIB"
 )
+
+# Create imported target gRPC::grpc_cpp_plugin
+add_executable(gRPC::grpc_cpp_plugin IMPORTED)
+
+# Create imported target gRPC::grpc_csharp_plugin
+add_executable(gRPC::grpc_csharp_plugin IMPORTED)
+
+# Create imported target gRPC::grpc_node_plugin
+add_executable(gRPC::grpc_node_plugin IMPORTED)
+
+# Create imported target gRPC::grpc_objective_c_plugin
+add_executable(gRPC::grpc_objective_c_plugin IMPORTED)
+
+# Create imported target gRPC::grpc_php_plugin
+add_executable(gRPC::grpc_php_plugin IMPORTED)
+
+# Create imported target gRPC::grpc_python_plugin
+add_executable(gRPC::grpc_python_plugin IMPORTED)
+
+# Create imported target gRPC::grpc_ruby_plugin
+add_executable(gRPC::grpc_ruby_plugin IMPORTED)
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)
   message(FATAL_ERROR "This file relies on consumers using CMake 2.8.12 or greater.")

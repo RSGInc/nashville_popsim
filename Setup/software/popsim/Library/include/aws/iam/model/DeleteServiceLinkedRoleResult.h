@@ -25,12 +25,12 @@ namespace IAM
 {
 namespace Model
 {
-  class DeleteServiceLinkedRoleResult
+  class AWS_IAM_API DeleteServiceLinkedRoleResult
   {
   public:
-    AWS_IAM_API DeleteServiceLinkedRoleResult();
-    AWS_IAM_API DeleteServiceLinkedRoleResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_IAM_API DeleteServiceLinkedRoleResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    DeleteServiceLinkedRoleResult();
+    DeleteServiceLinkedRoleResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    DeleteServiceLinkedRoleResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     /**

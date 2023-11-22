@@ -4,9 +4,9 @@
  "channel": "https://conda.anaconda.org/conda-forge/win-64",
  "constrains": [],
  "depends": [
-  "gflags >=2.2.2,<2.3.0a0",
   "vc >=14.1,<15",
-  "vs2015_runtime >=14.16.27033"
+  "vs2015_runtime >=14.16.27033",
+  "gflags >=2.2.2,<2.3.0a0"
  ],
  "extracted_package_dir": "",
  "features": "",
@@ -143,7 +143,7 @@
     "path_type": "hardlink",
     "prefix_placeholder": "D:/bld/glog_1649143972625/_h_env",
     "sha256": "72bab32f9cdc94f6c20ae3805bb4738896c79594248de97c8b6bf4e4c80aae0b",
-    "sha256_in_prefix": "d7da12429a3a659db727bcef0b7c1d9cc78747b9bc952dcf64d280d959298cf5",
+    "sha256_in_prefix": "9617641bca9dd0f4c97f282897aaa29dbace9c779bc13b9879460238b08cdc6f",
     "size_in_bytes": 393
    }
   ],

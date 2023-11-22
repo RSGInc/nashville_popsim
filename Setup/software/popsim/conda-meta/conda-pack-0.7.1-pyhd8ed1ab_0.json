@@ -254,7 +254,7 @@
   ],
   "paths_version": 1
  },
- "requested_spec": "conda-pack",
+ "requested_spec": "conda-pack==0.7.1=pyhd8ed1ab_0",
  "sha256": "29cd54de8336ed588e80012483e20291a29b72fd629b267da348ba0b06071639",
  "size": 33130,
  "subdir": "noarch",

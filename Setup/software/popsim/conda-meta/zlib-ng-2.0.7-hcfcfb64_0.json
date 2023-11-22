@@ -4,8 +4,8 @@
  "channel": "https://conda.anaconda.org/conda-forge/win-64",
  "constrains": [],
  "depends": [
-  "ucrt >=10.0.20348.0",
   "vc >=14.2,<15",
+  "ucrt >=10.0.20348.0",
   "vs2015_runtime >=14.29.30139"
  ],
  "extracted_package_dir": "",
@@ -56,7 +56,7 @@
     "path_type": "hardlink",
     "prefix_placeholder": "D:/bld/zlib-ng_1679094908688/_h_env",
     "sha256": "ae340faf0612cbad926a9cf97c0307c66897e79fcdc834c470ba11ebef06be1d",
-    "sha256_in_prefix": "bb5664c0df8b7e28a6af329d833f6e9e899b642c31c1906d756c78b2a45b8829",
+    "sha256_in_prefix": "1224d194d7e7b7d586847ca0f186b7d43ec0aed831cc1f4e5088763077b7df49",
     "size_in_bytes": 313
    },
    {

@@ -37,15 +37,15 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/iam-2010-05-08/AccessKey">AWS API
    * Reference</a></p>
    */
-  class AccessKey
+  class AWS_IAM_API AccessKey
   {
   public:
-    AWS_IAM_API AccessKey();
-    AWS_IAM_API AccessKey(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_IAM_API AccessKey& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    AccessKey();
+    AccessKey(const Aws::Utils::Xml::XmlNode& xmlNode);
+    AccessKey& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_IAM_API void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
-    AWS_IAM_API void OutputToStream(Aws::OStream& oStream, const char* location) const;
+    void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
+    void OutputToStream(Aws::OStream& oStream, const char* location) const;
 
 
     /**

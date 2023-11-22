@@ -9,11 +9,7 @@
 #include <aws/common/byte_buf.h>
 #include <aws/common/common.h>
 
-AWS_PUSH_SANE_WARNING_LEVEL
-
 struct aws_json_value;
-
-AWS_EXTERN_C_BEGIN
 
 // ====================
 // Create and pass type
@@ -415,8 +411,5 @@ int aws_byte_buf_append_json_string_formatted(const struct aws_json_value *value
 AWS_COMMON_API
 struct aws_json_value *aws_json_value_new_from_string(struct aws_allocator *allocator, struct aws_byte_cursor string);
 // ====================
-
-AWS_EXTERN_C_END
-AWS_POP_SANE_WARNING_LEVEL
 
 #endif // AWS_COMMON_JSON_H

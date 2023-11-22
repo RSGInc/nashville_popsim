@@ -24,12 +24,12 @@ namespace SNS
 {
 namespace Model
 {
-  class CreateSMSSandboxPhoneNumberResult
+  class AWS_SNS_API CreateSMSSandboxPhoneNumberResult
   {
   public:
-    AWS_SNS_API CreateSMSSandboxPhoneNumberResult();
-    AWS_SNS_API CreateSMSSandboxPhoneNumberResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_SNS_API CreateSMSSandboxPhoneNumberResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    CreateSMSSandboxPhoneNumberResult();
+    CreateSMSSandboxPhoneNumberResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    CreateSMSSandboxPhoneNumberResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     

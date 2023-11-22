@@ -1,5 +1,6 @@
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Copyright by The HDF Group.                                               *
+ * Copyright by the Board of Trustees of the University of Illinois.         *
  * All rights reserved.                                                      *
  *                                                                           *
  * This file is part of HDF5.  The full HDF5 copyright notice, including     *
@@ -21,7 +22,7 @@
 
 #include "H5Ipublic.h"
 
-#define H5FD_STDIO (H5FDperform_init(H5FD_stdio_init))
+#define H5FD_STDIO (H5FD_stdio_init())
 
 #ifdef __cplusplus
 extern "C" {

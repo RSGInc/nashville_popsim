@@ -1,5 +1,6 @@
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Copyright by The HDF Group.                                               *
+ * Copyright by the Board of Trustees of the University of Illinois.         *
  * All rights reserved.                                                      *
  *                                                                           *
  * This file is part of HDF5.  The full HDF5 copyright notice, including     *
@@ -19,7 +20,7 @@
 #ifndef H5FDmulti_H
 #define H5FDmulti_H
 
-#define H5FD_MULTI (H5FDperform_init(H5FD_multi_init))
+#define H5FD_MULTI (H5FD_multi_init())
 
 #ifdef __cplusplus
 extern "C" {

@@ -33,14 +33,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/DefaultRetention">AWS
    * API Reference</a></p>
    */
-  class DefaultRetention
+  class AWS_S3_API DefaultRetention
   {
   public:
-    AWS_S3_API DefaultRetention();
-    AWS_S3_API DefaultRetention(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API DefaultRetention& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    DefaultRetention();
+    DefaultRetention(const Aws::Utils::Xml::XmlNode& xmlNode);
+    DefaultRetention& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

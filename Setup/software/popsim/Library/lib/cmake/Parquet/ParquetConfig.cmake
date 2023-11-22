@@ -56,9 +56,9 @@ endmacro()
 include(CMakeFindDependencyMacro)
 find_dependency(Arrow)
 
-set(PARQUET_VERSION "11.0.0")
-set(PARQUET_SO_VERSION "1100")
-set(PARQUET_FULL_SO_VERSION "1100.0.0")
+set(PARQUET_VERSION "10.0.1")
+set(PARQUET_SO_VERSION "1000")
+set(PARQUET_FULL_SO_VERSION "1000.1.0")
 
 include("${CMAKE_CURRENT_LIST_DIR}/ParquetTargets.cmake")
 

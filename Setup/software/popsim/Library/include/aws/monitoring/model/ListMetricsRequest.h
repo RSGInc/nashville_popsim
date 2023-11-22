@@ -21,10 +21,10 @@ namespace Model
 
   /**
    */
-  class ListMetricsRequest : public CloudWatchRequest
+  class AWS_CLOUDWATCH_API ListMetricsRequest : public CloudWatchRequest
   {
   public:
-    AWS_CLOUDWATCH_API ListMetricsRequest();
+    ListMetricsRequest();
 
     // Service request name is the Operation name which will send this request out,
     // each operation should has unique request name, so that we can get operation's name from this request.
@@ -32,10 +32,10 @@ namespace Model
     // so we can not get operation's name from response.
     inline virtual const char* GetServiceRequestName() const override { return "ListMetrics"; }
 
-    AWS_CLOUDWATCH_API Aws::String SerializePayload() const override;
+    Aws::String SerializePayload() const override;
 
   protected:
-    AWS_CLOUDWATCH_API void DumpBodyToUrl(Aws::Http::URI& uri ) const override;
+    void DumpBodyToUrl(Aws::Http::URI& uri ) const override;
 
   public:
 
@@ -295,100 +295,6 @@ namespace Model
      */
     inline ListMetricsRequest& WithRecentlyActive(RecentlyActive&& value) { SetRecentlyActive(std::move(value)); return *this;}
 
-
-    /**
-     * <p>If you are using this operation in a monitoring account, specify
-     * <code>true</code> to include metrics from source accounts in the returned
-     * data.</p> <p>The default is <code>false</code>.</p>
-     */
-    inline bool GetIncludeLinkedAccounts() const{ return m_includeLinkedAccounts; }
-
-    /**
-     * <p>If you are using this operation in a monitoring account, specify
-     * <code>true</code> to include metrics from source accounts in the returned
-     * data.</p> <p>The default is <code>false</code>.</p>
-     */
-    inline bool IncludeLinkedAccountsHasBeenSet() const { return m_includeLinkedAccountsHasBeenSet; }
-
-    /**
-     * <p>If you are using this operation in a monitoring account, specify
-     * <code>true</code> to include metrics from source accounts in the returned
-     * data.</p> <p>The default is <code>false</code>.</p>
-     */
-    inline void SetIncludeLinkedAccounts(bool value) { m_includeLinkedAccountsHasBeenSet = true; m_includeLinkedAccounts = value; }
-
-    /**
-     * <p>If you are using this operation in a monitoring account, specify
-     * <code>true</code> to include metrics from source accounts in the returned
-     * data.</p> <p>The default is <code>false</code>.</p>
-     */
-    inline ListMetricsRequest& WithIncludeLinkedAccounts(bool value) { SetIncludeLinkedAccounts(value); return *this;}
-
-
-    /**
-     * <p>When you use this operation in a monitoring account, use this field to return
-     * metrics only from one source account. To do so, specify that source account ID
-     * in this field, and also specify <code>true</code> for
-     * <code>IncludeLinkedAccounts</code>.</p>
-     */
-    inline const Aws::String& GetOwningAccount() const{ return m_owningAccount; }
-
-    /**
-     * <p>When you use this operation in a monitoring account, use this field to return
-     * metrics only from one source account. To do so, specify that source account ID
-     * in this field, and also specify <code>true</code> for
-     * <code>IncludeLinkedAccounts</code>.</p>
-     */
-    inline bool OwningAccountHasBeenSet() const { return m_owningAccountHasBeenSet; }
-
-    /**
-     * <p>When you use this operation in a monitoring account, use this field to return
-     * metrics only from one source account. To do so, specify that source account ID
-     * in this field, and also specify <code>true</code> for
-     * <code>IncludeLinkedAccounts</code>.</p>
-     */
-    inline void SetOwningAccount(const Aws::String& value) { m_owningAccountHasBeenSet = true; m_owningAccount = value; }
-
-    /**
-     * <p>When you use this operation in a monitoring account, use this field to return
-     * metrics only from one source account. To do so, specify that source account ID
-     * in this field, and also specify <code>true</code> for
-     * <code>IncludeLinkedAccounts</code>.</p>
-     */
-    inline void SetOwningAccount(Aws::String&& value) { m_owningAccountHasBeenSet = true; m_owningAccount = std::move(value); }
-
-    /**
-     * <p>When you use this operation in a monitoring account, use this field to return
-     * metrics only from one source account. To do so, specify that source account ID
-     * in this field, and also specify <code>true</code> for
-     * <code>IncludeLinkedAccounts</code>.</p>
-     */
-    inline void SetOwningAccount(const char* value) { m_owningAccountHasBeenSet = true; m_owningAccount.assign(value); }
-
-    /**
-     * <p>When you use this operation in a monitoring account, use this field to return
-     * metrics only from one source account. To do so, specify that source account ID
-     * in this field, and also specify <code>true</code> for
-     * <code>IncludeLinkedAccounts</code>.</p>
-     */
-    inline ListMetricsRequest& WithOwningAccount(const Aws::String& value) { SetOwningAccount(value); return *this;}
-
-    /**
-     * <p>When you use this operation in a monitoring account, use this field to return
-     * metrics only from one source account. To do so, specify that source account ID
-     * in this field, and also specify <code>true</code> for
-     * <code>IncludeLinkedAccounts</code>.</p>
-     */
-    inline ListMetricsRequest& WithOwningAccount(Aws::String&& value) { SetOwningAccount(std::move(value)); return *this;}
-
-    /**
-     * <p>When you use this operation in a monitoring account, use this field to return
-     * metrics only from one source account. To do so, specify that source account ID
-     * in this field, and also specify <code>true</code> for
-     * <code>IncludeLinkedAccounts</code>.</p>
-     */
-    inline ListMetricsRequest& WithOwningAccount(const char* value) { SetOwningAccount(value); return *this;}
-
   private:
 
     Aws::String m_namespace;
@@ -405,12 +311,6 @@ namespace Model
 
     RecentlyActive m_recentlyActive;
     bool m_recentlyActiveHasBeenSet = false;
-
-    bool m_includeLinkedAccounts;
-    bool m_includeLinkedAccountsHasBeenSet = false;
-
-    Aws::String m_owningAccount;
-    bool m_owningAccountHasBeenSet = false;
   };
 
 } // namespace Model

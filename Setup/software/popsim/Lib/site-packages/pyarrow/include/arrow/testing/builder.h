@@ -19,7 +19,6 @@
 
 #include <cstdint>
 #include <memory>
-#include <type_traits>
 #include <vector>
 
 #include "arrow/array.h"
@@ -28,7 +27,6 @@
 #include "arrow/array/builder_time.h"
 #include "arrow/buffer.h"
 #include "arrow/testing/gtest_util.h"
-#include "arrow/type_fwd.h"
 #include "arrow/util/bit_util.h"
 #include "arrow/visit_type_inline.h"
 
@@ -161,20 +159,30 @@ Status MakeArray(const std::vector<uint8_t>& valid_bytes, const std::vector<T>& 
 }
 
 template <typename Fn>
-struct VisitBuilder {
+struct VisitBuilderImpl {
   template <typename T, typename BuilderType = typename TypeTraits<T>::BuilderType,
             // need to let SFINAE drop this Visit when it would result in
             // [](NullBuilder*){}(double_builder)
             typename = decltype(std::declval<Fn>()(std::declval<BuilderType*>()))>
-  Status Visit(const T&, ArrayBuilder* builder, Fn&& fn) {
-    fn(internal::checked_cast<BuilderType*>(builder));
+  Status Visit(const T&) {
+    fn_(internal::checked_cast<BuilderType*>(builder_));
     return Status::OK();
   }
 
-  Status Visit(const DataType& t, ArrayBuilder* builder, Fn&& fn) {
+  Status Visit(const DataType& t) {
     return Status::NotImplemented("visiting builders of type ", t);
   }
+
+  Status Visit() { return VisitTypeInline(*builder_->type(), this); }
+
+  ArrayBuilder* builder_;
+  Fn fn_;
 };
+
+template <typename Fn>
+Status VisitBuilder(ArrayBuilder* builder, Fn&& fn) {
+  return VisitBuilderImpl<Fn>{builder, std::forward<Fn>(fn)}.Visit();
+}
 
 template <typename Fn>
 Result<std::shared_ptr<Array>> ArrayFromBuilderVisitor(
@@ -187,10 +195,8 @@ Result<std::shared_ptr<Array>> ArrayFromBuilderVisitor(
     RETURN_NOT_OK(builder->Resize(initial_capacity));
   }
 
-  VisitBuilder<Fn> visitor;
   for (int64_t i = 0; i < visitor_repetitions; ++i) {
-    RETURN_NOT_OK(
-        VisitTypeInline(*builder->type(), &visitor, builder.get(), std::forward<Fn>(fn)));
+    RETURN_NOT_OK(VisitBuilder(builder.get(), std::forward<Fn>(fn)));
   }
 
   std::shared_ptr<Array> out;

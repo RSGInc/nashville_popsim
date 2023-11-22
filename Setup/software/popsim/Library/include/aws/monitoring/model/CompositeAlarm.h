@@ -32,15 +32,15 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/CompositeAlarm">AWS
    * API Reference</a></p>
    */
-  class CompositeAlarm
+  class AWS_CLOUDWATCH_API CompositeAlarm
   {
   public:
-    AWS_CLOUDWATCH_API CompositeAlarm();
-    AWS_CLOUDWATCH_API CompositeAlarm(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_CLOUDWATCH_API CompositeAlarm& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    CompositeAlarm();
+    CompositeAlarm(const Aws::Utils::Xml::XmlNode& xmlNode);
+    CompositeAlarm& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_CLOUDWATCH_API void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
-    AWS_CLOUDWATCH_API void OutputToStream(Aws::OStream& oStream, const char* location) const;
+    void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
+    void OutputToStream(Aws::OStream& oStream, const char* location) const;
 
 
     /**

@@ -11,8 +11,6 @@
 
 #include <aws/common/stdint.h>
 
-AWS_PUSH_SANE_WARNING_LEVEL
-
 struct aws_array_list;
 
 typedef uint32_t aws_crt_statistics_category_t;
@@ -138,6 +136,5 @@ AWS_COMMON_API
 void aws_crt_statistics_handler_destroy(struct aws_crt_statistics_handler *handler);
 
 AWS_EXTERN_C_END
-AWS_POP_SANE_WARNING_LEVEL
 
 #endif /* AWS_COMMON_STATISTICS_H */

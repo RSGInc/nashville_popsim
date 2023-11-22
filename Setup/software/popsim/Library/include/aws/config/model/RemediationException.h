@@ -32,13 +32,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/RemediationException">AWS
    * API Reference</a></p>
    */
-  class RemediationException
+  class AWS_CONFIGSERVICE_API RemediationException
   {
   public:
-    AWS_CONFIGSERVICE_API RemediationException();
-    AWS_CONFIGSERVICE_API RemediationException(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API RemediationException& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API Aws::Utils::Json::JsonValue Jsonize() const;
+    RemediationException();
+    RemediationException(Aws::Utils::Json::JsonView jsonValue);
+    RemediationException& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**

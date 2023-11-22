@@ -29,15 +29,15 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/iam-2010-05-08/OpenIDConnectProviderListEntry">AWS
    * API Reference</a></p>
    */
-  class OpenIDConnectProviderListEntry
+  class AWS_IAM_API OpenIDConnectProviderListEntry
   {
   public:
-    AWS_IAM_API OpenIDConnectProviderListEntry();
-    AWS_IAM_API OpenIDConnectProviderListEntry(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_IAM_API OpenIDConnectProviderListEntry& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    OpenIDConnectProviderListEntry();
+    OpenIDConnectProviderListEntry(const Aws::Utils::Xml::XmlNode& xmlNode);
+    OpenIDConnectProviderListEntry& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_IAM_API void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
-    AWS_IAM_API void OutputToStream(Aws::OStream& oStream, const char* location) const;
+    void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
+    void OutputToStream(Aws::OStream& oStream, const char* location) const;
 
 
     

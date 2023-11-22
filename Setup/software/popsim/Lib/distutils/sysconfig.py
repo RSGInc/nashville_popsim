@@ -193,9 +193,10 @@ def customize_compiler(compiler):
 
         if 'CC' in os.environ:
             newcc = os.environ['CC']
-            if ('LDSHARED' not in os.environ
+            if (sys.platform == 'darwin'
+                    and 'LDSHARED' not in os.environ
                     and ldshared.startswith(cc)):
-                # If CC is overridden, use that as the default
+                # On OS X, if CC is overridden, use that as the default
                 #       command for LDSHARED as well
                 ldshared = newcc + ldshared[len(cc):]
             cc = newcc
@@ -222,7 +223,7 @@ def customize_compiler(compiler):
             archiver = ar + ' ' + os.environ['ARFLAGS']
         else:
             archiver = ar + ' ' + ar_flags
-        
+
         cc_cmd = cc + ' ' + cflags
         compiler.set_executables(
             preprocessor=cpp,
@@ -435,11 +436,13 @@ def _init_posix():
     """Initialize the module as appropriate for POSIX systems."""
     # _sysconfigdata is generated at build time, see the sysconfig module
     name = os.environ.get('_PYTHON_SYSCONFIGDATA_NAME',
-        '_sysconfigdata_{abi}_{platform}_{multiarch}'.format(
-        abi=sys.abiflags,
-        platform=sys.platform,
-        multiarch=getattr(sys.implementation, '_multiarch', ''),
-    ))
+        os.environ.get('_CONDA_PYTHON_SYSCONFIGDATA_NAME',
+            '_sysconfigdata_{abi}_{platform}_{multiarch}'.format(
+            abi=sys.abiflags,
+            platform=sys.platform,
+            multiarch=getattr(sys.implementation, '_multiarch', ''))
+        )
+    )
     _temp = __import__(name, globals(), locals(), ['build_time_vars'], 0)
     build_time_vars = _temp.build_time_vars
     global _config_vars

@@ -77,21 +77,21 @@ geographyList   <- c( "REGION","PUMA", "TAZ", "MAZ")
 plotGeographies <- c( "REGION","TAZ", "MAZ")
 
 geogXWalk       <- read.csv(paste(popSimDir, "data/geo_crosswalks.csv", sep = "/"))
-columnMap       <- read.csv(paste(validationDir, "columnMapPopSim_nashville.csv", sep = "/"))
+columnMap       <- read.csv(paste(validationDir, "columnMapPopSim_nashville_hh.csv", sep = "/"))
 
 seed_households <- read.csv(paste(popSimDir, "data/seed_households.csv", sep = "/"))
 seed_col        <- c("PUMA", "hh_id", "WGTP")
 
-expanded_hhid      <- read.csv(paste(popSimDir, "output/combined/expanded_household_ids.csv", sep = "/"))
+expanded_hhid      <- read.csv(paste(popSimDir, "output/HH/final_expanded_household_ids.csv", sep = "/"))
 expanded_hhid_col  <- c("hh_id")
 
 #   This is currently configured for 2 sub-seed geography
 #   User should add more read lines when more geographies is involved
 #   The nummber at the end of summary file name indicates the geographic index
 #   Example, summary3 is the name for summary_TRACT which is the 3rd geography in the geography list
-summary2           <- read.csv(paste(popSimDir, "output/combined/summary_MAZ_PUMA.csv", sep = "/"))
-summary3           <- read.csv(paste(popSimDir, "output/combined/summary_TAZ.csv", sep = "/"))
-summary4           <- read.csv(paste(popSimDir, "output/combined/summary_MAZ.csv", sep = "/"))
+summary2           <- read.csv(paste(popSimDir, "output/HH/final_summary_MAZ_PUMA.csv", sep = "/"))
+summary3           <- read.csv(paste(popSimDir, "output/HH/final_summary_TAZ.csv", sep = "/"))
+summary4           <- read.csv(paste(popSimDir, "output/HH/final_summary_MAZ.csv", sep = "/"))
 
 # summary2$meta_geog <- geogXWalk$REGION[match(summary2$id, geogXWalk$PUMA)]
 summary2$meta_geog <- geogXWalk$COUNTY[match(summary2$id, geogXWalk$PUMA)]

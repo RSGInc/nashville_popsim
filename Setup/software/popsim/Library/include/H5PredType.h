@@ -1,6 +1,7 @@
 // C++ informative line for the emacs editor: -*- C++ -*-
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Copyright by The HDF Group.                                               *
+ * Copyright by the Board of Trustees of the University of Illinois.         *
  * All rights reserved.                                                      *
  *                                                                           *
  * This file is part of HDF5.  The full HDF5 copyright notice, including     *
@@ -28,7 +29,7 @@ class H5_DLLCPP PredType : public AtomType {
   public:
     ///\brief Returns this class name.
     virtual H5std_string
-    fromClass() const override
+    fromClass() const
     {
         return ("PredType");
     }
@@ -41,7 +42,7 @@ class H5_DLLCPP PredType : public AtomType {
     PredType(const PredType &original);
 
     // Noop destructor
-    virtual ~PredType() override;
+    virtual ~PredType();
 
     /*! \brief This dummy function do not inherit from DataType - it will
         throw a DataTypeIException if invoked.
@@ -175,31 +176,63 @@ class H5_DLLCPP PredType : public AtomType {
     static const PredType &NATIVE_INT64;
     static const PredType &NATIVE_UINT64;
 
-    // LEAST types
+// LEAST types
+#if H5_SIZEOF_INT_LEAST8_T != 0
     static const PredType &NATIVE_INT_LEAST8;
+#endif /* H5_SIZEOF_INT_LEAST8_T */
+#if H5_SIZEOF_UINT_LEAST8_T != 0
     static const PredType &NATIVE_UINT_LEAST8;
+#endif /* H5_SIZEOF_UINT_LEAST8_T */
 
+#if H5_SIZEOF_INT_LEAST16_T != 0
     static const PredType &NATIVE_INT_LEAST16;
+#endif /* H5_SIZEOF_INT_LEAST16_T */
+#if H5_SIZEOF_UINT_LEAST16_T != 0
     static const PredType &NATIVE_UINT_LEAST16;
+#endif /* H5_SIZEOF_UINT_LEAST16_T */
 
+#if H5_SIZEOF_INT_LEAST32_T != 0
     static const PredType &NATIVE_INT_LEAST32;
+#endif /* H5_SIZEOF_INT_LEAST32_T */
+#if H5_SIZEOF_UINT_LEAST32_T != 0
     static const PredType &NATIVE_UINT_LEAST32;
+#endif /* H5_SIZEOF_UINT_LEAST32_T */
 
+#if H5_SIZEOF_INT_LEAST64_T != 0
     static const PredType &NATIVE_INT_LEAST64;
+#endif /* H5_SIZEOF_INT_LEAST64_T */
+#if H5_SIZEOF_UINT_LEAST64_T != 0
     static const PredType &NATIVE_UINT_LEAST64;
+#endif /* H5_SIZEOF_UINT_LEAST64_T */
 
-    // FAST types
+// FAST types
+#if H5_SIZEOF_INT_FAST8_T != 0
     static const PredType &NATIVE_INT_FAST8;
+#endif /* H5_SIZEOF_INT_FAST8_T */
+#if H5_SIZEOF_UINT_FAST8_T != 0
     static const PredType &NATIVE_UINT_FAST8;
+#endif /* H5_SIZEOF_UINT_FAST8_T */
 
+#if H5_SIZEOF_INT_FAST16_T != 0
     static const PredType &NATIVE_INT_FAST16;
+#endif /* H5_SIZEOF_INT_FAST16_T */
+#if H5_SIZEOF_UINT_FAST16_T != 0
     static const PredType &NATIVE_UINT_FAST16;
+#endif /* H5_SIZEOF_UINT_FAST16_T */
 
+#if H5_SIZEOF_INT_FAST32_T != 0
     static const PredType &NATIVE_INT_FAST32;
+#endif /* H5_SIZEOF_INT_FAST32_T */
+#if H5_SIZEOF_UINT_FAST32_T != 0
     static const PredType &NATIVE_UINT_FAST32;
+#endif /* H5_SIZEOF_UINT_FAST32_T */
 
+#if H5_SIZEOF_INT_FAST64_T != 0
     static const PredType &NATIVE_INT_FAST64;
+#endif /* H5_SIZEOF_INT_FAST64_T */
+#if H5_SIZEOF_UINT_FAST64_T != 0
     static const PredType &NATIVE_UINT_FAST64;
+#endif /* H5_SIZEOF_UINT_FAST64_T */
 
 #ifndef DOXYGEN_SHOULD_SKIP_THIS
 
@@ -345,31 +378,64 @@ class H5_DLLCPP PredType : public AtomType {
     static PredType *NATIVE_INT64_;
     static PredType *NATIVE_UINT64_;
 
-    // LEAST types
+// LEAST types
+#if H5_SIZEOF_INT_LEAST8_T != 0
     static PredType *NATIVE_INT_LEAST8_;
+#endif /* H5_SIZEOF_INT_LEAST8_T */
+#if H5_SIZEOF_UINT_LEAST8_T != 0
     static PredType *NATIVE_UINT_LEAST8_;
+#endif /* H5_SIZEOF_UINT_LEAST8_T */
 
+#if H5_SIZEOF_INT_LEAST16_T != 0
     static PredType *NATIVE_INT_LEAST16_;
+#endif /* H5_SIZEOF_INT_LEAST16_T */
+#if H5_SIZEOF_UINT_LEAST16_T != 0
     static PredType *NATIVE_UINT_LEAST16_;
+#endif /* H5_SIZEOF_UINT_LEAST16_T */
 
+#if H5_SIZEOF_INT_LEAST32_T != 0
     static PredType *NATIVE_INT_LEAST32_;
+#endif /* H5_SIZEOF_INT_LEAST32_T */
+#if H5_SIZEOF_UINT_LEAST32_T != 0
     static PredType *NATIVE_UINT_LEAST32_;
+#endif /* H5_SIZEOF_UINT_LEAST32_T */
 
+#if H5_SIZEOF_INT_LEAST64_T != 0
     static PredType *NATIVE_INT_LEAST64_;
+#endif /* H5_SIZEOF_INT_LEAST64_T */
+#if H5_SIZEOF_UINT_LEAST64_T != 0
     static PredType *NATIVE_UINT_LEAST64_;
+#endif /* H5_SIZEOF_UINT_LEAST64_T */
 
-    // FAST types
+// FAST types
+#if H5_SIZEOF_INT_FAST8_T != 0
     static PredType *NATIVE_INT_FAST8_;
+#endif /* H5_SIZEOF_INT_FAST8_T */
+#if H5_SIZEOF_UINT_FAST8_T != 0
     static PredType *NATIVE_UINT_FAST8_;
+#endif /* H5_SIZEOF_UINT_FAST8_T */
 
+#if H5_SIZEOF_INT_FAST16_T != 0
     static PredType *NATIVE_INT_FAST16_;
+#endif /* H5_SIZEOF_INT_FAST16_T */
+#if H5_SIZEOF_UINT_FAST16_T != 0
     static PredType *NATIVE_UINT_FAST16_;
+#endif /* H5_SIZEOF_UINT_FAST16_T */
 
+#if H5_SIZEOF_INT_FAST32_T != 0
     static PredType *NATIVE_INT_FAST32_;
+#endif /* H5_SIZEOF_INT_FAST32_T */
+#if H5_SIZEOF_UINT_FAST32_T != 0
     static PredType *NATIVE_UINT_FAST32_;
+#endif /* H5_SIZEOF_UINT_FAST32_T */
 
+#if H5_SIZEOF_INT_FAST64_T != 0
     static PredType *NATIVE_INT_FAST64_;
+#endif /* H5_SIZEOF_INT_FAST64_T */
+#if H5_SIZEOF_UINT_FAST64_T != 0
     static PredType *NATIVE_UINT_FAST64_;
+#endif /* H5_SIZEOF_UINT_FAST64_T */
+    // End of Declaration of pointers
 
 #endif // DOXYGEN_SHOULD_SKIP_THIS
 

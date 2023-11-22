@@ -24,12 +24,12 @@ namespace IAM
 {
 namespace Model
 {
-  class UpdateRoleResult
+  class AWS_IAM_API UpdateRoleResult
   {
   public:
-    AWS_IAM_API UpdateRoleResult();
-    AWS_IAM_API UpdateRoleResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_IAM_API UpdateRoleResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    UpdateRoleResult();
+    UpdateRoleResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    UpdateRoleResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     

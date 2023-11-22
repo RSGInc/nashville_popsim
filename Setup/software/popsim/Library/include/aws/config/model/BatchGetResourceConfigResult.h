@@ -26,12 +26,12 @@ namespace ConfigService
 {
 namespace Model
 {
-  class BatchGetResourceConfigResult
+  class AWS_CONFIGSERVICE_API BatchGetResourceConfigResult
   {
   public:
-    AWS_CONFIGSERVICE_API BatchGetResourceConfigResult();
-    AWS_CONFIGSERVICE_API BatchGetResourceConfigResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
-    AWS_CONFIGSERVICE_API BatchGetResourceConfigResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    BatchGetResourceConfigResult();
+    BatchGetResourceConfigResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    BatchGetResourceConfigResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
 
 
     /**

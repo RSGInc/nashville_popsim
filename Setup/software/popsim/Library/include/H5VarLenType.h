@@ -1,6 +1,7 @@
 // C++ informative line for the emacs editor: -*- C++ -*-
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Copyright by The HDF Group.                                               *
+ * Copyright by the Board of Trustees of the University of Illinois.         *
  * All rights reserved.                                                      *
  *                                                                           *
  * This file is part of HDF5.  The full HDF5 copyright notice, including     *
@@ -32,11 +33,11 @@ class H5_DLLCPP VarLenType : public DataType {
 
     // Returns an VarLenType object via DataType* by decoding the
     // binary object description of this type.
-    virtual DataType *decode() const override;
+    virtual DataType *decode() const;
 
     ///\brief Returns this class name.
     virtual H5std_string
-    fromClass() const override
+    fromClass() const
     {
         return ("VarLenType");
     }
@@ -52,7 +53,7 @@ class H5_DLLCPP VarLenType : public DataType {
     VarLenType(const H5Location &loc, const H5std_string &name);
 
     // Noop destructor
-    virtual ~VarLenType() override;
+    virtual ~VarLenType();
 
     // Default constructor
     VarLenType();

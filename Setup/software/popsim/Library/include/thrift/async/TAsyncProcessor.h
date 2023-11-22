@@ -20,11 +20,9 @@
 #ifndef _THRIFT_TASYNCPROCESSOR_H_
 #define _THRIFT_TASYNCPROCESSOR_H_ 1
 
-#include <functional>
-#include <memory>
-
-#include <thrift/TProcessor.h>
 #include <thrift/protocol/TProtocol.h>
+#include <memory>
+#include <thrift/TProcessor.h>
 
 namespace apache {
 namespace thrift {

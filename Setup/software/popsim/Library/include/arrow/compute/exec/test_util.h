@@ -106,9 +106,7 @@ BatchesWithSchema MakeNestedBatches();
 
 ARROW_TESTING_EXPORT
 BatchesWithSchema MakeRandomBatches(const std::shared_ptr<Schema>& schema,
-                                    int num_batches = 10, int batch_size = 4,
-                                    int64_t alignment = kDefaultBufferAlignment,
-                                    MemoryPool* memory_pool = nullptr);
+                                    int num_batches = 10, int batch_size = 4);
 
 ARROW_TESTING_EXPORT
 BatchesWithSchema MakeBatchesFromString(const std::shared_ptr<Schema>& schema,
@@ -116,44 +114,16 @@ BatchesWithSchema MakeBatchesFromString(const std::shared_ptr<Schema>& schema,
                                         int multiplicity = 1);
 
 ARROW_TESTING_EXPORT
-Result<std::vector<std::shared_ptr<ArrayVector>>> ToArrayVectors(
-    const BatchesWithSchema& batches_with_schema);
-
-ARROW_TESTING_EXPORT
-Result<std::vector<std::shared_ptr<ExecBatch>>> ToExecBatches(
-    const BatchesWithSchema& batches);
-
-ARROW_TESTING_EXPORT
-Result<std::vector<std::shared_ptr<RecordBatch>>> ToRecordBatches(
-    const BatchesWithSchema& batches);
-
-ARROW_TESTING_EXPORT
-Result<std::shared_ptr<RecordBatchReader>> ToRecordBatchReader(
-    const BatchesWithSchema& batches_with_schema);
-
-ARROW_TESTING_EXPORT
-Result<std::vector<std::shared_ptr<ArrayVector>>> ToArrayVectors(
-    const BatchesWithSchema& batches_with_schema);
-
-ARROW_TESTING_EXPORT
-Result<std::vector<std::shared_ptr<ExecBatch>>> ToExecBatches(
-    const BatchesWithSchema& batches);
-
-ARROW_TESTING_EXPORT
-Result<std::vector<std::shared_ptr<RecordBatch>>> ToRecordBatches(
-    const BatchesWithSchema& batches);
-
-ARROW_TESTING_EXPORT
 Result<std::shared_ptr<Table>> SortTableOnAllFields(const std::shared_ptr<Table>& tab);
 
 ARROW_TESTING_EXPORT
-void AssertTablesEqualIgnoringOrder(const std::shared_ptr<Table>& exp,
-                                    const std::shared_ptr<Table>& act);
+void AssertTablesEqual(const std::shared_ptr<Table>& exp,
+                       const std::shared_ptr<Table>& act);
 
 ARROW_TESTING_EXPORT
-void AssertExecBatchesEqualIgnoringOrder(const std::shared_ptr<Schema>& schema,
-                                         const std::vector<ExecBatch>& exp,
-                                         const std::vector<ExecBatch>& act);
+void AssertExecBatchesEqual(const std::shared_ptr<Schema>& schema,
+                            const std::vector<ExecBatch>& exp,
+                            const std::vector<ExecBatch>& act);
 
 ARROW_TESTING_EXPORT
 bool operator==(const Declaration&, const Declaration&);

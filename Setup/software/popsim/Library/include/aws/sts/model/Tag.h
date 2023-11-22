@@ -33,15 +33,15 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/sts-2011-06-15/Tag">AWS API
    * Reference</a></p>
    */
-  class Tag
+  class AWS_STS_API Tag
   {
   public:
-    AWS_STS_API Tag();
-    AWS_STS_API Tag(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_STS_API Tag& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    Tag();
+    Tag(const Aws::Utils::Xml::XmlNode& xmlNode);
+    Tag& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_STS_API void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
-    AWS_STS_API void OutputToStream(Aws::OStream& oStream, const char* location) const;
+    void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
+    void OutputToStream(Aws::OStream& oStream, const char* location) const;
 
 
     /**

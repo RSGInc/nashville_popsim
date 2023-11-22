@@ -33,13 +33,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/EvaluationResult">AWS
    * API Reference</a></p>
    */
-  class EvaluationResult
+  class AWS_CONFIGSERVICE_API EvaluationResult
   {
   public:
-    AWS_CONFIGSERVICE_API EvaluationResult();
-    AWS_CONFIGSERVICE_API EvaluationResult(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API EvaluationResult& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API Aws::Utils::Json::JsonValue Jsonize() const;
+    EvaluationResult();
+    EvaluationResult(Aws::Utils::Json::JsonView jsonValue);
+    EvaluationResult& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**

@@ -27,14 +27,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ObjectLockLegalHold">AWS
    * API Reference</a></p>
    */
-  class ObjectLockLegalHold
+  class AWS_S3_API ObjectLockLegalHold
   {
   public:
-    AWS_S3_API ObjectLockLegalHold();
-    AWS_S3_API ObjectLockLegalHold(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API ObjectLockLegalHold& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    ObjectLockLegalHold();
+    ObjectLockLegalHold(const Aws::Utils::Xml::XmlNode& xmlNode);
+    ObjectLockLegalHold& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

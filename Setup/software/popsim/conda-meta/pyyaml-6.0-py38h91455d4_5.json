@@ -4,10 +4,10 @@
  "channel": "https://conda.anaconda.org/conda-forge/win-64",
  "constrains": [],
  "depends": [
+  "vc >=14.2,<15",
+  "ucrt >=10.0.20348.0",
   "python >=3.8,<3.9.0a0",
   "python_abi 3.8.* *_cp38",
-  "ucrt >=10.0.20348.0",
-  "vc >=14.2,<15",
   "vs2015_runtime >=14.29.30139",
   "yaml >=0.2.5,<0.3.0a0"
  ],

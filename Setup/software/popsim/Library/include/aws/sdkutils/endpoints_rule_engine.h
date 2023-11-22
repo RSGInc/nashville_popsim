@@ -9,8 +9,6 @@
 #include <aws/common/byte_buf.h>
 #include <aws/sdkutils/sdkutils.h>
 
-AWS_PUSH_SANE_WARNING_LEVEL
-
 struct aws_endpoints_ruleset;
 struct aws_partitions_config;
 struct aws_endpoints_parameter;
@@ -281,7 +279,7 @@ AWS_SDKUTILS_API int aws_endpoints_resolved_endpoint_get_properties(
 
 /*
  * Get headers for the resolved endpoint.
- * out_headers type is aws_hash_table with (aws_string *) as key
+ * out_headers type is aws_hash_table with (aws_byte_cursor *) as key
  * and (aws_array_list * of aws_string *) as value.
  * Note on usage in bindings:
  * - this is a map to a list of strings and can be implemented as such in the
@@ -301,6 +299,5 @@ AWS_SDKUTILS_API int aws_endpoints_resolved_endpoint_get_error(
     struct aws_byte_cursor *out_error);
 
 AWS_EXTERN_C_END
-AWS_POP_SANE_WARNING_LEVEL
 
 #endif /* AWS_SDKUTILS_ENDPOINTS_RULESET_H */

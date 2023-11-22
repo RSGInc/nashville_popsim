@@ -33,14 +33,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/LoggingEnabled">AWS
    * API Reference</a></p>
    */
-  class LoggingEnabled
+  class AWS_S3_API LoggingEnabled
   {
   public:
-    AWS_S3_API LoggingEnabled();
-    AWS_S3_API LoggingEnabled(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API LoggingEnabled& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    LoggingEnabled();
+    LoggingEnabled(const Aws::Utils::Xml::XmlNode& xmlNode);
+    LoggingEnabled& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

@@ -4,9 +4,9 @@
  "channel": "https://conda.anaconda.org/conda-forge/noarch",
  "constrains": [],
  "depends": [
+  "python >=3.7",
   "brotli-python >=1.0.9",
-  "pysocks >=1.5.6,<2.0,!=1.5.7",
-  "python >=3.7"
+  "pysocks >=1.5.6,<2.0,!=1.5.7"
  ],
  "extracted_package_dir": "",
  "features": "",

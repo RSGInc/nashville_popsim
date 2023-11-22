@@ -26,12 +26,12 @@ namespace ConfigService
 {
 namespace Model
 {
-  class DescribePendingAggregationRequestsResult
+  class AWS_CONFIGSERVICE_API DescribePendingAggregationRequestsResult
   {
   public:
-    AWS_CONFIGSERVICE_API DescribePendingAggregationRequestsResult();
-    AWS_CONFIGSERVICE_API DescribePendingAggregationRequestsResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
-    AWS_CONFIGSERVICE_API DescribePendingAggregationRequestsResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    DescribePendingAggregationRequestsResult();
+    DescribePendingAggregationRequestsResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    DescribePendingAggregationRequestsResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
 
 
     /**

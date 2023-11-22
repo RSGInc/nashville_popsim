@@ -7,12 +7,10 @@
 
 /* Generic header includes */
 #include <aws/monitoring/CloudWatchErrors.h>
-#include <aws/core/client/GenericClientConfiguration.h>
 #include <aws/core/client/AWSError.h>
 #include <aws/core/utils/memory/stl/AWSString.h>
 #include <aws/core/client/AsyncCallerContext.h>
 #include <aws/core/http/HttpTypes.h>
-#include <aws/monitoring/CloudWatchEndpointProvider.h>
 #include <future>
 #include <functional>
 /* End of generic header includes */
@@ -83,10 +81,6 @@ namespace Aws
 
   namespace CloudWatch
   {
-    using CloudWatchClientConfiguration = Aws::Client::GenericClientConfiguration<false>;
-    using CloudWatchEndpointProviderBase = Aws::CloudWatch::Endpoint::CloudWatchEndpointProviderBase;
-    using CloudWatchEndpointProvider = Aws::CloudWatch::Endpoint::CloudWatchEndpointProvider;
-
     namespace Model
     {
       /* Service model forward declarations required in CloudWatchClient header */

@@ -6,10 +6,10 @@
   "libbrotlicommon 1.0.9 hcfcfb64_9"
  ],
  "depends": [
+  "vc >=14.2,<15",
+  "ucrt >=10.0.20348.0",
   "python >=3.8,<3.9.0a0",
   "python_abi 3.8.* *_cp38",
-  "ucrt >=10.0.20348.0",
-  "vc >=14.2,<15",
   "vc14_runtime >=14.29.30139"
  ],
  "extracted_package_dir": "",

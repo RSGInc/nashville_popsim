@@ -4,8 +4,8 @@
  "channel": "https://conda.anaconda.org/conda-forge/noarch",
  "constrains": [],
  "depends": [
-  "__win",
   "colorama",
+  "__win",
   "python >=3.8"
  ],
  "extracted_package_dir": "",

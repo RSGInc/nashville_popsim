@@ -27,14 +27,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ObjectLockRule">AWS
    * API Reference</a></p>
    */
-  class ObjectLockRule
+  class AWS_S3_API ObjectLockRule
   {
   public:
-    AWS_S3_API ObjectLockRule();
-    AWS_S3_API ObjectLockRule(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API ObjectLockRule& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    ObjectLockRule();
+    ObjectLockRule(const Aws::Utils::Xml::XmlNode& xmlNode);
+    ObjectLockRule& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

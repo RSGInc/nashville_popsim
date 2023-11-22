@@ -8,8 +8,6 @@
 
 #include <aws/http/http.h>
 
-AWS_PUSH_SANE_WARNING_LEVEL
-
 struct aws_http2_stream_manager;
 struct aws_client_bootstrap;
 struct aws_http_connection;
@@ -81,7 +79,7 @@ struct aws_http2_stream_manager_options {
      * - For stream level window control, `enable_read_back_pressure` will enable manual control. The initial window
      * size needs to be set through `initial_settings_array`.
      */
-    const struct aws_http2_setting *initial_settings_array;
+    struct aws_http2_setting *initial_settings_array;
     size_t num_initial_settings;
     size_t max_closed_streams;
     bool conn_manual_window_management;
@@ -189,7 +187,7 @@ struct aws_http2_stream_manager *aws_http2_stream_manager_release(struct aws_htt
 AWS_HTTP_API
 struct aws_http2_stream_manager *aws_http2_stream_manager_new(
     struct aws_allocator *allocator,
-    const struct aws_http2_stream_manager_options *options);
+    struct aws_http2_stream_manager_options *options);
 
 /**
  * Acquire a stream from stream manager asynchronously.
@@ -214,6 +212,4 @@ void aws_http2_stream_manager_fetch_metrics(
     struct aws_http_manager_metrics *out_metrics);
 
 AWS_EXTERN_C_END
-AWS_POP_SANE_WARNING_LEVEL
-
 #endif /* AWS_HTTP2_STREAM_MANAGER_H */

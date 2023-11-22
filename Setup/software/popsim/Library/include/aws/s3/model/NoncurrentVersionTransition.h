@@ -36,14 +36,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/NoncurrentVersionTransition">AWS
    * API Reference</a></p>
    */
-  class NoncurrentVersionTransition
+  class AWS_S3_API NoncurrentVersionTransition
   {
   public:
-    AWS_S3_API NoncurrentVersionTransition();
-    AWS_S3_API NoncurrentVersionTransition(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API NoncurrentVersionTransition& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    NoncurrentVersionTransition();
+    NoncurrentVersionTransition(const Aws::Utils::Xml::XmlNode& xmlNode);
+    NoncurrentVersionTransition& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

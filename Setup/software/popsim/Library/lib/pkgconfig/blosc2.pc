@@ -1,4 +1,4 @@
-prefix=D:/bld/c-blosc2_1688470100418/_h_env/Library
+prefix=D:/bld/c-blosc2_1699417289234/_h_env/Library
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 sharedlibdir=${libdir}
@@ -7,7 +7,7 @@ includedir=${prefix}/include
 Name: blosc2
 Description: A blocking, shuffling and lossless compression library
 URL: https://blosc.org/
-Version: 2.10.0
+Version: 2.11.2
 
 Requires:
 Libs: -L${libdir} -L${sharedlibdir} -lblosc2

@@ -26,12 +26,12 @@ namespace CloudWatchLogs
 {
 namespace Model
 {
-  class DescribeResourcePoliciesResult
+  class AWS_CLOUDWATCHLOGS_API DescribeResourcePoliciesResult
   {
   public:
-    AWS_CLOUDWATCHLOGS_API DescribeResourcePoliciesResult();
-    AWS_CLOUDWATCHLOGS_API DescribeResourcePoliciesResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
-    AWS_CLOUDWATCHLOGS_API DescribeResourcePoliciesResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    DescribeResourcePoliciesResult();
+    DescribeResourcePoliciesResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    DescribeResourcePoliciesResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
 
 
     /**

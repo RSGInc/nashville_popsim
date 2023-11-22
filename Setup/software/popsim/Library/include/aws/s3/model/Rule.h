@@ -39,14 +39,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/Rule">AWS API
    * Reference</a></p>
    */
-  class Rule
+  class AWS_S3_API Rule
   {
   public:
-    AWS_S3_API Rule();
-    AWS_S3_API Rule(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API Rule& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    Rule();
+    Rule(const Aws::Utils::Xml::XmlNode& xmlNode);
+    Rule& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

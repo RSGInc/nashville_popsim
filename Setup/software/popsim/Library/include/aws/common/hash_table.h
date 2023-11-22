@@ -10,8 +10,6 @@
 
 #include <stddef.h>
 
-AWS_PUSH_SANE_WARNING_LEVEL
-
 #define AWS_COMMON_HASH_TABLE_ITER_CONTINUE (1 << 0)
 #define AWS_COMMON_HASH_TABLE_ITER_DELETE (1 << 1)
 #define AWS_COMMON_HASH_TABLE_ITER_ERROR (1 << 2)
@@ -431,6 +429,5 @@ AWS_COMMON_API
 bool aws_hash_iter_is_valid(const struct aws_hash_iter *iter);
 
 AWS_EXTERN_C_END
-AWS_POP_SANE_WARNING_LEVEL
 
 #endif /* AWS_COMMON_HASH_TABLE_H */

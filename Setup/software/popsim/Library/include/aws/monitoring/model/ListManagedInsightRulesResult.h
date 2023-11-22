@@ -27,12 +27,12 @@ namespace CloudWatch
 {
 namespace Model
 {
-  class ListManagedInsightRulesResult
+  class AWS_CLOUDWATCH_API ListManagedInsightRulesResult
   {
   public:
-    AWS_CLOUDWATCH_API ListManagedInsightRulesResult();
-    AWS_CLOUDWATCH_API ListManagedInsightRulesResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_CLOUDWATCH_API ListManagedInsightRulesResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    ListManagedInsightRulesResult();
+    ListManagedInsightRulesResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    ListManagedInsightRulesResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     /**

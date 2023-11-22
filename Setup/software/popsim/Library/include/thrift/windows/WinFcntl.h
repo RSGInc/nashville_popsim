@@ -33,7 +33,7 @@
 #endif
 
 // Win32
-#include <winsock2.h>
+#include <Winsock2.h>
 #include <thrift/transport/PlatformSocket.h>
 
 extern "C" {

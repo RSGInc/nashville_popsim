@@ -32,14 +32,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/VersioningConfiguration">AWS
    * API Reference</a></p>
    */
-  class VersioningConfiguration
+  class AWS_S3_API VersioningConfiguration
   {
   public:
-    AWS_S3_API VersioningConfiguration();
-    AWS_S3_API VersioningConfiguration(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API VersioningConfiguration& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    VersioningConfiguration();
+    VersioningConfiguration(const Aws::Utils::Xml::XmlNode& xmlNode);
+    VersioningConfiguration& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

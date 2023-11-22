@@ -4,14 +4,14 @@
  "channel": "https://conda.anaconda.org/conda-forge/win-64",
  "constrains": [],
  "depends": [
-  "libprotobuf >=3.21.12,<3.22.0a0",
-  "libzlib >=1.2.13,<1.3.0a0",
-  "lz4-c >=1.9.3,<1.10.0a0",
-  "snappy >=1.1.10,<2.0a0",
-  "ucrt >=10.0.20348.0",
   "vc >=14.2,<15",
+  "ucrt >=10.0.20348.0",
   "vc14_runtime >=14.29.30139",
-  "zstd >=1.5.2,<1.6.0a0"
+  "libzlib >=1.2.13,<1.3.0a0",
+  "zstd >=1.5.2,<1.6.0a0",
+  "lz4-c >=1.9.3,<1.10.0a0",
+  "libprotobuf >=3.21.12,<3.22.0a0",
+  "snappy >=1.1.10,<2.0a0"
  ],
  "extracted_package_dir": "",
  "features": "",

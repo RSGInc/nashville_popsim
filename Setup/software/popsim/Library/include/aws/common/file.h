@@ -9,8 +9,6 @@
 #include <aws/common/platform.h>
 #include <stdio.h>
 
-AWS_PUSH_SANE_WARNING_LEVEL
-
 #ifdef AWS_OS_WINDOWS
 #    define AWS_PATH_DELIM '\\'
 #    define AWS_PATH_DELIM_STR "\\"
@@ -58,15 +56,12 @@ typedef bool(aws_on_directory_entry)(const struct aws_directory_entry *entry, vo
 AWS_EXTERN_C_BEGIN
 
 /**
- * Deprecated - Use aws_fopen_safe() instead, avoid const char * in public APIs.
- * Opens file at file_path using mode. Returns the FILE pointer if successful.
- * Otherwise, aws_last_error() will contain the error that occurred
+ * Don't use this. It never should have been added in the first place. It's now deprecated.
  */
 AWS_COMMON_API FILE *aws_fopen(const char *file_path, const char *mode);
 
 /**
  * Opens file at file_path using mode. Returns the FILE pointer if successful.
- * Otherwise, aws_last_error() will contain the error that occurred
  */
 AWS_COMMON_API FILE *aws_fopen_safe(const struct aws_string *file_path, const struct aws_string *mode);
 
@@ -165,13 +160,6 @@ AWS_COMMON_API
 char aws_get_platform_directory_separator(void);
 
 /**
- * Normalizes the path by replacing any directory separator with the local platform's directory separator.
- * @param path path to normalize. Must be writeable.
- */
-AWS_COMMON_API
-void aws_normalize_directory_separator(struct aws_byte_buf *path);
-
-/**
  * Returns the current user's home directory.
  */
 AWS_COMMON_API
@@ -206,6 +194,5 @@ AWS_COMMON_API
 int aws_file_get_length(FILE *file, int64_t *length);
 
 AWS_EXTERN_C_END
-AWS_POP_SANE_WARNING_LEVEL
 
 #endif /* AWS_COMMON_FILE_H */

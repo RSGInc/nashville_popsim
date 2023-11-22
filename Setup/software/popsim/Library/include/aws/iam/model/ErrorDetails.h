@@ -32,15 +32,15 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/iam-2010-05-08/ErrorDetails">AWS
    * API Reference</a></p>
    */
-  class ErrorDetails
+  class AWS_IAM_API ErrorDetails
   {
   public:
-    AWS_IAM_API ErrorDetails();
-    AWS_IAM_API ErrorDetails(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_IAM_API ErrorDetails& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    ErrorDetails();
+    ErrorDetails(const Aws::Utils::Xml::XmlNode& xmlNode);
+    ErrorDetails& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_IAM_API void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
-    AWS_IAM_API void OutputToStream(Aws::OStream& oStream, const char* location) const;
+    void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
+    void OutputToStream(Aws::OStream& oStream, const char* location) const;
 
 
     /**

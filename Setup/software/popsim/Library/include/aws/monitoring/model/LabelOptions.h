@@ -35,15 +35,15 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/LabelOptions">AWS
    * API Reference</a></p>
    */
-  class LabelOptions
+  class AWS_CLOUDWATCH_API LabelOptions
   {
   public:
-    AWS_CLOUDWATCH_API LabelOptions();
-    AWS_CLOUDWATCH_API LabelOptions(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_CLOUDWATCH_API LabelOptions& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    LabelOptions();
+    LabelOptions(const Aws::Utils::Xml::XmlNode& xmlNode);
+    LabelOptions& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_CLOUDWATCH_API void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
-    AWS_CLOUDWATCH_API void OutputToStream(Aws::OStream& oStream, const char* location) const;
+    void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
+    void OutputToStream(Aws::OStream& oStream, const char* location) const;
 
 
     /**

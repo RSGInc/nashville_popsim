@@ -1,6 +1,7 @@
 // C++ informative line for the emacs editor: -*- C++ -*-
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Copyright by The HDF Group.                                               *
+ * Copyright by the Board of Trustees of the University of Illinois.         *
  * All rights reserved.                                                      *
  *                                                                           *
  * This file is part of HDF5.  The full HDF5 copyright notice, including     *
@@ -35,17 +36,17 @@ class H5_DLLCPP IntType : public AtomType {
 
     // Returns an IntType object via DataType* by decoding the
     // binary object description of this type.
-    virtual DataType *decode() const override;
+    virtual DataType *decode() const;
 
     // Retrieves the sign type for an integer type
     H5T_sign_t getSign() const;
 
-    // Sets the sign property for an integer type.
+    // Sets the sign proprety for an integer type.
     void setSign(H5T_sign_t sign) const;
 
     ///\brief Returns this class name.
     virtual H5std_string
-    fromClass() const override
+    fromClass() const
     {
         return ("IntType");
     }
@@ -60,7 +61,7 @@ class H5_DLLCPP IntType : public AtomType {
     IntType(const IntType &original);
 
     // Noop destructor.
-    virtual ~IntType() override;
+    virtual ~IntType();
 
 }; // end of IntType
 } // namespace H5

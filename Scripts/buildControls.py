@@ -57,7 +57,7 @@ gqtot_acs_CT	= pd.read_csv(os.path.join(censusDownloadDir, "gqtot_CT_2017_acs5.c
 #gqage_sf1_CT	= pd.read_csv(os.path.join(censusDownloadDir, "gqage_CT_2010_sf1.csv"))
 
 gqtot_acs_CT['gq_total'] = gqtot_acs_CT['B26001_001E']
-print "GWTOT:", gqtot_acs_CT.gq_total.sum()
+print("GWTOT:", gqtot_acs_CT.gq_total.sum(), sep=' ')
 #gqage_sf1_CT['gq_18yrs'] = gqage_sf1_CT['P043003'] + gqage_sf1_CT['P043034']
 #gqage_sf1_CT['gq_18_64yrs'] = gqage_sf1_CT['P043013'] + gqage_sf1_CT['P043044']
 #gqage_sf1_CT['gq_65Myrs'] = gqage_sf1_CT['P043023'] + gqage_sf1_CT['P043054']
@@ -84,7 +84,7 @@ pd.read_csv(source_maz_file).to_csv(dest_maz_file)
 # shutil.copy(source_maz_file, dest_maz_file)
 # read maz hh data
 mazControl2 = pd.read_csv(os.path.join(WORKING_DIR, "Setup","data","control_totals_maz.csv"))
-print(mazControl2.columns)
+print(mazControl2.columns, sep=' ')
 # Read XWalk
 popsyn_xwalk = pd.read_csv(os.path.join(WORKING_DIR, "Setup","data","geo_crosswalks.csv"))
 popsyn_xwalk['PUMA10'] = popsyn_xwalk['PUMA'].astype(str)
@@ -100,24 +100,24 @@ TAZ_CT10 = popsyn_xwalk[["TAZ","TRACT"]]
 # Create TAZ control file
 # **************************
 #Load Census Data
-hhsize_BG = hhsize_BG.rename(columns = {'BKGPIDFP10':'BLOCKGRP'})
-hhtype_BG = hhtype_BG.rename(columns = {'BKGPIDFP10':'BLOCKGRP'})
-hhtenure_BG = hhtenure_BG.rename(columns = {'BKGPIDFP10':'BLOCKGRP'})
-hhunit_CT = hhunit_CT.rename(columns = {'CTIDFP10':'TRACT'})
-hhworker_CT = hhworker_CT.rename(columns = {'CTIDFP10':'TRACT'})
-hhincome_CT = hhincome_CT.rename(columns = {'CTIDFP10':'TRACT'})
-hhkids_CT = hhkids_CT.rename(columns = {'CTIDFP10':'TRACT'})
-pop_CT = pop_CT.rename(columns = {'CTIDFP10':'TRACT'})
-gqtot_acs_CT = gqtot_acs_CT.rename(columns = {'CTIDFP10':'TRACT'})
+hhsize_BG = hhsize_BG.rename(columns = {'BKGPIDFP10':'BLOCKGRP'}).drop(columns=['state','county','tract'], errors='ignore')
+hhtype_BG = hhtype_BG.rename(columns = {'BKGPIDFP10':'BLOCKGRP'}).drop(columns=['state','county','tract'], errors='ignore')
+hhtenure_BG = hhtenure_BG.rename(columns = {'BKGPIDFP10':'BLOCKGRP'}).drop(columns=['state','county','tract'], errors='ignore')
+hhunit_CT = hhunit_CT.rename(columns = {'CTIDFP10':'TRACT'}).drop(columns=['state','county','tract'], errors='ignore')
+hhworker_CT = hhworker_CT.rename(columns = {'CTIDFP10':'TRACT'}).drop(columns=['state','county','tract'], errors='ignore')
+hhincome_CT = hhincome_CT.rename(columns = {'CTIDFP10':'TRACT'}).drop(columns=['state','county','tract'], errors='ignore')
+hhkids_CT = hhkids_CT.rename(columns = {'CTIDFP10':'TRACT'}).drop(columns=['state','county','tract'], errors='ignore')
+pop_CT = pop_CT.rename(columns = {'CTIDFP10':'TRACT'}).drop(columns=['state','county','tract'], errors='ignore')
+gqtot_acs_CT = gqtot_acs_CT.rename(columns = {'CTIDFP10':'TRACT'}).drop(columns=['state','county','tract'], errors='ignore')
 
 TAZ_xwalk = pd.read_csv(os.path.join(WORKING_DIR,"Setup","data","geo_crosswalks.csv"))
 
 #Sum HH per TAZ, BG, CT
 mazControl2 = mazControl2[['MAZ','hh','GQ']].merge(TAZ_xwalk, how='left', on='MAZ')
 tazControl = mazControl2.groupby('TAZ', as_index = False).agg({'hh':'sum','GQ':'sum','BLOCKGRP':'first','TRACT':'first','PUMA':'first','COUNTY':'first'})
-print "CHECK MAZ/TAZ: ", mazControl2.hh.sum(),tazControl.hh.sum()
-bg_hh = mazControl2.groupby('BLOCKGRP', as_index = False).sum()[['BLOCKGRP','hh']]
-ct_hh = mazControl2.groupby('TRACT', as_index = False).sum()[['TRACT','hh']]
+print("CHECK MAZ/TAZ: ", mazControl2.hh.sum(),tazControl.hh.sum(), sep=' ')
+bg_hh = mazControl2.groupby('BLOCKGRP', as_index = False)['hh'].sum()
+ct_hh = mazControl2.groupby('TRACT', as_index = False)['hh'].sum()
 
 #get factors to scale by BG, CT
 tazControl = tazControl.merge(bg_hh, how = 'left', on = 'BLOCKGRP', suffixes = ['','_BG']).merge(ct_hh, how = 'left', on = 'TRACT', suffixes = ['','_CT'])
@@ -125,13 +125,13 @@ mazControl2 = mazControl2.merge(bg_hh, how = 'left', on = 'BLOCKGRP', suffixes =
 mazControl2['mz_bg_pct'] = np.where(mazControl2['hh_BG'] > 0, mazControl2['hh']/mazControl2['hh_BG'], 0)
 tazControl['bg_pct'] = np.where(tazControl['hh_BG'] > 0, tazControl['hh']/tazControl['hh_BG'], 0)
 tazControl['ct_pct'] = np.where(tazControl['hh_CT'] > 0, tazControl['hh']/tazControl['hh_CT'], 0)
-print "CHECK Block group for hhsize" , hhsize_BG[['BLOCKGRP','B11016_010E']].head(), tazControl[['BLOCKGRP']].head()
+print("CHECK Block group for hhsize" , hhsize_BG[['BLOCKGRP','B11016_010E']].head(), tazControl[['BLOCKGRP']].head(), sep=' ')
 
 #Merge Census data to TAZ file
 tazControl = tazControl.merge(hhsize_BG, how = 'left', on = 'BLOCKGRP').merge(hhtenure_BG, how = 'left', on = 'BLOCKGRP').merge(hhtype_BG, how = 'left', on = 'BLOCKGRP')
 
 tazControl['HHSIZE1'] = tazControl['bg_pct']*(tazControl['B11016_010E'])
-print "CHECK HHSIZE!", tazControl[['B11016_010E','bg_pct','HHSIZE1']].head()
+print("CHECK HHSIZE!", tazControl[['B11016_010E','bg_pct','HHSIZE1']].head(), sep=' ')
 tazControl['HHSIZE2'] = tazControl['bg_pct']*(tazControl['B11016_003E'] + tazControl['B11016_011E'])
 tazControl['HHSIZE3'] = tazControl['bg_pct']*(tazControl['B11016_004E'] + tazControl['B11016_012E'])
 tazControl['HHSIZE4M'] = tazControl['bg_pct']*(tazControl['B11016_005E'] + tazControl['B11016_006E'] + tazControl['B11016_007E'] + tazControl['B11016_008E'] + tazControl['B11016_013E'] + tazControl['B11016_014E'] + tazControl['B11016_015E'] + tazControl['B11016_016E'])
@@ -157,9 +157,9 @@ for col in ['HHFAM{}'.format(n) for n in ['MAR','NOWIFE','NOHUSBAND','NON','NONA
 for col in ['HHAGE{}'.format(n) for n in ['15_44','45_64','65M']]:
 	tazControl[col] = tazControl[col] * tazControl['bg_AGE_factor']
 
-print("CHECK TOT HH by Size", tazControl['hh'].sum(), " = ", tazControl[['HHSIZE1', 'HHSIZE2','HHSIZE3','HHSIZE4M']].sum().sum())
-print("CHECK TOT HH by AGE", tazControl['hh'].sum(), " = ", tazControl[['HHAGE15_44', 'HHAGE45_64','HHAGE65M']].sum().sum())
-print("CHECK TOT HH by FAM", tazControl['hh'].sum(), " = ", tazControl[['HHFAMMAR','HHFAMNOWIFE','HHFAMNOHUSBAND', 'HHFAMNON', 'HHFAMNONALONE']].sum().sum())
+print("CHECK TOT HH by Size", tazControl['hh'].sum(), " = ", tazControl[['HHSIZE1', 'HHSIZE2','HHSIZE3','HHSIZE4M']].sum().sum(), sep=' ')
+print("CHECK TOT HH by AGE", tazControl['hh'].sum(), " = ", tazControl[['HHAGE15_44', 'HHAGE45_64','HHAGE65M']].sum().sum(), sep=' ')
+print("CHECK TOT HH by FAM", tazControl['hh'].sum(), " = ", tazControl[['HHFAMMAR','HHFAMNOWIFE','HHFAMNOHUSBAND', 'HHFAMNON', 'HHFAMNONALONE']].sum().sum(), sep=' ')
 
 # worker , kid, and income data
 
@@ -255,14 +255,14 @@ for idx1,listie in enumerate([hhunit_list]):
 		tazControl[col] = np.where((tazControl[col] >= tazControl[col_list[0]]) & (tazControl[col] >= tazControl[col_list[1]]), tazControl[col]+tazControl['diff_round_2{}'.format(idx1)], tazControl[col])
 
 		
-print tazControl['diff_round_1'].describe()
-print "difference from rounding size", tazControl['hh'].sum() - tazControl[['HHSIZE{}_S3'.format(l) for l in ['1','2','3','4M']]].sum().sum()
-print "difference from rounding age", tazControl['hh'].sum() - tazControl[['HHAGE{}_S3'.format(n) for n in ['15_44','45_64','65M']]].sum().sum()
-print "difference from rounding wrks", tazControl['hh'].sum() - tazControl[['HHWRKS{}_S3'.format(l) for l in ['0','1','2','3M']]].sum().sum()
-print "difference from rounding INC", tazControl['hh'].sum() - tazControl[['HHINC{}_S3'.format(l) for l in ['0TO25K','25TO50K','50TO75K','75TO100K','100KM']]].sum().sum()
-print "difference from rounding FAM", tazControl['hh'].sum() - tazControl[['HHFAM{}_S3'.format(l) for l in ['MAR','NOWIFE','NOHUSBAND','NON','NONALONE']]].sum().sum()
-print "difference from rounding KID", tazControl['hh'].sum() - tazControl[['HH_WIKID_S3','HH_WOKID_S3']].sum().sum()
-print "difference from rounding unit", tazControl['hh'].sum() - tazControl[['HHUNIT{}_S3'.format(n) for n in ['SINGLE','MULTI','MOBILE']]].sum().sum()
+print(tazControl['diff_round_1'].describe(), sep=' ')
+print("difference from rounding size", tazControl['hh'].sum() - tazControl[['HHSIZE{}_S3'.format(l) for l in ['1','2','3','4M']]].sum().sum(), sep=' ')
+print("difference from rounding age", tazControl['hh'].sum() - tazControl[['HHAGE{}_S3'.format(n) for n in ['15_44','45_64','65M']]].sum().sum(), sep=' ')
+print("difference from rounding wrks", tazControl['hh'].sum() - tazControl[['HHWRKS{}_S3'.format(l) for l in ['0','1','2','3M']]].sum().sum(), sep=' ')
+print("difference from rounding INC", tazControl['hh'].sum() - tazControl[['HHINC{}_S3'.format(l) for l in ['0TO25K','25TO50K','50TO75K','75TO100K','100KM']]].sum().sum(), sep=' ')
+print("difference from rounding FAM", tazControl['hh'].sum() - tazControl[['HHFAM{}_S3'.format(l) for l in ['MAR','NOWIFE','NOHUSBAND','NON','NONALONE']]].sum().sum(), sep=' ')
+print("difference from rounding KID", tazControl['hh'].sum() - tazControl[['HH_WIKID_S3','HH_WOKID_S3']].sum().sum(), sep=' ')
+print("difference from rounding unit", tazControl['hh'].sum() - tazControl[['HHUNIT{}_S3'.format(n) for n in ['SINGLE','MULTI','MOBILE']]].sum().sum(), sep=' ')
 
 tazControl = tazControl.rename(columns = {'hh':'HHS','HHAGE15_44_S3':'HHAGE1_S3','HHAGE45_64_S3':'HHAGE2_S3', 'HHAGE65M_S3':'HHAGE3_S3','HHINC0TO25K_S3':'HHINC1_S3','HHINC25TO50K_S3':'HHINC2_S3','HHINC50TO75K_S3':'HHINC3_S3','HHINC75TO100K_S3':'HHINC4_S3','HHINC100KM_S3':'HHINC5_S3','HHWRKS0_S3':'HHWRK1_S3','HHWRKS1_S3':'HHWRK2_S3','HHWRKS2_S3':'HHWRK3_S3','HHWRKS3M_S3':'HHWRK4_S3'})
 tazControl3 = tazControl[['ct_pct','TAZ', 'HHS', 'GQ','PUMA', 'TRACT','COUNTY', 'HHSIZE1_S3', 'HHSIZE2_S3', 'HHSIZE3_S3', 'HHSIZE4M_S3','HHAGE1_S3', 'HHAGE2_S3', 'HHAGE3_S3', 'HHWRK1_S3', 'HHWRK2_S3', 'HHWRK3_S3', 'HHWRK4_S3', 'HHINC1_S3', 'HHINC2_S3', 'HHINC3_S3', 'HHINC4_S3','HHINC5_S3', 'HH_WIKID_S3', 'HH_WOKID_S3','HHFAMMAR_S3','HHFAMNOWIFE_S3','HHFAMNOHUSBAND_S3','HHFAMNON_S3','HHFAMNONALONE_S3', 'HHUNITSINGLE_S3','HHUNITMULTI_S3','HHUNITMOBILE_S3']]
@@ -290,10 +290,10 @@ seed_person = seed_person.fillna(0)
  
 # compute number of workers in the household	
 seed_person['workers'] = np.where(seed_person.ESR.isin([1,2,4,5]), 1,0)
-seed_house = seed_house.merge(seed_person.groupby('SERIALNO', as_index = False).sum()[['SERIALNO','workers']], how = 'left', on = 'SERIALNO')	
+seed_house = seed_house.merge(seed_person.groupby('SERIALNO', as_index = False)['workers'].sum(), how = 'left', on = 'SERIALNO')
 
 # use ESR to set employment dummy	
-seed_person['employed'] = np.where(seed_person.ESR.isin([1,2,4,5]), 1, 0L)	
+seed_person['employed'] = np.where(seed_person.ESR.isin([1,2,4,5]), 1, 0)	
 
 #dummy hh_id
 seed_house['hh_id'] = np.arange(1,len(seed_house)+1)
@@ -380,12 +380,12 @@ for i in range(1,8):
 pums_pop = pums_pop.groupby('PUMA', as_index = False).sum()	
 for i in range(1,8):
 	pums_pop['percent_age_group{}'.format(i)] = pums_pop['age_group{}'.format(i)]/(pums_pop['age_group1']+pums_pop['age_group2']+pums_pop['age_group3']+pums_pop['age_group4']+pums_pop['age_group5']+pums_pop['age_group6']+pums_pop['age_group7'])
-print "pums_pop check:", pums_pop[['age_group1','percent_age_group1']].head()
-print "pre merge:", len(pums_pop)
+print("pums_pop check:", pums_pop[['age_group1','percent_age_group1']].head(), sep=' ')
+print("pre merge:", len(pums_pop), sep=' ')
 #pums_pop = pums_pop.merge(popsyn_xwalk, how = 'left', on = 'PUMA')
 #print "post merge:", len(pums_pop), len(popsyn_xwalk.TRACT.unique())
 
-print 'CHECK RECORDS'
+print('CHECK RECORDS')
 #print pums_pop[['TRACT']+['percent_age_group{}'.format(i) for i in range(1,8)]].fillna(0).describe()#, gqtot_acs_CT.TRACT.head(),pums_pop.TRACT.head()#[['TRACT']+['percent_age_group{}'.format(i) for i in range(1,8)]].head()
 pums_pop['PUMA'] = pums_pop['PUMA'].map(lambda n: n +STATE_FIPS*100000)
 
@@ -413,8 +413,8 @@ tazControl4['MALE'] = tazControl4['ct_pct']*tazControl4['B01001_002E']
 tazControl4['FEMALE'] = tazControl4['ct_pct']*tazControl4['B01001_026E']
 tazControl4['AGE0to17'] = tazControl4['ct_pct']*(tazControl4['B01001_003E']+tazControl4['B01001_027E']+tazControl4['B01001_004E']+tazControl4['B01001_005E']+tazControl4['B01001_006E']+tazControl4['B01001_028E']+tazControl4['B01001_029E']+tazControl4['B01001_030E'] - (tazControl4['gq_total']*tazControl4['percent_age_group1']))
 tazControl4['AGE0to17_no_subtract'] = tazControl4['ct_pct']*(tazControl4['B01001_003E']+tazControl4['B01001_027E']+tazControl4['B01001_004E']+tazControl4['B01001_005E']+tazControl4['B01001_006E']+tazControl4['B01001_028E']+tazControl4['B01001_029E']+tazControl4['B01001_030E'])
-print 'AGE GROUP1',tazControl4.AGE0to17.sum(), tazControl4.AGE0to17_no_subtract.sum()
-print tazControl4[['gq_total','percent_age_group1', 'percent_age_group2']].describe()
+print('AGE GROUP1',tazControl4.AGE0to17.sum(), tazControl4.AGE0to17_no_subtract.sum(), sep=' ')
+print(tazControl4[['gq_total','percent_age_group1', 'percent_age_group2']].describe(), sep=' ')
 tazControl4['AGE18to24'] = tazControl4['ct_pct']*(tazControl4['B01001_007E']+tazControl4['B01001_008E']+tazControl4['B01001_009E']+tazControl4['B01001_010E']+tazControl4['B01001_031E']+tazControl4['B01001_032E']+tazControl4['B01001_033E']+tazControl4['B01001_034E']- (tazControl4['gq_total']*tazControl4['percent_age_group2']))
 tazControl4['AGE18to24_no_subtract'] = tazControl4['ct_pct']*(tazControl4['B01001_007E']+tazControl4['B01001_008E']+tazControl4['B01001_009E']+tazControl4['B01001_010E']+tazControl4['B01001_031E']+tazControl4['B01001_032E']+tazControl4['B01001_033E']+tazControl4['B01001_034E'])
 tazControl4['AGE25to34'] = tazControl4['ct_pct']*(tazControl4['B01001_011E']+tazControl4['B01001_012E']+tazControl4['B01001_035E']+tazControl4['B01001_036E']- (tazControl4['gq_total']*tazControl4['percent_age_group3']))
@@ -422,23 +422,23 @@ tazControl4['AGE35to49'] = tazControl4['ct_pct']*(tazControl4['B01001_013E']+taz
 tazControl4['AGE50to64'] = tazControl4['ct_pct']*(tazControl4['B01001_016E']+tazControl4['B01001_017E']+tazControl4['B01001_018E']+tazControl4['B01001_019E']+tazControl4['B01001_040E']+tazControl4['B01001_041E']+tazControl4['B01001_042E']+tazControl4['B01001_043E']- (tazControl4['gq_total']*tazControl4['percent_age_group5']))
 tazControl4['AGE65to79'] = tazControl4['ct_pct']*(tazControl4['B01001_020E']+tazControl4['B01001_021E']+tazControl4['B01001_022E']+tazControl4['B01001_023E']+tazControl4['B01001_044E']+tazControl4['B01001_045E']+tazControl4['B01001_046E']+tazControl4['B01001_047E'] - (tazControl4['gq_total']*tazControl4['percent_age_group6']) )
 tazControl4['AGE80M'] = tazControl4['ct_pct']*(tazControl4['B01001_024E']+tazControl4['B01001_025E']+tazControl4['B01001_048E']+tazControl4['B01001_049E']- (tazControl4['gq_total']*tazControl4['percent_age_group7']))
-print 'AGE GROUP 2', tazControl4.AGE18to24.sum(), tazControl4.AGE18to24_no_subtract.sum()
+print('AGE GROUP 2', tazControl4.AGE18to24.sum(), tazControl4.AGE18to24_no_subtract.sum(), sep=' ')
 
 ##Total number of 4+ HHs
 seed_house_HH4M = seed_house[seed_house.NP>=4]
 sum_hh4m = seed_house_HH4M.WGTP.sum()
-print('Total households with 4 and more persons', sum_hh4m)
+print('Total households with 4 and more persons', sum_hh4m, sep=' ')
  
 ##average number of person in 4+ HHs weighted
 wgt_avg_per = (seed_house_HH4M.NP*seed_house_HH4M.WGTP).sum()/float(sum_hh4m)
-print('Avg. number of persons in 4+ person household (PUMS)', wgt_avg_per)
+print('Avg. number of persons in 4+ person household (PUMS)', wgt_avg_per, sep=' ')
 
 # total number of person in TAZ (using weighted average)
 nashville_pop_4m = nashville_pop - 1*tazControl4['HHSIZE1_S3'].sum()-2*tazControl4['HHSIZE2_S3'].sum()-3*tazControl4['HHSIZE3_S3'].sum()  #required population in 4 and more person households
 pop_hh_4m = wgt_avg_per*tazControl4['HHSIZE4M_S3'].sum() # existing population in 4 and more person households when used avg persons in 4 and more person households
 nashville_factor_4m = nashville_pop_4m/pop_hh_4m  #factor to have population as required
 wgt_avg_per = nashville_factor_4m*wgt_avg_per  #updated weight for households with 4 or more persons
-print('Avg. number of persons in 4+ person household (PUMS)', wgt_avg_per)
+print('Avg. number of persons in 4+ person household (PUMS)', wgt_avg_per, sep=' ')
 
 
 #total number of person in TAZ (using weighted average)
@@ -447,7 +447,7 @@ total_popu_TAZ  = 1*tazControl['HHSIZE1'].sum() +2*tazControl['HHSIZE2'].sum() +
 
 #total number of person in county
 per_sc = tazControl4['B01001_001E'].sum()
-print('Total persons in ACS', per_sc)
+print('Total persons in ACS', per_sc, sep=' ')
 
 tazControl4['TOT_POP_CENSUS'] = tazControl4['MALE']+tazControl4['FEMALE']
 tazControl4['TOTPOP_WGT'] = (tazControl4['HHSIZE1_S3']*1 + tazControl4['HHSIZE2_S3']*2 + tazControl4['HHSIZE3_S3']*3 + tazControl4['HHSIZE4M_S3']*wgt_avg_per)
@@ -467,19 +467,19 @@ for idx,col in enumerate(['MALE_S','FEMALE_S']):
 	col_list = [c for c in ['MALE_S','FEMALE_S']]
 	del col_list[idx]
 	tazControl4[col] = np.where((tazControl4[col] >= tazControl4[col_list[0]]), tazControl4[col]+tazControl4['diff_round_sex'], tazControl4[col])
-print "TOTPOP_WGT", tazControl4.TOTPOP_WGT.sum()
-print "diff round sex", tazControl4['TOTPOP_WGT'].sum()-tazControl4.MALE_S.sum()-tazControl4.FEMALE_S.sum()
+print("TOTPOP_WGT", tazControl4.TOTPOP_WGT.sum(), sep=' ')
+print("diff round sex", tazControl4['TOTPOP_WGT'].sum()-tazControl4.MALE_S.sum()-tazControl4.FEMALE_S.sum(), sep=' ')
 
 #rounding for person age variables
 tazControl4['diff_round_age']=tazControl4['TOTPOP_WGT'] - tazControl4['AGE0to17_S'] - tazControl4['AGE18to24_S'] - tazControl4['AGE25to34_S'] - tazControl4['AGE35to49_S'] - tazControl4['AGE50to64_S'] - tazControl4['AGE65to79_S'] - tazControl4['AGE80M_S']
 tazControl4=tazControl4.fillna(0)
-print "total pop before adding diff", tazControl4[['AGE0to17_S','AGE18to24_S','AGE25to34_S','AGE35to49_S','AGE50to64_S','AGE65to79_S','AGE80M_S']].sum().sum()
+print("total pop before adding diff", tazControl4[['AGE0to17_S','AGE18to24_S','AGE25to34_S','AGE35to49_S','AGE50to64_S','AGE65to79_S','AGE80M_S']].sum().sum(), sep=' ')
 for idx,col in enumerate(['AGE0to17_S','AGE18to24_S','AGE25to34_S','AGE35to49_S','AGE50to64_S','AGE65to79_S','AGE80M_S']):
 	col_list = [c for c in ['AGE0to17_S','AGE18to24_S','AGE25to34_S','AGE35to49_S','AGE50to64_S','AGE65to79_S','AGE80M_S']]
 	del col_list[idx]
 	tazControl4[col] = np.where((tazControl4[col] >= tazControl4[col_list[0]]) & (tazControl4[col] >= tazControl4[col_list[1]]) & (tazControl4[col] >= tazControl4[col_list[2]]) & (tazControl4[col] >= tazControl4[col_list[3]])& (tazControl4[col] >= tazControl4[col_list[4]])& (tazControl4[col] >= tazControl4[col_list[5]]), tazControl4[col]+tazControl4['diff_round_age'], tazControl4[col])
 
-print "difference from rounding age", tazControl4['TOTPOP_WGT'].sum()-tazControl4[['AGE0to17_S','AGE18to24_S','AGE25to34_S','AGE35to49_S','AGE50to64_S','AGE65to79_S','AGE80M_S']].sum().sum()
+print("difference from rounding age", tazControl4['TOTPOP_WGT'].sum()-tazControl4[['AGE0to17_S','AGE18to24_S','AGE25to34_S','AGE35to49_S','AGE50to64_S','AGE65to79_S','AGE80M_S']].sum().sum(), sep=' ')
 
 tazControl4['TOTPOP_S'] = tazControl4['AGE0to17_S']+tazControl4['AGE18to24_S']+tazControl4['AGE25to34_S']+tazControl4['AGE35to49_S']+tazControl4['AGE50to64_S']+tazControl4['AGE65to79_S']+tazControl4['AGE80M_S']
 tazControl4.rename(columns = {'PUMA_x':'PUMA'})[['TAZ','HHS','GQ','PUMA','COUNTY','HHSIZE1_S3','HHSIZE2_S3','HHSIZE3_S3','HHSIZE4M_S3','HHAGE1_S3','HHAGE2_S3','HHAGE3_S3',

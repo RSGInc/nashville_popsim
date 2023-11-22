@@ -33,15 +33,15 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/iam-2010-05-08/DeletionTaskFailureReasonType">AWS
    * API Reference</a></p>
    */
-  class DeletionTaskFailureReasonType
+  class AWS_IAM_API DeletionTaskFailureReasonType
   {
   public:
-    AWS_IAM_API DeletionTaskFailureReasonType();
-    AWS_IAM_API DeletionTaskFailureReasonType(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_IAM_API DeletionTaskFailureReasonType& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    DeletionTaskFailureReasonType();
+    DeletionTaskFailureReasonType(const Aws::Utils::Xml::XmlNode& xmlNode);
+    DeletionTaskFailureReasonType& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_IAM_API void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
-    AWS_IAM_API void OutputToStream(Aws::OStream& oStream, const char* location) const;
+    void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
+    void OutputToStream(Aws::OStream& oStream, const char* location) const;
 
 
     /**

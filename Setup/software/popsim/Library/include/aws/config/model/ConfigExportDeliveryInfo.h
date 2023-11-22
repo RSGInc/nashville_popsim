@@ -33,13 +33,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ConfigExportDeliveryInfo">AWS
    * API Reference</a></p>
    */
-  class ConfigExportDeliveryInfo
+  class AWS_CONFIGSERVICE_API ConfigExportDeliveryInfo
   {
   public:
-    AWS_CONFIGSERVICE_API ConfigExportDeliveryInfo();
-    AWS_CONFIGSERVICE_API ConfigExportDeliveryInfo(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API ConfigExportDeliveryInfo& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API Aws::Utils::Json::JsonValue Jsonize() const;
+    ConfigExportDeliveryInfo();
+    ConfigExportDeliveryInfo(Aws::Utils::Json::JsonView jsonValue);
+    ConfigExportDeliveryInfo& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**

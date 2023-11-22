@@ -30,13 +30,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/PendingAggregationRequest">AWS
    * API Reference</a></p>
    */
-  class PendingAggregationRequest
+  class AWS_CONFIGSERVICE_API PendingAggregationRequest
   {
   public:
-    AWS_CONFIGSERVICE_API PendingAggregationRequest();
-    AWS_CONFIGSERVICE_API PendingAggregationRequest(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API PendingAggregationRequest& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API Aws::Utils::Json::JsonValue Jsonize() const;
+    PendingAggregationRequest();
+    PendingAggregationRequest(Aws::Utils::Json::JsonView jsonValue);
+    PendingAggregationRequest& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**

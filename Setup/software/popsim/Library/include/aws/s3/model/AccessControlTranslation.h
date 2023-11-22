@@ -28,14 +28,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/AccessControlTranslation">AWS
    * API Reference</a></p>
    */
-  class AccessControlTranslation
+  class AWS_S3_API AccessControlTranslation
   {
   public:
-    AWS_S3_API AccessControlTranslation();
-    AWS_S3_API AccessControlTranslation(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API AccessControlTranslation& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    AccessControlTranslation();
+    AccessControlTranslation(const Aws::Utils::Xml::XmlNode& xmlNode);
+    AccessControlTranslation& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

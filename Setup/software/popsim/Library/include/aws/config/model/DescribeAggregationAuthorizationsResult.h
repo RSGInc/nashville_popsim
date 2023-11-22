@@ -26,12 +26,12 @@ namespace ConfigService
 {
 namespace Model
 {
-  class DescribeAggregationAuthorizationsResult
+  class AWS_CONFIGSERVICE_API DescribeAggregationAuthorizationsResult
   {
   public:
-    AWS_CONFIGSERVICE_API DescribeAggregationAuthorizationsResult();
-    AWS_CONFIGSERVICE_API DescribeAggregationAuthorizationsResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
-    AWS_CONFIGSERVICE_API DescribeAggregationAuthorizationsResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    DescribeAggregationAuthorizationsResult();
+    DescribeAggregationAuthorizationsResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    DescribeAggregationAuthorizationsResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
 
 
     /**

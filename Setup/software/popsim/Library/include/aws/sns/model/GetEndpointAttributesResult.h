@@ -32,12 +32,12 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/GetEndpointAttributesResponse">AWS
    * API Reference</a></p>
    */
-  class GetEndpointAttributesResult
+  class AWS_SNS_API GetEndpointAttributesResult
   {
   public:
-    AWS_SNS_API GetEndpointAttributesResult();
-    AWS_SNS_API GetEndpointAttributesResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_SNS_API GetEndpointAttributesResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    GetEndpointAttributesResult();
+    GetEndpointAttributesResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    GetEndpointAttributesResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     /**

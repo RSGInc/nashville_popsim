@@ -15,7 +15,6 @@
 #include <aws/core/utils/stream/ResponseStream.h>
 #include <aws/core/auth/AWSAuthSigner.h>
 #include <aws/core/client/CoreErrors.h>
-#include <aws/core/endpoint/EndpointParameter.h>
 
 namespace Aws
 {
@@ -52,15 +51,6 @@ namespace Aws
          * Get the headers for the request
          */
         virtual Aws::Http::HeaderValueCollection GetHeaders() const = 0;
-        /**
-         * Get the additional user-set custom headers for the request
-         */
-        virtual const Aws::Http::HeaderValueCollection& GetAdditionalCustomHeaders() const;
-        /**
-         * Set an additional custom header value under a key. This value will overwrite any previously set or regular header.
-         */
-        virtual void SetAdditionalCustomHeaderValue(const Aws::String& headerName, const Aws::String& headerValue);
-
         /**
          * Do nothing virtual, override this to add query strings to the request
          */
@@ -178,9 +168,6 @@ namespace Aws
 
         virtual const char* GetServiceRequestName() const = 0;
 
-        using EndpointParameters = Aws::Vector<Aws::Endpoint::EndpointParameter>;
-        virtual EndpointParameters GetEndpointContextParams() const;
-
     protected:
         /**
          * Default does nothing. Override this to convert what would otherwise be the payload of the
@@ -188,7 +175,6 @@ namespace Aws
          */
         virtual void DumpBodyToUrl(Aws::Http::URI& uri) const { AWS_UNREFERENCED_PARAM(uri); }
 
-        Aws::Http::HeaderValueCollection m_additionalCustomHeaders;
     private:
         Aws::IOStreamFactory m_responseStreamFactory;
 

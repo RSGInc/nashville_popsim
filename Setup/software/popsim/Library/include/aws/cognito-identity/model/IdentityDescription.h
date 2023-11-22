@@ -30,13 +30,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/IdentityDescription">AWS
    * API Reference</a></p>
    */
-  class IdentityDescription
+  class AWS_COGNITOIDENTITY_API IdentityDescription
   {
   public:
-    AWS_COGNITOIDENTITY_API IdentityDescription();
-    AWS_COGNITOIDENTITY_API IdentityDescription(Aws::Utils::Json::JsonView jsonValue);
-    AWS_COGNITOIDENTITY_API IdentityDescription& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_COGNITOIDENTITY_API Aws::Utils::Json::JsonValue Jsonize() const;
+    IdentityDescription();
+    IdentityDescription(Aws::Utils::Json::JsonView jsonValue);
+    IdentityDescription& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**

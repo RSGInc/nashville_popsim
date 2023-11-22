@@ -27,14 +27,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/Error">AWS API
    * Reference</a></p>
    */
-  class Error
+  class AWS_S3_API Error
   {
   public:
-    AWS_S3_API Error();
-    AWS_S3_API Error(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API Error& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    Error();
+    Error(const Aws::Utils::Xml::XmlNode& xmlNode);
+    Error& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

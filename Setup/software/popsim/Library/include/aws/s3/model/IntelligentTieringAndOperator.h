@@ -31,14 +31,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/IntelligentTieringAndOperator">AWS
    * API Reference</a></p>
    */
-  class IntelligentTieringAndOperator
+  class AWS_S3_API IntelligentTieringAndOperator
   {
   public:
-    AWS_S3_API IntelligentTieringAndOperator();
-    AWS_S3_API IntelligentTieringAndOperator(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API IntelligentTieringAndOperator& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    IntelligentTieringAndOperator();
+    IntelligentTieringAndOperator(const Aws::Utils::Xml::XmlNode& xmlNode);
+    IntelligentTieringAndOperator& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

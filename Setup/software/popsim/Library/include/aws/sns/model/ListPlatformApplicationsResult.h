@@ -32,12 +32,12 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/ListPlatformApplicationsResponse">AWS
    * API Reference</a></p>
    */
-  class ListPlatformApplicationsResult
+  class AWS_SNS_API ListPlatformApplicationsResult
   {
   public:
-    AWS_SNS_API ListPlatformApplicationsResult();
-    AWS_SNS_API ListPlatformApplicationsResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_SNS_API ListPlatformApplicationsResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    ListPlatformApplicationsResult();
+    ListPlatformApplicationsResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    ListPlatformApplicationsResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     /**

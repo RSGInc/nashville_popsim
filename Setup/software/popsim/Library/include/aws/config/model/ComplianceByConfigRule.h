@@ -31,13 +31,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ComplianceByConfigRule">AWS
    * API Reference</a></p>
    */
-  class ComplianceByConfigRule
+  class AWS_CONFIGSERVICE_API ComplianceByConfigRule
   {
   public:
-    AWS_CONFIGSERVICE_API ComplianceByConfigRule();
-    AWS_CONFIGSERVICE_API ComplianceByConfigRule(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API ComplianceByConfigRule& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API Aws::Utils::Json::JsonValue Jsonize() const;
+    ComplianceByConfigRule();
+    ComplianceByConfigRule(Aws::Utils::Json::JsonView jsonValue);
+    ComplianceByConfigRule& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**

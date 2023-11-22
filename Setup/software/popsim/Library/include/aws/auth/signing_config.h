@@ -11,8 +11,6 @@
 #include <aws/common/byte_buf.h>
 #include <aws/common/date_time.h>
 
-AWS_PUSH_SANE_WARNING_LEVEL
-
 struct aws_credentials;
 
 typedef bool(aws_should_sign_header_fn)(const struct aws_byte_cursor *name, void *userdata);
@@ -56,18 +54,19 @@ enum aws_signature_type {
     AWS_ST_HTTP_REQUEST_QUERY_PARAMS,
 
     /**
-     * Compute a signature for a payload chunk. The signable's input stream should be the chunk data and the
+     * Compute a signature for a payload chunk.  The signable's input stream should be the chunk data and the
      * signable should contain the most recent signature value (either the original http request or the most recent
      * chunk) in the "previous-signature" property.
      */
     AWS_ST_HTTP_REQUEST_CHUNK,
 
     /**
-     * Compute a signature for an event stream event. The signable's input stream should be the encoded event-stream
-     * message (headers + payload), the signable should contain the most recent signature value (either the original
-     * http request or the most recent event) in the "previous-signature" property.
+     * Compute a signature for an event stream event.  The signable's input stream should be the event payload, the
+     * signable should contain the most recent signature value (either the original http request or the most recent
+     * event) in the "previous-signature" property as well as any event headers that should be signed with the
+     * exception of ":date"
      *
-     * This option is only supported for Sigv4 for now.
+     * This option is not yet supported.
      */
     AWS_ST_HTTP_REQUEST_EVENT,
 
@@ -139,7 +138,7 @@ AWS_AUTH_API extern const struct aws_byte_cursor
  * 'STREAMING-AWS4-HMAC-SHA256-EVENTS'
  * For use with `aws_signing_config_aws.signed_body_value`.
  *
- * Event signing is only supported for Sigv4 for now.
+ * Event signing is not yet supported
  */
 AWS_AUTH_API extern const struct aws_byte_cursor g_aws_signed_body_value_streaming_aws4_hmac_sha256_events;
 
@@ -308,6 +307,5 @@ AWS_AUTH_API
 int aws_validate_aws_signing_config_aws(const struct aws_signing_config_aws *config);
 
 AWS_EXTERN_C_END
-AWS_POP_SANE_WARNING_LEVEL
 
 #endif /* AWS_AUTH_SIGNING_CONFIG_H */

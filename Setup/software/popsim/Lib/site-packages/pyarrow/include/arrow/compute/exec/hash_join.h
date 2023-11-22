@@ -24,7 +24,6 @@
 #include "arrow/compute/exec/accumulation_queue.h"
 #include "arrow/compute/exec/bloom_filter.h"
 #include "arrow/compute/exec/options.h"
-#include "arrow/compute/exec/query_context.h"
 #include "arrow/compute/exec/schema_util.h"
 #include "arrow/compute/exec/task_util.h"
 #include "arrow/result.h"
@@ -48,7 +47,7 @@ class HashJoinImpl {
   using AbortContinuationImpl = std::function<void()>;
 
   virtual ~HashJoinImpl() = default;
-  virtual Status Init(QueryContext* ctx, JoinType join_type, size_t num_threads,
+  virtual Status Init(ExecContext* ctx, JoinType join_type, size_t num_threads,
                       const HashJoinProjectionMaps* proj_map_left,
                       const HashJoinProjectionMaps* proj_map_right,
                       std::vector<JoinKeyCmp> key_cmp, Expression filter,

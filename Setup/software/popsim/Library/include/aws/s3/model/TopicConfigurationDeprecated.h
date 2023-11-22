@@ -33,14 +33,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/TopicConfigurationDeprecated">AWS
    * API Reference</a></p>
    */
-  class TopicConfigurationDeprecated
+  class AWS_S3_API TopicConfigurationDeprecated
   {
   public:
-    AWS_S3_API TopicConfigurationDeprecated();
-    AWS_S3_API TopicConfigurationDeprecated(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API TopicConfigurationDeprecated& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    TopicConfigurationDeprecated();
+    TopicConfigurationDeprecated(const Aws::Utils::Xml::XmlNode& xmlNode);
+    TopicConfigurationDeprecated& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     

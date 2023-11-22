@@ -32,12 +32,12 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/iam-2010-05-08/GetContextKeysForPolicyResponse">AWS
    * API Reference</a></p>
    */
-  class GetContextKeysForPrincipalPolicyResult
+  class AWS_IAM_API GetContextKeysForPrincipalPolicyResult
   {
   public:
-    AWS_IAM_API GetContextKeysForPrincipalPolicyResult();
-    AWS_IAM_API GetContextKeysForPrincipalPolicyResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_IAM_API GetContextKeysForPrincipalPolicyResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    GetContextKeysForPrincipalPolicyResult();
+    GetContextKeysForPrincipalPolicyResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    GetContextKeysForPrincipalPolicyResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     /**

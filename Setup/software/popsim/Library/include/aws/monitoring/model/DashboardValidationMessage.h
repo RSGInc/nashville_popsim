@@ -28,15 +28,15 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/DashboardValidationMessage">AWS
    * API Reference</a></p>
    */
-  class DashboardValidationMessage
+  class AWS_CLOUDWATCH_API DashboardValidationMessage
   {
   public:
-    AWS_CLOUDWATCH_API DashboardValidationMessage();
-    AWS_CLOUDWATCH_API DashboardValidationMessage(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_CLOUDWATCH_API DashboardValidationMessage& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    DashboardValidationMessage();
+    DashboardValidationMessage(const Aws::Utils::Xml::XmlNode& xmlNode);
+    DashboardValidationMessage& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_CLOUDWATCH_API void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
-    AWS_CLOUDWATCH_API void OutputToStream(Aws::OStream& oStream, const char* location) const;
+    void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
+    void OutputToStream(Aws::OStream& oStream, const char* location) const;
 
 
     /**

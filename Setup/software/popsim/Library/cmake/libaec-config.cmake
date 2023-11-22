@@ -41,7 +41,7 @@ endif ()
 
 # Check version here
 if (libaec_INCLUDE_DIR AND libaec_LIBRARY)
-  set(libaec_VERSION "1.0.6")
+  set(libaec_VERSION "1.1.2")
   set(SZIP_VERSION "2.0.1")
 endif ()
 

@@ -1244,11 +1244,8 @@ class MenuTest(AbstractWidgetTest, unittest.TestCase):
 
     def test_configure_type(self):
         widget = self.create()
-        self.checkEnumParam(
-            widget, 'type',
-            'normal', 'tearoff', 'menubar',
-            errmsg='bad type "{}": must be normal, tearoff, or menubar',
-            )
+        self.checkEnumParam(widget, 'type',
+                'normal', 'tearoff', 'menubar')
 
     def test_entryconfigure(self):
         m1 = self.create()

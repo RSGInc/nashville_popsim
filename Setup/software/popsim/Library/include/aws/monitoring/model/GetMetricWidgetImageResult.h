@@ -25,12 +25,12 @@ namespace CloudWatch
 {
 namespace Model
 {
-  class GetMetricWidgetImageResult
+  class AWS_CLOUDWATCH_API GetMetricWidgetImageResult
   {
   public:
-    AWS_CLOUDWATCH_API GetMetricWidgetImageResult();
-    AWS_CLOUDWATCH_API GetMetricWidgetImageResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_CLOUDWATCH_API GetMetricWidgetImageResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    GetMetricWidgetImageResult();
+    GetMetricWidgetImageResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    GetMetricWidgetImageResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     /**

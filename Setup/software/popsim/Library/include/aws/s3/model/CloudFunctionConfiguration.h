@@ -30,14 +30,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/CloudFunctionConfiguration">AWS
    * API Reference</a></p>
    */
-  class CloudFunctionConfiguration
+  class AWS_S3_API CloudFunctionConfiguration
   {
   public:
-    AWS_S3_API CloudFunctionConfiguration();
-    AWS_S3_API CloudFunctionConfiguration(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API CloudFunctionConfiguration& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    CloudFunctionConfiguration();
+    CloudFunctionConfiguration(const Aws::Utils::Xml::XmlNode& xmlNode);
+    CloudFunctionConfiguration& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     

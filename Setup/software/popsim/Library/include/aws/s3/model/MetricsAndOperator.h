@@ -32,14 +32,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/MetricsAndOperator">AWS
    * API Reference</a></p>
    */
-  class MetricsAndOperator
+  class AWS_S3_API MetricsAndOperator
   {
   public:
-    AWS_S3_API MetricsAndOperator();
-    AWS_S3_API MetricsAndOperator(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API MetricsAndOperator& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    MetricsAndOperator();
+    MetricsAndOperator(const Aws::Utils::Xml::XmlNode& xmlNode);
+    MetricsAndOperator& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

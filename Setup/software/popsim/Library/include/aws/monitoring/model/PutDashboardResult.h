@@ -26,12 +26,12 @@ namespace CloudWatch
 {
 namespace Model
 {
-  class PutDashboardResult
+  class AWS_CLOUDWATCH_API PutDashboardResult
   {
   public:
-    AWS_CLOUDWATCH_API PutDashboardResult();
-    AWS_CLOUDWATCH_API PutDashboardResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_CLOUDWATCH_API PutDashboardResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    PutDashboardResult();
+    PutDashboardResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    PutDashboardResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     /**

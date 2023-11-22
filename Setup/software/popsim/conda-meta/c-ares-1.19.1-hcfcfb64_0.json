@@ -4,8 +4,8 @@
  "channel": "https://conda.anaconda.org/conda-forge/win-64",
  "constrains": [],
  "depends": [
-  "ucrt >=10.0.20348.0",
   "vc >=14.2,<15",
+  "ucrt >=10.0.20348.0",
   "vc14_runtime >=14.29.30139"
  ],
  "extracted_package_dir": "",
@@ -213,7 +213,7 @@
     "path_type": "hardlink",
     "prefix_placeholder": "D:/bld/c-ares_1684782780453/_h_env",
     "sha256": "a71cd19a51e38ecfd4edd61dd053ee4dd7446c022a62d5e731521c2b39473954",
-    "sha256_in_prefix": "5719f0a57c960183b269fdbf98d6a3a474a10d7c5413dfddf61883948f158bba",
+    "sha256_in_prefix": "1621787b4786df341553da7d96dc150b98ca190962583b0a7fa4181448d99603",
     "size_in_bytes": 657
    },
    {

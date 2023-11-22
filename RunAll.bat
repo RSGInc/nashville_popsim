@@ -17,10 +17,10 @@
 ECHO %startTime%%Time%
 
 :: FLAGS - YES/NO
-SET RUN_CROSSWALK=NO
+SET RUN_CROSSWALK=YES
 SET RUN_CONTROLS=YES
 SET RUN_POPSIM_HH=YES
-SET RUN_POPSIM_GQ=NO
+SET RUN_POPSIM_GQ=YES
 SET RUN_VALIDATION=YES
 SET RUN_DAYSIMFORMAT=YES
 
@@ -38,6 +38,7 @@ SET POPSIMDIR=%WORKING_DIR%Setup
 SET VALID_DIR=%WORKING_DIR%Setup\validation
 :: Anaconda installation directory
 SET ANACONDA_DIR=%WORKING_DIR%Setup\software\popsim
+SET ACTIVATE_POPSIM=%ANACONDA_DIR%\Scripts\activate.bat
 SET R_SCRIPT=%WORKING_DIR%Setup\software\R\R-3.4.4\bin\x64\Rscript
 :: ---------------------------------------------------------------------
 :: Create Parameters file for R scripts
@@ -58,14 +59,16 @@ ECHO VALID_DIR,%VALID_DIR% >> %PARAMETERS_FILE%
 :: Create geographic crosswalk
 IF %RUN_CROSSWALK%==YES (
 	ECHO %startTime%%Time%: Running script to create crosswalk...
-	call %ANACONDA_DIR%\python.exe %WORKING_DIR%Scripts\createGeogXWalks.py %PARAMETERS_FILE% > Setup\logs\createGeoXWalks.log 2>&1
+	call %ACTIVATE_POPSIM%
+	call python %WORKING_DIR%Scripts\createGeogXWalks.py %PARAMETERS_FILE% > Setup\logs\createGeoXWalks.log 2>&1
 )
 	
 :: Download census data and create Controls
 IF %RUN_CONTROLS%==YES (
 	ECHO %startTime%%Time%: Create controls...
-	call %ANACONDA_DIR%\python.exe %WORKING_DIR%scripts\downloadCensusData.py %PARAMETERS_FILE% > Setup\logs\downloadCensus.log 2>&1
-	call %ANACONDA_DIR%\python.exe %WORKING_DIR%scripts\buildControls.py %PARAMETERS_FILE% > Setup\logs\buildControls.log 2>&1
+	call %ACTIVATE_POPSIM%
+	call python %WORKING_DIR%scripts\downloadCensusData.py %PARAMETERS_FILE% > Setup\logs\downloadCensus.log 2>&1
+	call python %WORKING_DIR%scripts\buildControls.py %PARAMETERS_FILE% > Setup\logs\buildControls.log 2>&1
 )
 
 :: Run PopulationSim for HH population
@@ -85,11 +88,13 @@ IF %RUN_POPSIM_GQ%==YES (
 :: Merge HH and GQ population
 IF %RUN_POPSIM_HH%==YES (
 	ECHO merging Group Quarters
-	CALL %ANACONDA_DIR%\python.exe %WORKING_DIR%scripts\mergeHHandGQ.py %PARAMETERS_FILE% > Setup\logs\mergePopulation.log 2>&1
+	call %ACTIVATE_POPSIM%
+	call python %WORKING_DIR%scripts\mergeHHandGQ.py %PARAMETERS_FILE% > Setup\logs\mergePopulation.log 2>&1
 ) ELSE (
 	IF %RUN_POPSIM_GQ%==YES (
 		ECHO merging Group Quarters
-		CALL %ANACONDA_DIR%\python.exe %WORKING_DIR%scripts\mergeHHandGQ.py %PARAMETERS_FILE% > Setup\logs\mergePopulation.log 2>&1
+	    call %ACTIVATE_POPSIM%
+	    call python %WORKING_DIR%scripts\mergeHHandGQ.py %PARAMETERS_FILE% > Setup\logs\mergePopulation.log 2>&1
 	)
 )
 
@@ -109,7 +114,8 @@ IF %RUN_DAYSIMFORMAT%==YES (
 	%R_SCRIPT% %WORKING_DIR%\scripts\popsimToDaysim_GQ.R %PARAMETERS_FILE% > Setup\logs\popsimToDaysim_GQ.log 2>&1
 	
 	ECHO %startTime%%Time%: Running Python script to combine DaySim Inputs for GQ...
-	CALL %ANACONDA_DIR%\python.exe %WORKING_DIR%scripts\popsimToDaysimMerge.py %PARAMETERS_FILE% > Setup\logs\mergeDaySimPopulation.log 2>&1
+	call %ACTIVATE_POPSIM%
+	call python %WORKING_DIR%scripts\popsimToDaysimMerge.py %PARAMETERS_FILE% > Setup\logs\mergeDaySimPopulation.log 2>&1
 	
 )
 

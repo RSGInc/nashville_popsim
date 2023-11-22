@@ -30,14 +30,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/SelectParameters">AWS
    * API Reference</a></p>
    */
-  class SelectParameters
+  class AWS_S3_API SelectParameters
   {
   public:
-    AWS_S3_API SelectParameters();
-    AWS_S3_API SelectParameters(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API SelectParameters& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    SelectParameters();
+    SelectParameters(const Aws::Utils::Xml::XmlNode& xmlNode);
+    SelectParameters& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

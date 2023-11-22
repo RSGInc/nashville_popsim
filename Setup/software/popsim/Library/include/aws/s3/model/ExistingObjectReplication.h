@@ -31,14 +31,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ExistingObjectReplication">AWS
    * API Reference</a></p>
    */
-  class ExistingObjectReplication
+  class AWS_S3_API ExistingObjectReplication
   {
   public:
-    AWS_S3_API ExistingObjectReplication();
-    AWS_S3_API ExistingObjectReplication(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API ExistingObjectReplication& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    ExistingObjectReplication();
+    ExistingObjectReplication(const Aws::Utils::Xml::XmlNode& xmlNode);
+    ExistingObjectReplication& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

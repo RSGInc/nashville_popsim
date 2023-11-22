@@ -33,7 +33,7 @@ namespace Aws
 
             /**
              * HTTP signing callback.  The second parameter is an aws error code,  The signing was successful
-             * if the error code is AWS_ERROR_SUCCESS.
+             * iff the error code is AWS_ERROR_SUCCESS.
              */
             using OnHttpRequestSigningComplete =
                 std::function<void(const std::shared_ptr<Aws::Crt::Http::HttpRequest> &, int)>;

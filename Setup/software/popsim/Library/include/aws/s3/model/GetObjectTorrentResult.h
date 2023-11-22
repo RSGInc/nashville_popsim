@@ -19,21 +19,21 @@ namespace S3
 {
 namespace Model
 {
-  class GetObjectTorrentResult
+  class AWS_S3_API GetObjectTorrentResult
   {
   public:
-    AWS_S3_API GetObjectTorrentResult();
+    GetObjectTorrentResult();
     //We have to define these because Microsoft doesn't auto generate them
-    AWS_S3_API GetObjectTorrentResult(GetObjectTorrentResult&&);
-    AWS_S3_API GetObjectTorrentResult& operator=(GetObjectTorrentResult&&);
+    GetObjectTorrentResult(GetObjectTorrentResult&&);
+    GetObjectTorrentResult& operator=(GetObjectTorrentResult&&);
     //we delete these because Microsoft doesn't handle move generation correctly
     //and we therefore don't trust them to get it right here either.
     GetObjectTorrentResult(const GetObjectTorrentResult&) = delete;
     GetObjectTorrentResult& operator=(const GetObjectTorrentResult&) = delete;
 
 
-    AWS_S3_API GetObjectTorrentResult(Aws::AmazonWebServiceResult<Aws::Utils::Stream::ResponseStream>&& result);
-    AWS_S3_API GetObjectTorrentResult& operator=(Aws::AmazonWebServiceResult<Aws::Utils::Stream::ResponseStream>&& result);
+    GetObjectTorrentResult(Aws::AmazonWebServiceResult<Aws::Utils::Stream::ResponseStream>&& result);
+    GetObjectTorrentResult& operator=(Aws::AmazonWebServiceResult<Aws::Utils::Stream::ResponseStream>&& result);
 
 
 

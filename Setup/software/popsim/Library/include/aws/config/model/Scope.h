@@ -34,13 +34,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/Scope">AWS API
    * Reference</a></p>
    */
-  class Scope
+  class AWS_CONFIGSERVICE_API Scope
   {
   public:
-    AWS_CONFIGSERVICE_API Scope();
-    AWS_CONFIGSERVICE_API Scope(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API Scope& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API Aws::Utils::Json::JsonValue Jsonize() const;
+    Scope();
+    Scope(Aws::Utils::Json::JsonView jsonValue);
+    Scope& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**

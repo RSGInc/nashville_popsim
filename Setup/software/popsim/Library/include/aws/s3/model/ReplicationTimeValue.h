@@ -27,14 +27,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ReplicationTimeValue">AWS
    * API Reference</a></p>
    */
-  class ReplicationTimeValue
+  class AWS_S3_API ReplicationTimeValue
   {
   public:
-    AWS_S3_API ReplicationTimeValue();
-    AWS_S3_API ReplicationTimeValue(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API ReplicationTimeValue& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    ReplicationTimeValue();
+    ReplicationTimeValue(const Aws::Utils::Xml::XmlNode& xmlNode);
+    ReplicationTimeValue& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

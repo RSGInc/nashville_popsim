@@ -30,14 +30,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/AnalyticsConfiguration">AWS
    * API Reference</a></p>
    */
-  class AnalyticsConfiguration
+  class AWS_S3_API AnalyticsConfiguration
   {
   public:
-    AWS_S3_API AnalyticsConfiguration();
-    AWS_S3_API AnalyticsConfiguration(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API AnalyticsConfiguration& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    AnalyticsConfiguration();
+    AnalyticsConfiguration(const Aws::Utils::Xml::XmlNode& xmlNode);
+    AnalyticsConfiguration& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

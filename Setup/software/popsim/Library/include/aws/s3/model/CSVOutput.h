@@ -29,14 +29,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/CSVOutput">AWS API
    * Reference</a></p>
    */
-  class CSVOutput
+  class AWS_S3_API CSVOutput
   {
   public:
-    AWS_S3_API CSVOutput();
-    AWS_S3_API CSVOutput(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API CSVOutput& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    CSVOutput();
+    CSVOutput(const Aws::Utils::Xml::XmlNode& xmlNode);
+    CSVOutput& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

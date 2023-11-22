@@ -31,13 +31,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/OrganizationConformancePackStatus">AWS
    * API Reference</a></p>
    */
-  class OrganizationConformancePackStatus
+  class AWS_CONFIGSERVICE_API OrganizationConformancePackStatus
   {
   public:
-    AWS_CONFIGSERVICE_API OrganizationConformancePackStatus();
-    AWS_CONFIGSERVICE_API OrganizationConformancePackStatus(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API OrganizationConformancePackStatus& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API Aws::Utils::Json::JsonValue Jsonize() const;
+    OrganizationConformancePackStatus();
+    OrganizationConformancePackStatus(Aws::Utils::Json::JsonView jsonValue);
+    OrganizationConformancePackStatus& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**

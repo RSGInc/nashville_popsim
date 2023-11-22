@@ -4,8 +4,8 @@
  "channel": "https://conda.anaconda.org/conda-forge/win-64",
  "constrains": [],
  "depends": [
-  "ucrt >=10.0.20348.0",
   "vc >=14.2,<15",
+  "ucrt >=10.0.20348.0",
   "vs2015_runtime >=14.29.30139"
  ],
  "extracted_package_dir": "",

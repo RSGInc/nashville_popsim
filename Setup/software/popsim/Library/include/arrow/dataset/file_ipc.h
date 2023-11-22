@@ -43,8 +43,6 @@ class ARROW_DS_EXPORT IpcFileFormat : public FileFormat {
  public:
   std::string type_name() const override { return kIpcTypeName; }
 
-  IpcFileFormat();
-
   bool Equals(const FileFormat& other) const override {
     return type_name() == other.type_name();
   }

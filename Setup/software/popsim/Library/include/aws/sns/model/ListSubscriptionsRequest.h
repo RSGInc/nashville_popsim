@@ -21,10 +21,10 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/ListSubscriptionsInput">AWS
    * API Reference</a></p>
    */
-  class ListSubscriptionsRequest : public SNSRequest
+  class AWS_SNS_API ListSubscriptionsRequest : public SNSRequest
   {
   public:
-    AWS_SNS_API ListSubscriptionsRequest();
+    ListSubscriptionsRequest();
 
     // Service request name is the Operation name which will send this request out,
     // each operation should has unique request name, so that we can get operation's name from this request.
@@ -32,10 +32,10 @@ namespace Model
     // so we can not get operation's name from response.
     inline virtual const char* GetServiceRequestName() const override { return "ListSubscriptions"; }
 
-    AWS_SNS_API Aws::String SerializePayload() const override;
+    Aws::String SerializePayload() const override;
 
   protected:
-    AWS_SNS_API void DumpBodyToUrl(Aws::Http::URI& uri ) const override;
+    void DumpBodyToUrl(Aws::Http::URI& uri ) const override;
 
   public:
 

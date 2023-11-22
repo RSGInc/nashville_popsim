@@ -24,21 +24,17 @@ namespace Model
 {
 
   /**
-   * <p>The event was already logged.</p>  <p> <code>PutLogEvents</code>
-   * actions are now always accepted and never return
-   * <code>DataAlreadyAcceptedException</code> regardless of whether a given batch of
-   * log events has already been accepted. </p> <p><h3>See Also:</h3>  
-   * <a
+   * <p>The event was already logged.</p><p><h3>See Also:</h3>   <a
    * href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/DataAlreadyAcceptedException">AWS
    * API Reference</a></p>
    */
-  class DataAlreadyAcceptedException
+  class AWS_CLOUDWATCHLOGS_API DataAlreadyAcceptedException
   {
   public:
-    AWS_CLOUDWATCHLOGS_API DataAlreadyAcceptedException();
-    AWS_CLOUDWATCHLOGS_API DataAlreadyAcceptedException(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CLOUDWATCHLOGS_API DataAlreadyAcceptedException& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CLOUDWATCHLOGS_API Aws::Utils::Json::JsonValue Jsonize() const;
+    DataAlreadyAcceptedException();
+    DataAlreadyAcceptedException(Aws::Utils::Json::JsonView jsonValue);
+    DataAlreadyAcceptedException& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     

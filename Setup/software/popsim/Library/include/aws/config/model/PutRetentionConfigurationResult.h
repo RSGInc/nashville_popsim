@@ -24,12 +24,12 @@ namespace ConfigService
 {
 namespace Model
 {
-  class PutRetentionConfigurationResult
+  class AWS_CONFIGSERVICE_API PutRetentionConfigurationResult
   {
   public:
-    AWS_CONFIGSERVICE_API PutRetentionConfigurationResult();
-    AWS_CONFIGSERVICE_API PutRetentionConfigurationResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
-    AWS_CONFIGSERVICE_API PutRetentionConfigurationResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    PutRetentionConfigurationResult();
+    PutRetentionConfigurationResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    PutRetentionConfigurationResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
 
 
     /**

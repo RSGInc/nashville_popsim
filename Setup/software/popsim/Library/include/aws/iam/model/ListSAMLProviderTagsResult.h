@@ -27,12 +27,12 @@ namespace IAM
 {
 namespace Model
 {
-  class ListSAMLProviderTagsResult
+  class AWS_IAM_API ListSAMLProviderTagsResult
   {
   public:
-    AWS_IAM_API ListSAMLProviderTagsResult();
-    AWS_IAM_API ListSAMLProviderTagsResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_IAM_API ListSAMLProviderTagsResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    ListSAMLProviderTagsResult();
+    ListSAMLProviderTagsResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    ListSAMLProviderTagsResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     /**

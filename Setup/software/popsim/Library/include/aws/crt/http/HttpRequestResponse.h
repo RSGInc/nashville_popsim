@@ -19,10 +19,7 @@ namespace Aws
         {
             class MqttConnection;
         }
-        namespace Mqtt5
-        {
-            class Mqtt5ClientCore;
-        }
+
         namespace Http
         {
             using HttpHeader = aws_http_header;
@@ -108,7 +105,6 @@ namespace Aws
             class AWS_CRT_CPP_API HttpRequest : public HttpMessage
             {
                 friend class Mqtt::MqttConnection;
-                friend class Mqtt5::Mqtt5ClientCore;
 
               public:
                 HttpRequest(Allocator *allocator = ApiAllocator());

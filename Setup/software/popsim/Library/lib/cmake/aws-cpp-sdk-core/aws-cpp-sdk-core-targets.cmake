@@ -7,7 +7,7 @@ if(CMAKE_VERSION VERSION_LESS "2.8.3")
    message(FATAL_ERROR "CMake >= 2.8.3 required")
 endif()
 cmake_policy(PUSH)
-cmake_policy(VERSION 2.8.3...3.24)
+cmake_policy(VERSION 2.8.3...3.23)
 #----------------------------------------------------------------
 # Generated CMake target import file.
 #----------------------------------------------------------------
@@ -59,7 +59,7 @@ endif()
 add_library(aws-cpp-sdk-core SHARED IMPORTED)
 
 set_target_properties(aws-cpp-sdk-core PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "AWS_SDK_VERSION_MAJOR=1;AWS_SDK_VERSION_MINOR=10;AWS_SDK_VERSION_PATCH=57;USE_WINDOWS_DLL_SEMANTICS;USE_IMPORT_EXPORT=1"
+  INTERFACE_COMPILE_DEFINITIONS "AWS_SDK_VERSION_MAJOR=1;AWS_SDK_VERSION_MINOR=9;AWS_SDK_VERSION_PATCH=379;USE_WINDOWS_DLL_SEMANTICS;USE_IMPORT_EXPORT=1"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
   INTERFACE_LINK_LIBRARIES "AWS::aws-crt-cpp"
 )

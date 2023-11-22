@@ -54,27 +54,27 @@ gqpop = gqpop.drop('household_id',axis = 1).merge(gqhh[['household_id_old','hous
 
 print(len(gqpop))
 
-hh_expand_id = pd.read_csv(os.path.join(outputDir,'HH','expanded_household_ids.csv'))
-gq_expand_id = pd.read_csv(os.path.join(outputDir,'GQ','expanded_household_ids.csv'))
-hh_expand_id.append(gq_expand_id).to_csv(os.path.join(outputDir,'combined','expanded_household_ids.csv'),index = False)
+hh_expand_id = pd.read_csv(os.path.join(outputDir,'HH','final_expanded_household_ids.csv'))
+gq_expand_id = pd.read_csv(os.path.join(outputDir,'GQ','final_expanded_household_ids.csv'))
+pd.concat([hh_expand_id, gq_expand_id], ignore_index=True).to_csv(os.path.join(outputDir,'combined','expanded_household_ids.csv'),index = False)
 
-hh_summary_id = pd.read_csv(os.path.join(outputDir,'HH','summary_MAZ_PUMA.csv'))
-gq_summary_id = pd.read_csv(os.path.join(outputDir,'GQ','summary_MAZ_PUMA.csv'))
+hh_summary_id = pd.read_csv(os.path.join(outputDir,'HH','final_summary_MAZ_PUMA.csv'))
+gq_summary_id = pd.read_csv(os.path.join(outputDir,'GQ','final_summary_MAZ_PUMA.csv'))
 hh_summary_id.merge(gq_summary_id, how = 'left', on = ['geography','id']).to_csv(os.path.join(outputDir,'combined','summary_MAZ_PUMA.csv'), index = False)
 
-hh_summary_taz = pd.read_csv(os.path.join(outputDir,'HH','summary_TAZ.csv'))
+hh_summary_taz = pd.read_csv(os.path.join(outputDir,'HH','final_summary_TAZ.csv'))
 # gq_summary_taz = pd.read_csv(os.path.join(outputDir,'GQ','summary_TAZ.csv'))
 # hh_summary_taz.merge(gq_summary_taz, how = 'left', on = ['geography','id']).to_csv(os.path.join(outputDir,'combined','summary_TAZ.csv'), index = False)
-hh_summary_taz.to_csv(os.path.join(outputDir,'combined','summary_TAZ.csv'), index = False)
+hh_summary_taz.to_csv(os.path.join(outputDir,'combined','final_summary_TAZ.csv'), index = False)
 
-hh_summary_MAZ = pd.read_csv(os.path.join(outputDir,'HH','summary_MAZ.csv'))
-gq_summary_MAZ = pd.read_csv(os.path.join(outputDir,'GQ','summary_MAZ.csv'))
+hh_summary_MAZ = pd.read_csv(os.path.join(outputDir,'HH','final_summary_MAZ.csv'))
+gq_summary_MAZ = pd.read_csv(os.path.join(outputDir,'GQ','final_summary_MAZ.csv'))
 hh_summary_MAZ.merge(gq_summary_MAZ, how = 'left', on = ['geography','id']).to_csv(os.path.join(outputDir,'combined','summary_MAZ.csv'), index = False)
 
 
 gqhh.to_csv(os.path.join(outputDir,'Combined','newhhidcheck.csv'), index = False)
-hh.merge(puma_veh, how = 'left', on = 'hh_id').rename(columns = {'hh_id':'hh_id_pums'}).append(gqhh.drop('household_id_old',axis = 1).rename(columns = {'hh_id':'hh_id_pums'}))[['household_id','hh_id_pums','HH','MAZ','TAZ','PUMA','NP','AGEHOH','HHINCADJ','workers','children','VEH','tenure','recent_mover','race_of_head']].fillna(-1).to_csv(os.path.join(outputDir,'Combined','synthetic_households.csv'), index = False)
-pop.append(gqpop.drop('household_id_old',axis = 1)).rename(columns = {'hh_id':'hh_id_pums'})[['hh_id_pums','household_id','MAZ','PUMA','per_num','AGEP']].to_csv(os.path.join(outputDir,'Combined','synthetic_persons.csv'), index = False)
+pd.concat([hh.merge(puma_veh, how = 'left', on = 'hh_id').rename(columns = {'hh_id':'hh_id_pums'}), gqhh.drop('household_id_old',axis = 1).rename(columns = {'hh_id':'hh_id_pums'})],ignore_index=True)[['household_id','hh_id_pums','HH','MAZ','TAZ','PUMA','NP','AGEHOH','HHINCADJ','workers','children','VEH','tenure','recent_mover','race_of_head']].fillna(-1).to_csv(os.path.join(outputDir,'Combined','synthetic_households.csv'), index = False)
+pd.concat([pop, gqpop.drop('household_id_old',axis = 1)], ignore_index=True).rename(columns = {'hh_id':'hh_id_pums'})[['hh_id_pums','household_id','MAZ','PUMA','per_num','AGEP']].to_csv(os.path.join(outputDir,'Combined','synthetic_persons.csv'), index = False)
 
 # Merge Seed Data for validation
 # seed_hh = pd.read_csv(os.path.join(WORKING_DIR,'Setup','data','seed_households.csv'))

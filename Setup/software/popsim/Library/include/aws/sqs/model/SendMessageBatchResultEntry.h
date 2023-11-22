@@ -29,15 +29,15 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/SendMessageBatchResultEntry">AWS
    * API Reference</a></p>
    */
-  class SendMessageBatchResultEntry
+  class AWS_SQS_API SendMessageBatchResultEntry
   {
   public:
-    AWS_SQS_API SendMessageBatchResultEntry();
-    AWS_SQS_API SendMessageBatchResultEntry(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_SQS_API SendMessageBatchResultEntry& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    SendMessageBatchResultEntry();
+    SendMessageBatchResultEntry(const Aws::Utils::Xml::XmlNode& xmlNode);
+    SendMessageBatchResultEntry& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_SQS_API void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
-    AWS_SQS_API void OutputToStream(Aws::OStream& oStream, const char* location) const;
+    void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
+    void OutputToStream(Aws::OStream& oStream, const char* location) const;
 
 
     /**

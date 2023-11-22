@@ -1,5 +1,6 @@
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Copyright by The HDF Group.                                               *
+ * Copyright by the Board of Trustees of the University of Illinois.         *
  * All rights reserved.                                                      *
  *                                                                           *
  * This file is part of HDF5.  The full HDF5 copyright notice, including     *
@@ -83,7 +84,7 @@
     (0x0020u) /**< Restrict search to objects opened through current file ID                                 \
                    (as opposed to objects opened through any file ID accessing this file) */
 
-#define H5F_FAMILY_DEFAULT 0 /* (hsize_t) */
+#define H5F_FAMILY_DEFAULT (hsize_t)0
 
 #ifdef H5_HAVE_PARALLEL
 /**
@@ -107,7 +108,7 @@ typedef enum H5F_scope_t {
 /**
  * Unlimited file size for H5Pset_external()
  */
-#define H5F_UNLIMITED HSIZE_UNDEF
+#define H5F_UNLIMITED ((hsize_t)(-1L))
 
 /**
  * How does file close behave?
@@ -188,11 +189,10 @@ typedef enum H5F_libver_t {
     H5F_LIBVER_V18      = 1, /**< Use the latest v18 format for storing objects */
     H5F_LIBVER_V110     = 2, /**< Use the latest v110 format for storing objects */
     H5F_LIBVER_V112     = 3, /**< Use the latest v112 format for storing objects */
-    H5F_LIBVER_V114     = 4, /**< Use the latest v114 format for storing objects */
-    H5F_LIBVER_NBOUNDS       /**< Sentinel */
+    H5F_LIBVER_NBOUNDS
 } H5F_libver_t;
 
-#define H5F_LIBVER_LATEST H5F_LIBVER_V114
+#define H5F_LIBVER_LATEST H5F_LIBVER_V112
 
 /**
  * File space handling strategy
@@ -352,17 +352,6 @@ H5_DLL htri_t H5Fis_accessible(const char *container_name, hid_t fapl_id);
  */
 H5_DLL hid_t H5Fcreate(const char *filename, unsigned flags, hid_t fcpl_id, hid_t fapl_id);
 /**
- * --------------------------------------------------------------------------
- * \ingroup ASYNC
- * \async_variant_of{H5Fcreate}
- */
-#ifndef H5_DOXYGEN
-H5_DLL hid_t H5Fcreate_async(const char *app_file, const char *app_func, unsigned app_line,
-                             const char *filename, unsigned flags, hid_t fcpl_id, hid_t fapl_id, hid_t es_id);
-#else
-H5_DLL hid_t H5Fcreate_async(const char *filename, unsigned flags, hid_t fcpl_id, hid_t fapl_id, hid_t es_id);
-#endif
-/**
  * \ingroup H5F
  *
  * \brief Opens an existing HDF5 file
@@ -456,17 +445,6 @@ H5_DLL hid_t H5Fcreate_async(const char *filename, unsigned flags, hid_t fcpl_id
  */
 H5_DLL hid_t H5Fopen(const char *filename, unsigned flags, hid_t fapl_id);
 /**
- * --------------------------------------------------------------------------
- * \ingroup ASYNC
- * \async_variant_of{H5Fopen}
- */
-#ifndef H5_DOXYGEN
-H5_DLL hid_t H5Fopen_async(const char *app_file, const char *app_func, unsigned app_line,
-                           const char *filename, unsigned flags, hid_t access_plist, hid_t es_id);
-#else
-H5_DLL hid_t H5Fopen_async(const char *filename, unsigned flags, hid_t access_plist, hid_t es_id);
-#endif
-/**
  * \ingroup H5F
  *
  * \brief Returns a new identifier for a previously-opened HDF5 file
@@ -492,17 +470,6 @@ H5_DLL hid_t H5Fopen_async(const char *filename, unsigned flags, hid_t access_pl
  *
  */
 H5_DLL hid_t H5Freopen(hid_t file_id);
-/**
- * --------------------------------------------------------------------------
- * \ingroup ASYNC
- * \async_variant_of{H5Freopen}
- */
-#ifndef H5_DOXYGEN
-H5_DLL hid_t H5Freopen_async(const char *app_file, const char *app_func, unsigned app_line, hid_t file_id,
-                             hid_t es_id);
-#else
-H5_DLL hid_t H5Freopen_async(hid_t file_id, hid_t es_id);
-#endif
 /**
  * \ingroup H5F
  *
@@ -536,17 +503,6 @@ H5_DLL hid_t H5Freopen_async(hid_t file_id, hid_t es_id);
  *
  */
 H5_DLL herr_t H5Fflush(hid_t object_id, H5F_scope_t scope);
-/**
- * --------------------------------------------------------------------------
- * \ingroup ASYNC
- * \async_variant_of{H5Fflush}
- */
-#ifndef H5_DOXYGEN
-H5_DLL herr_t H5Fflush_async(const char *app_file, const char *app_func, unsigned app_line, hid_t object_id,
-                             H5F_scope_t scope, hid_t es_id);
-#else
-H5_DLL herr_t H5Fflush_async(hid_t object_id, H5F_scope_t scope, hid_t es_id);
-#endif
 /**
  * \ingroup H5F
  *
@@ -591,17 +547,6 @@ H5_DLL herr_t H5Fflush_async(hid_t object_id, H5F_scope_t scope, hid_t es_id);
  *
  */
 H5_DLL herr_t H5Fclose(hid_t file_id);
-/**
- * --------------------------------------------------------------------------
- * \ingroup ASYNC
- * \async_variant_of{H5Fclose}
- */
-#ifndef H5_DOXYGEN
-H5_DLL herr_t H5Fclose_async(const char *app_file, const char *app_func, unsigned app_line, hid_t file_id,
-                             hid_t es_id);
-#else
-H5_DLL herr_t H5Fclose_async(hid_t file_id, hid_t es_id);
-#endif
 /**
  * \ingroup H5F
  *
@@ -1045,7 +990,7 @@ H5_DLL herr_t H5Fget_mdc_config(hid_t file_id, H5AC_cache_config_t *config_ptr);
  * \since 1.8.0
  *
  */
-H5_DLL herr_t H5Fset_mdc_config(hid_t file_id, const H5AC_cache_config_t *config_ptr);
+H5_DLL herr_t H5Fset_mdc_config(hid_t file_id, H5AC_cache_config_t *config_ptr);
 /**
  * \ingroup MDC
  *
@@ -1569,6 +1514,12 @@ H5_DLL herr_t H5Fstop_mdc_logging(hid_t file_id);
  */
 H5_DLL herr_t H5Fget_mdc_logging_status(hid_t file_id, hbool_t *is_enabled, hbool_t *is_currently_logging);
 /**
+ * \ingroup SWMR
+ *
+ * \todo UFO?
+ */
+H5_DLL herr_t H5Fformat_convert(hid_t fid);
+/**
  * \ingroup H5F
  *
  * \brief Resets the page buffer statistics
@@ -1619,7 +1570,7 @@ H5_DLL herr_t H5Fget_page_buffering_stats(hid_t file_id, unsigned accesses[2], u
  * \brief Obtains information about a cache image if it exists
  *
  * \file_id
- * \param[out] image_addr Offset of the cache image if it exists, or #HADDR_UNDEF if it does not
+ * \param[out] image_addr Offset of the cache image if it exists, or \c HADDR_UNDEF if it does not
  * \param[out] image_size Length of the cache image if it exists, or 0 if it does not
  * \returns \herr_t
  *
@@ -1790,33 +1741,6 @@ H5_DLL herr_t H5Fset_mpi_atomicity(hid_t file_id, hbool_t flag);
 H5_DLL herr_t H5Fget_mpi_atomicity(hid_t file_id, hbool_t *flag);
 #endif /* H5_HAVE_PARALLEL */
 
-/// \cond DEV
-/* Internal API routines */
-H5_DLL herr_t H5Fformat_convert(hid_t fid);
-/// \endcond
-
-/// \cond DEV
-/* API Wrappers for async routines */
-/* (Must be defined _after_ the function prototype) */
-/* (And must only defined when included in application code, not the library) */
-#ifndef H5F_MODULE
-#define H5Fcreate_async(...) H5Fcreate_async(__FILE__, __func__, __LINE__, __VA_ARGS__)
-#define H5Fopen_async(...)   H5Fopen_async(__FILE__, __func__, __LINE__, __VA_ARGS__)
-#define H5Freopen_async(...) H5Freopen_async(__FILE__, __func__, __LINE__, __VA_ARGS__)
-#define H5Fflush_async(...)  H5Fflush_async(__FILE__, __func__, __LINE__, __VA_ARGS__)
-#define H5Fclose_async(...)  H5Fclose_async(__FILE__, __func__, __LINE__, __VA_ARGS__)
-
-/* Define "wrapper" versions of function calls, to allow compile-time values to
- *      be passed in by language wrapper or library layer on top of HDF5.
- */
-#define H5Fcreate_async_wrap H5_NO_EXPAND(H5Fcreate_async)
-#define H5Fopen_async_wrap   H5_NO_EXPAND(H5Fopen_async)
-#define H5Freopen_async_wrap H5_NO_EXPAND(H5Freopen_async)
-#define H5Fflush_async_wrap  H5_NO_EXPAND(H5Fflush_async)
-#define H5Fclose_async_wrap  H5_NO_EXPAND(H5Fclose_async)
-#endif /* H5F_MODULE */
-/// \endcond
-
 /* Symbols defined for compatibility with previous versions of the HDF5 API.
  *
  * Use of these symbols is deprecated.
@@ -1896,7 +1820,6 @@ H5_DLL herr_t H5Fget_info1(hid_t obj_id, H5F_info1_t *file_info);
  *
  * \deprecated When?
  *
- * \todo In which version was this function introduced?
  * \todo In which version was this function deprecated?
  *
  */
@@ -1915,7 +1838,6 @@ H5_DLL herr_t H5Fset_latest_format(hid_t file_id, hbool_t latest_format);
  * \details H5Fis_hdf5() determines whether a file is in the HDF5 format.
  *
  * \todo In which version was this function deprecated?
- * \todo In which version was this function introduced?
  *
  */
 H5_DLL htri_t H5Fis_hdf5(const char *file_name);

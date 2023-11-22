@@ -1,16 +1,16 @@
 #libevent pkg-config source file
 
-prefix=D:/bld/libevent_1685726010509/_h_env/Library
-exec_prefix=D:/bld/libevent_1685726010509/_h_env/Library
-libdir=D:/bld/libevent_1685726010509/_h_env/Library/lib
-includedir=D:/bld/libevent_1685726010509/_h_env/Library/include
+prefix=D:/bld/libevent_1633489283544/_h_env/Library
+exec_prefix=D:/bld/libevent_1633489283544/_h_env/Library
+libdir=D:/bld/libevent_1633489283544/_h_env/Library/lib
+includedir=D:/bld/libevent_1633489283544/_h_env/Library/include
 
 Name: libevent_extra
 Description: libevent_extra
-Version: 2.1.12
+Version: 2.1.10
 Requires:
 Conflicts:
 Libs: -L${libdir} -levent_extra
-Libs.private:  -Lws2_32 -Lshell32 -Ladvapi32
+Libs.private:  -Lws2_32
 Cflags: -I${includedir}
 

@@ -32,14 +32,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/RestoreRequest">AWS
    * API Reference</a></p>
    */
-  class RestoreRequest
+  class AWS_S3_API RestoreRequest
   {
   public:
-    AWS_S3_API RestoreRequest();
-    AWS_S3_API RestoreRequest(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API RestoreRequest& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    RestoreRequest();
+    RestoreRequest(const Aws::Utils::Xml::XmlNode& xmlNode);
+    RestoreRequest& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

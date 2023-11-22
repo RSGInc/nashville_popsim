@@ -36,15 +36,15 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/InsightRuleContributor">AWS
    * API Reference</a></p>
    */
-  class InsightRuleContributor
+  class AWS_CLOUDWATCH_API InsightRuleContributor
   {
   public:
-    AWS_CLOUDWATCH_API InsightRuleContributor();
-    AWS_CLOUDWATCH_API InsightRuleContributor(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_CLOUDWATCH_API InsightRuleContributor& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    InsightRuleContributor();
+    InsightRuleContributor(const Aws::Utils::Xml::XmlNode& xmlNode);
+    InsightRuleContributor& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_CLOUDWATCH_API void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
-    AWS_CLOUDWATCH_API void OutputToStream(Aws::OStream& oStream, const char* location) const;
+    void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
+    void OutputToStream(Aws::OStream& oStream, const char* location) const;
 
 
     /**

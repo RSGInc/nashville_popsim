@@ -27,12 +27,12 @@ namespace CloudWatch
 {
 namespace Model
 {
-  class DescribeAlarmHistoryResult
+  class AWS_CLOUDWATCH_API DescribeAlarmHistoryResult
   {
   public:
-    AWS_CLOUDWATCH_API DescribeAlarmHistoryResult();
-    AWS_CLOUDWATCH_API DescribeAlarmHistoryResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_CLOUDWATCH_API DescribeAlarmHistoryResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    DescribeAlarmHistoryResult();
+    DescribeAlarmHistoryResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    DescribeAlarmHistoryResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     /**

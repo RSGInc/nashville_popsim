@@ -24,12 +24,12 @@ namespace ConfigService
 {
 namespace Model
 {
-  class GetOrganizationCustomRulePolicyResult
+  class AWS_CONFIGSERVICE_API GetOrganizationCustomRulePolicyResult
   {
   public:
-    AWS_CONFIGSERVICE_API GetOrganizationCustomRulePolicyResult();
-    AWS_CONFIGSERVICE_API GetOrganizationCustomRulePolicyResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
-    AWS_CONFIGSERVICE_API GetOrganizationCustomRulePolicyResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    GetOrganizationCustomRulePolicyResult();
+    GetOrganizationCustomRulePolicyResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    GetOrganizationCustomRulePolicyResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
 
 
     /**

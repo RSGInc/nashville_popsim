@@ -8,7 +8,6 @@
 #include <aws/core/client/ClientConfiguration.h>
 #include <aws/core/AmazonSerializableWebServiceRequest.h>
 #include <aws/core/client/AWSClient.h>
-#include <aws/core/client/AWSClientAsyncCRTP.h>
 #include <aws/core/utils/xml/XmlSerializer.h>
 #include <aws/sts/STSServiceClientModel.h>
 
@@ -25,7 +24,7 @@ namespace STS
    * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html">Temporary
    * Security Credentials</a>.</p>
    */
-  class AWS_STS_API STSClient : public Aws::Client::AWSXMLClient, public Aws::Client::ClientWithAsyncTemplateMethods<STSClient>
+  class AWS_STS_API STSClient : public Aws::Client::AWSXMLClient
   {
     public:
       typedef Aws::Client::AWSXMLClient BASECLASS;
@@ -36,48 +35,22 @@ namespace STS
         * Initializes client to use DefaultCredentialProviderChain, with default http client factory, and optional client config. If client config
         * is not specified, it will be initialized to default values.
         */
-        STSClient(const Aws::STS::STSClientConfiguration& clientConfiguration = Aws::STS::STSClientConfiguration(),
-                  std::shared_ptr<STSEndpointProviderBase> endpointProvider = Aws::MakeShared<STSEndpointProvider>(ALLOCATION_TAG));
+        STSClient(const Aws::Client::ClientConfiguration& clientConfiguration = Aws::Client::ClientConfiguration());
 
        /**
         * Initializes client to use SimpleAWSCredentialsProvider, with default http client factory, and optional client config. If client config
         * is not specified, it will be initialized to default values.
         */
         STSClient(const Aws::Auth::AWSCredentials& credentials,
-                  std::shared_ptr<STSEndpointProviderBase> endpointProvider = Aws::MakeShared<STSEndpointProvider>(ALLOCATION_TAG),
-                  const Aws::STS::STSClientConfiguration& clientConfiguration = Aws::STS::STSClientConfiguration());
+                  const Aws::Client::ClientConfiguration& clientConfiguration = Aws::Client::ClientConfiguration());
 
        /**
         * Initializes client to use specified credentials provider with specified client config. If http client factory is not supplied,
         * the default http client factory will be used
         */
         STSClient(const std::shared_ptr<Aws::Auth::AWSCredentialsProvider>& credentialsProvider,
-                  std::shared_ptr<STSEndpointProviderBase> endpointProvider = Aws::MakeShared<STSEndpointProvider>(ALLOCATION_TAG),
-                  const Aws::STS::STSClientConfiguration& clientConfiguration = Aws::STS::STSClientConfiguration());
+                  const Aws::Client::ClientConfiguration& clientConfiguration = Aws::Client::ClientConfiguration());
 
-
-        /* Legacy constructors due deprecation */
-       /**
-        * Initializes client to use DefaultCredentialProviderChain, with default http client factory, and optional client config. If client config
-        * is not specified, it will be initialized to default values.
-        */
-        STSClient(const Aws::Client::ClientConfiguration& clientConfiguration);
-
-       /**
-        * Initializes client to use SimpleAWSCredentialsProvider, with default http client factory, and optional client config. If client config
-        * is not specified, it will be initialized to default values.
-        */
-        STSClient(const Aws::Auth::AWSCredentials& credentials,
-                  const Aws::Client::ClientConfiguration& clientConfiguration);
-
-       /**
-        * Initializes client to use specified credentials provider with specified client config. If http client factory is not supplied,
-        * the default http client factory will be used
-        */
-        STSClient(const std::shared_ptr<Aws::Auth::AWSCredentialsProvider>& credentialsProvider,
-                  const Aws::Client::ClientConfiguration& clientConfiguration);
-
-        /* End of legacy constructors due deprecation */
         virtual ~STSClient();
 
 
@@ -105,16 +78,16 @@ namespace STS
          * operations.</p> <p>(Optional) You can pass inline or managed <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#policies_session">session
          * policies</a> to this operation. You can pass a single JSON policy document to
-         * use as an inline session policy. You can also specify up to 10 managed policy
-         * Amazon Resource Names (ARNs) to use as managed session policies. The plaintext
-         * that you use for both inline and managed session policies can't exceed 2,048
-         * characters. Passing policies to this operation returns new temporary
-         * credentials. The resulting session's permissions are the intersection of the
-         * role's identity-based policy and the session policies. You can use the role's
-         * temporary credentials in subsequent Amazon Web Services API calls to access
-         * resources in the account that owns the role. You cannot use session policies to
-         * grant more permissions than those allowed by the identity-based policy of the
-         * role that is being assumed. For more information, see <a
+         * use as an inline session policy. You can also specify up to 10 managed policies
+         * to use as managed session policies. The plaintext that you use for both inline
+         * and managed session policies can't exceed 2,048 characters. Passing policies to
+         * this operation returns new temporary credentials. The resulting session's
+         * permissions are the intersection of the role's identity-based policy and the
+         * session policies. You can use the role's temporary credentials in subsequent
+         * Amazon Web Services API calls to access resources in the account that owns the
+         * role. You cannot use session policies to grant more permissions than those
+         * allowed by the identity-based policy of the role that is being assumed. For more
+         * information, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#policies_session">Session
          * Policies</a> in the <i>IAM User Guide</i>.</p> <p>When you create a role, you
          * create two policies: A role trust policy that specifies <i>who</i> can assume
@@ -232,16 +205,16 @@ namespace STS
          * inline or managed <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#policies_session">session
          * policies</a> to this operation. You can pass a single JSON policy document to
-         * use as an inline session policy. You can also specify up to 10 managed policy
-         * Amazon Resource Names (ARNs) to use as managed session policies. The plaintext
-         * that you use for both inline and managed session policies can't exceed 2,048
-         * characters. Passing policies to this operation returns new temporary
-         * credentials. The resulting session's permissions are the intersection of the
-         * role's identity-based policy and the session policies. You can use the role's
-         * temporary credentials in subsequent Amazon Web Services API calls to access
-         * resources in the account that owns the role. You cannot use session policies to
-         * grant more permissions than those allowed by the identity-based policy of the
-         * role that is being assumed. For more information, see <a
+         * use as an inline session policy. You can also specify up to 10 managed policies
+         * to use as managed session policies. The plaintext that you use for both inline
+         * and managed session policies can't exceed 2,048 characters. Passing policies to
+         * this operation returns new temporary credentials. The resulting session's
+         * permissions are the intersection of the role's identity-based policy and the
+         * session policies. You can use the role's temporary credentials in subsequent
+         * Amazon Web Services API calls to access resources in the account that owns the
+         * role. You cannot use session policies to grant more permissions than those
+         * allowed by the identity-based policy of the role that is being assumed. For more
+         * information, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#policies_session">Session
          * Policies</a> in the <i>IAM User Guide</i>.</p> <p>Calling
          * <code>AssumeRoleWithSAML</code> does not require the use of Amazon Web Services
@@ -264,17 +237,16 @@ namespace STS
          * the values can’t exceed 256 characters. For these and additional limits, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-limits.html#reference_iam-limits-entity-length">IAM
          * and STS Character Limits</a> in the <i>IAM User Guide</i>.</p>  <p>An
-         * Amazon Web Services conversion compresses the passed inline session policy,
-         * managed policy ARNs, and session tags into a packed binary format that has a
-         * separate limit. Your request can fail for this limit even if your plaintext
-         * meets the other requirements. The <code>PackedPolicySize</code> response element
-         * indicates by percentage how close the policies and tags for your request are to
-         * the upper size limit.</p>  <p>You can pass a session tag with the same
-         * key as a tag that is attached to the role. When you do, session tags override
-         * the role's tags with the same key.</p> <p>An administrator must grant you the
-         * permissions necessary to pass session tags. The administrator can also create
-         * granular permissions to allow you to pass only specific session tags. For more
-         * information, see <a
+         * Amazon Web Services conversion compresses the passed session policies and
+         * session tags into a packed binary format that has a separate limit. Your request
+         * can fail for this limit even if your plaintext meets the other requirements. The
+         * <code>PackedPolicySize</code> response element indicates by percentage how close
+         * the policies and tags for your request are to the upper size limit. </p> 
+         * <p>You can pass a session tag with the same key as a tag that is attached to the
+         * role. When you do, session tags override the role's tags with the same key.</p>
+         * <p>An administrator must grant you the permissions necessary to pass session
+         * tags. The administrator can also create granular permissions to allow you to
+         * pass only specific session tags. For more information, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_attribute-based-access-control.html">Tutorial:
          * Using Tags for Attribute-Based Access Control</a> in the <i>IAM User
          * Guide</i>.</p> <p>You can set the session tags as transitive. Transitive tags
@@ -373,16 +345,16 @@ namespace STS
          * operations.</p> <p>(Optional) You can pass inline or managed <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#policies_session">session
          * policies</a> to this operation. You can pass a single JSON policy document to
-         * use as an inline session policy. You can also specify up to 10 managed policy
-         * Amazon Resource Names (ARNs) to use as managed session policies. The plaintext
-         * that you use for both inline and managed session policies can't exceed 2,048
-         * characters. Passing policies to this operation returns new temporary
-         * credentials. The resulting session's permissions are the intersection of the
-         * role's identity-based policy and the session policies. You can use the role's
-         * temporary credentials in subsequent Amazon Web Services API calls to access
-         * resources in the account that owns the role. You cannot use session policies to
-         * grant more permissions than those allowed by the identity-based policy of the
-         * role that is being assumed. For more information, see <a
+         * use as an inline session policy. You can also specify up to 10 managed policies
+         * to use as managed session policies. The plaintext that you use for both inline
+         * and managed session policies can't exceed 2,048 characters. Passing policies to
+         * this operation returns new temporary credentials. The resulting session's
+         * permissions are the intersection of the role's identity-based policy and the
+         * session policies. You can use the role's temporary credentials in subsequent
+         * Amazon Web Services API calls to access resources in the account that owns the
+         * role. You cannot use session policies to grant more permissions than those
+         * allowed by the identity-based policy of the role that is being assumed. For more
+         * information, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#policies_session">Session
          * Policies</a> in the <i>IAM User Guide</i>.</p> <p> <b>Tags</b> </p>
          * <p>(Optional) You can configure your IdP to pass attributes into your web
@@ -394,17 +366,16 @@ namespace STS
          * the values can’t exceed 256 characters. For these and additional limits, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-limits.html#reference_iam-limits-entity-length">IAM
          * and STS Character Limits</a> in the <i>IAM User Guide</i>.</p>  <p>An
-         * Amazon Web Services conversion compresses the passed inline session policy,
-         * managed policy ARNs, and session tags into a packed binary format that has a
-         * separate limit. Your request can fail for this limit even if your plaintext
-         * meets the other requirements. The <code>PackedPolicySize</code> response element
-         * indicates by percentage how close the policies and tags for your request are to
-         * the upper size limit.</p>  <p>You can pass a session tag with the same
-         * key as a tag that is attached to the role. When you do, the session tag
-         * overrides the role tag with the same key.</p> <p>An administrator must grant you
-         * the permissions necessary to pass session tags. The administrator can also
-         * create granular permissions to allow you to pass only specific session tags. For
-         * more information, see <a
+         * Amazon Web Services conversion compresses the passed session policies and
+         * session tags into a packed binary format that has a separate limit. Your request
+         * can fail for this limit even if your plaintext meets the other requirements. The
+         * <code>PackedPolicySize</code> response element indicates by percentage how close
+         * the policies and tags for your request are to the upper size limit. </p> 
+         * <p>You can pass a session tag with the same key as a tag that is attached to the
+         * role. When you do, the session tag overrides the role tag with the same key.</p>
+         * <p>An administrator must grant you the permissions necessary to pass session
+         * tags. The administrator can also create granular permissions to allow you to
+         * pass only specific session tags. For more information, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_attribute-based-access-control.html">Tutorial:
          * Using Tags for Attribute-Based Access Control</a> in the <i>IAM User
          * Guide</i>.</p> <p>You can set the session tags as transitive. Transitive tags
@@ -614,16 +585,16 @@ namespace STS
          * pass an inline or managed <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#policies_session">session
          * policy</a> to this operation. You can pass a single JSON policy document to use
-         * as an inline session policy. You can also specify up to 10 managed policy Amazon
-         * Resource Names (ARNs) to use as managed session policies. The plaintext that you
-         * use for both inline and managed session policies can't exceed 2,048
-         * characters.</p> <p>Though the session policy parameters are optional, if you do
-         * not pass a policy, then the resulting federated user session has no permissions.
-         * When you pass session policies, the session permissions are the intersection of
-         * the IAM user policies and the session policies that you pass. This gives you a
-         * way to further restrict the permissions for a federated user. You cannot use
-         * session policies to grant more permissions than those that are defined in the
-         * permissions policy of the IAM user. For more information, see <a
+         * as an inline session policy. You can also specify up to 10 managed policies to
+         * use as managed session policies. The plaintext that you use for both inline and
+         * managed session policies can't exceed 2,048 characters.</p> <p>Though the
+         * session policy parameters are optional, if you do not pass a policy, then the
+         * resulting federated user session has no permissions. When you pass session
+         * policies, the session permissions are the intersection of the IAM user policies
+         * and the session policies that you pass. This gives you a way to further restrict
+         * the permissions for a federated user. You cannot use session policies to grant
+         * more permissions than those that are defined in the permissions policy of the
+         * IAM user. For more information, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#policies_session">Session
          * Policies</a> in the <i>IAM User Guide</i>. For information about using
          * <code>GetFederationToken</code> to create temporary security credentials, see <a
@@ -744,14 +715,12 @@ namespace STS
 
 
         void OverrideEndpoint(const Aws::String& endpoint);
-        std::shared_ptr<STSEndpointProviderBase>& accessEndpointProvider();
   private:
-        friend class Aws::Client::ClientWithAsyncTemplateMethods<STSClient>;
-        void init(const STSClientConfiguration& clientConfiguration);
+        void init(const Aws::Client::ClientConfiguration& clientConfiguration);
 
-        STSClientConfiguration m_clientConfiguration;
+        Aws::String m_uri;
+        Aws::String m_configScheme;
         std::shared_ptr<Aws::Utils::Threading::Executor> m_executor;
-        std::shared_ptr<STSEndpointProviderBase> m_endpointProvider;
   };
 
 } // namespace STS

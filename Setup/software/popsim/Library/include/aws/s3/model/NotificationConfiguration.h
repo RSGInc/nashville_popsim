@@ -33,14 +33,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/NotificationConfiguration">AWS
    * API Reference</a></p>
    */
-  class NotificationConfiguration
+  class AWS_S3_API NotificationConfiguration
   {
   public:
-    AWS_S3_API NotificationConfiguration();
-    AWS_S3_API NotificationConfiguration(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API NotificationConfiguration& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    NotificationConfiguration();
+    NotificationConfiguration(const Aws::Utils::Xml::XmlNode& xmlNode);
+    NotificationConfiguration& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

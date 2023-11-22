@@ -26,12 +26,12 @@ namespace SNS
 {
 namespace Model
 {
-  class ListTagsForResourceResult
+  class AWS_SNS_API ListTagsForResourceResult
   {
   public:
-    AWS_SNS_API ListTagsForResourceResult();
-    AWS_SNS_API ListTagsForResourceResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_SNS_API ListTagsForResourceResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    ListTagsForResourceResult();
+    ListTagsForResourceResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    ListTagsForResourceResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     /**

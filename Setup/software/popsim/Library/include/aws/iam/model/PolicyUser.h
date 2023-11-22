@@ -34,15 +34,15 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/iam-2010-05-08/PolicyUser">AWS API
    * Reference</a></p>
    */
-  class PolicyUser
+  class AWS_IAM_API PolicyUser
   {
   public:
-    AWS_IAM_API PolicyUser();
-    AWS_IAM_API PolicyUser(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_IAM_API PolicyUser& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    PolicyUser();
+    PolicyUser(const Aws::Utils::Xml::XmlNode& xmlNode);
+    PolicyUser& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_IAM_API void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
-    AWS_IAM_API void OutputToStream(Aws::OStream& oStream, const char* location) const;
+    void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
+    void OutputToStream(Aws::OStream& oStream, const char* location) const;
 
 
     /**

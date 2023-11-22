@@ -8,7 +8,6 @@
 #include <aws/core/client/ClientConfiguration.h>
 #include <aws/core/AmazonSerializableWebServiceRequest.h>
 #include <aws/core/client/AWSClient.h>
-#include <aws/core/client/AWSClientAsyncCRTP.h>
 #include <aws/core/utils/xml/XmlSerializer.h>
 #include <aws/monitoring/CloudWatchServiceClientModel.h>
 
@@ -31,7 +30,7 @@ namespace CloudWatch
    * system-wide visibility into resource utilization, application performance, and
    * operational health.</p>
    */
-  class AWS_CLOUDWATCH_API CloudWatchClient : public Aws::Client::AWSXMLClient, public Aws::Client::ClientWithAsyncTemplateMethods<CloudWatchClient>
+  class AWS_CLOUDWATCH_API CloudWatchClient : public Aws::Client::AWSXMLClient
   {
     public:
       typedef Aws::Client::AWSXMLClient BASECLASS;
@@ -42,48 +41,22 @@ namespace CloudWatch
         * Initializes client to use DefaultCredentialProviderChain, with default http client factory, and optional client config. If client config
         * is not specified, it will be initialized to default values.
         */
-        CloudWatchClient(const Aws::CloudWatch::CloudWatchClientConfiguration& clientConfiguration = Aws::CloudWatch::CloudWatchClientConfiguration(),
-                         std::shared_ptr<CloudWatchEndpointProviderBase> endpointProvider = Aws::MakeShared<CloudWatchEndpointProvider>(ALLOCATION_TAG));
+        CloudWatchClient(const Aws::Client::ClientConfiguration& clientConfiguration = Aws::Client::ClientConfiguration());
 
        /**
         * Initializes client to use SimpleAWSCredentialsProvider, with default http client factory, and optional client config. If client config
         * is not specified, it will be initialized to default values.
         */
         CloudWatchClient(const Aws::Auth::AWSCredentials& credentials,
-                         std::shared_ptr<CloudWatchEndpointProviderBase> endpointProvider = Aws::MakeShared<CloudWatchEndpointProvider>(ALLOCATION_TAG),
-                         const Aws::CloudWatch::CloudWatchClientConfiguration& clientConfiguration = Aws::CloudWatch::CloudWatchClientConfiguration());
+                         const Aws::Client::ClientConfiguration& clientConfiguration = Aws::Client::ClientConfiguration());
 
        /**
         * Initializes client to use specified credentials provider with specified client config. If http client factory is not supplied,
         * the default http client factory will be used
         */
         CloudWatchClient(const std::shared_ptr<Aws::Auth::AWSCredentialsProvider>& credentialsProvider,
-                         std::shared_ptr<CloudWatchEndpointProviderBase> endpointProvider = Aws::MakeShared<CloudWatchEndpointProvider>(ALLOCATION_TAG),
-                         const Aws::CloudWatch::CloudWatchClientConfiguration& clientConfiguration = Aws::CloudWatch::CloudWatchClientConfiguration());
+                         const Aws::Client::ClientConfiguration& clientConfiguration = Aws::Client::ClientConfiguration());
 
-
-        /* Legacy constructors due deprecation */
-       /**
-        * Initializes client to use DefaultCredentialProviderChain, with default http client factory, and optional client config. If client config
-        * is not specified, it will be initialized to default values.
-        */
-        CloudWatchClient(const Aws::Client::ClientConfiguration& clientConfiguration);
-
-       /**
-        * Initializes client to use SimpleAWSCredentialsProvider, with default http client factory, and optional client config. If client config
-        * is not specified, it will be initialized to default values.
-        */
-        CloudWatchClient(const Aws::Auth::AWSCredentials& credentials,
-                         const Aws::Client::ClientConfiguration& clientConfiguration);
-
-       /**
-        * Initializes client to use specified credentials provider with specified client config. If http client factory is not supplied,
-        * the default http client factory will be used
-        */
-        CloudWatchClient(const std::shared_ptr<Aws::Auth::AWSCredentialsProvider>& credentialsProvider,
-                         const Aws::Client::ClientConfiguration& clientConfiguration);
-
-        /* End of legacy constructors due deprecation */
         virtual ~CloudWatchClient();
 
 
@@ -107,7 +80,7 @@ namespace CloudWatch
          * cycle by changing the rule of one of the composite alarms in the cycle to remove
          * a dependency that creates the cycle. The simplest change to make to break a
          * cycle is to change the <code>AlarmRule</code> of one of the alarms to
-         * <code>false</code>. </p> <p>Additionally, the evaluation of composite alarms
+         * <code>False</code>. </p> <p>Additionally, the evaluation of composite alarms
          * stops if CloudWatch detects a cycle in the evaluation path. </p>
          * <p><h3>See Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/DeleteAlarms">AWS
@@ -676,20 +649,16 @@ namespace CloudWatch
          * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricData.html">GetMetricData</a>
          * or <a
          * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricStatistics.html">GetMetricStatistics</a>
-         * to get statistical data.</p> <p>Up to 500 results are returned for any one call.
-         * To retrieve additional results, use the returned token with subsequent
-         * calls.</p> <p>After you create a metric, allow up to 15 minutes for the metric
-         * to appear. To see metric statistics sooner, use <a
+         * to obtain statistical data.</p> <p>Up to 500 results are returned for any one
+         * call. To retrieve additional results, use the returned token with subsequent
+         * calls.</p> <p>After you create a metric, allow up to 15 minutes before the
+         * metric appears. You can see statistics about the metric sooner by using <a
          * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricData.html">GetMetricData</a>
          * or <a
          * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricStatistics.html">GetMetricStatistics</a>.</p>
-         * <p>If you are using CloudWatch cross-account observability, you can use this
-         * operation in a monitoring account and view metrics from the linked source
-         * accounts. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html">CloudWatch
-         * cross-account observability</a>.</p> <p> <code>ListMetrics</code> doesn't return
-         * information about metrics if those metrics haven't reported data in the past two
-         * weeks. To retrieve those metrics, use <a
+         * <p> <code>ListMetrics</code> doesn't return information about metrics if those
+         * metrics haven't reported data in the past two weeks. To retrieve those metrics,
+         * use <a
          * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricData.html">GetMetricData</a>
          * or <a
          * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricStatistics.html">GetMetricStatistics</a>.</p><p><h3>See
@@ -770,7 +739,7 @@ namespace CloudWatch
          * get out of such a situation, you must break the cycle by changing the rule of
          * one of the composite alarms in the cycle to remove a dependency that creates the
          * cycle. The simplest change to make to break a cycle is to change the
-         * <code>AlarmRule</code> of one of the alarms to <code>false</code>. </p>
+         * <code>AlarmRule</code> of one of the alarms to <code>False</code>. </p>
          * <p>Additionally, the evaluation of composite alarms stops if CloudWatch detects
          * a cycle in the evaluation path. </p>  <p>When this operation creates an
          * alarm, the alarm state is immediately set to <code>INSUFFICIENT_DATA</code>. The
@@ -884,26 +853,23 @@ namespace CloudWatch
 
         /**
          * <p>Creates or updates an alarm and associates it with the specified metric,
-         * metric math expression, anomaly detection model, or Metrics Insights query. For
-         * more information about using a Metrics Insights query for an alarm, see <a
-         * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Create_Metrics_Insights_Alarm.html">Create
-         * alarms on Metrics Insights queries</a>.</p> <p>Alarms based on anomaly detection
-         * models cannot have Auto Scaling actions.</p> <p>When this operation creates an
-         * alarm, the alarm state is immediately set to <code>INSUFFICIENT_DATA</code>. The
-         * alarm is then evaluated and its state is set appropriately. Any actions
-         * associated with the new state are then executed.</p> <p>When you update an
-         * existing alarm, its state is left unchanged, but the update completely
-         * overwrites the previous configuration of the alarm.</p> <p>If you are an IAM
-         * user, you must have Amazon EC2 permissions for some alarm operations:</p> <ul>
-         * <li> <p>The <code>iam:CreateServiceLinkedRole</code> for all alarms with EC2
-         * actions</p> </li> <li> <p>The <code>iam:CreateServiceLinkedRole</code> to create
-         * an alarm with Systems Manager OpsItem actions.</p> </li> </ul> <p>The first time
-         * you create an alarm in the Amazon Web Services Management Console, the CLI, or
-         * by using the PutMetricAlarm API, CloudWatch creates the necessary service-linked
-         * role for you. The service-linked roles are called
-         * <code>AWSServiceRoleForCloudWatchEvents</code> and
-         * <code>AWSServiceRoleForCloudWatchAlarms_ActionSSM</code>. For more information,
-         * see <a
+         * metric math expression, or anomaly detection model.</p> <p>Alarms based on
+         * anomaly detection models cannot have Auto Scaling actions.</p> <p>When this
+         * operation creates an alarm, the alarm state is immediately set to
+         * <code>INSUFFICIENT_DATA</code>. The alarm is then evaluated and its state is set
+         * appropriately. Any actions associated with the new state are then executed.</p>
+         * <p>When you update an existing alarm, its state is left unchanged, but the
+         * update completely overwrites the previous configuration of the alarm.</p> <p>If
+         * you are an IAM user, you must have Amazon EC2 permissions for some alarm
+         * operations:</p> <ul> <li> <p>The <code>iam:CreateServiceLinkedRole</code> for
+         * all alarms with EC2 actions</p> </li> <li> <p>The
+         * <code>iam:CreateServiceLinkedRole</code> to create an alarm with Systems Manager
+         * OpsItem actions.</p> </li> </ul> <p>The first time you create an alarm in the
+         * Amazon Web Services Management Console, the CLI, or by using the PutMetricAlarm
+         * API, CloudWatch creates the necessary service-linked role for you. The
+         * service-linked roles are called <code>AWSServiceRoleForCloudWatchEvents</code>
+         * and <code>AWSServiceRoleForCloudWatchAlarms_ActionSSM</code>. For more
+         * information, see <a
          * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role">Amazon
          * Web Services service-linked role</a>.</p> <p> <b>Cross-account alarms</b> </p>
          * <p>You can set an alarm on metrics in the current account, or in another
@@ -1000,11 +966,11 @@ namespace CloudWatch
 
         /**
          * <p>Creates or updates a metric stream. Metric streams can automatically stream
-         * CloudWatch metrics to Amazon Web Services destinations, including Amazon S3, and
+         * CloudWatch metrics to Amazon Web Services destinations including Amazon S3 and
          * to many third-party solutions.</p> <p>For more information, see <a
          * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Metric-Streams.html">
-         * Using Metric Streams</a>.</p> <p>To create a metric stream, you must be signed
-         * in to an account that has the <code>iam:PassRole</code> permission and either
+         * Using Metric Streams</a>.</p> <p>To create a metric stream, you must be logged
+         * on to an account that has the <code>iam:PassRole</code> permission and either
          * the <code>CloudWatchFullAccess</code> policy or the
          * <code>cloudwatch:PutMetricStream</code> permission.</p> <p>When you create or
          * update a metric stream, you choose one of the following:</p> <ul> <li> <p>Stream
@@ -1016,17 +982,13 @@ namespace CloudWatch
          * always sends the <code>MAX</code>, <code>MIN</code>, <code>SUM</code>, and
          * <code>SAMPLECOUNT</code> statistics for each metric that is streamed. You can
          * use the <code>StatisticsConfigurations</code> parameter to have the metric
-         * stream send additional statistics in the stream. Streaming additional statistics
-         * incurs additional costs. For more information, see <a
+         * stream also send additional statistics in the stream. Streaming additional
+         * statistics incurs additional costs. For more information, see <a
          * href="https://aws.amazon.com/cloudwatch/pricing/">Amazon CloudWatch Pricing</a>.
          * </p> <p>When you use <code>PutMetricStream</code> to create a new metric stream,
          * the stream is created in the <code>running</code> state. If you use it to update
-         * an existing stream, the state of the stream is not changed.</p> <p>If you are
-         * using CloudWatch cross-account observability and you create a metric stream in a
-         * monitoring account, you can choose whether to include metrics from source
-         * accounts in the stream. For more information, see <a
-         * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html">CloudWatch
-         * cross-account observability</a>.</p><p><h3>See Also:</h3>   <a
+         * an existing stream, the state of the stream is not changed.</p><p><h3>See
+         * Also:</h3>   <a
          * href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/PutMetricStream">AWS
          * API Reference</a></p>
          */
@@ -1159,14 +1121,12 @@ namespace CloudWatch
 
 
         void OverrideEndpoint(const Aws::String& endpoint);
-        std::shared_ptr<CloudWatchEndpointProviderBase>& accessEndpointProvider();
   private:
-        friend class Aws::Client::ClientWithAsyncTemplateMethods<CloudWatchClient>;
-        void init(const CloudWatchClientConfiguration& clientConfiguration);
+        void init(const Aws::Client::ClientConfiguration& clientConfiguration);
 
-        CloudWatchClientConfiguration m_clientConfiguration;
+        Aws::String m_uri;
+        Aws::String m_configScheme;
         std::shared_ptr<Aws::Utils::Threading::Executor> m_executor;
-        std::shared_ptr<CloudWatchEndpointProviderBase> m_endpointProvider;
   };
 
 } // namespace CloudWatch

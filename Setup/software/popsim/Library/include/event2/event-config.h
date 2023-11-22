@@ -10,15 +10,15 @@
 #define EVENT2_EVENT_CONFIG_H_INCLUDED_
 
 /* Numeric representation of the version */
-#define EVENT__NUMERIC_VERSION 0x02010c00
-#define EVENT__PACKAGE_VERSION "2.1.12"
+#define EVENT__NUMERIC_VERSION 0x02010a00
+#define EVENT__PACKAGE_VERSION "2.1.10"
 
 #define EVENT__VERSION_MAJOR 2
 #define EVENT__VERSION_MINOR 1
-#define EVENT__VERSION_PATCH 12
+#define EVENT__VERSION_PATCH 10
 
 /* Version number of package */
-#define EVENT__VERSION "2.1.12-stable"
+#define EVENT__VERSION "2.1.10-beta"
 
 /* Name of package */
 #define EVENT__PACKAGE "libevent"
@@ -75,8 +75,11 @@
 /* Define to 1 if you have the declaration of `KERN_ARND'. */
 #define EVENT__HAVE_DECL_KERN_ARND 0
 
-/* Define to 1 if you have `getrandom' function. */
-/* #undef EVENT__HAVE_GETRANDOM */
+/* Define to 1 if you have the declaration of `KERN_RANDOM'. */
+#define EVENT__HAVE_DECL_KERN_RANDOM 0
+
+/* Define to 1 if you have the declaration of `RANDOM_UUID'. */
+#define EVENT__HAVE_DECL_RANDOM_UUID 0
 
 /* Define if /dev/poll is available */
 /* #undef EVENT__HAVE_DEVPOLL */
@@ -115,7 +118,7 @@
 #define EVENT__HAVE_FCNTL_H 1
 
 /* Define to 1 if you have the `getaddrinfo' function. */
-#define EVENT__HAVE_GETADDRINFO 1
+/* #undef EVENT__HAVE_GETADDRINFO */
 
 /* Define to 1 if you have the `getegid' function. */
 /* #undef EVENT__HAVE_GETEGID */
@@ -140,13 +143,13 @@
 /* #undef EVENT__HAVE_GETIFADDRS */
 
 /* Define to 1 if you have the `getnameinfo' function. */
-#define EVENT__HAVE_GETNAMEINFO 1
+/* #undef EVENT__HAVE_GETNAMEINFO */
 
 /* Define to 1 if you have the `getprotobynumber' function. */
-#define EVENT__HAVE_GETPROTOBYNUMBER 1
+/* #undef EVENT__HAVE_GETPROTOBYNUMBER */
 
 /* Define to 1 if you have the `getservbyname' function. */
-#define EVENT__HAVE_GETSERVBYNAME 1
+/* #undef EVENT__HAVE_GETSERVBYNAME */
 
 /* Define to 1 if you have the `gettimeofday' function. */
 /* #undef EVENT__HAVE_GETTIMEOFDAY */
@@ -177,9 +180,6 @@
 
 /* Define to 1 if you have the <mach/mach_time.h> header file. */
 /* #undef EVENT__HAVE_MACH_MACH_TIME_H */
-
-/* Define to 1 if you have the <mach/mach.h> header file. */
-/* #undef EVENT__HAVE_MACH_MACH_H */
 
 /* Define to 1 if you have the <memory.h> header file. */
 #define EVENT__HAVE_MEMORY_H 1
@@ -233,7 +233,7 @@
 /* #undef EVENT__HAVE_PTHREADS */
 
 /* Define to 1 if you have the `putenv' function. */
-#define EVENT__HAVE_PUTENV 1
+/* #undef EVENT__HAVE_PUTENV */
 
 /* Define to 1 if the system has the type `sa_family_t'. */
 /* #undef EVENT__HAVE_SA_FAMILY_T */
@@ -274,6 +274,9 @@
 /* Define to 1 if you have the <stdlib.h> header file. */
 #define EVENT__HAVE_STDLIB_H 1
 
+/* Define to 1 if you have the <strings.h> header file. */
+/* #undef EVENT__HAVE_STRINGS_H */
+
 /* Define to 1 if you have the <string.h> header file. */
 #define EVENT__HAVE_STRING_H 1
 
@@ -287,13 +290,7 @@
 /* #undef EVENT__HAVE_STRTOK_R */
 
 /* Define to 1 if you have the `strtoll' function. */
-#define EVENT__HAVE_STRTOLL 1
-
-/* Define to 1 if you have the `_gmtime64_s' function. */
-#define EVENT__HAVE__GMTIME64_S 1
-
-/* Define to 1 if you have the `_gmtime64' function. */
-#define EVENT__HAVE__GMTIME64 1
+/* #undef EVENT__HAVE_STRTOLL */
 
 /* Define to 1 if the system has the type `struct addrinfo'. */
 #define EVENT__HAVE_STRUCT_ADDRINFO 1
@@ -370,9 +367,6 @@
 /* Define to 1 if you have the <sys/stat.h> header file. */
 #define EVENT__HAVE_SYS_STAT_H 1
 
-/* Define to 1 if you have the <sys/random.h> header file. */
-/* #undef EVENT__HAVE_SYS_RANDOM_H */
-
 /* Define to 1 if you have the <sys/sysctl.h> header file. */
 /* #undef EVENT__HAVE_SYS_SYSCTL_H */
 
@@ -401,17 +395,17 @@
 /* #undef EVENT__HAVE_TIMERADD */
 
 /* Define if timerclear is defined in <sys/time.h> */
-#define EVENT__HAVE_TIMERCLEAR 1
+/* #undef EVENT__HAVE_TIMERCLEAR */
 
 /* Define if timercmp is defined in <sys/time.h> */
-#define EVENT__HAVE_TIMERCMP 1
+/* #undef EVENT__HAVE_TIMERCMP */
 
 
 /* Define to 1 if you have the `timerfd_create' function. */
 /* #undef EVENT__HAVE_TIMERFD_CREATE */
 
 /* Define if timerisset is defined in <sys/time.h> */
-#define EVENT__HAVE_TIMERISSET 1
+/* #undef EVENT__HAVE_TIMERISSET */
 
 /* Define to 1 if the system has the type `uint8_t'. */
 #define EVENT__HAVE_UINT8_T 1

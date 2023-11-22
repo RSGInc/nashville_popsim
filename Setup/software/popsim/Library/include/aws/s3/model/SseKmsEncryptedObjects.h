@@ -28,14 +28,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/SseKmsEncryptedObjects">AWS
    * API Reference</a></p>
    */
-  class SseKmsEncryptedObjects
+  class AWS_S3_API SseKmsEncryptedObjects
   {
   public:
-    AWS_S3_API SseKmsEncryptedObjects();
-    AWS_S3_API SseKmsEncryptedObjects(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API SseKmsEncryptedObjects& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    SseKmsEncryptedObjects();
+    SseKmsEncryptedObjects(const Aws::Utils::Xml::XmlNode& xmlNode);
+    SseKmsEncryptedObjects& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

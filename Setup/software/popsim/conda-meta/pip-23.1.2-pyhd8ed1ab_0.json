@@ -4,9 +4,9 @@
  "channel": "https://conda.anaconda.org/conda-forge/noarch",
  "constrains": [],
  "depends": [
-  "python >=3.7",
   "setuptools",
-  "wheel"
+  "wheel",
+  "python >=3.7"
  ],
  "extracted_package_dir": "",
  "features": "",

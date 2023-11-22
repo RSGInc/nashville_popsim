@@ -7,8 +7,6 @@
  */
 #include <aws/common/common.h>
 
-AWS_PUSH_SANE_WARNING_LEVEL
-
 struct aws_byte_cursor;
 struct aws_byte_buf;
 
@@ -27,6 +25,5 @@ AWS_COMMON_API int aws_uuid_to_str(const struct aws_uuid *uuid, struct aws_byte_
 AWS_COMMON_API bool aws_uuid_equals(const struct aws_uuid *a, const struct aws_uuid *b);
 
 AWS_EXTERN_C_END
-AWS_POP_SANE_WARNING_LEVEL
 
 #endif /* AWS_COMMON_UUID_H */

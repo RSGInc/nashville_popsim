@@ -27,14 +27,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/IndexDocument">AWS
    * API Reference</a></p>
    */
-  class IndexDocument
+  class AWS_S3_API IndexDocument
   {
   public:
-    AWS_S3_API IndexDocument();
-    AWS_S3_API IndexDocument(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API IndexDocument& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    IndexDocument();
+    IndexDocument(const Aws::Utils::Xml::XmlNode& xmlNode);
+    IndexDocument& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

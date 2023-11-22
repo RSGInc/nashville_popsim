@@ -11,8 +11,6 @@
 #include <aws/http/request_response.h>
 #include <aws/http/status_code.h>
 
-AWS_PUSH_SANE_WARNING_LEVEL
-
 struct aws_http_client_connection_options;
 struct aws_http_connection_manager_options;
 
@@ -509,21 +507,6 @@ struct aws_http_proxy_config *aws_http_proxy_config_new_from_proxy_options(
     const struct aws_http_proxy_options *options);
 
 /**
- * Create a persistent proxy configuration from non-persistent proxy options.
- *
- * @param allocator memory allocator to use
- * @param options http proxy options to source proxy configuration from
- * @param is_tls_connection tls connection info of the main connection to determine connection_type
- *                          when the connection_type is legacy.
- * @return
- */
-AWS_HTTP_API
-struct aws_http_proxy_config *aws_http_proxy_config_new_from_proxy_options_with_tls_info(
-    struct aws_allocator *allocator,
-    const struct aws_http_proxy_options *proxy_options,
-    bool is_tls_connection);
-
-/**
  * Clones an existing proxy configuration.  A refactor could remove this (do a "move" between the old and new user
  * data in the one spot it's used) but that should wait until we have better test cases for the logic where this
  * gets invoked (ntlm/kerberos chains).
@@ -568,6 +551,5 @@ AWS_HTTP_API int aws_http_proxy_new_socket_channel(
     const struct aws_http_proxy_options *proxy_options);
 
 AWS_EXTERN_C_END
-AWS_POP_SANE_WARNING_LEVEL
 
 #endif /* AWS_PROXY_STRATEGY_H */

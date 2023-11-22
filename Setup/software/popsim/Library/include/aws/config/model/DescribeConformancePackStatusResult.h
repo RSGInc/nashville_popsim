@@ -26,12 +26,12 @@ namespace ConfigService
 {
 namespace Model
 {
-  class DescribeConformancePackStatusResult
+  class AWS_CONFIGSERVICE_API DescribeConformancePackStatusResult
   {
   public:
-    AWS_CONFIGSERVICE_API DescribeConformancePackStatusResult();
-    AWS_CONFIGSERVICE_API DescribeConformancePackStatusResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
-    AWS_CONFIGSERVICE_API DescribeConformancePackStatusResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    DescribeConformancePackStatusResult();
+    DescribeConformancePackStatusResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    DescribeConformancePackStatusResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
 
 
     /**

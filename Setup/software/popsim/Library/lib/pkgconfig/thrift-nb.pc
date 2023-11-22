@@ -17,14 +17,14 @@
 # under the License.
 #
 
-prefix=D:/bld/thrift-split_1685891113428/_h_env/Library
-exec_prefix=D:/bld/thrift-split_1685891113428/_h_env/Library/bin
-libdir=D:/bld/thrift-split_1685891113428/_h_env/Library/lib
-includedir=D:/bld/thrift-split_1685891113428/_h_env/Library/include
+prefix=D:/bld/thrift-split_1663078006813/_h_env/Library
+exec_prefix=D:/bld/thrift-split_1663078006813/_h_env/Library/bin
+libdir=D:/bld/thrift-split_1663078006813/_h_env/Library/lib
+includedir=D:/bld/thrift-split_1663078006813/_h_env/Library/include
 
 Name: Thrift
 Description: Thrift Nonblocking API
-Version: 0.18.1
-Requires: thrift = 0.18.1
+Version: 0.16.0
+Requires: thrift = 0.16.0
 Libs: -L${libdir} -lthriftnb
 Cflags: -I${includedir}

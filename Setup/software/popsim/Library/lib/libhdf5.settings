@@ -3,13 +3,13 @@
 
 General Information:
 -------------------
-                   HDF5 Version: 1.14.0
-                  Configured on: 2023-03-08
+                   HDF5 Version: 1.12.1
+                  Configured on: 2022-03-04
                   Configured by: Ninja
-                    Host system: Windows-10.0.20348
+                    Host system: Windows-10.0.17763
               Uname information: Windows
                        Byte sex: little-endian
-             Installation point: D:/bld/hdf5_1678273087160/_h_env/Library
+             Installation point: D:/bld/hdf5_split_1646412567021/_h_env/Library
 
 Compiling Options:
 ------------------
@@ -26,22 +26,22 @@ Linking Options:
                         LDFLAGS: /machine:x64
                      H5_LDFLAGS: 
                      AM_LDFLAGS: 
-                Extra libraries: shlwapi;D:/bld/hdf5_1678273087160/_h_env/Library/lib/libcurl.lib;D:/bld/hdf5_1678273087160/_h_env/Library/lib/libssl.lib;D:/bld/hdf5_1678273087160/_h_env/Library/lib/libcrypto.lib
-                       Archiver: C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/lib.exe
+                Extra libraries: D:/bld/hdf5_split_1646412567021/_h_env/Library/lib/libcurl.lib;D:/bld/hdf5_split_1646412567021/_h_env/Library/lib/libssl.lib;D:/bld/hdf5_split_1646412567021/_h_env/Library/lib/libcrypto.lib
+                       Archiver: C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Tools/MSVC/14.16.27023/bin/HostX64/x64/lib.exe
                          Ranlib: :
 
 Languages:
 ----------
                               C: YES
-                     C Compiler: C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/cl.exe 19.29.30148.0
+                     C Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Tools/MSVC/14.16.27023/bin/HostX64/x64/cl.exe 19.16.27045.0
                        CPPFLAGS: 
                     H5_CPPFLAGS: 
                     AM_CPPFLAGS: 
-                         CFLAGS:   /DWIN32 /D_WINDOWS -wd5105
+                         CFLAGS:   /DWIN32 /D_WINDOWS 
                       H5_CFLAGS: /W3;/wd4100;/wd4706;/wd4127
                       AM_CFLAGS: 
                Shared C Library: YES
-               Static C Library: NO
+               Static C Library: YES
 
                         Fortran: OFF
                Fortran Compiler:  
@@ -49,43 +49,42 @@ Languages:
                H5 Fortran Flags: 
                AM Fortran Flags: 
          Shared Fortran Library: YES
-         Static Fortran Library: NO
-               Module Directory: D:/bld/hdf5_1678273087160/work/build/mod
+         Static Fortran Library: YES
 
                             C++: ON
-                   C++ Compiler: C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/cl.exe 19.29.30148.0
-                      C++ Flags:  -LTCG  /DWIN32 /D_WINDOWS /GR /EHsc /EHsc -wd5105
+                   C++ Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Tools/MSVC/14.16.27023/bin/HostX64/x64/cl.exe 19.16.27045.0
+                      C++ Flags:   
                    H5 C++ Flags: /W3;/wd4100;/wd4706;/wd4127
                    AM C++ Flags: 
              Shared C++ Library: YES
-             Static C++ Library: NO
+             Static C++ Library: YES
 
                             JAVA: OFF
                  JAVA Compiler:  
 
 Features:
 ---------
-                     Parallel HDF5: OFF
-  Parallel Filtered Dataset Writes: 
-                Large Parallel I/O: 
-                High-level library: ON
-Dimension scales w/ new references: 
-                  Build HDF5 Tests: ON
-                  Build HDF5 Tools: ON
-                   Build GIF Tools: ON
-                      Threadsafety: ON
-               Default API mapping: v114
-    With deprecated public symbols: ON
-            I/O filters (external):  DEFLATE DECODE
-                        Direct VFD: 
-                        Mirror VFD: 
-                     Subfiling VFD: 
-                (Read-Only) S3 VFD: 1
-              (Read-Only) HDFS VFD: 
-    Packages w/ extra debug output: 
-                       API Tracing: OFF
-              Using memory checker: OFF
-            Function Stack Tracing: OFF
-                  Use file locking: best-effort
-         Strict File Format Checks: OFF
-      Optimization Instrumentation: 
+                   Parallel HDF5: OFF
+Parallel Filtered Dataset Writes: 
+              Large Parallel I/O: 
+              High-level library: ON
+                Build HDF5 Tests: ON
+                Build HDF5 Tools: ON
+                    Threadsafety: ON (recursive RW locks: ) 
+             Default API mapping: v112
+  With deprecated public symbols: ON
+          I/O filters (external):  DEFLATE
+                             MPE: 
+                      Direct VFD: 
+                      Mirror VFD: 
+              (Read-Only) S3 VFD: 1
+            (Read-Only) HDFS VFD: 
+                         dmalloc: 
+  Packages w/ extra debug output: 
+                     API Tracing: OFF
+            Using memory checker: OFF
+ Memory allocation sanity checks: OFF
+          Function Stack Tracing: OFF
+                Use file locking: best-effort
+       Strict File Format Checks: OFF
+    Optimization Instrumentation: 

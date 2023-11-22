@@ -7,7 +7,7 @@ if(CMAKE_VERSION VERSION_LESS "2.8.3")
    message(FATAL_ERROR "CMake >= 2.8.3 required")
 endif()
 cmake_policy(PUSH)
-cmake_policy(VERSION 2.8.3...3.24)
+cmake_policy(VERSION 2.8.3...3.22)
 #----------------------------------------------------------------
 # Generated CMake target import file.
 #----------------------------------------------------------------
@@ -60,7 +60,7 @@ add_library(thriftnb::thriftnb SHARED IMPORTED)
 
 set_target_properties(thriftnb::thriftnb PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "thrift::thrift;D:/bld/thrift-split_1685891113428/_h_env/Library/lib/event.lib"
+  INTERFACE_LINK_LIBRARIES "thrift::thrift;D:/bld/thrift-split_1663078006813/work/thirdparty/src/libevent/lib/libevent.lib"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

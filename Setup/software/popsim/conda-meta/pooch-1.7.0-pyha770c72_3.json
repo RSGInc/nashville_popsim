@@ -4,10 +4,10 @@
  "channel": "https://conda.anaconda.org/conda-forge/noarch",
  "constrains": [],
  "depends": [
-  "packaging >=20.0",
-  "platformdirs >=2.5.0",
   "python >=3.7",
-  "requests >=2.19.0"
+  "packaging >=20.0",
+  "requests >=2.19.0",
+  "platformdirs >=2.5.0"
  ],
  "extracted_package_dir": "",
  "features": "",

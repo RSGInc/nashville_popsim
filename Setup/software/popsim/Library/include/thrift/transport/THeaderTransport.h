@@ -33,6 +33,8 @@
 #include <inttypes.h>
 #endif
 
+#include <boost/scoped_array.hpp>
+
 #include <thrift/protocol/TProtocolTypes.h>
 #include <thrift/transport/TBufferTransports.h>
 #include <thrift/transport/TTransport.h>
@@ -221,7 +223,7 @@ protected:
 
   // Buffers to use for transform processing
   uint32_t tBufSize_;
-  std::unique_ptr<uint8_t[]> tBuf_;
+  boost::scoped_array<uint8_t> tBuf_;
 
   void readString(uint8_t*& ptr, /* out */ std::string& str, uint8_t const* headerBoundary);
 

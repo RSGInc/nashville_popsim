@@ -32,13 +32,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/ResultField">AWS
    * API Reference</a></p>
    */
-  class ResultField
+  class AWS_CLOUDWATCHLOGS_API ResultField
   {
   public:
-    AWS_CLOUDWATCHLOGS_API ResultField();
-    AWS_CLOUDWATCHLOGS_API ResultField(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CLOUDWATCHLOGS_API ResultField& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CLOUDWATCHLOGS_API Aws::Utils::Json::JsonValue Jsonize() const;
+    ResultField();
+    ResultField(Aws::Utils::Json::JsonView jsonValue);
+    ResultField& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**

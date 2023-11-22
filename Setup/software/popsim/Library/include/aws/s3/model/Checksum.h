@@ -28,14 +28,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/Checksum">AWS API
    * Reference</a></p>
    */
-  class Checksum
+  class AWS_S3_API Checksum
   {
   public:
-    AWS_S3_API Checksum();
-    AWS_S3_API Checksum(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API Checksum& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    Checksum();
+    Checksum(const Aws::Utils::Xml::XmlNode& xmlNode);
+    Checksum& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

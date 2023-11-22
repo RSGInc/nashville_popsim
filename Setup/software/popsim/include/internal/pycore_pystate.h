@@ -135,8 +135,6 @@ struct _is {
     struct _warnings_runtime_state warnings;
 
     PyObject *audit_hooks;
-
-    int int_max_str_digits;
 };
 
 PyAPI_FUNC(struct _is*) _PyInterpreterState_LookUpID(PY_INT64_T);

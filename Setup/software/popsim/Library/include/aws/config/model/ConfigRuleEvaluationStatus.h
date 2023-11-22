@@ -33,13 +33,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ConfigRuleEvaluationStatus">AWS
    * API Reference</a></p>
    */
-  class ConfigRuleEvaluationStatus
+  class AWS_CONFIGSERVICE_API ConfigRuleEvaluationStatus
   {
   public:
-    AWS_CONFIGSERVICE_API ConfigRuleEvaluationStatus();
-    AWS_CONFIGSERVICE_API ConfigRuleEvaluationStatus(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API ConfigRuleEvaluationStatus& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API Aws::Utils::Json::JsonValue Jsonize() const;
+    ConfigRuleEvaluationStatus();
+    ConfigRuleEvaluationStatus(Aws::Utils::Json::JsonView jsonValue);
+    ConfigRuleEvaluationStatus& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**

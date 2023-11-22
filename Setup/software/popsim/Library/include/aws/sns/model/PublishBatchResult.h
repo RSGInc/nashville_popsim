@@ -27,12 +27,12 @@ namespace SNS
 {
 namespace Model
 {
-  class PublishBatchResult
+  class AWS_SNS_API PublishBatchResult
   {
   public:
-    AWS_SNS_API PublishBatchResult();
-    AWS_SNS_API PublishBatchResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_SNS_API PublishBatchResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    PublishBatchResult();
+    PublishBatchResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    PublishBatchResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     /**

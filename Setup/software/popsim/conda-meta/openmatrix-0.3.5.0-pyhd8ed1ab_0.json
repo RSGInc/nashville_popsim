@@ -4,9 +4,9 @@
  "channel": "https://conda.anaconda.org/conda-forge/noarch",
  "constrains": [],
  "depends": [
+  "python >=3.6",
   "numpy >=1.5.0",
-  "pytables >=3.1.0",
-  "python >=3.6"
+  "pytables >=3.1.0"
  ],
  "extracted_package_dir": "",
  "features": "",

@@ -30,13 +30,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/UnprocessedIdentityId">AWS
    * API Reference</a></p>
    */
-  class UnprocessedIdentityId
+  class AWS_COGNITOIDENTITY_API UnprocessedIdentityId
   {
   public:
-    AWS_COGNITOIDENTITY_API UnprocessedIdentityId();
-    AWS_COGNITOIDENTITY_API UnprocessedIdentityId(Aws::Utils::Json::JsonView jsonValue);
-    AWS_COGNITOIDENTITY_API UnprocessedIdentityId& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_COGNITOIDENTITY_API Aws::Utils::Json::JsonValue Jsonize() const;
+    UnprocessedIdentityId();
+    UnprocessedIdentityId(Aws::Utils::Json::JsonView jsonValue);
+    UnprocessedIdentityId& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**

@@ -32,15 +32,15 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/Datapoint">AWS
    * API Reference</a></p>
    */
-  class Datapoint
+  class AWS_CLOUDWATCH_API Datapoint
   {
   public:
-    AWS_CLOUDWATCH_API Datapoint();
-    AWS_CLOUDWATCH_API Datapoint(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_CLOUDWATCH_API Datapoint& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    Datapoint();
+    Datapoint(const Aws::Utils::Xml::XmlNode& xmlNode);
+    Datapoint& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_CLOUDWATCH_API void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
-    AWS_CLOUDWATCH_API void OutputToStream(Aws::OStream& oStream, const char* location) const;
+    void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
+    void OutputToStream(Aws::OStream& oStream, const char* location) const;
 
 
     /**

@@ -69,8 +69,7 @@ constexpr int64_t kListMaximumElements = std::numeric_limits<int32_t>::max() - 1
 /// For example, ArrayBuilder* pointing to BinaryBuilder should be downcast before use.
 class ARROW_EXPORT ArrayBuilder {
  public:
-  explicit ArrayBuilder(MemoryPool* pool, int64_t alignment = kDefaultBufferAlignment)
-      : pool_(pool), alignment_(alignment), null_bitmap_builder_(pool, alignment) {}
+  explicit ArrayBuilder(MemoryPool* pool) : pool_(pool), null_bitmap_builder_(pool) {}
 
   ARROW_DEFAULT_MOVE_AND_ASSIGN(ArrayBuilder);
 
@@ -284,7 +283,6 @@ class ARROW_EXPORT ArrayBuilder {
                         const char* message);
 
   MemoryPool* pool_;
-  int64_t alignment_;
 
   TypedBufferBuilder<bool> null_bitmap_builder_;
   int64_t null_count_ = 0;

@@ -24,10 +24,10 @@ namespace Model
 
   /**
    */
-  class PutBucketInventoryConfigurationRequest : public S3Request
+  class AWS_S3_API PutBucketInventoryConfigurationRequest : public S3Request
   {
   public:
-    AWS_S3_API PutBucketInventoryConfigurationRequest();
+    PutBucketInventoryConfigurationRequest();
 
     // Service request name is the Operation name which will send this request out,
     // each operation should has unique request name, so that we can get operation's name from this request.
@@ -35,16 +35,12 @@ namespace Model
     // so we can not get operation's name from response.
     inline virtual const char* GetServiceRequestName() const override { return "PutBucketInventoryConfiguration"; }
 
-    AWS_S3_API Aws::String SerializePayload() const override;
+    Aws::String SerializePayload() const override;
 
-    AWS_S3_API void AddQueryStringParameters(Aws::Http::URI& uri) const override;
+    void AddQueryStringParameters(Aws::Http::URI& uri) const override;
 
-    AWS_S3_API Aws::Http::HeaderValueCollection GetRequestSpecificHeaders() const override;
+    Aws::Http::HeaderValueCollection GetRequestSpecificHeaders() const override;
 
-    /**
-     * Helper function to collect parameters (configurable and static hardcoded) required for endpoint computation.
-     */
-    AWS_S3_API EndpointParameters GetEndpointContextParams() const override;
 
     /**
      * <p>The name of the bucket where the inventory configuration will be stored.</p>

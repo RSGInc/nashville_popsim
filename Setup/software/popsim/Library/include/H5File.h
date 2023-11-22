@@ -1,6 +1,7 @@
 // C++ informative line for the emacs editor: -*- C++ -*-
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Copyright by The HDF Group.                                               *
+ * Copyright by the Board of Trustees of the University of Illinois.         *
  * All rights reserved.                                                      *
  *                                                                           *
  * This file is part of HDF5.  The full HDF5 copyright notice, including     *
@@ -26,12 +27,10 @@ class H5_DLLCPP H5File : public Group {
     // Creates or opens an HDF5 file.
     H5File(const char *name, unsigned int flags,
            const FileCreatPropList &create_plist = FileCreatPropList::DEFAULT,
-           const FileAccPropList   &access_plist = FileAccPropList::DEFAULT);
+           const FileAccPropList &  access_plist = FileAccPropList::DEFAULT);
     H5File(const H5std_string &name, unsigned int flags,
            const FileCreatPropList &create_plist = FileCreatPropList::DEFAULT,
-           const FileAccPropList   &access_plist = FileAccPropList::DEFAULT);
-    H5File(const char *name, unsigned int flags, const FileAccPropList &access_plist);
-    H5File(const H5std_string &name, unsigned int flags, const FileAccPropList &access_plist);
+           const FileAccPropList &  access_plist = FileAccPropList::DEFAULT);
 
     // Open the file
     void openFile(const H5std_string &name, unsigned int flags,
@@ -40,7 +39,7 @@ class H5_DLLCPP H5File : public Group {
                   const FileAccPropList &access_plist = FileAccPropList::DEFAULT);
 
     // Close this file.
-    virtual void close() override;
+    virtual void close() H5_OVERRIDE;
 
     // Gets a copy of the access property list of this file.
     FileAccPropList getAccessPlist() const;
@@ -78,9 +77,9 @@ class H5_DLLCPP H5File : public Group {
     static bool isHdf5(const H5std_string &name);
 
     // Determines if a file, specified by its name, can be accessed as HDF5
-    static bool isAccessible(const char            *name,
+    static bool isAccessible(const char *           name,
                              const FileAccPropList &access_plist = FileAccPropList::DEFAULT);
-    static bool isAccessible(const H5std_string    &name,
+    static bool isAccessible(const H5std_string &   name,
                              const FileAccPropList &access_plist = FileAccPropList::DEFAULT);
 
     // Reopens this file.
@@ -97,16 +96,16 @@ class H5_DLLCPP H5File : public Group {
 
     ///\brief Returns this class name.
     virtual H5std_string
-    fromClass() const override
+    fromClass() const H5_OVERRIDE
     {
         return ("H5File");
     }
 
     // Throw file exception.
-    virtual void throwException(const H5std_string &func_name, const H5std_string &msg) const override;
+    virtual void throwException(const H5std_string &func_name, const H5std_string &msg) const H5_OVERRIDE;
 
     // For CommonFG to get the file id.
-    virtual hid_t getLocId() const override;
+    virtual hid_t getLocId() const H5_OVERRIDE;
 
     // Default constructor
     H5File();
@@ -115,15 +114,15 @@ class H5_DLLCPP H5File : public Group {
     H5File(const H5File &original);
 
     // Gets the HDF5 file id.
-    virtual hid_t getId() const override;
+    virtual hid_t getId() const H5_OVERRIDE;
 
     // H5File destructor.
-    virtual ~H5File() override;
+    virtual ~H5File();
 
   protected:
 #ifndef DOXYGEN_SHOULD_SKIP_THIS
     // Sets the HDF5 file id.
-    virtual void p_setId(const hid_t new_id) override;
+    virtual void p_setId(const hid_t new_id) H5_OVERRIDE;
 #endif // DOXYGEN_SHOULD_SKIP_THIS
 
   private:

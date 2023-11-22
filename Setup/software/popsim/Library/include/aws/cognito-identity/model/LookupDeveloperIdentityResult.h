@@ -31,12 +31,12 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/LookupDeveloperIdentityResponse">AWS
    * API Reference</a></p>
    */
-  class LookupDeveloperIdentityResult
+  class AWS_COGNITOIDENTITY_API LookupDeveloperIdentityResult
   {
   public:
-    AWS_COGNITOIDENTITY_API LookupDeveloperIdentityResult();
-    AWS_COGNITOIDENTITY_API LookupDeveloperIdentityResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
-    AWS_COGNITOIDENTITY_API LookupDeveloperIdentityResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    LookupDeveloperIdentityResult();
+    LookupDeveloperIdentityResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    LookupDeveloperIdentityResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
 
 
     /**

@@ -17,7 +17,7 @@
 # under the License.
 #
 
-set(THRIFT_VERSION 0.18.1)
+set(THRIFT_VERSION 0.16.0)
 
 
 ####### Expanded from @PACKAGE_INIT@ by configure_package_config_file() #######
@@ -45,12 +45,10 @@ endmacro()
 
 ####################################################################################
 
-set_and_check(THRIFT_INCLUDE_DIR "D:/bld/thrift-split_1685891113428/_h_env/Library/include/thrift")
-set_and_check(THRIFT_CMAKE_DIR "D:/bld/thrift-split_1685891113428/_h_env/Library/lib/cmake/thrift")
-set_and_check(THRIFT_BIN_DIR "D:/bld/thrift-split_1685891113428/_h_env/Library/bin")
-if(NOT DEFINED THRIFT_COMPILER)
-    set(THRIFT_COMPILER "${THRIFT_BIN_DIR}/thrift.exe")
-endif()
+set_and_check(THRIFT_INCLUDE_DIR "D:/bld/thrift-split_1663078006813/_h_env/Library/include/thrift")
+set_and_check(THRIFT_CMAKE_DIR "D:/bld/thrift-split_1663078006813/_h_env/Library/lib/cmake/thrift")
+set_and_check(THRIFT_BIN_DIR "D:/bld/thrift-split_1663078006813/_h_env/Library/bin")
+set(THRIFT_COMPILER "${THRIFT_BIN_DIR}/thrift.exe")
 
 if (NOT TARGET thrift::thrift)
     include("${THRIFT_CMAKE_DIR}/thriftTargets.cmake")

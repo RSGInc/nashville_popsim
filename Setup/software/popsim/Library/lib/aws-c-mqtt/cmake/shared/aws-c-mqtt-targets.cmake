@@ -7,7 +7,7 @@ if(CMAKE_VERSION VERSION_LESS "2.8.3")
    message(FATAL_ERROR "CMake >= 2.8.3 required")
 endif()
 cmake_policy(PUSH)
-cmake_policy(VERSION 2.8.3...3.24)
+cmake_policy(VERSION 2.8.3...3.23)
 #----------------------------------------------------------------
 # Generated CMake target import file.
 #----------------------------------------------------------------
@@ -60,9 +60,9 @@ endif()
 add_library(AWS::aws-c-mqtt SHARED IMPORTED)
 
 set_target_properties(AWS::aws-c-mqtt PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "AWS_MQTT_USE_IMPORT_EXPORT"
+  INTERFACE_COMPILE_DEFINITIONS "AWS_MQTT_USE_IMPORT_EXPORT;AWS_MQTT_WITH_WEBSOCKETS"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "AWS::aws-c-http"
+  INTERFACE_LINK_LIBRARIES "AWS::aws-c-io;AWS::aws-c-http"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

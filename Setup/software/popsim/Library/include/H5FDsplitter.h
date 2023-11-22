@@ -17,8 +17,7 @@
 #ifndef H5FDsplitter_H
 #define H5FDsplitter_H
 
-#define H5FD_SPLITTER       (H5FDperform_init(H5FD_splitter_init))
-#define H5FD_SPLITTER_VALUE H5_VFD_SPLITTER
+#define H5FD_SPLITTER (H5FD_splitter_init())
 
 /* The version of the H5FD_splitter_vfd_config_t structure used */
 #define H5FD_CURR_SPLITTER_VFD_CONFIG_VERSION 1
@@ -35,7 +34,7 @@
  * Structure:   H5FD_spliiter_vfd_config_t
  *
  * One-stop shopping for configuring a Splitter VFD (rather than many
- * parameters passed into H5Pset/get functions).
+ * paramaters passed into H5Pset/get functions).
  *
  * magic (int32_t)
  *      Semi-unique number, used to sanity-check that a given pointer is

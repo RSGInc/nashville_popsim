@@ -26,12 +26,12 @@ namespace ConfigService
 {
 namespace Model
 {
-  class DescribeRemediationExceptionsResult
+  class AWS_CONFIGSERVICE_API DescribeRemediationExceptionsResult
   {
   public:
-    AWS_CONFIGSERVICE_API DescribeRemediationExceptionsResult();
-    AWS_CONFIGSERVICE_API DescribeRemediationExceptionsResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
-    AWS_CONFIGSERVICE_API DescribeRemediationExceptionsResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    DescribeRemediationExceptionsResult();
+    DescribeRemediationExceptionsResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    DescribeRemediationExceptionsResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
 
 
     /**

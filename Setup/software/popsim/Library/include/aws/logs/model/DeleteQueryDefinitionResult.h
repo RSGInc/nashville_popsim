@@ -22,12 +22,12 @@ namespace CloudWatchLogs
 {
 namespace Model
 {
-  class DeleteQueryDefinitionResult
+  class AWS_CLOUDWATCHLOGS_API DeleteQueryDefinitionResult
   {
   public:
-    AWS_CLOUDWATCHLOGS_API DeleteQueryDefinitionResult();
-    AWS_CLOUDWATCHLOGS_API DeleteQueryDefinitionResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
-    AWS_CLOUDWATCHLOGS_API DeleteQueryDefinitionResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    DeleteQueryDefinitionResult();
+    DeleteQueryDefinitionResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    DeleteQueryDefinitionResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
 
 
     /**

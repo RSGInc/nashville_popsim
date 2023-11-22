@@ -29,14 +29,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/Tiering">AWS API
    * Reference</a></p>
    */
-  class Tiering
+  class AWS_S3_API Tiering
   {
   public:
-    AWS_S3_API Tiering();
-    AWS_S3_API Tiering(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API Tiering& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    Tiering();
+    Tiering(const Aws::Utils::Xml::XmlNode& xmlNode);
+    Tiering& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

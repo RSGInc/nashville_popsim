@@ -6,13 +6,13 @@
   "numpy-base <0a0"
  ],
  "depends": [
-  "libblas >=3.8.0,<4.0a0",
-  "libcblas >=3.8.0,<4.0a0",
-  "liblapack >=3.8.0,<4.0a0",
   "python >=3.8,<3.9.0a0",
-  "python_abi 3.8.* *_cp38",
   "vc >=14.1,<15.0a0",
-  "vs2015_runtime >=14.16.27012"
+  "vs2015_runtime >=14.16.27012",
+  "python_abi 3.8.* *_cp38",
+  "libblas >=3.8.0,<4.0a0",
+  "liblapack >=3.8.0,<4.0a0",
+  "libcblas >=3.8.0,<4.0a0"
  ],
  "extracted_package_dir": "",
  "features": "",
@@ -1300,7 +1300,7 @@
     "path_type": "hardlink",
     "prefix_placeholder": "D:\\\\bld\\\\numpy_1624400025471\\\\_h_env",
     "sha256": "34749d9dfcb98367570bca0b241592a52657c6280b7c0723f10f1c02f80b7278",
-    "sha256_in_prefix": "ce845ad4d356c2aec246319cc73663e8cfee2b98ed12e9a6110d26c19f3ccc97",
+    "sha256_in_prefix": "8bde92b79b143e68763431a0a89bc8ad51f0d79ccbbdd26d73aef9361b64d96a",
     "size_in_bytes": 3351
    },
    {
@@ -3199,7 +3199,7 @@
     "path_type": "hardlink",
     "prefix_placeholder": "D:\\\\bld\\\\numpy_1624400025471\\\\_h_env",
     "sha256": "34749d9dfcb98367570bca0b241592a52657c6280b7c0723f10f1c02f80b7278",
-    "sha256_in_prefix": "ce845ad4d356c2aec246319cc73663e8cfee2b98ed12e9a6110d26c19f3ccc97",
+    "sha256_in_prefix": "8bde92b79b143e68763431a0a89bc8ad51f0d79ccbbdd26d73aef9361b64d96a",
     "size_in_bytes": 3351
    },
    {
@@ -4321,7 +4321,7 @@
     "path_type": "hardlink",
     "prefix_placeholder": "D:\\bld\\numpy_1624400025471\\_h_env",
     "sha256": "6f84566004cf40cda856d3c7f97293a3204c9abf4afc4b203949c99d18d4f98d",
-    "sha256_in_prefix": "dfc15c7c7117d4cef12637e836bae18af2940cc798d8f8c5a58c921eaa12debc",
+    "sha256_in_prefix": "159b65946b8eb6ec45e810378d03741aa98067f12bba6ddc9ce8857f2c95811e",
     "size_in_bytes": 239
    },
    {

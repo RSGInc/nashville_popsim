@@ -34,13 +34,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/AggregateEvaluationResult">AWS
    * API Reference</a></p>
    */
-  class AggregateEvaluationResult
+  class AWS_CONFIGSERVICE_API AggregateEvaluationResult
   {
   public:
-    AWS_CONFIGSERVICE_API AggregateEvaluationResult();
-    AWS_CONFIGSERVICE_API AggregateEvaluationResult(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API AggregateEvaluationResult& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API Aws::Utils::Json::JsonValue Jsonize() const;
+    AggregateEvaluationResult();
+    AggregateEvaluationResult(Aws::Utils::Json::JsonView jsonValue);
+    AggregateEvaluationResult& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**

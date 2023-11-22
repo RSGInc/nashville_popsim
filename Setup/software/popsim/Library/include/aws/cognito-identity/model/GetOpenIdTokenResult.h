@@ -30,12 +30,12 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/GetOpenIdTokenResponse">AWS
    * API Reference</a></p>
    */
-  class GetOpenIdTokenResult
+  class AWS_COGNITOIDENTITY_API GetOpenIdTokenResult
   {
   public:
-    AWS_COGNITOIDENTITY_API GetOpenIdTokenResult();
-    AWS_COGNITOIDENTITY_API GetOpenIdTokenResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
-    AWS_COGNITOIDENTITY_API GetOpenIdTokenResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    GetOpenIdTokenResult();
+    GetOpenIdTokenResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    GetOpenIdTokenResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
 
 
     /**

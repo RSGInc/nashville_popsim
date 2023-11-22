@@ -26,12 +26,12 @@ namespace ConfigService
 {
 namespace Model
 {
-  class ListTagsForResourceResult
+  class AWS_CONFIGSERVICE_API ListTagsForResourceResult
   {
   public:
-    AWS_CONFIGSERVICE_API ListTagsForResourceResult();
-    AWS_CONFIGSERVICE_API ListTagsForResourceResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
-    AWS_CONFIGSERVICE_API ListTagsForResourceResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    ListTagsForResourceResult();
+    ListTagsForResourceResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    ListTagsForResourceResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
 
 
     /**

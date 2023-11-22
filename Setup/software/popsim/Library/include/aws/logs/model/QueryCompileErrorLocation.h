@@ -26,13 +26,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/QueryCompileErrorLocation">AWS
    * API Reference</a></p>
    */
-  class QueryCompileErrorLocation
+  class AWS_CLOUDWATCHLOGS_API QueryCompileErrorLocation
   {
   public:
-    AWS_CLOUDWATCHLOGS_API QueryCompileErrorLocation();
-    AWS_CLOUDWATCHLOGS_API QueryCompileErrorLocation(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CLOUDWATCHLOGS_API QueryCompileErrorLocation& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CLOUDWATCHLOGS_API Aws::Utils::Json::JsonValue Jsonize() const;
+    QueryCompileErrorLocation();
+    QueryCompileErrorLocation(Aws::Utils::Json::JsonView jsonValue);
+    QueryCompileErrorLocation& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**

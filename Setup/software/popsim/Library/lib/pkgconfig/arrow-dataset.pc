@@ -15,13 +15,12 @@
 # specific language governing permissions and limitations
 # under the License.
 
-prefix=D:/bld/apache-arrow_1679171173706/_h_env/Library
+prefix=D:/bld/apache-arrow_1670876149047/_h_env/Library
 includedir=${prefix}/include
 libdir=${prefix}/lib
 
 Name: Apache Arrow Dataset
 Description: Apache Arrow Dataset provides an API to read and write semantic datasets stored in different locations and formats.
-Version: 11.0.0
-Requires: parquet
+Version: 10.0.1
+Requires: arrow parquet
 Libs: -L${libdir} -larrow_dataset
-Cflags.private: -DARROW_DS_STATIC

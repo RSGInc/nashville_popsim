@@ -11,8 +11,6 @@
 
 #include <string.h>
 
-AWS_PUSH_SANE_WARNING_LEVEL
-
 /**
  * Represents a length-delimited binary string or buffer. If byte buffer points
  * to constant memory or memory that should otherwise not be freed by this
@@ -950,6 +948,5 @@ AWS_COMMON_API
 int aws_byte_cursor_utf8_parse_u64_hex(struct aws_byte_cursor cursor, uint64_t *dst);
 
 AWS_EXTERN_C_END
-AWS_POP_SANE_WARNING_LEVEL
 
 #endif /* AWS_COMMON_BYTE_BUF_H */

@@ -24,12 +24,12 @@ namespace ConfigService
 {
 namespace Model
 {
-  class PutConfigurationAggregatorResult
+  class AWS_CONFIGSERVICE_API PutConfigurationAggregatorResult
   {
   public:
-    AWS_CONFIGSERVICE_API PutConfigurationAggregatorResult();
-    AWS_CONFIGSERVICE_API PutConfigurationAggregatorResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
-    AWS_CONFIGSERVICE_API PutConfigurationAggregatorResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    PutConfigurationAggregatorResult();
+    PutConfigurationAggregatorResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    PutConfigurationAggregatorResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
 
 
     /**

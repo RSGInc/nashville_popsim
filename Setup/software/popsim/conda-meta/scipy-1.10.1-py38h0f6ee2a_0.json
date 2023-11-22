@@ -4,18 +4,18 @@
  "channel": "https://conda.anaconda.org/conda-forge/win-64",
  "constrains": [],
  "depends": [
-  "libblas >=3.9.0,<4.0a0",
-  "libcblas >=3.9.0,<4.0a0",
-  "liblapack >=3.9.0,<4.0a0",
   "m2w64-gcc-libs",
-  "numpy >=1.20.3,<1.27",
-  "numpy >=1.20.3,<2.0a0",
   "pooch",
+  "vc >=14.2,<15",
+  "ucrt >=10.0.20348.0",
   "python >=3.8,<3.9.0a0",
   "python_abi 3.8.* *_cp38",
-  "ucrt >=10.0.20348.0",
-  "vc >=14.2,<15",
-  "vs2015_runtime >=14.29.30139"
+  "vs2015_runtime >=14.29.30139",
+  "numpy >=1.20.3,<2.0a0",
+  "libblas >=3.9.0,<4.0a0",
+  "liblapack >=3.9.0,<4.0a0",
+  "libcblas >=3.9.0,<4.0a0",
+  "numpy >=1.20.3,<1.27"
  ],
  "extracted_package_dir": "",
  "features": "",
@@ -2582,7 +2582,7 @@
     "path_type": "hardlink",
     "prefix_placeholder": "C:/bld/scipy_1677141259823/_h_env",
     "sha256": "95ff90c3247221c83318f4b45880edfdd25d1c419248b0d2bcfae505939b2913",
-    "sha256_in_prefix": "d539c6f02d0d6785e3d7aa6d14434ea9707cfbf36effa903d8ecf6995b9b498f",
+    "sha256_in_prefix": "11b60f23df25ef41ec7436cf6596b0d411cfd2c5d16a62b30d9de472994d340a",
     "size_in_bytes": 3658
    },
    {

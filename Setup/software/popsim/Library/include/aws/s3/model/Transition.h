@@ -32,14 +32,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/Transition">AWS API
    * Reference</a></p>
    */
-  class Transition
+  class AWS_S3_API Transition
   {
   public:
-    AWS_S3_API Transition();
-    AWS_S3_API Transition(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API Transition& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    Transition();
+    Transition(const Aws::Utils::Xml::XmlNode& xmlNode);
+    Transition& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

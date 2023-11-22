@@ -33,15 +33,15 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/iam-2010-05-08/ServiceLastAccessed">AWS
    * API Reference</a></p>
    */
-  class ServiceLastAccessed
+  class AWS_IAM_API ServiceLastAccessed
   {
   public:
-    AWS_IAM_API ServiceLastAccessed();
-    AWS_IAM_API ServiceLastAccessed(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_IAM_API ServiceLastAccessed& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    ServiceLastAccessed();
+    ServiceLastAccessed(const Aws::Utils::Xml::XmlNode& xmlNode);
+    ServiceLastAccessed& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_IAM_API void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
-    AWS_IAM_API void OutputToStream(Aws::OStream& oStream, const char* location) const;
+    void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
+    void OutputToStream(Aws::OStream& oStream, const char* location) const;
 
 
     /**

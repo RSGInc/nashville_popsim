@@ -1,10 +1,10 @@
-#!D:\bld\apache-arrow_1679171173706\_h_env\python.exe
-# EASY-INSTALL-ENTRY-SCRIPT: 'pyarrow==11.0.0','console_scripts','plasma_store'
+#!D:\bld\apache-arrow_1670876149047\_h_env\python.exe
+# EASY-INSTALL-ENTRY-SCRIPT: 'pyarrow==10.0.1','console_scripts','plasma_store'
 import re
 import sys
 
 # for compatibility with easy_install; see #2198
-__requires__ = 'pyarrow==11.0.0'
+__requires__ = 'pyarrow==10.0.1'
 
 try:
     from importlib.metadata import distribution
@@ -30,4 +30,4 @@ globals().setdefault('load_entry_point', importlib_load_entry_point)
 
 if __name__ == '__main__':
     sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
-    sys.exit(load_entry_point('pyarrow==11.0.0', 'console_scripts', 'plasma_store')())
+    sys.exit(load_entry_point('pyarrow==10.0.1', 'console_scripts', 'plasma_store')())

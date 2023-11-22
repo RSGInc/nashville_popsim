@@ -29,15 +29,15 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/sts-2011-06-15/FederatedUser">AWS
    * API Reference</a></p>
    */
-  class FederatedUser
+  class AWS_STS_API FederatedUser
   {
   public:
-    AWS_STS_API FederatedUser();
-    AWS_STS_API FederatedUser(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_STS_API FederatedUser& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    FederatedUser();
+    FederatedUser(const Aws::Utils::Xml::XmlNode& xmlNode);
+    FederatedUser& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_STS_API void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
-    AWS_STS_API void OutputToStream(Aws::OStream& oStream, const char* location) const;
+    void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
+    void OutputToStream(Aws::OStream& oStream, const char* location) const;
 
 
     /**

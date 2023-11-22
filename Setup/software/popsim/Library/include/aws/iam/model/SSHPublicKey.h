@@ -32,15 +32,15 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/iam-2010-05-08/SSHPublicKey">AWS
    * API Reference</a></p>
    */
-  class SSHPublicKey
+  class AWS_IAM_API SSHPublicKey
   {
   public:
-    AWS_IAM_API SSHPublicKey();
-    AWS_IAM_API SSHPublicKey(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_IAM_API SSHPublicKey& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    SSHPublicKey();
+    SSHPublicKey(const Aws::Utils::Xml::XmlNode& xmlNode);
+    SSHPublicKey& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_IAM_API void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
-    AWS_IAM_API void OutputToStream(Aws::OStream& oStream, const char* location) const;
+    void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
+    void OutputToStream(Aws::OStream& oStream, const char* location) const;
 
 
     /**

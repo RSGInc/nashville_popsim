@@ -686,50 +686,50 @@ class ARROW_FLIGHT_SQL_EXPORT SqlSchema {
  public:
   /// \brief Get the Schema used on GetCatalogs response.
   /// \return The default schema template.
-  static const std::shared_ptr<Schema>& GetCatalogsSchema();
+  static std::shared_ptr<Schema> GetCatalogsSchema();
 
   /// \brief Get the Schema used on GetDbSchemas response.
   /// \return The default schema template.
-  static const std::shared_ptr<Schema>& GetDbSchemasSchema();
+  static std::shared_ptr<Schema> GetDbSchemasSchema();
 
   /// \brief Get the Schema used on GetTables response when included schema
   /// flags is set to false.
   /// \return The default schema template.
-  static const std::shared_ptr<Schema>& GetTablesSchema();
+  static std::shared_ptr<Schema> GetTablesSchema();
 
   /// \brief Get the Schema used on GetTables response when included schema
   /// flags is set to true.
   /// \return The default schema template.
-  static const std::shared_ptr<Schema>& GetTablesSchemaWithIncludedSchema();
+  static std::shared_ptr<Schema> GetTablesSchemaWithIncludedSchema();
 
   /// \brief Get the Schema used on GetTableTypes response.
   /// \return The default schema template.
-  static const std::shared_ptr<Schema>& GetTableTypesSchema();
+  static std::shared_ptr<Schema> GetTableTypesSchema();
 
   /// \brief Get the Schema used on GetPrimaryKeys response when included schema
   /// flags is set to true.
   /// \return The default schema template.
-  static const std::shared_ptr<Schema>& GetPrimaryKeysSchema();
+  static std::shared_ptr<Schema> GetPrimaryKeysSchema();
 
   /// \brief Get the Schema used on GetImportedKeys response.
   /// \return The default schema template.
-  static const std::shared_ptr<Schema>& GetExportedKeysSchema();
+  static std::shared_ptr<Schema> GetExportedKeysSchema();
 
   /// \brief Get the Schema used on GetImportedKeys response.
   /// \return The default schema template.
-  static const std::shared_ptr<Schema>& GetImportedKeysSchema();
+  static std::shared_ptr<Schema> GetImportedKeysSchema();
 
   /// \brief Get the Schema used on GetCrossReference response.
   /// \return The default schema template.
-  static const std::shared_ptr<Schema>& GetCrossReferenceSchema();
+  static std::shared_ptr<Schema> GetCrossReferenceSchema();
 
   /// \brief Get the Schema used on GetXdbcTypeInfo response.
   /// \return The default schema template.
-  static const std::shared_ptr<Schema>& GetXdbcTypeInfoSchema();
+  static std::shared_ptr<Schema> GetXdbcTypeInfoSchema();
 
   /// \brief Get the Schema used on GetSqlInfo response.
   /// \return The default schema template.
-  static const std::shared_ptr<Schema>& GetSqlInfoSchema();
+  static std::shared_ptr<Schema> GetSqlInfoSchema();
 };
 }  // namespace sql
 }  // namespace flight

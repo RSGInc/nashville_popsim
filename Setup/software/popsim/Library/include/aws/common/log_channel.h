@@ -11,8 +11,6 @@
 
 #include <aws/common/logging.h>
 
-AWS_PUSH_SANE_WARNING_LEVEL
-
 struct aws_string;
 struct aws_log_writer;
 
@@ -70,6 +68,5 @@ AWS_COMMON_API
 void aws_log_channel_clean_up(struct aws_log_channel *channel);
 
 AWS_EXTERN_C_END
-AWS_POP_SANE_WARNING_LEVEL
 
 #endif /* AWS_COMMON_LOG_CHANNEL_H */

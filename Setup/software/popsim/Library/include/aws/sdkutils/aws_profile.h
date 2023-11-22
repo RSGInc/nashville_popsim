@@ -7,8 +7,6 @@
 #define AWS_SDKUTILS_AWS_PROFILE_H
 #include <aws/sdkutils/sdkutils.h>
 
-AWS_PUSH_SANE_WARNING_LEVEL
-
 struct aws_allocator;
 struct aws_string;
 struct aws_byte_buf;
@@ -37,16 +35,6 @@ struct aws_profile_collection;
  */
 enum aws_profile_source_type { AWS_PST_NONE, AWS_PST_CONFIG, AWS_PST_CREDENTIALS };
 
-/*
- * The collection can hold different types of sections.
- */
-enum aws_profile_section_type {
-    AWS_PROFILE_SECTION_TYPE_PROFILE,
-    AWS_PROFILE_SECTION_TYPE_SSO_SESSION,
-
-    AWS_PROFILE_SECTION_TYPE_COUNT,
-};
-
 AWS_EXTERN_C_BEGIN
 
 /*************************
@@ -54,22 +42,7 @@ AWS_EXTERN_C_BEGIN
  *************************/
 
 /**
- * Increments the reference count on the profile collection, allowing the caller to take a reference to it.
- *
- * Returns the same profile collection passed in.
- */
-AWS_SDKUTILS_API
-struct aws_profile_collection *aws_profile_collection_acquire(struct aws_profile_collection *collection);
-
-/**
- * Decrements a profile collection's ref count.  When the ref count drops to zero, the collection will be destroyed.
- * Returns NULL.
- */
-AWS_SDKUTILS_API
-struct aws_profile_collection *aws_profile_collection_release(struct aws_profile_collection *collection);
-
-/**
- * @Deprecated This is equivalent to aws_profile_collection_release.
+ * Clean up everything associated with a profile collection
  */
 AWS_SDKUTILS_API
 void aws_profile_collection_destroy(struct aws_profile_collection *profile_collection);
@@ -111,29 +84,11 @@ const struct aws_profile *aws_profile_collection_get_profile(
     const struct aws_profile_collection *profile_collection,
     const struct aws_string *profile_name);
 
-/*
- * Retrieves a reference to a section with the specified name and type, if it exists, from the profile collection.
- * You can get the "default" profile or credentials file sections by passing `AWS_PROFILE_SECTION_TYPE_PROFILE`
- */
-AWS_SDKUTILS_API
-const struct aws_profile *aws_profile_collection_get_section(
-    const struct aws_profile_collection *profile_collection,
-    const enum aws_profile_section_type section_type,
-    const struct aws_string *section_name);
-
 /**
- * Returns the number of profiles in a collection
+ * Returns how many profiles a collection holds
  */
 AWS_SDKUTILS_API
 size_t aws_profile_collection_get_profile_count(const struct aws_profile_collection *profile_collection);
-
-/**
- * Returns the number of elements of the specified section in a collection.
- */
-AWS_SDKUTILS_API
-size_t aws_profile_collection_get_section_count(
-    const struct aws_profile_collection *profile_collection,
-    const enum aws_profile_section_type section_type);
 
 /**
  * Returns a reference to the name of the provided profile
@@ -216,6 +171,5 @@ AWS_SDKUTILS_API
 struct aws_string *aws_get_profile_name(struct aws_allocator *allocator, const struct aws_byte_cursor *override_name);
 
 AWS_EXTERN_C_END
-AWS_POP_SANE_WARNING_LEVEL
 
 #endif /* AWS_SDKUTILS_AWS_PROFILE_H */

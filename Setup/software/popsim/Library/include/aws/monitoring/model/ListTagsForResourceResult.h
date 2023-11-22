@@ -26,12 +26,12 @@ namespace CloudWatch
 {
 namespace Model
 {
-  class ListTagsForResourceResult
+  class AWS_CLOUDWATCH_API ListTagsForResourceResult
   {
   public:
-    AWS_CLOUDWATCH_API ListTagsForResourceResult();
-    AWS_CLOUDWATCH_API ListTagsForResourceResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_CLOUDWATCH_API ListTagsForResourceResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    ListTagsForResourceResult();
+    ListTagsForResourceResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    ListTagsForResourceResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     /**

@@ -32,13 +32,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/Tag">AWS API
    * Reference</a></p>
    */
-  class Tag
+  class AWS_CONFIGSERVICE_API Tag
   {
   public:
-    AWS_CONFIGSERVICE_API Tag();
-    AWS_CONFIGSERVICE_API Tag(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API Tag& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API Aws::Utils::Json::JsonValue Jsonize() const;
+    Tag();
+    Tag(Aws::Utils::Json::JsonView jsonValue);
+    Tag& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**

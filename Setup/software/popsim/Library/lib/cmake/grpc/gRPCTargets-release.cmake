@@ -95,16 +95,6 @@ set_target_properties(gRPC::grpc++_unsecure PROPERTIES
 list(APPEND _cmake_import_check_targets gRPC::grpc++_unsecure )
 list(APPEND _cmake_import_check_files_for_gRPC::grpc++_unsecure "${_IMPORT_PREFIX}/lib/grpc++_unsecure.lib" )
 
-# Import target "gRPC::grpc_authorization_provider" for configuration "Release"
-set_property(TARGET gRPC::grpc_authorization_provider APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(gRPC::grpc_authorization_provider PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "C;CXX"
-  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/grpc_authorization_provider.lib"
-  )
-
-list(APPEND _cmake_import_check_targets gRPC::grpc_authorization_provider )
-list(APPEND _cmake_import_check_files_for_gRPC::grpc_authorization_provider "${_IMPORT_PREFIX}/lib/grpc_authorization_provider.lib" )
-
 # Import target "gRPC::grpc_plugin_support" for configuration "Release"
 set_property(TARGET gRPC::grpc_plugin_support APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(gRPC::grpc_plugin_support PROPERTIES
@@ -134,6 +124,69 @@ set_target_properties(gRPC::upb PROPERTIES
 
 list(APPEND _cmake_import_check_targets gRPC::upb )
 list(APPEND _cmake_import_check_files_for_gRPC::upb "${_IMPORT_PREFIX}/lib/upb.lib" )
+
+# Import target "gRPC::grpc_cpp_plugin" for configuration "Release"
+set_property(TARGET gRPC::grpc_cpp_plugin APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(gRPC::grpc_cpp_plugin PROPERTIES
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/grpc_cpp_plugin.exe"
+  )
+
+list(APPEND _cmake_import_check_targets gRPC::grpc_cpp_plugin )
+list(APPEND _cmake_import_check_files_for_gRPC::grpc_cpp_plugin "${_IMPORT_PREFIX}/bin/grpc_cpp_plugin.exe" )
+
+# Import target "gRPC::grpc_csharp_plugin" for configuration "Release"
+set_property(TARGET gRPC::grpc_csharp_plugin APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(gRPC::grpc_csharp_plugin PROPERTIES
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/grpc_csharp_plugin.exe"
+  )
+
+list(APPEND _cmake_import_check_targets gRPC::grpc_csharp_plugin )
+list(APPEND _cmake_import_check_files_for_gRPC::grpc_csharp_plugin "${_IMPORT_PREFIX}/bin/grpc_csharp_plugin.exe" )
+
+# Import target "gRPC::grpc_node_plugin" for configuration "Release"
+set_property(TARGET gRPC::grpc_node_plugin APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(gRPC::grpc_node_plugin PROPERTIES
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/grpc_node_plugin.exe"
+  )
+
+list(APPEND _cmake_import_check_targets gRPC::grpc_node_plugin )
+list(APPEND _cmake_import_check_files_for_gRPC::grpc_node_plugin "${_IMPORT_PREFIX}/bin/grpc_node_plugin.exe" )
+
+# Import target "gRPC::grpc_objective_c_plugin" for configuration "Release"
+set_property(TARGET gRPC::grpc_objective_c_plugin APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(gRPC::grpc_objective_c_plugin PROPERTIES
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/grpc_objective_c_plugin.exe"
+  )
+
+list(APPEND _cmake_import_check_targets gRPC::grpc_objective_c_plugin )
+list(APPEND _cmake_import_check_files_for_gRPC::grpc_objective_c_plugin "${_IMPORT_PREFIX}/bin/grpc_objective_c_plugin.exe" )
+
+# Import target "gRPC::grpc_php_plugin" for configuration "Release"
+set_property(TARGET gRPC::grpc_php_plugin APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(gRPC::grpc_php_plugin PROPERTIES
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/grpc_php_plugin.exe"
+  )
+
+list(APPEND _cmake_import_check_targets gRPC::grpc_php_plugin )
+list(APPEND _cmake_import_check_files_for_gRPC::grpc_php_plugin "${_IMPORT_PREFIX}/bin/grpc_php_plugin.exe" )
+
+# Import target "gRPC::grpc_python_plugin" for configuration "Release"
+set_property(TARGET gRPC::grpc_python_plugin APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(gRPC::grpc_python_plugin PROPERTIES
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/grpc_python_plugin.exe"
+  )
+
+list(APPEND _cmake_import_check_targets gRPC::grpc_python_plugin )
+list(APPEND _cmake_import_check_files_for_gRPC::grpc_python_plugin "${_IMPORT_PREFIX}/bin/grpc_python_plugin.exe" )
+
+# Import target "gRPC::grpc_ruby_plugin" for configuration "Release"
+set_property(TARGET gRPC::grpc_ruby_plugin APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(gRPC::grpc_ruby_plugin PROPERTIES
+  IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/grpc_ruby_plugin.exe"
+  )
+
+list(APPEND _cmake_import_check_targets gRPC::grpc_ruby_plugin )
+list(APPEND _cmake_import_check_files_for_gRPC::grpc_ruby_plugin "${_IMPORT_PREFIX}/bin/grpc_ruby_plugin.exe" )
 
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

@@ -28,13 +28,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/QueryStatistics">AWS
    * API Reference</a></p>
    */
-  class QueryStatistics
+  class AWS_CLOUDWATCHLOGS_API QueryStatistics
   {
   public:
-    AWS_CLOUDWATCHLOGS_API QueryStatistics();
-    AWS_CLOUDWATCHLOGS_API QueryStatistics(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CLOUDWATCHLOGS_API QueryStatistics& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CLOUDWATCHLOGS_API Aws::Utils::Json::JsonValue Jsonize() const;
+    QueryStatistics();
+    QueryStatistics(Aws::Utils::Json::JsonView jsonValue);
+    QueryStatistics& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**

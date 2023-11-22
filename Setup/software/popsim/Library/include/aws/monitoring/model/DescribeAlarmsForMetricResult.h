@@ -26,12 +26,12 @@ namespace CloudWatch
 {
 namespace Model
 {
-  class DescribeAlarmsForMetricResult
+  class AWS_CLOUDWATCH_API DescribeAlarmsForMetricResult
   {
   public:
-    AWS_CLOUDWATCH_API DescribeAlarmsForMetricResult();
-    AWS_CLOUDWATCH_API DescribeAlarmsForMetricResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_CLOUDWATCH_API DescribeAlarmsForMetricResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    DescribeAlarmsForMetricResult();
+    DescribeAlarmsForMetricResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    DescribeAlarmsForMetricResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     /**

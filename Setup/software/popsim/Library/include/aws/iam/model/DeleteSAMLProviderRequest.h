@@ -18,10 +18,10 @@ namespace Model
 
   /**
    */
-  class DeleteSAMLProviderRequest : public IAMRequest
+  class AWS_IAM_API DeleteSAMLProviderRequest : public IAMRequest
   {
   public:
-    AWS_IAM_API DeleteSAMLProviderRequest();
+    DeleteSAMLProviderRequest();
 
     // Service request name is the Operation name which will send this request out,
     // each operation should has unique request name, so that we can get operation's name from this request.
@@ -29,10 +29,10 @@ namespace Model
     // so we can not get operation's name from response.
     inline virtual const char* GetServiceRequestName() const override { return "DeleteSAMLProvider"; }
 
-    AWS_IAM_API Aws::String SerializePayload() const override;
+    Aws::String SerializePayload() const override;
 
   protected:
-    AWS_IAM_API void DumpBodyToUrl(Aws::Http::URI& uri ) const override;
+    void DumpBodyToUrl(Aws::Http::URI& uri ) const override;
 
   public:
 

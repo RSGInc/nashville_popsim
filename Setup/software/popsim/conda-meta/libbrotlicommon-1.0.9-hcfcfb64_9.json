@@ -4,8 +4,8 @@
  "channel": "https://conda.anaconda.org/conda-forge/win-64",
  "constrains": [],
  "depends": [
-  "ucrt >=10.0.20348.0",
   "vc >=14.2,<15",
+  "ucrt >=10.0.20348.0",
   "vc14_runtime >=14.29.30139"
  ],
  "extracted_package_dir": "",
@@ -47,7 +47,7 @@
     "path_type": "hardlink",
     "prefix_placeholder": "D:/bld/brotli-split_1687884251065/_h_env",
     "sha256": "685450630043bd5698ef1728d8271dd2a987eadf261cd5388110570c4321a2df",
-    "sha256_in_prefix": "423ec859a5b022b45258bcba1d35254e6c774ebdc9045efd444bf49b2f02dc33",
+    "sha256_in_prefix": "69173f1b881c92077d73284cc14c8c212bcc59a0345659941679a7580b4b1710",
     "size_in_bytes": 357
    }
   ],

@@ -33,14 +33,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/TargetGrant">AWS API
    * Reference</a></p>
    */
-  class TargetGrant
+  class AWS_S3_API TargetGrant
   {
   public:
-    AWS_S3_API TargetGrant();
-    AWS_S3_API TargetGrant(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API TargetGrant& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    TargetGrant();
+    TargetGrant(const Aws::Utils::Xml::XmlNode& xmlNode);
+    TargetGrant& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

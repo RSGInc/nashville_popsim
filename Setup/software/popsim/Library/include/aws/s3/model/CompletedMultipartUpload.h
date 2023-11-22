@@ -29,14 +29,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/CompletedMultipartUpload">AWS
    * API Reference</a></p>
    */
-  class CompletedMultipartUpload
+  class AWS_S3_API CompletedMultipartUpload
   {
   public:
-    AWS_S3_API CompletedMultipartUpload();
-    AWS_S3_API CompletedMultipartUpload(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API CompletedMultipartUpload& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    CompletedMultipartUpload();
+    CompletedMultipartUpload(const Aws::Utils::Xml::XmlNode& xmlNode);
+    CompletedMultipartUpload& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

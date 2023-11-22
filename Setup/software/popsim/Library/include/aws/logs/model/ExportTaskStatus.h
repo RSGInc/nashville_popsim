@@ -29,13 +29,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/ExportTaskStatus">AWS
    * API Reference</a></p>
    */
-  class ExportTaskStatus
+  class AWS_CLOUDWATCHLOGS_API ExportTaskStatus
   {
   public:
-    AWS_CLOUDWATCHLOGS_API ExportTaskStatus();
-    AWS_CLOUDWATCHLOGS_API ExportTaskStatus(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CLOUDWATCHLOGS_API ExportTaskStatus& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CLOUDWATCHLOGS_API Aws::Utils::Json::JsonValue Jsonize() const;
+    ExportTaskStatus();
+    ExportTaskStatus(Aws::Utils::Json::JsonView jsonValue);
+    ExportTaskStatus& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**

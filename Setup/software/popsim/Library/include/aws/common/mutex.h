@@ -14,8 +14,6 @@
 #    include <pthread.h>
 #endif
 
-AWS_PUSH_SANE_WARNING_LEVEL
-
 struct aws_mutex {
 #ifdef _WIN32
     void *mutex_handle;
@@ -71,6 +69,5 @@ AWS_COMMON_API
 int aws_mutex_unlock(struct aws_mutex *mutex);
 
 AWS_EXTERN_C_END
-AWS_POP_SANE_WARNING_LEVEL
 
 #endif /* AWS_COMMON_MUTEX_H */

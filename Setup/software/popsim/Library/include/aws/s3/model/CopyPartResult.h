@@ -28,14 +28,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/CopyPartResult">AWS
    * API Reference</a></p>
    */
-  class CopyPartResult
+  class AWS_S3_API CopyPartResult
   {
   public:
-    AWS_S3_API CopyPartResult();
-    AWS_S3_API CopyPartResult(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API CopyPartResult& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    CopyPartResult();
+    CopyPartResult(const Aws::Utils::Xml::XmlNode& xmlNode);
+    CopyPartResult& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

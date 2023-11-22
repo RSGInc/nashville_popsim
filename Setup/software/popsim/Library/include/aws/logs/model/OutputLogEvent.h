@@ -28,36 +28,36 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/OutputLogEvent">AWS
    * API Reference</a></p>
    */
-  class OutputLogEvent
+  class AWS_CLOUDWATCHLOGS_API OutputLogEvent
   {
   public:
-    AWS_CLOUDWATCHLOGS_API OutputLogEvent();
-    AWS_CLOUDWATCHLOGS_API OutputLogEvent(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CLOUDWATCHLOGS_API OutputLogEvent& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CLOUDWATCHLOGS_API Aws::Utils::Json::JsonValue Jsonize() const;
+    OutputLogEvent();
+    OutputLogEvent(Aws::Utils::Json::JsonView jsonValue);
+    OutputLogEvent& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**
      * <p>The time the event occurred, expressed as the number of milliseconds after
-     * <code>Jan 1, 1970 00:00:00 UTC</code>.</p>
+     * Jan 1, 1970 00:00:00 UTC.</p>
      */
     inline long long GetTimestamp() const{ return m_timestamp; }
 
     /**
      * <p>The time the event occurred, expressed as the number of milliseconds after
-     * <code>Jan 1, 1970 00:00:00 UTC</code>.</p>
+     * Jan 1, 1970 00:00:00 UTC.</p>
      */
     inline bool TimestampHasBeenSet() const { return m_timestampHasBeenSet; }
 
     /**
      * <p>The time the event occurred, expressed as the number of milliseconds after
-     * <code>Jan 1, 1970 00:00:00 UTC</code>.</p>
+     * Jan 1, 1970 00:00:00 UTC.</p>
      */
     inline void SetTimestamp(long long value) { m_timestampHasBeenSet = true; m_timestamp = value; }
 
     /**
      * <p>The time the event occurred, expressed as the number of milliseconds after
-     * <code>Jan 1, 1970 00:00:00 UTC</code>.</p>
+     * Jan 1, 1970 00:00:00 UTC.</p>
      */
     inline OutputLogEvent& WithTimestamp(long long value) { SetTimestamp(value); return *this;}
 
@@ -105,25 +105,25 @@ namespace Model
 
     /**
      * <p>The time the event was ingested, expressed as the number of milliseconds
-     * after <code>Jan 1, 1970 00:00:00 UTC</code>.</p>
+     * after Jan 1, 1970 00:00:00 UTC.</p>
      */
     inline long long GetIngestionTime() const{ return m_ingestionTime; }
 
     /**
      * <p>The time the event was ingested, expressed as the number of milliseconds
-     * after <code>Jan 1, 1970 00:00:00 UTC</code>.</p>
+     * after Jan 1, 1970 00:00:00 UTC.</p>
      */
     inline bool IngestionTimeHasBeenSet() const { return m_ingestionTimeHasBeenSet; }
 
     /**
      * <p>The time the event was ingested, expressed as the number of milliseconds
-     * after <code>Jan 1, 1970 00:00:00 UTC</code>.</p>
+     * after Jan 1, 1970 00:00:00 UTC.</p>
      */
     inline void SetIngestionTime(long long value) { m_ingestionTimeHasBeenSet = true; m_ingestionTime = value; }
 
     /**
      * <p>The time the event was ingested, expressed as the number of milliseconds
-     * after <code>Jan 1, 1970 00:00:00 UTC</code>.</p>
+     * after Jan 1, 1970 00:00:00 UTC.</p>
      */
     inline OutputLogEvent& WithIngestionTime(long long value) { SetIngestionTime(value); return *this;}
 

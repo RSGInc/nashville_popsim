@@ -30,12 +30,12 @@ namespace CloudWatch
 {
 namespace Model
 {
-  class GetMetricStreamResult
+  class AWS_CLOUDWATCH_API GetMetricStreamResult
   {
   public:
-    AWS_CLOUDWATCH_API GetMetricStreamResult();
-    AWS_CLOUDWATCH_API GetMetricStreamResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_CLOUDWATCH_API GetMetricStreamResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    GetMetricStreamResult();
+    GetMetricStreamResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    GetMetricStreamResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     /**
@@ -211,44 +211,44 @@ namespace Model
 
 
     /**
-     * <p>The ARN of the Amazon Kinesis Data Firehose delivery stream that is used by
-     * this metric stream.</p>
+     * <p>The ARN of the Amazon Kinesis Firehose delivery stream that is used by this
+     * metric stream.</p>
      */
     inline const Aws::String& GetFirehoseArn() const{ return m_firehoseArn; }
 
     /**
-     * <p>The ARN of the Amazon Kinesis Data Firehose delivery stream that is used by
-     * this metric stream.</p>
+     * <p>The ARN of the Amazon Kinesis Firehose delivery stream that is used by this
+     * metric stream.</p>
      */
     inline void SetFirehoseArn(const Aws::String& value) { m_firehoseArn = value; }
 
     /**
-     * <p>The ARN of the Amazon Kinesis Data Firehose delivery stream that is used by
-     * this metric stream.</p>
+     * <p>The ARN of the Amazon Kinesis Firehose delivery stream that is used by this
+     * metric stream.</p>
      */
     inline void SetFirehoseArn(Aws::String&& value) { m_firehoseArn = std::move(value); }
 
     /**
-     * <p>The ARN of the Amazon Kinesis Data Firehose delivery stream that is used by
-     * this metric stream.</p>
+     * <p>The ARN of the Amazon Kinesis Firehose delivery stream that is used by this
+     * metric stream.</p>
      */
     inline void SetFirehoseArn(const char* value) { m_firehoseArn.assign(value); }
 
     /**
-     * <p>The ARN of the Amazon Kinesis Data Firehose delivery stream that is used by
-     * this metric stream.</p>
+     * <p>The ARN of the Amazon Kinesis Firehose delivery stream that is used by this
+     * metric stream.</p>
      */
     inline GetMetricStreamResult& WithFirehoseArn(const Aws::String& value) { SetFirehoseArn(value); return *this;}
 
     /**
-     * <p>The ARN of the Amazon Kinesis Data Firehose delivery stream that is used by
-     * this metric stream.</p>
+     * <p>The ARN of the Amazon Kinesis Firehose delivery stream that is used by this
+     * metric stream.</p>
      */
     inline GetMetricStreamResult& WithFirehoseArn(Aws::String&& value) { SetFirehoseArn(std::move(value)); return *this;}
 
     /**
-     * <p>The ARN of the Amazon Kinesis Data Firehose delivery stream that is used by
-     * this metric stream.</p>
+     * <p>The ARN of the Amazon Kinesis Firehose delivery stream that is used by this
+     * metric stream.</p>
      */
     inline GetMetricStreamResult& WithFirehoseArn(const char* value) { SetFirehoseArn(value); return *this;}
 
@@ -494,28 +494,6 @@ namespace Model
     inline GetMetricStreamResult& AddStatisticsConfigurations(MetricStreamStatisticsConfiguration&& value) { m_statisticsConfigurations.push_back(std::move(value)); return *this; }
 
 
-    /**
-     * <p>If this is <code>true</code> and this metric stream is in a monitoring
-     * account, then the stream includes metrics from source accounts that the
-     * monitoring account is linked to.</p>
-     */
-    inline bool GetIncludeLinkedAccountsMetrics() const{ return m_includeLinkedAccountsMetrics; }
-
-    /**
-     * <p>If this is <code>true</code> and this metric stream is in a monitoring
-     * account, then the stream includes metrics from source accounts that the
-     * monitoring account is linked to.</p>
-     */
-    inline void SetIncludeLinkedAccountsMetrics(bool value) { m_includeLinkedAccountsMetrics = value; }
-
-    /**
-     * <p>If this is <code>true</code> and this metric stream is in a monitoring
-     * account, then the stream includes metrics from source accounts that the
-     * monitoring account is linked to.</p>
-     */
-    inline GetMetricStreamResult& WithIncludeLinkedAccountsMetrics(bool value) { SetIncludeLinkedAccountsMetrics(value); return *this;}
-
-
     
     inline const ResponseMetadata& GetResponseMetadata() const{ return m_responseMetadata; }
 
@@ -554,8 +532,6 @@ namespace Model
     MetricStreamOutputFormat m_outputFormat;
 
     Aws::Vector<MetricStreamStatisticsConfiguration> m_statisticsConfigurations;
-
-    bool m_includeLinkedAccountsMetrics;
 
     ResponseMetadata m_responseMetadata;
   };

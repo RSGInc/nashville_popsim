@@ -24,10 +24,10 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/SetIdentityPoolRolesInput">AWS
    * API Reference</a></p>
    */
-  class SetIdentityPoolRolesRequest : public CognitoIdentityRequest
+  class AWS_COGNITOIDENTITY_API SetIdentityPoolRolesRequest : public CognitoIdentityRequest
   {
   public:
-    AWS_COGNITOIDENTITY_API SetIdentityPoolRolesRequest();
+    SetIdentityPoolRolesRequest();
 
     // Service request name is the Operation name which will send this request out,
     // each operation should has unique request name, so that we can get operation's name from this request.
@@ -35,9 +35,9 @@ namespace Model
     // so we can not get operation's name from response.
     inline virtual const char* GetServiceRequestName() const override { return "SetIdentityPoolRoles"; }
 
-    AWS_COGNITOIDENTITY_API Aws::String SerializePayload() const override;
+    Aws::String SerializePayload() const override;
 
-    AWS_COGNITOIDENTITY_API Aws::Http::HeaderValueCollection GetRequestSpecificHeaders() const override;
+    Aws::Http::HeaderValueCollection GetRequestSpecificHeaders() const override;
 
 
     /**

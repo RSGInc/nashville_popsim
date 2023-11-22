@@ -118,7 +118,7 @@ set(ARROW_MIMALLOC "ON")
 ### Build the Parquet libraries
 set(ARROW_PARQUET "ON")
 ### Build the Arrow ORC adapter
-set(ARROW_ORC "ON")
+set(ARROW_ORC "OFF")
 ### Build the plasma object store along with Arrow
 set(ARROW_PLASMA "OFF")
 ### Build some components needed by PyArrow.

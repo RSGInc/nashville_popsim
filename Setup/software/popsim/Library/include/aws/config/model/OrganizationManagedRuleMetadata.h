@@ -33,13 +33,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/OrganizationManagedRuleMetadata">AWS
    * API Reference</a></p>
    */
-  class OrganizationManagedRuleMetadata
+  class AWS_CONFIGSERVICE_API OrganizationManagedRuleMetadata
   {
   public:
-    AWS_CONFIGSERVICE_API OrganizationManagedRuleMetadata();
-    AWS_CONFIGSERVICE_API OrganizationManagedRuleMetadata(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API OrganizationManagedRuleMetadata& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API Aws::Utils::Json::JsonValue Jsonize() const;
+    OrganizationManagedRuleMetadata();
+    OrganizationManagedRuleMetadata(Aws::Utils::Json::JsonView jsonValue);
+    OrganizationManagedRuleMetadata& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**

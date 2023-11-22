@@ -19,10 +19,9 @@
 
 #pragma once
 
-#include <cstdint>
-#include <memory>
 #include <optional>
 
+#include "arrow/compute/function.h"
 #include "arrow/engine/substrait/visibility.h"
 #include "arrow/type_fwd.h"
 

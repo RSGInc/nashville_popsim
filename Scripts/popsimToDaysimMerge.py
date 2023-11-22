@@ -36,9 +36,9 @@ gqper = gqper[list(hhper.columns)]
 
 #append
 
-finalhh = hh.append(gq)
+finalhh = pd.concat([hh,gq], ignore_index=True)
 finalhh.to_csv(os.path.join(outputDir, 'household_2017.dat'), sep = ' ', index = False)
 
-finalper = hhper.append(gqper)
+finalper = pd.concat([hhper,gqper], ignore_index=True)
 finalper.to_csv(os.path.join(outputDir, 'person_2017.dat'), sep = ' ', index = False)
 

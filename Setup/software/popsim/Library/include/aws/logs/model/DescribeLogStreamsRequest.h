@@ -19,10 +19,10 @@ namespace Model
 
   /**
    */
-  class DescribeLogStreamsRequest : public CloudWatchLogsRequest
+  class AWS_CLOUDWATCHLOGS_API DescribeLogStreamsRequest : public CloudWatchLogsRequest
   {
   public:
-    AWS_CLOUDWATCHLOGS_API DescribeLogStreamsRequest();
+    DescribeLogStreamsRequest();
 
     // Service request name is the Operation name which will send this request out,
     // each operation should has unique request name, so that we can get operation's name from this request.
@@ -30,139 +30,50 @@ namespace Model
     // so we can not get operation's name from response.
     inline virtual const char* GetServiceRequestName() const override { return "DescribeLogStreams"; }
 
-    AWS_CLOUDWATCHLOGS_API Aws::String SerializePayload() const override;
+    Aws::String SerializePayload() const override;
 
-    AWS_CLOUDWATCHLOGS_API Aws::Http::HeaderValueCollection GetRequestSpecificHeaders() const override;
+    Aws::Http::HeaderValueCollection GetRequestSpecificHeaders() const override;
 
 
     /**
-     * <p>The name of the log group.</p>  <p> You must include either
-     * <code>logGroupIdentifier</code> or <code>logGroupName</code>, but not both. </p>
-     * 
+     * <p>The name of the log group.</p>
      */
     inline const Aws::String& GetLogGroupName() const{ return m_logGroupName; }
 
     /**
-     * <p>The name of the log group.</p>  <p> You must include either
-     * <code>logGroupIdentifier</code> or <code>logGroupName</code>, but not both. </p>
-     * 
+     * <p>The name of the log group.</p>
      */
     inline bool LogGroupNameHasBeenSet() const { return m_logGroupNameHasBeenSet; }
 
     /**
-     * <p>The name of the log group.</p>  <p> You must include either
-     * <code>logGroupIdentifier</code> or <code>logGroupName</code>, but not both. </p>
-     * 
+     * <p>The name of the log group.</p>
      */
     inline void SetLogGroupName(const Aws::String& value) { m_logGroupNameHasBeenSet = true; m_logGroupName = value; }
 
     /**
-     * <p>The name of the log group.</p>  <p> You must include either
-     * <code>logGroupIdentifier</code> or <code>logGroupName</code>, but not both. </p>
-     * 
+     * <p>The name of the log group.</p>
      */
     inline void SetLogGroupName(Aws::String&& value) { m_logGroupNameHasBeenSet = true; m_logGroupName = std::move(value); }
 
     /**
-     * <p>The name of the log group.</p>  <p> You must include either
-     * <code>logGroupIdentifier</code> or <code>logGroupName</code>, but not both. </p>
-     * 
+     * <p>The name of the log group.</p>
      */
     inline void SetLogGroupName(const char* value) { m_logGroupNameHasBeenSet = true; m_logGroupName.assign(value); }
 
     /**
-     * <p>The name of the log group.</p>  <p> You must include either
-     * <code>logGroupIdentifier</code> or <code>logGroupName</code>, but not both. </p>
-     * 
+     * <p>The name of the log group.</p>
      */
     inline DescribeLogStreamsRequest& WithLogGroupName(const Aws::String& value) { SetLogGroupName(value); return *this;}
 
     /**
-     * <p>The name of the log group.</p>  <p> You must include either
-     * <code>logGroupIdentifier</code> or <code>logGroupName</code>, but not both. </p>
-     * 
+     * <p>The name of the log group.</p>
      */
     inline DescribeLogStreamsRequest& WithLogGroupName(Aws::String&& value) { SetLogGroupName(std::move(value)); return *this;}
 
     /**
-     * <p>The name of the log group.</p>  <p> You must include either
-     * <code>logGroupIdentifier</code> or <code>logGroupName</code>, but not both. </p>
-     * 
+     * <p>The name of the log group.</p>
      */
     inline DescribeLogStreamsRequest& WithLogGroupName(const char* value) { SetLogGroupName(value); return *this;}
-
-
-    /**
-     * <p>Specify either the name or ARN of the log group to view. If the log group is
-     * in a source account and you are using a monitoring account, you must use the log
-     * group ARN.</p>  <p> You must include either
-     * <code>logGroupIdentifier</code> or <code>logGroupName</code>, but not both. </p>
-     * 
-     */
-    inline const Aws::String& GetLogGroupIdentifier() const{ return m_logGroupIdentifier; }
-
-    /**
-     * <p>Specify either the name or ARN of the log group to view. If the log group is
-     * in a source account and you are using a monitoring account, you must use the log
-     * group ARN.</p>  <p> You must include either
-     * <code>logGroupIdentifier</code> or <code>logGroupName</code>, but not both. </p>
-     * 
-     */
-    inline bool LogGroupIdentifierHasBeenSet() const { return m_logGroupIdentifierHasBeenSet; }
-
-    /**
-     * <p>Specify either the name or ARN of the log group to view. If the log group is
-     * in a source account and you are using a monitoring account, you must use the log
-     * group ARN.</p>  <p> You must include either
-     * <code>logGroupIdentifier</code> or <code>logGroupName</code>, but not both. </p>
-     * 
-     */
-    inline void SetLogGroupIdentifier(const Aws::String& value) { m_logGroupIdentifierHasBeenSet = true; m_logGroupIdentifier = value; }
-
-    /**
-     * <p>Specify either the name or ARN of the log group to view. If the log group is
-     * in a source account and you are using a monitoring account, you must use the log
-     * group ARN.</p>  <p> You must include either
-     * <code>logGroupIdentifier</code> or <code>logGroupName</code>, but not both. </p>
-     * 
-     */
-    inline void SetLogGroupIdentifier(Aws::String&& value) { m_logGroupIdentifierHasBeenSet = true; m_logGroupIdentifier = std::move(value); }
-
-    /**
-     * <p>Specify either the name or ARN of the log group to view. If the log group is
-     * in a source account and you are using a monitoring account, you must use the log
-     * group ARN.</p>  <p> You must include either
-     * <code>logGroupIdentifier</code> or <code>logGroupName</code>, but not both. </p>
-     * 
-     */
-    inline void SetLogGroupIdentifier(const char* value) { m_logGroupIdentifierHasBeenSet = true; m_logGroupIdentifier.assign(value); }
-
-    /**
-     * <p>Specify either the name or ARN of the log group to view. If the log group is
-     * in a source account and you are using a monitoring account, you must use the log
-     * group ARN.</p>  <p> You must include either
-     * <code>logGroupIdentifier</code> or <code>logGroupName</code>, but not both. </p>
-     * 
-     */
-    inline DescribeLogStreamsRequest& WithLogGroupIdentifier(const Aws::String& value) { SetLogGroupIdentifier(value); return *this;}
-
-    /**
-     * <p>Specify either the name or ARN of the log group to view. If the log group is
-     * in a source account and you are using a monitoring account, you must use the log
-     * group ARN.</p>  <p> You must include either
-     * <code>logGroupIdentifier</code> or <code>logGroupName</code>, but not both. </p>
-     * 
-     */
-    inline DescribeLogStreamsRequest& WithLogGroupIdentifier(Aws::String&& value) { SetLogGroupIdentifier(std::move(value)); return *this;}
-
-    /**
-     * <p>Specify either the name or ARN of the log group to view. If the log group is
-     * in a source account and you are using a monitoring account, you must use the log
-     * group ARN.</p>  <p> You must include either
-     * <code>logGroupIdentifier</code> or <code>logGroupName</code>, but not both. </p>
-     * 
-     */
-    inline DescribeLogStreamsRequest& WithLogGroupIdentifier(const char* value) { SetLogGroupIdentifier(value); return *this;}
 
 
     /**
@@ -222,10 +133,9 @@ namespace Model
      * <code>logStreamNamePrefix</code> parameter.</p> <p>
      * <code>lastEventTimestamp</code> represents the time of the most recent log event
      * in the log stream in CloudWatch Logs. This number is expressed as the number of
-     * milliseconds after <code>Jan 1, 1970 00:00:00 UTC</code>.
-     * <code>lastEventTimestamp</code> updates on an eventual consistency basis. It
-     * typically updates in less than an hour from ingestion, but in rare situations
-     * might take longer.</p>
+     * milliseconds after Jan 1, 1970 00:00:00 UTC. <code>lastEventTimestamp</code>
+     * updates on an eventual consistency basis. It typically updates in less than an
+     * hour from ingestion, but in rare situations might take longer.</p>
      */
     inline const OrderBy& GetOrderBy() const{ return m_orderBy; }
 
@@ -237,10 +147,9 @@ namespace Model
      * <code>logStreamNamePrefix</code> parameter.</p> <p>
      * <code>lastEventTimestamp</code> represents the time of the most recent log event
      * in the log stream in CloudWatch Logs. This number is expressed as the number of
-     * milliseconds after <code>Jan 1, 1970 00:00:00 UTC</code>.
-     * <code>lastEventTimestamp</code> updates on an eventual consistency basis. It
-     * typically updates in less than an hour from ingestion, but in rare situations
-     * might take longer.</p>
+     * milliseconds after Jan 1, 1970 00:00:00 UTC. <code>lastEventTimestamp</code>
+     * updates on an eventual consistency basis. It typically updates in less than an
+     * hour from ingestion, but in rare situations might take longer.</p>
      */
     inline bool OrderByHasBeenSet() const { return m_orderByHasBeenSet; }
 
@@ -252,10 +161,9 @@ namespace Model
      * <code>logStreamNamePrefix</code> parameter.</p> <p>
      * <code>lastEventTimestamp</code> represents the time of the most recent log event
      * in the log stream in CloudWatch Logs. This number is expressed as the number of
-     * milliseconds after <code>Jan 1, 1970 00:00:00 UTC</code>.
-     * <code>lastEventTimestamp</code> updates on an eventual consistency basis. It
-     * typically updates in less than an hour from ingestion, but in rare situations
-     * might take longer.</p>
+     * milliseconds after Jan 1, 1970 00:00:00 UTC. <code>lastEventTimestamp</code>
+     * updates on an eventual consistency basis. It typically updates in less than an
+     * hour from ingestion, but in rare situations might take longer.</p>
      */
     inline void SetOrderBy(const OrderBy& value) { m_orderByHasBeenSet = true; m_orderBy = value; }
 
@@ -267,10 +175,9 @@ namespace Model
      * <code>logStreamNamePrefix</code> parameter.</p> <p>
      * <code>lastEventTimestamp</code> represents the time of the most recent log event
      * in the log stream in CloudWatch Logs. This number is expressed as the number of
-     * milliseconds after <code>Jan 1, 1970 00:00:00 UTC</code>.
-     * <code>lastEventTimestamp</code> updates on an eventual consistency basis. It
-     * typically updates in less than an hour from ingestion, but in rare situations
-     * might take longer.</p>
+     * milliseconds after Jan 1, 1970 00:00:00 UTC. <code>lastEventTimestamp</code>
+     * updates on an eventual consistency basis. It typically updates in less than an
+     * hour from ingestion, but in rare situations might take longer.</p>
      */
     inline void SetOrderBy(OrderBy&& value) { m_orderByHasBeenSet = true; m_orderBy = std::move(value); }
 
@@ -282,10 +189,9 @@ namespace Model
      * <code>logStreamNamePrefix</code> parameter.</p> <p>
      * <code>lastEventTimestamp</code> represents the time of the most recent log event
      * in the log stream in CloudWatch Logs. This number is expressed as the number of
-     * milliseconds after <code>Jan 1, 1970 00:00:00 UTC</code>.
-     * <code>lastEventTimestamp</code> updates on an eventual consistency basis. It
-     * typically updates in less than an hour from ingestion, but in rare situations
-     * might take longer.</p>
+     * milliseconds after Jan 1, 1970 00:00:00 UTC. <code>lastEventTimestamp</code>
+     * updates on an eventual consistency basis. It typically updates in less than an
+     * hour from ingestion, but in rare situations might take longer.</p>
      */
     inline DescribeLogStreamsRequest& WithOrderBy(const OrderBy& value) { SetOrderBy(value); return *this;}
 
@@ -297,10 +203,9 @@ namespace Model
      * <code>logStreamNamePrefix</code> parameter.</p> <p>
      * <code>lastEventTimestamp</code> represents the time of the most recent log event
      * in the log stream in CloudWatch Logs. This number is expressed as the number of
-     * milliseconds after <code>Jan 1, 1970 00:00:00 UTC</code>.
-     * <code>lastEventTimestamp</code> updates on an eventual consistency basis. It
-     * typically updates in less than an hour from ingestion, but in rare situations
-     * might take longer.</p>
+     * milliseconds after Jan 1, 1970 00:00:00 UTC. <code>lastEventTimestamp</code>
+     * updates on an eventual consistency basis. It typically updates in less than an
+     * hour from ingestion, but in rare situations might take longer.</p>
      */
     inline DescribeLogStreamsRequest& WithOrderBy(OrderBy&& value) { SetOrderBy(std::move(value)); return *this;}
 
@@ -411,9 +316,6 @@ namespace Model
 
     Aws::String m_logGroupName;
     bool m_logGroupNameHasBeenSet = false;
-
-    Aws::String m_logGroupIdentifier;
-    bool m_logGroupIdentifierHasBeenSet = false;
 
     Aws::String m_logStreamNamePrefix;
     bool m_logStreamNamePrefixHasBeenSet = false;

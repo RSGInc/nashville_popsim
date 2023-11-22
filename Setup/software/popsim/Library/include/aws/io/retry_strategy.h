@@ -9,8 +9,6 @@
 #include <aws/common/atomics.h>
 #include <aws/common/byte_buf.h>
 
-AWS_PUSH_SANE_WARNING_LEVEL
-
 struct aws_retry_strategy;
 struct aws_retry_token;
 struct aws_event_loop_group;
@@ -36,11 +34,6 @@ typedef void(aws_retry_strategy_on_retry_token_acquired_fn)(
  * aws_retry_token_release().
  */
 typedef void(aws_retry_strategy_on_retry_ready_fn)(struct aws_retry_token *token, int error_code, void *user_data);
-
-/**
- * Optional function to supply your own generate random implementation
- */
-typedef uint64_t(aws_generate_random_fn)(void *user_data);
 
 enum aws_retry_error_type {
     /** This is a connection level error such as a socket timeout, socket connect error, tls negotiation timeout etc...
@@ -115,26 +108,8 @@ struct aws_exponential_backoff_retry_options {
     /** Jitter mode to use, see comments for aws_exponential_backoff_jitter_mode.
      * Default is AWS_EXPONENTIAL_BACKOFF_JITTER_DEFAULT */
     enum aws_exponential_backoff_jitter_mode jitter_mode;
-
-    /** Deprecated. Use generate_random_impl instead
-     * By default this will be set to use aws_device_random. If you want something else, set it here.
-     * */
+    /** By default this will be set to use aws_device_random. If you want something else, set it here. */
     uint64_t (*generate_random)(void);
-
-    /*
-     * By default this will be set to use aws_device_random. If you want something else, set it here.
-     */
-    aws_generate_random_fn *generate_random_impl;
-    /**
-     * Optional user data for the generate random generate_random_impl.
-     */
-    void *generate_random_user_data;
-
-    /**
-     * Optional shutdown callback that gets invoked, with appropriate user data,
-     * when the resources used by the retry_strategy are no longer in use.
-     */
-    const struct aws_shutdown_callback_options *shutdown_options;
 };
 
 struct aws_standard_retry_options {
@@ -234,6 +209,5 @@ AWS_IO_API struct aws_retry_strategy *aws_retry_strategy_new_standard(
     const struct aws_standard_retry_options *config);
 
 AWS_EXTERN_C_END
-AWS_POP_SANE_WARNING_LEVEL
 
 #endif /* AWS_IO_CLIENT_RETRY_STRATEGY_H */

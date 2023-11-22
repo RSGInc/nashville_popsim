@@ -24,12 +24,12 @@ namespace CloudWatch
 {
 namespace Model
 {
-  class DeleteDashboardsResult
+  class AWS_CLOUDWATCH_API DeleteDashboardsResult
   {
   public:
-    AWS_CLOUDWATCH_API DeleteDashboardsResult();
-    AWS_CLOUDWATCH_API DeleteDashboardsResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_CLOUDWATCH_API DeleteDashboardsResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    DeleteDashboardsResult();
+    DeleteDashboardsResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    DeleteDashboardsResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     

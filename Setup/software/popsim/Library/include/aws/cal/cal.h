@@ -10,8 +10,6 @@
 
 #include <aws/cal/exports.h>
 
-AWS_PUSH_SANE_WARNING_LEVEL
-
 struct aws_allocator;
 
 #define AWS_C_CAL_PACKAGE_ID 7
@@ -24,8 +22,7 @@ enum aws_cal_errors {
     AWS_ERROR_CAL_MALFORMED_ASN1_ENCOUNTERED,
     AWS_ERROR_CAL_MISMATCHED_DER_TYPE,
     AWS_ERROR_CAL_UNSUPPORTED_ALGORITHM,
-    AWS_ERROR_CAL_BUFFER_TOO_LARGE_FOR_ALGORITHM,
-    AWS_ERROR_CAL_INVALID_CIPHER_MATERIAL_SIZE_FOR_ALGORITHM,
+
     AWS_ERROR_CAL_END_RANGE = AWS_ERROR_ENUM_END_RANGE(AWS_C_CAL_PACKAGE_ID)
 };
 
@@ -45,12 +42,6 @@ AWS_EXTERN_C_BEGIN
 AWS_CAL_API void aws_cal_library_init(struct aws_allocator *allocator);
 AWS_CAL_API void aws_cal_library_clean_up(void);
 
-/*
- * Every CRT thread that might invoke aws-lc functionality should call this as part of the thread at_exit process
- */
-AWS_CAL_API void aws_cal_thread_clean_up(void);
-
 AWS_EXTERN_C_END
-AWS_POP_SANE_WARNING_LEVEL
 
 #endif /* AWS_CAL_CAL_H */

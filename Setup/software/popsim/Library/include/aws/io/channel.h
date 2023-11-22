@@ -10,8 +10,6 @@
 #include <aws/common/statistics.h>
 #include <aws/common/task_scheduler.h>
 
-AWS_PUSH_SANE_WARNING_LEVEL
-
 enum aws_channel_direction {
     AWS_CHANNEL_DIR_READ,
     AWS_CHANNEL_DIR_WRITE,
@@ -506,6 +504,5 @@ AWS_IO_API
 int aws_channel_trigger_read(struct aws_channel *channel);
 
 AWS_EXTERN_C_END
-AWS_POP_SANE_WARNING_LEVEL
 
 #endif /* AWS_IO_CHANNEL_H */

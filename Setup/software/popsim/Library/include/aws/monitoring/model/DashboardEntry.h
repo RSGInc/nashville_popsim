@@ -29,15 +29,15 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/DashboardEntry">AWS
    * API Reference</a></p>
    */
-  class DashboardEntry
+  class AWS_CLOUDWATCH_API DashboardEntry
   {
   public:
-    AWS_CLOUDWATCH_API DashboardEntry();
-    AWS_CLOUDWATCH_API DashboardEntry(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_CLOUDWATCH_API DashboardEntry& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    DashboardEntry();
+    DashboardEntry(const Aws::Utils::Xml::XmlNode& xmlNode);
+    DashboardEntry& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_CLOUDWATCH_API void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
-    AWS_CLOUDWATCH_API void OutputToStream(Aws::OStream& oStream, const char* location) const;
+    void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
+    void OutputToStream(Aws::OStream& oStream, const char* location) const;
 
 
     /**

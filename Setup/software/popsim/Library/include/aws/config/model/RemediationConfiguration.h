@@ -34,13 +34,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/RemediationConfiguration">AWS
    * API Reference</a></p>
    */
-  class RemediationConfiguration
+  class AWS_CONFIGSERVICE_API RemediationConfiguration
   {
   public:
-    AWS_CONFIGSERVICE_API RemediationConfiguration();
-    AWS_CONFIGSERVICE_API RemediationConfiguration(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API RemediationConfiguration& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API Aws::Utils::Json::JsonValue Jsonize() const;
+    RemediationConfiguration();
+    RemediationConfiguration(Aws::Utils::Json::JsonView jsonValue);
+    RemediationConfiguration& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**

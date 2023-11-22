@@ -20,10 +20,8 @@
 #ifndef _THRIFT_CONCURRENCY_FUNCTION_RUNNER_H
 #define _THRIFT_CONCURRENCY_FUNCTION_RUNNER_H 1
 
-#include <functional>
-#include <memory>
-
 #include <thrift/concurrency/Thread.h>
+#include <memory>
 
 namespace apache {
 namespace thrift {

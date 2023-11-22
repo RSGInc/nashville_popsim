@@ -6,10 +6,10 @@
   "openblas >=0.3.23,<0.3.24.0a0"
  ],
  "depends": [
-  "libflang >=5.0.0,<6.0.0.a0",
-  "ucrt >=10.0.20348.0",
   "vc >=14.2,<15",
-  "vs2015_runtime >=14.29.30139"
+  "ucrt >=10.0.20348.0",
+  "vs2015_runtime >=14.29.30139",
+  "libflang >=5.0.0,<6.0.0.a0"
  ],
  "extracted_package_dir": "",
  "features": "",

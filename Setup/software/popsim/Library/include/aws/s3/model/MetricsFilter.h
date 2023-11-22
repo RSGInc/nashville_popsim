@@ -34,14 +34,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/MetricsFilter">AWS
    * API Reference</a></p>
    */
-  class MetricsFilter
+  class AWS_S3_API MetricsFilter
   {
   public:
-    AWS_S3_API MetricsFilter();
-    AWS_S3_API MetricsFilter(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API MetricsFilter& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    MetricsFilter();
+    MetricsFilter(const Aws::Utils::Xml::XmlNode& xmlNode);
+    MetricsFilter& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

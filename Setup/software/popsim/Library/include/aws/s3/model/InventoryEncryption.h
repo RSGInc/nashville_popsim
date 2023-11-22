@@ -29,14 +29,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/InventoryEncryption">AWS
    * API Reference</a></p>
    */
-  class InventoryEncryption
+  class AWS_S3_API InventoryEncryption
   {
   public:
-    AWS_S3_API InventoryEncryption();
-    AWS_S3_API InventoryEncryption(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API InventoryEncryption& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    InventoryEncryption();
+    InventoryEncryption(const Aws::Utils::Xml::XmlNode& xmlNode);
+    InventoryEncryption& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

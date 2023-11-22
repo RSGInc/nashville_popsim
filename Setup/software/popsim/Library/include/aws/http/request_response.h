@@ -8,10 +8,6 @@
 
 #include <aws/http/http.h>
 
-#include <aws/io/future.h>
-
-AWS_PUSH_SANE_WARNING_LEVEL
-
 struct aws_http_connection;
 struct aws_input_stream;
 
@@ -199,46 +195,6 @@ typedef void(aws_http_on_stream_complete_fn)(struct aws_http_stream *stream, int
 typedef void(aws_http_on_stream_destroy_fn)(void *user_data);
 
 /**
- * Tracing metrics for aws_http_stream.
- * Data maybe not be available if the data of stream was never sent/received before it completes.
- */
-struct aws_http_stream_metrics {
-    /* The time stamp when the request started to be encoded. -1 means data not available. Timestamp
-     * are from `aws_high_res_clock_get_ticks` */
-    int64_t send_start_timestamp_ns;
-    /* The time stamp when the request finished to be encoded. -1 means data not available.
-     * Timestamp are from `aws_high_res_clock_get_ticks` */
-    int64_t send_end_timestamp_ns;
-    /* The time duration for the request from start encoding to finish encoding (send_end_timestamp_ns -
-     * send_start_timestamp_ns). -1 means data not available. */
-    int64_t sending_duration_ns;
-
-    /* The time stamp when the response started to be received from the network channel. -1 means data not available.
-     * Timestamp are from `aws_high_res_clock_get_ticks` */
-    int64_t receive_start_timestamp_ns;
-    /* The time stamp when the response finished to be received from the network channel. -1 means data not available.
-     * Timestamp are from `aws_high_res_clock_get_ticks` */
-    int64_t receive_end_timestamp_ns;
-    /* The time duration for the request from start receiving to finish receiving. receive_end_timestamp_ns -
-     * receive_start_timestamp_ns. -1 means data not available. */
-    int64_t receiving_duration_ns;
-
-    /* The stream-id on the connection when this stream was activated. */
-    uint32_t stream_id;
-};
-
-/**
- * Invoked right before request/response stream is complete to report the tracing metrics for aws_http_stream.
- * This may be invoked synchronously when aws_http_stream_release() is called.
- * This is invoked even if the stream is never activated.
- * See `aws_http_stream_metrics` for details.
- */
-typedef void(aws_http_on_stream_metrics_fn)(
-    struct aws_http_stream *stream,
-    const struct aws_http_stream_metrics *metrics,
-    void *user_data);
-
-/**
  * Options for creating a stream which sends a request from the client and receives a response from the server.
  */
 struct aws_http_make_request_options {
@@ -277,13 +233,6 @@ struct aws_http_make_request_options {
      * See `aws_http_on_incoming_body_fn`.
      */
     aws_http_on_incoming_body_fn *on_response_body;
-
-    /**
-     * Invoked right before stream is complete, whether successful or unsuccessful
-     * Optional.
-     * See `aws_http_on_stream_metrics_fn`
-     */
-    aws_http_on_stream_metrics_fn *on_metrics;
 
     /**
      * Invoked when request/response stream is complete, whether successful or unsuccessful
@@ -579,15 +528,6 @@ int aws_http_headers_get_index(
     struct aws_http_header *out_header);
 
 /**
- *
- * Get all values with this name, combined into one new aws_string that you are responsible for destroying.
- * If there are multiple headers with this name, their values are appended with comma-separators.
- * If there are no headers with this name, NULL is returned and AWS_ERROR_HTTP_HEADER_NOT_FOUND is raised.
- */
-AWS_HTTP_API
-struct aws_string *aws_http_headers_get_all(const struct aws_http_headers *headers, struct aws_byte_cursor name);
-
-/**
  * Get the first value for this name, ignoring any additional values.
  * AWS_ERROR_HTTP_HEADER_NOT_FOUND is raised if the name is not found.
  */
@@ -858,11 +798,6 @@ AWS_HTTP_API
 void aws_http_message_set_body_stream(struct aws_http_message *message, struct aws_input_stream *body_stream);
 
 /**
- * aws_future<aws_http_message*>
- */
-AWS_FUTURE_T_POINTER_WITH_RELEASE_DECLARATION(aws_future_http_message, struct aws_http_message, AWS_HTTP_API)
-
-/**
  * Submit a chunk of data to be sent on an HTTP/1.1 stream.
  * The stream must have specified "chunked" in a "transfer-encoding" header.
  * For client streams, activate() must be called before any chunks are submitted.
@@ -1029,12 +964,6 @@ struct aws_http_stream *aws_http_stream_new_server_request_handler(
     const struct aws_http_request_handler_options *options);
 
 /**
- * Acquire refcount on the stream to prevent it from being cleaned up until it is released.
- */
-AWS_HTTP_API
-struct aws_http_stream *aws_http_stream_acquire(struct aws_http_stream *stream);
-
-/**
  * Users must release the stream when they are done with it, or its memory will never be cleaned up.
  * This will not cancel the stream, its callbacks will still fire if the stream is still in progress.
  *
@@ -1130,6 +1059,5 @@ AWS_HTTP_API
 int aws_http2_stream_get_sent_reset_error_code(struct aws_http_stream *http2_stream, uint32_t *out_http2_error);
 
 AWS_EXTERN_C_END
-AWS_POP_SANE_WARNING_LEVEL
 
 #endif /* AWS_HTTP_REQUEST_RESPONSE_H */

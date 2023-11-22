@@ -24,12 +24,12 @@ namespace SNS
 {
 namespace Model
 {
-  class TagResourceResult
+  class AWS_SNS_API TagResourceResult
   {
   public:
-    AWS_SNS_API TagResourceResult();
-    AWS_SNS_API TagResourceResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_SNS_API TagResourceResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    TagResourceResult();
+    TagResourceResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    TagResourceResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     

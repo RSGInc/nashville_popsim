@@ -29,15 +29,15 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/sqs-2012-11-05/BatchResultErrorEntry">AWS
    * API Reference</a></p>
    */
-  class BatchResultErrorEntry
+  class AWS_SQS_API BatchResultErrorEntry
   {
   public:
-    AWS_SQS_API BatchResultErrorEntry();
-    AWS_SQS_API BatchResultErrorEntry(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_SQS_API BatchResultErrorEntry& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    BatchResultErrorEntry();
+    BatchResultErrorEntry(const Aws::Utils::Xml::XmlNode& xmlNode);
+    BatchResultErrorEntry& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_SQS_API void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
-    AWS_SQS_API void OutputToStream(Aws::OStream& oStream, const char* location) const;
+    void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
+    void OutputToStream(Aws::OStream& oStream, const char* location) const;
 
 
     /**

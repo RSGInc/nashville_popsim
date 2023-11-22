@@ -24,12 +24,12 @@ namespace ConfigService
 {
 namespace Model
 {
-  class GetStoredQueryResult
+  class AWS_CONFIGSERVICE_API GetStoredQueryResult
   {
   public:
-    AWS_CONFIGSERVICE_API GetStoredQueryResult();
-    AWS_CONFIGSERVICE_API GetStoredQueryResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
-    AWS_CONFIGSERVICE_API GetStoredQueryResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    GetStoredQueryResult();
+    GetStoredQueryResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    GetStoredQueryResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
 
 
     /**

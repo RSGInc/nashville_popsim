@@ -25,12 +25,12 @@ namespace CloudWatchLogs
 {
 namespace Model
 {
-  class TestMetricFilterResult
+  class AWS_CLOUDWATCHLOGS_API TestMetricFilterResult
   {
   public:
-    AWS_CLOUDWATCHLOGS_API TestMetricFilterResult();
-    AWS_CLOUDWATCHLOGS_API TestMetricFilterResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
-    AWS_CLOUDWATCHLOGS_API TestMetricFilterResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    TestMetricFilterResult();
+    TestMetricFilterResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    TestMetricFilterResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
 
 
     /**

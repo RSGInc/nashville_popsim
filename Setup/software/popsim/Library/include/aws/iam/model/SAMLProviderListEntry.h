@@ -30,15 +30,15 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/iam-2010-05-08/SAMLProviderListEntry">AWS
    * API Reference</a></p>
    */
-  class SAMLProviderListEntry
+  class AWS_IAM_API SAMLProviderListEntry
   {
   public:
-    AWS_IAM_API SAMLProviderListEntry();
-    AWS_IAM_API SAMLProviderListEntry(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_IAM_API SAMLProviderListEntry& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    SAMLProviderListEntry();
+    SAMLProviderListEntry(const Aws::Utils::Xml::XmlNode& xmlNode);
+    SAMLProviderListEntry& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_IAM_API void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
-    AWS_IAM_API void OutputToStream(Aws::OStream& oStream, const char* location) const;
+    void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
+    void OutputToStream(Aws::OStream& oStream, const char* location) const;
 
 
     /**

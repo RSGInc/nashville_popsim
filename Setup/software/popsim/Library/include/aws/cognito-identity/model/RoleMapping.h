@@ -30,13 +30,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/RoleMapping">AWS
    * API Reference</a></p>
    */
-  class RoleMapping
+  class AWS_COGNITOIDENTITY_API RoleMapping
   {
   public:
-    AWS_COGNITOIDENTITY_API RoleMapping();
-    AWS_COGNITOIDENTITY_API RoleMapping(Aws::Utils::Json::JsonView jsonValue);
-    AWS_COGNITOIDENTITY_API RoleMapping& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_COGNITOIDENTITY_API Aws::Utils::Json::JsonValue Jsonize() const;
+    RoleMapping();
+    RoleMapping(Aws::Utils::Json::JsonView jsonValue);
+    RoleMapping& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**

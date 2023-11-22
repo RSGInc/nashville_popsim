@@ -29,13 +29,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/Destination">AWS
    * API Reference</a></p>
    */
-  class Destination
+  class AWS_CLOUDWATCHLOGS_API Destination
   {
   public:
-    AWS_CLOUDWATCHLOGS_API Destination();
-    AWS_CLOUDWATCHLOGS_API Destination(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CLOUDWATCHLOGS_API Destination& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CLOUDWATCHLOGS_API Aws::Utils::Json::JsonValue Jsonize() const;
+    Destination();
+    Destination(Aws::Utils::Json::JsonView jsonValue);
+    Destination& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**

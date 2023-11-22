@@ -22,12 +22,12 @@ namespace CognitoIdentity
 {
 namespace Model
 {
-  class TagResourceResult
+  class AWS_COGNITOIDENTITY_API TagResourceResult
   {
   public:
-    AWS_COGNITOIDENTITY_API TagResourceResult();
-    AWS_COGNITOIDENTITY_API TagResourceResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
-    AWS_COGNITOIDENTITY_API TagResourceResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    TagResourceResult();
+    TagResourceResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    TagResourceResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
 
   };
 

@@ -36,15 +36,15 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/iam-2010-05-08/PolicyVersion">AWS
    * API Reference</a></p>
    */
-  class PolicyVersion
+  class AWS_IAM_API PolicyVersion
   {
   public:
-    AWS_IAM_API PolicyVersion();
-    AWS_IAM_API PolicyVersion(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_IAM_API PolicyVersion& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    PolicyVersion();
+    PolicyVersion(const Aws::Utils::Xml::XmlNode& xmlNode);
+    PolicyVersion& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_IAM_API void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
-    AWS_IAM_API void OutputToStream(Aws::OStream& oStream, const char* location) const;
+    void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
+    void OutputToStream(Aws::OStream& oStream, const char* location) const;
 
 
     /**

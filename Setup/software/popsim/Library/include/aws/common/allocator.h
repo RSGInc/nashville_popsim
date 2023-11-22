@@ -9,7 +9,6 @@
 #include <aws/common/stdbool.h>
 #include <aws/common/stdint.h>
 
-AWS_PUSH_SANE_WARNING_LEVEL
 AWS_EXTERN_C_BEGIN
 
 /* Allocator structure. An instance of this will be passed around for anything needing memory allocation */
@@ -199,13 +198,6 @@ size_t aws_small_block_allocator_bytes_reserved(struct aws_allocator *sba_alloca
 AWS_COMMON_API
 size_t aws_small_block_allocator_page_size(struct aws_allocator *sba_allocator);
 
-/*
- * Returns the amount of memory in each page available to user allocations
- */
-AWS_COMMON_API
-size_t aws_small_block_allocator_page_size_available(struct aws_allocator *sba_allocator);
-
 AWS_EXTERN_C_END
-AWS_POP_SANE_WARNING_LEVEL
 
 #endif /* AWS_COMMON_ALLOCATOR_H */

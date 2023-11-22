@@ -32,7 +32,7 @@ struct ChunkLocation {
 };
 
 // An object that resolves an array chunk depending on a logical index
-struct ARROW_EXPORT ChunkResolver {
+struct ChunkResolver {
   explicit ChunkResolver(const ArrayVector& chunks);
 
   explicit ChunkResolver(const std::vector<const Array*>& chunks);

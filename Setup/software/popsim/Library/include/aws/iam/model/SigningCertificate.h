@@ -32,15 +32,15 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/iam-2010-05-08/SigningCertificate">AWS
    * API Reference</a></p>
    */
-  class SigningCertificate
+  class AWS_IAM_API SigningCertificate
   {
   public:
-    AWS_IAM_API SigningCertificate();
-    AWS_IAM_API SigningCertificate(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_IAM_API SigningCertificate& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    SigningCertificate();
+    SigningCertificate(const Aws::Utils::Xml::XmlNode& xmlNode);
+    SigningCertificate& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_IAM_API void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
-    AWS_IAM_API void OutputToStream(Aws::OStream& oStream, const char* location) const;
+    void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
+    void OutputToStream(Aws::OStream& oStream, const char* location) const;
 
 
     /**

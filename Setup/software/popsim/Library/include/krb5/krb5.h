@@ -443,11 +443,6 @@ typedef struct _krb5_crypto_iov {
 #define ENCTYPE_CAMELLIA256_CTS_CMAC        0x001a /**< RFC 6803 */
 #define ENCTYPE_UNKNOWN                     0x01ff
 
-/*
- * Historically we used the value 9 for unkeyed SHA-1.  RFC 3961 assigns this
- * value to rsa-md5-des3, which fortunately is unused.  For ABI compatibility
- * we allow either 9 or 14 for SHA-1.
- */
 #define CKSUMTYPE_CRC32         0x0001
 #define CKSUMTYPE_RSA_MD4       0x0002
 #define CKSUMTYPE_RSA_MD4_DES   0x0003
@@ -458,7 +453,6 @@ typedef struct _krb5_crypto_iov {
 #define CKSUMTYPE_RSA_MD5_DES   0x0008
 #define CKSUMTYPE_NIST_SHA      0x0009
 #define CKSUMTYPE_HMAC_SHA1_DES3      0x000c
-#define CKSUMTYPE_SHA1          0x000e /**< RFC 3961 */
 #define CKSUMTYPE_HMAC_SHA1_96_AES128 0x000f /**< RFC 3962. Used with
                                                 ENCTYPE_AES128_CTS_HMAC_SHA1_96 */
 #define CKSUMTYPE_HMAC_SHA1_96_AES256 0x0010 /**< RFC 3962. Used with
@@ -470,14 +464,27 @@ typedef struct _krb5_crypto_iov {
 #define CKSUMTYPE_MD5_HMAC_ARCFOUR -137 /* Microsoft netlogon */
 #define CKSUMTYPE_HMAC_MD5_ARCFOUR -138 /**< RFC 4757 */
 
-/* Constants for the deprecated krb5_c_random_add_entropy() */
+/*
+ * The following are entropy source designations. Whenever
+ * krb5_C_random_add_entropy is called, one of these source ids is passed in.
+ * This allows the library to better estimate bits of entropy in the sample and
+ * to keep track of what sources of entropy have contributed enough entropy.
+ * Sources marked internal MUST NOT be used by applications outside the
+ * Kerberos library
+ */
+
 enum {
-    KRB5_C_RANDSOURCE_OLDAPI = 0,
-    KRB5_C_RANDSOURCE_OSRAND = 1,
-    KRB5_C_RANDSOURCE_TRUSTEDPARTY = 2,
-    KRB5_C_RANDSOURCE_TIMING = 3,
-    KRB5_C_RANDSOURCE_EXTERNAL_PROTOCOL = 4,
-    KRB5_C_RANDSOURCE_MAX = 5
+    KRB5_C_RANDSOURCE_OLDAPI = 0, /*calls to krb5_C_RANDOM_SEED (INTERNAL)*/
+    KRB5_C_RANDSOURCE_OSRAND = 1, /* /dev/random or equivalent (internal)*/
+    KRB5_C_RANDSOURCE_TRUSTEDPARTY = 2, /* From KDC or other trusted party*/
+    /*
+     * This source should be used carefully; data in this category
+     * should be from a third party trusted to give random bits
+     * For example keys issued by the KDC in the application server.
+     */
+    KRB5_C_RANDSOURCE_TIMING = 3, /* Timing of operations*/
+    KRB5_C_RANDSOURCE_EXTERNAL_PROTOCOL = 4, /*Protocol data possibly from attacker*/
+    KRB5_C_RANDSOURCE_MAX = 5 /*Do not use; maximum source ID*/
 };
 
 #ifndef krb5_roundup
@@ -758,7 +765,19 @@ krb5_error_code KRB5_CALLCONV
 krb5_c_random_to_key(krb5_context context, krb5_enctype enctype,
                      krb5_data *random_data, krb5_keyblock *k5_random_key);
 
-/** @deprecated This call is no longer necessary. */
+/**
+ * Add entropy to the pseudo-random number generator.
+ *
+ * @param [in] context          Library context
+ * @param [in] randsource       Entropy source (see KRB5_RANDSOURCE types)
+ * @param [in] data             Data
+ *
+ * Contribute entropy to the PRNG used by krb5 crypto operations.  This may or
+ * may not affect the output of the next crypto operation requiring random
+ * data.
+ *
+ * @retval 0 Success; otherwise - Kerberos error codes
+ */
 krb5_error_code KRB5_CALLCONV
 krb5_c_random_add_entropy(krb5_context context, unsigned int randsource,
                           const krb5_data *data);
@@ -778,11 +797,24 @@ krb5_c_random_add_entropy(krb5_context context, unsigned int randsource,
 krb5_error_code KRB5_CALLCONV
 krb5_c_random_make_octets(krb5_context context, krb5_data *data);
 
-/** @deprecated This call is no longer necessary. */
+/**
+ * Collect entropy from the OS if possible.
+ *
+ * @param [in]  context         Library context
+ * @param [in]  strong          Strongest available source of entropy
+ * @param [out] success         1 if OS provides entropy, 0 otherwise
+ *
+ * If @a strong is non-zero, this function attempts to use the strongest
+ * available source of entropy.  Setting this flag may cause the function to
+ * block on some operating systems.  Good uses include seeding the PRNG for
+ * kadmind and realm setup.
+ *
+ * @retval 0 Success; otherwise - Kerberos error codes
+ */
 krb5_error_code KRB5_CALLCONV
 krb5_c_random_os_entropy(krb5_context context, int strong, int *success);
 
-/** @deprecated This call is no longer necessary. */
+/** @deprecated Replaced by krb5_c_* API family. */
 krb5_error_code KRB5_CALLCONV
 krb5_c_random_seed(krb5_context context, krb5_data *data);
 
@@ -1847,8 +1879,6 @@ krb5_verify_checksum(krb5_context context, krb5_cksumtype ctype,
 #define KRB5_ENCPADATA_REQ_ENC_PA_REP   149 /**< RFC 6806 */
 #define KRB5_PADATA_AS_FRESHNESS        150 /**< RFC 8070 */
 #define KRB5_PADATA_SPAKE               151
-#define KRB5_PADATA_REDHAT_IDP_OAUTH2   152 /**< Red Hat IdP mechanism */
-#define KRB5_PADATA_REDHAT_PASSKEY      153 /**< Red Hat Passkey mechanism */
 #define KRB5_PADATA_PAC_OPTIONS         167 /**< MS-KILE and MS-SFU */
 
 #define KRB5_SAM_USE_SAD_AS_KEY         0x80000000
@@ -1876,7 +1906,7 @@ krb5_verify_checksum(krb5_context context, krb5_cksumtype ctype,
 #define KRB5_AUTHDATA_CAMMAC    96
 #define KRB5_AUTHDATA_WIN2K_PAC 128
 #define KRB5_AUTHDATA_ETYPE_NEGOTIATION 129     /**< RFC 4537 */
-#define KRB5_AUTHDATA_SIGNTICKET        512     /**< @deprecated use PAC */
+#define KRB5_AUTHDATA_SIGNTICKET        512     /**< formerly 142 in krb5 1.8 */
 #define KRB5_AUTHDATA_FX_ARMOR 71
 #define KRB5_AUTHDATA_AUTH_INDICATOR 97
 #define KRB5_AUTHDATA_AP_OPTIONS 143
@@ -2637,14 +2667,14 @@ krb5_error_code KRB5_CALLCONV
 krb5_cccol_cursor_free(krb5_context context, krb5_cccol_cursor *cursor);
 
 /**
- * Check if the credential cache collection contains any initialized caches.
+ * Check if the credential cache collection contains any credentials.
  *
  * @param [in]  context         Library context
  *
  * @version New in 1.11
  *
- * @retval 0 At least one initialized cache is present in the collection
- * @retval KRB5_CC_NOTFOUND The collection contains no caches
+ * @retval 0 Credentials are available in the collection
+ * @retval KRB5_CC_NOTFOUND The collection contains no credentials
  */
 krb5_error_code KRB5_CALLCONV
 krb5_cccol_have_content(krb5_context context);
@@ -3089,42 +3119,6 @@ krb5_get_credentials(krb5_context context, krb5_flags options,
                      krb5_ccache ccache, krb5_creds *in_creds,
                      krb5_creds **out_creds);
 
-/**
- * Serialize a @c krb5_creds object.
- *
- * @param [in]  context         Library context
- * @param [in]  in_creds        The credentials object to serialize
- * @param [out] data_out        The serialized credentials
- *
- * Serialize @a creds in the format used by the FILE ccache format (vesion 4)
- * and KCM ccache protocol.
- *
- * Use krb5_free_data() to free @a data_out when it is no longer needed.
- *
- * @retval 0 Success; otherwise - Kerberos error codes
- */
-krb5_error_code KRB5_CALLCONV
-krb5_marshal_credentials(krb5_context context, krb5_creds *in_creds,
-                         krb5_data **data_out);
-
-/**
- * Deserialize a @c krb5_creds object.
- *
- * @param [in]  context         Library context
- * @param [in]  data            The serialized credentials
- * @param [out] creds_out       The resulting creds object
- *
- * Deserialize @a data to credentials in the format used by the FILE ccache
- * format (vesion 4) and KCM ccache protocol.
- *
- * Use krb5_free_creds() to free @a creds_out when it is no longer needed.
- *
- * @retval 0 Success; otherwise - Kerberos error codes
- */
-krb5_error_code KRB5_CALLCONV
-krb5_unmarshal_credentials(krb5_context context, const krb5_data *data,
-                           krb5_creds **creds_out);
-
 /** @deprecated Replaced by krb5_get_validated_creds. */
 krb5_error_code KRB5_CALLCONV
 krb5_get_credentials_validate(krb5_context context, krb5_flags options,
@@ -3420,10 +3414,6 @@ krb5_rd_priv(krb5_context context, krb5_auth_context auth_context,
  * @note The realm in a Kerberos @a name cannot contain slash, colon,
  * or NULL characters.
  *
- * Beginning with release 1.20, the name type of the principal will be inferred
- * as @c KRB5_NT_SRV_INST or @c KRB5_NT_WELLKNOWN based on the principal name.
- * The type will be @c KRB5_NT_PRINCIPAL if a type cannot be inferred.
- *
  * Use krb5_free_principal() to free @a principal_out when it is no longer
  * needed.
  *
@@ -3635,9 +3625,12 @@ krb5_address_compare(krb5_context context, const krb5_address *addr1,
  * @param [in] addr1            First address
  * @param [in] addr2            Second address
  *
- * @retval 0 if The two addresses are the same
- * @retval < 0 First address is less than second
- * @retval > 0 First address is greater than second
+ * @retval
+ *  0 The two addresses are the same
+ * @retval
+ *  \< 0 First address is less than second
+ * @retval
+ *  \> 0 First address is greater than second
  */
 int KRB5_CALLCONV
 krb5_address_order(krb5_context context, const krb5_address *addr1,
@@ -3984,10 +3977,6 @@ krb5_get_server_rcache(krb5_context context, const krb5_data *piece,
  * empty component with this function).  Call krb5_free_principal() to free
  * allocated memory for principal when it is no longer needed.
  *
- * Beginning with release 1.20, the name type of the principal will be inferred
- * as @c KRB5_NT_SRV_INST or @c KRB5_NT_WELLKNOWN based on the principal name.
- * The type will be @c KRB5_NT_PRINCIPAL if a type cannot be inferred.
- *
  * @code
  * Example of how to build principal WELLKNOWN/ANONYMOUS@R
  *     krb5_build_principal_ext(context, &principal, strlen("R"), "R",
@@ -4016,10 +4005,6 @@ krb5_build_principal_ext(krb5_context context,  krb5_principal * princ,
  * @param [in]  ...             List of char * components, ending with NULL
  *
  * Call krb5_free_principal() to free @a princ when it is no longer needed.
- *
- * Beginning with release 1.20, the name type of the principal will be inferred
- * as @c KRB5_NT_SRV_INST or @c KRB5_NT_WELLKNOWN based on the principal name.
- * The type will be @c KRB5_NT_PRINCIPAL if a type cannot be inferred.
  *
  * @note krb5_build_principal() and krb5_build_principal_alloc_va() perform the
  * same task.  krb5_build_principal() takes variadic arguments.
@@ -8153,13 +8138,6 @@ krb5_verify_authdata_kdc_issued(krb5_context context,
 #define KRB5_PAC_CLIENT_INFO       10 /**< Client name and ticket info */
 #define KRB5_PAC_DELEGATION_INFO   11 /**< Constrained delegation info */
 #define KRB5_PAC_UPN_DNS_INFO      12 /**< User principal name and DNS info */
-#define KRB5_PAC_CLIENT_CLAIMS     13 /**< Client claims information */
-#define KRB5_PAC_DEVICE_INFO       14 /**< Device information */
-#define KRB5_PAC_DEVICE_CLAIMS     15 /**< Device claims information */
-#define KRB5_PAC_TICKET_CHECKSUM   16 /**< Ticket checksum */
-#define KRB5_PAC_ATTRIBUTES_INFO   17 /**< PAC attributes */
-#define KRB5_PAC_REQUESTOR         18 /**< PAC requestor SID */
-#define KRB5_PAC_FULL_CHECKSUM     19 /**< KDC full checksum */
 
 struct krb5_pac_data;
 /** PAC data structure to convey authorization information */
@@ -8317,46 +8295,47 @@ krb5_pac_verify_ext(krb5_context context, const krb5_pac pac,
                     krb5_boolean with_realm);
 
 /**
- * Verify a PAC, possibly including ticket signature
+ * Sign a PAC.
  *
- * @param [in] context          Library context
- * @param [in] enc_tkt          Ticket enc-part, possibly containing a PAC
- * @param [in] server_princ     Canonicalized name of ticket server
- * @param [in] server           Key to validate server checksum (or NULL)
- * @param [in] privsvr          Key to validate KDC checksum (or NULL)
- * @param [out] pac_out         Verified PAC (NULL if no PAC included)
+ * @param [in]  context         Library context
+ * @param [in]  pac             PAC handle
+ * @param [in]  authtime        Expected timestamp
+ * @param [in]  principal       Expected principal name (or NULL)
+ * @param [in]  server_key      Key for server checksum
+ * @param [in]  privsvr_key     Key for KDC checksum
+ * @param [out] data            Signed PAC encoding
  *
- * If a PAC is present in @a enc_tkt, verify its signatures.  If @a privsvr is
- * not NULL and @a server_princ is not a krbtgt or kadmin/changepw service,
- * require a ticket signature over @a enc_tkt in addition to the KDC signature.
- * Place the verified PAC in @a pac_out.  If an invalid PAC signature is found,
- * return an error matching the Windows KDC protocol code for that condition as
- * closely as possible.
+ * This function signs @a pac using the keys @a server_key and @a privsvr_key
+ * and returns the signed encoding in @a data.  @a pac is modified to include
+ * the server and KDC checksum buffers.  Use krb5_free_data_contents() to free
+ * @a data when it is no longer needed.
  *
- * If no PAC is present in @a enc_tkt, set @a pac_out to NULL and return
- * successfully.
- *
- * @note This function does not validate the PAC_CLIENT_INFO buffer.  If a
- * specific value is expected, the caller can make a separate call to
- * krb5_pac_verify_ext() with a principal but no keys.
- *
- * @retval 0 Success; otherwise - Kerberos error codes
- *
- * @version New in 1.20
+ * @version New in 1.10
  */
-krb5_error_code KRB5_CALLCONV
-krb5_kdc_verify_ticket(krb5_context context, const krb5_enc_tkt_part *enc_tkt,
-                       krb5_const_principal server_princ,
-                       const krb5_keyblock *server,
-                       const krb5_keyblock *privsvr, krb5_pac *pac_out);
-
-/** @deprecated Use krb5_kdc_sign_ticket() instead. */
 krb5_error_code KRB5_CALLCONV
 krb5_pac_sign(krb5_context context, krb5_pac pac, krb5_timestamp authtime,
               krb5_const_principal principal, const krb5_keyblock *server_key,
               const krb5_keyblock *privsvr_key, krb5_data *data);
 
-/** @deprecated Use krb5_kdc_sign_ticket() instead. */
+/**
+ * Sign a PAC, possibly with a specified realm.
+ *
+ * @param [in]  context         Library context
+ * @param [in]  pac             PAC handle
+ * @param [in]  authtime        Expected timestamp
+ * @param [in]  principal       Principal name (or NULL)
+ * @param [in]  server_key      Key for server checksum
+ * @param [in]  privsvr_key     Key for KDC checksum
+ * @param [in]  with_realm      If true, include the realm of @a principal
+ * @param [out] data            Signed PAC encoding
+ *
+ * This function is similar to krb5_pac_sign(), but adds a parameter
+ * @a with_realm.  If @a with_realm is true, the PAC_CLIENT_INFO field of the
+ * signed PAC will include the realm of @a principal as well as the name.  This
+ * flag is necessary to generate PACs for cross-realm S4U2Self referrals.
+ *
+ * @version New in 1.17
+ */
 krb5_error_code KRB5_CALLCONV
 krb5_pac_sign_ext(krb5_context context, krb5_pac pac, krb5_timestamp authtime,
                   krb5_const_principal principal,
@@ -8364,37 +8343,8 @@ krb5_pac_sign_ext(krb5_context context, krb5_pac pac, krb5_timestamp authtime,
                   const krb5_keyblock *privsvr_key, krb5_boolean with_realm,
                   krb5_data *data);
 
-/**
- * Sign a PAC, possibly including a ticket signature
- *
- * @param [in]  context         Library context
- * @param [in]  enc_tkt         The ticket for the signature
- * @param [in]  pac             PAC handle
- * @param [in]  server_princ    Canonical ticket server name
- * @param [in]  client_princ    PAC_CLIENT_INFO principal (or NULL)
- * @param [in]  server          Key for server checksum
- * @param [in]  privsvr         Key for KDC and ticket checksum
- * @param [in]  with_realm      If true, include the realm of @a principal
- *
- * Sign @a pac using the keys @a server and @a privsvr.  Include a ticket
- * signature over @a enc_tkt if @a server_princ is not a TGS or kadmin/changepw
- * principal name.  Add the signed PAC's encoding to the authorization data of
- * @a enc_tkt in the first slot, wrapped in an AD-IF-RELEVANT container.  If @a
- * client_princ is non-null, add a PAC_CLIENT_INFO buffer, including the realm
- * if @a with_realm is true.
- *
- * @retval 0 on success, otherwise - Kerberos error codes
- *
- * @version New in 1.20
- */
-krb5_error_code KRB5_CALLCONV
-krb5_kdc_sign_ticket(krb5_context context, krb5_enc_tkt_part *enc_tkt,
-                     const krb5_pac pac, krb5_const_principal server_princ,
-                     krb5_const_principal client_princ,
-                     const krb5_keyblock *server, const krb5_keyblock *privsvr,
-                     krb5_boolean with_realm);
 
-/**
+/*
  * Read client information from a PAC.
  *
  * @param [in]  context         Library context
@@ -8500,14 +8450,14 @@ krb5_set_trace_filename(krb5_context context, const char *filename);
  * @param [in]  realm           The realm the message will be sent to
  * @param [in]  message         The original message to be sent to the KDC
  * @param [out] new_message_out Optional replacement message to be sent
- * @param [out] new_reply_out   Optional synthetic reply
+ * @param [out] reply_out       Optional synthetic reply
  *
  * If the hook function returns an error code, the KDC communication will be
  * aborted and the error code will be returned to the library operation which
  * initiated the communication.
  *
- * If the hook function sets @a new_reply_out, @a message will not be sent to
- * the KDC, and the given reply will used instead.
+ * If the hook function sets @a reply_out, @a message will not be sent to the
+ * KDC, and the given reply will used instead.
  *
  * If the hook function sets @a new_message_out, the given message will be sent
  * to the KDC in place of @a message.
@@ -8915,7 +8865,6 @@ extern void initialize_krb5_error_table (void) /*@modifies internalState@*/;
 #define KRB5_KCM_REPLY_TOO_BIG                   (-1750600182L)
 #define KRB5_KCM_NO_SERVER                       (-1750600181L)
 #define KRB5_CERTAUTH_HWAUTH                     (-1750600180L)
-#define KRB5_CERTAUTH_HWAUTH_PASS                (-1750600179L)
 #define ERROR_TABLE_BASE_k5e1 (-1750600192L)
 
 extern const struct error_table et_k5e1_error_table;

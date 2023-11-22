@@ -30,14 +30,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/IntelligentTieringFilter">AWS
    * API Reference</a></p>
    */
-  class IntelligentTieringFilter
+  class AWS_S3_API IntelligentTieringFilter
   {
   public:
-    AWS_S3_API IntelligentTieringFilter();
-    AWS_S3_API IntelligentTieringFilter(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API IntelligentTieringFilter& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    IntelligentTieringFilter();
+    IntelligentTieringFilter(const Aws::Utils::Xml::XmlNode& xmlNode);
+    IntelligentTieringFilter& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

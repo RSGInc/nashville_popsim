@@ -32,14 +32,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/WebsiteConfiguration">AWS
    * API Reference</a></p>
    */
-  class WebsiteConfiguration
+  class AWS_S3_API WebsiteConfiguration
   {
   public:
-    AWS_S3_API WebsiteConfiguration();
-    AWS_S3_API WebsiteConfiguration(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API WebsiteConfiguration& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    WebsiteConfiguration();
+    WebsiteConfiguration(const Aws::Utils::Xml::XmlNode& xmlNode);
+    WebsiteConfiguration& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

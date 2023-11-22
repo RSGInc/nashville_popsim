@@ -1,4 +1,4 @@
-prefix=D:/bld/openssl_split_1695215827786/_h_env/Library 
+prefix=D:/bld/openssl_split_1694461107614/_h_env/Library 
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
@@ -6,4 +6,4 @@ includedir=${prefix}/include
 Name: OpenSSL
 Description: Secure Sockets Layer and cryptography libraries and tools
 Requires: libssl libcrypto
-Version: 3.1.3 
+Version: 1.1.1w 

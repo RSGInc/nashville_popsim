@@ -27,12 +27,12 @@ namespace IAM
 {
 namespace Model
 {
-  class ListPolicyTagsResult
+  class AWS_IAM_API ListPolicyTagsResult
   {
   public:
-    AWS_IAM_API ListPolicyTagsResult();
-    AWS_IAM_API ListPolicyTagsResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_IAM_API ListPolicyTagsResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    ListPolicyTagsResult();
+    ListPolicyTagsResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    ListPolicyTagsResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     /**

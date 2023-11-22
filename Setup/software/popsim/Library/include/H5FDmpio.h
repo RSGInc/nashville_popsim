@@ -1,5 +1,6 @@
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Copyright by The HDF Group.                                               *
+ * Copyright by the Board of Trustees of the University of Illinois.         *
  * All rights reserved.                                                      *
  *                                                                           *
  * This file is part of HDF5.  The full HDF5 copyright notice, including     *
@@ -22,7 +23,7 @@
 /* Macros */
 
 #ifdef H5_HAVE_PARALLEL
-#define H5FD_MPIO (H5FDperform_init(H5FD_mpio_init))
+#define H5FD_MPIO (H5FD_mpio_init())
 #else
 #define H5FD_MPIO (H5I_INVALID_HID)
 #endif /* H5_HAVE_PARALLEL */
@@ -222,7 +223,7 @@ H5_DLL herr_t H5Pset_dxpl_mpio_collective_opt(hid_t dxpl_id, H5FD_mpio_collectiv
  *
  *          Use of this function is optional.
  *
- * \since 1.8.0
+ * \todo Add missing version information
  *
  */
 H5_DLL herr_t H5Pset_dxpl_mpio_chunk_opt(hid_t dxpl_id, H5FD_mpio_chunk_opt_t opt_mode);
@@ -246,7 +247,7 @@ H5_DLL herr_t H5Pset_dxpl_mpio_chunk_opt(hid_t dxpl_id, H5FD_mpio_chunk_opt_t op
  *          otherwise, a separate I/O process will be invoked for each chunk
  *          (multi-chunk I/O).
  *
- * \since 1.8.0
+ * \todo Add missing version information
  *
  */
 H5_DLL herr_t H5Pset_dxpl_mpio_chunk_opt_num(hid_t dxpl_id, unsigned num_chunk_per_proc);
@@ -271,7 +272,7 @@ H5_DLL herr_t H5Pset_dxpl_mpio_chunk_opt_num(hid_t dxpl_id, unsigned num_chunk_p
  *          percent_proc_per_chunk, the library will do collective I/O for this
  *          chunk; otherwise, independent I/O will be done for the chunk.
  *
- * \since 1.8.0
+ * \todo Add missing version information
  *
  */
 H5_DLL herr_t H5Pset_dxpl_mpio_chunk_opt_ratio(hid_t dxpl_id, unsigned percent_num_proc_per_chunk);

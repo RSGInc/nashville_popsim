@@ -26,12 +26,12 @@ namespace ConfigService
 {
 namespace Model
 {
-  class DescribeConfigurationAggregatorSourcesStatusResult
+  class AWS_CONFIGSERVICE_API DescribeConfigurationAggregatorSourcesStatusResult
   {
   public:
-    AWS_CONFIGSERVICE_API DescribeConfigurationAggregatorSourcesStatusResult();
-    AWS_CONFIGSERVICE_API DescribeConfigurationAggregatorSourcesStatusResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
-    AWS_CONFIGSERVICE_API DescribeConfigurationAggregatorSourcesStatusResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    DescribeConfigurationAggregatorSourcesStatusResult();
+    DescribeConfigurationAggregatorSourcesStatusResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    DescribeConfigurationAggregatorSourcesStatusResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
 
 
     /**

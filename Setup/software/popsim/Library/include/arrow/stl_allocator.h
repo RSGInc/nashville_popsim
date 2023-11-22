@@ -100,11 +100,7 @@ class STLMemoryPool : public MemoryPool {
   /// \brief Construct a memory pool from the given allocator
   explicit STLMemoryPool(const Allocator& alloc) : alloc_(alloc) {}
 
-  using MemoryPool::Allocate;
-  using MemoryPool::Free;
-  using MemoryPool::Reallocate;
-
-  Status Allocate(int64_t size, int64_t /*alignment*/, uint8_t** out) override {
+  Status Allocate(int64_t size, uint8_t** out) override {
     try {
       *out = alloc_.allocate(size);
     } catch (std::bad_alloc& e) {
@@ -114,8 +110,7 @@ class STLMemoryPool : public MemoryPool {
     return Status::OK();
   }
 
-  Status Reallocate(int64_t old_size, int64_t new_size, int64_t /*alignment*/,
-                    uint8_t** ptr) override {
+  Status Reallocate(int64_t old_size, int64_t new_size, uint8_t** ptr) override {
     uint8_t* old_ptr = *ptr;
     try {
       *ptr = alloc_.allocate(new_size);
@@ -128,7 +123,7 @@ class STLMemoryPool : public MemoryPool {
     return Status::OK();
   }
 
-  void Free(uint8_t* buffer, int64_t size, int64_t /*alignment*/) override {
+  void Free(uint8_t* buffer, int64_t size) override {
     alloc_.deallocate(buffer, size);
     stats_.UpdateAllocatedBytes(-size);
   }

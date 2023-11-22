@@ -29,15 +29,15 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/VerificationException">AWS
    * API Reference</a></p>
    */
-  class VerificationException
+  class AWS_SNS_API VerificationException
   {
   public:
-    AWS_SNS_API VerificationException();
-    AWS_SNS_API VerificationException(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_SNS_API VerificationException& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    VerificationException();
+    VerificationException(const Aws::Utils::Xml::XmlNode& xmlNode);
+    VerificationException& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_SNS_API void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
-    AWS_SNS_API void OutputToStream(Aws::OStream& oStream, const char* location) const;
+    void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
+    void OutputToStream(Aws::OStream& oStream, const char* location) const;
 
 
     

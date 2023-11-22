@@ -30,13 +30,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ConfigurationRecorder">AWS
    * API Reference</a></p>
    */
-  class ConfigurationRecorder
+  class AWS_CONFIGSERVICE_API ConfigurationRecorder
   {
   public:
-    AWS_CONFIGSERVICE_API ConfigurationRecorder();
-    AWS_CONFIGSERVICE_API ConfigurationRecorder(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API ConfigurationRecorder& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API Aws::Utils::Json::JsonValue Jsonize() const;
+    ConfigurationRecorder();
+    ConfigurationRecorder(Aws::Utils::Json::JsonView jsonValue);
+    ConfigurationRecorder& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**

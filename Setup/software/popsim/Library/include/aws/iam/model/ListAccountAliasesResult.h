@@ -32,12 +32,12 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/iam-2010-05-08/ListAccountAliasesResponse">AWS
    * API Reference</a></p>
    */
-  class ListAccountAliasesResult
+  class AWS_IAM_API ListAccountAliasesResult
   {
   public:
-    AWS_IAM_API ListAccountAliasesResult();
-    AWS_IAM_API ListAccountAliasesResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_IAM_API ListAccountAliasesResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    ListAccountAliasesResult();
+    ListAccountAliasesResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    ListAccountAliasesResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     /**

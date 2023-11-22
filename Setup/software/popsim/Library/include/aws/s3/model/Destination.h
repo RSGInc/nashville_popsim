@@ -34,14 +34,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/Destination">AWS API
    * Reference</a></p>
    */
-  class Destination
+  class AWS_S3_API Destination
   {
   public:
-    AWS_S3_API Destination();
-    AWS_S3_API Destination(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API Destination& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    Destination();
+    Destination(const Aws::Utils::Xml::XmlNode& xmlNode);
+    Destination& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

@@ -26,12 +26,12 @@ namespace IAM
 {
 namespace Model
 {
-  class ListServiceSpecificCredentialsResult
+  class AWS_IAM_API ListServiceSpecificCredentialsResult
   {
   public:
-    AWS_IAM_API ListServiceSpecificCredentialsResult();
-    AWS_IAM_API ListServiceSpecificCredentialsResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_IAM_API ListServiceSpecificCredentialsResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    ListServiceSpecificCredentialsResult();
+    ListServiceSpecificCredentialsResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    ListServiceSpecificCredentialsResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     /**

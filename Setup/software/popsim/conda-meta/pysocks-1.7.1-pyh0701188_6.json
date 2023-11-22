@@ -5,8 +5,8 @@
  "constrains": [],
  "depends": [
   "__win",
-  "python >=3.8",
-  "win_inet_pton"
+  "win_inet_pton",
+  "python >=3.8"
  ],
  "extracted_package_dir": "",
  "features": "",

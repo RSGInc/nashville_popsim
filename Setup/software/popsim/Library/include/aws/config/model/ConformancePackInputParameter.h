@@ -31,13 +31,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/ConformancePackInputParameter">AWS
    * API Reference</a></p>
    */
-  class ConformancePackInputParameter
+  class AWS_CONFIGSERVICE_API ConformancePackInputParameter
   {
   public:
-    AWS_CONFIGSERVICE_API ConformancePackInputParameter();
-    AWS_CONFIGSERVICE_API ConformancePackInputParameter(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API ConformancePackInputParameter& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API Aws::Utils::Json::JsonValue Jsonize() const;
+    ConformancePackInputParameter();
+    ConformancePackInputParameter(Aws::Utils::Json::JsonView jsonValue);
+    ConformancePackInputParameter& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**

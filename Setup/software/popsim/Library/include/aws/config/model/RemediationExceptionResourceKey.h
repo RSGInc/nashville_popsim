@@ -29,13 +29,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/RemediationExceptionResourceKey">AWS
    * API Reference</a></p>
    */
-  class RemediationExceptionResourceKey
+  class AWS_CONFIGSERVICE_API RemediationExceptionResourceKey
   {
   public:
-    AWS_CONFIGSERVICE_API RemediationExceptionResourceKey();
-    AWS_CONFIGSERVICE_API RemediationExceptionResourceKey(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API RemediationExceptionResourceKey& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API Aws::Utils::Json::JsonValue Jsonize() const;
+    RemediationExceptionResourceKey();
+    RemediationExceptionResourceKey(Aws::Utils::Json::JsonView jsonValue);
+    RemediationExceptionResourceKey& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**

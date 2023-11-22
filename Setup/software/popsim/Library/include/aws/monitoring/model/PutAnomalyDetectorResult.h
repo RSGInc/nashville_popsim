@@ -24,12 +24,12 @@ namespace CloudWatch
 {
 namespace Model
 {
-  class PutAnomalyDetectorResult
+  class AWS_CLOUDWATCH_API PutAnomalyDetectorResult
   {
   public:
-    AWS_CLOUDWATCH_API PutAnomalyDetectorResult();
-    AWS_CLOUDWATCH_API PutAnomalyDetectorResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_CLOUDWATCH_API PutAnomalyDetectorResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    PutAnomalyDetectorResult();
+    PutAnomalyDetectorResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    PutAnomalyDetectorResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     

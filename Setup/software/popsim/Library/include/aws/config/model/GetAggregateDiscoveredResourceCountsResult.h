@@ -26,12 +26,12 @@ namespace ConfigService
 {
 namespace Model
 {
-  class GetAggregateDiscoveredResourceCountsResult
+  class AWS_CONFIGSERVICE_API GetAggregateDiscoveredResourceCountsResult
   {
   public:
-    AWS_CONFIGSERVICE_API GetAggregateDiscoveredResourceCountsResult();
-    AWS_CONFIGSERVICE_API GetAggregateDiscoveredResourceCountsResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
-    AWS_CONFIGSERVICE_API GetAggregateDiscoveredResourceCountsResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    GetAggregateDiscoveredResourceCountsResult();
+    GetAggregateDiscoveredResourceCountsResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    GetAggregateDiscoveredResourceCountsResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
 
 
     /**

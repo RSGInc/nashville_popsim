@@ -4,8 +4,8 @@
  "channel": "https://conda.anaconda.org/conda-forge/win-64",
  "constrains": [],
  "depends": [
-  "llvm-meta 5.0.0|5.0.0.*",
-  "vc 14.*"
+  "vc 14.*",
+  "llvm-meta 5.0.0|5.0.0.*"
  ],
  "extracted_package_dir": "",
  "features": "",

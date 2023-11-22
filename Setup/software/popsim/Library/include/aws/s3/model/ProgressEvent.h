@@ -28,14 +28,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/ProgressEvent">AWS
    * API Reference</a></p>
    */
-  class ProgressEvent
+  class AWS_S3_API ProgressEvent
   {
   public:
-    AWS_S3_API ProgressEvent();
-    AWS_S3_API ProgressEvent(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API ProgressEvent& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    ProgressEvent();
+    ProgressEvent(const Aws::Utils::Xml::XmlNode& xmlNode);
+    ProgressEvent& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

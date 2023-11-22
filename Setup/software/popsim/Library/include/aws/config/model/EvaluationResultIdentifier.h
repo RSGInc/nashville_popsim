@@ -7,7 +7,6 @@
 #include <aws/config/ConfigService_EXPORTS.h>
 #include <aws/config/model/EvaluationResultQualifier.h>
 #include <aws/core/utils/DateTime.h>
-#include <aws/core/utils/memory/stl/AWSString.h>
 #include <utility>
 
 namespace Aws
@@ -30,13 +29,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/EvaluationResultIdentifier">AWS
    * API Reference</a></p>
    */
-  class EvaluationResultIdentifier
+  class AWS_CONFIGSERVICE_API EvaluationResultIdentifier
   {
   public:
-    AWS_CONFIGSERVICE_API EvaluationResultIdentifier();
-    AWS_CONFIGSERVICE_API EvaluationResultIdentifier(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API EvaluationResultIdentifier& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API Aws::Utils::Json::JsonValue Jsonize() const;
+    EvaluationResultIdentifier();
+    EvaluationResultIdentifier(Aws::Utils::Json::JsonView jsonValue);
+    EvaluationResultIdentifier& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**
@@ -124,47 +123,6 @@ namespace Model
      */
     inline EvaluationResultIdentifier& WithOrderingTimestamp(Aws::Utils::DateTime&& value) { SetOrderingTimestamp(std::move(value)); return *this;}
 
-
-    /**
-     * <p>A Unique ID for an evaluation result.</p>
-     */
-    inline const Aws::String& GetResourceEvaluationId() const{ return m_resourceEvaluationId; }
-
-    /**
-     * <p>A Unique ID for an evaluation result.</p>
-     */
-    inline bool ResourceEvaluationIdHasBeenSet() const { return m_resourceEvaluationIdHasBeenSet; }
-
-    /**
-     * <p>A Unique ID for an evaluation result.</p>
-     */
-    inline void SetResourceEvaluationId(const Aws::String& value) { m_resourceEvaluationIdHasBeenSet = true; m_resourceEvaluationId = value; }
-
-    /**
-     * <p>A Unique ID for an evaluation result.</p>
-     */
-    inline void SetResourceEvaluationId(Aws::String&& value) { m_resourceEvaluationIdHasBeenSet = true; m_resourceEvaluationId = std::move(value); }
-
-    /**
-     * <p>A Unique ID for an evaluation result.</p>
-     */
-    inline void SetResourceEvaluationId(const char* value) { m_resourceEvaluationIdHasBeenSet = true; m_resourceEvaluationId.assign(value); }
-
-    /**
-     * <p>A Unique ID for an evaluation result.</p>
-     */
-    inline EvaluationResultIdentifier& WithResourceEvaluationId(const Aws::String& value) { SetResourceEvaluationId(value); return *this;}
-
-    /**
-     * <p>A Unique ID for an evaluation result.</p>
-     */
-    inline EvaluationResultIdentifier& WithResourceEvaluationId(Aws::String&& value) { SetResourceEvaluationId(std::move(value)); return *this;}
-
-    /**
-     * <p>A Unique ID for an evaluation result.</p>
-     */
-    inline EvaluationResultIdentifier& WithResourceEvaluationId(const char* value) { SetResourceEvaluationId(value); return *this;}
-
   private:
 
     EvaluationResultQualifier m_evaluationResultQualifier;
@@ -172,9 +130,6 @@ namespace Model
 
     Aws::Utils::DateTime m_orderingTimestamp;
     bool m_orderingTimestampHasBeenSet = false;
-
-    Aws::String m_resourceEvaluationId;
-    bool m_resourceEvaluationIdHasBeenSet = false;
   };
 
 } // namespace Model

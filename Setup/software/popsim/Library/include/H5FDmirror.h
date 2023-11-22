@@ -19,8 +19,7 @@
 
 #ifdef H5_HAVE_MIRROR_VFD
 
-#define H5FD_MIRROR       (H5FDperform_init(H5FD_mirror_init))
-#define H5FD_MIRROR_VALUE H5_VFD_MIRROR
+#define H5FD_MIRROR (H5FD_mirror_init())
 
 #ifdef __cplusplus
 extern "C" {
@@ -34,7 +33,7 @@ extern "C" {
 /* ---------------------------------------------------------------------------
  * Structure:   H5FD_mirror_fapl_t
  *
- * Used to pass configuration information to the Mirror VFD.
+ * Used to pass configuraiton information to the Mirror VFD.
  * Populate components as appropriate and pass structure pointer to
  * `H5Pset_fapl_mirror()`.
  *

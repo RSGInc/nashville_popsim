@@ -2,16 +2,16 @@
 # libssh2 installation details
 ###########################################################################
 
-prefix=D:/bld/libssh2-split_1685837832118/_h_env/Library
+prefix=D:/bld/libssh2-split_1660346556300/_h_env/Library
 exec_prefix=${prefix}
 libdir=${prefix}/lib
 includedir=${prefix}/include
 
 Name: libssh2
 URL: https://www.libssh2.org/
-Description: Library for SSH-based communication
-Version: 1.11.0
-Requires.private: libssl,libcrypto,zlib,zlib
-Libs: -L${libdir} -lssh2 -lcrypt32 -lbcrypt -lws2_32
-Libs.private: -lcrypt32 -lbcrypt -lws2_32
+Description: The SSH library
+Version: 1.10.0
+Requires.private: libssl,libcrypto,zlib
+Libs: -L${libdir} -lssh2 -lcrypt32
+Libs.private: -lcrypt32
 Cflags: -I${includedir}

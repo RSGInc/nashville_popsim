@@ -32,12 +32,12 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/sts-2011-06-15/GetSessionTokenResponse">AWS
    * API Reference</a></p>
    */
-  class GetSessionTokenResult
+  class AWS_STS_API GetSessionTokenResult
   {
   public:
-    AWS_STS_API GetSessionTokenResult();
-    AWS_STS_API GetSessionTokenResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_STS_API GetSessionTokenResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    GetSessionTokenResult();
+    GetSessionTokenResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    GetSessionTokenResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     /**

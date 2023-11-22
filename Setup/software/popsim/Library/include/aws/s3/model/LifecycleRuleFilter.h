@@ -31,14 +31,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/LifecycleRuleFilter">AWS
    * API Reference</a></p>
    */
-  class LifecycleRuleFilter
+  class AWS_S3_API LifecycleRuleFilter
   {
   public:
-    AWS_S3_API LifecycleRuleFilter();
-    AWS_S3_API LifecycleRuleFilter(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API LifecycleRuleFilter& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    LifecycleRuleFilter();
+    LifecycleRuleFilter(const Aws::Utils::Xml::XmlNode& xmlNode);
+    LifecycleRuleFilter& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

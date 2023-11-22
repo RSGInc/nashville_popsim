@@ -36,43 +36,6 @@ namespace Aws
             class MqttConnection;
 
             /**
-             * The data returned when the connection closed callback is invoked in a connection.
-             * Note: This class is currently empty, but this may contain data in the future.
-             */
-            struct OnConnectionClosedData
-            {
-            };
-
-            /**
-             * The data returned when the connection success callback is invoked in a connection.
-             */
-            struct OnConnectionSuccessData
-            {
-                /**
-                 * The Connect return code received from the server.
-                 */
-                ReturnCode returnCode;
-
-                /**
-                 * Returns whether a session was present and resumed for this successful connection.
-                 * Will be set to true if the connection resumed an already present MQTT connection session.
-                 */
-                bool sessionPresent;
-            };
-
-            /**
-             * The data returned when the connection failure callback is invoked in a connection.
-             */
-            struct OnConnectionFailureData
-            {
-                /**
-                 * The AWS CRT error code for the connection failure.
-                 * Use Aws::Crt::ErrorDebugString to get a human readable string from the error code.
-                 */
-                int error;
-            };
-
-            /**
              * Invoked Upon Connection loss.
              */
             using OnConnectionInterruptedHandler = std::function<void(MqttConnection &connection, int error)>;
@@ -88,31 +51,6 @@ namespace Aws
              */
             using OnConnectionCompletedHandler = std::function<
                 void(MqttConnection &connection, int errorCode, ReturnCode returnCode, bool sessionPresent)>;
-
-            /**
-             * Invoked when a connection is disconnected and shutdown successfully.
-             *
-             * Note: Currently callbackData will always be nullptr, but this may change in the future to send additional
-             * data.
-             */
-            using OnConnectionClosedHandler =
-                std::function<void(MqttConnection &connection, OnConnectionClosedData *callbackData)>;
-
-            /**
-             * Invoked whenever the connection successfully connects.
-             *
-             * This callback is invoked for every successful connect and every successful reconnect.
-             */
-            using OnConnectionSuccessHandler =
-                std::function<void(MqttConnection &connection, OnConnectionSuccessData *callbackData)>;
-
-            /**
-             * Invoked whenever the connection fails to connect.
-             *
-             * This callback is invoked for every failed connect and every failed reconnect.
-             */
-            using OnConnectionFailureHandler =
-                std::function<void(MqttConnection &connection, OnConnectionFailureData *callbackData)>;
 
             /**
              * Invoked when a suback message is received.
@@ -182,34 +120,6 @@ namespace Aws
              */
             using OnWebSocketHandshakeIntercept = std::function<
                 void(std::shared_ptr<Http::HttpRequest> req, const OnWebSocketHandshakeInterceptComplete &onComplete)>;
-
-            /* Simple statistics about the current state of the client's queue of operations */
-            struct AWS_CRT_CPP_API MqttConnectionOperationStatistics
-            {
-                /*
-                 * total number of operations submitted to the connection that have not yet been completed.  Unacked
-                 * operations are a subset of this.
-                 */
-                uint64_t incompleteOperationCount;
-
-                /*
-                 * total packet size of operations submitted to the connection that have not yet been completed. Unacked
-                 * operations are a subset of this.
-                 */
-                uint64_t incompleteOperationSize;
-
-                /*
-                 * total number of operations that have been sent to the server and are waiting for a corresponding ACK
-                 * before they can be completed.
-                 */
-                uint64_t unackedOperationCount;
-
-                /*
-                 * total packet size of operations that have been sent to the server and are waiting for a corresponding
-                 * ACK before they can be completed.
-                 */
-                uint64_t unackedOperationSize;
-            };
 
             /**
              * Represents a persistent Mqtt Connection. The memory is owned by MqttClient.
@@ -415,21 +325,11 @@ namespace Aws
                     const ByteBuf &payload,
                     OnOperationCompleteHandler &&onOpComplete) noexcept;
 
-                /**
-                 * Get the statistics about the current state of the connection's queue of operations
-                 *
-                 * @return MqttConnectionOperationStatistics
-                 */
-                const MqttConnectionOperationStatistics &GetOperationStatistics() noexcept;
-
                 OnConnectionInterruptedHandler OnConnectionInterrupted;
                 OnConnectionResumedHandler OnConnectionResumed;
                 OnConnectionCompletedHandler OnConnectionCompleted;
                 OnDisconnectHandler OnDisconnect;
                 OnWebSocketHandshakeIntercept WebsocketInterceptor;
-                OnConnectionClosedHandler OnConnectionClosed;
-                OnConnectionSuccessHandler OnConnectionSuccess;
-                OnConnectionFailureHandler OnConnectionFailure;
 
               private:
                 aws_mqtt_client *m_owningClient;
@@ -443,7 +343,6 @@ namespace Aws
                 void *m_onAnyCbData;
                 bool m_useTls;
                 bool m_useWebsocket;
-                MqttConnectionOperationStatistics m_operationStatistics;
 
                 MqttConnection(
                     aws_mqtt_client *client,
@@ -471,11 +370,6 @@ namespace Aws
                     aws_mqtt_client_connection *,
                     ReturnCode returnCode,
                     bool sessionPresent,
-                    void *userData);
-
-                static void s_onConnectionClosed(
-                    aws_mqtt_client_connection *,
-                    on_connection_closed_data *data,
                     void *userData);
 
                 static void s_onDisconnect(aws_mqtt_client_connection *connection, void *userData);

@@ -4,8 +4,8 @@
  "channel": "https://conda.anaconda.org/conda-forge/win-64",
  "constrains": [],
  "depends": [
-  "ucrt >=10.0.20348.0",
   "vc >=14.2,<15",
+  "ucrt >=10.0.20348.0",
   "vs2015_runtime >=14.29.30139"
  ],
  "extracted_package_dir": "",
@@ -48,7 +48,7 @@
     "path_type": "hardlink",
     "prefix_placeholder": "D:/bld/libutf8proc_1667316083937/_h_env",
     "sha256": "14d29fe398b0aa6b52bd96b1ff1b41183d2dfe8f37c20bcefcb2e2a7a0b6f81b",
-    "sha256_in_prefix": "6749fe9d6f949c780496d169967bbf2980d3283dabc5d02b71d1cb08930cc1d9",
+    "sha256_in_prefix": "a3a4c8e2e508c394789a57a25a2b418cf1171b24af9de3368d28c49d9e3a91eb",
     "size_in_bytes": 390
    },
    {

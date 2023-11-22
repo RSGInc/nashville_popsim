@@ -23,15 +23,15 @@ namespace CloudWatch
 namespace Model
 {
 
-  class ResponseMetadata
+  class AWS_CLOUDWATCH_API ResponseMetadata
   {
   public:
-    AWS_CLOUDWATCH_API ResponseMetadata();
-    AWS_CLOUDWATCH_API ResponseMetadata(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_CLOUDWATCH_API ResponseMetadata& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    ResponseMetadata();
+    ResponseMetadata(const Aws::Utils::Xml::XmlNode& xmlNode);
+    ResponseMetadata& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_CLOUDWATCH_API void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
-    AWS_CLOUDWATCH_API void OutputToStream(Aws::OStream& oStream, const char* location) const;
+    void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
+    void OutputToStream(Aws::OStream& oStream, const char* location) const;
 
 
     

@@ -36,14 +36,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/LifecycleRule">AWS
    * API Reference</a></p>
    */
-  class LifecycleRule
+  class AWS_S3_API LifecycleRule
   {
   public:
-    AWS_S3_API LifecycleRule();
-    AWS_S3_API LifecycleRule(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API LifecycleRule& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    LifecycleRule();
+    LifecycleRule(const Aws::Utils::Xml::XmlNode& xmlNode);
+    LifecycleRule& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

@@ -18,10 +18,10 @@ namespace Model
 
   /**
    */
-  class SelectAggregateResourceConfigRequest : public ConfigServiceRequest
+  class AWS_CONFIGSERVICE_API SelectAggregateResourceConfigRequest : public ConfigServiceRequest
   {
   public:
-    AWS_CONFIGSERVICE_API SelectAggregateResourceConfigRequest();
+    SelectAggregateResourceConfigRequest();
 
     // Service request name is the Operation name which will send this request out,
     // each operation should has unique request name, so that we can get operation's name from this request.
@@ -29,9 +29,9 @@ namespace Model
     // so we can not get operation's name from response.
     inline virtual const char* GetServiceRequestName() const override { return "SelectAggregateResourceConfig"; }
 
-    AWS_CONFIGSERVICE_API Aws::String SerializePayload() const override;
+    Aws::String SerializePayload() const override;
 
-    AWS_CONFIGSERVICE_API Aws::Http::HeaderValueCollection GetRequestSpecificHeaders() const override;
+    Aws::Http::HeaderValueCollection GetRequestSpecificHeaders() const override;
 
 
     /**

@@ -54,14 +54,14 @@ endmacro()
 
 ####################################################################################
 
-set(ARROW_VERSION "11.0.0")
-set(ARROW_SO_VERSION "1100")
-set(ARROW_FULL_SO_VERSION "1100.0.0")
+set(ARROW_VERSION "10.0.1")
+set(ARROW_SO_VERSION "1000")
+set(ARROW_FULL_SO_VERSION "1000.1.0")
 
 set(ARROW_BUNDLED_STATIC_LIBS "substrait;mimalloc::mimalloc")
 set(ARROW_INCLUDE_PATH_SUFFIXES "include;Library;Library/include")
 set(ARROW_LIBRARY_PATH_SUFFIXES ";lib/;lib64;lib32;lib;bin;Library;Library/lib;Library/bin")
-set(ARROW_SYSTEM_DEPENDENCIES "SnappyAlt;BrotliAlt;OpenSSLAlt;ThriftAlt;ProtobufAlt;xsimd;ZLIB;lz4Alt;zstdAlt;re2Alt;BZip2;utf8proc;gRPCAlt;nlohmann_json;google_cloud_cpp_storage;ORC;AWSSDKAlt")
+set(ARROW_SYSTEM_DEPENDENCIES "SnappyAlt;Brotli;OpenSSLAlt;Thrift;ProtobufAlt;xsimd;ZLIB;lz4Alt;zstdAlt;re2Alt;BZip2;utf8proc;gRPCAlt;nlohmann_json;google_cloud_cpp_storage;AWSSDKAlt")
 
 include("${CMAKE_CURRENT_LIST_DIR}/ArrowOptions.cmake")
 

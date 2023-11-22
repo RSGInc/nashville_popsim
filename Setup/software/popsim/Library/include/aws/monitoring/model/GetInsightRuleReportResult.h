@@ -28,12 +28,12 @@ namespace CloudWatch
 {
 namespace Model
 {
-  class GetInsightRuleReportResult
+  class AWS_CLOUDWATCH_API GetInsightRuleReportResult
   {
   public:
-    AWS_CLOUDWATCH_API GetInsightRuleReportResult();
-    AWS_CLOUDWATCH_API GetInsightRuleReportResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_CLOUDWATCH_API GetInsightRuleReportResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    GetInsightRuleReportResult();
+    GetInsightRuleReportResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    GetInsightRuleReportResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     /**

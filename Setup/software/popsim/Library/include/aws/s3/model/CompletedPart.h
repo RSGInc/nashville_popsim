@@ -27,14 +27,14 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/s3-2006-03-01/CompletedPart">AWS
    * API Reference</a></p>
    */
-  class CompletedPart
+  class AWS_S3_API CompletedPart
   {
   public:
-    AWS_S3_API CompletedPart();
-    AWS_S3_API CompletedPart(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_S3_API CompletedPart& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    CompletedPart();
+    CompletedPart(const Aws::Utils::Xml::XmlNode& xmlNode);
+    CompletedPart& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_S3_API void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
+    void AddToNode(Aws::Utils::Xml::XmlNode& parentNode) const;
 
 
     /**

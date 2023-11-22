@@ -28,13 +28,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/logs-2014-03-28/SearchedLogStream">AWS
    * API Reference</a></p>
    */
-  class SearchedLogStream
+  class AWS_CLOUDWATCHLOGS_API SearchedLogStream
   {
   public:
-    AWS_CLOUDWATCHLOGS_API SearchedLogStream();
-    AWS_CLOUDWATCHLOGS_API SearchedLogStream(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CLOUDWATCHLOGS_API SearchedLogStream& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CLOUDWATCHLOGS_API Aws::Utils::Json::JsonValue Jsonize() const;
+    SearchedLogStream();
+    SearchedLogStream(Aws::Utils::Json::JsonView jsonValue);
+    SearchedLogStream& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**

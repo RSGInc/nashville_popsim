@@ -24,12 +24,12 @@ namespace CloudWatch
 {
 namespace Model
 {
-  class DeleteMetricStreamResult
+  class AWS_CLOUDWATCH_API DeleteMetricStreamResult
   {
   public:
-    AWS_CLOUDWATCH_API DeleteMetricStreamResult();
-    AWS_CLOUDWATCH_API DeleteMetricStreamResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_CLOUDWATCH_API DeleteMetricStreamResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    DeleteMetricStreamResult();
+    DeleteMetricStreamResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    DeleteMetricStreamResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     

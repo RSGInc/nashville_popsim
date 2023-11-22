@@ -33,15 +33,15 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/MessageData">AWS
    * API Reference</a></p>
    */
-  class MessageData
+  class AWS_CLOUDWATCH_API MessageData
   {
   public:
-    AWS_CLOUDWATCH_API MessageData();
-    AWS_CLOUDWATCH_API MessageData(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_CLOUDWATCH_API MessageData& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    MessageData();
+    MessageData(const Aws::Utils::Xml::XmlNode& xmlNode);
+    MessageData& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_CLOUDWATCH_API void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
-    AWS_CLOUDWATCH_API void OutputToStream(Aws::OStream& oStream, const char* location) const;
+    void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
+    void OutputToStream(Aws::OStream& oStream, const char* location) const;
 
 
     /**

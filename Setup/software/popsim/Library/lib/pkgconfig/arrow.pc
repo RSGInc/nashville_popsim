@@ -15,20 +15,18 @@
 # specific language governing permissions and limitations
 # under the License.
 
-prefix=D:/bld/apache-arrow_1679171173706/_h_env/Library
+prefix=D:/bld/apache-arrow_1670876149047/_h_env/Library
 includedir=${prefix}/include
 libdir=${prefix}/lib
 
-so_version=1100
-abi_version=1100
-full_so_version=1100.0.0
+so_version=1000
+abi_version=1000
+full_so_version=1000.1.0
 
 Name: Apache Arrow
 Description: Arrow is a set of technologies that enable big-data systems to process and move data fast.
-Version: 11.0.0
-Requires:
+Version: 10.0.1
 Requires.private:
 Libs: -L${libdir} -larrow
-Libs.private: D:/bld/apache-arrow_1679171173706/_h_env/Library/lib/bzip2.lib
+Libs.private: D:/bld/apache-arrow_1670876149047/_h_env/Library/bin/snappy.dll D:/bld/apache-arrow_1670876149047/_h_env/Library/bin/re2.dll D:/bld/apache-arrow_1670876149047/_h_env/Library/lib/bzip2.lib
 Cflags: -I${includedir}
-Cflags.private: -DARROW_STATIC

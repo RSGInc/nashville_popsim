@@ -25,12 +25,12 @@ namespace SNS
 {
 namespace Model
 {
-  class GetDataProtectionPolicyResult
+  class AWS_SNS_API GetDataProtectionPolicyResult
   {
   public:
-    AWS_SNS_API GetDataProtectionPolicyResult();
-    AWS_SNS_API GetDataProtectionPolicyResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_SNS_API GetDataProtectionPolicyResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    GetDataProtectionPolicyResult();
+    GetDataProtectionPolicyResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    GetDataProtectionPolicyResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     /**

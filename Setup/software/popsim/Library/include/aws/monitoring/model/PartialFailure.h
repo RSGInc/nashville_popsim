@@ -31,15 +31,15 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/PartialFailure">AWS
    * API Reference</a></p>
    */
-  class PartialFailure
+  class AWS_CLOUDWATCH_API PartialFailure
   {
   public:
-    AWS_CLOUDWATCH_API PartialFailure();
-    AWS_CLOUDWATCH_API PartialFailure(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_CLOUDWATCH_API PartialFailure& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    PartialFailure();
+    PartialFailure(const Aws::Utils::Xml::XmlNode& xmlNode);
+    PartialFailure& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_CLOUDWATCH_API void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
-    AWS_CLOUDWATCH_API void OutputToStream(Aws::OStream& oStream, const char* location) const;
+    void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
+    void OutputToStream(Aws::OStream& oStream, const char* location) const;
 
 
     /**

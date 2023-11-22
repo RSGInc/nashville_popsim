@@ -2,7 +2,7 @@
  * Copyright by The HDF Group.                                               *
  * All rights reserved.                                                      *
  *                                                                           *
- * This file is part of HDF5.  The full HDF5 copyright notice, including     *
+ * This file is part of HDF5. The full HDF5 copyright notice, including      *
  * terms governing use, modification, and redistribution, is contained in    *
  * the COPYING file, which can be found at the root of the source code       *
  * distribution tree, or in https://www.hdfgroup.org/licenses.               *
@@ -35,16 +35,14 @@
 typedef enum H5PL_type_t {
     H5PL_TYPE_ERROR  = -1, /**< Error                */
     H5PL_TYPE_FILTER = 0,  /**< Filter               */
-    H5PL_TYPE_VOL    = 1,  /**< VOL connector        */
-    H5PL_TYPE_VFD    = 2,  /**< VFD                  */
-    H5PL_TYPE_NONE   = 3   /**< Sentinel: This must be last!   */
+    H5PL_TYPE_VOL    = 1,  /**< VOL driver           */
+    H5PL_TYPE_NONE   = 2   /**< Sentinel: This must be last!   */
 } H5PL_type_t;
 //! <!-- [H5PL_type_t_snip] -->
 
 /* Common dynamic plugin type flags used by the set/get_loading_state functions */
 #define H5PL_FILTER_PLUGIN 0x0001
 #define H5PL_VOL_PLUGIN    0x0002
-#define H5PL_VFD_PLUGIN    0x0004
 #define H5PL_ALL_PLUGIN    0xFFFF
 
 #ifdef __cplusplus

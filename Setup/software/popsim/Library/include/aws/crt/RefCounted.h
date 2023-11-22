@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0.
  */
 
-#include <aws/common/assert.h>
 #include <memory>
 #include <mutex>
 
@@ -48,7 +47,6 @@ namespace Aws
                 std::shared_ptr<T> tmpStrongPtr;
 
                 m_mutex.lock();
-                AWS_ASSERT(m_count > 0 && "refcount has gone negative");
                 if (m_count-- == 1)
                 {
                     std::swap(m_strongPtr, tmpStrongPtr);

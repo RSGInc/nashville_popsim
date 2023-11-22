@@ -11,8 +11,6 @@
 
 #include <aws/common/exports.h>
 
-AWS_PUSH_SANE_WARNING_LEVEL
-
 struct aws_xml_parser;
 struct aws_xml_node;
 
@@ -106,6 +104,5 @@ int aws_xml_node_get_attribute(
     struct aws_xml_attribute *out_attribute);
 
 AWS_EXTERN_C_END
-AWS_POP_SANE_WARNING_LEVEL
 
 #endif /* AWS_COMMON_XML_PARSER_H */

@@ -22,7 +22,7 @@
 
 #ifdef _WIN32
 // Need to come before any Windows.h includes
-#include <winsock2.h>
+#include <Winsock2.h>
 #endif
 
 #include <thrift/transport/TTransport.h>
@@ -84,20 +84,6 @@ static inline To bitwise_cast(From from) {
 
 #ifdef HAVE_SYS_PARAM_H
 #include <sys/param.h>
-#endif
-
-#ifdef __ZEPHYR__
-#  include <zephyr/sys/byteorder.h>
-
-#  define __THRIFT_BYTE_ORDER __BYTE_ORDER__
-#  define __THRIFT_LITTLE_ENDIAN __ORDER_LITTLE_ENDIAN__
-#  define __THRIFT_BIG_ENDIAN __ORDER_BIG_ENDIAN__
-
-#  if __THRIFT_BYTE_ORDER == __THRIFT_BIG_ENDIAN
-#    undef bswap_64
-#    undef bswap_32
-#    undef bswap_16
-#  endif
 #endif
 
 #ifndef __THRIFT_BYTE_ORDER

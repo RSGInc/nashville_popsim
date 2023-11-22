@@ -1,9 +1,9 @@
-includedir=D:/bld/aws-sdk-cpp_1688891920201/_h_env/Library/include
-libdir=D:/bld/aws-sdk-cpp_1688891920201/_h_env/Library/lib
+includedir=D:/bld/aws-sdk-cpp_1671582832557/_h_env/Library/include
+libdir=D:/bld/aws-sdk-cpp_1671582832557/_h_env/Library/lib
 
 Name: aws-cpp-sdk-sqs
 Description: 
-Version: 1.10.57
+Version: 1.9.379
 Cflags: -I${includedir} 
 Libs: -L${libdir} -laws-cpp-sdk-sqs 
 Libs.private: 

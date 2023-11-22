@@ -35,12 +35,12 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/iam-2010-05-08/ListEntitiesForPolicyResponse">AWS
    * API Reference</a></p>
    */
-  class ListEntitiesForPolicyResult
+  class AWS_IAM_API ListEntitiesForPolicyResult
   {
   public:
-    AWS_IAM_API ListEntitiesForPolicyResult();
-    AWS_IAM_API ListEntitiesForPolicyResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
-    AWS_IAM_API ListEntitiesForPolicyResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    ListEntitiesForPolicyResult();
+    ListEntitiesForPolicyResult(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
+    ListEntitiesForPolicyResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Xml::XmlDocument>& result);
 
 
     /**

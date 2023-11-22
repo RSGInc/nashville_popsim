@@ -30,12 +30,12 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/MergeDeveloperIdentitiesResponse">AWS
    * API Reference</a></p>
    */
-  class MergeDeveloperIdentitiesResult
+  class AWS_COGNITOIDENTITY_API MergeDeveloperIdentitiesResult
   {
   public:
-    AWS_COGNITOIDENTITY_API MergeDeveloperIdentitiesResult();
-    AWS_COGNITOIDENTITY_API MergeDeveloperIdentitiesResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
-    AWS_COGNITOIDENTITY_API MergeDeveloperIdentitiesResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    MergeDeveloperIdentitiesResult();
+    MergeDeveloperIdentitiesResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    MergeDeveloperIdentitiesResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
 
 
     /**

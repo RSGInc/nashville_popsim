@@ -26,12 +26,12 @@ namespace ConfigService
 {
 namespace Model
 {
-  class GetAggregateConfigRuleComplianceSummaryResult
+  class AWS_CONFIGSERVICE_API GetAggregateConfigRuleComplianceSummaryResult
   {
   public:
-    AWS_CONFIGSERVICE_API GetAggregateConfigRuleComplianceSummaryResult();
-    AWS_CONFIGSERVICE_API GetAggregateConfigRuleComplianceSummaryResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
-    AWS_CONFIGSERVICE_API GetAggregateConfigRuleComplianceSummaryResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    GetAggregateConfigRuleComplianceSummaryResult();
+    GetAggregateConfigRuleComplianceSummaryResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    GetAggregateConfigRuleComplianceSummaryResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
 
 
     /**

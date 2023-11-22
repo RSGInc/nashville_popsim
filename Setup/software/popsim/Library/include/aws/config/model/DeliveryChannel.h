@@ -30,13 +30,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/config-2014-11-12/DeliveryChannel">AWS
    * API Reference</a></p>
    */
-  class DeliveryChannel
+  class AWS_CONFIGSERVICE_API DeliveryChannel
   {
   public:
-    AWS_CONFIGSERVICE_API DeliveryChannel();
-    AWS_CONFIGSERVICE_API DeliveryChannel(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API DeliveryChannel& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_CONFIGSERVICE_API Aws::Utils::Json::JsonValue Jsonize() const;
+    DeliveryChannel();
+    DeliveryChannel(Aws::Utils::Json::JsonView jsonValue);
+    DeliveryChannel& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**

@@ -30,15 +30,15 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/Topic">AWS API
    * Reference</a></p>
    */
-  class Topic
+  class AWS_SNS_API Topic
   {
   public:
-    AWS_SNS_API Topic();
-    AWS_SNS_API Topic(const Aws::Utils::Xml::XmlNode& xmlNode);
-    AWS_SNS_API Topic& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
+    Topic();
+    Topic(const Aws::Utils::Xml::XmlNode& xmlNode);
+    Topic& operator=(const Aws::Utils::Xml::XmlNode& xmlNode);
 
-    AWS_SNS_API void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
-    AWS_SNS_API void OutputToStream(Aws::OStream& oStream, const char* location) const;
+    void OutputToStream(Aws::OStream& ostream, const char* location, unsigned index, const char* locationValue) const;
+    void OutputToStream(Aws::OStream& oStream, const char* location) const;
 
 
     /**

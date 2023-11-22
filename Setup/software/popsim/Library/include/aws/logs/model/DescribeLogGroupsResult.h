@@ -26,53 +26,60 @@ namespace CloudWatchLogs
 {
 namespace Model
 {
-  class DescribeLogGroupsResult
+  class AWS_CLOUDWATCHLOGS_API DescribeLogGroupsResult
   {
   public:
-    AWS_CLOUDWATCHLOGS_API DescribeLogGroupsResult();
-    AWS_CLOUDWATCHLOGS_API DescribeLogGroupsResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
-    AWS_CLOUDWATCHLOGS_API DescribeLogGroupsResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    DescribeLogGroupsResult();
+    DescribeLogGroupsResult(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
+    DescribeLogGroupsResult& operator=(const Aws::AmazonWebServiceResult<Aws::Utils::Json::JsonValue>& result);
 
 
     /**
      * <p>The log groups.</p> <p>If the <code>retentionInDays</code> value is not
-     * included for a log group, then that log group's events do not expire.</p>
+     * included for a log group, then that log group is set to have its events never
+     * expire.</p>
      */
     inline const Aws::Vector<LogGroup>& GetLogGroups() const{ return m_logGroups; }
 
     /**
      * <p>The log groups.</p> <p>If the <code>retentionInDays</code> value is not
-     * included for a log group, then that log group's events do not expire.</p>
+     * included for a log group, then that log group is set to have its events never
+     * expire.</p>
      */
     inline void SetLogGroups(const Aws::Vector<LogGroup>& value) { m_logGroups = value; }
 
     /**
      * <p>The log groups.</p> <p>If the <code>retentionInDays</code> value is not
-     * included for a log group, then that log group's events do not expire.</p>
+     * included for a log group, then that log group is set to have its events never
+     * expire.</p>
      */
     inline void SetLogGroups(Aws::Vector<LogGroup>&& value) { m_logGroups = std::move(value); }
 
     /**
      * <p>The log groups.</p> <p>If the <code>retentionInDays</code> value is not
-     * included for a log group, then that log group's events do not expire.</p>
+     * included for a log group, then that log group is set to have its events never
+     * expire.</p>
      */
     inline DescribeLogGroupsResult& WithLogGroups(const Aws::Vector<LogGroup>& value) { SetLogGroups(value); return *this;}
 
     /**
      * <p>The log groups.</p> <p>If the <code>retentionInDays</code> value is not
-     * included for a log group, then that log group's events do not expire.</p>
+     * included for a log group, then that log group is set to have its events never
+     * expire.</p>
      */
     inline DescribeLogGroupsResult& WithLogGroups(Aws::Vector<LogGroup>&& value) { SetLogGroups(std::move(value)); return *this;}
 
     /**
      * <p>The log groups.</p> <p>If the <code>retentionInDays</code> value is not
-     * included for a log group, then that log group's events do not expire.</p>
+     * included for a log group, then that log group is set to have its events never
+     * expire.</p>
      */
     inline DescribeLogGroupsResult& AddLogGroups(const LogGroup& value) { m_logGroups.push_back(value); return *this; }
 
     /**
      * <p>The log groups.</p> <p>If the <code>retentionInDays</code> value is not
-     * included for a log group, then that log group's events do not expire.</p>
+     * included for a log group, then that log group is set to have its events never
+     * expire.</p>
      */
     inline DescribeLogGroupsResult& AddLogGroups(LogGroup&& value) { m_logGroups.push_back(std::move(value)); return *this; }
 

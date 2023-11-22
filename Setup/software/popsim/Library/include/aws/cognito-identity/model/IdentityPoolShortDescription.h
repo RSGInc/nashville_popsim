@@ -28,13 +28,13 @@ namespace Model
    * href="http://docs.aws.amazon.com/goto/WebAPI/cognito-identity-2014-06-30/IdentityPoolShortDescription">AWS
    * API Reference</a></p>
    */
-  class IdentityPoolShortDescription
+  class AWS_COGNITOIDENTITY_API IdentityPoolShortDescription
   {
   public:
-    AWS_COGNITOIDENTITY_API IdentityPoolShortDescription();
-    AWS_COGNITOIDENTITY_API IdentityPoolShortDescription(Aws::Utils::Json::JsonView jsonValue);
-    AWS_COGNITOIDENTITY_API IdentityPoolShortDescription& operator=(Aws::Utils::Json::JsonView jsonValue);
-    AWS_COGNITOIDENTITY_API Aws::Utils::Json::JsonValue Jsonize() const;
+    IdentityPoolShortDescription();
+    IdentityPoolShortDescription(Aws::Utils::Json::JsonView jsonValue);
+    IdentityPoolShortDescription& operator=(Aws::Utils::Json::JsonView jsonValue);
+    Aws::Utils::Json::JsonValue Jsonize() const;
 
 
     /**
