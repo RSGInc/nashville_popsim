@@ -1,0 +1,38 @@
+{
+ "build": "h9752425_3_cpu",
+ "build_number": 3,
+ "channel": "https://conda.anaconda.org/conda-forge/win-64",
+ "constrains": [
+  "arrow-cpp-proc * cpu"
+ ],
+ "depends": [
+  "openssl >=1.1.1s,<1.1.2a",
+  "libarrow 10.0.1 h96d9594_3_cpu"
+ ],
+ "extracted_package_dir": "",
+ "features": "",
+ "files": [
+  ".nonadmin"
+ ],
+ "fn": "arrow-cpp-10.0.1-h9752425_3_cpu.conda",
+ "license": "Apache-2.0",
+ "link": {
+  "source": "",
+  "type": 1
+ },
+ "md5": "6b4d3bf6f699cb9c3018f312ba1def37",
+ "name": "arrow-cpp",
+ "package_tarball_full_path": "",
+ "paths_data": {
+  "paths": [],
+  "paths_version": 1
+ },
+ "requested_spec": "arrow-cpp==10.0.1=h9752425_3_cpu",
+ "sha256": "6162da3247a0f25c1e8d835d7076f1ebf4d0c3bea9081c49eeb1f6be4ced6340",
+ "size": 30164,
+ "subdir": "win-64",
+ "timestamp": 1670878672000,
+ "track_features": "",
+ "url": "https://conda.anaconda.org/conda-forge/win-64/arrow-cpp-10.0.1-h9752425_3_cpu.conda",
+ "version": "10.0.1"
+}

@@ -1,0 +1,112 @@
+{
+ "build": "py38h91455d4_0",
+ "build_number": 0,
+ "channel": "https://conda.anaconda.org/conda-forge/win-64",
+ "constrains": [],
+ "depends": [
+  "vc >=14.2,<15",
+  "ucrt >=10.0.20348.0",
+  "python >=3.8,<3.9.0a0",
+  "python_abi 3.8.* *_cp38",
+  "vc14_runtime >=14.29.30139"
+ ],
+ "extracted_package_dir": "",
+ "features": "",
+ "files": [
+  "Lib/site-packages/unicodedata2-15.1.0.dist-info/INSTALLER",
+  "Lib/site-packages/unicodedata2-15.1.0.dist-info/LICENSE",
+  "Lib/site-packages/unicodedata2-15.1.0.dist-info/METADATA",
+  "Lib/site-packages/unicodedata2-15.1.0.dist-info/RECORD",
+  "Lib/site-packages/unicodedata2-15.1.0.dist-info/REQUESTED",
+  "Lib/site-packages/unicodedata2-15.1.0.dist-info/WHEEL",
+  "Lib/site-packages/unicodedata2-15.1.0.dist-info/direct_url.json",
+  "Lib/site-packages/unicodedata2-15.1.0.dist-info/top_level.txt",
+  "Lib/site-packages/unicodedata2.cp38-win_amd64.pyd",
+  ".nonadmin"
+ ],
+ "fn": "unicodedata2-15.1.0-py38h91455d4_0.conda",
+ "license": "Apache-2.0",
+ "link": {
+  "source": "",
+  "type": 1
+ },
+ "md5": "556fb89abee3970c76556144bdab3263",
+ "name": "unicodedata2",
+ "package_tarball_full_path": "",
+ "paths_data": {
+  "paths": [
+   {
+    "_path": "Lib/site-packages/unicodedata2-15.1.0.dist-info/INSTALLER",
+    "path_type": "hardlink",
+    "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+    "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+    "size_in_bytes": 5
+   },
+   {
+    "_path": "Lib/site-packages/unicodedata2-15.1.0.dist-info/LICENSE",
+    "path_type": "hardlink",
+    "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14",
+    "sha256_in_prefix": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14",
+    "size_in_bytes": 11325
+   },
+   {
+    "_path": "Lib/site-packages/unicodedata2-15.1.0.dist-info/METADATA",
+    "path_type": "hardlink",
+    "sha256": "975f034687e2c3f6398875405152ee928904af90227bf935e84b8f95caa7ebf1",
+    "sha256_in_prefix": "975f034687e2c3f6398875405152ee928904af90227bf935e84b8f95caa7ebf1",
+    "size_in_bytes": 3133
+   },
+   {
+    "_path": "Lib/site-packages/unicodedata2-15.1.0.dist-info/RECORD",
+    "path_type": "hardlink",
+    "sha256": "b42f3611bbe0f98adbfa856f0bf5ec7aad7feda821fe7d103d0814216933a6ee",
+    "sha256_in_prefix": "b42f3611bbe0f98adbfa856f0bf5ec7aad7feda821fe7d103d0814216933a6ee",
+    "size_in_bytes": 804
+   },
+   {
+    "_path": "Lib/site-packages/unicodedata2-15.1.0.dist-info/REQUESTED",
+    "path_type": "hardlink",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size_in_bytes": 0
+   },
+   {
+    "_path": "Lib/site-packages/unicodedata2-15.1.0.dist-info/WHEEL",
+    "path_type": "hardlink",
+    "sha256": "2a9956320c1265b7803ae9afc4dc48ad56cd3e79ff2d5cdf047ee5dfc8c30953",
+    "sha256_in_prefix": "2a9956320c1265b7803ae9afc4dc48ad56cd3e79ff2d5cdf047ee5dfc8c30953",
+    "size_in_bytes": 100
+   },
+   {
+    "_path": "Lib/site-packages/unicodedata2-15.1.0.dist-info/direct_url.json",
+    "path_type": "hardlink",
+    "sha256": "40f10920e430eb2f7b9109ff9e2897b1af0177f273761be9452eabae73f48d61",
+    "sha256_in_prefix": "40f10920e430eb2f7b9109ff9e2897b1af0177f273761be9452eabae73f48d61",
+    "size_in_bytes": 73
+   },
+   {
+    "_path": "Lib/site-packages/unicodedata2-15.1.0.dist-info/top_level.txt",
+    "path_type": "hardlink",
+    "sha256": "2efe3a3c550aa72f5a669a41449f07023f185c6a2da7d9c8bff8b9c93cb523d7",
+    "sha256_in_prefix": "2efe3a3c550aa72f5a669a41449f07023f185c6a2da7d9c8bff8b9c93cb523d7",
+    "size_in_bytes": 13
+   },
+   {
+    "_path": "Lib/site-packages/unicodedata2.cp38-win_amd64.pyd",
+    "path_type": "hardlink",
+    "sha256": "01165ab203b4e360ef69b2934cda20b4d42ff7a27e8879aa36f477d2a0e6f2ca",
+    "sha256_in_prefix": "01165ab203b4e360ef69b2934cda20b4d42ff7a27e8879aa36f477d2a0e6f2ca",
+    "size_in_bytes": 1246208
+   }
+  ],
+  "paths_version": 1
+ },
+ "requested_spec": "unicodedata2==15.1.0=py38h91455d4_0",
+ "sha256": "fd55477b1495809c29ac62493c71d9f54565fbd430aacd205de9c88299eb8734",
+ "size": 370683,
+ "subdir": "win-64",
+ "timestamp": 1695848484000,
+ "track_features": "",
+ "url": "https://conda.anaconda.org/conda-forge/win-64/unicodedata2-15.1.0-py38h91455d4_0.conda",
+ "version": "15.1.0"
+}

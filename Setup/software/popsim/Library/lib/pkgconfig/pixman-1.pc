@@ -1,0 +1,9 @@
+prefix=D:/bld/pixman_1695736013312/_h_env/Library
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: Pixman
+Description: The pixman library (version 1)
+Version: 0.42.2
+Libs: -L${libdir} -lpixman-1
+Cflags: -I${includedir}/pixman-1

@@ -1,0 +1,14 @@
+prefix=D:/bld/minizip_1699930938081/_h_env/Library
+exec_prefix=D:/bld/minizip_1699930938081/_h_env/Library
+libdir=D:/bld/minizip_1699930938081/_h_env/Library/lib
+sharedlibdir=D:/bld/minizip_1699930938081/_h_env/Library/lib
+includedir=D:/bld/minizip_1699930938081/_h_env/Library/include/minizip
+
+Name: minizip
+Description: Zip manipulation library
+Version: 4.0.3
+
+Requires.private: zlib
+Libs: -L${libdir} -L${sharedlibdir} -lminizip
+Libs.private: -lbzip2 -llzma -lzstd
+Cflags: -I${includedir}

@@ -1,0 +1,11 @@
+prefix=D:/bld/xerces-c_1692975858539/_h_env/Library
+exec_prefix=D:/bld/xerces-c_1692975858539/_h_env/Library
+libdir=D:/bld/xerces-c_1692975858539/_h_env/Library/lib
+includedir=D:/bld/xerces-c_1692975858539/_h_env/Library/include
+
+Name: Xerces-C++
+Description: Validating XML parser library for C++
+Version: 3.2.4
+Libs: -LD:/bld/xerces-c_1692975858539/_h_env/Library/lib -lxerces-c
+Libs.private: 
+Cflags: -ID:/bld/xerces-c_1692975858539/_h_env/Library/include

@@ -1,0 +1,134 @@
+{
+ "build": "h1537add_1",
+ "build_number": 1,
+ "channel": "https://conda.anaconda.org/conda-forge/win-64",
+ "constrains": [],
+ "depends": [
+  "vc >=14.2,<15",
+  "ucrt >=10.0.20348.0",
+  "vs2015_runtime >=14.29.30139"
+ ],
+ "extracted_package_dir": "",
+ "features": "",
+ "files": [
+  "Library/bin/uriparser.dll",
+  "Library/include/uriparser/Uri.h",
+  "Library/include/uriparser/UriBase.h",
+  "Library/include/uriparser/UriDefsAnsi.h",
+  "Library/include/uriparser/UriDefsConfig.h",
+  "Library/include/uriparser/UriDefsUnicode.h",
+  "Library/include/uriparser/UriIp4.h",
+  "Library/lib/cmake/uriparser-0.9.7/uriparser-config-version.cmake",
+  "Library/lib/cmake/uriparser-0.9.7/uriparser-config.cmake",
+  "Library/lib/cmake/uriparser-0.9.7/uriparser-release.cmake",
+  "Library/lib/cmake/uriparser-0.9.7/uriparser.cmake",
+  "Library/lib/uriparser.lib",
+  ".nonadmin"
+ ],
+ "fn": "uriparser-0.9.7-h1537add_1.conda",
+ "license": "BSD-3-Clause",
+ "link": {
+  "source": "",
+  "type": 1
+ },
+ "md5": "5f3b2772564e761bc2287b89b9e6b14b",
+ "name": "uriparser",
+ "package_tarball_full_path": "",
+ "paths_data": {
+  "paths": [
+   {
+    "_path": "Library/bin/uriparser.dll",
+    "path_type": "hardlink",
+    "sha256": "0781e552b5baf6e6094791d17a6cd1986795af56a6a1de21b8c9a4c07db2a9f1",
+    "sha256_in_prefix": "0781e552b5baf6e6094791d17a6cd1986795af56a6a1de21b8c9a4c07db2a9f1",
+    "size_in_bytes": 60928
+   },
+   {
+    "_path": "Library/include/uriparser/Uri.h",
+    "path_type": "hardlink",
+    "sha256": "746469f206226b5cc75024673695339d69bed9fa659f1b275f757fbd4bee2302",
+    "sha256_in_prefix": "746469f206226b5cc75024673695339d69bed9fa659f1b275f757fbd4bee2302",
+    "size_in_bytes": 38245
+   },
+   {
+    "_path": "Library/include/uriparser/UriBase.h",
+    "path_type": "hardlink",
+    "sha256": "fe084937f891942dbd51f5b640d0404f9cb1f18c02dbfb3305e2abfbdfc51aef",
+    "sha256_in_prefix": "fe084937f891942dbd51f5b640d0404f9cb1f18c02dbfb3305e2abfbdfc51aef",
+    "size_in_bytes": 12499
+   },
+   {
+    "_path": "Library/include/uriparser/UriDefsAnsi.h",
+    "path_type": "hardlink",
+    "sha256": "c4b0fcf5edcb068c0e0a32c52a3d4e8c4f4aecf53aa59c19b2d8317caf8a811c",
+    "sha256_in_prefix": "c4b0fcf5edcb068c0e0a32c52a3d4e8c4f4aecf53aa59c19b2d8317caf8a811c",
+    "size_in_bytes": 2583
+   },
+   {
+    "_path": "Library/include/uriparser/UriDefsConfig.h",
+    "path_type": "hardlink",
+    "sha256": "4971bdec1d1ce4c15b26ee31b70aea5db844a62c00b3fb5c4db957f63958d78d",
+    "sha256_in_prefix": "4971bdec1d1ce4c15b26ee31b70aea5db844a62c00b3fb5c4db957f63958d78d",
+    "size_in_bytes": 3312
+   },
+   {
+    "_path": "Library/include/uriparser/UriDefsUnicode.h",
+    "path_type": "hardlink",
+    "sha256": "4c46e9fbf1996080de79c3ce17c4f91a27e16fc6c334fefee802eea399ad7cec",
+    "sha256_in_prefix": "4c46e9fbf1996080de79c3ce17c4f91a27e16fc6c334fefee802eea399ad7cec",
+    "size_in_bytes": 2600
+   },
+   {
+    "_path": "Library/include/uriparser/UriIp4.h",
+    "path_type": "hardlink",
+    "sha256": "d44918cbe50737c7dd8d36ae661b2a6020bf10e4b451696f24406884ebd0199c",
+    "sha256_in_prefix": "d44918cbe50737c7dd8d36ae661b2a6020bf10e4b451696f24406884ebd0199c",
+    "size_in_bytes": 3460
+   },
+   {
+    "_path": "Library/lib/cmake/uriparser-0.9.7/uriparser-config-version.cmake",
+    "path_type": "hardlink",
+    "sha256": "f3a62cd983e61de753ae5e6d958f62cf7816e2fc3e7d3e5b7e9aefb68c3414c6",
+    "sha256_in_prefix": "f3a62cd983e61de753ae5e6d958f62cf7816e2fc3e7d3e5b7e9aefb68c3414c6",
+    "size_in_bytes": 2948
+   },
+   {
+    "_path": "Library/lib/cmake/uriparser-0.9.7/uriparser-config.cmake",
+    "path_type": "hardlink",
+    "sha256": "273d6ff274e58651dd049b3b75016cd432331e168eae2b3344b5bea5e5b6bcb3",
+    "sha256_in_prefix": "273d6ff274e58651dd049b3b75016cd432331e168eae2b3344b5bea5e5b6bcb3",
+    "size_in_bytes": 3150
+   },
+   {
+    "_path": "Library/lib/cmake/uriparser-0.9.7/uriparser-release.cmake",
+    "path_type": "hardlink",
+    "sha256": "a50ab15a411ac0fb9624a9bba815eda6f8a730a9fdb646b9b5c4a31c9abd808a",
+    "sha256_in_prefix": "a50ab15a411ac0fb9624a9bba815eda6f8a730a9fdb646b9b5c4a31c9abd808a",
+    "size_in_bytes": 948
+   },
+   {
+    "_path": "Library/lib/cmake/uriparser-0.9.7/uriparser.cmake",
+    "path_type": "hardlink",
+    "sha256": "d256a7ba5781c123f183bc8cc4eaa2ce30fb45a6c0489e84f1d7f92caac608b7",
+    "sha256_in_prefix": "d256a7ba5781c123f183bc8cc4eaa2ce30fb45a6c0489e84f1d7f92caac608b7",
+    "size_in_bytes": 4070
+   },
+   {
+    "_path": "Library/lib/uriparser.lib",
+    "path_type": "hardlink",
+    "sha256": "42e499433d8150e6aaef6298c8e5735ab7956b751c5243d9fd37e605ab0e6057",
+    "sha256_in_prefix": "42e499433d8150e6aaef6298c8e5735ab7956b751c5243d9fd37e605ab0e6057",
+    "size_in_bytes": 12390
+   }
+  ],
+  "paths_version": 1
+ },
+ "requested_spec": "uriparser==0.9.7=h1537add_1",
+ "sha256": "9b185e00da9829592300359e23e2954188d21749fda675a08abbef728f19f25b",
+ "size": 48056,
+ "subdir": "win-64",
+ "timestamp": 1677713151000,
+ "track_features": "",
+ "url": "https://conda.anaconda.org/conda-forge/win-64/uriparser-0.9.7-h1537add_1.conda",
+ "version": "0.9.7"
+}

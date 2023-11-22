@@ -1,0 +1,12 @@
+prefix=D:/bld/cfitsio_1605060547139/_h_env/Library
+exec_prefix=D:/bld/cfitsio_1605060547139/_h_env/Library
+libdir=
+includedir=D:/bld/cfitsio_1605060547139/_h_env/Library/include/
+
+Name: cfitsio
+Description: FITS File Subroutine Library
+URL: https://heasarc.gsfc.nasa.gov/fitsio/
+Version: .
+Libs: -L${libdir} 
+Libs.private: -lm
+Cflags: -I${includedir}

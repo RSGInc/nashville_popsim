@@ -1,0 +1,1420 @@
+{
+ "build": "h392df6f_0",
+ "build_number": 0,
+ "channel": "https://conda.anaconda.org/conda-forge/win-64",
+ "constrains": [],
+ "depends": [
+  "zlib",
+  "vc >=14.2,<15",
+  "ucrt >=10.0.20348.0",
+  "vs2015_runtime >=14.29.30139",
+  "libzlib >=1.2.13,<1.3.0a0",
+  "openssl >=1.1.1q,<1.1.2a",
+  "libxml2 >=2.10.3,<2.11.0a0",
+  "krb5 >=1.19.3,<1.20.0a0",
+  "libpq 13.8 h04fd8be_0"
+ ],
+ "extracted_package_dir": "",
+ "features": "",
+ "files": [
+  "Library/bin/clusterdb.exe",
+  "Library/bin/createdb.exe",
+  "Library/bin/createuser.exe",
+  "Library/bin/dropdb.exe",
+  "Library/bin/dropuser.exe",
+  "Library/bin/ecpg.exe",
+  "Library/bin/initdb.exe",
+  "Library/bin/isolationtester.exe",
+  "Library/bin/libecpg.dll",
+  "Library/bin/libecpg_compat.dll",
+  "Library/bin/libpgtypes.dll",
+  "Library/bin/oid2name.exe",
+  "Library/bin/pg_archivecleanup.exe",
+  "Library/bin/pg_basebackup.exe",
+  "Library/bin/pg_checksums.exe",
+  "Library/bin/pg_controldata.exe",
+  "Library/bin/pg_ctl.exe",
+  "Library/bin/pg_dump.exe",
+  "Library/bin/pg_dumpall.exe",
+  "Library/bin/pg_isolation_regress.exe",
+  "Library/bin/pg_isready.exe",
+  "Library/bin/pg_receivewal.exe",
+  "Library/bin/pg_recvlogical.exe",
+  "Library/bin/pg_regress.exe",
+  "Library/bin/pg_regress_ecpg.exe",
+  "Library/bin/pg_resetwal.exe",
+  "Library/bin/pg_restore.exe",
+  "Library/bin/pg_rewind.exe",
+  "Library/bin/pg_standby.exe",
+  "Library/bin/pg_test_fsync.exe",
+  "Library/bin/pg_test_timing.exe",
+  "Library/bin/pg_upgrade.exe",
+  "Library/bin/pg_verifybackup.exe",
+  "Library/bin/pg_waldump.exe",
+  "Library/bin/pgbench.exe",
+  "Library/bin/postgres.exe",
+  "Library/bin/psql.exe",
+  "Library/bin/reindexdb.exe",
+  "Library/bin/vacuumdb.exe",
+  "Library/bin/vacuumlo.exe",
+  "Library/bin/zic.exe",
+  "Library/symbols/_int.pdb",
+  "Library/symbols/adminpack.pdb",
+  "Library/symbols/amcheck.pdb",
+  "Library/symbols/auth_delay.pdb",
+  "Library/symbols/auto_explain.pdb",
+  "Library/symbols/autoinc.pdb",
+  "Library/symbols/bloom.pdb",
+  "Library/symbols/btree_gin.pdb",
+  "Library/symbols/btree_gist.pdb",
+  "Library/symbols/citext.pdb",
+  "Library/symbols/clusterdb.pdb",
+  "Library/symbols/createdb.pdb",
+  "Library/symbols/createuser.pdb",
+  "Library/symbols/cube.pdb",
+  "Library/symbols/cyrillic_and_mic.pdb",
+  "Library/symbols/dblink.pdb",
+  "Library/symbols/dict_int.pdb",
+  "Library/symbols/dict_snowball.pdb",
+  "Library/symbols/dict_xsyn.pdb",
+  "Library/symbols/dropdb.pdb",
+  "Library/symbols/dropuser.pdb",
+  "Library/symbols/dummy_index_am.pdb",
+  "Library/symbols/dummy_seclabel.pdb",
+  "Library/symbols/earthdistance.pdb",
+  "Library/symbols/ecpg.pdb",
+  "Library/symbols/euc2004_sjis2004.pdb",
+  "Library/symbols/euc_cn_and_mic.pdb",
+  "Library/symbols/euc_jp_and_sjis.pdb",
+  "Library/symbols/euc_kr_and_mic.pdb",
+  "Library/symbols/euc_tw_and_big5.pdb",
+  "Library/symbols/file_fdw.pdb",
+  "Library/symbols/fuzzystrmatch.pdb",
+  "Library/symbols/hstore.pdb",
+  "Library/symbols/initdb.pdb",
+  "Library/symbols/insert_username.pdb",
+  "Library/symbols/isn.pdb",
+  "Library/symbols/isolationtester.pdb",
+  "Library/symbols/latin2_and_win1250.pdb",
+  "Library/symbols/latin_and_mic.pdb",
+  "Library/symbols/libecpg.pdb",
+  "Library/symbols/libecpg_compat.pdb",
+  "Library/symbols/libpgtypes.pdb",
+  "Library/symbols/libpq.pdb",
+  "Library/symbols/libpqwalreceiver.pdb",
+  "Library/symbols/lo.pdb",
+  "Library/symbols/ltree.pdb",
+  "Library/symbols/moddatetime.pdb",
+  "Library/symbols/oid2name.pdb",
+  "Library/symbols/pageinspect.pdb",
+  "Library/symbols/passwordcheck.pdb",
+  "Library/symbols/pg_archivecleanup.pdb",
+  "Library/symbols/pg_basebackup.pdb",
+  "Library/symbols/pg_buffercache.pdb",
+  "Library/symbols/pg_checksums.pdb",
+  "Library/symbols/pg_config.pdb",
+  "Library/symbols/pg_controldata.pdb",
+  "Library/symbols/pg_ctl.pdb",
+  "Library/symbols/pg_dump.pdb",
+  "Library/symbols/pg_dumpall.pdb",
+  "Library/symbols/pg_freespacemap.pdb",
+  "Library/symbols/pg_isolation_regress.pdb",
+  "Library/symbols/pg_isready.pdb",
+  "Library/symbols/pg_prewarm.pdb",
+  "Library/symbols/pg_receivewal.pdb",
+  "Library/symbols/pg_recvlogical.pdb",
+  "Library/symbols/pg_regress.pdb",
+  "Library/symbols/pg_regress_ecpg.pdb",
+  "Library/symbols/pg_resetwal.pdb",
+  "Library/symbols/pg_restore.pdb",
+  "Library/symbols/pg_rewind.pdb",
+  "Library/symbols/pg_standby.pdb",
+  "Library/symbols/pg_stat_statements.pdb",
+  "Library/symbols/pg_test_fsync.pdb",
+  "Library/symbols/pg_test_timing.pdb",
+  "Library/symbols/pg_trgm.pdb",
+  "Library/symbols/pg_upgrade.pdb",
+  "Library/symbols/pg_verifybackup.pdb",
+  "Library/symbols/pg_visibility.pdb",
+  "Library/symbols/pg_waldump.pdb",
+  "Library/symbols/pgbench.pdb",
+  "Library/symbols/pgcrypto.pdb",
+  "Library/symbols/pgevent.pdb",
+  "Library/symbols/pgoutput.pdb",
+  "Library/symbols/pgrowlocks.pdb",
+  "Library/symbols/pgstattuple.pdb",
+  "Library/symbols/pgxml.pdb",
+  "Library/symbols/plpgsql.pdb",
+  "Library/symbols/postgres.pdb",
+  "Library/symbols/postgres_fdw.pdb",
+  "Library/symbols/psql.pdb",
+  "Library/symbols/refint.pdb",
+  "Library/symbols/regress.pdb",
+  "Library/symbols/reindexdb.pdb",
+  "Library/symbols/seg.pdb",
+  "Library/symbols/ssl_passphrase_func.pdb",
+  "Library/symbols/sslinfo.pdb",
+  "Library/symbols/tablefunc.pdb",
+  "Library/symbols/tcn.pdb",
+  "Library/symbols/test_bloomfilter.pdb",
+  "Library/symbols/test_ddl_deparse.pdb",
+  "Library/symbols/test_decoding.pdb",
+  "Library/symbols/test_ginpostinglist.pdb",
+  "Library/symbols/test_integerset.pdb",
+  "Library/symbols/test_parser.pdb",
+  "Library/symbols/test_predtest.pdb",
+  "Library/symbols/test_rbtree.pdb",
+  "Library/symbols/test_rls_hooks.pdb",
+  "Library/symbols/test_shm_mq.pdb",
+  "Library/symbols/tsm_system_rows.pdb",
+  "Library/symbols/tsm_system_time.pdb",
+  "Library/symbols/unaccent.pdb",
+  "Library/symbols/utf8_and_big5.pdb",
+  "Library/symbols/utf8_and_cyrillic.pdb",
+  "Library/symbols/utf8_and_euc2004.pdb",
+  "Library/symbols/utf8_and_euc_cn.pdb",
+  "Library/symbols/utf8_and_euc_jp.pdb",
+  "Library/symbols/utf8_and_euc_kr.pdb",
+  "Library/symbols/utf8_and_euc_tw.pdb",
+  "Library/symbols/utf8_and_gb18030.pdb",
+  "Library/symbols/utf8_and_gbk.pdb",
+  "Library/symbols/utf8_and_iso8859.pdb",
+  "Library/symbols/utf8_and_iso8859_1.pdb",
+  "Library/symbols/utf8_and_johab.pdb",
+  "Library/symbols/utf8_and_sjis.pdb",
+  "Library/symbols/utf8_and_sjis2004.pdb",
+  "Library/symbols/utf8_and_uhc.pdb",
+  "Library/symbols/utf8_and_win.pdb",
+  "Library/symbols/vacuumdb.pdb",
+  "Library/symbols/vacuumlo.pdb",
+  "Library/symbols/worker_spi.pdb",
+  "Library/symbols/zic.pdb",
+  ".nonadmin"
+ ],
+ "fn": "postgresql-13.8-h392df6f_0.tar.bz2",
+ "license": "",
+ "link": {
+  "source": "",
+  "type": 1
+ },
+ "md5": "dd866704617b012c00deeb645cb41fe8",
+ "name": "postgresql",
+ "package_tarball_full_path": "",
+ "paths_data": {
+  "paths": [
+   {
+    "_path": "Library/bin/clusterdb.exe",
+    "path_type": "hardlink",
+    "sha256": "0170bfc68c02f6e4de5e6a47ba0f6448212f09fa5b710f47a9ebbf85705ab506",
+    "sha256_in_prefix": "0170bfc68c02f6e4de5e6a47ba0f6448212f09fa5b710f47a9ebbf85705ab506",
+    "size_in_bytes": 101888
+   },
+   {
+    "_path": "Library/bin/createdb.exe",
+    "path_type": "hardlink",
+    "sha256": "81ab53247fce1b12d65b434f22a00e0716c60bf450c28e5bdd10f9b6addfd540",
+    "sha256_in_prefix": "81ab53247fce1b12d65b434f22a00e0716c60bf450c28e5bdd10f9b6addfd540",
+    "size_in_bytes": 101376
+   },
+   {
+    "_path": "Library/bin/createuser.exe",
+    "path_type": "hardlink",
+    "sha256": "8f33e8a069d2eee028f4bbaaa3901958b954119adcca6aec6fde905fb9a5e22e",
+    "sha256_in_prefix": "8f33e8a069d2eee028f4bbaaa3901958b954119adcca6aec6fde905fb9a5e22e",
+    "size_in_bytes": 103424
+   },
+   {
+    "_path": "Library/bin/dropdb.exe",
+    "path_type": "hardlink",
+    "sha256": "310581312f9e662902ebe61afccf9681b541dadf87fc2f782739500808228eb2",
+    "sha256_in_prefix": "310581312f9e662902ebe61afccf9681b541dadf87fc2f782739500808228eb2",
+    "size_in_bytes": 98304
+   },
+   {
+    "_path": "Library/bin/dropuser.exe",
+    "path_type": "hardlink",
+    "sha256": "1097da55ec746e0f384174874b5856852e3cd402750211b8fd39dd5ee41c8d7c",
+    "sha256_in_prefix": "1097da55ec746e0f384174874b5856852e3cd402750211b8fd39dd5ee41c8d7c",
+    "size_in_bytes": 97792
+   },
+   {
+    "_path": "Library/bin/ecpg.exe",
+    "path_type": "hardlink",
+    "sha256": "fb96a4b5b6ec38488f2d792b5d37ca0deb9889289b0012e9a00e0d563c1741fe",
+    "sha256_in_prefix": "fb96a4b5b6ec38488f2d792b5d37ca0deb9889289b0012e9a00e0d563c1741fe",
+    "size_in_bytes": 876544
+   },
+   {
+    "_path": "Library/bin/initdb.exe",
+    "path_type": "hardlink",
+    "sha256": "273b27ba2d497f920046533d32ac944b5b12f429177e1a6a1f5d8d2b0f647408",
+    "sha256_in_prefix": "273b27ba2d497f920046533d32ac944b5b12f429177e1a6a1f5d8d2b0f647408",
+    "size_in_bytes": 187904
+   },
+   {
+    "_path": "Library/bin/isolationtester.exe",
+    "path_type": "hardlink",
+    "sha256": "20317cb61d3b27405df5526017a1e6ff996f266f94af6346a38ffbe04fc1f5bb",
+    "sha256_in_prefix": "20317cb61d3b27405df5526017a1e6ff996f266f94af6346a38ffbe04fc1f5bb",
+    "size_in_bytes": 76288
+   },
+   {
+    "_path": "Library/bin/libecpg.dll",
+    "path_type": "hardlink",
+    "sha256": "9213effc2bac1cf24977a6036ffa695a28384b5160167e7348437070384282d3",
+    "sha256_in_prefix": "9213effc2bac1cf24977a6036ffa695a28384b5160167e7348437070384282d3",
+    "size_in_bytes": 95232
+   },
+   {
+    "_path": "Library/bin/libecpg_compat.dll",
+    "path_type": "hardlink",
+    "sha256": "9771aa2be02bcb92dc5a038aecc2015a5351325b9dc1a97ea9e07fcb906fe040",
+    "sha256_in_prefix": "9771aa2be02bcb92dc5a038aecc2015a5351325b9dc1a97ea9e07fcb906fe040",
+    "size_in_bytes": 37376
+   },
+   {
+    "_path": "Library/bin/libpgtypes.dll",
+    "path_type": "hardlink",
+    "sha256": "db95585940ab3deee9b088ce10245ff9b2e54d140def52a8cead57483b095cb7",
+    "sha256_in_prefix": "db95585940ab3deee9b088ce10245ff9b2e54d140def52a8cead57483b095cb7",
+    "size_in_bytes": 79872
+   },
+   {
+    "_path": "Library/bin/oid2name.exe",
+    "path_type": "hardlink",
+    "sha256": "a1a82c2aeed18ce38f20c674132cd74a27757c49c3f2e4c870cc3c1cf2bf8264",
+    "sha256_in_prefix": "a1a82c2aeed18ce38f20c674132cd74a27757c49c3f2e4c870cc3c1cf2bf8264",
+    "size_in_bytes": 76800
+   },
+   {
+    "_path": "Library/bin/pg_archivecleanup.exe",
+    "path_type": "hardlink",
+    "sha256": "3adfb195863b284637408c4a3f600c3fabd5d4467657423566d0ed03871d9b61",
+    "sha256_in_prefix": "3adfb195863b284637408c4a3f600c3fabd5d4467657423566d0ed03871d9b61",
+    "size_in_bytes": 77824
+   },
+   {
+    "_path": "Library/bin/pg_basebackup.exe",
+    "path_type": "hardlink",
+    "sha256": "3a05d0ee39a459a3321ed14262a2393a098c984d43991c12ffd9adc1fb584937",
+    "sha256_in_prefix": "3a05d0ee39a459a3321ed14262a2393a098c984d43991c12ffd9adc1fb584937",
+    "size_in_bytes": 151040
+   },
+   {
+    "_path": "Library/bin/pg_checksums.exe",
+    "path_type": "hardlink",
+    "sha256": "08449a8466357660c649d8107dadfe4e26de4d91efa6103944122fa6183c01b9",
+    "sha256_in_prefix": "08449a8466357660c649d8107dadfe4e26de4d91efa6103944122fa6183c01b9",
+    "size_in_bytes": 99328
+   },
+   {
+    "_path": "Library/bin/pg_controldata.exe",
+    "path_type": "hardlink",
+    "sha256": "e9b4b8931d60f7c8814cc03e2dd5c4be977a5df59878f77b8222ce6cb7717628",
+    "sha256_in_prefix": "e9b4b8931d60f7c8814cc03e2dd5c4be977a5df59878f77b8222ce6cb7717628",
+    "size_in_bytes": 92160
+   },
+   {
+    "_path": "Library/bin/pg_ctl.exe",
+    "path_type": "hardlink",
+    "sha256": "3f07365dbad28a04a460aa433f7dec932fdebc7363440ad9fa6d8cd7213177f4",
+    "sha256_in_prefix": "3f07365dbad28a04a460aa433f7dec932fdebc7363440ad9fa6d8cd7213177f4",
+    "size_in_bytes": 116736
+   },
+   {
+    "_path": "Library/bin/pg_dump.exe",
+    "path_type": "hardlink",
+    "sha256": "84ff2f0829057f122e11f5277f429533f4d84f61cc379f8e74520d72dcc33674",
+    "sha256_in_prefix": "84ff2f0829057f122e11f5277f429533f4d84f61cc379f8e74520d72dcc33674",
+    "size_in_bytes": 461824
+   },
+   {
+    "_path": "Library/bin/pg_dumpall.exe",
+    "path_type": "hardlink",
+    "sha256": "d7112e60144f6f1453167cfd098b53fbc1509565ef101879f1c40b2eed208c3d",
+    "sha256_in_prefix": "d7112e60144f6f1453167cfd098b53fbc1509565ef101879f1c40b2eed208c3d",
+    "size_in_bytes": 140288
+   },
+   {
+    "_path": "Library/bin/pg_isolation_regress.exe",
+    "path_type": "hardlink",
+    "sha256": "dc654d1a791a460a1fab342be65fa6c3ff840fa9b934586f44cc30406aadb5f4",
+    "sha256_in_prefix": "dc654d1a791a460a1fab342be65fa6c3ff840fa9b934586f44cc30406aadb5f4",
+    "size_in_bytes": 115200
+   },
+   {
+    "_path": "Library/bin/pg_isready.exe",
+    "path_type": "hardlink",
+    "sha256": "bdf1968f1a968c316af23ed22ea21088a7a7d0ab7e568d49ebaa5bf8855710f1",
+    "sha256_in_prefix": "bdf1968f1a968c316af23ed22ea21088a7a7d0ab7e568d49ebaa5bf8855710f1",
+    "size_in_bytes": 98304
+   },
+   {
+    "_path": "Library/bin/pg_receivewal.exe",
+    "path_type": "hardlink",
+    "sha256": "84da18ebfaa78d48768ce0a29da24d8c6267e83a2d4544fff858aa728149838d",
+    "sha256_in_prefix": "84da18ebfaa78d48768ce0a29da24d8c6267e83a2d4544fff858aa728149838d",
+    "size_in_bytes": 116736
+   },
+   {
+    "_path": "Library/bin/pg_recvlogical.exe",
+    "path_type": "hardlink",
+    "sha256": "289df346e77f86d555b67614c63a6e2e0984e218ac63c405c56e08eb5a9cede4",
+    "sha256_in_prefix": "289df346e77f86d555b67614c63a6e2e0984e218ac63c405c56e08eb5a9cede4",
+    "size_in_bytes": 118784
+   },
+   {
+    "_path": "Library/bin/pg_regress.exe",
+    "path_type": "hardlink",
+    "sha256": "72a653db769c69fc8ddd4efe72f1b07a5891ed3da2c75e2eb0bd920df5689e5b",
+    "sha256_in_prefix": "72a653db769c69fc8ddd4efe72f1b07a5891ed3da2c75e2eb0bd920df5689e5b",
+    "size_in_bytes": 115200
+   },
+   {
+    "_path": "Library/bin/pg_regress_ecpg.exe",
+    "path_type": "hardlink",
+    "sha256": "f1ef701b92964c08d8aa659b510498f1d93d9748a9646194f598c9dfa39d8954",
+    "sha256_in_prefix": "f1ef701b92964c08d8aa659b510498f1d93d9748a9646194f598c9dfa39d8954",
+    "size_in_bytes": 115712
+   },
+   {
+    "_path": "Library/bin/pg_resetwal.exe",
+    "path_type": "hardlink",
+    "sha256": "7b08056134b4ecb20dd6d5e4e2060f2dc115d76b49d3254a6b352b248664863c",
+    "sha256_in_prefix": "7b08056134b4ecb20dd6d5e4e2060f2dc115d76b49d3254a6b352b248664863c",
+    "size_in_bytes": 104960
+   },
+   {
+    "_path": "Library/bin/pg_restore.exe",
+    "path_type": "hardlink",
+    "sha256": "f4057ce112f0b926fcc1b2355f75ca04376040b071e95988774885d818c39abe",
+    "sha256_in_prefix": "f4057ce112f0b926fcc1b2355f75ca04376040b071e95988774885d818c39abe",
+    "size_in_bytes": 218112
+   },
+   {
+    "_path": "Library/bin/pg_rewind.exe",
+    "path_type": "hardlink",
+    "sha256": "7454a6d549a2f3d8ab44d8bbea893291a9942cab98f248809e160ba4ac66cee0",
+    "sha256_in_prefix": "7454a6d549a2f3d8ab44d8bbea893291a9942cab98f248809e160ba4ac66cee0",
+    "size_in_bytes": 158208
+   },
+   {
+    "_path": "Library/bin/pg_standby.exe",
+    "path_type": "hardlink",
+    "sha256": "ea2475927bfe1c19e47c46d5e244cc8dbc9b3048fef499ea93290d400ecc7c5c",
+    "sha256_in_prefix": "ea2475927bfe1c19e47c46d5e244cc8dbc9b3048fef499ea93290d400ecc7c5c",
+    "size_in_bytes": 73216
+   },
+   {
+    "_path": "Library/bin/pg_test_fsync.exe",
+    "path_type": "hardlink",
+    "sha256": "502049c5626f347654aec21ae45588b63ad5061860a9e2c6d515679610287110",
+    "sha256_in_prefix": "502049c5626f347654aec21ae45588b63ad5061860a9e2c6d515679610287110",
+    "size_in_bytes": 81920
+   },
+   {
+    "_path": "Library/bin/pg_test_timing.exe",
+    "path_type": "hardlink",
+    "sha256": "20b30cbecd5ca5d3e8f8bbaa8cf560ecd0bda30aaeee8d80dde83edc69447c08",
+    "sha256_in_prefix": "20b30cbecd5ca5d3e8f8bbaa8cf560ecd0bda30aaeee8d80dde83edc69447c08",
+    "size_in_bytes": 73728
+   },
+   {
+    "_path": "Library/bin/pg_upgrade.exe",
+    "path_type": "hardlink",
+    "sha256": "8a0b7f2b6dda56d2ff746791a938e55265db92cf1dcde6bdfb572c0615517d72",
+    "sha256_in_prefix": "8a0b7f2b6dda56d2ff746791a938e55265db92cf1dcde6bdfb572c0615517d72",
+    "size_in_bytes": 181248
+   },
+   {
+    "_path": "Library/bin/pg_verifybackup.exe",
+    "path_type": "hardlink",
+    "sha256": "b7ddf34591f9963244c6ec657090a32efa53ce6b43d37ffa5c04de8d2dffb301",
+    "sha256_in_prefix": "b7ddf34591f9963244c6ec657090a32efa53ce6b43d37ffa5c04de8d2dffb301",
+    "size_in_bytes": 122880
+   },
+   {
+    "_path": "Library/bin/pg_waldump.exe",
+    "path_type": "hardlink",
+    "sha256": "fd379b7aad2e99ae90a94451b1e709324cd859b063291b5beb57f16a5d80f44a",
+    "sha256_in_prefix": "fd379b7aad2e99ae90a94451b1e709324cd859b063291b5beb57f16a5d80f44a",
+    "size_in_bytes": 135680
+   },
+   {
+    "_path": "Library/bin/pgbench.exe",
+    "path_type": "hardlink",
+    "sha256": "41cd58ea93f327b7aad0caf02358c1eac650c5888faced216662118d579de19c",
+    "sha256_in_prefix": "41cd58ea93f327b7aad0caf02358c1eac650c5888faced216662118d579de19c",
+    "size_in_bytes": 188928
+   },
+   {
+    "_path": "Library/bin/postgres.exe",
+    "path_type": "hardlink",
+    "sha256": "9c83c89236d65d881af6b52ffb239fe322180fb0ca9a32140f0c06f73ff92205",
+    "sha256_in_prefix": "9c83c89236d65d881af6b52ffb239fe322180fb0ca9a32140f0c06f73ff92205",
+    "size_in_bytes": 7339520
+   },
+   {
+    "_path": "Library/bin/psql.exe",
+    "path_type": "hardlink",
+    "sha256": "e44891ea6c894eeadec19a2882ab0f6455d82f382d0f01b3507b3652486ceffc",
+    "sha256_in_prefix": "e44891ea6c894eeadec19a2882ab0f6455d82f382d0f01b3507b3652486ceffc",
+    "size_in_bytes": 502784
+   },
+   {
+    "_path": "Library/bin/reindexdb.exe",
+    "path_type": "hardlink",
+    "sha256": "efa3518c68b83f9cdf40ff022ef51eb074d4aec8f5ac58566d503064aa3f5ef5",
+    "sha256_in_prefix": "efa3518c68b83f9cdf40ff022ef51eb074d4aec8f5ac58566d503064aa3f5ef5",
+    "size_in_bytes": 109056
+   },
+   {
+    "_path": "Library/bin/vacuumdb.exe",
+    "path_type": "hardlink",
+    "sha256": "2fede59920c275923792c1d17be8bff0e07e7f184b075a25b77a12315001ad52",
+    "sha256_in_prefix": "2fede59920c275923792c1d17be8bff0e07e7f184b075a25b77a12315001ad52",
+    "size_in_bytes": 109568
+   },
+   {
+    "_path": "Library/bin/vacuumlo.exe",
+    "path_type": "hardlink",
+    "sha256": "a076e01740919259c51280d54a60ac0d5d58f72fde2a1a31b9fd5b8480e350e5",
+    "sha256_in_prefix": "a076e01740919259c51280d54a60ac0d5d58f72fde2a1a31b9fd5b8480e350e5",
+    "size_in_bytes": 74240
+   },
+   {
+    "_path": "Library/bin/zic.exe",
+    "path_type": "hardlink",
+    "sha256": "ad9cd0a23be4bb4c7dc9e4d992985740a31fac2a4791932a32d961f3ce39b98a",
+    "sha256_in_prefix": "ad9cd0a23be4bb4c7dc9e4d992985740a31fac2a4791932a32d961f3ce39b98a",
+    "size_in_bytes": 97280
+   },
+   {
+    "_path": "Library/symbols/_int.pdb",
+    "path_type": "hardlink",
+    "sha256": "8114d64e756898f39d24199de85c705274e59a69b75416fb0fba24023160a3f5",
+    "sha256_in_prefix": "8114d64e756898f39d24199de85c705274e59a69b75416fb0fba24023160a3f5",
+    "size_in_bytes": 577536
+   },
+   {
+    "_path": "Library/symbols/adminpack.pdb",
+    "path_type": "hardlink",
+    "sha256": "72465fe4a47b48916bd76e76e5d66660219ec39de7280d4a82fbd337ac4215b5",
+    "sha256_in_prefix": "72465fe4a47b48916bd76e76e5d66660219ec39de7280d4a82fbd337ac4215b5",
+    "size_in_bytes": 495616
+   },
+   {
+    "_path": "Library/symbols/amcheck.pdb",
+    "path_type": "hardlink",
+    "sha256": "9d6fe6cec4e56a1d00f21794ae34b0495a65716c1ed64d1973dc2a091c203a83",
+    "sha256_in_prefix": "9d6fe6cec4e56a1d00f21794ae34b0495a65716c1ed64d1973dc2a091c203a83",
+    "size_in_bytes": 528384
+   },
+   {
+    "_path": "Library/symbols/auth_delay.pdb",
+    "path_type": "hardlink",
+    "sha256": "0b0837d2204e87a34178dfdadb4d2d24ce7ba70e454623643688800b21401db3",
+    "sha256_in_prefix": "0b0837d2204e87a34178dfdadb4d2d24ce7ba70e454623643688800b21401db3",
+    "size_in_bytes": 413696
+   },
+   {
+    "_path": "Library/symbols/auto_explain.pdb",
+    "path_type": "hardlink",
+    "sha256": "8b74dfc3cb17adf996ba9205f931b7e7fa42e7d18cfb19d07878120245a0f9c1",
+    "sha256_in_prefix": "8b74dfc3cb17adf996ba9205f931b7e7fa42e7d18cfb19d07878120245a0f9c1",
+    "size_in_bytes": 471040
+   },
+   {
+    "_path": "Library/symbols/autoinc.pdb",
+    "path_type": "hardlink",
+    "sha256": "690c47e60232b69a267f9332c316937e73c230b63fba94c11d9a0e4eb2132c22",
+    "sha256_in_prefix": "690c47e60232b69a267f9332c316937e73c230b63fba94c11d9a0e4eb2132c22",
+    "size_in_bytes": 413696
+   },
+   {
+    "_path": "Library/symbols/bloom.pdb",
+    "path_type": "hardlink",
+    "sha256": "7e791c0ce2b29b2ea02bc887cbf0aeac4831219b8a073dbabb9ccb7bcbc0b0ac",
+    "sha256_in_prefix": "7e791c0ce2b29b2ea02bc887cbf0aeac4831219b8a073dbabb9ccb7bcbc0b0ac",
+    "size_in_bytes": 585728
+   },
+   {
+    "_path": "Library/symbols/btree_gin.pdb",
+    "path_type": "hardlink",
+    "sha256": "0c5085a5f9a62fc76018ab461095a3533fd5901a95e00ad2facc1004e58e2803",
+    "sha256_in_prefix": "0c5085a5f9a62fc76018ab461095a3533fd5901a95e00ad2facc1004e58e2803",
+    "size_in_bytes": 462848
+   },
+   {
+    "_path": "Library/symbols/btree_gist.pdb",
+    "path_type": "hardlink",
+    "sha256": "db4cae27bdbaa38a724dc2b01967573df9ff62296e1bf8ba21a21fd3e0444994",
+    "sha256_in_prefix": "db4cae27bdbaa38a724dc2b01967573df9ff62296e1bf8ba21a21fd3e0444994",
+    "size_in_bytes": 790528
+   },
+   {
+    "_path": "Library/symbols/citext.pdb",
+    "path_type": "hardlink",
+    "sha256": "768b6ca8a1f22b2ec7b9b9b3e9901ff37a777d4d7708594951f5e667fed69e7e",
+    "sha256_in_prefix": "768b6ca8a1f22b2ec7b9b9b3e9901ff37a777d4d7708594951f5e667fed69e7e",
+    "size_in_bytes": 389120
+   },
+   {
+    "_path": "Library/symbols/clusterdb.pdb",
+    "path_type": "hardlink",
+    "sha256": "8b0315890b079b163b0fd3aab9a4316d809e107e8ee06ceec1a4e069960a6643",
+    "sha256_in_prefix": "8b0315890b079b163b0fd3aab9a4316d809e107e8ee06ceec1a4e069960a6643",
+    "size_in_bytes": 831488
+   },
+   {
+    "_path": "Library/symbols/createdb.pdb",
+    "path_type": "hardlink",
+    "sha256": "87f7fc6a1248bf2b5a1b1d1a780a85c14dd394ed04930303dc60e975aba2b38f",
+    "sha256_in_prefix": "87f7fc6a1248bf2b5a1b1d1a780a85c14dd394ed04930303dc60e975aba2b38f",
+    "size_in_bytes": 823296
+   },
+   {
+    "_path": "Library/symbols/createuser.pdb",
+    "path_type": "hardlink",
+    "sha256": "638747cffb735957c752ef9fe30e14218b065ec78e2c9bd7b5f2b19a3fd10a49",
+    "sha256_in_prefix": "638747cffb735957c752ef9fe30e14218b065ec78e2c9bd7b5f2b19a3fd10a49",
+    "size_in_bytes": 839680
+   },
+   {
+    "_path": "Library/symbols/cube.pdb",
+    "path_type": "hardlink",
+    "sha256": "408def6b90bd65196cd4cea0569497e281a5b7ac2b9bb0af0a590823dd6d7f2a",
+    "sha256_in_prefix": "408def6b90bd65196cd4cea0569497e281a5b7ac2b9bb0af0a590823dd6d7f2a",
+    "size_in_bytes": 528384
+   },
+   {
+    "_path": "Library/symbols/cyrillic_and_mic.pdb",
+    "path_type": "hardlink",
+    "sha256": "e29bad8c2ba821992a855bb67bf254b497eacbe7e39369621f37a4e3071e28e5",
+    "sha256_in_prefix": "e29bad8c2ba821992a855bb67bf254b497eacbe7e39369621f37a4e3071e28e5",
+    "size_in_bytes": 380928
+   },
+   {
+    "_path": "Library/symbols/dblink.pdb",
+    "path_type": "hardlink",
+    "sha256": "81e463a896dd8864bfd440746ab97702997422884428628ac4ce54faa7c2c3c9",
+    "sha256_in_prefix": "81e463a896dd8864bfd440746ab97702997422884428628ac4ce54faa7c2c3c9",
+    "size_in_bytes": 602112
+   },
+   {
+    "_path": "Library/symbols/dict_int.pdb",
+    "path_type": "hardlink",
+    "sha256": "cd874fb27cf3a5ff8d559af264a24d03db292e5b2a6aa202d67cbc38eb88b79b",
+    "sha256_in_prefix": "cd874fb27cf3a5ff8d559af264a24d03db292e5b2a6aa202d67cbc38eb88b79b",
+    "size_in_bytes": 421888
+   },
+   {
+    "_path": "Library/symbols/dict_snowball.pdb",
+    "path_type": "hardlink",
+    "sha256": "77f4d3abada74457485a1e7828d9f0208c82301baba3a80893b3e5ed8cb60979",
+    "sha256_in_prefix": "77f4d3abada74457485a1e7828d9f0208c82301baba3a80893b3e5ed8cb60979",
+    "size_in_bytes": 1331200
+   },
+   {
+    "_path": "Library/symbols/dict_xsyn.pdb",
+    "path_type": "hardlink",
+    "sha256": "88e9651a81c0ca3378837953af1d04c54cad9c124b7c2259fcd7c9ac0b019cdc",
+    "sha256_in_prefix": "88e9651a81c0ca3378837953af1d04c54cad9c124b7c2259fcd7c9ac0b019cdc",
+    "size_in_bytes": 421888
+   },
+   {
+    "_path": "Library/symbols/dropdb.pdb",
+    "path_type": "hardlink",
+    "sha256": "2c6b0e31f683c3dfc4af96b97576413c8a6bcb28220af2b42e8e224757bd0c19",
+    "sha256_in_prefix": "2c6b0e31f683c3dfc4af96b97576413c8a6bcb28220af2b42e8e224757bd0c19",
+    "size_in_bytes": 806912
+   },
+   {
+    "_path": "Library/symbols/dropuser.pdb",
+    "path_type": "hardlink",
+    "sha256": "f891d26d22c61ff7331609ff972113209a140c806caef86ab61333e36cc4db09",
+    "sha256_in_prefix": "f891d26d22c61ff7331609ff972113209a140c806caef86ab61333e36cc4db09",
+    "size_in_bytes": 806912
+   },
+   {
+    "_path": "Library/symbols/dummy_index_am.pdb",
+    "path_type": "hardlink",
+    "sha256": "f128e0d9cd7a83e41527a66c1e407b62e538acb2459649f5399d7cc4910cb2ef",
+    "sha256_in_prefix": "f128e0d9cd7a83e41527a66c1e407b62e538acb2459649f5399d7cc4910cb2ef",
+    "size_in_bytes": 454656
+   },
+   {
+    "_path": "Library/symbols/dummy_seclabel.pdb",
+    "path_type": "hardlink",
+    "sha256": "9ed30bd4e211834b0c2180d67baa01a988a40a316b2fff93903a5907821a9b74",
+    "sha256_in_prefix": "9ed30bd4e211834b0c2180d67baa01a988a40a316b2fff93903a5907821a9b74",
+    "size_in_bytes": 389120
+   },
+   {
+    "_path": "Library/symbols/earthdistance.pdb",
+    "path_type": "hardlink",
+    "sha256": "c49cc3af3caa2fd49d8ce445dd37aa2e4390fdde753d4b29432094a378a4c92a",
+    "sha256_in_prefix": "c49cc3af3caa2fd49d8ce445dd37aa2e4390fdde753d4b29432094a378a4c92a",
+    "size_in_bytes": 364544
+   },
+   {
+    "_path": "Library/symbols/ecpg.pdb",
+    "path_type": "hardlink",
+    "sha256": "ce0114e7d0e9858f725097779d8518bdbe0254a4c59118ece77a4630ea2fa972",
+    "sha256_in_prefix": "ce0114e7d0e9858f725097779d8518bdbe0254a4c59118ece77a4630ea2fa972",
+    "size_in_bytes": 1183744
+   },
+   {
+    "_path": "Library/symbols/euc2004_sjis2004.pdb",
+    "path_type": "hardlink",
+    "sha256": "3ec493c8b6c7863233b444f00a76d0abf452aaeec8f65b8ea68ac0a31be5398d",
+    "sha256_in_prefix": "3ec493c8b6c7863233b444f00a76d0abf452aaeec8f65b8ea68ac0a31be5398d",
+    "size_in_bytes": 364544
+   },
+   {
+    "_path": "Library/symbols/euc_cn_and_mic.pdb",
+    "path_type": "hardlink",
+    "sha256": "211d1e50c29f5f7a7733f5c6f5b25638f2be06b4f29a5da2050623959722f0f4",
+    "sha256_in_prefix": "211d1e50c29f5f7a7733f5c6f5b25638f2be06b4f29a5da2050623959722f0f4",
+    "size_in_bytes": 364544
+   },
+   {
+    "_path": "Library/symbols/euc_jp_and_sjis.pdb",
+    "path_type": "hardlink",
+    "sha256": "250f31a5637cfe3b41bfae0bca91509852fc8a30c7c9eba696ae52611bd42457",
+    "sha256_in_prefix": "250f31a5637cfe3b41bfae0bca91509852fc8a30c7c9eba696ae52611bd42457",
+    "size_in_bytes": 372736
+   },
+   {
+    "_path": "Library/symbols/euc_kr_and_mic.pdb",
+    "path_type": "hardlink",
+    "sha256": "64ecc8c15c7e43c7cfd72490b98e89c3bc47e1eba9cc3171fe7627b227475878",
+    "sha256_in_prefix": "64ecc8c15c7e43c7cfd72490b98e89c3bc47e1eba9cc3171fe7627b227475878",
+    "size_in_bytes": 364544
+   },
+   {
+    "_path": "Library/symbols/euc_tw_and_big5.pdb",
+    "path_type": "hardlink",
+    "sha256": "342d270e00855606052fa397c76719712762a4aae1f44c7f77b1774165803d45",
+    "sha256_in_prefix": "342d270e00855606052fa397c76719712762a4aae1f44c7f77b1774165803d45",
+    "size_in_bytes": 380928
+   },
+   {
+    "_path": "Library/symbols/file_fdw.pdb",
+    "path_type": "hardlink",
+    "sha256": "bcb436f50f6632f9818371c138cff3881e20a5e3575bb2d946d36056ef7705c9",
+    "sha256_in_prefix": "bcb436f50f6632f9818371c138cff3881e20a5e3575bb2d946d36056ef7705c9",
+    "size_in_bytes": 536576
+   },
+   {
+    "_path": "Library/symbols/fuzzystrmatch.pdb",
+    "path_type": "hardlink",
+    "sha256": "8658725ec2f2063dadad4f4c71328c801a008ced8b9857843ec853fe93b2761e",
+    "sha256_in_prefix": "8658725ec2f2063dadad4f4c71328c801a008ced8b9857843ec853fe93b2761e",
+    "size_in_bytes": 471040
+   },
+   {
+    "_path": "Library/symbols/hstore.pdb",
+    "path_type": "hardlink",
+    "sha256": "87c4de795bb0b5680ac34ddc044c9bc3dea0e6972c76833481ae632d916d269a",
+    "sha256_in_prefix": "87c4de795bb0b5680ac34ddc044c9bc3dea0e6972c76833481ae632d916d269a",
+    "size_in_bytes": 602112
+   },
+   {
+    "_path": "Library/symbols/initdb.pdb",
+    "path_type": "hardlink",
+    "sha256": "ce0d7ba1dc5cb63b233faf4554ab3ff85aa19a422e5569ad802a0f684f11cf4b",
+    "sha256_in_prefix": "ce0d7ba1dc5cb63b233faf4554ab3ff85aa19a422e5569ad802a0f684f11cf4b",
+    "size_in_bytes": 1142784
+   },
+   {
+    "_path": "Library/symbols/insert_username.pdb",
+    "path_type": "hardlink",
+    "sha256": "055e63bd579fd728f0162b610b5d0bfe7d87d933bca620d6630ba1bc52a57081",
+    "sha256_in_prefix": "055e63bd579fd728f0162b610b5d0bfe7d87d933bca620d6630ba1bc52a57081",
+    "size_in_bytes": 405504
+   },
+   {
+    "_path": "Library/symbols/isn.pdb",
+    "path_type": "hardlink",
+    "sha256": "557e6ef5cd664537d01e7315039d71ed5193625902d0dde566a1c0551bd9840f",
+    "sha256_in_prefix": "557e6ef5cd664537d01e7315039d71ed5193625902d0dde566a1c0551bd9840f",
+    "size_in_bytes": 602112
+   },
+   {
+    "_path": "Library/symbols/isolationtester.pdb",
+    "path_type": "hardlink",
+    "sha256": "d82a276da0ba77ebca244fc618641c911e653d760147b8bad983c2317729a71e",
+    "sha256_in_prefix": "d82a276da0ba77ebca244fc618641c911e653d760147b8bad983c2317729a71e",
+    "size_in_bytes": 684032
+   },
+   {
+    "_path": "Library/symbols/latin2_and_win1250.pdb",
+    "path_type": "hardlink",
+    "sha256": "d6de2eb6ef6315500aa3176b2e97a4bf01fad0c42c47c48a6e8d44fde02f1cb7",
+    "sha256_in_prefix": "d6de2eb6ef6315500aa3176b2e97a4bf01fad0c42c47c48a6e8d44fde02f1cb7",
+    "size_in_bytes": 372736
+   },
+   {
+    "_path": "Library/symbols/latin_and_mic.pdb",
+    "path_type": "hardlink",
+    "sha256": "e31f923e66e4e7b9931d78dd2149f8cf3e58679616e25f29804c0cf515507240",
+    "sha256_in_prefix": "e31f923e66e4e7b9931d78dd2149f8cf3e58679616e25f29804c0cf515507240",
+    "size_in_bytes": 364544
+   },
+   {
+    "_path": "Library/symbols/libecpg.pdb",
+    "path_type": "hardlink",
+    "sha256": "dc38e71ba0668ed5f79453102af8fe96188bd0389b4f43e477dc75e26953287d",
+    "sha256_in_prefix": "dc38e71ba0668ed5f79453102af8fe96188bd0389b4f43e477dc75e26953287d",
+    "size_in_bytes": 782336
+   },
+   {
+    "_path": "Library/symbols/libecpg_compat.pdb",
+    "path_type": "hardlink",
+    "sha256": "22502d72b95447512fd17f3efa8ec0958c5ba18a9f941ace92262355c4974deb",
+    "sha256_in_prefix": "22502d72b95447512fd17f3efa8ec0958c5ba18a9f941ace92262355c4974deb",
+    "size_in_bytes": 536576
+   },
+   {
+    "_path": "Library/symbols/libpgtypes.pdb",
+    "path_type": "hardlink",
+    "sha256": "e94e8e58bf165d07c304ae489c76cee5f382d97a13c15e639c54b7e030aeef7e",
+    "sha256_in_prefix": "e94e8e58bf165d07c304ae489c76cee5f382d97a13c15e639c54b7e030aeef7e",
+    "size_in_bytes": 643072
+   },
+   {
+    "_path": "Library/symbols/libpq.pdb",
+    "path_type": "hardlink",
+    "sha256": "49dfb3e4e48e95ebf06cfc71eda11e2db8c588c1887fa0b8263b73774d04a6f2",
+    "sha256_in_prefix": "49dfb3e4e48e95ebf06cfc71eda11e2db8c588c1887fa0b8263b73774d04a6f2",
+    "size_in_bytes": 1503232
+   },
+   {
+    "_path": "Library/symbols/libpqwalreceiver.pdb",
+    "path_type": "hardlink",
+    "sha256": "a25963e855f93945404263d69cc3dcecd84fe75bdaba7bdff6c8bbbb1cab56e8",
+    "sha256_in_prefix": "a25963e855f93945404263d69cc3dcecd84fe75bdaba7bdff6c8bbbb1cab56e8",
+    "size_in_bytes": 536576
+   },
+   {
+    "_path": "Library/symbols/lo.pdb",
+    "path_type": "hardlink",
+    "sha256": "de81f835f490c392e9083e58193e0585f59a7f68866ff5d972087c02d7c69d0e",
+    "sha256_in_prefix": "de81f835f490c392e9083e58193e0585f59a7f68866ff5d972087c02d7c69d0e",
+    "size_in_bytes": 413696
+   },
+   {
+    "_path": "Library/symbols/ltree.pdb",
+    "path_type": "hardlink",
+    "sha256": "5ca5e8512ad7fcfdc454b1c7485c69e6165c0ee72468e43a23d1c76e128e6c26",
+    "sha256_in_prefix": "5ca5e8512ad7fcfdc454b1c7485c69e6165c0ee72468e43a23d1c76e128e6c26",
+    "size_in_bytes": 626688
+   },
+   {
+    "_path": "Library/symbols/moddatetime.pdb",
+    "path_type": "hardlink",
+    "sha256": "da2669921b7a6187282892c82775b6c9676460c0d4b7610ff962321cfb1d058e",
+    "sha256_in_prefix": "da2669921b7a6187282892c82775b6c9676460c0d4b7610ff962321cfb1d058e",
+    "size_in_bytes": 413696
+   },
+   {
+    "_path": "Library/symbols/oid2name.pdb",
+    "path_type": "hardlink",
+    "sha256": "ab061efd29b42aa3b0f7734747c0e1ba3b7962c00e1aa2f1a67948cd5e692cd3",
+    "sha256_in_prefix": "ab061efd29b42aa3b0f7734747c0e1ba3b7962c00e1aa2f1a67948cd5e692cd3",
+    "size_in_bytes": 700416
+   },
+   {
+    "_path": "Library/symbols/pageinspect.pdb",
+    "path_type": "hardlink",
+    "sha256": "560f6008cde444510787c2a35cc380be4cee92f8ea5606df30ea508709d1d205",
+    "sha256_in_prefix": "560f6008cde444510787c2a35cc380be4cee92f8ea5606df30ea508709d1d205",
+    "size_in_bytes": 593920
+   },
+   {
+    "_path": "Library/symbols/passwordcheck.pdb",
+    "path_type": "hardlink",
+    "sha256": "e8230ca8f442e65356ba577152ffdf3e782cc8c7022694e986384a03c16cd474",
+    "sha256_in_prefix": "e8230ca8f442e65356ba577152ffdf3e782cc8c7022694e986384a03c16cd474",
+    "size_in_bytes": 380928
+   },
+   {
+    "_path": "Library/symbols/pg_archivecleanup.pdb",
+    "path_type": "hardlink",
+    "sha256": "4c973d51b8ba90e24e4619345e5976646d7e977837d37487ffb671381f774b9b",
+    "sha256_in_prefix": "4c973d51b8ba90e24e4619345e5976646d7e977837d37487ffb671381f774b9b",
+    "size_in_bytes": 724992
+   },
+   {
+    "_path": "Library/symbols/pg_basebackup.pdb",
+    "path_type": "hardlink",
+    "sha256": "91016035c9ea6654b70c66fc11e3ddd86fafabcc28383cebe24870fad00fec11",
+    "sha256_in_prefix": "91016035c9ea6654b70c66fc11e3ddd86fafabcc28383cebe24870fad00fec11",
+    "size_in_bytes": 1060864
+   },
+   {
+    "_path": "Library/symbols/pg_buffercache.pdb",
+    "path_type": "hardlink",
+    "sha256": "492f13d1433406c86b4e61f0a05fb3f3fe09c0f88fb25227aa2737b388beb855",
+    "sha256_in_prefix": "492f13d1433406c86b4e61f0a05fb3f3fe09c0f88fb25227aa2737b388beb855",
+    "size_in_bytes": 446464
+   },
+   {
+    "_path": "Library/symbols/pg_checksums.pdb",
+    "path_type": "hardlink",
+    "sha256": "6997cf1a3a55ea51d38dedb755a00044615ece4b547fe60fbbb74e6dee79d31d",
+    "sha256_in_prefix": "6997cf1a3a55ea51d38dedb755a00044615ece4b547fe60fbbb74e6dee79d31d",
+    "size_in_bytes": 815104
+   },
+   {
+    "_path": "Library/symbols/pg_config.pdb",
+    "path_type": "hardlink",
+    "sha256": "01e5c1f134f7a6622359e4383665ae67b2f4360334cd400a7ac52e3bdac21a9d",
+    "sha256_in_prefix": "01e5c1f134f7a6622359e4383665ae67b2f4360334cd400a7ac52e3bdac21a9d",
+    "size_in_bytes": 700416
+   },
+   {
+    "_path": "Library/symbols/pg_controldata.pdb",
+    "path_type": "hardlink",
+    "sha256": "4663ad3fc5da9f4e79b6068d4122a83f4ab4e739d207e3566a6508ec17d345ca",
+    "sha256_in_prefix": "4663ad3fc5da9f4e79b6068d4122a83f4ab4e739d207e3566a6508ec17d345ca",
+    "size_in_bytes": 790528
+   },
+   {
+    "_path": "Library/symbols/pg_ctl.pdb",
+    "path_type": "hardlink",
+    "sha256": "c0702ef95d5f1a899cc5e4affa8651afa9515de92ac302ca3678a06d3ceeba2c",
+    "sha256_in_prefix": "c0702ef95d5f1a899cc5e4affa8651afa9515de92ac302ca3678a06d3ceeba2c",
+    "size_in_bytes": 897024
+   },
+   {
+    "_path": "Library/symbols/pg_dump.pdb",
+    "path_type": "hardlink",
+    "sha256": "2c9cfc36d45bd776f00ca91eaf1a80bf2ef9755d9b09e60b2a99d38c6f160ed4",
+    "sha256_in_prefix": "2c9cfc36d45bd776f00ca91eaf1a80bf2ef9755d9b09e60b2a99d38c6f160ed4",
+    "size_in_bytes": 1699840
+   },
+   {
+    "_path": "Library/symbols/pg_dumpall.pdb",
+    "path_type": "hardlink",
+    "sha256": "07b9c07242cd4c48f02301d3fa69a680f1d1fde9f0991ad6b0f759a6c78a45a8",
+    "sha256_in_prefix": "07b9c07242cd4c48f02301d3fa69a680f1d1fde9f0991ad6b0f759a6c78a45a8",
+    "size_in_bytes": 929792
+   },
+   {
+    "_path": "Library/symbols/pg_freespacemap.pdb",
+    "path_type": "hardlink",
+    "sha256": "d4051ee5035b54c382d8893eccb938a55a42d4ded016f1671a5fa9c3be774122",
+    "sha256_in_prefix": "d4051ee5035b54c382d8893eccb938a55a42d4ded016f1671a5fa9c3be774122",
+    "size_in_bytes": 413696
+   },
+   {
+    "_path": "Library/symbols/pg_isolation_regress.pdb",
+    "path_type": "hardlink",
+    "sha256": "ae42a7ac0cb590a0770a5f48fbaffd3c548e0cf9fe28e0c1a0c76c7c85facdab",
+    "sha256_in_prefix": "ae42a7ac0cb590a0770a5f48fbaffd3c548e0cf9fe28e0c1a0c76c7c85facdab",
+    "size_in_bytes": 888832
+   },
+   {
+    "_path": "Library/symbols/pg_isready.pdb",
+    "path_type": "hardlink",
+    "sha256": "f5423f0cee7800e5afcff6146af0ab8aa5e171083192a989222876e26f72650f",
+    "sha256_in_prefix": "f5423f0cee7800e5afcff6146af0ab8aa5e171083192a989222876e26f72650f",
+    "size_in_bytes": 806912
+   },
+   {
+    "_path": "Library/symbols/pg_prewarm.pdb",
+    "path_type": "hardlink",
+    "sha256": "e35fac73b6d693777cedced58407eab399d41f0dc2660653a0c49aaeb8d8dc43",
+    "sha256_in_prefix": "e35fac73b6d693777cedced58407eab399d41f0dc2660653a0c49aaeb8d8dc43",
+    "size_in_bytes": 520192
+   },
+   {
+    "_path": "Library/symbols/pg_receivewal.pdb",
+    "path_type": "hardlink",
+    "sha256": "de0d1f30016faece72652ffb1a81fbfb9f2d93a95a5ea40a3eb65ef4b3c737fc",
+    "sha256_in_prefix": "de0d1f30016faece72652ffb1a81fbfb9f2d93a95a5ea40a3eb65ef4b3c737fc",
+    "size_in_bytes": 929792
+   },
+   {
+    "_path": "Library/symbols/pg_recvlogical.pdb",
+    "path_type": "hardlink",
+    "sha256": "407d8e17f9c2d8162671619d803c58df021627f1a82937e769302e9fc5e531db",
+    "sha256_in_prefix": "407d8e17f9c2d8162671619d803c58df021627f1a82937e769302e9fc5e531db",
+    "size_in_bytes": 937984
+   },
+   {
+    "_path": "Library/symbols/pg_regress.pdb",
+    "path_type": "hardlink",
+    "sha256": "fe30b2fdf6934c7f187fd7d5167fa3d00f647e4dccb98b2890ab548d6ba67ef3",
+    "sha256_in_prefix": "fe30b2fdf6934c7f187fd7d5167fa3d00f647e4dccb98b2890ab548d6ba67ef3",
+    "size_in_bytes": 880640
+   },
+   {
+    "_path": "Library/symbols/pg_regress_ecpg.pdb",
+    "path_type": "hardlink",
+    "sha256": "05152a3f7527317feee618d5d073a5a715659da2bfc1e41b213d22b28a43fc20",
+    "sha256_in_prefix": "05152a3f7527317feee618d5d073a5a715659da2bfc1e41b213d22b28a43fc20",
+    "size_in_bytes": 888832
+   },
+   {
+    "_path": "Library/symbols/pg_resetwal.pdb",
+    "path_type": "hardlink",
+    "sha256": "f41651c54e49832135a910ed7ba248466c3f2fac0cde566f2d616be968e181d4",
+    "sha256_in_prefix": "f41651c54e49832135a910ed7ba248466c3f2fac0cde566f2d616be968e181d4",
+    "size_in_bytes": 847872
+   },
+   {
+    "_path": "Library/symbols/pg_restore.pdb",
+    "path_type": "hardlink",
+    "sha256": "7f08ce591a2ce2cbe96d0e4f9c6ac94324d18f6cd4b4e7c2ba1e6bd8d60564c8",
+    "sha256_in_prefix": "7f08ce591a2ce2cbe96d0e4f9c6ac94324d18f6cd4b4e7c2ba1e6bd8d60564c8",
+    "size_in_bytes": 1257472
+   },
+   {
+    "_path": "Library/symbols/pg_rewind.pdb",
+    "path_type": "hardlink",
+    "sha256": "487f01df25358a45f9a2c8d31b17ced126cb10349e375fd512885972dc33fa6e",
+    "sha256_in_prefix": "487f01df25358a45f9a2c8d31b17ced126cb10349e375fd512885972dc33fa6e",
+    "size_in_bytes": 1110016
+   },
+   {
+    "_path": "Library/symbols/pg_standby.pdb",
+    "path_type": "hardlink",
+    "sha256": "3458a6913978afaf674e5ff623c7bf73bd2244e963e75dacae6b8cc10926796f",
+    "sha256_in_prefix": "3458a6913978afaf674e5ff623c7bf73bd2244e963e75dacae6b8cc10926796f",
+    "size_in_bytes": 692224
+   },
+   {
+    "_path": "Library/symbols/pg_stat_statements.pdb",
+    "path_type": "hardlink",
+    "sha256": "aec453e76b3eff8117e70fc1885bd735b4f1d65587417e2ec63c6b3faa802e73",
+    "sha256_in_prefix": "aec453e76b3eff8117e70fc1885bd735b4f1d65587417e2ec63c6b3faa802e73",
+    "size_in_bytes": 593920
+   },
+   {
+    "_path": "Library/symbols/pg_test_fsync.pdb",
+    "path_type": "hardlink",
+    "sha256": "28f39ec65d062f51eb9029f7ea1fee62fa715faf9d3886e6244bad22847ccdc6",
+    "sha256_in_prefix": "28f39ec65d062f51eb9029f7ea1fee62fa715faf9d3886e6244bad22847ccdc6",
+    "size_in_bytes": 765952
+   },
+   {
+    "_path": "Library/symbols/pg_test_timing.pdb",
+    "path_type": "hardlink",
+    "sha256": "85e2f5cc1ab8938a0d5b527d8b44ebafe360f6d00175ebafccb3d7207857ae8c",
+    "sha256_in_prefix": "85e2f5cc1ab8938a0d5b527d8b44ebafe360f6d00175ebafccb3d7207857ae8c",
+    "size_in_bytes": 708608
+   },
+   {
+    "_path": "Library/symbols/pg_trgm.pdb",
+    "path_type": "hardlink",
+    "sha256": "0fa85c6e0a4244d95289788e5985a4b75b51f100921ae38b7c6d5973a4f5fea1",
+    "sha256_in_prefix": "0fa85c6e0a4244d95289788e5985a4b75b51f100921ae38b7c6d5973a4f5fea1",
+    "size_in_bytes": 561152
+   },
+   {
+    "_path": "Library/symbols/pg_upgrade.pdb",
+    "path_type": "hardlink",
+    "sha256": "50a4cac0baf4269359613ff3e1d2ff26c8cb812360e46b4696053554fa0ad598",
+    "sha256_in_prefix": "50a4cac0baf4269359613ff3e1d2ff26c8cb812360e46b4696053554fa0ad598",
+    "size_in_bytes": 1118208
+   },
+   {
+    "_path": "Library/symbols/pg_verifybackup.pdb",
+    "path_type": "hardlink",
+    "sha256": "fef05ee18f9c664bdf7ac10f4d4b72c44cbd04496c2a6dee6464d6d8ce06dec9",
+    "sha256_in_prefix": "fef05ee18f9c664bdf7ac10f4d4b72c44cbd04496c2a6dee6464d6d8ce06dec9",
+    "size_in_bytes": 954368
+   },
+   {
+    "_path": "Library/symbols/pg_visibility.pdb",
+    "path_type": "hardlink",
+    "sha256": "cb0fb6e39ba50a7c9e7eecc278b8d45a9d2126e1af941fcf97d31883d9d7f19f",
+    "sha256_in_prefix": "cb0fb6e39ba50a7c9e7eecc278b8d45a9d2126e1af941fcf97d31883d9d7f19f",
+    "size_in_bytes": 487424
+   },
+   {
+    "_path": "Library/symbols/pg_waldump.pdb",
+    "path_type": "hardlink",
+    "sha256": "e3597759a72917d1f15cec19974df86394550be85f6e12584369a45d49c3a159",
+    "sha256_in_prefix": "e3597759a72917d1f15cec19974df86394550be85f6e12584369a45d49c3a159",
+    "size_in_bytes": 1077248
+   },
+   {
+    "_path": "Library/symbols/pgbench.pdb",
+    "path_type": "hardlink",
+    "sha256": "4c2172ef0a3309f804caf19808269ee3213d55b292c9c02bc368b08818649be0",
+    "sha256_in_prefix": "4c2172ef0a3309f804caf19808269ee3213d55b292c9c02bc368b08818649be0",
+    "size_in_bytes": 1077248
+   },
+   {
+    "_path": "Library/symbols/pgcrypto.pdb",
+    "path_type": "hardlink",
+    "sha256": "06ef3cb1f284ddfa16d628d6cfd2d27c67fcf580111457a783f63fb9b46a3260",
+    "sha256_in_prefix": "06ef3cb1f284ddfa16d628d6cfd2d27c67fcf580111457a783f63fb9b46a3260",
+    "size_in_bytes": 921600
+   },
+   {
+    "_path": "Library/symbols/pgevent.pdb",
+    "path_type": "hardlink",
+    "sha256": "f88a2a24014fbce186732f2173087ef778b785c68195f46ae36717e2e4278033",
+    "sha256_in_prefix": "f88a2a24014fbce186732f2173087ef778b785c68195f46ae36717e2e4278033",
+    "size_in_bytes": 413696
+   },
+   {
+    "_path": "Library/symbols/pgoutput.pdb",
+    "path_type": "hardlink",
+    "sha256": "acfd20a15c719b262088022160bea9c55a5d35f67d45350f7df1456bd2b934cc",
+    "sha256_in_prefix": "acfd20a15c719b262088022160bea9c55a5d35f67d45350f7df1456bd2b934cc",
+    "size_in_bytes": 462848
+   },
+   {
+    "_path": "Library/symbols/pgrowlocks.pdb",
+    "path_type": "hardlink",
+    "sha256": "4a7251da1069ae4c7b58f0b3de604061e21ebc9dc4c85747c561ff39b030e414",
+    "sha256_in_prefix": "4a7251da1069ae4c7b58f0b3de604061e21ebc9dc4c85747c561ff39b030e414",
+    "size_in_bytes": 479232
+   },
+   {
+    "_path": "Library/symbols/pgstattuple.pdb",
+    "path_type": "hardlink",
+    "sha256": "9b548d2a369a42df20ad60dbf1ca1e42146bd3c3fdcb381fcfbdc6319f511847",
+    "sha256_in_prefix": "9b548d2a369a42df20ad60dbf1ca1e42146bd3c3fdcb381fcfbdc6319f511847",
+    "size_in_bytes": 536576
+   },
+   {
+    "_path": "Library/symbols/pgxml.pdb",
+    "path_type": "hardlink",
+    "sha256": "9c1c02f77eeb95b6491afcbb520832b42e3d8c4997877450c54b1bef1f89fe9c",
+    "sha256_in_prefix": "9c1c02f77eeb95b6491afcbb520832b42e3d8c4997877450c54b1bef1f89fe9c",
+    "size_in_bytes": 528384
+   },
+   {
+    "_path": "Library/symbols/plpgsql.pdb",
+    "path_type": "hardlink",
+    "sha256": "450309d8fef8e8136874cd5ee55e1e3a06a571befd1200547e7b76034c27b48b",
+    "sha256_in_prefix": "450309d8fef8e8136874cd5ee55e1e3a06a571befd1200547e7b76034c27b48b",
+    "size_in_bytes": 1044480
+   },
+   {
+    "_path": "Library/symbols/postgres.pdb",
+    "path_type": "hardlink",
+    "sha256": "cdacb35db6082de61573b105f5f542fc094f8106434250498d92ad931a2ad3fc",
+    "sha256_in_prefix": "cdacb35db6082de61573b105f5f542fc094f8106434250498d92ad931a2ad3fc",
+    "size_in_bytes": 21245952
+   },
+   {
+    "_path": "Library/symbols/postgres_fdw.pdb",
+    "path_type": "hardlink",
+    "sha256": "2a46c8e4ede58ce84eab33471e4a9e54a6b32b0267ac0d58f37122473f82d38a",
+    "sha256_in_prefix": "2a46c8e4ede58ce84eab33471e4a9e54a6b32b0267ac0d58f37122473f82d38a",
+    "size_in_bytes": 839680
+   },
+   {
+    "_path": "Library/symbols/psql.pdb",
+    "path_type": "hardlink",
+    "sha256": "2de0940a51dae04bd43782e2e17ce5a9926e3d4f7f07609f2d5045506a8d8fcf",
+    "sha256_in_prefix": "2de0940a51dae04bd43782e2e17ce5a9926e3d4f7f07609f2d5045506a8d8fcf",
+    "size_in_bytes": 1740800
+   },
+   {
+    "_path": "Library/symbols/refint.pdb",
+    "path_type": "hardlink",
+    "sha256": "20d7eda0629c5cccf0faac379b1aadd2148955bdb70971fd36490e85be94aed4",
+    "sha256_in_prefix": "20d7eda0629c5cccf0faac379b1aadd2148955bdb70971fd36490e85be94aed4",
+    "size_in_bytes": 462848
+   },
+   {
+    "_path": "Library/symbols/regress.pdb",
+    "path_type": "hardlink",
+    "sha256": "28d45849bfa43a55e39b537ddc166341fcd702e5a522fd7086ad97d0d4a679d9",
+    "sha256_in_prefix": "28d45849bfa43a55e39b537ddc166341fcd702e5a522fd7086ad97d0d4a679d9",
+    "size_in_bytes": 544768
+   },
+   {
+    "_path": "Library/symbols/reindexdb.pdb",
+    "path_type": "hardlink",
+    "sha256": "e27ff6ec60b846ef99de3ff2f9c242f76ecd2a7c5b3ae1fd31162acdc71d18c3",
+    "sha256_in_prefix": "e27ff6ec60b846ef99de3ff2f9c242f76ecd2a7c5b3ae1fd31162acdc71d18c3",
+    "size_in_bytes": 880640
+   },
+   {
+    "_path": "Library/symbols/seg.pdb",
+    "path_type": "hardlink",
+    "sha256": "0d21ab54d841faaa5522d5d182af5b1a7c1a1700562b52a60e0627d980ac4c3f",
+    "sha256_in_prefix": "0d21ab54d841faaa5522d5d182af5b1a7c1a1700562b52a60e0627d980ac4c3f",
+    "size_in_bytes": 495616
+   },
+   {
+    "_path": "Library/symbols/ssl_passphrase_func.pdb",
+    "path_type": "hardlink",
+    "sha256": "92bc150173f8a86561e8c5561fedc1793addf7432c8767cb2e7473506d3eaacf",
+    "sha256_in_prefix": "92bc150173f8a86561e8c5561fedc1793addf7432c8767cb2e7473506d3eaacf",
+    "size_in_bytes": 438272
+   },
+   {
+    "_path": "Library/symbols/sslinfo.pdb",
+    "path_type": "hardlink",
+    "sha256": "f8eaea1690db3e7d2aa7ec370f74b78be4d29130fbf3492b7b847a3c1d914955",
+    "sha256_in_prefix": "f8eaea1690db3e7d2aa7ec370f74b78be4d29130fbf3492b7b847a3c1d914955",
+    "size_in_bytes": 536576
+   },
+   {
+    "_path": "Library/symbols/tablefunc.pdb",
+    "path_type": "hardlink",
+    "sha256": "14c6004dd577eda60ca67a54d7572461379ef5bf4756c2177bb79c6c3ec81d77",
+    "sha256_in_prefix": "14c6004dd577eda60ca67a54d7572461379ef5bf4756c2177bb79c6c3ec81d77",
+    "size_in_bytes": 503808
+   },
+   {
+    "_path": "Library/symbols/tcn.pdb",
+    "path_type": "hardlink",
+    "sha256": "bed35c7a1ae7af514cd6c63493e5b3ac4950a9767446e5d303a0d4bbda5273d8",
+    "sha256_in_prefix": "bed35c7a1ae7af514cd6c63493e5b3ac4950a9767446e5d303a0d4bbda5273d8",
+    "size_in_bytes": 413696
+   },
+   {
+    "_path": "Library/symbols/test_bloomfilter.pdb",
+    "path_type": "hardlink",
+    "sha256": "4007471139985f0793a8315f00e35ee3b2859e4e9273970b97a0bf2a5ab8abbd",
+    "sha256_in_prefix": "4007471139985f0793a8315f00e35ee3b2859e4e9273970b97a0bf2a5ab8abbd",
+    "size_in_bytes": 389120
+   },
+   {
+    "_path": "Library/symbols/test_ddl_deparse.pdb",
+    "path_type": "hardlink",
+    "sha256": "63ff4ff29a6cd9ce6236d0ed56a518d97f0fd9603e1cd251e28732af3bc896e9",
+    "sha256_in_prefix": "63ff4ff29a6cd9ce6236d0ed56a518d97f0fd9603e1cd251e28732af3bc896e9",
+    "size_in_bytes": 421888
+   },
+   {
+    "_path": "Library/symbols/test_decoding.pdb",
+    "path_type": "hardlink",
+    "sha256": "29f31d10bb39585b49b24c80ff07b33e7c769dc712b9334ca34bc94d6e0e9c19",
+    "sha256_in_prefix": "29f31d10bb39585b49b24c80ff07b33e7c769dc712b9334ca34bc94d6e0e9c19",
+    "size_in_bytes": 438272
+   },
+   {
+    "_path": "Library/symbols/test_ginpostinglist.pdb",
+    "path_type": "hardlink",
+    "sha256": "0ae9d08ec1d21489975bfaede6351e183e764924cb5c3cdd3f7f573e00c502f4",
+    "sha256_in_prefix": "0ae9d08ec1d21489975bfaede6351e183e764924cb5c3cdd3f7f573e00c502f4",
+    "size_in_bytes": 380928
+   },
+   {
+    "_path": "Library/symbols/test_integerset.pdb",
+    "path_type": "hardlink",
+    "sha256": "09b471a765a2af42cee812805d169acdc3b9071f4f2c17434742cfe0125b41f8",
+    "sha256_in_prefix": "09b471a765a2af42cee812805d169acdc3b9071f4f2c17434742cfe0125b41f8",
+    "size_in_bytes": 430080
+   },
+   {
+    "_path": "Library/symbols/test_parser.pdb",
+    "path_type": "hardlink",
+    "sha256": "423ce30e198448c93f40929c3be63086e7a2913cf42f4a546e7c28398a0dded2",
+    "sha256_in_prefix": "423ce30e198448c93f40929c3be63086e7a2913cf42f4a546e7c28398a0dded2",
+    "size_in_bytes": 364544
+   },
+   {
+    "_path": "Library/symbols/test_predtest.pdb",
+    "path_type": "hardlink",
+    "sha256": "299ff1c1e05d7115f71fd8ea3203c0208293d3c451934d7c6d2277d96b66328d",
+    "sha256_in_prefix": "299ff1c1e05d7115f71fd8ea3203c0208293d3c451934d7c6d2277d96b66328d",
+    "size_in_bytes": 446464
+   },
+   {
+    "_path": "Library/symbols/test_rbtree.pdb",
+    "path_type": "hardlink",
+    "sha256": "6f6fd3e97667594ed97480bbf5fa52894d20b1c49ddbf10d833421dffca584a6",
+    "sha256_in_prefix": "6f6fd3e97667594ed97480bbf5fa52894d20b1c49ddbf10d833421dffca584a6",
+    "size_in_bytes": 389120
+   },
+   {
+    "_path": "Library/symbols/test_rls_hooks.pdb",
+    "path_type": "hardlink",
+    "sha256": "fb76e0b59fd530366bcd3a74d642a86882d68ae7cc9df9bf1d9907936192e8f0",
+    "sha256_in_prefix": "fb76e0b59fd530366bcd3a74d642a86882d68ae7cc9df9bf1d9907936192e8f0",
+    "size_in_bytes": 421888
+   },
+   {
+    "_path": "Library/symbols/test_shm_mq.pdb",
+    "path_type": "hardlink",
+    "sha256": "4730ce6927e16e31c95b08c669e73fffd205c75df4da8830c7f8ba8005f24cfa",
+    "sha256_in_prefix": "4730ce6927e16e31c95b08c669e73fffd205c75df4da8830c7f8ba8005f24cfa",
+    "size_in_bytes": 454656
+   },
+   {
+    "_path": "Library/symbols/tsm_system_rows.pdb",
+    "path_type": "hardlink",
+    "sha256": "9b7e609cb89bd26132e8287b0120175aa00fe912bcadaddd6597ddfb35a9ff8e",
+    "sha256_in_prefix": "9b7e609cb89bd26132e8287b0120175aa00fe912bcadaddd6597ddfb35a9ff8e",
+    "size_in_bytes": 454656
+   },
+   {
+    "_path": "Library/symbols/tsm_system_time.pdb",
+    "path_type": "hardlink",
+    "sha256": "6770ed8a9f155f03ffeda93e74585203756c8b1218a1bbb3ec227252f6644964",
+    "sha256_in_prefix": "6770ed8a9f155f03ffeda93e74585203756c8b1218a1bbb3ec227252f6644964",
+    "size_in_bytes": 454656
+   },
+   {
+    "_path": "Library/symbols/unaccent.pdb",
+    "path_type": "hardlink",
+    "sha256": "aa07ba8e99d9555befd5b8ccd4f84b436c9fd7ec1d35b310e7e80cb8b0d6b58e",
+    "sha256_in_prefix": "aa07ba8e99d9555befd5b8ccd4f84b436c9fd7ec1d35b310e7e80cb8b0d6b58e",
+    "size_in_bytes": 446464
+   },
+   {
+    "_path": "Library/symbols/utf8_and_big5.pdb",
+    "path_type": "hardlink",
+    "sha256": "f956bcaffd2a9be9863e476631ae40a202bdcc5bb5c14d0afb2d9a946fa7e6fb",
+    "sha256_in_prefix": "f956bcaffd2a9be9863e476631ae40a202bdcc5bb5c14d0afb2d9a946fa7e6fb",
+    "size_in_bytes": 356352
+   },
+   {
+    "_path": "Library/symbols/utf8_and_cyrillic.pdb",
+    "path_type": "hardlink",
+    "sha256": "1e698478d5211f7d33a09d82c760c31769be4f378e25ed2a404a2de3af1d658e",
+    "sha256_in_prefix": "1e698478d5211f7d33a09d82c760c31769be4f378e25ed2a404a2de3af1d658e",
+    "size_in_bytes": 364544
+   },
+   {
+    "_path": "Library/symbols/utf8_and_euc2004.pdb",
+    "path_type": "hardlink",
+    "sha256": "688c86e195dee9f51b1cdb6156e207177ed66d7bd2e42840e0241cfee8d582ba",
+    "sha256_in_prefix": "688c86e195dee9f51b1cdb6156e207177ed66d7bd2e42840e0241cfee8d582ba",
+    "size_in_bytes": 356352
+   },
+   {
+    "_path": "Library/symbols/utf8_and_euc_cn.pdb",
+    "path_type": "hardlink",
+    "sha256": "098033ac0802002c0b47cbee12736dbb905560dbfb0e54fae6a7e444ef409ff3",
+    "sha256_in_prefix": "098033ac0802002c0b47cbee12736dbb905560dbfb0e54fae6a7e444ef409ff3",
+    "size_in_bytes": 356352
+   },
+   {
+    "_path": "Library/symbols/utf8_and_euc_jp.pdb",
+    "path_type": "hardlink",
+    "sha256": "13b70149c209b04e6dc70b9f9cd0dc4ed6ca659408c0e236c6eb4927f832a3f1",
+    "sha256_in_prefix": "13b70149c209b04e6dc70b9f9cd0dc4ed6ca659408c0e236c6eb4927f832a3f1",
+    "size_in_bytes": 356352
+   },
+   {
+    "_path": "Library/symbols/utf8_and_euc_kr.pdb",
+    "path_type": "hardlink",
+    "sha256": "7f0c19155f3cbbb31c78c4fe70239eaac58190cd2a19339ea3b5e74ee8e638de",
+    "sha256_in_prefix": "7f0c19155f3cbbb31c78c4fe70239eaac58190cd2a19339ea3b5e74ee8e638de",
+    "size_in_bytes": 356352
+   },
+   {
+    "_path": "Library/symbols/utf8_and_euc_tw.pdb",
+    "path_type": "hardlink",
+    "sha256": "6bad6cf662ab62b3e52297e4d3e433dcf2d7ecf0fe61f7661561bb767af26cd0",
+    "sha256_in_prefix": "6bad6cf662ab62b3e52297e4d3e433dcf2d7ecf0fe61f7661561bb767af26cd0",
+    "size_in_bytes": 356352
+   },
+   {
+    "_path": "Library/symbols/utf8_and_gb18030.pdb",
+    "path_type": "hardlink",
+    "sha256": "3dea33d1083698c95f50430429181a7384e2187e8bb52f00c9fb102d59e30e72",
+    "sha256_in_prefix": "3dea33d1083698c95f50430429181a7384e2187e8bb52f00c9fb102d59e30e72",
+    "size_in_bytes": 364544
+   },
+   {
+    "_path": "Library/symbols/utf8_and_gbk.pdb",
+    "path_type": "hardlink",
+    "sha256": "17d55b8e46b54a1806e5492322db95f2333719b115827c94f35e9b329f837ab9",
+    "sha256_in_prefix": "17d55b8e46b54a1806e5492322db95f2333719b115827c94f35e9b329f837ab9",
+    "size_in_bytes": 356352
+   },
+   {
+    "_path": "Library/symbols/utf8_and_iso8859.pdb",
+    "path_type": "hardlink",
+    "sha256": "0c54a709b578f6450541a1d7c80f2ba35c3760f500533ed6e8d43bdae0d5f5a6",
+    "sha256_in_prefix": "0c54a709b578f6450541a1d7c80f2ba35c3760f500533ed6e8d43bdae0d5f5a6",
+    "size_in_bytes": 372736
+   },
+   {
+    "_path": "Library/symbols/utf8_and_iso8859_1.pdb",
+    "path_type": "hardlink",
+    "sha256": "d8e42d95ea623ee3d5156f5206dd30d2d8384c72e4b641e643ee6ab1d357abb0",
+    "sha256_in_prefix": "d8e42d95ea623ee3d5156f5206dd30d2d8384c72e4b641e643ee6ab1d357abb0",
+    "size_in_bytes": 356352
+   },
+   {
+    "_path": "Library/symbols/utf8_and_johab.pdb",
+    "path_type": "hardlink",
+    "sha256": "33f287234f320a705acd117e6a96a72367da2836608a33f43f7ded0de89441ea",
+    "sha256_in_prefix": "33f287234f320a705acd117e6a96a72367da2836608a33f43f7ded0de89441ea",
+    "size_in_bytes": 356352
+   },
+   {
+    "_path": "Library/symbols/utf8_and_sjis.pdb",
+    "path_type": "hardlink",
+    "sha256": "1e57a4916f5ae2768c2ac84aad7db82395a702199ab23442892ac16e44afd569",
+    "sha256_in_prefix": "1e57a4916f5ae2768c2ac84aad7db82395a702199ab23442892ac16e44afd569",
+    "size_in_bytes": 356352
+   },
+   {
+    "_path": "Library/symbols/utf8_and_sjis2004.pdb",
+    "path_type": "hardlink",
+    "sha256": "0e921b6b04d202f6c6e4af497d223477679b9c08b2f1b199d6b75d582f0a30c8",
+    "sha256_in_prefix": "0e921b6b04d202f6c6e4af497d223477679b9c08b2f1b199d6b75d582f0a30c8",
+    "size_in_bytes": 356352
+   },
+   {
+    "_path": "Library/symbols/utf8_and_uhc.pdb",
+    "path_type": "hardlink",
+    "sha256": "675c0bdff88ef3b2962949b52f6f95c4e512017402e7b45d957d41bbc8f996dd",
+    "sha256_in_prefix": "675c0bdff88ef3b2962949b52f6f95c4e512017402e7b45d957d41bbc8f996dd",
+    "size_in_bytes": 356352
+   },
+   {
+    "_path": "Library/symbols/utf8_and_win.pdb",
+    "path_type": "hardlink",
+    "sha256": "4541e8c3dd44b7bf3c4544215093ac9f9a899f4e802752b402e4abeb218dc647",
+    "sha256_in_prefix": "4541e8c3dd44b7bf3c4544215093ac9f9a899f4e802752b402e4abeb218dc647",
+    "size_in_bytes": 372736
+   },
+   {
+    "_path": "Library/symbols/vacuumdb.pdb",
+    "path_type": "hardlink",
+    "sha256": "c9081c95b7b819fc47763f3596b6874da6960ebe6f0077e066678ad0e4d3d57d",
+    "sha256_in_prefix": "c9081c95b7b819fc47763f3596b6874da6960ebe6f0077e066678ad0e4d3d57d",
+    "size_in_bytes": 880640
+   },
+   {
+    "_path": "Library/symbols/vacuumlo.pdb",
+    "path_type": "hardlink",
+    "sha256": "e6e191e0ecbd41a5e107440167abcb8dae2651db1ab42d784162b63d0ed05bbf",
+    "sha256_in_prefix": "e6e191e0ecbd41a5e107440167abcb8dae2651db1ab42d784162b63d0ed05bbf",
+    "size_in_bytes": 700416
+   },
+   {
+    "_path": "Library/symbols/worker_spi.pdb",
+    "path_type": "hardlink",
+    "sha256": "b15aad336f2e7c2fc55e962d56a82e3e818c718ed2a18337b261227d3c8059e6",
+    "sha256_in_prefix": "b15aad336f2e7c2fc55e962d56a82e3e818c718ed2a18337b261227d3c8059e6",
+    "size_in_bytes": 446464
+   },
+   {
+    "_path": "Library/symbols/zic.pdb",
+    "path_type": "hardlink",
+    "sha256": "9970f6a5d24b02f8445bef71ada7bbecac9c8c76ce0b70256958ae69f7353dee",
+    "sha256_in_prefix": "9970f6a5d24b02f8445bef71ada7bbecac9c8c76ce0b70256958ae69f7353dee",
+    "size_in_bytes": 700416
+   }
+  ],
+  "paths_version": 1
+ },
+ "requested_spec": "postgresql==13.8=h392df6f_0",
+ "sha256": "70a7d37e572007088b3f1e1b071d1c67001734b5a20c98a5eada1a736442eb83",
+ "size": 22947616,
+ "subdir": "win-64",
+ "timestamp": 1666789685000,
+ "track_features": "",
+ "url": "https://conda.anaconda.org/conda-forge/win-64/postgresql-13.8-h392df6f_0.tar.bz2",
+ "version": "13.8"
+}

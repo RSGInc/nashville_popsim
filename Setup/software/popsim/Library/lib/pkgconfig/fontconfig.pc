@@ -1,0 +1,16 @@
+prefix=D:/bld/fontconfig_1674828838192/_h_env/Library
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+sysconfdir=D:/bld/fontconfig_1674828838192/_h_env/Library/etc
+localstatedir=D:/bld/fontconfig_1674828838192/_h_env/Library/var
+confdir=D:/bld/fontconfig_1674828838192/_h_env/Library/etc/fonts
+cachedir=LOCAL_APPDATA_FONTCONFIG_CACHE
+
+Name: Fontconfig
+Description: Font configuration and customization library
+Version: 2.14.2
+Requires: freetype2 >=  21.0.15
+Libs: -L${libdir} -lfontconfig
+Libs.private: D:/bld/fontconfig_1674828838192/_h_env/Library/lib/expat.lib
+Cflags: -I${includedir}

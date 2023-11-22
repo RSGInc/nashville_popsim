@@ -1,0 +1,177 @@
+{
+ "build": "h844ee93_0",
+ "build_number": 0,
+ "channel": "https://conda.anaconda.org/conda-forge/win-64",
+ "constrains": [],
+ "depends": [
+  "vc >=14.2,<15",
+  "ucrt >=10.0.20348.0",
+  "vs2015_runtime >=14.29.30139",
+  "aws-c-common >=0.8.5,<0.8.6.0a0",
+  "aws-c-io >=0.13.11,<0.13.12.0a0",
+  "aws-c-compression >=0.2.16,<0.2.17.0a0"
+ ],
+ "extracted_package_dir": "",
+ "features": "",
+ "files": [
+  "Library/bin/aws-c-http.dll",
+  "Library/bin/elasticurl.exe",
+  "Library/include/aws/http/connection.h",
+  "Library/include/aws/http/connection_manager.h",
+  "Library/include/aws/http/exports.h",
+  "Library/include/aws/http/http.h",
+  "Library/include/aws/http/http2_stream_manager.h",
+  "Library/include/aws/http/proxy.h",
+  "Library/include/aws/http/request_response.h",
+  "Library/include/aws/http/server.h",
+  "Library/include/aws/http/statistics.h",
+  "Library/include/aws/http/status_code.h",
+  "Library/include/aws/http/websocket.h",
+  "Library/lib/aws-c-http.lib",
+  "Library/lib/aws-c-http/cmake/aws-c-http-config.cmake",
+  "Library/lib/aws-c-http/cmake/shared/aws-c-http-targets-release.cmake",
+  "Library/lib/aws-c-http/cmake/shared/aws-c-http-targets.cmake",
+  ".nonadmin"
+ ],
+ "fn": "aws-c-http-0.6.29-h844ee93_0.conda",
+ "license": "Apache-2.0",
+ "link": {
+  "source": "",
+  "type": 1
+ },
+ "md5": "e292adfe7d8eaf983d262b9a6346682f",
+ "name": "aws-c-http",
+ "package_tarball_full_path": "",
+ "paths_data": {
+  "paths": [
+   {
+    "_path": "Library/bin/aws-c-http.dll",
+    "path_type": "hardlink",
+    "sha256": "1ff47dfb3e94b83eaa91de6c0adf3fb2f5dbad5581d1c7f4d182e0c3e507a9e2",
+    "sha256_in_prefix": "1ff47dfb3e94b83eaa91de6c0adf3fb2f5dbad5581d1c7f4d182e0c3e507a9e2",
+    "size_in_bytes": 329216
+   },
+   {
+    "_path": "Library/bin/elasticurl.exe",
+    "path_type": "hardlink",
+    "sha256": "026fc037774fd38f477c2f9b3c95eb855cd12913cf62860419593af797a2462d",
+    "sha256_in_prefix": "026fc037774fd38f477c2f9b3c95eb855cd12913cf62860419593af797a2462d",
+    "size_in_bytes": 26112
+   },
+   {
+    "_path": "Library/include/aws/http/connection.h",
+    "path_type": "hardlink",
+    "sha256": "c7da62acbbd4f0365a2a942a0b71f309c928192d3daa28fb8b76b5c0aeccbde4",
+    "sha256_in_prefix": "c7da62acbbd4f0365a2a942a0b71f309c928192d3daa28fb8b76b5c0aeccbde4",
+    "size_in_bytes": 26037
+   },
+   {
+    "_path": "Library/include/aws/http/connection_manager.h",
+    "path_type": "hardlink",
+    "sha256": "f394cd92342807e60bc093ea61961b47958502d457014c03ddf3ecb8846a98fd",
+    "sha256_in_prefix": "f394cd92342807e60bc093ea61961b47958502d457014c03ddf3ecb8846a98fd",
+    "size_in_bytes": 6989
+   },
+   {
+    "_path": "Library/include/aws/http/exports.h",
+    "path_type": "hardlink",
+    "sha256": "47c986ab739eaed1cd298654befbf1135b2478a1fa0346a66bfb6c4bc3d3b925",
+    "sha256_in_prefix": "47c986ab739eaed1cd298654befbf1135b2478a1fa0346a66bfb6c4bc3d3b925",
+    "size_in_bytes": 920
+   },
+   {
+    "_path": "Library/include/aws/http/http.h",
+    "path_type": "hardlink",
+    "sha256": "c1c20ceaf047d9ef9e2b31d9ffa64bde948987cd1010f3d511aaad5514802772",
+    "sha256_in_prefix": "c1c20ceaf047d9ef9e2b31d9ffa64bde948987cd1010f3d511aaad5514802772",
+    "size_in_bytes": 5320
+   },
+   {
+    "_path": "Library/include/aws/http/http2_stream_manager.h",
+    "path_type": "hardlink",
+    "sha256": "523d8524a4fda6701d0626872897d665edff94e287cd6e8945f46412964c02c4",
+    "sha256_in_prefix": "523d8524a4fda6701d0626872897d665edff94e287cd6e8945f46412964c02c4",
+    "size_in_bytes": 8045
+   },
+   {
+    "_path": "Library/include/aws/http/proxy.h",
+    "path_type": "hardlink",
+    "sha256": "2d64ef073bf95981cfc348a62b1676a9b77aec5a3f8d56b2974b733241a97f35",
+    "sha256_in_prefix": "2d64ef073bf95981cfc348a62b1676a9b77aec5a3f8d56b2974b733241a97f35",
+    "size_in_bytes": 19391
+   },
+   {
+    "_path": "Library/include/aws/http/request_response.h",
+    "path_type": "hardlink",
+    "sha256": "6f7afdffbf6465e3a2bda6e38fd4f923d10b778ec8e084eb8cb494b852cf6efb",
+    "sha256_in_prefix": "6f7afdffbf6465e3a2bda6e38fd4f923d10b778ec8e084eb8cb494b852cf6efb",
+    "size_in_bytes": 39164
+   },
+   {
+    "_path": "Library/include/aws/http/server.h",
+    "path_type": "hardlink",
+    "sha256": "ca528840dd677f595aa40fdbed70a7aa55a63af0452e02568bd13349088182d0",
+    "sha256_in_prefix": "ca528840dd677f595aa40fdbed70a7aa55a63af0452e02568bd13349088182d0",
+    "size_in_bytes": 5786
+   },
+   {
+    "_path": "Library/include/aws/http/statistics.h",
+    "path_type": "hardlink",
+    "sha256": "e4f24a92eff8c40d644ff50563e31680c7b8c282550cf88725f033d21a68e315",
+    "sha256_in_prefix": "e4f24a92eff8c40d644ff50563e31680c7b8c282550cf88725f033d21a68e315",
+    "size_in_bytes": 2082
+   },
+   {
+    "_path": "Library/include/aws/http/status_code.h",
+    "path_type": "hardlink",
+    "sha256": "efb121a296d11372c850f61c6c21255d0bf54e525276faf96400caaa4f6bf518",
+    "sha256_in_prefix": "efb121a296d11372c850f61c6c21255d0bf54e525276faf96400caaa4f6bf518",
+    "size_in_bytes": 3869
+   },
+   {
+    "_path": "Library/include/aws/http/websocket.h",
+    "path_type": "hardlink",
+    "sha256": "ebd94f7a3d70d7ab288832a43bf8f844258c754abdfb838ce36ad15e068983a6",
+    "sha256_in_prefix": "ebd94f7a3d70d7ab288832a43bf8f844258c754abdfb838ce36ad15e068983a6",
+    "size_in_bytes": 18521
+   },
+   {
+    "_path": "Library/lib/aws-c-http.lib",
+    "path_type": "hardlink",
+    "sha256": "0e66df9722b380bf7511d6337a1f15caf067616a13378e9627dc363293bcacdf",
+    "sha256_in_prefix": "0e66df9722b380bf7511d6337a1f15caf067616a13378e9627dc363293bcacdf",
+    "size_in_bytes": 79938
+   },
+   {
+    "_path": "Library/lib/aws-c-http/cmake/aws-c-http-config.cmake",
+    "path_type": "hardlink",
+    "sha256": "13f6f2fef6508490dc88fb81329829b5e03f2c3727e2cf4fa11d43728cef744d",
+    "sha256_in_prefix": "13f6f2fef6508490dc88fb81329829b5e03f2c3727e2cf4fa11d43728cef744d",
+    "size_in_bytes": 623
+   },
+   {
+    "_path": "Library/lib/aws-c-http/cmake/shared/aws-c-http-targets-release.cmake",
+    "path_type": "hardlink",
+    "sha256": "18f5216c4f87597cac1dd5bc8610ac1dd73c10c68420440b20814a0a0dc3aea8",
+    "sha256_in_prefix": "18f5216c4f87597cac1dd5bc8610ac1dd73c10c68420440b20814a0a0dc3aea8",
+    "size_in_bytes": 927
+   },
+   {
+    "_path": "Library/lib/aws-c-http/cmake/shared/aws-c-http-targets.cmake",
+    "path_type": "hardlink",
+    "sha256": "c94aa988917288307dba179f9c4698e61e3dbc75615910a3cbe20e76ef974e3c",
+    "sha256_in_prefix": "c94aa988917288307dba179f9c4698e61e3dbc75615910a3cbe20e76ef974e3c",
+    "size_in_bytes": 4340
+   }
+  ],
+  "paths_version": 1
+ },
+ "requested_spec": "aws-c-http==0.6.29=h844ee93_0",
+ "sha256": "8847430ebae883aabf00fbdad2cc47da04a763bc86cdb2670b26f667ebdaee0f",
+ "size": 174085,
+ "subdir": "win-64",
+ "timestamp": 1671616227000,
+ "track_features": "",
+ "url": "https://conda.anaconda.org/conda-forge/win-64/aws-c-http-0.6.29-h844ee93_0.conda",
+ "version": "0.6.29"
+}
