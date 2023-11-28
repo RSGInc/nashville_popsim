@@ -24,16 +24,18 @@ import os
 import sys
 import numpy as np
 import shutil
-
+print("Python version:", sys.version)
 #read properties from parameters file
+
 parameters_file = sys.argv[1]
+#parameters_file=r'E:\Projects\Clients\NashvilleMPO\ModelUpdate2023\Tasks\Task4_Enhancements\Update_PopulationSim_Software\GitHub_William\Data\parameters.csv'
 parameters = pd.read_csv(parameters_file)
 parameters.columns = ['Key', 'Value']
 WORKING_DIR = parameters[parameters.Key == 'WORKING_DIR']['Value'].item().strip(' ')
 outputDir = os.path.join(WORKING_DIR, 'Setup', 'Data')
 censusDownloadDir = os.path.join(WORKING_DIR, 'Data','Census','Downloads')
 
-nashville_pop = 1650043
+nashville_pop = 1795575 # where is this from. placeholder B01001 20121 5-yr, use data from GNRC later.
 
 #set region specific settings
 STATE_FIPS = 47 # 47 for Tennessee
@@ -45,15 +47,15 @@ county_name = ["Rutherford","Sumner","Williamson","Robertson","Wilson","Davidson
 ###############
 
 # read Census data from Census download directory
-hhsize_BG   = pd.read_csv(os.path.join(censusDownloadDir, "hhsize_BG_2017_acs5.csv"))
-hhtype_BG   = pd.read_csv(os.path.join(censusDownloadDir, "hhtype_BG_2017_acs5.csv"))
-hhtenure_BG = pd.read_csv(os.path.join(censusDownloadDir, "hhtenure_BG_2017_acs5.csv"))
-hhunit_CT   = pd.read_csv(os.path.join(censusDownloadDir, "hhunit_CT_2017_acs5.csv"))
-hhworker_CT = pd.read_csv(os.path.join(censusDownloadDir, "hhworker_CT_2017_acs5.csv"))
-hhincome_CT = pd.read_csv(os.path.join(censusDownloadDir, "hhincome_CT_2017_acs5.csv"))
-hhkids_CT  	= pd.read_csv(os.path.join(censusDownloadDir, "hh_kids_nokids_CT_2017_acs5.csv"))
-pop_CT 		= pd.read_csv(os.path.join(censusDownloadDir,"populationbyageandsex_CT_2017_acs5.csv"))
-gqtot_acs_CT	= pd.read_csv(os.path.join(censusDownloadDir, "gqtot_CT_2017_acs5.csv"))
+hhsize_BG   = pd.read_csv(os.path.join(censusDownloadDir, "hhsize_BG_2021_acs5.csv"))
+hhtype_BG   = pd.read_csv(os.path.join(censusDownloadDir, "hhtype_BG_2021_acs5.csv"))
+hhtenure_BG = pd.read_csv(os.path.join(censusDownloadDir, "hhtenure_BG_2021_acs5.csv"))
+hhunit_CT   = pd.read_csv(os.path.join(censusDownloadDir, "hhunit_CT_2021_acs5.csv"))
+hhworker_CT = pd.read_csv(os.path.join(censusDownloadDir, "hhworker_CT_2021_acs5.csv"))
+hhincome_CT = pd.read_csv(os.path.join(censusDownloadDir, "hhincome_CT_2021_acs5.csv"))
+hhkids_CT  	= pd.read_csv(os.path.join(censusDownloadDir, "hh_kids_nokids_CT_2021_acs5.csv"))
+pop_CT 		= pd.read_csv(os.path.join(censusDownloadDir,"populationbyageandsex_CT_2021_acs5.csv"))
+gqtot_acs_CT	= pd.read_csv(os.path.join(censusDownloadDir, "gqtot_CT_2021_acs5.csv"))
 #gqage_sf1_CT	= pd.read_csv(os.path.join(censusDownloadDir, "gqage_CT_2010_sf1.csv"))
 
 gqtot_acs_CT['gq_total'] = gqtot_acs_CT['B26001_001E']
@@ -78,10 +80,12 @@ print("GWTOT:", gqtot_acs_CT.gq_total.sum(), sep=' ')
 totHHs = hhsize_BG['B11016_001E'].sum()
 
 # copy the input maz data to data under Setup
-source_maz_file = os.path.join(WORKING_DIR, "Data","MAZ","maz_hh_gq.csv")
-dest_maz_file = os.path.join(WORKING_DIR, "Setup","data","control_totals_maz.csv")
-pd.read_csv(source_maz_file).to_csv(dest_maz_file)
+# is this needed???
+# source_maz_file = os.path.join(WORKING_DIR, "Data","MAZ","maz_hh_gq.csv")
+# dest_maz_file = os.path.join(WORKING_DIR, "Setup","data","control_totals_maz.csv")
+# pd.read_csv(source_maz_file).to_csv(dest_maz_file)
 # shutil.copy(source_maz_file, dest_maz_file)
+
 # read maz hh data
 mazControl2 = pd.read_csv(os.path.join(WORKING_DIR, "Setup","data","control_totals_maz.csv"))
 print(mazControl2.columns, sep=' ')
@@ -162,6 +166,7 @@ print("CHECK TOT HH by AGE", tazControl['hh'].sum(), " = ", tazControl[['HHAGE15
 print("CHECK TOT HH by FAM", tazControl['hh'].sum(), " = ", tazControl[['HHFAMMAR','HHFAMNOWIFE','HHFAMNOHUSBAND', 'HHFAMNON', 'HHFAMNONALONE']].sum().sum(), sep=' ')
 
 # worker , kid, and income data
+print(hhworker_CT.columns)
 
 tazControl = tazControl.merge(hhworker_CT, how = 'left', on = "TRACT").merge(hhincome_CT, how = 'left', on = "TRACT").merge(hhkids_CT, how = 'left', on = 'TRACT').merge(hhunit_CT, how='left', on='TRACT')
 tazControl['HHWRKS0'] = tazControl['ct_pct']*tazControl['B08202_002E']                 # allocatE'] to E']ach MAZ from tazControl['Block group tazControl['BasE']d on proportion
@@ -282,15 +287,29 @@ print("xwalkpuma",popsyn_xwalk.PUMA10.unique())
 # remove vacant units and  group quarters households
 print("len raw pums", len(pums_hh))
 
-seed_house = pums_hh[(pums_hh.NP != 0) & (pums_hh.TYPE.isin([1]))]	
+seed_house = pums_hh[(pums_hh.NP != 0) & (pums_hh.TYPEHUGQ.isin([1]))]	
+# 'TYPEHUGQ' is Type of unit in 2011-2015 data, changed to 'TYPEHUGQ' in 2017-2021 data,
 print("len seed", len(seed_house))
 seed_house = seed_house.fillna(0)
 seed_person = pums_per[pums_per.SERIALNO.isin(seed_house.SERIALNO.unique())]
 seed_person = seed_person.fillna(0)
- 
+
+
 # compute number of workers in the household	
 seed_person['workers'] = np.where(seed_person.ESR.isin([1,2,4,5]), 1,0)
-seed_house = seed_house.merge(seed_person.groupby('SERIALNO', as_index = False)['workers'].sum(), how = 'left', on = 'SERIALNO')
+seed_person['workers'] = seed_person['workers'].astype(np.int64)
+seed_person['SERIALNO'] = seed_person['SERIALNO'].astype(str)
+seed_house['SERIALNO'] = seed_house['SERIALNO'].astype(str)
+
+# Convert 'workers' column in seed_person to int (if needed)
+seed_person['workers'] = seed_person['workers'].astype(int)
+
+print("seed_person['workers'] unique values:", seed_person['workers'].unique())
+print("seed_person['workers'] missing values:", seed_person['workers'].isnull().sum())
+print("seed_person['SERIALNO'] NaN count:", seed_person['SERIALNO'].isnull().sum())
+
+# Join seed_person with seed_house
+seed_house = seed_house.merge(seed_person[['SERIALNO', 'workers']].groupby('SERIALNO').sum(), how='left', on='SERIALNO')
 
 # use ESR to set employment dummy	
 seed_person['employed'] = np.where(seed_person.ESR.isin([1,2,4,5]), 1, 0)	
@@ -301,8 +320,9 @@ seed_house['hh_id'] = np.arange(1,len(seed_house)+1)
 new_HH_ID = seed_house[["SERIALNO","hh_id"]]
 
 seed_person = seed_person.merge(new_HH_ID, how = 'left', on = "SERIALNO")
-age_householder = seed_person[["SERIALNO","AGEP",'RELP']]
-max_age = age_householder[age_householder['RELP'] == 0]#.groupby('SERIALNO', as_index = False).agg({'AGEP':'max'})
+age_householder = seed_person[["SERIALNO","AGEP",'RELSHIPP']]
+# 'RELP' is Relationship, changed to 'RELSHIPP', 20 is the head of household (reference person).
+max_age = age_householder[age_householder['RELSHIPP'] == 20]#.groupby('SERIALNO', as_index = False).agg({'AGEP':'max'})
 max_age = max_age.rename(columns = {'AGEP':'AGEHOH'})
 seed_house = seed_house.merge(max_age, how = 'left', on = 'SERIALNO')
 
@@ -343,11 +363,11 @@ seed_house['KID'] =np.where(seed_house['HUPAC']==4,0,1)
 
 #Get GQ Weights
 
-seed_house_gq = pums_hh[(pums_hh.NP != 0) & (pums_hh.TYPE.isin([3]))]	
+seed_house_gq = pums_hh[(pums_hh.NP != 0) & (pums_hh.TYPEHUGQ.isin([3]))]	
 seed_person_gq = pums_per[pums_per.SERIALNO.isin(seed_house_gq.SERIALNO.unique())]
 
 gqpersons = seed_person_gq#.merge(seed_house_gq, how = 'left', on = 'SERIALNO')
-#gqpersons = gqpersons[gqpersons['TYPE'] == 3]
+#gqpersons = gqpersons[gqpersons['TYPEHUGQ'] == 3]
 #gqpersons['SCHG'] = np.where(gqpersons['SCHG'].isna(), 0, gqpersons['SCHG'])
 #gqpersons['MIL'] = np.where(gqpersons['MIL'].isna(), 0, gqpersons['MIL'])
 
@@ -366,8 +386,8 @@ seed_person.to_csv(os.path.join(outputDir, "seed_persons.csv"), index = False )
 # use this section of code on Step 01 PUMS to Database - before leaving out GQs
 # Create distribution of GQ population by age for each Census Tract [run only once]
 # Non-Institutional GQ population
-pums_pop = pums_per.merge(pums_hh[["SERIALNO", "WGTP", "TYPE"]],  on = "SERIALNO", how = 'left')
-pums_pop = pums_pop[pums_pop.TYPE >= 2]#filter(TYPE >= 2) %>%  # GQ population
+pums_pop = pums_per.merge(pums_hh[["SERIALNO", "WGTP", "TYPEHUGQ"]],  on = "SERIALNO", how = 'left')
+pums_pop = pums_pop[pums_pop.TYPEHUGQ >= 2]#filter(TYPEHUGQ >= 2) %>%  # GQ population
 pums_pop['age_group7'] = np.where(pums_pop.AGEP>=80, 1, 0)
 pums_pop['age_group6'] = np.where((pums_pop.AGEP>=65) & (pums_pop.AGEP<=79), 1, 0)
 pums_pop['age_group5'] = np.where((pums_pop.AGEP>=50) & (pums_pop.AGEP<=64), 1, 0) 
@@ -390,7 +410,7 @@ print('CHECK RECORDS')
 pums_pop['PUMA'] = pums_pop['PUMA'].map(lambda n: n +STATE_FIPS*100000)
 
 gqtot_acs_CT = gqtot_acs_CT.merge(popsyn_xwalk[['PUMA','TRACT']].groupby('TRACT',as_index = False).first(), how = 'left', on = 'TRACT').merge(pums_pop[['PUMA']+['percent_age_group{}'.format(i) for i in range(1,8)]].fillna(0), how = 'left', on = 'PUMA').fillna(0)
-print( gqtot_acs_CT[['gq_total','percent_age_group1', 'percent_age_group2']].fillna(0).describe())
+print(gqtot_acs_CT[['gq_total','percent_age_group1', 'percent_age_group2']].fillna(0).describe())
 # gqtot_acs_CT = gqtot_acs_CT.merge(pums_pop[['PUMA']+['percent_age_group{}'.format(i) for i in range(1,8)]].fillna(0), how = 'left', on = 'PUMA').fillna(0)
 
 #output GQ seed data
