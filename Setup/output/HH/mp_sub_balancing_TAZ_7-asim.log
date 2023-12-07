@@ -1,0 +1,1051 @@
+05/12/2023 15:04:05 - INFO - activitysim - Read logging configuration from: configs\HH\logging.yaml
+05/12/2023 15:04:05 - DEBUG - activitysim.core.mp_tasks - mp_run_simulation mp_sub_balancing_TAZ locutor=False 
+05/12/2023 15:04:05 - DEBUG - activitysim.core.mp_tasks - injecting pipeline_file_prefix 'mp_sub_balancing_TAZ_7'
+05/12/2023 15:04:05 - INFO - activitysim.core.mp_tasks - resume_after _
+05/12/2023 15:04:05 - DEBUG - activitysim.core.random - Set random seed base to 0
+05/12/2023 15:04:05 - DEBUG - activitysim.core.pipeline - open_pipeline - open existing pipeline
+05/12/2023 15:04:05 - DEBUG - activitysim.core.pipeline - opened pipeline_store output\HH\mp_sub_balancing_TAZ_7-pipeline.h5
+05/12/2023 15:04:05 - INFO - activitysim.core.pipeline - load_checkpoint _
+05/12/2023 15:04:05 - INFO - activitysim.core.pipeline - loading checkpoint 'mp_seed_balancing'
+05/12/2023 15:04:05 - INFO - activitysim.core.pipeline - load_checkpoint mp_seed_balancing timestamp 2023-12-05 15:03:42.959594
+05/12/2023 15:04:06 - INFO - activitysim.core.pipeline - load_checkpoint table households (33856, 242)
+05/12/2023 15:04:06 - DEBUG - activitysim.core.pipeline - rewrap table households inplace=False
+05/12/2023 15:04:07 - INFO - activitysim.core.pipeline - load_checkpoint table persons (82464, 290)
+05/12/2023 15:04:07 - DEBUG - activitysim.core.pipeline - rewrap table persons inplace=False
+05/12/2023 15:04:07 - INFO - activitysim.core.pipeline - load_checkpoint table geo_cross_walk (27925, 7)
+05/12/2023 15:04:07 - DEBUG - activitysim.core.pipeline - rewrap table geo_cross_walk inplace=False
+05/12/2023 15:04:07 - INFO - activitysim.core.pipeline - load_checkpoint table MAZ_control_data (27925, 3)
+05/12/2023 15:04:07 - DEBUG - activitysim.core.pipeline - rewrap table MAZ_control_data inplace=False
+05/12/2023 15:04:07 - INFO - activitysim.core.pipeline - load_checkpoint table TAZ_control_data (3007, 45)
+05/12/2023 15:04:07 - DEBUG - activitysim.core.pipeline - rewrap table TAZ_control_data inplace=False
+05/12/2023 15:04:07 - INFO - activitysim.core.pipeline - load_checkpoint table REGION_control_data (1, 2)
+05/12/2023 15:04:07 - DEBUG - activitysim.core.pipeline - rewrap table REGION_control_data inplace=False
+05/12/2023 15:04:07 - INFO - activitysim.core.pipeline - load_checkpoint table crosswalk (2891, 4)
+05/12/2023 15:04:07 - DEBUG - activitysim.core.pipeline - rewrap table crosswalk inplace=False
+05/12/2023 15:04:07 - INFO - activitysim.core.pipeline - load_checkpoint table slice_crosswalk (1, 2)
+05/12/2023 15:04:07 - DEBUG - activitysim.core.pipeline - rewrap table slice_crosswalk inplace=False
+05/12/2023 15:04:07 - INFO - activitysim.core.pipeline - load_checkpoint table control_spec (24, 6)
+05/12/2023 15:04:07 - DEBUG - activitysim.core.pipeline - rewrap table control_spec inplace=False
+05/12/2023 15:04:07 - INFO - activitysim.core.pipeline - load_checkpoint table REGION_controls (1, 24)
+05/12/2023 15:04:07 - DEBUG - activitysim.core.pipeline - rewrap table REGION_controls inplace=False
+05/12/2023 15:04:07 - INFO - activitysim.core.pipeline - load_checkpoint table PUMA_controls (12, 24)
+05/12/2023 15:04:07 - DEBUG - activitysim.core.pipeline - rewrap table PUMA_controls inplace=False
+05/12/2023 15:04:07 - INFO - activitysim.core.pipeline - load_checkpoint table TAZ_controls (2808, 23)
+05/12/2023 15:04:07 - DEBUG - activitysim.core.pipeline - rewrap table TAZ_controls inplace=False
+05/12/2023 15:04:07 - INFO - activitysim.core.pipeline - load_checkpoint table MAZ_controls (20675, 1)
+05/12/2023 15:04:07 - DEBUG - activitysim.core.pipeline - rewrap table MAZ_controls inplace=False
+05/12/2023 15:04:07 - INFO - activitysim.core.pipeline - load_checkpoint table household_groups (33856, 3)
+05/12/2023 15:04:07 - DEBUG - activitysim.core.pipeline - rewrap table household_groups inplace=False
+05/12/2023 15:04:07 - INFO - activitysim.core.pipeline - load_checkpoint table incidence_table (8734, 29)
+05/12/2023 15:04:07 - DEBUG - activitysim.core.pipeline - rewrap table incidence_table inplace=False
+05/12/2023 15:04:07 - INFO - activitysim.core.pipeline - load_checkpoint table PUMA_weights (8734, 6)
+05/12/2023 15:04:07 - DEBUG - activitysim.core.pipeline - rewrap table PUMA_weights inplace=False
+05/12/2023 15:04:07 - DEBUG - activitysim.core.pipeline - open_pipeline complete
+05/12/2023 15:04:07 - INFO - activitysim.core.pipeline - #run_model running step sub_balancing
+05/12/2023 15:04:07 - INFO - populationsim.steps.sub_balancing - balancing 1/1 seed 4702503, PUMA 4702503
+05/12/2023 15:04:07 - DEBUG - populationsim.simul_balancer - 589 positive weight rows out of 589
+05/12/2023 15:04:07 - DEBUG - populationsim.simul_balancer - np_simul_balancer sample_count 589 control_count 23 zone_count 305
+05/12/2023 15:04:08 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 0 delta 79.85876893064945 max_gamma_dif 2993.9185040995135
+05/12/2023 15:04:55 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 100 delta 0.2209474643310386 max_gamma_dif 835.9738798432851
+05/12/2023 15:05:44 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 200 delta 0.08461934241133313 max_gamma_dif 467.9960939937744
+05/12/2023 15:06:33 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 300 delta 0.2870123353714688 max_gamma_dif 218.47589084332108
+05/12/2023 15:07:21 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 400 delta 0.039063656025972254 max_gamma_dif 101.85936379988634
+05/12/2023 15:08:09 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 500 delta 0.0869665275627301 max_gamma_dif 314.4546161864395
+05/12/2023 15:08:59 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 600 delta 0.07026127611045778 max_gamma_dif 1272.3675379515298
+05/12/2023 15:09:47 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 700 delta 0.0879507387243186 max_gamma_dif 1693.3477463066872
+05/12/2023 15:10:29 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 800 delta 0.10168093558600462 max_gamma_dif 1945.412041086819
+05/12/2023 15:11:11 - DEBUG - populationsim.simul_balancer - np_simul_balancer iteration 900 delta 0.12759805967369495 max_gamma_dif 2118.1072875271307
+05/12/2023 15:11:52 - DEBUG - populationsim.steps.sub_balancing - PUMA 4702503 converged False iter 999
+05/12/2023 15:12:14 - WARNING - populationsim.multi_integerizer - do_simul_integerizing failed for PUMA_4702503 status INFEASIBLE. 
+05/12/2023 15:12:14 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 53 zone_name TAZ_53
+05/12/2023 15:12:14 - DEBUG - populationsim.integerizer - omitting 316 zero weight rows out of 589
+05/12/2023 15:12:14 - DEBUG - populationsim.integerizer - Integerizer: 2 out of 273 different from round
+05/12/2023 15:12:14 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_53: INFEASIBLE
+05/12/2023 15:12:14 - DEBUG - populationsim.integerizer - Integerizer: 2 out of 273 different from round
+05/12/2023 15:12:14 - DEBUG - populationsim.integerizer - Integerizer status for unbackstopped PUMA_4702503_TAZ_53: INFEASIBLE
+05/12/2023 15:12:14 - ERROR - populationsim.integerizer - Integerizer failed for PUMA_4702503_TAZ_53 status INFEASIBLE. Returning smart-rounded original weights
+05/12/2023 15:12:14 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 55 zone_name TAZ_55
+05/12/2023 15:12:14 - DEBUG - populationsim.integerizer - omitting 28 zero weight rows out of 589
+05/12/2023 15:12:14 - DEBUG - populationsim.integerizer - Integerizer: 11 out of 561 different from round
+05/12/2023 15:12:14 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_55: OPTIMAL
+05/12/2023 15:12:14 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 58 zone_name TAZ_58
+05/12/2023 15:12:14 - DEBUG - populationsim.integerizer - omitting 487 zero weight rows out of 589
+05/12/2023 15:12:14 - DEBUG - populationsim.integerizer - Integerizer: 3 out of 102 different from round
+05/12/2023 15:12:14 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_58: INFEASIBLE
+05/12/2023 15:12:14 - DEBUG - populationsim.integerizer - Integerizer: 3 out of 102 different from round
+05/12/2023 15:12:14 - DEBUG - populationsim.integerizer - Integerizer status for unbackstopped PUMA_4702503_TAZ_58: INFEASIBLE
+05/12/2023 15:12:14 - ERROR - populationsim.integerizer - Integerizer failed for PUMA_4702503_TAZ_58 status INFEASIBLE. Returning smart-rounded original weights
+05/12/2023 15:12:14 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 59 zone_name TAZ_59
+05/12/2023 15:12:14 - DEBUG - populationsim.integerizer - omitting 38 zero weight rows out of 589
+05/12/2023 15:12:14 - DEBUG - populationsim.integerizer - Integerizer: 8 out of 551 different from round
+05/12/2023 15:12:14 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_59: OPTIMAL
+05/12/2023 15:12:14 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 60 zone_name TAZ_60
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer: 6 out of 589 different from round
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_60: OPTIMAL
+05/12/2023 15:12:15 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 61 zone_name TAZ_61
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - omitting 316 zero weight rows out of 589
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer: 2 out of 273 different from round
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_61: INFEASIBLE
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer: 2 out of 273 different from round
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer status for unbackstopped PUMA_4702503_TAZ_61: INFEASIBLE
+05/12/2023 15:12:15 - ERROR - populationsim.integerizer - Integerizer failed for PUMA_4702503_TAZ_61 status INFEASIBLE. Returning smart-rounded original weights
+05/12/2023 15:12:15 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 63 zone_name TAZ_63
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer: 10 out of 589 different from round
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_63: OPTIMAL
+05/12/2023 15:12:15 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 64 zone_name TAZ_64
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer: 10 out of 589 different from round
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_64: OPTIMAL
+05/12/2023 15:12:15 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 65 zone_name TAZ_65
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer: 7 out of 589 different from round
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_65: OPTIMAL
+05/12/2023 15:12:15 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 66 zone_name TAZ_66
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer: 23 out of 589 different from round
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_66: OPTIMAL
+05/12/2023 15:12:15 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 67 zone_name TAZ_67
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer: 18 out of 589 different from round
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_67: OPTIMAL
+05/12/2023 15:12:15 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 68 zone_name TAZ_68
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer: 30 out of 589 different from round
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_68: OPTIMAL
+05/12/2023 15:12:15 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 136 zone_name TAZ_136
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer: 31 out of 589 different from round
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_136: OPTIMAL
+05/12/2023 15:12:15 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 137 zone_name TAZ_137
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer: 29 out of 589 different from round
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_137: OPTIMAL
+05/12/2023 15:12:15 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 138 zone_name TAZ_138
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer: 24 out of 589 different from round
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_138: OPTIMAL
+05/12/2023 15:12:15 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 143 zone_name TAZ_143
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer: 31 out of 589 different from round
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_143: OPTIMAL
+05/12/2023 15:12:15 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 144 zone_name TAZ_144
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer: 18 out of 589 different from round
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_144: OPTIMAL
+05/12/2023 15:12:15 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 145 zone_name TAZ_145
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer: 16 out of 589 different from round
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_145: OPTIMAL
+05/12/2023 15:12:15 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 146 zone_name TAZ_146
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer: 30 out of 589 different from round
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_146: OPTIMAL
+05/12/2023 15:12:15 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 147 zone_name TAZ_147
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer: 13 out of 589 different from round
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_147: OPTIMAL
+05/12/2023 15:12:15 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 148 zone_name TAZ_148
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer: 18 out of 589 different from round
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_148: OPTIMAL
+05/12/2023 15:12:15 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 149 zone_name TAZ_149
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer: 32 out of 589 different from round
+05/12/2023 15:12:15 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_149: OPTIMAL
+05/12/2023 15:12:15 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 150 zone_name TAZ_150
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer: 1 out of 589 different from round
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_150: OPTIMAL
+05/12/2023 15:12:16 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 151 zone_name TAZ_151
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - omitting 427 zero weight rows out of 589
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer: 2 out of 162 different from round
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_151: INFEASIBLE
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer: 2 out of 162 different from round
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer status for unbackstopped PUMA_4702503_TAZ_151: INFEASIBLE
+05/12/2023 15:12:16 - ERROR - populationsim.integerizer - Integerizer failed for PUMA_4702503_TAZ_151 status INFEASIBLE. Returning smart-rounded original weights
+05/12/2023 15:12:16 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 152 zone_name TAZ_152
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer: 31 out of 589 different from round
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_152: OPTIMAL
+05/12/2023 15:12:16 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 153 zone_name TAZ_153
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - omitting 528 zero weight rows out of 589
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer: 3 out of 61 different from round
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_153: OPTIMAL
+05/12/2023 15:12:16 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 154 zone_name TAZ_154
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer: 8 out of 589 different from round
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_154: OPTIMAL
+05/12/2023 15:12:16 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 155 zone_name TAZ_155
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer: 9 out of 589 different from round
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_155: OPTIMAL
+05/12/2023 15:12:16 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 157 zone_name TAZ_157
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer: 16 out of 589 different from round
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_157: OPTIMAL
+05/12/2023 15:12:16 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 283 zone_name TAZ_283
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer: 7 out of 589 different from round
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_283: OPTIMAL
+05/12/2023 15:12:16 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 284 zone_name TAZ_284
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer: 17 out of 589 different from round
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_284: OPTIMAL
+05/12/2023 15:12:16 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 289 zone_name TAZ_289
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer: 8 out of 589 different from round
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_289: OPTIMAL
+05/12/2023 15:12:16 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 290 zone_name TAZ_290
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer: 6 out of 589 different from round
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_290: OPTIMAL
+05/12/2023 15:12:16 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 310 zone_name TAZ_310
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - omitting 515 zero weight rows out of 589
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer: 67 out of 74 different from round
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_310: OPTIMAL
+05/12/2023 15:12:16 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 315 zone_name TAZ_315
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer: 8 out of 589 different from round
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_315: OPTIMAL
+05/12/2023 15:12:16 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 316 zone_name TAZ_316
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer: 7 out of 589 different from round
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_316: OPTIMAL
+05/12/2023 15:12:16 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 318 zone_name TAZ_318
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer: 12 out of 589 different from round
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_318: OPTIMAL
+05/12/2023 15:12:16 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 319 zone_name TAZ_319
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer: 10 out of 589 different from round
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_319: OPTIMAL
+05/12/2023 15:12:16 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 322 zone_name TAZ_322
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer: 10 out of 589 different from round
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_322: OPTIMAL
+05/12/2023 15:12:16 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 350 zone_name TAZ_350
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer: 11 out of 589 different from round
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_350: OPTIMAL
+05/12/2023 15:12:16 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 351 zone_name TAZ_351
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer: 11 out of 589 different from round
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_351: OPTIMAL
+05/12/2023 15:12:16 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 352 zone_name TAZ_352
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer: 13 out of 589 different from round
+05/12/2023 15:12:16 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_352: OPTIMAL
+05/12/2023 15:12:16 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 353 zone_name TAZ_353
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer: 12 out of 589 different from round
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_353: OPTIMAL
+05/12/2023 15:12:17 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 357 zone_name TAZ_357
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer: 32 out of 589 different from round
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_357: OPTIMAL
+05/12/2023 15:12:17 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 358 zone_name TAZ_358
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer: 36 out of 589 different from round
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_358: OPTIMAL
+05/12/2023 15:12:17 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 359 zone_name TAZ_359
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer: 12 out of 589 different from round
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_359: OPTIMAL
+05/12/2023 15:12:17 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 360 zone_name TAZ_360
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer: 13 out of 589 different from round
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_360: OPTIMAL
+05/12/2023 15:12:17 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 361 zone_name TAZ_361
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer: 41 out of 589 different from round
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_361: OPTIMAL
+05/12/2023 15:12:17 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 362 zone_name TAZ_362
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer: 33 out of 589 different from round
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_362: OPTIMAL
+05/12/2023 15:12:17 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 363 zone_name TAZ_363
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer: 38 out of 589 different from round
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_363: OPTIMAL
+05/12/2023 15:12:17 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 364 zone_name TAZ_364
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer: 26 out of 589 different from round
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_364: OPTIMAL
+05/12/2023 15:12:17 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 370 zone_name TAZ_370
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer: 26 out of 589 different from round
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_370: OPTIMAL
+05/12/2023 15:12:17 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 371 zone_name TAZ_371
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer: 37 out of 589 different from round
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_371: OPTIMAL
+05/12/2023 15:12:17 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 372 zone_name TAZ_372
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer: 23 out of 589 different from round
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_372: OPTIMAL
+05/12/2023 15:12:17 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 373 zone_name TAZ_373
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer: 24 out of 589 different from round
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_373: OPTIMAL
+05/12/2023 15:12:17 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 374 zone_name TAZ_374
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer: 35 out of 589 different from round
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_374: OPTIMAL
+05/12/2023 15:12:17 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 375 zone_name TAZ_375
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer: 31 out of 589 different from round
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_375: OPTIMAL
+05/12/2023 15:12:17 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 376 zone_name TAZ_376
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer: 11 out of 589 different from round
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_376: OPTIMAL
+05/12/2023 15:12:17 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 377 zone_name TAZ_377
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer: 19 out of 589 different from round
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_377: OPTIMAL
+05/12/2023 15:12:17 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 378 zone_name TAZ_378
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer: 5 out of 589 different from round
+05/12/2023 15:12:17 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_378: OPTIMAL
+05/12/2023 15:12:17 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 379 zone_name TAZ_379
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer: 22 out of 589 different from round
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_379: OPTIMAL
+05/12/2023 15:12:18 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 380 zone_name TAZ_380
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer: 30 out of 589 different from round
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_380: OPTIMAL
+05/12/2023 15:12:18 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 381 zone_name TAZ_381
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer: 21 out of 589 different from round
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_381: OPTIMAL
+05/12/2023 15:12:18 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 382 zone_name TAZ_382
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer: 29 out of 589 different from round
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_382: OPTIMAL
+05/12/2023 15:12:18 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 383 zone_name TAZ_383
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer: 41 out of 589 different from round
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_383: OPTIMAL
+05/12/2023 15:12:18 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 384 zone_name TAZ_384
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer: 32 out of 589 different from round
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_384: OPTIMAL
+05/12/2023 15:12:18 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 385 zone_name TAZ_385
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer: 18 out of 589 different from round
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_385: OPTIMAL
+05/12/2023 15:12:18 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 386 zone_name TAZ_386
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer: 36 out of 589 different from round
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_386: OPTIMAL
+05/12/2023 15:12:18 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 387 zone_name TAZ_387
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer: 24 out of 589 different from round
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_387: OPTIMAL
+05/12/2023 15:12:18 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 388 zone_name TAZ_388
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer: 26 out of 589 different from round
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_388: OPTIMAL
+05/12/2023 15:12:18 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 389 zone_name TAZ_389
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer: 10 out of 589 different from round
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_389: OPTIMAL
+05/12/2023 15:12:18 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 390 zone_name TAZ_390
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer: 33 out of 589 different from round
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_390: OPTIMAL
+05/12/2023 15:12:18 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 405 zone_name TAZ_405
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer: 19 out of 589 different from round
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_405: OPTIMAL
+05/12/2023 15:12:18 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 406 zone_name TAZ_406
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer: 15 out of 589 different from round
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_406: OPTIMAL
+05/12/2023 15:12:18 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 407 zone_name TAZ_407
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer: 16 out of 589 different from round
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_407: OPTIMAL
+05/12/2023 15:12:18 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 436 zone_name TAZ_436
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - omitting 20 zero weight rows out of 589
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer: 5 out of 569 different from round
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_436: OPTIMAL
+05/12/2023 15:12:18 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 437 zone_name TAZ_437
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - omitting 20 zero weight rows out of 589
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer: 7 out of 569 different from round
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_437: OPTIMAL
+05/12/2023 15:12:18 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 441 zone_name TAZ_441
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - omitting 13 zero weight rows out of 589
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer: 2 out of 576 different from round
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_441: OPTIMAL
+05/12/2023 15:12:18 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 442 zone_name TAZ_442
+05/12/2023 15:12:18 - DEBUG - populationsim.integerizer - omitting 13 zero weight rows out of 589
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer: 2 out of 576 different from round
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_442: OPTIMAL
+05/12/2023 15:12:19 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 443 zone_name TAZ_443
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer: 6 out of 589 different from round
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_443: OPTIMAL
+05/12/2023 15:12:19 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 444 zone_name TAZ_444
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - omitting 20 zero weight rows out of 589
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer: 5 out of 569 different from round
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_444: OPTIMAL
+05/12/2023 15:12:19 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 446 zone_name TAZ_446
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - omitting 20 zero weight rows out of 589
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer: 9 out of 569 different from round
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_446: OPTIMAL
+05/12/2023 15:12:19 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 447 zone_name TAZ_447
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer: 9 out of 589 different from round
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_447: OPTIMAL
+05/12/2023 15:12:19 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 448 zone_name TAZ_448
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer: 1 out of 589 different from round
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_448: OPTIMAL
+05/12/2023 15:12:19 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 449 zone_name TAZ_449
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer: 10 out of 589 different from round
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_449: OPTIMAL
+05/12/2023 15:12:19 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 464 zone_name TAZ_464
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer: 3 out of 589 different from round
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_464: OPTIMAL
+05/12/2023 15:12:19 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 465 zone_name TAZ_465
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer: 2 out of 589 different from round
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_465: OPTIMAL
+05/12/2023 15:12:19 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 466 zone_name TAZ_466
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer: 1 out of 589 different from round
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_466: OPTIMAL
+05/12/2023 15:12:19 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 467 zone_name TAZ_467
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer: 1 out of 589 different from round
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_467: OPTIMAL
+05/12/2023 15:12:19 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 468 zone_name TAZ_468
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer: 5 out of 589 different from round
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_468: OPTIMAL
+05/12/2023 15:12:19 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 469 zone_name TAZ_469
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer: 17 out of 589 different from round
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_469: OPTIMAL
+05/12/2023 15:12:19 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 470 zone_name TAZ_470
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer: 34 out of 589 different from round
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_470: OPTIMAL
+05/12/2023 15:12:19 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 471 zone_name TAZ_471
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer: 37 out of 589 different from round
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_471: OPTIMAL
+05/12/2023 15:12:19 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 472 zone_name TAZ_472
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer: 30 out of 589 different from round
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_472: OPTIMAL
+05/12/2023 15:12:19 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 490 zone_name TAZ_490
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - omitting 29 zero weight rows out of 589
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer: 18 out of 560 different from round
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_490: OPTIMAL
+05/12/2023 15:12:19 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 491 zone_name TAZ_491
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - omitting 9 zero weight rows out of 589
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer: 8 out of 580 different from round
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_491: OPTIMAL
+05/12/2023 15:12:19 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 493 zone_name TAZ_493
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - omitting 166 zero weight rows out of 589
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer: 6 out of 423 different from round
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_493: OPTIMAL
+05/12/2023 15:12:19 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 494 zone_name TAZ_494
+05/12/2023 15:12:19 - DEBUG - populationsim.integerizer - omitting 9 zero weight rows out of 589
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer: 9 out of 580 different from round
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_494: OPTIMAL
+05/12/2023 15:12:20 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 495 zone_name TAZ_495
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - omitting 30 zero weight rows out of 589
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer: 10 out of 559 different from round
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_495: OPTIMAL
+05/12/2023 15:12:20 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 496 zone_name TAZ_496
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - omitting 25 zero weight rows out of 589
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer: 12 out of 564 different from round
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_496: OPTIMAL
+05/12/2023 15:12:20 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 505 zone_name TAZ_505
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer: 6 out of 589 different from round
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_505: OPTIMAL
+05/12/2023 15:12:20 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 506 zone_name TAZ_506
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer: 7 out of 589 different from round
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_506: OPTIMAL
+05/12/2023 15:12:20 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 507 zone_name TAZ_507
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer: 7 out of 589 different from round
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_507: OPTIMAL
+05/12/2023 15:12:20 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 514 zone_name TAZ_514
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer: 4 out of 589 different from round
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_514: OPTIMAL
+05/12/2023 15:12:20 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 517 zone_name TAZ_517
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - omitting 92 zero weight rows out of 589
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer: 11 out of 497 different from round
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_517: OPTIMAL
+05/12/2023 15:12:20 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 518 zone_name TAZ_518
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer: 12 out of 589 different from round
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_518: OPTIMAL
+05/12/2023 15:12:20 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 519 zone_name TAZ_519
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer: 6 out of 589 different from round
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_519: OPTIMAL
+05/12/2023 15:12:20 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 521 zone_name TAZ_521
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - omitting 192 zero weight rows out of 589
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer: 13 out of 397 different from round
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_521: OPTIMAL
+05/12/2023 15:12:20 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 522 zone_name TAZ_522
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer: 3 out of 589 different from round
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_522: OPTIMAL
+05/12/2023 15:12:20 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 523 zone_name TAZ_523
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - omitting 245 zero weight rows out of 589
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer: 12 out of 344 different from round
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_523: OPTIMAL
+05/12/2023 15:12:20 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 525 zone_name TAZ_525
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - omitting 199 zero weight rows out of 589
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer: 15 out of 390 different from round
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_525: OPTIMAL
+05/12/2023 15:12:20 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 529 zone_name TAZ_529
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer: 13 out of 589 different from round
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_529: OPTIMAL
+05/12/2023 15:12:20 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 533 zone_name TAZ_533
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - omitting 301 zero weight rows out of 589
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer: 17 out of 288 different from round
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_533: OPTIMAL
+05/12/2023 15:12:20 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 538 zone_name TAZ_538
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer: 11 out of 589 different from round
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_538: OPTIMAL
+05/12/2023 15:12:20 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 539 zone_name TAZ_539
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer: 10 out of 589 different from round
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_539: OPTIMAL
+05/12/2023 15:12:20 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 540 zone_name TAZ_540
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - omitting 119 zero weight rows out of 589
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer: 1 out of 470 different from round
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_540: INFEASIBLE
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer: 1 out of 470 different from round
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - Integerizer status for unbackstopped PUMA_4702503_TAZ_540: INFEASIBLE
+05/12/2023 15:12:20 - ERROR - populationsim.integerizer - Integerizer failed for PUMA_4702503_TAZ_540 status INFEASIBLE. Returning smart-rounded original weights
+05/12/2023 15:12:20 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 542 zone_name TAZ_542
+05/12/2023 15:12:20 - DEBUG - populationsim.integerizer - omitting 119 zero weight rows out of 589
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer: 1 out of 470 different from round
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_542: INFEASIBLE
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer: 1 out of 470 different from round
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer status for unbackstopped PUMA_4702503_TAZ_542: INFEASIBLE
+05/12/2023 15:12:21 - ERROR - populationsim.integerizer - Integerizer failed for PUMA_4702503_TAZ_542 status INFEASIBLE. Returning smart-rounded original weights
+05/12/2023 15:12:21 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 543 zone_name TAZ_543
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer: 6 out of 589 different from round
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_543: OPTIMAL
+05/12/2023 15:12:21 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 545 zone_name TAZ_545
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer: 11 out of 589 different from round
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_545: OPTIMAL
+05/12/2023 15:12:21 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 546 zone_name TAZ_546
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer: 12 out of 589 different from round
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_546: OPTIMAL
+05/12/2023 15:12:21 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 561 zone_name TAZ_561
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer: 36 out of 589 different from round
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_561: OPTIMAL
+05/12/2023 15:12:21 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 562 zone_name TAZ_562
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer: 30 out of 589 different from round
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_562: OPTIMAL
+05/12/2023 15:12:21 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 563 zone_name TAZ_563
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer: 44 out of 589 different from round
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_563: OPTIMAL
+05/12/2023 15:12:21 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 569 zone_name TAZ_569
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer: 16 out of 589 different from round
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_569: OPTIMAL
+05/12/2023 15:12:21 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 570 zone_name TAZ_570
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer: 21 out of 589 different from round
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_570: OPTIMAL
+05/12/2023 15:12:21 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 571 zone_name TAZ_571
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer: 8 out of 589 different from round
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_571: OPTIMAL
+05/12/2023 15:12:21 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 595 zone_name TAZ_595
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - omitting 3 zero weight rows out of 589
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer: 12 out of 586 different from round
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_595: OPTIMAL
+05/12/2023 15:12:21 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 619 zone_name TAZ_619
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer: 12 out of 589 different from round
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_619: OPTIMAL
+05/12/2023 15:12:21 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 620 zone_name TAZ_620
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer: 27 out of 589 different from round
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_620: OPTIMAL
+05/12/2023 15:12:21 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 621 zone_name TAZ_621
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer: 23 out of 589 different from round
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_621: OPTIMAL
+05/12/2023 15:12:21 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 624 zone_name TAZ_624
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer: 37 out of 589 different from round
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_624: OPTIMAL
+05/12/2023 15:12:21 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 625 zone_name TAZ_625
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer: 43 out of 589 different from round
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_625: OPTIMAL
+05/12/2023 15:12:21 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 626 zone_name TAZ_626
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer: 25 out of 589 different from round
+05/12/2023 15:12:21 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_626: OPTIMAL
+05/12/2023 15:12:21 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 737 zone_name TAZ_737
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer: 31 out of 589 different from round
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_737: OPTIMAL
+05/12/2023 15:12:22 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 738 zone_name TAZ_738
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer: 11 out of 589 different from round
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_738: OPTIMAL
+05/12/2023 15:12:22 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 739 zone_name TAZ_739
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer: 38 out of 589 different from round
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_739: OPTIMAL
+05/12/2023 15:12:22 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 740 zone_name TAZ_740
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer: 33 out of 589 different from round
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_740: OPTIMAL
+05/12/2023 15:12:22 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 742 zone_name TAZ_742
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer: 25 out of 589 different from round
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_742: OPTIMAL
+05/12/2023 15:12:22 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 743 zone_name TAZ_743
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer: 10 out of 589 different from round
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_743: OPTIMAL
+05/12/2023 15:12:22 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 744 zone_name TAZ_744
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer: 11 out of 589 different from round
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_744: OPTIMAL
+05/12/2023 15:12:22 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 745 zone_name TAZ_745
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer: 7 out of 589 different from round
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_745: OPTIMAL
+05/12/2023 15:12:22 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 746 zone_name TAZ_746
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer: 23 out of 589 different from round
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_746: OPTIMAL
+05/12/2023 15:12:22 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 747 zone_name TAZ_747
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer: 21 out of 589 different from round
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_747: OPTIMAL
+05/12/2023 15:12:22 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 748 zone_name TAZ_748
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer: 8 out of 589 different from round
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_748: OPTIMAL
+05/12/2023 15:12:22 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 760 zone_name TAZ_760
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer: 22 out of 589 different from round
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_760: OPTIMAL
+05/12/2023 15:12:22 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 761 zone_name TAZ_761
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer: 26 out of 589 different from round
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_761: OPTIMAL
+05/12/2023 15:12:22 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 898 zone_name TAZ_898
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer: 17 out of 589 different from round
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_898: OPTIMAL
+05/12/2023 15:12:22 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 899 zone_name TAZ_899
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer: 22 out of 589 different from round
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_899: OPTIMAL
+05/12/2023 15:12:22 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 900 zone_name TAZ_900
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer: 28 out of 589 different from round
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_900: OPTIMAL
+05/12/2023 15:12:22 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 901 zone_name TAZ_901
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer: 5 out of 589 different from round
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_901: OPTIMAL
+05/12/2023 15:12:22 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 902 zone_name TAZ_902
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer: 18 out of 589 different from round
+05/12/2023 15:12:22 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_902: OPTIMAL
+05/12/2023 15:12:22 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 921 zone_name TAZ_921
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer: 18 out of 589 different from round
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_921: OPTIMAL
+05/12/2023 15:12:23 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 922 zone_name TAZ_922
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer: 28 out of 589 different from round
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_922: OPTIMAL
+05/12/2023 15:12:23 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 925 zone_name TAZ_925
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer: 17 out of 589 different from round
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_925: OPTIMAL
+05/12/2023 15:12:23 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 927 zone_name TAZ_927
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - omitting 296 zero weight rows out of 589
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer: 1 out of 293 different from round
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_927: INFEASIBLE
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer: 1 out of 293 different from round
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer status for unbackstopped PUMA_4702503_TAZ_927: INFEASIBLE
+05/12/2023 15:12:23 - ERROR - populationsim.integerizer - Integerizer failed for PUMA_4702503_TAZ_927 status INFEASIBLE. Returning smart-rounded original weights
+05/12/2023 15:12:23 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 928 zone_name TAZ_928
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer: 32 out of 589 different from round
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_928: OPTIMAL
+05/12/2023 15:12:23 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1055 zone_name TAZ_1055
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer: 19 out of 589 different from round
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1055: OPTIMAL
+05/12/2023 15:12:23 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1056 zone_name TAZ_1056
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer: 34 out of 589 different from round
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1056: OPTIMAL
+05/12/2023 15:12:23 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1057 zone_name TAZ_1057
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer: 36 out of 589 different from round
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1057: OPTIMAL
+05/12/2023 15:12:23 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1058 zone_name TAZ_1058
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer: 29 out of 589 different from round
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1058: OPTIMAL
+05/12/2023 15:12:23 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1059 zone_name TAZ_1059
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer: 34 out of 589 different from round
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1059: OPTIMAL
+05/12/2023 15:12:23 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1060 zone_name TAZ_1060
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer: 33 out of 589 different from round
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1060: OPTIMAL
+05/12/2023 15:12:23 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1061 zone_name TAZ_1061
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer: 38 out of 589 different from round
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1061: OPTIMAL
+05/12/2023 15:12:23 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1062 zone_name TAZ_1062
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer: 33 out of 589 different from round
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1062: OPTIMAL
+05/12/2023 15:12:23 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1063 zone_name TAZ_1063
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer: 45 out of 589 different from round
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1063: OPTIMAL
+05/12/2023 15:12:23 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1064 zone_name TAZ_1064
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer: 29 out of 589 different from round
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1064: OPTIMAL
+05/12/2023 15:12:23 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1065 zone_name TAZ_1065
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer: 33 out of 589 different from round
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1065: OPTIMAL
+05/12/2023 15:12:23 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1066 zone_name TAZ_1066
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer: 47 out of 589 different from round
+05/12/2023 15:12:23 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1066: OPTIMAL
+05/12/2023 15:12:23 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1067 zone_name TAZ_1067
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer: 22 out of 589 different from round
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1067: OPTIMAL
+05/12/2023 15:12:24 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1068 zone_name TAZ_1068
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer: 19 out of 589 different from round
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1068: OPTIMAL
+05/12/2023 15:12:24 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1069 zone_name TAZ_1069
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer: 23 out of 589 different from round
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1069: OPTIMAL
+05/12/2023 15:12:24 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1070 zone_name TAZ_1070
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer: 17 out of 589 different from round
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1070: OPTIMAL
+05/12/2023 15:12:24 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1071 zone_name TAZ_1071
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer: 19 out of 589 different from round
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1071: OPTIMAL
+05/12/2023 15:12:24 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1096 zone_name TAZ_1096
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer: 33 out of 589 different from round
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1096: OPTIMAL
+05/12/2023 15:12:24 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1156 zone_name TAZ_1156
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer: 21 out of 589 different from round
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1156: OPTIMAL
+05/12/2023 15:12:24 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1159 zone_name TAZ_1159
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer: 29 out of 589 different from round
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1159: OPTIMAL
+05/12/2023 15:12:24 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1176 zone_name TAZ_1176
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer: 21 out of 589 different from round
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1176: OPTIMAL
+05/12/2023 15:12:24 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1177 zone_name TAZ_1177
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer: 20 out of 589 different from round
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1177: OPTIMAL
+05/12/2023 15:12:24 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1178 zone_name TAZ_1178
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer: 15 out of 589 different from round
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1178: OPTIMAL
+05/12/2023 15:12:24 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1179 zone_name TAZ_1179
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer: 31 out of 589 different from round
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1179: OPTIMAL
+05/12/2023 15:12:24 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1180 zone_name TAZ_1180
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer: 23 out of 589 different from round
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1180: OPTIMAL
+05/12/2023 15:12:24 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1181 zone_name TAZ_1181
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer: 28 out of 589 different from round
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1181: OPTIMAL
+05/12/2023 15:12:24 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1182 zone_name TAZ_1182
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer: 21 out of 589 different from round
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1182: OPTIMAL
+05/12/2023 15:12:24 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1183 zone_name TAZ_1183
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer: 24 out of 589 different from round
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1183: OPTIMAL
+05/12/2023 15:12:24 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1184 zone_name TAZ_1184
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer: 19 out of 589 different from round
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1184: OPTIMAL
+05/12/2023 15:12:24 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1185 zone_name TAZ_1185
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer: 34 out of 589 different from round
+05/12/2023 15:12:24 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1185: OPTIMAL
+05/12/2023 15:12:24 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1186 zone_name TAZ_1186
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer: 10 out of 589 different from round
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1186: OPTIMAL
+05/12/2023 15:12:25 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1187 zone_name TAZ_1187
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer: 19 out of 589 different from round
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1187: OPTIMAL
+05/12/2023 15:12:25 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1188 zone_name TAZ_1188
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - omitting 31 zero weight rows out of 589
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer: 6 out of 558 different from round
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1188: OPTIMAL
+05/12/2023 15:12:25 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1231 zone_name TAZ_1231
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer: 31 out of 589 different from round
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1231: OPTIMAL
+05/12/2023 15:12:25 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1232 zone_name TAZ_1232
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer: 33 out of 589 different from round
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1232: OPTIMAL
+05/12/2023 15:12:25 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1233 zone_name TAZ_1233
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer: 34 out of 589 different from round
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1233: OPTIMAL
+05/12/2023 15:12:25 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1234 zone_name TAZ_1234
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer: 25 out of 589 different from round
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1234: OPTIMAL
+05/12/2023 15:12:25 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1235 zone_name TAZ_1235
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer: 21 out of 589 different from round
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1235: OPTIMAL
+05/12/2023 15:12:25 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1307 zone_name TAZ_1307
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer: 19 out of 589 different from round
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1307: OPTIMAL
+05/12/2023 15:12:25 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1308 zone_name TAZ_1308
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer: 26 out of 589 different from round
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1308: OPTIMAL
+05/12/2023 15:12:25 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1309 zone_name TAZ_1309
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer: 26 out of 589 different from round
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1309: OPTIMAL
+05/12/2023 15:12:25 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1310 zone_name TAZ_1310
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer: 32 out of 589 different from round
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1310: OPTIMAL
+05/12/2023 15:12:25 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1311 zone_name TAZ_1311
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer: 40 out of 589 different from round
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1311: OPTIMAL
+05/12/2023 15:12:25 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1312 zone_name TAZ_1312
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer: 24 out of 589 different from round
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1312: OPTIMAL
+05/12/2023 15:12:25 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1313 zone_name TAZ_1313
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer: 15 out of 589 different from round
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1313: OPTIMAL
+05/12/2023 15:12:25 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1314 zone_name TAZ_1314
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer: 18 out of 589 different from round
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1314: OPTIMAL
+05/12/2023 15:12:25 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1315 zone_name TAZ_1315
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer: 15 out of 589 different from round
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1315: OPTIMAL
+05/12/2023 15:12:25 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1316 zone_name TAZ_1316
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer: 31 out of 589 different from round
+05/12/2023 15:12:25 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1316: OPTIMAL
+05/12/2023 15:12:25 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1317 zone_name TAZ_1317
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer: 31 out of 589 different from round
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1317: OPTIMAL
+05/12/2023 15:12:26 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1318 zone_name TAZ_1318
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer: 32 out of 589 different from round
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1318: OPTIMAL
+05/12/2023 15:12:26 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1319 zone_name TAZ_1319
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer: 20 out of 589 different from round
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1319: OPTIMAL
+05/12/2023 15:12:26 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1320 zone_name TAZ_1320
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer: 20 out of 589 different from round
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1320: OPTIMAL
+05/12/2023 15:12:26 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1321 zone_name TAZ_1321
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer: 36 out of 589 different from round
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1321: OPTIMAL
+05/12/2023 15:12:26 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1322 zone_name TAZ_1322
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer: 49 out of 589 different from round
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1322: OPTIMAL
+05/12/2023 15:12:26 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1545 zone_name TAZ_1545
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer: 22 out of 589 different from round
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1545: OPTIMAL
+05/12/2023 15:12:26 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1546 zone_name TAZ_1546
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer: 35 out of 589 different from round
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1546: OPTIMAL
+05/12/2023 15:12:26 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1547 zone_name TAZ_1547
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - omitting 3 zero weight rows out of 589
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer: 14 out of 586 different from round
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1547: OPTIMAL
+05/12/2023 15:12:26 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1549 zone_name TAZ_1549
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - omitting 4 zero weight rows out of 589
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer: 14 out of 585 different from round
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1549: OPTIMAL
+05/12/2023 15:12:26 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1550 zone_name TAZ_1550
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - omitting 3 zero weight rows out of 589
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer: 16 out of 586 different from round
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1550: OPTIMAL
+05/12/2023 15:12:26 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1551 zone_name TAZ_1551
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - omitting 3 zero weight rows out of 589
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer: 12 out of 586 different from round
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1551: OPTIMAL
+05/12/2023 15:12:26 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1552 zone_name TAZ_1552
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - omitting 212 zero weight rows out of 589
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer: 6 out of 377 different from round
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1552: OPTIMAL
+05/12/2023 15:12:26 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1903 zone_name TAZ_1903
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer: 28 out of 589 different from round
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1903: OPTIMAL
+05/12/2023 15:12:26 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1904 zone_name TAZ_1904
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer: 22 out of 589 different from round
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1904: OPTIMAL
+05/12/2023 15:12:26 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1911 zone_name TAZ_1911
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer: 24 out of 589 different from round
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1911: OPTIMAL
+05/12/2023 15:12:26 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1912 zone_name TAZ_1912
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer: 33 out of 589 different from round
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1912: OPTIMAL
+05/12/2023 15:12:26 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 1913 zone_name TAZ_1913
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer: 34 out of 589 different from round
+05/12/2023 15:12:26 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_1913: OPTIMAL
+05/12/2023 15:12:26 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2059 zone_name TAZ_2059
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer: 40 out of 589 different from round
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2059: OPTIMAL
+05/12/2023 15:12:27 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2069 zone_name TAZ_2069
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - omitting 1 zero weight rows out of 589
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer: 8 out of 588 different from round
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2069: OPTIMAL
+05/12/2023 15:12:27 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2070 zone_name TAZ_2070
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - omitting 146 zero weight rows out of 589
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer: 7 out of 443 different from round
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2070: OPTIMAL
+05/12/2023 15:12:27 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2071 zone_name TAZ_2071
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - omitting 3 zero weight rows out of 589
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer: 8 out of 586 different from round
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2071: OPTIMAL
+05/12/2023 15:12:27 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2072 zone_name TAZ_2072
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - omitting 2 zero weight rows out of 589
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer: 12 out of 587 different from round
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2072: OPTIMAL
+05/12/2023 15:12:27 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2073 zone_name TAZ_2073
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - omitting 1 zero weight rows out of 589
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer: 11 out of 588 different from round
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2073: OPTIMAL
+05/12/2023 15:12:27 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2127 zone_name TAZ_2127
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer: 17 out of 589 different from round
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2127: OPTIMAL
+05/12/2023 15:12:27 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2226 zone_name TAZ_2226
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer: 34 out of 589 different from round
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2226: OPTIMAL
+05/12/2023 15:12:27 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2258 zone_name TAZ_2258
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer: 23 out of 589 different from round
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2258: OPTIMAL
+05/12/2023 15:12:27 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2440 zone_name TAZ_2440
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - omitting 270 zero weight rows out of 589
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer: 5 out of 319 different from round
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2440: OPTIMAL
+05/12/2023 15:12:27 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2441 zone_name TAZ_2441
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - omitting 109 zero weight rows out of 589
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer: 9 out of 480 different from round
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2441: OPTIMAL
+05/12/2023 15:12:27 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2528 zone_name TAZ_2528
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer: 6 out of 589 different from round
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2528: OPTIMAL
+05/12/2023 15:12:27 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2576 zone_name TAZ_2576
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer: 39 out of 589 different from round
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2576: OPTIMAL
+05/12/2023 15:12:27 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2577 zone_name TAZ_2577
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer: 40 out of 589 different from round
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2577: OPTIMAL
+05/12/2023 15:12:27 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2600 zone_name TAZ_2600
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer: 32 out of 589 different from round
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2600: OPTIMAL
+05/12/2023 15:12:27 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2601 zone_name TAZ_2601
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer: 8 out of 589 different from round
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2601: OPTIMAL
+05/12/2023 15:12:27 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2602 zone_name TAZ_2602
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer: 33 out of 589 different from round
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2602: OPTIMAL
+05/12/2023 15:12:27 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2603 zone_name TAZ_2603
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer: 25 out of 589 different from round
+05/12/2023 15:12:27 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2603: OPTIMAL
+05/12/2023 15:12:27 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2604 zone_name TAZ_2604
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer: 21 out of 589 different from round
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2604: OPTIMAL
+05/12/2023 15:12:28 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2605 zone_name TAZ_2605
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer: 4 out of 589 different from round
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2605: OPTIMAL
+05/12/2023 15:12:28 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2606 zone_name TAZ_2606
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer: 40 out of 589 different from round
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2606: OPTIMAL
+05/12/2023 15:12:28 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2637 zone_name TAZ_2637
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer: 40 out of 589 different from round
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2637: OPTIMAL
+05/12/2023 15:12:28 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2638 zone_name TAZ_2638
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer: 38 out of 589 different from round
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2638: OPTIMAL
+05/12/2023 15:12:28 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2639 zone_name TAZ_2639
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer: 19 out of 589 different from round
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2639: OPTIMAL
+05/12/2023 15:12:28 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2640 zone_name TAZ_2640
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer: 42 out of 589 different from round
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2640: OPTIMAL
+05/12/2023 15:12:28 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2641 zone_name TAZ_2641
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer: 36 out of 589 different from round
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2641: OPTIMAL
+05/12/2023 15:12:28 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2642 zone_name TAZ_2642
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer: 36 out of 589 different from round
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2642: OPTIMAL
+05/12/2023 15:12:28 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2657 zone_name TAZ_2657
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer: 35 out of 589 different from round
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2657: OPTIMAL
+05/12/2023 15:12:28 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2658 zone_name TAZ_2658
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer: 38 out of 589 different from round
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2658: OPTIMAL
+05/12/2023 15:12:28 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2659 zone_name TAZ_2659
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer: 31 out of 589 different from round
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2659: OPTIMAL
+05/12/2023 15:12:28 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2660 zone_name TAZ_2660
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer: 31 out of 589 different from round
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2660: OPTIMAL
+05/12/2023 15:12:28 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2661 zone_name TAZ_2661
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer: 21 out of 589 different from round
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2661: OPTIMAL
+05/12/2023 15:12:28 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2662 zone_name TAZ_2662
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer: 30 out of 589 different from round
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2662: OPTIMAL
+05/12/2023 15:12:28 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2663 zone_name TAZ_2663
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer: 38 out of 589 different from round
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2663: OPTIMAL
+05/12/2023 15:12:28 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2664 zone_name TAZ_2664
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer: 26 out of 589 different from round
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2664: OPTIMAL
+05/12/2023 15:12:28 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2665 zone_name TAZ_2665
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer: 35 out of 589 different from round
+05/12/2023 15:12:28 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2665: OPTIMAL
+05/12/2023 15:12:28 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2667 zone_name TAZ_2667
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer: 27 out of 589 different from round
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2667: OPTIMAL
+05/12/2023 15:12:29 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2668 zone_name TAZ_2668
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer: 44 out of 589 different from round
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2668: OPTIMAL
+05/12/2023 15:12:29 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2669 zone_name TAZ_2669
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer: 27 out of 589 different from round
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2669: OPTIMAL
+05/12/2023 15:12:29 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2670 zone_name TAZ_2670
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer: 21 out of 589 different from round
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2670: OPTIMAL
+05/12/2023 15:12:29 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2671 zone_name TAZ_2671
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer: 18 out of 589 different from round
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2671: OPTIMAL
+05/12/2023 15:12:29 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2672 zone_name TAZ_2672
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer: 35 out of 589 different from round
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2672: OPTIMAL
+05/12/2023 15:12:29 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2673 zone_name TAZ_2673
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer: 32 out of 589 different from round
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2673: OPTIMAL
+05/12/2023 15:12:29 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2674 zone_name TAZ_2674
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer: 27 out of 589 different from round
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2674: OPTIMAL
+05/12/2023 15:12:29 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2675 zone_name TAZ_2675
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer: 17 out of 589 different from round
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2675: OPTIMAL
+05/12/2023 15:12:29 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2676 zone_name TAZ_2676
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer: 36 out of 589 different from round
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2676: OPTIMAL
+05/12/2023 15:12:29 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2677 zone_name TAZ_2677
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer: 22 out of 589 different from round
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2677: OPTIMAL
+05/12/2023 15:12:29 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2678 zone_name TAZ_2678
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer: 36 out of 589 different from round
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2678: OPTIMAL
+05/12/2023 15:12:29 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2679 zone_name TAZ_2679
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer: 43 out of 589 different from round
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2679: OPTIMAL
+05/12/2023 15:12:29 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2680 zone_name TAZ_2680
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer: 14 out of 589 different from round
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2680: OPTIMAL
+05/12/2023 15:12:29 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2681 zone_name TAZ_2681
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer: 43 out of 589 different from round
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2681: OPTIMAL
+05/12/2023 15:12:29 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2682 zone_name TAZ_2682
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer: 26 out of 589 different from round
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2682: OPTIMAL
+05/12/2023 15:12:29 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2683 zone_name TAZ_2683
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer: 32 out of 589 different from round
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2683: OPTIMAL
+05/12/2023 15:12:29 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2684 zone_name TAZ_2684
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer: 35 out of 589 different from round
+05/12/2023 15:12:29 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2684: OPTIMAL
+05/12/2023 15:12:29 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2685 zone_name TAZ_2685
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer: 21 out of 589 different from round
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2685: OPTIMAL
+05/12/2023 15:12:30 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2686 zone_name TAZ_2686
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer: 23 out of 589 different from round
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2686: OPTIMAL
+05/12/2023 15:12:30 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2687 zone_name TAZ_2687
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer: 28 out of 589 different from round
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2687: OPTIMAL
+05/12/2023 15:12:30 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2688 zone_name TAZ_2688
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer: 29 out of 589 different from round
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2688: OPTIMAL
+05/12/2023 15:12:30 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2690 zone_name TAZ_2690
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer: 17 out of 589 different from round
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2690: OPTIMAL
+05/12/2023 15:12:30 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2691 zone_name TAZ_2691
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer: 26 out of 589 different from round
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2691: OPTIMAL
+05/12/2023 15:12:30 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2692 zone_name TAZ_2692
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer: 33 out of 589 different from round
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2692: OPTIMAL
+05/12/2023 15:12:30 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2693 zone_name TAZ_2693
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer: 14 out of 589 different from round
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2693: OPTIMAL
+05/12/2023 15:12:30 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2694 zone_name TAZ_2694
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer: 10 out of 589 different from round
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2694: OPTIMAL
+05/12/2023 15:12:30 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2695 zone_name TAZ_2695
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer: 18 out of 589 different from round
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2695: OPTIMAL
+05/12/2023 15:12:30 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2696 zone_name TAZ_2696
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer: 17 out of 589 different from round
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2696: OPTIMAL
+05/12/2023 15:12:30 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2697 zone_name TAZ_2697
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer: 16 out of 589 different from round
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2697: OPTIMAL
+05/12/2023 15:12:30 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2698 zone_name TAZ_2698
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer: 9 out of 589 different from round
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2698: OPTIMAL
+05/12/2023 15:12:30 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2699 zone_name TAZ_2699
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer: 39 out of 589 different from round
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2699: OPTIMAL
+05/12/2023 15:12:30 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2706 zone_name TAZ_2706
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer: 42 out of 589 different from round
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2706: OPTIMAL
+05/12/2023 15:12:30 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2707 zone_name TAZ_2707
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer: 36 out of 589 different from round
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2707: OPTIMAL
+05/12/2023 15:12:30 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2708 zone_name TAZ_2708
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer: 24 out of 589 different from round
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2708: OPTIMAL
+05/12/2023 15:12:30 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2709 zone_name TAZ_2709
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer: 29 out of 589 different from round
+05/12/2023 15:12:30 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2709: OPTIMAL
+05/12/2023 15:12:30 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2710 zone_name TAZ_2710
+05/12/2023 15:12:31 - DEBUG - populationsim.integerizer - Integerizer: 27 out of 589 different from round
+05/12/2023 15:12:31 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2710: OPTIMAL
+05/12/2023 15:12:31 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2711 zone_name TAZ_2711
+05/12/2023 15:12:31 - DEBUG - populationsim.integerizer - Integerizer: 24 out of 589 different from round
+05/12/2023 15:12:31 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2711: OPTIMAL
+05/12/2023 15:12:31 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2712 zone_name TAZ_2712
+05/12/2023 15:12:31 - DEBUG - populationsim.integerizer - Integerizer: 32 out of 589 different from round
+05/12/2023 15:12:31 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2712: OPTIMAL
+05/12/2023 15:12:31 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2713 zone_name TAZ_2713
+05/12/2023 15:12:31 - DEBUG - populationsim.integerizer - Integerizer: 37 out of 589 different from round
+05/12/2023 15:12:31 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2713: OPTIMAL
+05/12/2023 15:12:31 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2714 zone_name TAZ_2714
+05/12/2023 15:12:31 - DEBUG - populationsim.integerizer - Integerizer: 31 out of 589 different from round
+05/12/2023 15:12:31 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2714: OPTIMAL
+05/12/2023 15:12:31 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2715 zone_name TAZ_2715
+05/12/2023 15:12:31 - DEBUG - populationsim.integerizer - Integerizer: 30 out of 589 different from round
+05/12/2023 15:12:31 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2715: OPTIMAL
+05/12/2023 15:12:31 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2716 zone_name TAZ_2716
+05/12/2023 15:12:31 - DEBUG - populationsim.integerizer - Integerizer: 32 out of 589 different from round
+05/12/2023 15:12:31 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2716: OPTIMAL
+05/12/2023 15:12:31 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2717 zone_name TAZ_2717
+05/12/2023 15:12:31 - DEBUG - populationsim.integerizer - Integerizer: 26 out of 589 different from round
+05/12/2023 15:12:31 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2717: OPTIMAL
+05/12/2023 15:12:31 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2718 zone_name TAZ_2718
+05/12/2023 15:12:31 - DEBUG - populationsim.integerizer - Integerizer: 28 out of 589 different from round
+05/12/2023 15:12:31 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2718: OPTIMAL
+05/12/2023 15:12:31 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2719 zone_name TAZ_2719
+05/12/2023 15:12:31 - DEBUG - populationsim.integerizer - Integerizer: 28 out of 589 different from round
+05/12/2023 15:12:31 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2719: OPTIMAL
+05/12/2023 15:12:31 - INFO - populationsim.multi_integerizer - sequential_integerizing zone_id 2859 zone_name TAZ_2859
+05/12/2023 15:12:31 - DEBUG - populationsim.integerizer - Integerizer: 20 out of 589 different from round
+05/12/2023 15:12:31 - DEBUG - populationsim.integerizer - Integerizer status for backstopped PUMA_4702503_TAZ_2859: OPTIMAL
+05/12/2023 15:12:31 - INFO - populationsim.multi_integerizer - do_simul_integerizing 7 infeasable subzones for PUMA_4702503. 
+05/12/2023 15:12:58 - DEBUG - populationsim.multi_integerizer - SimulIntegerizer status OPTIMAL
+05/12/2023 15:12:58 - INFO - populationsim.multi_integerizer - do_simul_integerizing retry succeeded for PUMA_4702503 status OPTIMAL. 
+05/12/2023 15:12:58 - INFO - populationsim.steps.sub_balancing - adding table TAZ_weights
+05/12/2023 15:12:58 - DEBUG - activitysim.core.tracing - Time to execute #run_model completed step 'sub_balancing.geography=TAZ' : 531.507 seconds (8.9 minutes)
+05/12/2023 15:12:58 - DEBUG - activitysim.core.pipeline - add_checkpoint sub_balancing.geography=TAZ timestamp 2023-12-05 15:12:58.831594
+05/12/2023 15:12:58 - DEBUG - activitysim.core.pipeline - add_checkpoint 'sub_balancing.geography=TAZ' table 'TAZ_weights' (179645, 6) 9.3 MB
+05/12/2023 15:12:58 - DEBUG - activitysim.core.pipeline - add_checkpoint 'sub_balancing.geography=TAZ' table 'TAZ_weights_sparse' (23493, 6) 1.2 MB
+05/12/2023 15:12:58 - DEBUG - activitysim.core.pipeline - add_checkpoint 'sub_balancing.geography=TAZ' table 'trace_TAZ_weights' (589, 6) 30.6 KB
+05/12/2023 15:12:58 - INFO - activitysim.core.tracing - Time to execute run (1 models) : 531.699 seconds (8.9 minutes)
+05/12/2023 15:12:58 - DEBUG - activitysim.core.pipeline - add_checkpoint mp_sub_balancing_TAZ timestamp 2023-12-05 15:12:58.967380
+05/12/2023 15:12:58 - DEBUG - activitysim.core.pipeline - close_pipeline
+05/12/2023 15:12:58 - INFO - activitysim.core.mem - mp_sub_balancing_TAZ_7 high water mark rss: 394_760_192 (394.8 MB) timestamp: 05/12/2023 15:04:07 label:pipeline.run_model sub_balancing.geography=TAZ start
+05/12/2023 15:12:58 - INFO - activitysim.core.mem - mp_sub_balancing_TAZ_7 high water mark uss: 365_461_504 (365.5 MB) timestamp: 05/12/2023 15:04:07 label:pipeline.run_model sub_balancing.geography=TAZ start

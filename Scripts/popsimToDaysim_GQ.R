@@ -144,8 +144,8 @@ df_per_m <- merge(df_per,perm_map,by="hh_id",all.x=T)
 names(df_per_m)[names(df_per_m) == "SERIALNO"] <- "serialno"
 perperm <- df_per_m
 ### Set daysim input files as output
-hhoutfile <- file.path(outputDir,"household_2017_GQ.dat")
-peroutfile <- file.path(outputDir,"person_2017_GQ.dat")
+hhoutfile <- file.path(outputDir,"household_2021_GQ.dat")
+peroutfile <- file.path(outputDir,"person_2021_GQ.dat")
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 

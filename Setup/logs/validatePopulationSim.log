@@ -1,0 +1,73 @@
+GEOGRAPHY 
+    "MAZ" 
+
+ Processed Control:  MAZ - Total HouseholdsGEOGRAPHY 
+    "TAZ" 
+
+ Processed Control:  TAZ - Household Size: 1 person HHGEOGRAPHY 
+    "TAZ" 
+
+ Processed Control:  TAZ - Household Size: 2 person HHGEOGRAPHY 
+    "TAZ" 
+
+ Processed Control:  TAZ - Household Size: 3 person HHGEOGRAPHY 
+    "TAZ" 
+
+ Processed Control:  TAZ - Household Size: 4+ person HHGEOGRAPHY 
+    "TAZ" 
+
+ Processed Control:  TAZ - Household Workers: 0 worker HHGEOGRAPHY 
+    "TAZ" 
+
+ Processed Control:  TAZ - Household Workers: 1 worker HHGEOGRAPHY 
+    "TAZ" 
+
+ Processed Control:  TAZ - Household Workers: 2 worker HHGEOGRAPHY 
+    "TAZ" 
+
+ Processed Control:  TAZ - Household Workers: 3+ worker HHGEOGRAPHY 
+    "TAZ" 
+
+ Processed Control:  TAZ - Household Income: (-Inf,24999)GEOGRAPHY 
+    "TAZ" 
+
+ Processed Control:  TAZ - Household Income: (24999,49999)GEOGRAPHY 
+    "TAZ" 
+
+ Processed Control:  TAZ - Household Income: (49999,74999)GEOGRAPHY 
+    "TAZ" 
+
+ Processed Control:  TAZ - Household Income: (74999,99999)GEOGRAPHY 
+    "TAZ" 
+
+ Processed Control:  TAZ - Household Income: (99999,+Inf)GEOGRAPHY 
+    "TAZ" 
+
+ Processed Control:  TAZ - Household With KidsGEOGRAPHY 
+    "TAZ" 
+
+ Processed Control:  TAZ - Household Wihout KidsGEOGRAPHY 
+    "TAZ" 
+
+ Processed Control:  TAZ - Person Age: 0-17 yearsGEOGRAPHY 
+    "TAZ" 
+
+ Processed Control:  TAZ - Person Age: 18-24 yearsGEOGRAPHY 
+    "TAZ" 
+
+ Processed Control:  TAZ - Person Age: 25-34 yearsGEOGRAPHY 
+    "TAZ" 
+
+ Processed Control:  TAZ - Person Age: 35-49 yearsGEOGRAPHY 
+    "TAZ" 
+
+ Processed Control:  TAZ - Person Age: 50-64 yearsGEOGRAPHY 
+    "TAZ" 
+
+ Processed Control:  TAZ - Person Age: 65-79 yearsGEOGRAPHY 
+    "TAZ" 
+
+ Processed Control:  TAZ - Person Age: >=80 yearsGEOGRAPHY 
+ "REGION" 
+
+ Processed Control:  REGION - Total Population

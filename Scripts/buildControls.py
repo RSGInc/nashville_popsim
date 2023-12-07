@@ -28,7 +28,7 @@ print("Python version:", sys.version)
 #read properties from parameters file
 
 parameters_file = sys.argv[1]
-#parameters_file=r'E:\Projects\Clients\NashvilleMPO\ModelUpdate2023\Tasks\Task4_Enhancements\Update_PopulationSim_Software\GitHub_William\Data\parameters.csv'
+# parameters_file=r'E:\Projects\Clients\NashvilleMPO\ModelUpdate2023\Tasks\Task4_Enhancements\Update_PopulationSim_Software\GitHub_William\Data\parameters.csv'
 parameters = pd.read_csv(parameters_file)
 parameters.columns = ['Key', 'Value']
 WORKING_DIR = parameters[parameters.Key == 'WORKING_DIR']['Value'].item().strip(' ')
@@ -166,7 +166,7 @@ print("CHECK TOT HH by AGE", tazControl['hh'].sum(), " = ", tazControl[['HHAGE15
 print("CHECK TOT HH by FAM", tazControl['hh'].sum(), " = ", tazControl[['HHFAMMAR','HHFAMNOWIFE','HHFAMNOHUSBAND', 'HHFAMNON', 'HHFAMNONALONE']].sum().sum(), sep=' ')
 
 # worker , kid, and income data
-print(hhworker_CT.columns)
+# print(hhworker_CT.columns)
 
 tazControl = tazControl.merge(hhworker_CT, how = 'left', on = "TRACT").merge(hhincome_CT, how = 'left', on = "TRACT").merge(hhkids_CT, how = 'left', on = 'TRACT').merge(hhunit_CT, how='left', on='TRACT')
 tazControl['HHWRKS0'] = tazControl['ct_pct']*tazControl['B08202_002E']                 # allocatE'] to E']ach MAZ from tazControl['Block group tazControl['BasE']d on proportion
@@ -277,8 +277,8 @@ tazControl3 = tazControl[['ct_pct','TAZ', 'HHS', 'GQ','PUMA', 'TRACT','COUNTY', 
 #----------------
 
 # read PUMS person and HH data
-pums_per = pd.read_csv(os.path.join(WORKING_DIR, "Data","PUMS","Person","psam_p47.csv"))
-pums_hh = pd.read_csv(os.path.join(WORKING_DIR, "Data","PUMS","Household","psam_h47.csv"))
+pums_per = pd.read_csv(os.path.join(WORKING_DIR, "Data","PUMS","Person","psam_p47.csv"), dtype={'SERIALNO': str})
+pums_hh = pd.read_csv(os.path.join(WORKING_DIR, "Data","PUMS","Household","psam_h47.csv"), dtype={'SERIALNO': str})
 
 pums_per = pums_per[pums_per['PUMA'].isin(popsyn_xwalk.PUMA10.unique())]
 pums_hh = pums_hh[pums_hh['PUMA'].isin(popsyn_xwalk.PUMA10.unique())]
@@ -288,7 +288,7 @@ print("xwalkpuma",popsyn_xwalk.PUMA10.unique())
 print("len raw pums", len(pums_hh))
 
 seed_house = pums_hh[(pums_hh.NP != 0) & (pums_hh.TYPEHUGQ.isin([1]))]	
-# 'TYPEHUGQ' is Type of unit in 2011-2015 data, changed to 'TYPEHUGQ' in 2017-2021 data,
+# 'TYPE' is Type of unit in 2011-2015 data, changed to 'TYPEHUGQ' in 2017-2021 data,
 print("len seed", len(seed_house))
 seed_house = seed_house.fillna(0)
 seed_person = pums_per[pums_per.SERIALNO.isin(seed_house.SERIALNO.unique())]
@@ -298,8 +298,8 @@ seed_person = seed_person.fillna(0)
 # compute number of workers in the household	
 seed_person['workers'] = np.where(seed_person.ESR.isin([1,2,4,5]), 1,0)
 seed_person['workers'] = seed_person['workers'].astype(np.int64)
-seed_person['SERIALNO'] = seed_person['SERIALNO'].astype(str)
-seed_house['SERIALNO'] = seed_house['SERIALNO'].astype(str)
+# seed_person['SERIALNO'] = seed_person['SERIALNO'].astype(str)
+# seed_house['SERIALNO'] = seed_house['SERIALNO'].astype(str)
 
 # Convert 'workers' column in seed_person to int (if needed)
 seed_person['workers'] = seed_person['workers'].astype(int)
@@ -387,7 +387,7 @@ seed_person.to_csv(os.path.join(outputDir, "seed_persons.csv"), index = False )
 # Create distribution of GQ population by age for each Census Tract [run only once]
 # Non-Institutional GQ population
 pums_pop = pums_per.merge(pums_hh[["SERIALNO", "WGTP", "TYPEHUGQ"]],  on = "SERIALNO", how = 'left')
-pums_pop = pums_pop[pums_pop.TYPEHUGQ >= 2]#filter(TYPEHUGQ >= 2) %>%  # GQ population
+pums_pop = pums_pop[pums_pop.TYPEHUGQ>=2]#filter(TYPEHUGQ >= 2) %>%  # GQ population
 pums_pop['age_group7'] = np.where(pums_pop.AGEP>=80, 1, 0)
 pums_pop['age_group6'] = np.where((pums_pop.AGEP>=65) & (pums_pop.AGEP<=79), 1, 0)
 pums_pop['age_group5'] = np.where((pums_pop.AGEP>=50) & (pums_pop.AGEP<=64), 1, 0) 
@@ -469,6 +469,8 @@ total_popu_TAZ  = 1*tazControl['HHSIZE1'].sum() +2*tazControl['HHSIZE2'].sum() +
 per_sc = tazControl4['B01001_001E'].sum()
 print('Total persons in ACS', per_sc, sep=' ')
 
+tazControl4 = tazControl4.applymap(lambda x: max(0, x))
+                                   
 tazControl4['TOT_POP_CENSUS'] = tazControl4['MALE']+tazControl4['FEMALE']
 tazControl4['TOTPOP_WGT'] = (tazControl4['HHSIZE1_S3']*1 + tazControl4['HHSIZE2_S3']*2 + tazControl4['HHSIZE3_S3']*3 + tazControl4['HHSIZE4M_S3']*wgt_avg_per)
 tazControl4['MALE_S']=np.where(tazControl4.TOT_POP_CENSUS > 0,tazControl4.TOTPOP_WGT*tazControl4['MALE']/tazControl4.TOT_POP_CENSUS,0).astype(int) 
@@ -501,6 +503,8 @@ for idx,col in enumerate(['AGE0to17_S','AGE18to24_S','AGE25to34_S','AGE35to49_S'
 
 print("difference from rounding age", tazControl4['TOTPOP_WGT'].sum()-tazControl4[['AGE0to17_S','AGE18to24_S','AGE25to34_S','AGE35to49_S','AGE50to64_S','AGE65to79_S','AGE80M_S']].sum().sum(), sep=' ')
 
+tazControl4[['MALE_S','FEMALE_S','AGE0to17_S','AGE18to24_S','AGE25to34_S','AGE35to49_S','AGE50to64_S','AGE65to79_S','AGE80M_S']] = tazControl4[['MALE_S','FEMALE_S','AGE0to17_S','AGE18to24_S','AGE25to34_S','AGE35to49_S','AGE50to64_S','AGE65to79_S','AGE80M_S']].astype(int)
+                                         
 tazControl4['TOTPOP_S'] = tazControl4['AGE0to17_S']+tazControl4['AGE18to24_S']+tazControl4['AGE25to34_S']+tazControl4['AGE35to49_S']+tazControl4['AGE50to64_S']+tazControl4['AGE65to79_S']+tazControl4['AGE80M_S']
 tazControl4.rename(columns = {'PUMA_x':'PUMA'})[['TAZ','HHS','GQ','PUMA','COUNTY','HHSIZE1_S3','HHSIZE2_S3','HHSIZE3_S3','HHSIZE4M_S3','HHAGE1_S3','HHAGE2_S3','HHAGE3_S3',
  'HHWRK1_S3','HHWRK2_S3','HHWRK3_S3','HHWRK4_S3','HHINC1_S3','HHINC2_S3','HHINC3_S3','HHINC4_S3','HHINC5_S3','HH_WIKID_S3','HH_WOKID_S3','HHFAMMAR_S3','HHFAMNOWIFE_S3','HHFAMNOHUSBAND_S3','HHFAMNON_S3','HHFAMNONALONE_S3','HHUNITSINGLE_S3','HHUNITMULTI_S3','HHUNITMOBILE_S3',

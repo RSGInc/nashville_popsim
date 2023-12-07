@@ -1,0 +1,81 @@
+05/12/2023 15:15:05 - INFO - activitysim - Read logging configuration from: configs\HH\logging.yaml
+05/12/2023 15:15:05 - DEBUG - activitysim.core.random - Set random seed base to 0
+05/12/2023 15:15:05 - DEBUG - activitysim.core.pipeline - open_pipeline - open existing pipeline
+05/12/2023 15:15:05 - DEBUG - activitysim.core.pipeline - opened pipeline_store output\HH\pipeline.h5
+05/12/2023 15:15:05 - INFO - activitysim.core.pipeline - load_checkpoint mp_sub_balancing_TAZ
+05/12/2023 15:15:05 - INFO - activitysim.core.pipeline - load_checkpoint mp_sub_balancing_TAZ timestamp 2023-12-05 15:15:01.623111
+05/12/2023 15:15:06 - INFO - activitysim.core.pipeline - load_checkpoint table households (33856, 242)
+05/12/2023 15:15:06 - DEBUG - activitysim.core.pipeline - rewrap table households inplace=False
+05/12/2023 15:15:07 - INFO - activitysim.core.pipeline - load_checkpoint table persons (82464, 290)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.pipeline - rewrap table persons inplace=False
+05/12/2023 15:15:07 - INFO - activitysim.core.pipeline - load_checkpoint table geo_cross_walk (27925, 7)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.pipeline - rewrap table geo_cross_walk inplace=False
+05/12/2023 15:15:07 - INFO - activitysim.core.pipeline - load_checkpoint table MAZ_control_data (27925, 3)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.pipeline - rewrap table MAZ_control_data inplace=False
+05/12/2023 15:15:07 - INFO - activitysim.core.pipeline - load_checkpoint table TAZ_control_data (3007, 45)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.pipeline - rewrap table TAZ_control_data inplace=False
+05/12/2023 15:15:07 - INFO - activitysim.core.pipeline - load_checkpoint table REGION_control_data (1, 2)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.pipeline - rewrap table REGION_control_data inplace=False
+05/12/2023 15:15:07 - INFO - activitysim.core.pipeline - load_checkpoint table crosswalk (27925, 4)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.pipeline - rewrap table crosswalk inplace=False
+05/12/2023 15:15:07 - INFO - activitysim.core.pipeline - load_checkpoint table slice_crosswalk (12, 2)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.pipeline - rewrap table slice_crosswalk inplace=False
+05/12/2023 15:15:07 - INFO - activitysim.core.pipeline - load_checkpoint table control_spec (24, 6)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.pipeline - rewrap table control_spec inplace=False
+05/12/2023 15:15:07 - INFO - activitysim.core.pipeline - load_checkpoint table REGION_controls (1, 24)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.pipeline - rewrap table REGION_controls inplace=False
+05/12/2023 15:15:07 - INFO - activitysim.core.pipeline - load_checkpoint table PUMA_controls (12, 24)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.pipeline - rewrap table PUMA_controls inplace=False
+05/12/2023 15:15:07 - INFO - activitysim.core.pipeline - load_checkpoint table TAZ_controls (2808, 23)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.pipeline - rewrap table TAZ_controls inplace=False
+05/12/2023 15:15:07 - INFO - activitysim.core.pipeline - load_checkpoint table MAZ_controls (20675, 1)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.pipeline - rewrap table MAZ_controls inplace=False
+05/12/2023 15:15:07 - INFO - activitysim.core.pipeline - load_checkpoint table household_groups (33856, 3)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.pipeline - rewrap table household_groups inplace=False
+05/12/2023 15:15:07 - INFO - activitysim.core.pipeline - load_checkpoint table incidence_table (8734, 29)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.pipeline - rewrap table incidence_table inplace=False
+05/12/2023 15:15:07 - INFO - activitysim.core.pipeline - load_checkpoint table PUMA_weights (8734, 6)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.pipeline - rewrap table PUMA_weights inplace=False
+05/12/2023 15:15:07 - INFO - activitysim.core.pipeline - load_checkpoint table TAZ_weights (2030296, 6)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.pipeline - rewrap table TAZ_weights inplace=False
+05/12/2023 15:15:07 - INFO - activitysim.core.pipeline - load_checkpoint table TAZ_weights_sparse (330353, 6)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.pipeline - rewrap table TAZ_weights_sparse inplace=False
+05/12/2023 15:15:07 - INFO - activitysim.core.pipeline - load_checkpoint table trace_TAZ_weights (589, 6)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.pipeline - rewrap table trace_TAZ_weights inplace=False
+05/12/2023 15:15:07 - DEBUG - activitysim.core.pipeline - open_pipeline complete
+05/12/2023 15:15:07 - DEBUG - activitysim.core.mp_tasks - loaded table households (33856, 242)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.mp_tasks - loaded table persons (82464, 290)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.mp_tasks - loaded table geo_cross_walk (27925, 7)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.mp_tasks - loaded table MAZ_control_data (27925, 3)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.mp_tasks - loaded table TAZ_control_data (3007, 45)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.mp_tasks - loaded table REGION_control_data (1, 2)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.mp_tasks - loaded table crosswalk (27925, 4)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.mp_tasks - loaded table slice_crosswalk (12, 2)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.mp_tasks - loaded table control_spec (24, 6)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.mp_tasks - loaded table REGION_controls (1, 24)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.mp_tasks - loaded table PUMA_controls (12, 24)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.mp_tasks - loaded table TAZ_controls (2808, 23)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.mp_tasks - loaded table MAZ_controls (20675, 1)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.mp_tasks - loaded table household_groups (33856, 3)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.mp_tasks - loaded table incidence_table (8734, 29)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.mp_tasks - loaded table PUMA_weights (8734, 6)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.mp_tasks - loaded table TAZ_weights (2030296, 6)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.mp_tasks - loaded table TAZ_weights_sparse (330353, 6)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.mp_tasks - loaded table trace_TAZ_weights (589, 6)
+05/12/2023 15:15:07 - DEBUG - activitysim.core.pipeline - close_pipeline
+05/12/2023 15:15:07 - DEBUG - activitysim.core.mp_tasks - slice.except wildcard (True): excluding all tables not explicitly listed in slice.tables
+05/12/2023 15:15:07 - DEBUG - activitysim.core.mp_tasks - ### table_name: slice_crosswalk slice_rules: {'slice_by': 'primary'}
+05/12/2023 15:15:07 - DEBUG - activitysim.core.mp_tasks - ### table_name: crosswalk slice_rules: {'slice_by': 'column', 'column': 'PUMA', 'source': 'slice_crosswalk'}
+05/12/2023 15:15:07 - DEBUG - activitysim.core.mp_tasks - ### slicer_ref_cols: OrderedDict([('slice_crosswalk', 'PUMA'), ('crosswalk', None)])
+05/12/2023 15:15:08 - DEBUG - activitysim.core.mp_tasks - writing checkpoints ((1, 21)) to checkpoints in output\HH\mp_sub_balancing_MAZ_0-pipeline.h5
+05/12/2023 15:15:09 - DEBUG - activitysim.core.mp_tasks - writing checkpoints ((1, 21)) to checkpoints in output\HH\mp_sub_balancing_MAZ_1-pipeline.h5
+05/12/2023 15:15:10 - DEBUG - activitysim.core.mp_tasks - writing checkpoints ((1, 21)) to checkpoints in output\HH\mp_sub_balancing_MAZ_2-pipeline.h5
+05/12/2023 15:15:11 - DEBUG - activitysim.core.mp_tasks - writing checkpoints ((1, 21)) to checkpoints in output\HH\mp_sub_balancing_MAZ_3-pipeline.h5
+05/12/2023 15:15:12 - DEBUG - activitysim.core.mp_tasks - writing checkpoints ((1, 21)) to checkpoints in output\HH\mp_sub_balancing_MAZ_4-pipeline.h5
+05/12/2023 15:15:13 - DEBUG - activitysim.core.mp_tasks - writing checkpoints ((1, 21)) to checkpoints in output\HH\mp_sub_balancing_MAZ_5-pipeline.h5
+05/12/2023 15:15:14 - DEBUG - activitysim.core.mp_tasks - writing checkpoints ((1, 21)) to checkpoints in output\HH\mp_sub_balancing_MAZ_6-pipeline.h5
+05/12/2023 15:15:15 - DEBUG - activitysim.core.mp_tasks - writing checkpoints ((1, 21)) to checkpoints in output\HH\mp_sub_balancing_MAZ_7-pipeline.h5
+05/12/2023 15:15:16 - DEBUG - activitysim.core.mp_tasks - writing checkpoints ((1, 21)) to checkpoints in output\HH\mp_sub_balancing_MAZ_8-pipeline.h5
+05/12/2023 15:15:17 - DEBUG - activitysim.core.mp_tasks - writing checkpoints ((1, 21)) to checkpoints in output\HH\mp_sub_balancing_MAZ_9-pipeline.h5
+05/12/2023 15:15:18 - DEBUG - activitysim.core.mp_tasks - writing checkpoints ((1, 21)) to checkpoints in output\HH\mp_sub_balancing_MAZ_10-pipeline.h5
+05/12/2023 15:15:19 - DEBUG - activitysim.core.mp_tasks - writing checkpoints ((1, 21)) to checkpoints in output\HH\mp_sub_balancing_MAZ_11-pipeline.h5

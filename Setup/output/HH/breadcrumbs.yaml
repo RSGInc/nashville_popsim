@@ -1,0 +1,46 @@
+- apportion: true
+  coalesce: true
+  completed:
+  - mp_seed_balancing
+  name: mp_seed_balancing
+  simulate: true
+- apportion: true
+  coalesce: true
+  completed:
+  - mp_sub_balancing_TAZ_3
+  - mp_sub_balancing_TAZ_9
+  - mp_sub_balancing_TAZ_7
+  - mp_sub_balancing_TAZ_8
+  - mp_sub_balancing_TAZ_6
+  - mp_sub_balancing_TAZ_5
+  - mp_sub_balancing_TAZ_4
+  - mp_sub_balancing_TAZ_2
+  - mp_sub_balancing_TAZ_11
+  - mp_sub_balancing_TAZ_0
+  - mp_sub_balancing_TAZ_10
+  - mp_sub_balancing_TAZ_1
+  name: mp_sub_balancing_TAZ
+  simulate: true
+- apportion: true
+  coalesce: true
+  completed:
+  - mp_sub_balancing_MAZ_9
+  - mp_sub_balancing_MAZ_2
+  - mp_sub_balancing_MAZ_3
+  - mp_sub_balancing_MAZ_4
+  - mp_sub_balancing_MAZ_8
+  - mp_sub_balancing_MAZ_7
+  - mp_sub_balancing_MAZ_1
+  - mp_sub_balancing_MAZ_5
+  - mp_sub_balancing_MAZ_10
+  - mp_sub_balancing_MAZ_11
+  - mp_sub_balancing_MAZ_6
+  - mp_sub_balancing_MAZ_0
+  name: mp_sub_balancing_MAZ
+  simulate: true
+- apportion: true
+  coalesce: true
+  completed:
+  - mp_summarize
+  name: mp_summarize
+  simulate: true

@@ -4,7 +4,7 @@ import os, sys
 
 #read properties from parameters file
 parameters_file = sys.argv[1]
-#parameters_file = r'E:\Projects\Clients\Nashville\Tasks\Task2_PopSim\Data\parameters.csv'
+# parameters_file=r'E:\Projects\Clients\NashvilleMPO\ModelUpdate2023\Tasks\Task4_Enhancements\Update_PopulationSim_Software\GitHub_William\Data\parameters.csv'
 parameters = pd.read_csv(parameters_file)
 parameters.columns = ['Key', 'Value']
 WORKING_DIR = parameters[parameters.Key == 'WORKING_DIR']['Value'].item().strip(' ')
@@ -21,7 +21,7 @@ puma_per = pd.read_csv(os.path.join(WORKING_DIR,'Setup','data','seed_persons.csv
 children = puma_per[puma_per.AGEP < 18]
 children = pd.DataFrame(children.groupby('hh_id',as_index = False)['PWGTP'].count())
 children.columns = ['hh_id','children']
-heads = puma_per[puma_per.RELP == 0][['hh_id','RAC1P']].rename(columns = {'RAC1P':'race_of_head'})
+heads = puma_per[puma_per.RELSHIPP == 20][['hh_id','RAC1P']].rename(columns = {'RAC1P':'race_of_head'})
 puma_veh = puma_veh.merge(children, how = 'left', on = 'hh_id').merge(heads, how = 'left', on = 'hh_id').fillna(0)
 puma_veh['HH'] = 1
 print(puma_veh.children.describe())

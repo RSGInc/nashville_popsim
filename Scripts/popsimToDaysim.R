@@ -134,8 +134,8 @@ names(df_per_m)[names(df_per_m) == "SERIALNO"] <- "serialno"
 perperm <- df_per_m
 
 ### Set daysim input files as output
-hhoutfile <- file.path(outputDir,"household_2017_HH.dat")
-peroutfile <- file.path(outputDir,"person_2017_HH.dat")
+hhoutfile <- file.path(outputDir,"household_2021_HH.dat")
+peroutfile <- file.path(outputDir,"person_2021_HH.dat")
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 

@@ -15,12 +15,12 @@ xwalk = pd.read_csv(os.path.join(xwalkDir,'geo_crosswalks.csv'))
 
 #hh
 
-hh = pd.read_csv(os.path.join(outputDir, 'household_2017_HH.dat'), sep = ' ')
-hhper = pd.read_csv(os.path.join(outputDir,'person_2017_HH.dat'), sep = ' ')
+hh = pd.read_csv(os.path.join(outputDir, 'household_2021_HH.dat'), sep = ' ')
+hhper = pd.read_csv(os.path.join(outputDir,'person_2021_HH.dat'), sep = ' ')
 
 #gq
 
-gq = pd.read_csv(os.path.join(outputDir, 'household_2017_GQ.dat'), sep = ' ')
+gq = pd.read_csv(os.path.join(outputDir, 'household_2021_GQ.dat'), sep = ' ')
 gq = gq.merge(xwalk[['MAZ','TAZ']], left_on = 'hhparcel', right_on = 'MAZ').drop('MAZ', axis = 1).rename(columns = {'TAZ':'hhtaz'})
 
 gq['new_id'] = np.arange(hh.hhno.max() +1, hh.hhno.max()+1 +len(gq))
@@ -30,7 +30,7 @@ idmap = gq[['hhno','new_id']]
 gq['hhno'] = gq['new_id']
 gq = gq[list(hh.columns)]
 
-gqper = pd.read_csv(os.path.join(outputDir, 'person_2017_GQ.dat'), sep = ' ')
+gqper = pd.read_csv(os.path.join(outputDir, 'person_2021_GQ.dat'), sep = ' ')
 gqper = gqper.merge(idmap, how = 'left', on = 'hhno').drop('hhno',axis = 1).rename(columns = {'new_id':'hhno'})
 gqper = gqper[list(hhper.columns)]
 

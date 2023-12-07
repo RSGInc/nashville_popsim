@@ -1,0 +1,104 @@
+E:\Projects\Clients\NashvilleMPO\ModelUpdate2023\Tasks\Task4_Enhancements\Update_PopulationSim_Software\GitHub_William\scripts\buildControls.py:374: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  gqpersons['SCHG'] = np.where(gqpersons['SCHG'].isnull(), 0, gqpersons['SCHG'])
+E:\Projects\Clients\NashvilleMPO\ModelUpdate2023\Tasks\Task4_Enhancements\Update_PopulationSim_Software\GitHub_William\scripts\buildControls.py:375: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  gqpersons['MIL'] = np.where(gqpersons['MIL'].isnull(), 0, gqpersons['MIL'])
+E:\Projects\Clients\NashvilleMPO\ModelUpdate2023\Tasks\Task4_Enhancements\Update_PopulationSim_Software\GitHub_William\scripts\buildControls.py:377: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  gqpersons['GQTYPE'] = np.where(gqpersons['SCHG'].isin([15,16]),1,np.where(gqpersons.MIL == 1, 2,3))
+Python version: 3.8.12 | packaged by conda-forge | (default, Oct 12 2021, 21:22:46) [MSC v.1916 64 bit (AMD64)]
+GWTOT: 31244
+Index(['MAZ', 'hh', 'GQ'], dtype='object')
+CHECK MAZ/TAZ:  725789 725789
+CHECK Block group for hhsize        BLOCKGRP  B11016_010E
+0  471490401011          123
+1  471490401012          190
+2  471490401021          110
+3  471490401022           48
+4  471490401041           54        BLOCKGRP
+0  471890303031
+1  470370156193
+2  471490404052
+3  471870504031
+4  470370187002
+CHECK HHSIZE!    B11016_010E    bg_pct   HHSIZE1
+0           31  0.029921  0.927559
+1          111  0.000000  0.000000
+2          188  0.000000  0.000000
+3          154  0.027897  4.296137
+4           70  0.000000  0.000000
+CHECK TOT HH by Size 725789  =  719601.0
+CHECK TOT HH by AGE 725789  =  719601.0
+CHECK TOT HH by FAM 725789  =  719601.0
+CHECK TOT HHWRK 725789  =  725130.0
+CHECK TOT HHINC 725789  =  725130.0
+CHECK TOT HHUNIT 725789  =  725130.0000000001
+count    3007.000000
+mean        2.047888
+std        12.008246
+min         0.000000
+25%         1.000000
+50%         2.000000
+75%         2.000000
+max       659.000000
+Name: diff_round_1, dtype: float64
+difference from rounding size 0
+difference from rounding age 0
+difference from rounding wrks 0
+difference from rounding INC 0
+difference from rounding FAM 0
+difference from rounding KID 0
+difference from rounding unit 0
+pums puma [2503  500 2402  400 2600 2501 2300 2700 2505 2502 2504 2401]
+xwalkpuma [2700 2402 2300 2505 2600  400  500 2502 2503 2401 2501 2504]
+len raw pums 39264
+len seed 33856
+seed_person['workers'] unique values: [0 1]
+seed_person['workers'] missing values: 0
+seed_person['SERIALNO'] NaN count: 0
+pums_pop check:    age_group1  percent_age_group1
+0          21            0.005268
+1           0            0.000000
+2          40            0.022936
+3          26            0.073446
+4          73            0.017477
+pre merge: 12
+CHECK RECORDS
+          gq_total  percent_age_group1  percent_age_group2
+count   391.000000          391.000000          391.000000
+mean     79.907928            0.043755            0.306277
+std     332.335167            0.056577            0.279722
+min       0.000000            0.000000            0.002933
+25%       0.000000            0.007294            0.099652
+50%       0.000000            0.017477            0.211930
+75%      18.000000            0.073446            0.578702
+max    3679.000000            0.202658            0.873471
+AGE GROUP1 415471.49846839136 416030.0
+          gq_total  percent_age_group1  percent_age_group2
+count  3007.000000         3007.000000         3007.000000
+mean    108.183239            0.039996            0.314254
+std     381.759352            0.051792            0.284327
+min       0.000000            0.000000            0.002933
+25%       0.000000            0.007294            0.099652
+50%       0.000000            0.017477            0.211930
+75%      26.000000            0.058966            0.578702
+max    3679.000000            0.202658            0.873471
+AGE GROUP 2 148694.78650839758 165790.0
+Total households with 4 and more persons 169170
+Avg. number of persons in 4+ person household (PUMS) 4.639995271029142
+Avg. number of persons in 4+ person household (PUMS) 4.775954370977701
+Total persons in ACS 14767264
+TOTPOP_WGT 1795575.0
+diff round sex 1.1641532182693481e-10
+total pop before adding diff 1751940
+difference from rounding age 0.0

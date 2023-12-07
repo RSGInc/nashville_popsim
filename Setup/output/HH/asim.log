@@ -1,0 +1,325 @@
+05/12/2023 15:02:56 - INFO - activitysim - Read logging configuration from: configs\HH\logging.yaml
+05/12/2023 15:02:56 - INFO - activitysim.cli.run - SETTING configs_dir: ['configs\\HH']
+05/12/2023 15:02:56 - INFO - activitysim.cli.run - SETTING settings_file_name: settings.yaml
+05/12/2023 15:02:56 - INFO - activitysim.cli.run - SETTING data_dir: data
+05/12/2023 15:02:56 - INFO - activitysim.cli.run - SETTING output_dir: output\HH
+05/12/2023 15:02:56 - INFO - activitysim.cli.run - SETTING multiprocess: True
+05/12/2023 15:02:56 - INFO - activitysim.cli.run - SETTING num_processes: 12
+05/12/2023 15:02:56 - INFO - activitysim.cli.run - SETTING resume_after: None
+05/12/2023 15:02:56 - INFO - activitysim.cli.run - SETTING GROUP_BY_INCIDENCE_SIGNATURE: True
+05/12/2023 15:02:56 - INFO - activitysim.cli.run - SETTING INTEGERIZE_WITH_BACKSTOPPED_CONTROLS: True
+05/12/2023 15:02:56 - INFO - activitysim.cli.run - SETTING SUB_BALANCE_WITH_FLOAT_SEED_WEIGHTS: False
+05/12/2023 15:02:56 - INFO - activitysim.cli.run - SETTING meta_control_data: None
+05/12/2023 15:02:56 - INFO - activitysim.cli.run - SETTING control_file_name: controls.csv
+05/12/2023 15:02:56 - INFO - activitysim.cli.run - SETTING USE_CVXPY: False
+05/12/2023 15:02:56 - INFO - activitysim.cli.run - SETTING USE_SIMUL_INTEGERIZER: True
+05/12/2023 15:02:56 - INFO - activitysim.cli.run - ENV MKL_NUM_THREADS: None
+05/12/2023 15:02:56 - INFO - activitysim.cli.run - ENV OMP_NUM_THREADS: None
+05/12/2023 15:02:56 - INFO - activitysim.cli.run - ENV OPENBLAS_NUM_THREADS: None
+05/12/2023 15:02:56 - INFO - activitysim.cli.run - NUMPY blas_info libraries: ['cblas', 'blas', 'cblas', 'blas', 'cblas', 'blas']
+05/12/2023 15:02:56 - INFO - activitysim.cli.run - NUMPY blas_opt_info libraries: ['cblas', 'blas', 'cblas', 'blas', 'cblas', 'blas']
+05/12/2023 15:02:56 - INFO - activitysim.cli.run - NUMPY lapack_info libraries: ['lapack', 'blas', 'lapack', 'blas']
+05/12/2023 15:02:56 - INFO - activitysim.cli.run - NUMPY lapack_opt_info libraries: ['lapack', 'blas', 'lapack', 'blas', 'cblas', 'blas', 'cblas', 'blas', 'cblas', 'blas']
+05/12/2023 15:02:56 - INFO - activitysim.cli.run - run multiprocess simulation
+05/12/2023 15:02:56 - INFO - activitysim.core.mp_tasks - run_multiprocess fail_fast: None
+05/12/2023 15:02:56 - INFO - activitysim.core.mp_tasks - allocate_shared_skim_buffer
+05/12/2023 15:02:56 - INFO - activitysim.core.tracing - Time to execute allocate shared skim buffer : 0.0 seconds (0.0 minutes)
+05/12/2023 15:02:56 - INFO - activitysim.core.mp_tasks - allocate_shared_shadow_pricing_buffers
+05/12/2023 15:02:56 - INFO - activitysim.core.tracing - Time to execute allocate shared shadow_pricing buffer : 0.0 seconds (0.0 minutes)
+05/12/2023 15:02:56 - INFO - activitysim.core.mp_tasks - run_sub_simulations step mp_seed_balancing models resume_after None
+05/12/2023 15:02:56 - INFO - activitysim.core.mp_tasks - start process mp_seed_balancing
+05/12/2023 15:03:02 - INFO - activitysim.core.mp_tasks - mp_seed_balancing input_pre_processor : 4.392 seconds (0.1 minutes)
+05/12/2023 15:03:04 - INFO - activitysim.core.mp_tasks - mp_seed_balancing setup_data_structures : 1.558 seconds (0.0 minutes)
+05/12/2023 15:03:21 - INFO - activitysim.core.mp_tasks - mp_seed_balancing initial_seed_balancing : 17.847 seconds (0.3 minutes)
+05/12/2023 15:03:22 - INFO - activitysim.core.mp_tasks - mp_seed_balancing meta_control_factoring : 0.1 seconds (0.0 minutes)
+05/12/2023 15:03:42 - INFO - activitysim.core.mp_tasks - mp_seed_balancing final_seed_balancing : 20.424 seconds (0.3 minutes)
+05/12/2023 15:03:43 - INFO - activitysim.core.mp_tasks - mp_seed_balancing integerize_final_seed_weights : 0.88 seconds (0.0 minutes)
+05/12/2023 15:03:43 - INFO - activitysim.core.mp_tasks - process mp_seed_balancing completed
+05/12/2023 15:03:43 - INFO - activitysim.core.mp_tasks - Process mp_seed_balancing completed with exitcode 0
+05/12/2023 15:03:43 - INFO - activitysim.core.tracing - Time to execute run_sub_simulations step mp_seed_balancing : 47.535 seconds (0.8 minutes)
+05/12/2023 15:03:43 - INFO - activitysim.core.mp_tasks - #run_model running sub_process mp_sub_balancing_TAZ_apportion
+05/12/2023 15:03:57 - INFO - activitysim.core.tracing - Time to execute #run_model sub_process mp_sub_balancing_TAZ_apportion : 13.107 seconds (0.2 minutes)
+05/12/2023 15:03:57 - INFO - activitysim.core.mp_tasks - run_sub_simulations step mp_sub_balancing_TAZ models resume_after None
+05/12/2023 15:03:57 - INFO - activitysim.core.mp_tasks - start process mp_sub_balancing_TAZ_0
+05/12/2023 15:03:58 - INFO - activitysim.core.mp_tasks - start process mp_sub_balancing_TAZ_1
+05/12/2023 15:03:59 - INFO - activitysim.core.mp_tasks - start process mp_sub_balancing_TAZ_2
+05/12/2023 15:04:00 - INFO - activitysim.core.mp_tasks - start process mp_sub_balancing_TAZ_3
+05/12/2023 15:04:01 - INFO - activitysim.core.mp_tasks - start process mp_sub_balancing_TAZ_4
+05/12/2023 15:04:02 - INFO - activitysim.core.mp_tasks - start process mp_sub_balancing_TAZ_5
+05/12/2023 15:04:03 - INFO - activitysim.core.mp_tasks - start process mp_sub_balancing_TAZ_6
+05/12/2023 15:04:04 - INFO - activitysim.core.mp_tasks - start process mp_sub_balancing_TAZ_7
+05/12/2023 15:04:05 - INFO - activitysim.core.mp_tasks - start process mp_sub_balancing_TAZ_8
+05/12/2023 15:04:06 - INFO - activitysim.core.mp_tasks - start process mp_sub_balancing_TAZ_9
+05/12/2023 15:04:07 - INFO - activitysim.core.mp_tasks - start process mp_sub_balancing_TAZ_10
+05/12/2023 15:04:08 - INFO - activitysim.core.mp_tasks - start process mp_sub_balancing_TAZ_11
+05/12/2023 15:09:34 - INFO - activitysim.core.mp_tasks - mp_sub_balancing_TAZ_8 sub_balancing.geography=TAZ : 325.541 seconds (5.4 minutes)
+05/12/2023 15:09:34 - INFO - activitysim.core.mp_tasks - process mp_sub_balancing_TAZ_8 completed
+05/12/2023 15:09:35 - INFO - activitysim.core.mp_tasks - mp_sub_balancing_TAZ_3 sub_balancing.geography=TAZ : 331.125 seconds (5.5 minutes)
+05/12/2023 15:09:35 - INFO - activitysim.core.mp_tasks - process mp_sub_balancing_TAZ_3 completed
+05/12/2023 15:09:48 - INFO - activitysim.core.mp_tasks - mp_sub_balancing_TAZ_0 sub_balancing.geography=TAZ : 347.797 seconds (5.8 minutes)
+05/12/2023 15:09:48 - INFO - activitysim.core.mp_tasks - process mp_sub_balancing_TAZ_0 completed
+05/12/2023 15:10:01 - INFO - activitysim.core.mp_tasks - mp_sub_balancing_TAZ_6 sub_balancing.geography=TAZ : 354.247 seconds (5.9 minutes)
+05/12/2023 15:10:01 - INFO - activitysim.core.mp_tasks - process mp_sub_balancing_TAZ_6 completed
+05/12/2023 15:10:55 - INFO - activitysim.core.mp_tasks - mp_sub_balancing_TAZ_11 sub_balancing.geography=TAZ : 403.899 seconds (6.7 minutes)
+05/12/2023 15:10:55 - INFO - activitysim.core.mp_tasks - process mp_sub_balancing_TAZ_11 completed
+05/12/2023 15:11:03 - INFO - activitysim.core.mp_tasks - mp_sub_balancing_TAZ_2 sub_balancing.geography=TAZ : 420.186 seconds (7.0 minutes)
+05/12/2023 15:11:03 - INFO - activitysim.core.mp_tasks - process mp_sub_balancing_TAZ_2 completed
+05/12/2023 15:11:04 - INFO - activitysim.core.mp_tasks - mp_sub_balancing_TAZ_5 sub_balancing.geography=TAZ : 417.9 seconds (7.0 minutes)
+05/12/2023 15:11:04 - INFO - activitysim.core.mp_tasks - process mp_sub_balancing_TAZ_5 completed
+05/12/2023 15:11:27 - INFO - activitysim.core.mp_tasks - mp_sub_balancing_TAZ_4 sub_balancing.geography=TAZ : 442.601 seconds (7.4 minutes)
+05/12/2023 15:11:27 - INFO - activitysim.core.mp_tasks - process mp_sub_balancing_TAZ_4 completed
+05/12/2023 15:12:59 - INFO - activitysim.core.mp_tasks - mp_sub_balancing_TAZ_7 sub_balancing.geography=TAZ : 531.698 seconds (8.9 minutes)
+05/12/2023 15:12:59 - INFO - activitysim.core.mp_tasks - mp_sub_balancing_TAZ_9 sub_balancing.geography=TAZ : 528.819 seconds (8.8 minutes)
+05/12/2023 15:12:59 - INFO - activitysim.core.mp_tasks - process mp_sub_balancing_TAZ_7 completed
+05/12/2023 15:12:59 - INFO - activitysim.core.mp_tasks - process mp_sub_balancing_TAZ_9 completed
+05/12/2023 15:14:33 - INFO - activitysim.core.mp_tasks - mp_sub_balancing_TAZ_1 sub_balancing.geography=TAZ : 631.52 seconds (10.5 minutes)
+05/12/2023 15:14:33 - INFO - activitysim.core.mp_tasks - process mp_sub_balancing_TAZ_1 completed
+05/12/2023 15:14:56 - INFO - activitysim.core.mp_tasks - mp_sub_balancing_TAZ_10 sub_balancing.geography=TAZ : 644.877 seconds (10.7 minutes)
+05/12/2023 15:14:56 - INFO - activitysim.core.mp_tasks - process mp_sub_balancing_TAZ_10 completed
+05/12/2023 15:14:56 - INFO - activitysim.core.mp_tasks - Process mp_sub_balancing_TAZ_0 completed with exitcode 0
+05/12/2023 15:14:56 - INFO - activitysim.core.mp_tasks - Process mp_sub_balancing_TAZ_1 completed with exitcode 0
+05/12/2023 15:14:56 - INFO - activitysim.core.mp_tasks - Process mp_sub_balancing_TAZ_2 completed with exitcode 0
+05/12/2023 15:14:56 - INFO - activitysim.core.mp_tasks - Process mp_sub_balancing_TAZ_3 completed with exitcode 0
+05/12/2023 15:14:56 - INFO - activitysim.core.mp_tasks - Process mp_sub_balancing_TAZ_4 completed with exitcode 0
+05/12/2023 15:14:56 - INFO - activitysim.core.mp_tasks - Process mp_sub_balancing_TAZ_5 completed with exitcode 0
+05/12/2023 15:14:56 - INFO - activitysim.core.mp_tasks - Process mp_sub_balancing_TAZ_6 completed with exitcode 0
+05/12/2023 15:14:56 - INFO - activitysim.core.mp_tasks - Process mp_sub_balancing_TAZ_7 completed with exitcode 0
+05/12/2023 15:14:56 - INFO - activitysim.core.mp_tasks - Process mp_sub_balancing_TAZ_8 completed with exitcode 0
+05/12/2023 15:14:56 - INFO - activitysim.core.mp_tasks - Process mp_sub_balancing_TAZ_9 completed with exitcode 0
+05/12/2023 15:14:56 - INFO - activitysim.core.mp_tasks - Process mp_sub_balancing_TAZ_10 completed with exitcode 0
+05/12/2023 15:14:56 - INFO - activitysim.core.mp_tasks - Process mp_sub_balancing_TAZ_11 completed with exitcode 0
+05/12/2023 15:14:56 - INFO - activitysim.core.tracing - Time to execute run_sub_simulations step mp_sub_balancing_TAZ : 659.367 seconds (11.0 minutes)
+05/12/2023 15:14:56 - INFO - activitysim.core.mp_tasks - #run_model running sub_process mp_sub_balancing_TAZ_coalesce
+05/12/2023 15:15:04 - INFO - activitysim.core.tracing - Time to execute #run_model sub_process mp_sub_balancing_TAZ_coalesce : 8.02 seconds (0.1 minutes)
+05/12/2023 15:15:04 - INFO - activitysim.core.mp_tasks - #run_model running sub_process mp_sub_balancing_MAZ_apportion
+05/12/2023 15:15:20 - INFO - activitysim.core.tracing - Time to execute #run_model sub_process mp_sub_balancing_MAZ_apportion : 16.147 seconds (0.3 minutes)
+05/12/2023 15:15:20 - INFO - activitysim.core.mp_tasks - run_sub_simulations step mp_sub_balancing_MAZ models resume_after None
+05/12/2023 15:15:20 - INFO - activitysim.core.mp_tasks - start process mp_sub_balancing_MAZ_0
+05/12/2023 15:15:21 - INFO - activitysim.core.mp_tasks - start process mp_sub_balancing_MAZ_1
+05/12/2023 15:15:22 - INFO - activitysim.core.mp_tasks - start process mp_sub_balancing_MAZ_2
+05/12/2023 15:15:23 - INFO - activitysim.core.mp_tasks - start process mp_sub_balancing_MAZ_3
+05/12/2023 15:15:24 - INFO - activitysim.core.mp_tasks - start process mp_sub_balancing_MAZ_4
+05/12/2023 15:15:25 - INFO - activitysim.core.mp_tasks - start process mp_sub_balancing_MAZ_5
+05/12/2023 15:15:26 - INFO - activitysim.core.mp_tasks - start process mp_sub_balancing_MAZ_6
+05/12/2023 15:15:27 - INFO - activitysim.core.mp_tasks - start process mp_sub_balancing_MAZ_7
+05/12/2023 15:15:28 - INFO - activitysim.core.mp_tasks - start process mp_sub_balancing_MAZ_8
+05/12/2023 15:15:29 - INFO - activitysim.core.mp_tasks - start process mp_sub_balancing_MAZ_9
+05/12/2023 15:15:30 - INFO - activitysim.core.mp_tasks - start process mp_sub_balancing_MAZ_10
+05/12/2023 15:15:31 - INFO - activitysim.core.mp_tasks - start process mp_sub_balancing_MAZ_11
+05/12/2023 15:15:51 - INFO - activitysim.core.mp_tasks - mp_sub_balancing_MAZ_0 sub_balancing.geography=MAZ : 26.887 seconds (0.4 minutes)
+05/12/2023 15:15:51 - INFO - activitysim.core.mp_tasks - process mp_sub_balancing_MAZ_0 completed
+05/12/2023 15:15:56 - INFO - activitysim.core.mp_tasks - mp_sub_balancing_MAZ_8 sub_balancing.geography=MAZ : 23.725 seconds (0.4 minutes)
+05/12/2023 15:15:57 - INFO - activitysim.core.mp_tasks - mp_sub_balancing_MAZ_6 sub_balancing.geography=MAZ : 26.445 seconds (0.4 minutes)
+05/12/2023 15:15:57 - INFO - activitysim.core.mp_tasks - process mp_sub_balancing_MAZ_6 completed
+05/12/2023 15:15:57 - INFO - activitysim.core.mp_tasks - process mp_sub_balancing_MAZ_8 completed
+05/12/2023 15:16:02 - INFO - activitysim.core.mp_tasks - mp_sub_balancing_MAZ_5 sub_balancing.geography=MAZ : 32.358 seconds (0.5 minutes)
+05/12/2023 15:16:02 - INFO - activitysim.core.mp_tasks - process mp_sub_balancing_MAZ_5 completed
+05/12/2023 15:16:07 - INFO - activitysim.core.mp_tasks - mp_sub_balancing_MAZ_3 sub_balancing.geography=MAZ : 39.558 seconds (0.7 minutes)
+05/12/2023 15:16:07 - INFO - activitysim.core.mp_tasks - process mp_sub_balancing_MAZ_3 completed
+05/12/2023 15:16:10 - INFO - activitysim.core.mp_tasks - mp_sub_balancing_MAZ_9 sub_balancing.geography=MAZ : 36.313 seconds (0.6 minutes)
+05/12/2023 15:16:10 - INFO - activitysim.core.mp_tasks - process mp_sub_balancing_MAZ_9 completed
+05/12/2023 15:16:11 - INFO - activitysim.core.mp_tasks - mp_sub_balancing_MAZ_2 sub_balancing.geography=MAZ : 45.462 seconds (0.8 minutes)
+05/12/2023 15:16:12 - INFO - activitysim.core.mp_tasks - mp_sub_balancing_MAZ_7 sub_balancing.geography=MAZ : 40.468 seconds (0.7 minutes)
+05/12/2023 15:16:12 - INFO - activitysim.core.mp_tasks - process mp_sub_balancing_MAZ_2 completed
+05/12/2023 15:16:12 - INFO - activitysim.core.mp_tasks - process mp_sub_balancing_MAZ_7 completed
+05/12/2023 15:16:15 - INFO - activitysim.core.mp_tasks - mp_sub_balancing_MAZ_4 sub_balancing.geography=MAZ : 46.887 seconds (0.8 minutes)
+05/12/2023 15:16:15 - INFO - activitysim.core.mp_tasks - process mp_sub_balancing_MAZ_4 completed
+05/12/2023 15:16:19 - INFO - activitysim.core.mp_tasks - mp_sub_balancing_MAZ_11 sub_balancing.geography=MAZ : 43.288 seconds (0.7 minutes)
+05/12/2023 15:16:19 - INFO - activitysim.core.mp_tasks - process mp_sub_balancing_MAZ_11 completed
+05/12/2023 15:16:23 - INFO - activitysim.core.mp_tasks - mp_sub_balancing_MAZ_1 sub_balancing.geography=MAZ : 58.064 seconds (1.0 minutes)
+05/12/2023 15:16:23 - INFO - activitysim.core.mp_tasks - process mp_sub_balancing_MAZ_1 completed
+05/12/2023 15:16:42 - INFO - activitysim.core.mp_tasks - mp_sub_balancing_MAZ_10 sub_balancing.geography=MAZ : 67.259 seconds (1.1 minutes)
+05/12/2023 15:16:42 - INFO - activitysim.core.mp_tasks - process mp_sub_balancing_MAZ_10 completed
+05/12/2023 15:16:43 - INFO - activitysim.core.mp_tasks - Process mp_sub_balancing_MAZ_0 completed with exitcode 0
+05/12/2023 15:16:43 - INFO - activitysim.core.mp_tasks - Process mp_sub_balancing_MAZ_1 completed with exitcode 0
+05/12/2023 15:16:43 - INFO - activitysim.core.mp_tasks - Process mp_sub_balancing_MAZ_2 completed with exitcode 0
+05/12/2023 15:16:43 - INFO - activitysim.core.mp_tasks - Process mp_sub_balancing_MAZ_3 completed with exitcode 0
+05/12/2023 15:16:43 - INFO - activitysim.core.mp_tasks - Process mp_sub_balancing_MAZ_4 completed with exitcode 0
+05/12/2023 15:16:43 - INFO - activitysim.core.mp_tasks - Process mp_sub_balancing_MAZ_5 completed with exitcode 0
+05/12/2023 15:16:43 - INFO - activitysim.core.mp_tasks - Process mp_sub_balancing_MAZ_6 completed with exitcode 0
+05/12/2023 15:16:43 - INFO - activitysim.core.mp_tasks - Process mp_sub_balancing_MAZ_7 completed with exitcode 0
+05/12/2023 15:16:43 - INFO - activitysim.core.mp_tasks - Process mp_sub_balancing_MAZ_8 completed with exitcode 0
+05/12/2023 15:16:43 - INFO - activitysim.core.mp_tasks - Process mp_sub_balancing_MAZ_9 completed with exitcode 0
+05/12/2023 15:16:43 - INFO - activitysim.core.mp_tasks - Process mp_sub_balancing_MAZ_10 completed with exitcode 0
+05/12/2023 15:16:43 - INFO - activitysim.core.mp_tasks - Process mp_sub_balancing_MAZ_11 completed with exitcode 0
+05/12/2023 15:16:43 - INFO - activitysim.core.tracing - Time to execute run_sub_simulations step mp_sub_balancing_MAZ : 82.465 seconds (1.4 minutes)
+05/12/2023 15:16:43 - INFO - activitysim.core.mp_tasks - #run_model running sub_process mp_sub_balancing_MAZ_coalesce
+05/12/2023 15:16:57 - INFO - activitysim.core.tracing - Time to execute #run_model sub_process mp_sub_balancing_MAZ_coalesce : 14.037 seconds (0.2 minutes)
+05/12/2023 15:16:57 - INFO - activitysim.core.mp_tasks - run_sub_simulations step mp_summarize models resume_after None
+05/12/2023 15:16:57 - INFO - activitysim.core.mp_tasks - start process mp_summarize
+05/12/2023 15:17:36 - INFO - activitysim.core.mp_tasks - mp_summarize expand_households : 33.754 seconds (0.6 minutes)
+05/12/2023 15:23:19 - INFO - activitysim.core.mp_tasks - mp_summarize summarize : 343.051 seconds (5.7 minutes)
+05/12/2023 15:23:21 - INFO - activitysim.core.mp_tasks - mp_summarize write_tables : 1.905 seconds (0.0 minutes)
+05/12/2023 15:23:29 - INFO - activitysim.core.mp_tasks - mp_summarize write_synthetic_population : 8.777 seconds (0.1 minutes)
+05/12/2023 15:23:29 - INFO - activitysim.core.mp_tasks - process mp_summarize completed
+05/12/2023 15:23:30 - INFO - activitysim.core.mp_tasks - Process mp_summarize completed with exitcode 0
+05/12/2023 15:23:30 - INFO - activitysim.core.tracing - Time to execute run_sub_simulations step mp_summarize : 393.723 seconds (6.6 minutes)
+05/12/2023 15:23:30 - INFO - activitysim.core.mem - MainProcess high water mark rss: 7_953_776_640 (8.0 GB) timestamp: 05/12/2023 15:15:48 label:run_sub_simulations.idle
+05/12/2023 15:23:30 - INFO - activitysim.core.mem - MainProcess high water mark uss: 98_361_344 (98.4 MB) timestamp: 05/12/2023 15:03:43 label:mp_seed_balancing.integerize_final_seed_weights.completed
+05/12/2023 15:23:30 - DEBUG - activitysim.core.random - Set random seed base to 0
+05/12/2023 15:23:30 - DEBUG - activitysim.core.pipeline - open_pipeline - open existing pipeline
+05/12/2023 15:23:30 - DEBUG - activitysim.core.pipeline - opened pipeline_store output\HH\pipeline.h5
+05/12/2023 15:23:30 - INFO - activitysim.core.pipeline - load_checkpoint _
+05/12/2023 15:23:30 - INFO - activitysim.core.pipeline - loading checkpoint 'mp_summarize'
+05/12/2023 15:23:31 - INFO - activitysim.core.pipeline - load_checkpoint mp_summarize timestamp 2023-12-05 15:23:29.598493
+05/12/2023 15:23:31 - INFO - activitysim.core.pipeline - load_checkpoint table households (33856, 242)
+05/12/2023 15:23:31 - DEBUG - activitysim.core.pipeline - rewrap table households inplace=False
+05/12/2023 15:23:32 - INFO - activitysim.core.pipeline - load_checkpoint table persons (82464, 290)
+05/12/2023 15:23:32 - DEBUG - activitysim.core.pipeline - rewrap table persons inplace=False
+05/12/2023 15:23:32 - INFO - activitysim.core.pipeline - load_checkpoint table geo_cross_walk (27925, 7)
+05/12/2023 15:23:32 - DEBUG - activitysim.core.pipeline - rewrap table geo_cross_walk inplace=False
+05/12/2023 15:23:32 - INFO - activitysim.core.pipeline - load_checkpoint table MAZ_control_data (27925, 3)
+05/12/2023 15:23:32 - DEBUG - activitysim.core.pipeline - rewrap table MAZ_control_data inplace=False
+05/12/2023 15:23:32 - INFO - activitysim.core.pipeline - load_checkpoint table TAZ_control_data (3007, 45)
+05/12/2023 15:23:32 - DEBUG - activitysim.core.pipeline - rewrap table TAZ_control_data inplace=False
+05/12/2023 15:23:32 - INFO - activitysim.core.pipeline - load_checkpoint table REGION_control_data (1, 2)
+05/12/2023 15:23:32 - DEBUG - activitysim.core.pipeline - rewrap table REGION_control_data inplace=False
+05/12/2023 15:23:32 - INFO - activitysim.core.pipeline - load_checkpoint table crosswalk (27925, 4)
+05/12/2023 15:23:32 - DEBUG - activitysim.core.pipeline - rewrap table crosswalk inplace=False
+05/12/2023 15:23:32 - INFO - activitysim.core.pipeline - load_checkpoint table slice_crosswalk (12, 2)
+05/12/2023 15:23:32 - DEBUG - activitysim.core.pipeline - rewrap table slice_crosswalk inplace=False
+05/12/2023 15:23:32 - INFO - activitysim.core.pipeline - load_checkpoint table control_spec (24, 6)
+05/12/2023 15:23:32 - DEBUG - activitysim.core.pipeline - rewrap table control_spec inplace=False
+05/12/2023 15:23:32 - INFO - activitysim.core.pipeline - load_checkpoint table REGION_controls (1, 24)
+05/12/2023 15:23:32 - DEBUG - activitysim.core.pipeline - rewrap table REGION_controls inplace=False
+05/12/2023 15:23:32 - INFO - activitysim.core.pipeline - load_checkpoint table PUMA_controls (12, 24)
+05/12/2023 15:23:32 - DEBUG - activitysim.core.pipeline - rewrap table PUMA_controls inplace=False
+05/12/2023 15:23:32 - INFO - activitysim.core.pipeline - load_checkpoint table TAZ_controls (2808, 23)
+05/12/2023 15:23:32 - DEBUG - activitysim.core.pipeline - rewrap table TAZ_controls inplace=False
+05/12/2023 15:23:32 - INFO - activitysim.core.pipeline - load_checkpoint table MAZ_controls (20675, 1)
+05/12/2023 15:23:32 - DEBUG - activitysim.core.pipeline - rewrap table MAZ_controls inplace=False
+05/12/2023 15:23:32 - INFO - activitysim.core.pipeline - load_checkpoint table household_groups (33856, 3)
+05/12/2023 15:23:32 - DEBUG - activitysim.core.pipeline - rewrap table household_groups inplace=False
+05/12/2023 15:23:32 - INFO - activitysim.core.pipeline - load_checkpoint table incidence_table (8734, 29)
+05/12/2023 15:23:32 - DEBUG - activitysim.core.pipeline - rewrap table incidence_table inplace=False
+05/12/2023 15:23:32 - INFO - activitysim.core.pipeline - load_checkpoint table PUMA_weights (8734, 6)
+05/12/2023 15:23:32 - DEBUG - activitysim.core.pipeline - rewrap table PUMA_weights inplace=False
+05/12/2023 15:23:32 - INFO - activitysim.core.pipeline - load_checkpoint table TAZ_weights (2030296, 6)
+05/12/2023 15:23:32 - DEBUG - activitysim.core.pipeline - rewrap table TAZ_weights inplace=False
+05/12/2023 15:23:32 - INFO - activitysim.core.pipeline - load_checkpoint table TAZ_weights_sparse (330353, 6)
+05/12/2023 15:23:32 - DEBUG - activitysim.core.pipeline - rewrap table TAZ_weights_sparse inplace=False
+05/12/2023 15:23:32 - INFO - activitysim.core.pipeline - load_checkpoint table trace_TAZ_weights (589, 6)
+05/12/2023 15:23:32 - DEBUG - activitysim.core.pipeline - rewrap table trace_TAZ_weights inplace=False
+05/12/2023 15:23:34 - INFO - activitysim.core.pipeline - load_checkpoint table MAZ_weights (15091610, 7)
+05/12/2023 15:23:34 - DEBUG - activitysim.core.pipeline - rewrap table MAZ_weights inplace=False
+05/12/2023 15:23:34 - INFO - activitysim.core.pipeline - load_checkpoint table MAZ_weights_sparse (545596, 7)
+05/12/2023 15:23:34 - DEBUG - activitysim.core.pipeline - rewrap table MAZ_weights_sparse inplace=False
+05/12/2023 15:23:34 - INFO - activitysim.core.pipeline - load_checkpoint table trace_MAZ_weights (644, 7)
+05/12/2023 15:23:34 - DEBUG - activitysim.core.pipeline - rewrap table trace_MAZ_weights inplace=False
+05/12/2023 15:23:34 - INFO - activitysim.core.pipeline - load_checkpoint table expanded_household_ids (724930, 4)
+05/12/2023 15:23:34 - DEBUG - activitysim.core.pipeline - rewrap table expanded_household_ids inplace=False
+05/12/2023 15:23:34 - INFO - activitysim.core.pipeline - load_checkpoint table summary_REGION_3 (24, 8)
+05/12/2023 15:23:34 - DEBUG - activitysim.core.pipeline - rewrap table summary_REGION_3 inplace=False
+05/12/2023 15:23:34 - INFO - activitysim.core.pipeline - load_checkpoint table summary_TAZ_aggregate (8734, 7)
+05/12/2023 15:23:34 - DEBUG - activitysim.core.pipeline - rewrap table summary_TAZ_aggregate inplace=False
+05/12/2023 15:23:34 - INFO - activitysim.core.pipeline - load_checkpoint table summary_TAZ_PUMA (12, 74)
+05/12/2023 15:23:34 - DEBUG - activitysim.core.pipeline - rewrap table summary_TAZ_PUMA inplace=False
+05/12/2023 15:23:34 - INFO - activitysim.core.pipeline - load_checkpoint table summary_TAZ (2808, 71)
+05/12/2023 15:23:34 - DEBUG - activitysim.core.pipeline - rewrap table summary_TAZ inplace=False
+05/12/2023 15:23:34 - INFO - activitysim.core.pipeline - load_checkpoint table summary_MAZ_aggregate (8734, 7)
+05/12/2023 15:23:34 - DEBUG - activitysim.core.pipeline - rewrap table summary_MAZ_aggregate inplace=False
+05/12/2023 15:23:34 - INFO - activitysim.core.pipeline - load_checkpoint table summary_MAZ_PUMA (12, 74)
+05/12/2023 15:23:34 - DEBUG - activitysim.core.pipeline - rewrap table summary_MAZ_PUMA inplace=False
+05/12/2023 15:23:34 - INFO - activitysim.core.pipeline - load_checkpoint table summary_MAZ (20675, 5)
+05/12/2023 15:23:34 - DEBUG - activitysim.core.pipeline - rewrap table summary_MAZ inplace=False
+05/12/2023 15:23:34 - INFO - activitysim.core.pipeline - load_checkpoint table summary_hh_weights (8734, 6)
+05/12/2023 15:23:34 - DEBUG - activitysim.core.pipeline - rewrap table summary_hh_weights inplace=False
+05/12/2023 15:23:34 - DEBUG - activitysim.core.pipeline - open_pipeline complete
+05/12/2023 15:23:34 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table households (33856, 242)
+05/12/2023 15:23:35 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table persons (82464, 290)
+05/12/2023 15:23:35 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table geo_cross_walk (27925, 7)
+05/12/2023 15:23:35 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table MAZ_control_data (27925, 3)
+05/12/2023 15:23:35 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table TAZ_control_data (3007, 45)
+05/12/2023 15:23:35 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table REGION_control_data (1, 2)
+05/12/2023 15:23:35 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table crosswalk (27925, 4)
+05/12/2023 15:23:35 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table slice_crosswalk (12, 2)
+05/12/2023 15:23:35 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table control_spec (24, 6)
+05/12/2023 15:23:35 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table REGION_controls (1, 24)
+05/12/2023 15:23:35 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table PUMA_controls (12, 24)
+05/12/2023 15:23:35 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table TAZ_controls (2808, 23)
+05/12/2023 15:23:35 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table MAZ_controls (20675, 1)
+05/12/2023 15:23:35 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table household_groups (33856, 3)
+05/12/2023 15:23:35 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table incidence_table (8734, 29)
+05/12/2023 15:23:35 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table PUMA_weights (8734, 6)
+05/12/2023 15:23:35 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table TAZ_weights (2030296, 6)
+05/12/2023 15:23:35 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table TAZ_weights_sparse (330353, 6)
+05/12/2023 15:23:35 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table trace_TAZ_weights (589, 6)
+05/12/2023 15:23:36 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table MAZ_weights (15091610, 7)
+05/12/2023 15:23:38 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table MAZ_weights_sparse (545596, 7)
+05/12/2023 15:23:38 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table trace_MAZ_weights (644, 7)
+05/12/2023 15:23:38 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table expanded_household_ids (724930, 4)
+05/12/2023 15:23:38 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table summary_REGION_3 (24, 8)
+05/12/2023 15:23:38 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table summary_TAZ_aggregate (8734, 7)
+05/12/2023 15:23:38 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table summary_TAZ_PUMA (12, 74)
+05/12/2023 15:23:38 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table summary_TAZ (2808, 71)
+05/12/2023 15:23:38 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table summary_MAZ_aggregate (8734, 7)
+05/12/2023 15:23:38 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table summary_MAZ_PUMA (12, 74)
+05/12/2023 15:23:38 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table summary_MAZ (20675, 5)
+05/12/2023 15:23:38 - DEBUG - activitysim.core.pipeline - cleanup_pipeline - adding table summary_hh_weights (8734, 6)
+05/12/2023 15:23:38 - DEBUG - activitysim.core.pipeline - close_pipeline
+05/12/2023 15:23:38 - DEBUG - activitysim.core.pipeline - deleting all pipeline files except output\HH\final_pipeline.h5
+05/12/2023 15:23:38 - DEBUG - activitysim.core.tracing - delete_output_files deleting output\HH\mp_sub_balancing_MAZ_0-pipeline.h5
+05/12/2023 15:23:38 - DEBUG - activitysim.core.tracing - delete_output_files deleting output\HH\mp_sub_balancing_MAZ_1-pipeline.h5
+05/12/2023 15:23:38 - DEBUG - activitysim.core.tracing - delete_output_files deleting output\HH\mp_sub_balancing_MAZ_10-pipeline.h5
+05/12/2023 15:23:38 - DEBUG - activitysim.core.tracing - delete_output_files deleting output\HH\mp_sub_balancing_MAZ_11-pipeline.h5
+05/12/2023 15:23:38 - DEBUG - activitysim.core.tracing - delete_output_files deleting output\HH\mp_sub_balancing_MAZ_2-pipeline.h5
+05/12/2023 15:23:38 - DEBUG - activitysim.core.tracing - delete_output_files deleting output\HH\mp_sub_balancing_MAZ_3-pipeline.h5
+05/12/2023 15:23:38 - DEBUG - activitysim.core.tracing - delete_output_files deleting output\HH\mp_sub_balancing_MAZ_4-pipeline.h5
+05/12/2023 15:23:38 - DEBUG - activitysim.core.tracing - delete_output_files deleting output\HH\mp_sub_balancing_MAZ_5-pipeline.h5
+05/12/2023 15:23:38 - DEBUG - activitysim.core.tracing - delete_output_files deleting output\HH\mp_sub_balancing_MAZ_6-pipeline.h5
+05/12/2023 15:23:38 - DEBUG - activitysim.core.tracing - delete_output_files deleting output\HH\mp_sub_balancing_MAZ_7-pipeline.h5
+05/12/2023 15:23:38 - DEBUG - activitysim.core.tracing - delete_output_files deleting output\HH\mp_sub_balancing_MAZ_8-pipeline.h5
+05/12/2023 15:23:38 - DEBUG - activitysim.core.tracing - delete_output_files deleting output\HH\mp_sub_balancing_MAZ_9-pipeline.h5
+05/12/2023 15:23:39 - DEBUG - activitysim.core.tracing - delete_output_files deleting output\HH\mp_sub_balancing_TAZ_0-pipeline.h5
+05/12/2023 15:23:39 - DEBUG - activitysim.core.tracing - delete_output_files deleting output\HH\mp_sub_balancing_TAZ_1-pipeline.h5
+05/12/2023 15:23:39 - DEBUG - activitysim.core.tracing - delete_output_files deleting output\HH\mp_sub_balancing_TAZ_10-pipeline.h5
+05/12/2023 15:23:39 - DEBUG - activitysim.core.tracing - delete_output_files deleting output\HH\mp_sub_balancing_TAZ_11-pipeline.h5
+05/12/2023 15:23:39 - DEBUG - activitysim.core.tracing - delete_output_files deleting output\HH\mp_sub_balancing_TAZ_2-pipeline.h5
+05/12/2023 15:23:39 - DEBUG - activitysim.core.tracing - delete_output_files deleting output\HH\mp_sub_balancing_TAZ_3-pipeline.h5
+05/12/2023 15:23:39 - DEBUG - activitysim.core.tracing - delete_output_files deleting output\HH\mp_sub_balancing_TAZ_4-pipeline.h5
+05/12/2023 15:23:39 - DEBUG - activitysim.core.tracing - delete_output_files deleting output\HH\mp_sub_balancing_TAZ_5-pipeline.h5
+05/12/2023 15:23:39 - DEBUG - activitysim.core.tracing - delete_output_files deleting output\HH\mp_sub_balancing_TAZ_6-pipeline.h5
+05/12/2023 15:23:39 - DEBUG - activitysim.core.tracing - delete_output_files deleting output\HH\mp_sub_balancing_TAZ_7-pipeline.h5
+05/12/2023 15:23:39 - DEBUG - activitysim.core.tracing - delete_output_files deleting output\HH\mp_sub_balancing_TAZ_8-pipeline.h5
+05/12/2023 15:23:39 - DEBUG - activitysim.core.tracing - delete_output_files deleting output\HH\mp_sub_balancing_TAZ_9-pipeline.h5
+05/12/2023 15:23:39 - DEBUG - activitysim.core.tracing - delete_output_files deleting output\HH\pipeline.h5
+05/12/2023 15:23:39 - DEBUG - activitysim.core.mem - mem.consolidate_logs for step mp_seed_balancing
+05/12/2023 15:23:39 - DEBUG - activitysim.core.mem - mem.consolidate_logs consolidating 1 logs for mp_seed_balancing
+05/12/2023 15:23:39 - DEBUG - activitysim.core.util - mem.consolidate_logs.mp_seed_balancing deleting output\HH\mp_seed_balancing-mem.csv
+05/12/2023 15:23:39 - DEBUG - activitysim.core.mem - chunk.consolidate_logs writing step summary log for step mp_seed_balancing to output\HH\mem_mp_seed_balancing.csv
+05/12/2023 15:23:39 - DEBUG - activitysim.core.mem - mem.consolidate_logs for step mp_sub_balancing_TAZ
+05/12/2023 15:23:39 - DEBUG - activitysim.core.mem - mem.consolidate_logs consolidating 12 logs for mp_sub_balancing_TAZ
+05/12/2023 15:23:39 - DEBUG - activitysim.core.util - mem.consolidate_logs.mp_sub_balancing_TAZ deleting output\HH\mp_sub_balancing_TAZ_0-mem.csv
+05/12/2023 15:23:39 - DEBUG - activitysim.core.util - mem.consolidate_logs.mp_sub_balancing_TAZ deleting output\HH\mp_sub_balancing_TAZ_1-mem.csv
+05/12/2023 15:23:39 - DEBUG - activitysim.core.util - mem.consolidate_logs.mp_sub_balancing_TAZ deleting output\HH\mp_sub_balancing_TAZ_10-mem.csv
+05/12/2023 15:23:39 - DEBUG - activitysim.core.util - mem.consolidate_logs.mp_sub_balancing_TAZ deleting output\HH\mp_sub_balancing_TAZ_11-mem.csv
+05/12/2023 15:23:39 - DEBUG - activitysim.core.util - mem.consolidate_logs.mp_sub_balancing_TAZ deleting output\HH\mp_sub_balancing_TAZ_2-mem.csv
+05/12/2023 15:23:39 - DEBUG - activitysim.core.util - mem.consolidate_logs.mp_sub_balancing_TAZ deleting output\HH\mp_sub_balancing_TAZ_3-mem.csv
+05/12/2023 15:23:39 - DEBUG - activitysim.core.util - mem.consolidate_logs.mp_sub_balancing_TAZ deleting output\HH\mp_sub_balancing_TAZ_4-mem.csv
+05/12/2023 15:23:39 - DEBUG - activitysim.core.util - mem.consolidate_logs.mp_sub_balancing_TAZ deleting output\HH\mp_sub_balancing_TAZ_5-mem.csv
+05/12/2023 15:23:39 - DEBUG - activitysim.core.util - mem.consolidate_logs.mp_sub_balancing_TAZ deleting output\HH\mp_sub_balancing_TAZ_6-mem.csv
+05/12/2023 15:23:39 - DEBUG - activitysim.core.util - mem.consolidate_logs.mp_sub_balancing_TAZ deleting output\HH\mp_sub_balancing_TAZ_7-mem.csv
+05/12/2023 15:23:39 - DEBUG - activitysim.core.util - mem.consolidate_logs.mp_sub_balancing_TAZ deleting output\HH\mp_sub_balancing_TAZ_8-mem.csv
+05/12/2023 15:23:39 - DEBUG - activitysim.core.util - mem.consolidate_logs.mp_sub_balancing_TAZ deleting output\HH\mp_sub_balancing_TAZ_9-mem.csv
+05/12/2023 15:23:39 - DEBUG - activitysim.core.mem - chunk.consolidate_logs writing step summary log for step mp_sub_balancing_TAZ to output\HH\mem_mp_sub_balancing_TAZ.csv
+05/12/2023 15:23:39 - DEBUG - activitysim.core.mem - mem.consolidate_logs for step mp_sub_balancing_MAZ
+05/12/2023 15:23:39 - DEBUG - activitysim.core.mem - mem.consolidate_logs consolidating 12 logs for mp_sub_balancing_MAZ
+05/12/2023 15:23:40 - DEBUG - activitysim.core.util - mem.consolidate_logs.mp_sub_balancing_MAZ deleting output\HH\mp_sub_balancing_MAZ_0-mem.csv
+05/12/2023 15:23:40 - DEBUG - activitysim.core.util - mem.consolidate_logs.mp_sub_balancing_MAZ deleting output\HH\mp_sub_balancing_MAZ_1-mem.csv
+05/12/2023 15:23:40 - DEBUG - activitysim.core.util - mem.consolidate_logs.mp_sub_balancing_MAZ deleting output\HH\mp_sub_balancing_MAZ_10-mem.csv
+05/12/2023 15:23:40 - DEBUG - activitysim.core.util - mem.consolidate_logs.mp_sub_balancing_MAZ deleting output\HH\mp_sub_balancing_MAZ_11-mem.csv
+05/12/2023 15:23:40 - DEBUG - activitysim.core.util - mem.consolidate_logs.mp_sub_balancing_MAZ deleting output\HH\mp_sub_balancing_MAZ_2-mem.csv
+05/12/2023 15:23:40 - DEBUG - activitysim.core.util - mem.consolidate_logs.mp_sub_balancing_MAZ deleting output\HH\mp_sub_balancing_MAZ_3-mem.csv
+05/12/2023 15:23:40 - DEBUG - activitysim.core.util - mem.consolidate_logs.mp_sub_balancing_MAZ deleting output\HH\mp_sub_balancing_MAZ_4-mem.csv
+05/12/2023 15:23:40 - DEBUG - activitysim.core.util - mem.consolidate_logs.mp_sub_balancing_MAZ deleting output\HH\mp_sub_balancing_MAZ_5-mem.csv
+05/12/2023 15:23:40 - DEBUG - activitysim.core.util - mem.consolidate_logs.mp_sub_balancing_MAZ deleting output\HH\mp_sub_balancing_MAZ_6-mem.csv
+05/12/2023 15:23:40 - DEBUG - activitysim.core.util - mem.consolidate_logs.mp_sub_balancing_MAZ deleting output\HH\mp_sub_balancing_MAZ_7-mem.csv
+05/12/2023 15:23:40 - DEBUG - activitysim.core.util - mem.consolidate_logs.mp_sub_balancing_MAZ deleting output\HH\mp_sub_balancing_MAZ_8-mem.csv
+05/12/2023 15:23:40 - DEBUG - activitysim.core.util - mem.consolidate_logs.mp_sub_balancing_MAZ deleting output\HH\mp_sub_balancing_MAZ_9-mem.csv
+05/12/2023 15:23:40 - DEBUG - activitysim.core.mem - chunk.consolidate_logs writing step summary log for step mp_sub_balancing_MAZ to output\HH\mem_mp_sub_balancing_MAZ.csv
+05/12/2023 15:23:40 - DEBUG - activitysim.core.mem - mem.consolidate_logs for step mp_summarize
+05/12/2023 15:23:40 - DEBUG - activitysim.core.mem - mem.consolidate_logs consolidating 1 logs for mp_summarize
+05/12/2023 15:23:40 - DEBUG - activitysim.core.util - mem.consolidate_logs.mp_summarize deleting output\HH\mp_summarize-mem.csv
+05/12/2023 15:23:40 - DEBUG - activitysim.core.mem - chunk.consolidate_logs writing step summary log for step mp_summarize to output\HH\mem_mp_summarize.csv
+05/12/2023 15:23:40 - DEBUG - activitysim.core.mem - chunk.consolidate_logs writing omnibus log to output\HH\omnibus_mem.csv
+05/12/2023 15:23:40 - INFO - activitysim.core.tracing - Time to execute all models : 1243.87 seconds (20.7 minutes)
