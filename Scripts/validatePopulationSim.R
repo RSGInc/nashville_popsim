@@ -60,7 +60,8 @@
 #
 ##############################################################################################################
 args                <- commandArgs(trailingOnly = TRUE)
-Parameters_File     <- args[1]
+#Parameters_File     <- args[1]
+Parameters_File     <- file.path(getwd(), "Data", "parameters.csv")
 
 ### User Inputs [Read command line arguments]
 parameters <- read.csv(Parameters_File, header = TRUE)
