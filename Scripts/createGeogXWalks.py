@@ -5,9 +5,9 @@ import os
 import numpy as np
 
 parameters_file = sys.argv[1]
-#parameters_file=r'E:\Projects\Clients\NashvilleMPO\ModelUpdate2023\Tasks\Task4_Enhancements\Update_PopulationSim_Software\GitHub_Aditya\Data\parameters.csv
 parameters = pd.read_csv(parameters_file)
 parameters.columns = ['Key', 'Value']
+USER_DIR = os.path.join(os.getcwd(),'Data', 'USER')
 
 maz = gpd.read_file(os.path.join(parameters.loc[parameters.Key == 'MAZ_DIR']['Value'].item().strip(),'MZ_nashville_clean.shp'))[['ID','geometry']]
 taz = gpd.read_file(os.path.join(parameters.loc[parameters.Key == 'TAZ_DIR']['Value'].item().strip(),'TAZ_nashville_split_project.shp'))[['ID','geometry']]
@@ -15,6 +15,7 @@ tract = gpd.read_file(os.path.join(parameters.loc[parameters.Key == 'CT_DIR']['V
 bg = gpd.read_file(os.path.join(parameters.loc[parameters.Key == 'BG_DIR']['Value'].item().strip(),'nashville_bg.shp'))[['GEOID','geometry']]
 puma = gpd.read_file(os.path.join(parameters.loc[parameters.Key == 'PUMA_DIR']['Value'].item().strip(),'nashville_puma.shp'))[['GEOID10','geometry']]
 county = gpd.read_file(os.path.join(parameters.loc[parameters.Key == 'CNTY_DIR']['Value'].item().strip(),'nashville_county.shp'))[['GEOID','geometry']]
+gq_pumas = pd.read_csv(os.path.join(USER_DIR, 'gq_pumas.csv'))
 
 maz = maz.to_crs(taz.crs)
 tract = tract.to_crs(taz.crs)
@@ -85,6 +86,11 @@ x_walk_5['REGION'] = 3 # https://www2.census.gov/geo/pdfs/maps-data/maps/referen
 x_walk_5.to_csv(os.path.join(parameters.loc[parameters.Key == 'XWALK_DIR']['Value'].item().strip(),'geo_crosswalks.csv'), index = None)
 
 #generate crosswalks for GQs. Only PUMA=47037 has GQs, so retain only this PUMA in the crosswalk
-# x_walk_6 = x_walk_5[x_walk_5.PUMA=='4702505']
-# x_walk_6.to_csv(os.path.join(parameters.loc[parameters.Key == 'XWALK_DIR']['Value'].item().strip(),'geo_crosswalksGQ.csv'), index = None)
+print(gq_pumas.head())
+print(gq_pumas.dtypes)
+print(x_walk_5.head())
+print(x_walk_5.dtypes)
+x_walk_6 = x_walk_5[x_walk_5.PUMA.astype(int).isin(gq_pumas.PUMA)]
+print(x_walk_6.head())
+x_walk_6.to_csv(os.path.join(parameters.loc[parameters.Key == 'XWALK_DIR']['Value'].item().strip(),'geo_crosswalksGQ.csv'), index = None)
 
