@@ -14,7 +14,7 @@ max_expansion_factor: 30
 
 #Multiprocessor parameters
 multiprocess: True
-num_processes: 12
+num_processes: 16
 slice_geography: PUMA
 cleanup_pipeline_after_run: True
 
@@ -108,6 +108,9 @@ output_synthetic_population:
     columns:
       - per_num
       - AGEP
+      - RAC1P
+      - FHISP
+      - SEX
       - hh_id
 
 
@@ -132,7 +135,7 @@ multiprocess_steps:
     begin: input_pre_processor
   - name: mp_sub_balancing_TAZ
     begin: sub_balancing.geography=TAZ
-    num_processes: 12
+    num_processes: 16
     slice:
       tables:
         - slice_crosswalk
@@ -146,7 +149,7 @@ multiprocess_steps:
         - trace_TAZ_weights
   - name: mp_sub_balancing_MAZ
     begin: sub_balancing.geography=MAZ
-    num_processes: 12
+    num_processes: 16
     slice:
       tables:
         - slice_crosswalk

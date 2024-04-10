@@ -4,14 +4,14 @@ import os
 import sys
 import json
 import numpy as np
-parameters_file=r'E:\Projects\Clients\NashvilleMPO\ModelUpdate2023\Tasks\Task4_Enhancements\Update_PopulationSim_Software\GitHub_William\Data\parameters.csv'
+parameters_file=r'..\Data\parameters.csv'
 
 #parameters_file = sys.argv[1]
 
 parameters = pd.read_csv(parameters_file)
 parameters.columns = ['Key', 'Value']
 WORKING_DIR = parameters[parameters.Key == 'WORKING_DIR']['Value'].item().strip(' ')
-outputDir = r'E:\Projects\Clients\NashvilleMPO\ModelUpdate2023\Tasks\Task4_Enhancements\Update_PopulationSim_Software\GitHub_William\Setup\data'
+outputDir = r'..\Setup\data'
 censusDownloadDir = os.path.join(WORKING_DIR, 'Data','Census','Downloads')
 
 api_key = pd.read_csv(os.path.join(WORKING_DIR,"Data","Census","API","census_api_key.csv")).iloc[0].key

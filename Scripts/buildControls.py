@@ -20,6 +20,7 @@
 
 from __future__ import division
 from tokenize import group
+from unicodedata import digit
 import pandas as pd
 import os
 import sys
@@ -32,10 +33,55 @@ print("Python version:", sys.version)
 def roundsum(values):
 	return(np.diff(np.round(np.cumsum(values)), prepend=0).astype(int))
 
+def roundsum(values, digits=0):
+	return(np.diff(np.round(np.cumsum(values), decimals=digits), prepend=0))
+
 def matchprop(values, target):
 	value_sum = sum(values)
 	adj_factor = target/value_sum
 	return(np.array(values) * adj_factor)
+
+def round_preserve_threshold(x, threshold=1):
+    x = np.round(np.cumsum(x))
+    prev_value = 0
+    borrow_value = 0
+    new_x = np.array(x)
+    for index in range(len(new_x)):
+        # print borrow_value
+        if index > 0:
+            cur_value = x[index]
+            if borrow_value == 0:
+                if cur_value == prev_value:
+                    cur_value = cur_value + threshold
+                    borrow_value = borrow_value + threshold
+                    prev_value = cur_value
+                else:
+                    prev_value = cur_value
+            else:
+                if cur_value < prev_value:
+                    borrow_value = borrow_value + prev_value - cur_value + threshold
+                    cur_value = prev_value + threshold
+                    prev_value = cur_value
+                elif cur_value == prev_value:
+                    cur_value = cur_value + threshold
+                    borrow_value = borrow_value + threshold
+                    prev_value = cur_value
+                elif cur_value > (prev_value+threshold):
+                    cur_value = cur_value - threshold
+                    borrow_value = borrow_value - threshold
+                    prev_value = cur_value
+                else:
+                    prev_value = cur_value
+        else:
+            cur_value = x[index]
+            prev_value = cur_value
+            if cur_value < 1:
+                cur_value = 1
+                prev_value = 1
+                borrow_value = 1
+        new_x[index] = cur_value
+    new_x = np.diff(np.insert(new_x, 0, 0))
+    return new_x.astype(int)
 
 # Borrowed from ActivitySim
 def reindex(series1, series2):
@@ -134,6 +180,7 @@ censusDownloadDir = os.path.join(WORKING_DIR, 'Data','Census','Downloads')
 
 # USER_DIR = parameters[parameters.Key == 'USER_DIR']['Value'].item().strip(' ')
 USER_DIR = os.path.join(os.getcwd(),'Data', 'USER')
+old_new_puma_xwalk = os.path.join(USER_DIR, 'puma20_puma10_newpuma_xwalk.csv')
 
 # nashville_pop = 1894704  
 # William: where is this from. placeholder B01001 20121 5-yr, use data from GNRC later.
@@ -151,21 +198,23 @@ COUNTY_DF = pd.DataFrame({'COUNTY':COUNTY_NAMES}, index=[int('47'+x) for x in CO
 
 # Read in the user inputs
 MODEL_YEAR = '2023'
+CENSUS_YEAR = '2022'
 county_control_forecasts = pd.read_csv(os.path.join(USER_DIR, 'control_forecasts.csv'))
 # Ensure that all the zone names match the hard-coded COUNTY_NAMES list
 assert all(county_name in county_control_forecasts.County.unique() for county_name in COUNTY_NAMES), 'Mismatch in county names'
 
 # read Census data from Census download directory
-hhsize_BG   = pd.read_csv(os.path.join(censusDownloadDir, "hhsize_BG_2021_acs5.csv"))
-hhtype_BG   = pd.read_csv(os.path.join(censusDownloadDir, "hhtype_BG_2021_acs5.csv"))
-hhtenure_BG = pd.read_csv(os.path.join(censusDownloadDir, "hhtenure_BG_2021_acs5.csv"))
-hhunit_CT   = pd.read_csv(os.path.join(censusDownloadDir, "hhunit_CT_2021_acs5.csv"))
-hhworker_CT = pd.read_csv(os.path.join(censusDownloadDir, "hhworker_CT_2021_acs5.csv"))
-hhincome_CT = pd.read_csv(os.path.join(censusDownloadDir, "hhincome_CT_2021_acs5.csv"))
-hhkids_CT  	= pd.read_csv(os.path.join(censusDownloadDir, "hh_kids_nokids_CT_2021_acs5.csv"))
-pop_CT 		= pd.read_csv(os.path.join(censusDownloadDir,"populationbyageandsex_CT_2021_acs5.csv"))
-gqtot_acs_CT	= pd.read_csv(os.path.join(censusDownloadDir, "gqtot_CT_2021_acs5.csv"))
-#gqage_sf1_CT	= pd.read_csv(os.path.join(censusDownloadDir, "gqage_CT_2010_sf1.csv"))
+hhsize_BG   = pd.read_csv(os.path.join(censusDownloadDir, "hhsize_BG_" + CENSUS_YEAR + "_acs5.csv"))
+hhtype_BG   = pd.read_csv(os.path.join(censusDownloadDir, "hhtype_BG_" + CENSUS_YEAR + "_acs5.csv"))
+hhtenure_BG = pd.read_csv(os.path.join(censusDownloadDir, "hhtenure_BG_" + CENSUS_YEAR + "_acs5.csv"))
+hhunit_CT   = pd.read_csv(os.path.join(censusDownloadDir, "hhunit_CT_" + CENSUS_YEAR + "_acs5.csv"))
+hhworker_CT = pd.read_csv(os.path.join(censusDownloadDir, "hhworker_CT_" + CENSUS_YEAR + "_acs5.csv"))
+hhincome_CT = pd.read_csv(os.path.join(censusDownloadDir, "hhincome_CT_" + CENSUS_YEAR + "_acs5.csv"))
+hhkids_CT  	= pd.read_csv(os.path.join(censusDownloadDir, "hh_kids_nokids_CT_" + CENSUS_YEAR + "_acs5.csv"))
+pop_CT 		= pd.read_csv(os.path.join(censusDownloadDir,"populationbyageandsex_CT_" + CENSUS_YEAR + "_acs5.csv"))
+sex_CT 		= pd.read_csv(os.path.join(censusDownloadDir,"populationbysex_CT_" + CENSUS_YEAR + "_acs5.csv"))
+race_BG 		= pd.read_csv(os.path.join(censusDownloadDir,"populationbyrace_BG_" + CENSUS_YEAR + "_acs5.csv"))
+gqtot_acs_CT	= pd.read_csv(os.path.join(censusDownloadDir, "gqtot_CT_" + CENSUS_YEAR + "_acs5.csv"))
 
 gqtot_acs_CT['gq_total'] = gqtot_acs_CT['B26001_001E']
 print("GWTOT:", gqtot_acs_CT.gq_total.sum(), sep=' ')
@@ -233,6 +282,8 @@ hhworker_CT = hhworker_CT.rename(columns = {'CTIDFP10':'TRACT'}).drop(columns=['
 hhincome_CT = hhincome_CT.rename(columns = {'CTIDFP10':'TRACT'}).drop(columns=['state','county','tract'], errors='ignore')
 hhkids_CT = hhkids_CT.rename(columns = {'CTIDFP10':'TRACT'}).drop(columns=['state','county','tract'], errors='ignore')
 pop_CT = pop_CT.rename(columns = {'CTIDFP10':'TRACT'}).drop(columns=['state','county','tract'], errors='ignore')
+sex_CT = sex_CT.rename(columns = {'CTIDFP10':'TRACT'}).drop(columns=['state','county','tract'], errors='ignore')
+race_BG = race_BG.rename(columns = {'BKGPIDFP10':'BLOCKGRP'}).drop(columns=['state','county','tract'], errors='ignore')
 gqtot_acs_CT = gqtot_acs_CT.rename(columns = {'CTIDFP10':'TRACT'}).drop(columns=['state','county','tract'], errors='ignore')
 
 TAZ_xwalk = pd.read_csv(os.path.join(WORKING_DIR,"Setup","data","geo_crosswalks.csv"))
@@ -518,7 +569,7 @@ tazControl = tazControl.rename(columns = {'hh':'HHS',\
 	'HHAGE15_44_S3':'HHAGE1_S3','HHAGE45_64_S3':'HHAGE2_S3', 'HHAGE65M_S3':'HHAGE3_S3',\
 		'HHINC0TO20K_S3':'HHINC1_S3', 'HHINC20TO30K_S3':'HHINC2_S3', 'HHINC30TO45K_S3':'HHINC3_S3','HHINC45TO75K_S3':'HHINC4_S3','HHINC75TO100K_S3':'HHINC5_S3','HHINC100KM_S3':'HHINC6_S3',\
 			'HHWRKS0_S3':'HHWRK1_S3','HHWRKS1_S3':'HHWRK2_S3','HHWRKS2_S3':'HHWRK3_S3','HHWRKS3M_S3':'HHWRK4_S3'})
-tazControl3 = tazControl[['ct_pct','TAZ', 'HHS', 'GQ','PUMA', 'TRACT','COUNTY', \
+tazControl3 = tazControl[['bg_pct','ct_pct','TAZ', 'HHS', 'GQ','PUMA', 'TRACT','COUNTY','BLOCKGRP', \
 	'HHSIZE1_S3', 'HHSIZE2_S3', 'HHSIZE3_S3', 'HHSIZE4M_S3',\
 		'HHAGE1_S3', 'HHAGE2_S3', 'HHAGE3_S3', \
 			'HHWRK1_S3', 'HHWRK2_S3', 'HHWRK3_S3', 'HHWRK4_S3', \
@@ -531,14 +582,70 @@ tazControl3 = tazControl[['ct_pct','TAZ', 'HHS', 'GQ','PUMA', 'TRACT','COUNTY', 
 # Household seed File
 #----------------
 
+# Read old PUMA to new PUMA crosswalk
+puma_xwalk = pd.read_csv(old_new_puma_xwalk)
+
 # read PUMS person and HH data
 pums_per = pd.read_csv(os.path.join(WORKING_DIR, "Data","PUMS","Person","psam_p47.csv"), dtype={'SERIALNO': str})
 pums_hh = pd.read_csv(os.path.join(WORKING_DIR, "Data","PUMS","Household","psam_h47.csv"), dtype={'SERIALNO': str})
 
-pums_per = pums_per[pums_per['PUMA'].isin(popsyn_xwalk.PUMA10.unique())]
-pums_hh = pums_hh[pums_hh['PUMA'].isin(popsyn_xwalk.PUMA10.unique())]
+# pums_per = pums_per[pums_per['PUMA'].isin(popsyn_xwalk.PUMA10.unique())]
+# pums_hh = pums_hh[pums_hh['PUMA'].isin(popsyn_xwalk.PUMA10.unique())]
+pums_per = pums_per[(pums_per.PUMA10.isin(puma_xwalk.PUMACE10.unique())) | (pums_per.PUMA20.isin(puma_xwalk.PUMACE20.unique()))]
+pums_hh = pums_hh[(pums_hh.PUMA10.isin(puma_xwalk.PUMACE10.unique())) | (pums_hh.PUMA20.isin(puma_xwalk.PUMACE20.unique()))]
+
+pums_per_columns = pums_per.columns.values
+pums_hh_columns = pums_hh.columns.values
+
+# Person before merge
+PUMA10_POP = pums_per.groupby('PUMA10')['PWGTP'].sum()
+pums_per_puma10 = pums_per[pums_per.PUMA10>0].merge(puma_xwalk[['PUMACE10','PUMA','PROP10']],left_on='PUMA10',right_on='PUMACE10',how='left')
+pums_per_puma10['PWGTP_NEW'] = pums_per_puma10['PWGTP'] * pums_per_puma10['PROP10']
+# pums_per_puma10['PWGTP_NEW'] = pums_per_puma10.groupby('PUMA10', group_keys=True).apply(lambda _df: pd.DataFrame({'PWGTP_NEW':roundsum(_df.PWGTP_NEW)}, index=_df.index)).droplevel(0)
+# pums_per_puma10['PWGTP_NEW'] = pums_per_puma10.groupby('PUMA10', group_keys=True).apply(lambda _df: pd.DataFrame({'PWGTP_NEW':roundsum(_df.PWGTP_NEW, digits=2)}, index=_df.index)).droplevel(0)
+pums_per_puma10['PWGTP_NEW'] = pums_per_puma10.groupby('PUMA10', group_keys=True).apply(lambda _df: pd.DataFrame({'PWGTP_NEW':round_preserve_threshold(_df.PWGTP_NEW.values)}, index=_df.index)).droplevel(0)
+pums_per_puma10 = pums_per_puma10[pums_per_puma10.PWGTP_NEW>0]
+pums_per_puma10['PWGTP'] = pums_per_puma10['PWGTP_NEW']
+PUMA20_POP = pums_per.groupby('PUMA20')['PWGTP'].sum()
+pums_per_puma20 = pums_per[pums_per.PUMA20>0].merge(puma_xwalk[['PUMACE20','PUMA','PROP20']],left_on='PUMA20',right_on='PUMACE20',how='left')
+pums_per_puma20['PWGTP_NEW'] = pums_per_puma20['PWGTP'] * pums_per_puma20['PROP20']
+# pums_per_puma20['PWGTP_NEW'] = pums_per_puma20.groupby('PUMA20', group_keys=True).apply(lambda _df: pd.DataFrame({'PWGTP_NEW':roundsum(_df.PWGTP_NEW)}, index=_df.index)).droplevel(0)
+# pums_per_puma20['PWGTP_NEW'] = pums_per_puma20.groupby('PUMA20', group_keys=True).apply(lambda _df: pd.DataFrame({'PWGTP_NEW':roundsum(_df.PWGTP_NEW, digits=2)}, index=_df.index)).droplevel(0)
+pums_per_puma20['PWGTP_NEW'] = pums_per_puma20.groupby('PUMA20', group_keys=True).apply(lambda _df: pd.DataFrame({'PWGTP_NEW':round_preserve_threshold(_df.PWGTP_NEW.values)}, index=_df.index)).droplevel(0)
+pums_per_puma20 = pums_per_puma20[pums_per_puma20.PWGTP_NEW>0]
+pums_per_puma20['PWGTP'] = pums_per_puma20['PWGTP_NEW']
+pums_per_columns = np.append(pums_per_columns, 'PUMA')
+pums_per = pd.concat([pums_per_puma10[pums_per_columns], pums_per_puma20[pums_per_columns]], axis=0)
+pums_per = pums_per.reset_index(drop=True)
+
+# Household before merge
+# Household Serial numbers to keep
+SERIALNOS = pums_hh[pums_hh.WGTP==0]['SERIALNO'].to_list()
+PUMA10_HH = pums_hh.groupby('PUMA10')['WGTP'].sum()
+pums_hh_puma10 = pums_hh[pums_hh.PUMA10>0].merge(puma_xwalk[['PUMACE10','PUMA','PROP10']],left_on='PUMA10',right_on='PUMACE10',how='left')
+pums_hh_puma10['WGTP_NEW'] = pums_hh_puma10['WGTP'] * pums_hh_puma10['PROP10']
+# pums_hh_puma10['WGTP_NEW'] = pums_hh_puma10.groupby('PUMA10', group_keys=True).apply(lambda _df: pd.DataFrame({'WGTP_NEW':roundsum(_df.WGTP_NEW)}, index=_df.index)).droplevel(0)
+# pums_hh_puma10['WGTP_NEW'] = pums_hh_puma10.groupby('PUMA10', group_keys=True).apply(lambda _df: pd.DataFrame({'WGTP_NEW':roundsum(_df.WGTP_NEW, digits=2)}, index=_df.index)).droplevel(0)
+pums_hh_puma10['WGTP_NEW'] = pums_hh_puma10.groupby('PUMA10', group_keys=True).apply(lambda _df: pd.DataFrame({'WGTP_NEW':round_preserve_threshold(_df.WGTP_NEW.values)}, index=_df.index)).droplevel(0)
+pums_hh_puma10 = pums_hh_puma10[(pums_hh_puma10.WGTP_NEW>0)|(pums_hh_puma10.SERIALNO.isin(SERIALNOS))]
+pums_hh_puma10['WGTP'] = pums_hh_puma10['WGTP_NEW']
+PUMA20_HH = pums_hh.groupby('PUMA20')['WGTP'].sum()
+pums_hh_puma20 = pums_hh[pums_hh.PUMA20>0].merge(puma_xwalk[['PUMACE20','PUMA','PROP20']],left_on='PUMA20',right_on='PUMACE20',how='left')
+pums_hh_puma20['WGTP_NEW'] = pums_hh_puma20['WGTP'] * pums_hh_puma20['PROP20']
+# pums_hh_puma20['WGTP_NEW'] = pums_hh_puma20.groupby('PUMA20', group_keys=True).apply(lambda _df: pd.DataFrame({'WGTP_NEW':roundsum(_df.WGTP_NEW)}, index=_df.index)).droplevel(0)
+# pums_hh_puma20['WGTP_NEW'] = pums_hh_puma20.groupby('PUMA20', group_keys=True).apply(lambda _df: pd.DataFrame({'WGTP_NEW':roundsum(_df.WGTP_NEW, digits=2)}, index=_df.index)).droplevel(0)
+pums_hh_puma20['WGTP_NEW'] = pums_hh_puma20.groupby('PUMA20', group_keys=True).apply(lambda _df: pd.DataFrame({'WGTP_NEW':round_preserve_threshold(_df.WGTP_NEW.values)}, index=_df.index)).droplevel(0)
+pums_hh_puma20 = pums_hh_puma20[(pums_hh_puma20.WGTP_NEW>0)|(pums_hh_puma20.SERIALNO.isin(SERIALNOS))]
+pums_hh_puma20['WGTP'] = pums_hh_puma20['WGTP_NEW']
+pums_hh_columns = np.append(pums_hh_columns, 'PUMA')
+pums_hh = pd.concat([pums_hh_puma10[pums_hh_columns], pums_hh_puma20[pums_hh_columns]], axis=0)
+pums_hh = pums_hh.reset_index(drop=True)
+pums_hh['NEWSERIALNO'] = (pums_hh.index+1).astype(str)
+pums_per = pd.merge(pums_per, pums_hh[['SERIALNO', 'PUMA', 'NEWSERIALNO']], on=['SERIALNO','PUMA'], how='left')
+
+
 print("pums puma", pums_hh.PUMA.unique())
-print("xwalkpuma",popsyn_xwalk.PUMA10.unique())
+print("xwalkpuma",popsyn_xwalk.PUMA.unique())
 # remove vacant units and  group quarters households
 print("len raw pums", len(pums_hh))
 
@@ -564,7 +671,7 @@ print("seed_person['workers'] missing values:", seed_person['workers'].isnull().
 print("seed_person['SERIALNO'] NaN count:", seed_person['SERIALNO'].isnull().sum())
 
 # Join seed_person with seed_house
-seed_house = seed_house.merge(seed_person[['SERIALNO', 'workers']].groupby('SERIALNO', group_keys=True).sum(), how='left', on='SERIALNO')
+seed_house = seed_house.merge(seed_person[['NEWSERIALNO', 'workers']].groupby('NEWSERIALNO', group_keys=True).sum(), how='left', on='NEWSERIALNO')
 
 # use ESR to set employment dummy	
 seed_person['employed'] = np.where(seed_person.ESR.isin([1,2,4,5]), 1, 0)	
@@ -572,14 +679,14 @@ seed_person['employed'] = np.where(seed_person.ESR.isin([1,2,4,5]), 1, 0)
 #dummy hh_id
 seed_house['hh_id'] = np.arange(1,len(seed_house)+1)
 
-new_HH_ID = seed_house[["SERIALNO","hh_id"]]
+new_HH_ID = seed_house[["NEWSERIALNO","hh_id"]]
 
-seed_person = seed_person.merge(new_HH_ID, how = 'left', on = "SERIALNO")
-age_householder = seed_person[["SERIALNO","AGEP",'RELSHIPP']]
+seed_person = seed_person.merge(new_HH_ID, how = 'left', on = "NEWSERIALNO")
+age_householder = seed_person[["NEWSERIALNO","AGEP",'RELSHIPP']]
 # 'RELP' is Relationship, changed to 'RELSHIPP', 20 is the head of household (reference person).
 max_age = age_householder[age_householder['RELSHIPP'] == 20]#.groupby('SERIALNO', as_index = False).agg({'AGEP':'max'})
 max_age = max_age.rename(columns = {'AGEP':'AGEHOH'})
-seed_house = seed_house.merge(max_age, how = 'left', on = 'SERIALNO')
+seed_house = seed_house.merge(max_age, how = 'left', on = 'NEWSERIALNO')
 
 # put income in constant year dollars (SQL says reported income * rolling reference factor * inflation adjustment)	
   
@@ -608,21 +715,21 @@ seed_house['HHINCADJ'] = seed_house['HHINCADJ'].astype(int)
 
 # seed_person <- seed_person  
   # mutate(PUMA=PUMA_NEW)
-seed_person['PUMA'] = seed_person['PUMA'] +STATE_FIPS*100000
-seed_house['PUMA'] = seed_house['PUMA'] +STATE_FIPS*100000
+# seed_person['PUMA'] = seed_person['PUMA'] +STATE_FIPS*100000*100000
+# seed_house['PUMA'] = seed_house['PUMA'] +STATE_FIPS*100000*100000
 #kids
 seed_house['KID'] =np.where(seed_house['HUPAC']==4,0,1)
 
 # Confirm that all the household and person seeds are present based on SERIALNO match
 
-print("seed_person['SERIALNO'] person missing from household:", seed_person[~seed_person.SERIALNO.isin(seed_house.SERIALNO)].shape[0])
-print("seed_person['SERIALNO'] NaN count:", seed_person['SERIALNO'].isnull().sum())
+print("seed_person['SERIALNO'] person missing from household:", seed_person[~seed_person.NEWSERIALNO.isin(seed_house.NEWSERIALNO)].shape[0])
+print("seed_person['SERIALNO'] NaN count:", seed_person['NEWSERIALNO'].isnull().sum())
 
 
 #Get GQ Weights
 
 seed_house_gq = pums_hh[(pums_hh.NP != 0) & (pums_hh.TYPEHUGQ.isin([3]))]	
-seed_person_gq = pums_per[pums_per.SERIALNO.isin(seed_house_gq.SERIALNO.unique())]
+seed_person_gq = pums_per[pums_per.NEWSERIALNO.isin(seed_house_gq.NEWSERIALNO.unique())]
 
 gqpersons = seed_person_gq#.merge(seed_house_gq, how = 'left', on = 'SERIALNO')
 #gqpersons = gqpersons[gqpersons['TYPEHUGQ'] == 3]
@@ -634,7 +741,7 @@ gqpersons['MIL'] = np.where(gqpersons['MIL'].isnull(), 0, gqpersons['MIL'])
 
 gqpersons['GQTYPE'] = np.where(gqpersons['SCHG'].isin([15,16]),1,np.where(gqpersons.MIL == 1, 2,3))
 gqpersons = gqpersons.rename(columns = {'PWGTP':'GQWGTP'})
-seed_house_gq = seed_house_gq.merge(gqpersons[['GQWGTP','SERIALNO','GQTYPE']], how = 'left', on = 'SERIALNO').fillna(0)
+seed_house_gq = seed_house_gq.merge(gqpersons[['GQWGTP','NEWSERIALNO','GQTYPE']], how = 'left', on = 'NEWSERIALNO').fillna(0)
 
 
 seed_house.to_csv(os.path.join(outputDir, "seed_households.csv"), index = False)
@@ -644,7 +751,7 @@ seed_person.to_csv(os.path.join(outputDir, "seed_persons.csv"), index = False )
 # use this section of code on Step 01 PUMS to Database - before leaving out GQs
 # Create distribution of GQ population by age for each Census Tract [run only once]
 # Non-Institutional GQ population
-pums_pop = pums_per.merge(pums_hh[["SERIALNO", "WGTP", "TYPEHUGQ"]],  on = "SERIALNO", how = 'left')
+pums_pop = pums_per.merge(pums_hh[["NEWSERIALNO", "WGTP", "TYPEHUGQ"]],  on = "NEWSERIALNO", how = 'left')
 pums_pop = pums_pop[pums_pop.TYPEHUGQ>=2]#filter(TYPEHUGQ >= 2) %>%  # GQ population
 pums_pop['age_group7'] = np.where(pums_pop.AGEP>=80, 1, 0)
 pums_pop['age_group6'] = np.where((pums_pop.AGEP>=65) & (pums_pop.AGEP<=79), 1, 0)
@@ -665,7 +772,7 @@ print("pre merge:", len(pums_pop), sep=' ')
 
 print('CHECK RECORDS')
 #print pums_pop[['TRACT']+['percent_age_group{}'.format(i) for i in range(1,8)]].fillna(0).describe()#, gqtot_acs_CT.TRACT.head(),pums_pop.TRACT.head()#[['TRACT']+['percent_age_group{}'.format(i) for i in range(1,8)]].head()
-pums_pop['PUMA'] = pums_pop['PUMA'].map(lambda n: n +STATE_FIPS*100000)
+# pums_pop['PUMA'] = pums_pop['PUMA'].map(lambda n: n +STATE_FIPS*100000)
 
 gqtot_acs_CT = gqtot_acs_CT.merge(popsyn_xwalk[['PUMA','TRACT']].groupby('TRACT',as_index = False).first(), how = 'left', on = 'TRACT').merge(pums_pop[['PUMA']+['percent_age_group{}'.format(i) for i in range(1,8)]].fillna(0), how = 'left', on = 'PUMA').fillna(0)
 print(gqtot_acs_CT[['gq_total','percent_age_group1', 'percent_age_group2']].fillna(0).describe())
@@ -673,23 +780,23 @@ print(gqtot_acs_CT[['gq_total','percent_age_group1', 'percent_age_group2']].fill
 
 #output GQ seed data
 seed_house_GQ = seed_house_gq[seed_house_gq.GQWGTP>0]
-seed_house_GQ['PUMA'] = seed_house_GQ['PUMA'] +STATE_FIPS*100000
+# seed_house_GQ['PUMA'] = seed_house_GQ['PUMA'] +STATE_FIPS*100000
 seed_house_GQ['hh_id'] = np.arange(1,len(seed_house_GQ)+1)
 
-new_GQ_ID = seed_house_GQ[["SERIALNO","hh_id"]]
+new_GQ_ID = seed_house_GQ[["NEWSERIALNO","hh_id"]]
 
 seed_house_GQ.to_csv(os.path.join(outputDir, "seed_households_GQ.csv"), index = False)
-seed_person_GQ = gqpersons.merge(new_GQ_ID, how = 'left', on = 'SERIALNO')
-seed_person_GQ['PUMA'] = seed_person_GQ['PUMA'] +STATE_FIPS*100000
+seed_person_GQ = gqpersons.merge(new_GQ_ID, how = 'left', on = 'NEWSERIALNO')
+# seed_person_GQ['PUMA'] = seed_person_GQ['PUMA'] +STATE_FIPS*100000
 seed_person_GQ.to_csv(os.path.join(outputDir, "seed_persons_GQ.csv"), index = False )
 #gqpersons.to_csv(os.path.join(outputDir, "seed_persons_GQ.csv"), index = False )
 
 # tazControl4 = tazControl3.merge(ct_hh, how = 'left', left_on = "TRACT", right_on ='TRACT')
 # ct_pop = tazControl3.groupby('TRACT', as_index = False)['hh'].sum()
-tazControl4 = tazControl3.merge(pop_CT, how = 'left', on = 'TRACT').merge(gqtot_acs_CT, how = 'left', on = 'TRACT')
+tazControl4 = tazControl3.merge(pop_CT, how = 'left', on = 'TRACT').merge(gqtot_acs_CT, how = 'left', on = 'TRACT').merge(sex_CT, how='left', on='TRACT').merge(race_BG, how='left', on='BLOCKGRP')
 tazControl4 = tazControl4.fillna(0)
-tazControl4['MALE'] = tazControl4['ct_pct']*tazControl4['B01001_002E']
-tazControl4['FEMALE'] = tazControl4['ct_pct']*tazControl4['B01001_026E']
+tazControl4['MALE'] = tazControl4['ct_pct']*tazControl4['S0101_C03_001E']
+tazControl4['FEMALE'] = tazControl4['ct_pct']*tazControl4['S0101_C05_001E']
 tazControl4['AGE0to17'] = (tazControl4['ct_pct']*(tazControl4['B01001_003E']+tazControl4['B01001_027E']+tazControl4['B01001_004E']+tazControl4['B01001_005E']+tazControl4['B01001_006E']+tazControl4['B01001_028E']+tazControl4['B01001_029E']+tazControl4['B01001_030E'] - (tazControl4['gq_total']*tazControl4['percent_age_group1']))).clip(lower=0)
 tazControl4['AGE0to17_no_subtract'] = tazControl4['ct_pct']*(tazControl4['B01001_003E']+tazControl4['B01001_027E']+tazControl4['B01001_004E']+tazControl4['B01001_005E']+tazControl4['B01001_006E']+tazControl4['B01001_028E']+tazControl4['B01001_029E']+tazControl4['B01001_030E'])
 print('AGE GROUP1',tazControl4.AGE0to17.sum(), tazControl4.AGE0to17_no_subtract.sum(), sep=' ')
@@ -702,6 +809,12 @@ tazControl4['AGE50to64'] = tazControl4['ct_pct']*(tazControl4['B01001_016E']+taz
 tazControl4['AGE65to79'] = tazControl4['ct_pct']*(tazControl4['B01001_020E']+tazControl4['B01001_021E']+tazControl4['B01001_022E']+tazControl4['B01001_023E']+tazControl4['B01001_044E']+tazControl4['B01001_045E']+tazControl4['B01001_046E']+tazControl4['B01001_047E'] - (tazControl4['gq_total']*tazControl4['percent_age_group6']) )
 tazControl4['AGE80M'] = tazControl4['ct_pct']*(tazControl4['B01001_024E']+tazControl4['B01001_025E']+tazControl4['B01001_048E']+tazControl4['B01001_049E']- (tazControl4['gq_total']*tazControl4['percent_age_group7']))
 print('AGE GROUP 2', tazControl4.AGE18to24.sum(), tazControl4.AGE18to24_no_subtract.sum(), sep=' ')
+tazControl4['WHITE_NOHISP'] = tazControl4['bg_pct']*tazControl4['B03002_003E']
+tazControl4['BLACK_NOHISP'] = tazControl4['bg_pct']*tazControl4['B03002_004E']
+tazControl4['NATAMERICAN_NOHISP'] = tazControl4['bg_pct']*tazControl4['B03002_005E']
+tazControl4['ASIAN_NOHISP'] = tazControl4['bg_pct']*tazControl4['B03002_006E']
+tazControl4['OTHER_NOHISP'] = tazControl4['bg_pct']*(tazControl4['B03002_002E'] - (tazControl4['B03002_003E'] + tazControl4['B03002_004E']+ tazControl4['B03002_005E']+ tazControl4['B03002_006E']))
+tazControl4['HISP'] = tazControl4['bg_pct']*tazControl4['B03002_012E']
 
 ##Total number of 4+ HHs
 seed_house_HH4M = seed_house[seed_house.NP>=4]
@@ -763,6 +876,7 @@ tazControl4['FEMALE'] = reindex(tazControl4.groupby('COUNTY', as_index=False).\
 	tazControl4.TAZ)
                                    
 tazControl4['TOT_POP_CENSUS'] = tazControl4['MALE']+tazControl4['FEMALE']
+tazControl4['TOT_POP_CENSUS_RACE'] = tazControl4['WHITE_NOHISP']+tazControl4['BLACK_NOHISP']+tazControl4['NATAMERICAN_NOHISP']+tazControl4['ASIAN_NOHISP']+tazControl4['OTHER_NOHISP']+tazControl4['HISP']
 tazControl4['TOTPOP_WGT'] = (tazControl4['HHSIZE1_S3']*1 + tazControl4['HHSIZE2_S3']*2 + tazControl4['HHSIZE3_S3']*3 + tazControl4['HHSIZE4M_S3']*tazControl4['wgt_avg_per'])
 
 tazControl4['TOTPOP_WGT'] = reindex(tazControl4.groupby('COUNTY', as_index=False).\
@@ -773,8 +887,17 @@ tazControl4['TOTPOP_WGT'] = reindex(tazControl4.groupby('COUNTY', as_index=False
 tazControl4['MALE_S']=np.where(tazControl4.TOT_POP_CENSUS > 0,tazControl4.TOTPOP_WGT*tazControl4['MALE']/tazControl4.TOT_POP_CENSUS,0)
 tazControl4['FEMALE_S']=np.where(tazControl4.TOT_POP_CENSUS > 0,tazControl4.TOTPOP_WGT*tazControl4['FEMALE']/tazControl4.TOT_POP_CENSUS,0)
 
-tazControl4[['MALE_S', 'FEMALE_S']] = pd.DataFrame(tazControl4[['MALE_S', 'FEMALE_S']].apply(roundsum, axis=1).tolist(),columns=['MALE_S','FEMALE_S'], index=tazControl4.index)
+# Race
+tazControl4['WHITE_NOHISP_S']=np.where(tazControl4.TOT_POP_CENSUS_RACE > 0,tazControl4.TOTPOP_WGT*tazControl4['WHITE_NOHISP']/tazControl4.TOT_POP_CENSUS_RACE,0)
+tazControl4['BLACK_NOHISP_S']=np.where(tazControl4.TOT_POP_CENSUS_RACE > 0,tazControl4.TOTPOP_WGT*tazControl4['BLACK_NOHISP']/tazControl4.TOT_POP_CENSUS_RACE,0)
+tazControl4['NATAMERICAN_NOHISP_S']=np.where(tazControl4.TOT_POP_CENSUS_RACE > 0,tazControl4.TOTPOP_WGT*tazControl4['NATAMERICAN_NOHISP']/tazControl4.TOT_POP_CENSUS_RACE,0)
+tazControl4['ASIAN_NOHISP_S']=np.where(tazControl4.TOT_POP_CENSUS_RACE > 0,tazControl4.TOTPOP_WGT*tazControl4['ASIAN_NOHISP']/tazControl4.TOT_POP_CENSUS_RACE,0)
+tazControl4['OTHER_NOHISP_S']=np.where(tazControl4.TOT_POP_CENSUS_RACE > 0,tazControl4.TOTPOP_WGT*tazControl4['OTHER_NOHISP']/tazControl4.TOT_POP_CENSUS_RACE,0)
+tazControl4['HISP_S']=np.where(tazControl4.TOT_POP_CENSUS_RACE > 0,tazControl4.TOTPOP_WGT*tazControl4['HISP']/tazControl4.TOT_POP_CENSUS_RACE,0)
 
+
+tazControl4[['MALE_S', 'FEMALE_S']] = pd.DataFrame(tazControl4[['MALE_S', 'FEMALE_S']].apply(roundsum, axis=1).tolist(),columns=['MALE_S','FEMALE_S'], index=tazControl4.index)
+tazControl4[['WHITE_NOHISP_S', 'BLACK_NOHISP_S', 'NATAMERICAN_NOHISP_S', 'ASIAN_NOHISP_S', 'OTHER_NOHISP_S', 'HISP_S']] = pd.DataFrame(tazControl4[['WHITE_NOHISP_S', 'BLACK_NOHISP_S', 'NATAMERICAN_NOHISP_S', 'ASIAN_NOHISP_S', 'OTHER_NOHISP_S', 'HISP_S']].apply(roundsum, axis=1).tolist(),columns=['WHITE_NOHISP_S', 'BLACK_NOHISP_S', 'NATAMERICAN_NOHISP_S', 'ASIAN_NOHISP_S', 'OTHER_NOHISP_S', 'HISP_S'], index=tazControl4.index)
 
 # Age
 # tazControl4['AGE0to17'] = reindex(tazControl4.groupby('COUNTY', as_index=False).\
@@ -839,6 +962,31 @@ print("TOTPOP_WGT", tazControl4.TOTPOP_WGT.sum(), sep=' ')
 print("diff round sex", tazControl4['TOTPOP_WGT'].sum()-tazControl4.MALE_S.sum()-tazControl4.FEMALE_S.sum(), sep=' ')
 print("diff round sex", (tazControl4['TOTPOP_WGT']-tazControl4[['MALE_S','FEMALE_S']].sum(axis=1)).sum(), sep=' ')
 
+#rounding for person race variables
+tazControl4['diff_round_race']=tazControl4['TOTPOP_WGT'] - tazControl4[['WHITE_NOHISP_S', 'BLACK_NOHISP_S', 'NATAMERICAN_NOHISP_S', 'ASIAN_NOHISP_S', 'OTHER_NOHISP_S', 'HISP_S']].sum(axis=1)
+
+tazControl4['WHITE_NOHISP_S'] = reindex(tazControl4.groupby('COUNTY', as_index=False).\
+	apply(lambda _df: pd.DataFrame({'WHITE_NOHISP_S':roundsum(_df.WHITE_NOHISP_S)}, index=_df.TAZ)).droplevel(0),
+	tazControl4.TAZ)
+tazControl4['BLACK_NOHISP_S'] = reindex(tazControl4.groupby('COUNTY', as_index=False).\
+	apply(lambda _df: pd.DataFrame({'BLACK_NOHISP_S':roundsum(_df.BLACK_NOHISP_S)}, index=_df.TAZ)).droplevel(0),
+	tazControl4.TAZ)
+tazControl4['NATAMERICAN_NOHISP_S'] = reindex(tazControl4.groupby('COUNTY', as_index=False).\
+	apply(lambda _df: pd.DataFrame({'NATAMERICAN_NOHISP_S':roundsum(_df.NATAMERICAN_NOHISP_S)}, index=_df.TAZ)).droplevel(0),
+	tazControl4.TAZ)
+tazControl4['ASIAN_NOHISP_S'] = reindex(tazControl4.groupby('COUNTY', as_index=False).\
+	apply(lambda _df: pd.DataFrame({'ASIAN_NOHISP_S':roundsum(_df.ASIAN_NOHISP_S)}, index=_df.TAZ)).droplevel(0),
+	tazControl4.TAZ)
+tazControl4['OTHER_NOHISP_S'] = reindex(tazControl4.groupby('COUNTY', as_index=False).\
+	apply(lambda _df: pd.DataFrame({'OTHER_NOHISP_S':roundsum(_df.OTHER_NOHISP_S)}, index=_df.TAZ)).droplevel(0),
+	tazControl4.TAZ)
+tazControl4['HISP_S'] = reindex(tazControl4.groupby('COUNTY', as_index=False).\
+	apply(lambda _df: pd.DataFrame({'HISP_S':roundsum(_df.HISP_S)}, index=_df.TAZ)).droplevel(0),
+	tazControl4.TAZ)
+print("TOTPOP_WGT", tazControl4.TOTPOP_WGT.sum(), sep=' ')
+print("diff round sex", tazControl4['TOTPOP_WGT'].sum()-tazControl4.MALE_S.sum()-tazControl4.FEMALE_S.sum(), sep=' ')
+print("diff round sex", (tazControl4['TOTPOP_WGT']-tazControl4[['MALE_S','FEMALE_S']].sum(axis=1)).sum(), sep=' ')
+
 # rounding for person age variables
 tazControl4['diff_round_age']=tazControl4['TOTPOP_WGT'] - tazControl4['AGE0to17_S'] - tazControl4['AGE18to24_S'] - tazControl4['AGE25to34_S'] - tazControl4['AGE35to49_S'] - tazControl4['AGE50to64_S'] - tazControl4['AGE65to79_S'] - tazControl4['AGE80M_S']
 tazControl4=tazControl4.fillna(0)
@@ -886,11 +1034,19 @@ for idx,col in enumerate(['MALE_S','FEMALE_S','AGE0to17_S','AGE18to24_S','AGE25t
 
 
 tazControl4[['MALE_S','FEMALE_S','AGE0to17_S','AGE18to24_S','AGE25to34_S','AGE35to49_S','AGE50to64_S','AGE65to79_S','AGE80M_S']] = tazControl4[['MALE_S','FEMALE_S','AGE0to17_S','AGE18to24_S','AGE25to34_S','AGE35to49_S','AGE50to64_S','AGE65to79_S','AGE80M_S']].astype(int)
-                                         
+tazControl4[['WHITE_NOHISP_S', 'BLACK_NOHISP_S', 'NATAMERICAN_NOHISP_S', 'ASIAN_NOHISP_S', 'OTHER_NOHISP_S', 'HISP_S']] = tazControl4[['WHITE_NOHISP_S', 'BLACK_NOHISP_S', 'NATAMERICAN_NOHISP_S', 'ASIAN_NOHISP_S', 'OTHER_NOHISP_S', 'HISP_S']].astype(int)
+
+tazControl4['ASIAN_PI_OTHER_NOHISP_S'] = tazControl4[['ASIAN_NOHISP_S', 'OTHER_NOHISP_S']].sum(axis=1)
+tazControl4['NATAMERICAN_OTHER_NOHISP_S'] = tazControl4[['NATAMERICAN_NOHISP_S', 'OTHER_NOHISP_S']].sum(axis=1)
+tazControl4['NATAMERICAN_ASIAN_OTHER_NOHISP_S'] = tazControl4[['NATAMERICAN_NOHISP_S', 'ASIAN_NOHISP_S', 'OTHER_NOHISP_S']].sum(axis=1)
+
+# ['WHITE_NOHISP_S', 'BLACK_NOHISP_S', 'NATAMERICAN_NOHISP_S', 'ASIAN_NOHISP_S', 'OTHER_NOHISP_S', 'HISP_S', 'NATAMERICAN_OTHER_NOHISP_S', 'NATAMERICAN_ASIAN_OTHER_NOHISP_S']
+
 tazControl4['TOTPOP_S'] = tazControl4['AGE0to17_S']+tazControl4['AGE18to24_S']+tazControl4['AGE25to34_S']+tazControl4['AGE35to49_S']+tazControl4['AGE50to64_S']+tazControl4['AGE65to79_S']+tazControl4['AGE80M_S']
 tazControl4.rename(columns = {'PUMA_x':'PUMA'})[['TAZ','HHS','GQ','PUMA','COUNTY','HHSIZE1_S3','HHSIZE2_S3','HHSIZE3_S3','HHSIZE4M_S3','HHAGE1_S3','HHAGE2_S3','HHAGE3_S3',
  'HHWRK1_S3','HHWRK2_S3','HHWRK3_S3','HHWRK4_S3','HHINC1_S3','HHINC2_S3','HHINC3_S3','HHINC4_S3','HHINC5_S3','HHINC6_S3','HH_WIKID_S3','HH_WOKID_S3','HHFAMMAR_S3','HHFAMNOWIFE_S3','HHFAMNOHUSBAND_S3','HHFAMNON_S3','HHFAMNONALONE_S3','HHUNITSINGLE_S3','HHUNITMULTI_S3','HHUNITMOBILE_S3',
-		 'TOTPOP_S','MALE_S','FEMALE_S','AGE0to17_S','AGE18to24_S','AGE25to34_S','AGE35to49_S','AGE50to64_S','AGE65to79_S','AGE80M_S', 'MALE','FEMALE', 'TOT_POP_CENSUS','TOTPOP_WGT']].to_csv(os.path.join(outputDir, "control_totals_taz.csv"), index = False)
+		 'TOTPOP_S','MALE_S','FEMALE_S','AGE0to17_S','AGE18to24_S','AGE25to34_S','AGE35to49_S','AGE50to64_S','AGE65to79_S','AGE80M_S', 'MALE','FEMALE','WHITE_NOHISP_S', 'BLACK_NOHISP_S', 'NATAMERICAN_NOHISP_S', 'ASIAN_NOHISP_S', 'OTHER_NOHISP_S', 'HISP_S', 'ASIAN_PI_OTHER_NOHISP_S', 'NATAMERICAN_OTHER_NOHISP_S', 'NATAMERICAN_ASIAN_OTHER_NOHISP_S', 'TOT_POP_CENSUS','TOTPOP_WGT']].\
+			 to_csv(os.path.join(outputDir, "control_totals_taz.csv"), index = False)
 		 
 totpop = tazControl4[['TOTPOP_S']].sum().sum()
 ctrl_region = pd.DataFrame(data = {'REGION':[3],'TOTPOP':[totpop]}).to_csv(os.path.join(outputDir,"control_totals_region.csv"), index = False)
