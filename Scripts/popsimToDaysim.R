@@ -66,7 +66,7 @@ map_pptyp <- function(df)
 # add additional per variables
 add_pervar <- function(df)
 {
-  df <- df[,c("hhid","serialno","pnum","maz","pagey","pgend","pwtyp","pstyp","pptyp","wrkr","ADJINC","PINCP")]
+  df <- df[,c("hhid","newserialno","pnum","maz","pagey","pgend","pwtyp","pstyp","pptyp","wrkr","ADJINC","PINCP")]
   df$pwpcl <- -1
   df$pwtaz <- -1
   df$pwautime <- -1
@@ -101,9 +101,9 @@ add_hhvar <- function(df,styp)
   df$hhexpfac <- 1
   df$samptype <- styp
   if(styp==12)
-    df <- merge(df,raw_hh_nhts[,c("serialno","hhincome","hrestype","hownrent")],all.x=T)
+    df <- merge(df,raw_hh_nhts[,c("newserialno","hhincome","hrestype","hownrent")],all.x=T)
   if(styp==13)
-    df <- merge(df,pervardf[!duplicated(pervardf[,"serialno"]),c("serialno","hhincome")],all.x=T)
+    df <- merge(df,pervardf[!duplicated(pervardf[,"newserialno"]),c("newserialno","hhincome")],all.x=T)
   df
 }
 
@@ -117,20 +117,20 @@ raw_hh_pums_GQ$HH <- 0
 raw_per_pums_GQ <- fread(file.path(basedir,"data/seed_persons_GQ.csv"))
 ### Extract original ID from ACS PUMS HH sample data
 perm_map <- raw_hh_pums %>% 
-  select(hh_id, SERIALNO)
+  select(hh_id, NEWSERIALNO)
 
 ### Read PopSim output HH file
 df_hh <- fread(file.path(basedir,"output/HH/synthetic_households.csv"), header=T)
 names(df_hh)[names(df_hh) == "hh_id_pums"] <- "hh_id"
 print(colnames(df_hh))
 df_hh_m <- merge(df_hh,perm_map,by="hh_id", all.x=T)
-names(df_hh_m)[names(df_hh_m) == "SERIALNO"] <- "serialno"
+names(df_hh_m)[names(df_hh_m) == "NEWSERIALNO"] <- "newserialno"
 hhperm <- df_hh_m
 ### Read PopSim output person file
 df_per <- fread(file.path(basedir,"output/HH/synthetic_persons.csv"), header=T)
 names(df_per)[names(df_per) == "hh_id_pums"] <- "hh_id"
 df_per_m <- merge(df_per,perm_map,by="hh_id",all.x=T)
-names(df_per_m)[names(df_per_m) == "SERIALNO"] <- "serialno"
+names(df_per_m)[names(df_per_m) == "NEWSERIALNO"] <- "newserialno"
 perperm <- df_per_m
 
 ### Set daysim input files as output
@@ -141,18 +141,21 @@ peroutfile <- file.path(outputDir,"person_2021_HH.dat")
 
 ### Process synthetic persons (Microzone IDs are coded as 'hhparcel' since DaySim recognizes this variable name)
 
-per_serialnos <- unique(hhperm$serialno)
-per_pums <- raw_per_pums[,c("SERIALNO","SPORDER","AGEP","SEX","ESR","WKHP","SCHG","WKW","ADJINC","PINCP"),with=F]
-setnames(per_pums,1:4,c("serialno","pnum","pagey","pgend"))
-per_pums2 <- perperm[perperm$serialno %in% unique(per_pums$serialno),]
-per_pums$personid <- paste(per_pums$serialno,per_pums$pnum,sep = "")
-perperm$personid <- paste(perperm$serialno,perperm$per_num,sep = "")
+newserialno_maxlength <- max(nchar(hhperm$newserialno))
+per_newserialnos <- unique(str_pad(hhperm$newserialno, pad=0, side="left", width=newserialno_maxlength))
+per_pums <- raw_per_pums[,c("NEWSERIALNO","SPORDER","AGEP","SEX","ESR","WKHP","SCHG","WKW","ADJINC","PINCP"),with=F]
+setnames(per_pums,1:4,c("newserialno","pnum","pagey","pgend"))
+perperm$newserialno <- str_pad(perperm$newserialno, pad=0, side="left", width=newserialno_maxlength)
+per_pums$newserialno <- str_pad(per_pums$newserialno, pad=0, side="left", width=newserialno_maxlength)
+per_pums2 <- perperm[perperm$newserialno %in% unique(per_pums$newserialno),]
+per_pums$personid <- paste(per_pums$newserialno,per_pums$pnum,sep = "")
+perperm$personid <- paste(perperm$newserialno,perperm$per_num,sep = "")
 per_pums2 <- merge(perperm,per_pums,by="personid",all.x=T)
 per_pums2$pagey <- per_pums2$AGEP
 per_pums2 <- map_pptyp(per_pums2)
-per_pums2$serialno.y <- NULL
-per_pums2$serialno <- per_pums2$serialno.x
-per_pums2$serialno.x <- NULL
+per_pums2$newserialno.y <- NULL
+per_pums2$newserialno <- per_pums2$newserialno.x
+per_pums2$newserialno.x <- NULL
 per_pums2$hhid <- per_pums2$household_id
 per_pums2$maz <- per_pums2$MAZ
 per_pums2 <- add_pervar(per_pums2)
@@ -173,10 +176,11 @@ names(hhperm_2)[names(hhperm_2) == "household_id"] <- "hhid"
 names(hhperm_2)[names(hhperm_2) == "MAZ"] <- "hhparcel"
 names(hhperm_2)[names(hhperm_2) == "TAZ"] <- "hhtaz"
 names(hhperm_2)[names(hhperm_2) == "NP"] <- "hhsize"
-hhperm_2$serialno <- as.character(hhperm_2$serialno)
-setkey(hhperm_2,serialno)
-hh_pums <- raw_hh_pums[,c("SERIALNO","HHINCADJ","BLD"),with=F]
-setnames(hh_pums,1,"serialno")
+hhperm_2$newserialno <- str_pad(hhperm_2$newserialno, side="left", pad=0, width=newserialno_maxlength)
+setkey(hhperm_2,newserialno)
+hh_pums <- raw_hh_pums[,c("NEWSERIALNO","HHINCADJ","BLD"),with=F]
+setnames(hh_pums,1,"newserialno")
+hh_pums$newserialno <- str_pad(hh_pums$newserialno, side="left", pad=0, width=newserialno_maxlength)
 hh_pums$hhincome <- hh_pums$HHINCADJ
 hh_pums$hrestype <- 9
 hh_pums$hrestype[hh_pums$BLD %in% 2] <- 1 #Detached single house
@@ -185,10 +189,10 @@ hh_pums$hrestype[hh_pums$BLD %in% c(4:9)] <- 3 #Apartment/condo
 hh_pums$hrestype[hh_pums$BLD %in% 1] <- 4 #Mobile home/trailer
 hh_pums$hrestype[hh_pums$BLD %in% 10] <- 6 #Other
 hh_pums$hrestype[hh_pums$BLD %in% 0] <- -1 #Group Quarter
-hh_pums$serialno <- as.character(hh_pums$serialno)
-hh_pums <- hh_pums[,c("serialno","hhincome","hrestype"),with=F]
-setkey(hh_pums,serialno)
-hhperm_3 <- merge(hhperm_2,hh_pums,by="serialno",all.x=T)
+#hh_pums$newserialno <- as.character(hh_pums$newserialno)
+hh_pums <- hh_pums[,c("newserialno","hhincome","hrestype"),with=F]
+setkey(hh_pums,newserialno)
+hhperm_3 <- merge(hhperm_2,hh_pums,by="newserialno",all.x=T)
 hhperm_3 <- data.frame(hhperm_3)
 hhperm_3$hownrent <- -1
 hhperm_3 <- add_hhvar(hhperm_3,11)

@@ -4,7 +4,6 @@ import os, sys
 
 #read properties from parameters file
 parameters_file = sys.argv[1]
-# parameters_file=r'E:\Projects\Clients\NashvilleMPO\ModelUpdate2023\Tasks\Task4_Enhancements\Update_PopulationSim_Software\GitHub_William\Data\parameters.csv'
 parameters = pd.read_csv(parameters_file)
 parameters.columns = ['Key', 'Value']
 WORKING_DIR = parameters[parameters.Key == 'WORKING_DIR']['Value'].item().strip(' ')

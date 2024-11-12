@@ -78,4 +78,4 @@ puma = puma.drop(['NEWPROP20', 'NEWPROP10'], axis=1)
 puma[['PUMACE10','PUMACE20','PUMA','PROP10','PROP20','POLYAREA10','POLYAREA20','INTSECTIONAREA','geometry']].\
 	to_file(filename = os.path.join(directory,'PUMS','Geography','nashville_newpuma.shp'), driver = 'ESRI Shapefile')
 
-puma[['PUMACE10','PUMACE20','PUMA','PROP10','PROP20','POLYAREA10','POLYAREA20','INTSECTIONAREA']].to_csv(os.path.join(USER_DIR, 'puma20_puma10_newpuma_xwalk.csv'))
+puma[['PUMACE10','PUMACE20','PUMA','PROP10','PROP20','POLYAREA10','POLYAREA20']].to_csv(os.path.join(USER_DIR, 'puma20_puma10_newpuma_xwalk.csv'), index=False)
