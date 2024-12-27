@@ -178,7 +178,6 @@ WORKING_DIR = parameters[parameters.Key == 'WORKING_DIR']['Value'].item().strip(
 outputDir = os.path.join(WORKING_DIR, 'Setup', 'Data')
 censusDownloadDir = os.path.join(WORKING_DIR, 'Data','Census','Downloads')
 
-# USER_DIR = parameters[parameters.Key == 'USER_DIR']['Value'].item().strip(' ')
 USER_DIR = os.path.join(os.getcwd(),'Data', 'USER')
 old_new_puma_xwalk = os.path.join(USER_DIR, 'puma20_puma10_newpuma_xwalk.csv')
 
@@ -700,7 +699,7 @@ seed_house = seed_house.merge(max_age, how = 'left', on = 'NEWSERIALNO')
 # 1011189 .2017 factor (1.011189 * 1.00000000)
 # ADJINC/1,000,000 is the final factor
 
-seed_house['HHINCADJ'] = seed_house['ADJINC']/1000000*seed_house['HINCP']
+seed_house['HHINCADJ'] = seed_house['ADJINC']/1000000*seed_house['HINCP'].filnna(0)
 seed_house['HHINCADJ'] = seed_house['HHINCADJ'].astype(int)
 
 ## This is remnant of R code, I think its specific to tulare
@@ -728,8 +727,10 @@ print("seed_person['SERIALNO'] NaN count:", seed_person['NEWSERIALNO'].isnull().
 
 #Get GQ Weights
 
-seed_house_gq = pums_hh[(pums_hh.NP != 0) & (pums_hh.TYPEHUGQ.isin([3]))]	
+seed_house_gq = pums_hh[(pums_hh.NP != 0) & (pums_hh.TYPEHUGQ.isin([3]))]
+seed_house_gq = seed_house_gq.fillna(0)	
 seed_person_gq = pums_per[pums_per.NEWSERIALNO.isin(seed_house_gq.NEWSERIALNO.unique())]
+seed_person_gq = seed_person_gq.fillna(0)
 
 gqpersons = seed_person_gq#.merge(seed_house_gq, how = 'left', on = 'SERIALNO')
 #gqpersons = gqpersons[gqpersons['TYPEHUGQ'] == 3]

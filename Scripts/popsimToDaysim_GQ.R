@@ -222,6 +222,7 @@ allhhvars <- c("hhno","hhsize","hhvehs","hhwkrs","hhftw","hhptw","hhret","hhoad"
                "hhincome","hownrent","hrestype","hhparcel","hhexpfac","samptype")
 allhh <- allhh[,allhhvars]
 allhh$hhincome <- as.integer(allhh$hhincome)
+allhh$hhincome[is.na(allhh$hhincome)] <- 0
 allhh <- allhh[order(allhh$hhno),]
 write.table(allhh,hhoutfile,row.names=F,quote=F)
 
