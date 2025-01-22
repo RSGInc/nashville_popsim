@@ -33,6 +33,7 @@ Parameters_File     <- args[1]
 parameters <- read.csv(Parameters_File, header = TRUE)
 basedir <- trimws(paste(parameters$Value[parameters$Key=="POPSIMDIR"]))
 xwalkdir <- trimws(paste(parameters$Value[parameters$Key=="XWALK_DIR"]))
+modelyear <- trimws(paste(parameters$Value[parameters$Key=="MODEL_YEAR"]))
 xwalk <- read.csv(paste(xwalkdir,"\\geo_crosswalks.csv",sep=""), header = TRUE)
 
 outputDir <- paste0(basedir, "\\output\\DaySimFormat")
@@ -134,8 +135,8 @@ names(df_per_m)[names(df_per_m) == "NEWSERIALNO"] <- "newserialno"
 perperm <- df_per_m
 
 ### Set daysim input files as output
-hhoutfile <- file.path(outputDir,"household_2021_HH.dat")
-peroutfile <- file.path(outputDir,"person_2021_HH.dat")
+hhoutfile <- file.path(outputDir,paste0("household_",modelyear,"_HH.dat"))
+peroutfile <- file.path(outputDir,paste0("person_",modelyear,"_HH.dat"))
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 

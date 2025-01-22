@@ -196,7 +196,7 @@ COUNTY_DF = pd.DataFrame({'COUNTY':COUNTY_NAMES}, index=[int('47'+x) for x in CO
 ###############
 
 # Read in the user inputs
-MODEL_YEAR = '2023'
+MODEL_YEAR = parameters[parameters.Key == 'MODEL_YEAR']['Value'].item().strip(' ')
 CENSUS_YEAR = '2022'
 county_control_forecasts = pd.read_csv(os.path.join(USER_DIR, 'control_forecasts.csv'))
 # Ensure that all the zone names match the hard-coded COUNTY_NAMES list
@@ -699,7 +699,7 @@ seed_house = seed_house.merge(max_age, how = 'left', on = 'NEWSERIALNO')
 # 1011189 .2017 factor (1.011189 * 1.00000000)
 # ADJINC/1,000,000 is the final factor
 
-seed_house['HHINCADJ'] = seed_house['ADJINC']/1000000*seed_house['HINCP'].filnna(0)
+seed_house['HHINCADJ'] = seed_house['ADJINC']/1000000*seed_house['HINCP'].fillna(0)
 seed_house['HHINCADJ'] = seed_house['HHINCADJ'].astype(int)
 
 ## This is remnant of R code, I think its specific to tulare
