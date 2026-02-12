@@ -240,7 +240,9 @@ maz_county_control['COUNTYNAME'] = reindex(COUNTY_DF.COUNTY, maz_county_control.
 maz_county_control['KEEP1HH'] = maz_county_control.hh==1
 totHHs_county['MAZHH'] = maz_county_control[~maz_county_control.KEEP1HH].groupby('COUNTYNAME', group_keys=True)['hh'].sum()
 totHHs_county['REMOVEMAZHH'] = maz_county_control[maz_county_control.KEEP1HH].groupby('COUNTYNAME', group_keys=True)['hh'].sum()
+totHHs_county['REMOVEMAZHH'] = totHHs_county['REMOVEMAZHH'].fillna(0).astype(int)
 totHHs_county['ADJFACTORHH'] = (totHHs_county['HH']-totHHs_county['REMOVEMAZHH'])/totHHs_county['MAZHH']
+totHHs_county['ADJFACTORHH'] = totHHs_county['ADJFACTORHH'].fillna(1)
 # # Join the adjustment factor to maz controls
 # # Make sure that mazs with 1 househods don't get dropped
 maz_county_control['ADJFACTORHH'] = reindex(totHHs_county.ADJFACTORHH, maz_county_control.COUNTYNAME)
